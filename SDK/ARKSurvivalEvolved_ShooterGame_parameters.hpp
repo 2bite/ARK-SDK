@@ -1624,6 +1624,7 @@ struct UPrimalInventoryComponent_RemoveItem_Params
 struct UPrimalInventoryComponent_RemoteInventoryAllowViewing_Params
 {
 	class AShooterPlayerController*                    PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxAllowedDistanceOffset;                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -9606,6 +9607,11 @@ struct APrimalDinoCharacter_RefreshBabyScaling_Params
 {
 };
 
+// Function ShooterGame.PrimalDinoCharacter.ReassertColorization
+struct APrimalDinoCharacter_ReassertColorization_Params
+{
+};
+
 // Function ShooterGame.PrimalDinoCharacter.PlayWeightedAttackAnimation
 struct APrimalDinoCharacter_PlayWeightedAttackAnimation_Params
 {
@@ -11136,6 +11142,11 @@ struct APrimalDinoCharacter_BlueprintAdjustOutputDamage_Params
 	class UClass*                                      OutDamageType;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              OutDamageImpulse;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ShooterGame.PrimalDinoCharacter.AssertColorNames
+struct APrimalDinoCharacter_AssertColorNames_Params
+{
 };
 
 // Function ShooterGame.PrimalDinoCharacter.AreSpawnerSublevelsLoaded
@@ -13189,6 +13200,12 @@ struct APrimalBuff_BPIsCharacterHardAttached_Params
 // Function ShooterGame.PrimalBuff.BPInstigatorUnpossessed
 struct APrimalBuff_BPInstigatorUnpossessed_Params
 {
+};
+
+// Function ShooterGame.PrimalBuff.BPInstigatorSleeped
+struct APrimalBuff_BPInstigatorSleeped_Params
+{
+	bool                                               bIsSleeped;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ShooterGame.PrimalBuff.BPInstigatorPossessed
@@ -16415,6 +16432,11 @@ struct UShooterCheatManager_RefillStats_Params
 {
 };
 
+// Function ShooterGame.ShooterCheatManager.ReassertColorization
+struct UShooterCheatManager_ReassertColorization_Params
+{
+};
+
 // Function ShooterGame.ShooterCheatManager.RainDinos
 struct UShooterCheatManager_RainDinos_Params
 {
@@ -16889,6 +16911,17 @@ struct UShooterCheatManager_ForceJoinTribe_Params
 {
 };
 
+// Function ShooterGame.ShooterCheatManager.ForceEnableMeshCheckingOnMe
+struct UShooterCheatManager_ForceEnableMeshCheckingOnMe_Params
+{
+	bool                                               bEnableChecking;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ShooterGame.ShooterCheatManager.ForceCheckInMesh
+struct UShooterCheatManager_ForceCheckInMesh_Params
+{
+};
+
 // Function ShooterGame.ShooterCheatManager.EnemyInVisible
 struct UShooterCheatManager_EnemyInVisible_Params
 {
@@ -17321,6 +17354,11 @@ struct AShooterGameMode_RemoveInactivePlayersAndTribes_Params
 {
 };
 
+// Function ShooterGame.ShooterGameMode.ReassertColorization
+struct AShooterGameMode_ReassertColorization_Params
+{
+};
+
 // Function ShooterGame.ShooterGameMode.PrintToServerGameLog
 struct AShooterGameMode_PrintToServerGameLog_Params
 {
@@ -17559,6 +17597,8 @@ struct AShooterGameMode_ForceRepopulateFoliageAtPoint_Params
 	class UClass*                                      RepopulatedEmitter;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     StructureDownTraceVector;                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	struct FVector                                     StructureUpTraceVector;                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	bool                                               bDontCheckForOverlaps;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                TriggeredByTeamID;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ShooterGame.ShooterGameMode.ForceCreateTribe
@@ -20036,6 +20076,14 @@ struct UVictoryCore_ServerOctreeOverlapActors_Params
 	TArray<class AActor*>                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
+// Function ShooterGame.VictoryCore.ServerCheckMeshingOnActor
+struct UVictoryCore_ServerCheckMeshingOnActor_Params
+{
+	class AActor*                                      OnActor;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bForceUseActorCenterBounds;                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ShooterGame.VictoryCore.SelectVectorIfWithinRange
 struct UVictoryCore_SelectVectorIfWithinRange_Params
 {
@@ -20509,6 +20557,18 @@ struct UVictoryCore_IsWorkshopIDSubscribed_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ShooterGame.VictoryCore.IsUnderMesh
+struct UVictoryCore_IsUnderMesh_Params
+{
+	class APrimalCharacter*                            Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     CheckSevenHitLocation;                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               bOverlapping;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UActorComponent*                             CheckSevenResult;                                         // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               DebugDraw;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DebugDrawSeconds;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ShooterGame.VictoryCore.IsTimeSince_Network
 struct UVictoryCore_IsTimeSince_Network_Params
 {
@@ -20557,6 +20617,18 @@ struct UVictoryCore_IsPVEServer_Params
 // Function ShooterGame.VictoryCore.IsPS4Build
 struct UVictoryCore_IsPS4Build_Params
 {
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ShooterGame.VictoryCore.IsPointStuckWithinMesh
+struct UVictoryCore_IsPointStuckWithinMesh_Params
+{
+	class UWorld*                                      TheWorld;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     TestPoint;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                hemisphereSubdivisions;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              rayDistance;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              percentageConsideredStuck;                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      ActorToIgnore;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

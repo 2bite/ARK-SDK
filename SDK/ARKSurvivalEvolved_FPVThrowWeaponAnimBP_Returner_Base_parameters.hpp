@@ -1,0 +1,128 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_FPVThrowWeaponAnimBP_Returner_Base_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1626
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1626_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1625
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1625_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1624
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1624_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1623
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1623_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1622
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1622_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1621
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1621_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1620
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1620_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1619
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1619_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1618
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1618_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1617
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1617_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1616
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1616_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1615
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1615_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1614
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1614_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1613
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1613_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1612
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1612_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1611
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_AnimGraphNode_TransitionResult_1611_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.BlueprintUpdateAnimation
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.AnimNotify_EnterIdle
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_AnimNotify_EnterIdle_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.AnimNotify_EnterTargetIdle
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_AnimNotify_EnterTargetIdle_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.AnimNotify_EndPullString
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_AnimNotify_EndPullString_Params
+{
+};
+
+// Function FPVThrowWeaponAnimBP_Returner_Base.FPVThrowWeaponAnimBP_Returner_Base_C.ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base
+struct UFPVThrowWeaponAnimBP_Returner_Base_C_ExecuteUbergraph_FPVThrowWeaponAnimBP_Returner_Base_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

@@ -1,0 +1,59 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_WeapOneShotRifleTranq_structs.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass WeapOneShotRifleTranq.WeapOneShotRifleTranq_C
+// 0x005B (0x0E33 - 0x0DD8)
+class AWeapOneShotRifleTranq_C : public AWeapRocketLauncher_C
+{
+public:
+	class UStaticMeshComponent*                        DartMesh1P;                                               // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x0DE0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0DE1(0x0003) MISSED OFFSET
+	struct FName                                       K2Node_Event_CustomEventName2;                            // 0x0DE4(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0DEC(0x0004) MISSED OFFSET
+	class USkeletalMeshComponent*                      K2Node_Event_MeshComp2;                                   // 0x0DF0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UAnimSequenceBase*                           K2Node_Event_Animation2;                                  // 0x0DF8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_Event_TotalDuration;                               // 0x0E00(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0E04(0x0004) MISSED OFFSET
+	class UAnimNotifyState*                            K2Node_Event_AnimNotifyObject2;                           // 0x0E08(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FName                                       K2Node_Event_CustomEventName;                             // 0x0E10(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class USkeletalMeshComponent*                      K2Node_Event_MeshComp;                                    // 0x0E18(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UAnimSequenceBase*                           K2Node_Event_Animation;                                   // 0x0E20(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UAnimNotifyState*                            K2Node_Event_AnimNotifyObject;                            // 0x0E28(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_NameName_ReturnValue;                 // 0x0E30(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_NameName_ReturnValue2;                // 0x0E31(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_NameName_ReturnValue3;                // 0x0E32(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass WeapOneShotRifleTranq.WeapOneShotRifleTranq_C");
+		return ptr;
+	}
+
+
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void BPAnimNotifyCustomState_Begin(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration, class UAnimNotifyState** AnimNotifyObject);
+	void BPAnimNotifyCustomState_End(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotifyState** AnimNotifyObject);
+	void ExecuteUbergraph_WeapOneShotRifleTranq(int EntryPoint);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

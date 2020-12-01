@@ -1,0 +1,188 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_GasBags_AnimBlueprint_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_672
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_672_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3378
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3378_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_162
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_162_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4134
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4134_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_671
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_671_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3377
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3377_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3376
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3376_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4133
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4133_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4132
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4132_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_204
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_204_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_203
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_203_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3375
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3375_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_120
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_120_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_GroundBones_192
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_GroundBones_192_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3374
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3374_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_263
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_263_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3373
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3373_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3372
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3372_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_670
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_670_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_262
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_262_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_669
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_669_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_261
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_261_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3371
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3371_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4126
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4126_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3370
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3370_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3369
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3369_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3368
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3368_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4122
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4122_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3367
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3367_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3366
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3366_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_668
+struct UGasBags_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_668_Params
+{
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.BlueprintUpdateAnimation
+struct UGasBags_AnimBlueprint_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function GasBags_AnimBlueprint.GasBags_AnimBlueprint_C.ExecuteUbergraph_GasBags_AnimBlueprint
+struct UGasBags_AnimBlueprint_C_ExecuteUbergraph_GasBags_AnimBlueprint_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

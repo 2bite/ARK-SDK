@@ -1,0 +1,176 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_DinoBlueprintBase_RootTransform_Copy_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.BlueprintPlayAnimationEvent
+struct UDinoBlueprintBase_RootTransform_Copy_C_BlueprintPlayAnimationEvent_Params
+{
+	class UAnimMontage**                               AnimationMontage;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             PlayRate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              playedAnimLength;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4308
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4308_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5069
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5069_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ModifyBone_780
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ModifyBone_780_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4307
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4307_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_RotationOffsetBlendSpace_282
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_RotationOffsetBlendSpace_282_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4306
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4306_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4305
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4305_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5067
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5067_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4304
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4304_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4303
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4303_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5066
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5066_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5065
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5065_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4302
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4302_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5064
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5064_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4301
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4301_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4300
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4300_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ApplyAdditive_330
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ApplyAdditive_330_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4299
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4299_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4298
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4298_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4297
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4297_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5059
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5059_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4296
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4296_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4295
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4295_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5058
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5058_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5057
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5057_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ApplyAdditive_329
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ApplyAdditive_329_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4294
+struct UDinoBlueprintBase_RootTransform_Copy_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4294_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.BlueprintUpdateAnimation
+struct UDinoBlueprintBase_RootTransform_Copy_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransform_Copy.DinoBlueprintBase_RootTransform_Copy_C.ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy
+struct UDinoBlueprintBase_RootTransform_Copy_C_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

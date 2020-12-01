@@ -458,6 +458,7 @@ public:
 	void BPInventoryItemDropped(class UObject* InventoryItemObject);
 	void BPGetShowDebugAnimationComponents(TArray<class USkeletalMeshComponent*>* SkelMeshComponents);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController* ForPC, TArray<struct FMultiUseEntry> MultiUseEntries);
+	int BPGetExtraSpecialBlueprintInt();
 	void BPGetActorEyesViewPoint(struct FVector* Location, struct FRotator* Rotation);
 	bool BPForceAllowsInventoryUse(class UObject* InventoryItemObject);
 	bool BPConsumeUsePinCode(class AActor* FromKeypadActor, class APlayerController* ForPC, int appledPinCode, bool bIsActivating);
@@ -6295,8 +6296,8 @@ public:
 	unsigned char                                      bDisableGroundScattering : 1;                             // 0x020C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bUseDayCycle : 1;                                         // 0x020C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x020D(0x0003) MISSED OFFSET
-	TArray<class UTexture2D*>                          LossTextures;                                             // 0x0210(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class UTexture2D*>                          ScatterTextures;                                          // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class UTexture2D*>                          LossTextures;                                             // 0x0210(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient)
+	TArray<class UTexture2D*>                          ScatterTextures;                                          // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient)
 	class UTextureRenderTarget2D*                      External_ScatterRT;                                       // 0x0230(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	class UTextureRenderTarget2D*                      External_LossRT;                                          // 0x0238(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                LUT_TintScatter;                                          // 0x0240(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)

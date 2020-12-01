@@ -1,0 +1,404 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_RockDrake_AnimBlueprint_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.CanRockDrakeUseAimOffsets
+struct URockDrake_AnimBlueprint_C_CanRockDrakeUseAimOffsets_Params
+{
+	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.UpdateRockDrake
+struct URockDrake_AnimBlueprint_C_UpdateRockDrake_Params
+{
+	class ARockDrake_Character_BP_C*                   DrakeRef;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              YawTurnRate;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.BlueprintPlayAnimationEvent
+struct URockDrake_AnimBlueprint_C_BlueprintPlayAnimationEvent_Params
+{
+	class UAnimMontage**                               AnimationMontage;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             PlayRate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              playedAnimLength;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_ModifyBone_560
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_ModifyBone_560_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2773
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2773_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2772
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2772_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2771
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2771_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2770
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2770_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2769
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2769_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2768
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2768_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2767
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2767_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2766
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2766_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2765
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2765_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_ModifyBone_559
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_ModifyBone_559_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2764
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2764_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2763
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2763_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2762
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2762_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_GroundBones_154
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_GroundBones_154_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_GroundBones_153
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_GroundBones_153_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_ApplyAdditive_200
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_ApplyAdditive_200_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2761
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2761_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2760
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2760_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2759
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2759_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2758
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2758_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2757
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2757_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2756
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2756_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByInt_30
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByInt_30_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2755
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2755_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByInt_29
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByInt_29_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2774
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2774_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2753
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2753_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2752
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2752_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2751
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2751_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2750
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2750_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2749
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2749_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2748
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2748_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2747
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2747_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3464
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3464_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_152
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_152_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_151
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_151_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByEnum_30
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByEnum_30_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3458
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3458_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3457
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3457_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3456
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3456_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3455
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3455_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3454
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3454_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_164
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_164_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByEnum_29
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByEnum_29_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_150
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_150_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2746
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2746_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2745
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2745_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3450
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3450_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3449
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3449_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3448
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3448_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3447
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3447_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3446
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3446_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3445
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3445_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3444
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3444_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2744
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2744_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2743
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendListByBool_2743_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_149
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_149_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3442
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3442_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3441
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3441_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3440
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3440_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3439
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3439_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3438
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3438_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3437
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3437_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3436
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3436_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3435
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3435_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3434
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3434_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3433
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3433_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3432
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3432_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3431
+struct URockDrake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_RockDrake_AnimBlueprint_AnimGraphNode_SequencePlayer_3431_Params
+{
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.BlueprintUpdateAnimation
+struct URockDrake_AnimBlueprint_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function RockDrake_AnimBlueprint.RockDrake_AnimBlueprint_C.ExecuteUbergraph_RockDrake_AnimBlueprint
+struct URockDrake_AnimBlueprint_C_ExecuteUbergraph_RockDrake_AnimBlueprint_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

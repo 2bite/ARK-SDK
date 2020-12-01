@@ -1,0 +1,186 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_DinoBlueprintBase_RootTransformIK_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.BlueprintPlayAnimationEvent
+struct UDinoBlueprintBase_RootTransformIK_C_BlueprintPlayAnimationEvent_Params
+{
+	class UAnimMontage**                               AnimationMontage;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             PlayRate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              playedAnimLength;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2900
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2900_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_ModifyBone_570
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_ModifyBone_570_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2899
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2899_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_RotationOffsetBlendSpace_170
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_RotationOffsetBlendSpace_170_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2898
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2898_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2897
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2897_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3606
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3606_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2896
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2896_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2895
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2895_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3605
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3605_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3604
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3604_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2894
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2894_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3603
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3603_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2893
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2893_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2892
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2892_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3601
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3601_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2891
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2891_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2890
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2890_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3600
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3600_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3599
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3599_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2889
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2889_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2888
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2888_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3598
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3598_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3597
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3597_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3596
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3596_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendSpacePlayer_154
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendSpacePlayer_154_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2886
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2886_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2885
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2885_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_ApplyAdditive_206
+struct UDinoBlueprintBase_RootTransformIK_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_ApplyAdditive_206_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.BlueprintUpdateAnimation
+struct UDinoBlueprintBase_RootTransformIK_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransformIK.DinoBlueprintBase_RootTransformIK_C.ExecuteUbergraph_DinoBlueprintBase_RootTransformIK
+struct UDinoBlueprintBase_RootTransformIK_C_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

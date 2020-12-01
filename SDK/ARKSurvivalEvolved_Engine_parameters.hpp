@@ -1424,6 +1424,12 @@ struct AActor_BPGetMultiUseEntries_Params
 	TArray<struct FMultiUseEntry>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
+// Function Engine.Actor.BPGetExtraSpecialBlueprintInt
+struct AActor_BPGetExtraSpecialBlueprintInt_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.Actor.BPGetActorEyesViewPoint
 struct AActor_BPGetActorEyesViewPoint_Params
 {

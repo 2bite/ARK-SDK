@@ -1,0 +1,39 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_WeapStoneHatchet_structs.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass WeapStoneHatchet.WeapStoneHatchet_C
+// 0x0000 (0x0D30 - 0x0D30)
+class AWeapStoneHatchet_C : public AWeapBaseHatchet_C
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass WeapStoneHatchet.WeapStoneHatchet_C");
+		return ptr;
+	}
+
+
+	void UserConstructionScript();
+	void ExecuteUbergraph_WeapStoneHatchet(int EntryPoint);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

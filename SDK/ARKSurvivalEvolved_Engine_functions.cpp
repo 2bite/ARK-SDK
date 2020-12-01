@@ -4523,6 +4523,27 @@ TArray<struct FMultiUseEntry> AActor::BPGetMultiUseEntries(class APlayerControll
 }
 
 
+// Function Engine.Actor.BPGetExtraSpecialBlueprintInt
+// ()
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int AActor::BPGetExtraSpecialBlueprintInt()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.BPGetExtraSpecialBlueprintInt");
+
+	AActor_BPGetExtraSpecialBlueprintInt_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.Actor.BPGetActorEyesViewPoint
 // ()
 // Parameters:

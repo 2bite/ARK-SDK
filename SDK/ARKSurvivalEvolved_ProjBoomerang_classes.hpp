@@ -1,0 +1,43 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_ProjBoomerang_structs.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass ProjBoomerang.ProjBoomerang_C
+// 0x001C (0x0714 - 0x06F8)
+class AProjBoomerang_C : public APrimalProjectileBoomerang
+{
+public:
+	class UAudioComponent*                             Projectile_SFX;                                           // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             RotationPoint;                                            // 0x0700(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     CallFunc_GetWorldLocation_ReturnValue;                    // 0x0708(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass ProjBoomerang.ProjBoomerang_C");
+		return ptr;
+	}
+
+
+	void UserConstructionScript();
+	void BndEvt__Projectile_SFX_K2Node_ComponentBoundEvent_111_OnAudioFinished__DelegateSignature();
+	void ExecuteUbergraph_ProjBoomerang(int EntryPoint);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

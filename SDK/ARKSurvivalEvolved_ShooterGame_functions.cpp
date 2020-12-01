@@ -5173,14 +5173,16 @@ bool UPrimalInventoryComponent::RemoveItem(const struct FItemNetID& ItemId, bool
 // ()
 // Parameters:
 // class AShooterPlayerController* PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// float                          MaxAllowedDistanceOffset       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalInventoryComponent::RemoteInventoryAllowViewing(class AShooterPlayerController* PC)
+bool UPrimalInventoryComponent::RemoteInventoryAllowViewing(class AShooterPlayerController* PC, float MaxAllowedDistanceOffset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalInventoryComponent.RemoteInventoryAllowViewing");
 
 	UPrimalInventoryComponent_RemoteInventoryAllowViewing_Params params;
 	params.PC = PC;
+	params.MaxAllowedDistanceOffset = MaxAllowedDistanceOffset;
 
 	auto flags = fn->FunctionFlags;
 
@@ -30486,6 +30488,23 @@ void APrimalDinoCharacter::RefreshBabyScaling()
 }
 
 
+// Function ShooterGame.PrimalDinoCharacter.ReassertColorization
+// ()
+
+void APrimalDinoCharacter::ReassertColorization()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.ReassertColorization");
+
+	APrimalDinoCharacter_ReassertColorization_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalDinoCharacter.PlayWeightedAttackAnimation
 // ()
 
@@ -35478,6 +35497,23 @@ float APrimalDinoCharacter::BlueprintAdjustOutputDamage(int AttackIndex, float O
 		*OutDamageImpulse = params.OutDamageImpulse;
 
 	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.AssertColorNames
+// ()
+
+void APrimalDinoCharacter::AssertColorNames()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.AssertColorNames");
+
+	APrimalDinoCharacter_AssertColorNames_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -42213,6 +42249,26 @@ void APrimalBuff::BPInstigatorUnpossessed()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.BPInstigatorUnpossessed");
 
 	APrimalBuff_BPInstigatorUnpossessed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalBuff.BPInstigatorSleeped
+// ()
+// Parameters:
+// bool                           bIsSleeped                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalBuff::BPInstigatorSleeped(bool bIsSleeped)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.BPInstigatorSleeped");
+
+	APrimalBuff_BPInstigatorSleeped_Params params;
+	params.bIsSleeped = bIsSleeped;
 
 	auto flags = fn->FunctionFlags;
 
@@ -52591,6 +52647,23 @@ void UShooterCheatManager::RefillStats()
 }
 
 
+// Function ShooterGame.ShooterCheatManager.ReassertColorization
+// ()
+
+void UShooterCheatManager::ReassertColorization()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ReassertColorization");
+
+	UShooterCheatManager_ReassertColorization_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.RainDinos
 // ()
 // Parameters:
@@ -54113,6 +54186,43 @@ void UShooterCheatManager::ForceJoinTribe()
 }
 
 
+// Function ShooterGame.ShooterCheatManager.ForceEnableMeshCheckingOnMe
+// ()
+// Parameters:
+// bool                           bEnableChecking                (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::ForceEnableMeshCheckingOnMe(bool bEnableChecking)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ForceEnableMeshCheckingOnMe");
+
+	UShooterCheatManager_ForceEnableMeshCheckingOnMe_Params params;
+	params.bEnableChecking = bEnableChecking;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ForceCheckInMesh
+// ()
+
+void UShooterCheatManager::ForceCheckInMesh()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ForceCheckInMesh");
+
+	UShooterCheatManager_ForceCheckInMesh_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.EnemyInVisible
 // ()
 // Parameters:
@@ -55495,6 +55605,23 @@ void AShooterGameMode::RemoveInactivePlayersAndTribes()
 }
 
 
+// Function ShooterGame.ShooterGameMode.ReassertColorization
+// ()
+
+void AShooterGameMode::ReassertColorization()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterGameMode.ReassertColorization");
+
+	AShooterGameMode_ReassertColorization_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterGameMode.PrintToServerGameLog
 // ()
 // Parameters:
@@ -56222,8 +56349,10 @@ bool AShooterGameMode::GetBoolOptionIni(const class FString& Section, const clas
 // class UClass*                  RepopulatedEmitter             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StructureDownTraceVector       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 StructureUpTraceVector         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           bDontCheckForOverlaps          (Parm, ZeroConstructor, IsPlainOldData)
+// int                            TriggeredByTeamID              (Parm, ZeroConstructor, IsPlainOldData)
 
-void AShooterGameMode::ForceRepopulateFoliageAtPoint(const struct FVector& AtPoint, float MaxRangeFromPoint, int MaxNumFoliages, class UClass* RepopulatedEmitter, const struct FVector& StructureDownTraceVector, const struct FVector& StructureUpTraceVector)
+void AShooterGameMode::ForceRepopulateFoliageAtPoint(const struct FVector& AtPoint, float MaxRangeFromPoint, int MaxNumFoliages, class UClass* RepopulatedEmitter, const struct FVector& StructureDownTraceVector, const struct FVector& StructureUpTraceVector, bool bDontCheckForOverlaps, int TriggeredByTeamID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterGameMode.ForceRepopulateFoliageAtPoint");
 
@@ -56234,6 +56363,8 @@ void AShooterGameMode::ForceRepopulateFoliageAtPoint(const struct FVector& AtPoi
 	params.RepopulatedEmitter = RepopulatedEmitter;
 	params.StructureDownTraceVector = StructureDownTraceVector;
 	params.StructureUpTraceVector = StructureUpTraceVector;
+	params.bDontCheckForOverlaps = bDontCheckForOverlaps;
+	params.TriggeredByTeamID = TriggeredByTeamID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -64059,6 +64190,31 @@ TArray<class AActor*> UVictoryCore::ServerOctreeOverlapActors(class UWorld* TheW
 }
 
 
+// Function ShooterGame.VictoryCore.ServerCheckMeshingOnActor
+// ()
+// Parameters:
+// class AActor*                  OnActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bForceUseActorCenterBounds     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UVictoryCore::ServerCheckMeshingOnActor(class AActor* OnActor, bool bForceUseActorCenterBounds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.ServerCheckMeshingOnActor");
+
+	UVictoryCore_ServerCheckMeshingOnActor_Params params;
+	params.OnActor = OnActor;
+	params.bForceUseActorCenterBounds = bForceUseActorCenterBounds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.VictoryCore.SelectVectorIfWithinRange
 // ()
 // Parameters:
@@ -65478,6 +65634,43 @@ bool UVictoryCore::IsWorkshopIDSubscribed(const class FString& WorkshopID)
 }
 
 
+// Function ShooterGame.VictoryCore.IsUnderMesh
+// ()
+// Parameters:
+// class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 CheckSevenHitLocation          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           bOverlapping                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent*         CheckSevenResult               (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           DebugDraw                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          DebugDrawSeconds               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UVictoryCore::IsUnderMesh(class APrimalCharacter* Character, bool DebugDraw, float DebugDrawSeconds, struct FVector* CheckSevenHitLocation, bool* bOverlapping, class UActorComponent** CheckSevenResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.IsUnderMesh");
+
+	UVictoryCore_IsUnderMesh_Params params;
+	params.Character = Character;
+	params.DebugDraw = DebugDraw;
+	params.DebugDrawSeconds = DebugDrawSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CheckSevenHitLocation != nullptr)
+		*CheckSevenHitLocation = params.CheckSevenHitLocation;
+	if (bOverlapping != nullptr)
+		*bOverlapping = params.bOverlapping;
+	if (CheckSevenResult != nullptr)
+		*CheckSevenResult = params.CheckSevenResult;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.VictoryCore.IsTimeSince_Network
 // ()
 // Parameters:
@@ -65632,6 +65825,39 @@ bool UVictoryCore::IsPS4Build()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.IsPS4Build");
 
 	UVictoryCore_IsPS4Build_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.VictoryCore.IsPointStuckWithinMesh
+// ()
+// Parameters:
+// class UWorld*                  TheWorld                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 TestPoint                      (Parm, ZeroConstructor, IsPlainOldData)
+// int                            hemisphereSubdivisions         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          rayDistance                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          percentageConsideredStuck      (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  ActorToIgnore                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UVictoryCore::IsPointStuckWithinMesh(class UWorld* TheWorld, const struct FVector& TestPoint, int hemisphereSubdivisions, float rayDistance, float percentageConsideredStuck, class AActor* ActorToIgnore)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.IsPointStuckWithinMesh");
+
+	UVictoryCore_IsPointStuckWithinMesh_Params params;
+	params.TheWorld = TheWorld;
+	params.TestPoint = TestPoint;
+	params.hemisphereSubdivisions = hemisphereSubdivisions;
+	params.rayDistance = rayDistance;
+	params.percentageConsideredStuck = percentageConsideredStuck;
+	params.ActorToIgnore = ActorToIgnore;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,0 +1,32 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_ArtifactCrate_Explosion_13_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function ArtifactCrate_Explosion_13.ArtifactCrate_Explosion_12_C.UserConstructionScript
+struct AArtifactCrate_Explosion_12_C_UserConstructionScript_Params
+{
+};
+
+// Function ArtifactCrate_Explosion_13.ArtifactCrate_Explosion_12_C.ExecuteUbergraph_ArtifactCrate_Explosion_13
+struct AArtifactCrate_Explosion_12_C_ExecuteUbergraph_ArtifactCrate_Explosion_13_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

@@ -1,0 +1,32 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_WeapFists_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function WeapFists.WeapFists_C.UserConstructionScript
+struct AWeapFists_C_UserConstructionScript_Params
+{
+};
+
+// Function WeapFists.WeapFists_C.ExecuteUbergraph_WeapFists
+struct AWeapFists_C_ExecuteUbergraph_WeapFists_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

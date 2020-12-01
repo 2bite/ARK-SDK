@@ -1,0 +1,39 @@
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_EngramEntry_TekWallWithDoor_parameters.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Functions
+//---------------------------------------------------------------------------
+
+// Function EngramEntry_TekWallWithDoor.EngramEntry_TekWallWithDoor_C.ExecuteUbergraph_EngramEntry_TekWallWithDoor
+// ()
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UEngramEntry_TekWallWithDoor_C::ExecuteUbergraph_EngramEntry_TekWallWithDoor(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EngramEntry_TekWallWithDoor.EngramEntry_TekWallWithDoor_C.ExecuteUbergraph_EngramEntry_TekWallWithDoor");
+
+	UEngramEntry_TekWallWithDoor_C_ExecuteUbergraph_EngramEntry_TekWallWithDoor_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

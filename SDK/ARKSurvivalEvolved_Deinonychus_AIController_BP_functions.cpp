@@ -1,0 +1,293 @@
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_Deinonychus_AIController_BP_parameters.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Functions
+//---------------------------------------------------------------------------
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.DinoUberpounce
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// Parameters:
+// bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_AIController_BP_C::DinoUberpounce(bool* Success)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.DinoUberpounce");
+
+	ADeinonychus_AIController_BP_C_DinoUberpounce_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Success != nullptr)
+		*Success = params.Success;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.LocationUberpounce
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+
+void ADeinonychus_AIController_BP_C::STATIC_LocationUberpounce()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.LocationUberpounce");
+
+	ADeinonychus_AIController_BP_C_LocationUberpounce_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.AllowSurfaceNormalForUberpounce
+// ()
+// Parameters:
+// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& SurfaceNormal, bool* IsValid)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.AllowSurfaceNormalForUberpounce");
+
+	ADeinonychus_AIController_BP_C_AllowSurfaceNormalForUberpounce_Params params;
+	params.SurfaceNormal = SurfaceNormal;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (IsValid != nullptr)
+		*IsValid = params.IsValid;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.Enable
+// ()
+
+void ADeinonychus_AIController_BP_C::Enable()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.Enable");
+
+	ADeinonychus_AIController_BP_C_Enable_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.Start Uberpounce
+// ()
+// Parameters:
+// struct FUberpounceData         Data                           (Parm)
+
+void ADeinonychus_AIController_BP_C::Start_Uberpounce(const struct FUberpounceData& Data)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.Start Uberpounce");
+
+	ADeinonychus_AIController_BP_C_Start_Uberpounce_Params params;
+	params.Data = Data;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.Deinonychus AttackedWhileLatched
+// ()
+
+void ADeinonychus_AIController_BP_C::Deinonychus_AttackedWhileLatched()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.Deinonychus AttackedWhileLatched");
+
+	ADeinonychus_AIController_BP_C_Deinonychus_AttackedWhileLatched_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.OnUberpounceStateChanged
+// (NetReliable, NetResponse, Static, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// Parameters:
+// TEnumAsByte<EUberpounceState>  NewState                       (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EUberpounceState>  PrevState                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_AIController_BP_C::STATIC_OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.OnUberpounceStateChanged");
+
+	ADeinonychus_AIController_BP_C_OnUberpounceStateChanged_Params params;
+	params.NewState = NewState;
+	params.PrevState = PrevState;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.UpdateUberpounce
+// ()
+
+void ADeinonychus_AIController_BP_C::UpdateUberpounce()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.UpdateUberpounce");
+
+	ADeinonychus_AIController_BP_C_UpdateUberpounce_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.ReceiveBeginPlay
+// ()
+
+void ADeinonychus_AIController_BP_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.ReceiveBeginPlay");
+
+	ADeinonychus_AIController_BP_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.ReceiveTick
+// ()
+// Parameters:
+// float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_AIController_BP_C::ReceiveTick(float* DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.ReceiveTick");
+
+	ADeinonychus_AIController_BP_C_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.GetPrimalTarget
+// ()
+// Parameters:
+// class APrimalCharacter*        Target                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_AIController_BP_C::GetPrimalTarget(class APrimalCharacter** Target)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.GetPrimalTarget");
+
+	ADeinonychus_AIController_BP_C_GetPrimalTarget_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Target != nullptr)
+		*Target = params.Target;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.GetDino
+// ()
+// Parameters:
+// class ADeinonychus_Character_BP_C* Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_AIController_BP_C::GetDino(class ADeinonychus_Character_BP_C** Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.GetDino");
+
+	ADeinonychus_AIController_BP_C_GetDino_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.UserConstructionScript
+// ()
+
+void ADeinonychus_AIController_BP_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.UserConstructionScript");
+
+	ADeinonychus_AIController_BP_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.ExecuteUbergraph_Deinonychus_AIController_BP
+// ()
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_AIController_BP_C::ExecuteUbergraph_Deinonychus_AIController_BP(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.ExecuteUbergraph_Deinonychus_AIController_BP");
+
+	ADeinonychus_AIController_BP_C_ExecuteUbergraph_Deinonychus_AIController_BP_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

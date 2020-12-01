@@ -1,0 +1,193 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_Mek_AnimBlueprint_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2433
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2433_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_128
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_128_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_148
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_148_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2432
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2432_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByEnum_24
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByEnum_24_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_ModifyBone_519
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_ModifyBone_519_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2431
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2431_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2430
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2430_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_127
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_127_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_147
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_147_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1242
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1242_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1241
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1241_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1240
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1240_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1239
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1239_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1238
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1238_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2436
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2436_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_ModifyBone_520
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_ModifyBone_520_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2429
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2429_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_126
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_126_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2428
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2428_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1237
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1237_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1236
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1236_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1235
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1235_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1234
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1234_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1233
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1233_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1232
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_TransitionResult_1232_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_SequencePlayer_3099
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_SequencePlayer_3099_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_SequencePlayer_3100
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_SequencePlayer_3100_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2435
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2435_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2434
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_BlendListByBool_2434_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_SequencePlayer_3097
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_SequencePlayer_3097_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_SequencePlayer_3098
+struct UMek_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Mek_AnimBlueprint_AnimGraphNode_SequencePlayer_3098_Params
+{
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.BlueprintUpdateAnimation
+struct UMek_AnimBlueprint_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mek_AnimBlueprint.Mek_AnimBlueprint_C.ExecuteUbergraph_Mek_AnimBlueprint
+struct UMek_AnimBlueprint_C_ExecuteUbergraph_Mek_AnimBlueprint_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

@@ -1,0 +1,158 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_FPVBowWeaponAnimBP_Base_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1058
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1058_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1057
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1057_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1056
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1056_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1055
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1055_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1054
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1054_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1053
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1053_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1052
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1052_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1051
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1051_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1050
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1050_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1049
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1049_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1048
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1048_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1047
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1047_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1046
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1046_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1045
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1045_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1044
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1044_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1043
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1043_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1042
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1042_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1041
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1041_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1040
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1040_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1039
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1039_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1038
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1038_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1037
+struct UFPVBowWeaponAnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1037_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.BlueprintUpdateAnimation
+struct UFPVBowWeaponAnimBP_Base_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.AnimNotify_EnterIdle
+struct UFPVBowWeaponAnimBP_Base_C_AnimNotify_EnterIdle_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.AnimNotify_EnterTargetIdle
+struct UFPVBowWeaponAnimBP_Base_C_AnimNotify_EnterTargetIdle_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.AnimNotify_EndPullString
+struct UFPVBowWeaponAnimBP_Base_C_AnimNotify_EndPullString_Params
+{
+};
+
+// Function FPVBowWeaponAnimBP_Base.FPVBowWeaponAnimBP_Base_C.ExecuteUbergraph_FPVBowWeaponAnimBP_Base
+struct UFPVBowWeaponAnimBP_Base_C_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

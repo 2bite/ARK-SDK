@@ -1,0 +1,219 @@
+#pragma once
+
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_DinoBlueprintBase_RootTransformIK_Diving_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.UpdateDivingLeftRight
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_UpdateDivingLeftRight_Params
+{
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class ADino_Character_BP_DivingFlyer_C*            Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.UpdateDivingForwardBack
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_UpdateDivingForwardBack_Params
+{
+	class ADino_Character_BP_DivingFlyer_C*            Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.BlueprintPlayAnimationEvent
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_BlueprintPlayAnimationEvent_Params
+{
+	class UAnimMontage**                               AnimationMontage;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             PlayRate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              playedAnimLength;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2262
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2262_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_ModifyBone_474
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_ModifyBone_474_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2261
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2261_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_RotationOffsetBlendSpace_136
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_RotationOffsetBlendSpace_136_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2260
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2260_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2259
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2259_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2863
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2863_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2258
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2258_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2862
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2862_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2257
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2257_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2861
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2861_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2256
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2256_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2255
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2255_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2860
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2860_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2859
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2859_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2254
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2254_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2253
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2253_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2252
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2252_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2858
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2858_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2857
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2857_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2856
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2856_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendSpacePlayer_122
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendSpacePlayer_122_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2251
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2251_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2250
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2250_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendSpacePlayer_121
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendSpacePlayer_121_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2249
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2249_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2855
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2855_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_ApplyAdditive_159
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_ApplyAdditive_159_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2854
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_SequencePlayer_2854_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2248
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2248_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2247
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_BlendListByBool_2247_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_RotationOffsetBlendSpace_135
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_RotationOffsetBlendSpace_135_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_RotationOffsetBlendSpace_134
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_AnimGraphNode_RotationOffsetBlendSpace_134_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.BlueprintUpdateAnimation
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransformIK_Diving.DinoBlueprintBase_RootTransformIK_Diving_C.ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving
+struct UDinoBlueprintBase_RootTransformIK_Diving_C_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_Diving_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
