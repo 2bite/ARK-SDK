@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WyvPoisonGasCloud.WyvPoisonGasCloud_C
-// 0x0008 (0x08B0 - 0x08A8)
+// 0x0008 (0x0940 - 0x0938)
 class AWyvPoisonGasCloud_C : public ABuff_Base_AoE_C
 {
 public:
-	class UAudioComponent*                             Audio1;                                                   // 0x08A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Audio1;                                                   // 0x0938(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

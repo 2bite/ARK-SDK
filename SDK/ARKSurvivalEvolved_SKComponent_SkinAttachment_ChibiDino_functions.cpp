@@ -72,7 +72,7 @@ void USKComponent_SkinAttachment_ChibiDino_C::PlayMontage(class UAnimMontage* Th
 
 
 // Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.UpdateMovement
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // class ACharacter*              CharacterRef                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,7 +84,6 @@ void USKComponent_SkinAttachment_ChibiDino_C::STATIC_UpdateMovement(class AChara
 	params.CharacterRef = CharacterRef;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -70,13 +70,13 @@ struct ABuff_IsTameRiding_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_148
-struct ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_148_Params
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_130
+struct ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_130_Params
 {
 };
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_147
-struct ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_147_Params
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_129
+struct ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_129_Params
 {
 };
 

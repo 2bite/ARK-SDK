@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Overheat_DayCycleManager.Overheat_DayCycleManager_C
-// 0x0000 (0x0549 - 0x0549)
+// 0x0000 (0x0591 - 0x0591)
 class AOverheat_DayCycleManager_C : public ADayCycleManagerBase_C
 {
 public:

@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Structure_TrainingDummy.Structure_TrainingDummy_C.ReportDPS
-// (Net, NetReliable, Event, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintEvent)
+// (Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
 
 void AStructure_TrainingDummy_C::ReportDPS()
 {
@@ -22,6 +22,7 @@ void AStructure_TrainingDummy_C::ReportDPS()
 	AStructure_TrainingDummy_C_ReportDPS_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

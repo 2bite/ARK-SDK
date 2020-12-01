@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapTekRifle.WeapTekRifle_C.BPAppliedPrimalItemToWeapon
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Private, Protected, Delegate, NetServer, NetClient, DLLImport, Const, NetValidate)
 
 void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
 {
@@ -31,9 +31,9 @@ void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
 
 
 // Function WeapTekRifle.WeapTekRifle_C.ReceiveDestroyed
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Static, Private, Protected, Delegate, NetServer, NetClient, DLLImport, Const, NetValidate)
 
-void AWeapTekRifle_C::ReceiveDestroyed()
+void AWeapTekRifle_C::STATIC_ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekRifle.WeapTekRifle_C.ReceiveDestroyed");
 

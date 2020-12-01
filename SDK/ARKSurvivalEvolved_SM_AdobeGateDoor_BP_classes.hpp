@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeGateDoor_BP.SM_AdobeGateDoor_BP_C
-// 0x0000 (0x0B30 - 0x0B30)
+// 0x0000 (0x0B48 - 0x0B48)
 class ASM_AdobeGateDoor_BP_C : public AGate_Metal_C
 {
 public:

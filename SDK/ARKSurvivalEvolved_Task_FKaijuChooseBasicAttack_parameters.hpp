@@ -24,7 +24,7 @@ struct UTask_FKaijuChooseBasicAttack_C_CheckIfTargetIsCloseToFoot_Params
 // Function Task_FKaijuChooseBasicAttack.Task_FKaijuChooseBasicAttack_C.MaybeFootstomp
 struct UTask_FKaijuChooseBasicAttack_C_MaybeFootstomp_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Task_FKaijuChooseBasicAttack.Task_FKaijuChooseBasicAttack_C.TargetIsFlying

@@ -34,7 +34,7 @@ int AExplorerChest_Base_C::BPGetExtraSpecialBlueprintInt()
 
 
 // Function ExplorerChest_Base.ExplorerChest_Base_C.DrawBasicFloatingHUD
-// (Exec, NetResponse, Static, MulticastDelegate, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Static, Private, Protected, NetServer, HasDefaults, NetClient)
 // Parameters:
 // class AHUD**                   ForHUD                         (Parm, ZeroConstructor, IsPlainOldData)
 

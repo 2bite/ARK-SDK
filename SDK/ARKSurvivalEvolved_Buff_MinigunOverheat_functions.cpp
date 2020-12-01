@@ -70,7 +70,7 @@ void ABuff_MinigunOverheat_C::ReceiveBeginPlay()
 
 
 // Function Buff_MinigunOverheat.Buff_MinigunOverheat_C.BPDrawBuffStatusHUD
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)

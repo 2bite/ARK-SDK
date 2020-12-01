@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_CandyClub.PrimalItemSkin_CandyClub_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemSkin_CandyClub_C : public UPrimalItemSkinGeneric_C
 {
 public:

@@ -32,13 +32,13 @@ public:
 	struct FAnimNode_ConvertLocalToComponentSpace      AnimGraphNode_LocalToComponentSpace_1E8618994C16DED6D08AD695BDD6E4BF;// 0x05F8(0x0028)
 	struct FRotator                                    aimYawRot;                                                // 0x0620(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FRotator                                    aimPitchRot;                                              // 0x062C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	double                                             lastUpdateTime;                                           // 0x0638(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                JumpUpdatedFrameCounter;                                  // 0x0640(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	double                                             LastUpdateTime;                                           // 0x0638(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                jumpUpdatedFrameCounter;                                  // 0x0640(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bJumpUpdate;                                              // 0x0644(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0645(0x0003) MISSED OFFSET
-	float                                              CurrentAimPitch;                                          // 0x0648(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              currentAimPitch;                                          // 0x0648(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              InterpSpeed;                                              // 0x064C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              currentAimYaw;                                            // 0x0650(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CurrentAimYaw;                                            // 0x0650(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isLanternActive;                                          // 0x0654(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x0655(0x0003) MISSED OFFSET
 	float                                              K2Node_Event_DeltaTimeX;                                  // 0x0658(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -89,9 +89,9 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_GroundedChargeLantern_AnimBlueprint_AnimGraphNode_ModifyBone_472();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_GroundedChargeLantern_AnimBlueprint_AnimGraphNode_ModifyBone_471();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_GroundedChargeLantern_AnimBlueprint_AnimGraphNode_BlendListByBool_2230();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_GroundedChargeLantern_AnimBlueprint_AnimGraphNode_ModifyBone_452();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_GroundedChargeLantern_AnimBlueprint_AnimGraphNode_ModifyBone_451();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_GroundedChargeLantern_AnimBlueprint_AnimGraphNode_BlendListByBool_2020();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_SK_GroundedChargeLantern_AnimBlueprint(int EntryPoint);
 };

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Gate_Large_AdobeBase.Gate_Large_AdobeBase_C
-// 0x0000 (0x0B20 - 0x0B20)
+// 0x0000 (0x0B38 - 0x0B38)
 class AGate_Large_AdobeBase_C : public ADoor_Base_SM_C
 {
 public:

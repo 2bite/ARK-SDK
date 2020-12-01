@@ -71,8 +71,8 @@ struct ATusoteuthis_Character_BP_C_DoesPreyEscape_Params
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.canGrab
-struct ATusoteuthis_Character_BP_C_canGrab_Params
+// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.CanGrab
+struct ATusoteuthis_Character_BP_C_CanGrab_Params
 {
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -86,7 +86,7 @@ struct ATusoteuthis_Character_BP_C_BPFedWakingTameEvent_Params
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino
 struct ATusoteuthis_Character_BP_C_GetDefaultDino_Params
 {
-	class ATusoteuthis_Character_BP_C*                 ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ATusoteuthis_Character_BP_C*                 Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.OnRep_UTurnTargetRot
@@ -98,7 +98,7 @@ struct ATusoteuthis_Character_BP_C_OnRep_UTurnTargetRot_Params
 struct ATusoteuthis_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -248,8 +248,8 @@ struct ATusoteuthis_Character_BP_C_TurnActorAround__UpdateFunc_Params
 {
 };
 
-// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_192
-struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_192_Params
+// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_204
+struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_204_Params
 {
 };
 

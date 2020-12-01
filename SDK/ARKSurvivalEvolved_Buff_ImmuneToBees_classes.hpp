@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ImmuneToBees.Buff_ImmuneToBees_C
-// 0x0010 (0x08B0 - 0x08A0)
+// 0x0010 (0x0940 - 0x0930)
 class ABuff_ImmuneToBees_C : public ABuff_Base_C
 {
 public:
-	TArray<class UClass*>                              ClassesImmuneTo;                                          // 0x08A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ClassesImmuneTo;                                          // 0x0930(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

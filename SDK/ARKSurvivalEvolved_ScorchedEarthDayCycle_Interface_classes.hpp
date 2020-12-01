@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void GetIsElectricalStorm(bool* _return);
+	void GetIsElectricalStorm(bool* Return);
 	void GetElectricalStormValues(TArray<class AActor*>* LocationRegions, int* CurrentRegion, float* Radius);
 };
 

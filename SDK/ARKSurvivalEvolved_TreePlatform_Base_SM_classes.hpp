@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TreePlatform_Base_SM.TreePlatform_Base_SM_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class ATreePlatform_Base_SM_C : public AStructureBaseBP_C
 {
 public:

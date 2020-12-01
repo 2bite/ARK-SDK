@@ -42,7 +42,7 @@ bool ABat_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Distance, 
 
 
 // Function Bat_Character_BP.Bat_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)

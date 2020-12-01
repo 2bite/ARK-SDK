@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Buff Create Charge Manager No Instigator Library
-// (NetRequest, Exec, Event, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalBuff*             Buff                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalBuff*             chargeManager                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UChargeFunctions_FakeLibrary_C::STATIC_Buff_Create_Charge_Manager_No_Instigator_Library(class APrimalBuff* Buff, class UClass* managerClass, class APrimalBuff** chargeManager)
+void UChargeFunctions_FakeLibrary_C::Buff_Create_Charge_Manager_No_Instigator_Library(class APrimalBuff* Buff, class UClass* managerClass, class APrimalBuff** chargeManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Buff Create Charge Manager No Instigator Library");
 
@@ -28,6 +28,7 @@ void UChargeFunctions_FakeLibrary_C::STATIC_Buff_Create_Charge_Manager_No_Instig
 	params.managerClass = managerClass;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -184,18 +185,18 @@ void UChargeFunctions_FakeLibrary_C::Charge_Variable_Event_Boolean_Library(TEnum
 // ()
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  fromActor                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  FromActor                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  chargeEmitterClass             (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Charge                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UChargeFunctions_FakeLibrary_C::GetChargeAtActorAccurate(const struct FVector& Location, class AActor* fromActor, float Radius, class UClass* chargeEmitterClass, float* Charge)
+void UChargeFunctions_FakeLibrary_C::GetChargeAtActorAccurate(const struct FVector& Location, class AActor* FromActor, float Radius, class UClass* chargeEmitterClass, float* Charge)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.GetChargeAtActorAccurate");
 
 	UChargeFunctions_FakeLibrary_C_GetChargeAtActorAccurate_Params params;
 	params.Location = Location;
-	params.fromActor = fromActor;
+	params.FromActor = FromActor;
 	params.Radius = Radius;
 	params.chargeEmitterClass = chargeEmitterClass;
 
@@ -237,13 +238,13 @@ void UChargeFunctions_FakeLibrary_C::Buff_Create_Charge_Manager_Library(class AP
 
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Structure Create Charge Manager Library
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalStructure*        Structure                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalBuff*             chargeManager                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UChargeFunctions_FakeLibrary_C::STATIC_Structure_Create_Charge_Manager_Library(class APrimalStructure* Structure, class UClass* managerClass, class APrimalBuff** chargeManager)
+void UChargeFunctions_FakeLibrary_C::Structure_Create_Charge_Manager_Library(class APrimalStructure* Structure, class UClass* managerClass, class APrimalBuff** chargeManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Structure Create Charge Manager Library");
 
@@ -252,6 +253,7 @@ void UChargeFunctions_FakeLibrary_C::STATIC_Structure_Create_Charge_Manager_Libr
 	params.managerClass = managerClass;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -321,13 +323,13 @@ void UChargeFunctions_FakeLibrary_C::ChargeVariableEventLibrary(TEnumAsByte<E_Ch
 
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.CharacterCreateChargeManagerLibrary
-// (Exec, Native, Event, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Event, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        CharacterOwner                 (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalBuff*             chargeManager                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UChargeFunctions_FakeLibrary_C::CharacterCreateChargeManagerLibrary(class APrimalCharacter* CharacterOwner, class UClass* managerClass, class APrimalBuff** chargeManager)
+void UChargeFunctions_FakeLibrary_C::STATIC_CharacterCreateChargeManagerLibrary(class APrimalCharacter* CharacterOwner, class UClass* managerClass, class APrimalBuff** chargeManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.CharacterCreateChargeManagerLibrary");
 
@@ -336,7 +338,6 @@ void UChargeFunctions_FakeLibrary_C::CharacterCreateChargeManagerLibrary(class A
 	params.managerClass = managerClass;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

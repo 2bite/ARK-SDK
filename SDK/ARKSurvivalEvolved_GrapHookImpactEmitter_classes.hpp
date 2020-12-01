@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass GrapHookImpactEmitter.GrapHookImpactEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AGrapHookImpactEmitter_C : public APrimalEmitterSpawnable
 {
 public:

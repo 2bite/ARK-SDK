@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_MetalHelmet.PrimalItemArmor_MetalHelmet_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemArmor_MetalHelmet_C : public UPrimalItemArmor_BaseHelmet_C
 {
 public:

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoCharacterStatusComponent_BP_Diplocaulus.DinoCharacterStatusComponent_BP_Diplocaulus_C
-// 0x0004 (0x108C - 0x1088)
+// 0x0004 (0x1094 - 0x1090)
 class UDinoCharacterStatusComponent_BP_Diplocaulus_C : public UDinoCharacterStatusComponent_BP_C
 {
 public:
-	float                                              HealthWhileInWaterRegenMultiplier;                        // 0x1088(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HealthWhileInWaterRegenMultiplier;                        // 0x1090(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

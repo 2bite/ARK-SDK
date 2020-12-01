@@ -24,7 +24,7 @@ struct AWeapPaintbrush_C_BPGetSelectedMeleeAttackAnim_Params
 struct AWeapPaintbrush_C_BPAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

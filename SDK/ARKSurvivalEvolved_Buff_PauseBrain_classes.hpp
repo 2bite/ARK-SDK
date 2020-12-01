@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_PauseBrain.Buff_PauseBrain_C
-// 0x0010 (0x08B0 - 0x08A0)
+// 0x0010 (0x0940 - 0x0930)
 class ABuff_PauseBrain_C : public ABuff_Base_Disease_Low_C
 {
 public:
-	class FString                                      PauseReason;                                              // 0x08A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      PauseReason;                                              // 0x0930(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

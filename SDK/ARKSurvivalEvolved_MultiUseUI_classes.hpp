@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass MultiUseUI.MultiUseUI_C
-// 0x0010 (0x0568 - 0x0558)
+// 0x0010 (0x0570 - 0x0560)
 class UMultiUseUI_C : public UUI_MultiUse
 {
 public:
-	class UWidgetAnimation*                            Close;                                                    // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWidgetAnimation*                            Open;                                                     // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWidgetAnimation*                            Close;                                                    // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWidgetAnimation*                            Open;                                                     // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

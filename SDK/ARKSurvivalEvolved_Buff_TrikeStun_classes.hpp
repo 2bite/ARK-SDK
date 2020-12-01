@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_TrikeStun.Buff_TrikeStun_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_TrikeStun_C : public ABuff_Base_C
 {
 public:

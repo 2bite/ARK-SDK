@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_Dilo.PrimalItemConsumable_Egg_Dilo_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_Egg_Dilo_C : public UPrimalItemConsumable_Egg_XSmall_C
 {
 public:

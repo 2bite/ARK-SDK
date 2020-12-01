@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dragonfly_Character_BP_Aberrant.Dragonfly_Character_BP_Aberrant_C
-// 0x0000 (0x2098 - 0x2098)
+// 0x0000 (0x2118 - 0x2118)
 class ADragonfly_Character_BP_Aberrant_C : public ADragonfly_Character_BP_C
 {
 public:

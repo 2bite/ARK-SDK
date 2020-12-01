@@ -49,7 +49,7 @@ public:
 
 
 	void BlueprintTriggerAnimationEvent(struct FName* AnimationEventName, float* playedAnimLength);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_1518();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2220();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_BaseNoteMeshAnimBP(int EntryPoint);
 };

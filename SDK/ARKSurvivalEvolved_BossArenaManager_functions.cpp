@@ -47,9 +47,9 @@ void ABossArenaManager_C::SFXBack_to_Home()
 
 
 // Function BossArenaManager.BossArenaManager_C.IssueReturnWarning
-// (Exec, Event, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
+// (Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 
-void ABossArenaManager_C::IssueReturnWarning()
+void ABossArenaManager_C::STATIC_IssueReturnWarning()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.IssueReturnWarning");
 
@@ -64,7 +64,7 @@ void ABossArenaManager_C::IssueReturnWarning()
 
 
 // Function BossArenaManager.BossArenaManager_C.BPClientHandleNetExecCommand
-// (Native, Event, Static, Private, HasOutParms, DLLImport, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
@@ -162,9 +162,9 @@ void ABossArenaManager_C::GetAllActorsInBossArena(bool bIncludeUnconscious, bool
 
 
 // Function BossArenaManager.BossArenaManager_C.IssueTimeWarning
-// (Exec, NetMulticast, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
+// (NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 
-void ABossArenaManager_C::IssueTimeWarning()
+void ABossArenaManager_C::STATIC_IssueTimeWarning()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.IssueTimeWarning");
 
@@ -235,7 +235,7 @@ void ABossArenaManager_C::DidTeleport(const struct FVector& ReturnPosition, clas
 
 
 // Function BossArenaManager.BossArenaManager_C.IsValidForTeleport
-// (Event, NetMulticast, Private, HasOutParms, DLLImport, Const, NetValidate)
+// (Net, Exec, Event, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class FString                  InvalidReason                  (Parm, OutParm, ZeroConstructor)
 

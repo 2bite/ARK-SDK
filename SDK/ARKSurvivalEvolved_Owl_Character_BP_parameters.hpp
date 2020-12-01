@@ -112,7 +112,7 @@ struct AOwl_Character_BP_C_BPOnStaminaDrained_Params
 struct AOwl_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -132,8 +132,8 @@ struct AOwl_Character_BP_C_SetupEncapsulateState_Params
 // Function Owl_Character_BP.Owl_Character_BP_C.BP_PreventMovementMode
 struct AOwl_Character_BP_C_BP_PreventMovementMode_Params
 {
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

@@ -43,7 +43,7 @@ struct UDinoAttackState_MekSwordSwing_C_DoSwordDamage_Params
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordCapsule
 struct UDinoAttackState_MekSwordSwing_C_GetSwordCapsule_Params
 {
-	struct FTransform                                  WorldTransform;                                           // (Parm, OutParm, IsPlainOldData)
+	struct UObject_FTransform                          WorldTransform;                                           // (Parm, OutParm, IsPlainOldData)
 	float                                              CapsuleRadius;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              CapsuleHalfHeight;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

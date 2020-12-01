@@ -15,15 +15,15 @@ namespace sdk
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits
 // ()
 // Parameters:
-// float                          newMIN                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          newMin                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          newMAX                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMegalosaurus_Character_BP_C::UpdateSeverTimerLimits(float newMIN, float newMAX)
+void AMegalosaurus_Character_BP_C::UpdateSeverTimerLimits(float newMin, float newMAX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits");
 
 	AMegalosaurus_Character_BP_C_UpdateSeverTimerLimits_Params params;
-	params.newMIN = newMIN;
+	params.newMin = newMin;
 	params.newMAX = newMAX;
 
 	auto flags = fn->FunctionFlags;
@@ -123,7 +123,7 @@ void AMegalosaurus_Character_BP_C::BPTimerServer()
 
 
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

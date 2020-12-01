@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Base_DoubleDoor.Base_DoubleDoor_C
-// 0x0018 (0x0B58 - 0x0B40)
+// 0x0018 (0x0B70 - 0x0B58)
 class ABase_DoubleDoor_C : public ABase_Door_C
 {
 public:
-	class UBoxComponent*                               OutsideBox;                                               // 0x0B40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBoxComponent*                               InsideBox;                                                // 0x0B48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBoxComponent*                               PlayerCheckBox;                                           // 0x0B50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               OutsideBox;                                               // 0x0B58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               InsideBox;                                                // 0x0B60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               PlayerCheckBox;                                           // 0x0B68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

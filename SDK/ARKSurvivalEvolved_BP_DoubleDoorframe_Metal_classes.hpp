@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DoubleDoorframe_Metal.BP_DoubleDoorframe_Metal_C
-// 0x0000 (0x0AB8 - 0x0AB8)
+// 0x0000 (0x0AD0 - 0x0AD0)
 class ABP_DoubleDoorframe_Metal_C : public ABase_DoubleDoorframe_C
 {
 public:

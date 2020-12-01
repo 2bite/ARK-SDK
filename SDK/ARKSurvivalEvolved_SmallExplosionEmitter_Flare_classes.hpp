@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SmallExplosionEmitter_Flare.SmallExplosionEmitter_Flare_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ASmallExplosionEmitter_Flare_C : public AExplosionEmitter_C
 {
 public:

@@ -15,22 +15,22 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_DesertClothGogglesHelmet.PrimalItemArmor_DesertClothGogglesHelmet_C
-// 0x0048 (0x09D8 - 0x0990)
+// 0x0048 (0x09F8 - 0x09B0)
 class UPrimalItemArmor_DesertClothGogglesHelmet_C : public UPrimalItemArmor_BaseHelmet_C
 {
 public:
-	class UClass*                                      EquippedBuff;                                             // 0x0990(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UPrimalItem*                                 SelfObj;                                                  // 0x0998(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               K2Node_Event_bIsFromSaveGame;                             // 0x09A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x09A1(0x0007) MISSED OFFSET
-	class AActor*                                      CallFunc_GetOwner_ReturnValue;                            // 0x09A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x09B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x09B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x09B9(0x0007) MISSED OFFSET
-	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter2;                    // 0x09C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x09C8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x09C9(0x0007) MISSED OFFSET
-	class APrimalBuff*                                 CallFunc_StaticAddBuff_ReturnValue;                       // 0x09D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UClass*                                      EquippedBuff;                                             // 0x09B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UPrimalItem*                                 SelfObj;                                                  // 0x09B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               K2Node_Event_bIsFromSaveGame;                             // 0x09C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x09C1(0x0007) MISSED OFFSET
+	class AActor*                                      CallFunc_GetOwner_ReturnValue;                            // 0x09C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x09D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x09D8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x09D9(0x0007) MISSED OFFSET
+	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter2;                    // 0x09E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x09E8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x09E9(0x0007) MISSED OFFSET
+	class APrimalBuff*                                 CallFunc_StaticAddBuff_ReturnValue;                       // 0x09F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -93,11 +93,11 @@ void AWeapEmptyCryopod_C::ReceiveBeginPlay()
 
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.UpdateContainsFX
-// (Exec, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetResponse, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ForceOff                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapEmptyCryopod_C::STATIC_UpdateContainsFX(bool ForceOff)
+void AWeapEmptyCryopod_C::UpdateContainsFX(bool ForceOff)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapEmptyCryopod.WeapEmptyCryopod_C.UpdateContainsFX");
 
@@ -154,18 +154,17 @@ void AWeapEmptyCryopod_C::CanCapture(class APrimalDinoCharacter* Dino, bool* Cap
 
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.BPTryFireWeapon
-// (Native, Public, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, Exec, Static, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AWeapEmptyCryopod_C::BPTryFireWeapon()
+bool AWeapEmptyCryopod_C::STATIC_BPTryFireWeapon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapEmptyCryopod.WeapEmptyCryopod_C.BPTryFireWeapon");
 
 	AWeapEmptyCryopod_C_BPTryFireWeapon_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

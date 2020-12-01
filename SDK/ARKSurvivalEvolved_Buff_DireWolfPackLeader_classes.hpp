@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_DireWolfPackLeader.Buff_DireWolfPackLeader_C
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x0A10 - 0x0A10)
 class ABuff_DireWolfPackLeader_C : public ABuff_DinoPackLeader_C
 {
 public:

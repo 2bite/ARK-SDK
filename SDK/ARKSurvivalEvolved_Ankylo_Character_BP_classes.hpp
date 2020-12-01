@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ankylo_Character_BP.Ankylo_Character_BP_C
-// 0x0010 (0x2098 - 0x2088)
+// 0x0010 (0x2118 - 0x2108)
 class AAnkylo_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UStructurePaintingComponent*                 StructurePainting1;                                       // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDinoCharacterStatusComponent_BP_Ankylo_C*   DinoCharacterStatus_BP_Anklyo_C1;                         // 0x2090(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStructurePaintingComponent*                 StructurePainting1;                                       // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Ankylo_C*   DinoCharacterStatus_BP_Anklyo_C1;                         // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

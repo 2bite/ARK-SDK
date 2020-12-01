@@ -222,13 +222,13 @@ bool ATroodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Troodon_Character_BP.Troodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, Event, NetResponse, Static, NetMulticast, Protected, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATroodon_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATroodon_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Troodon_Character_BP.Troodon_Character_BP_C.BPGetMultiUseEntries");
 
@@ -236,6 +236,7 @@ TArray<struct FMultiUseEntry> ATroodon_Character_BP_C::BPGetMultiUseEntries(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -323,7 +324,7 @@ void ATroodon_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMovemen
 
 
 // Function Troodon_Character_BP.Troodon_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Native, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Event, NetResponse, Protected, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -332,7 +333,7 @@ void ATroodon_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMovemen
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ATroodon_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ATroodon_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Troodon_Character_BP.Troodon_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -342,7 +343,6 @@ float ATroodon_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackInd
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -358,15 +358,16 @@ float ATroodon_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackInd
 
 
 // Function Troodon_Character_BP.Troodon_Character_BP_C.OnJumped
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, Protected, NetServer, HasOutParms, DLLImport)
 
-void ATroodon_Character_BP_C::STATIC_OnJumped()
+void ATroodon_Character_BP_C::OnJumped()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Troodon_Character_BP.Troodon_Character_BP_C.OnJumped");
 
 	ATroodon_Character_BP_C_OnJumped_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

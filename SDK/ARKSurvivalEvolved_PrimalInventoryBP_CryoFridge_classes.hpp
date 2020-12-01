@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_CryoFridge.PrimalInventoryBP_CryoFridge_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_CryoFridge_C : public UPrimalInventoryBP_StorageBox_Base_C
 {
 public:

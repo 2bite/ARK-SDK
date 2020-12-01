@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CliffPlatform_Base_BP.CliffPlatform_Base_BP_C
-// 0x0010 (0x0AB0 - 0x0AA0)
+// 0x0010 (0x0AC8 - 0x0AB8)
 class ACliffPlatform_Base_BP_C : public AStructureBaseBP_C
 {
 public:
-	TArray<class AActor*>                              CallFunc_LineTraceSingle_NEW_ActorsToIgnore_RefProperty;  // 0x0AA0(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
+	TArray<class AActor*>                              CallFunc_LineTraceSingle_NEW_ActorsToIgnore_RefProperty;  // 0x0AB8(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
 
 	static UClass* StaticClass()
 	{

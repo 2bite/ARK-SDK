@@ -316,13 +316,13 @@ bool AStorageBox_TekGenerator_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Static, Protected, Delegate, HasDefaults, BlueprintPure, Const, NetValidate)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStorageBox_TekGenerator_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStorageBox_TekGenerator_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.BPGetMultiUseEntries");
 

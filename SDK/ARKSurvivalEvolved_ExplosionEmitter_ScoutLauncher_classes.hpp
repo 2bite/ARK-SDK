@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ExplosionEmitter_ScoutLauncher.ExplosionEmitter_ScoutLauncher_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AExplosionEmitter_ScoutLauncher_C : public APrimalEmitterSpawnable
 {
 public:

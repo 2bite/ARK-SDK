@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapStoneClube_Candy.WeapStoneClube_Candy_C
-// 0x0008 (0x0D38 - 0x0D30)
+// 0x0008 (0x0D58 - 0x0D50)
 class AWeapStoneClube_Candy_C : public AWeapStoneClub_C
 {
 public:
-	class USkeletalMeshComponent*                      MeshFPVAdditional;                                        // 0x0D30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      MeshFPVAdditional;                                        // 0x0D50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

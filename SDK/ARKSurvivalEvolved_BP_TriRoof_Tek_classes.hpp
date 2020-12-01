@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TriRoof_Tek.BP_TriRoof_Tek_C
-// 0x0000 (0x0AA1 - 0x0AA1)
+// 0x0000 (0x0AB9 - 0x0AB9)
 class ABP_TriRoof_Tek_C : public ABase_Roof_Tri_C
 {
 public:

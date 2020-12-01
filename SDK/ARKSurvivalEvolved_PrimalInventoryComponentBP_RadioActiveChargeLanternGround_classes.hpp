@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryComponentBP_RadioActiveChargeLanternGround.PrimalInventoryComponentBP_RadioActiveChargeLanternGround_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryComponentBP_RadioActiveChargeLanternGround_C : public UPrimalInventoryComponent
 {
 public:

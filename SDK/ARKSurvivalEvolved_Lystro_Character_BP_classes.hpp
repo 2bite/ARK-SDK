@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lystro_Character_BP.Lystro_Character_BP_C
-// 0x0018 (0x20A0 - 0x2088)
+// 0x0018 (0x2120 - 0x2108)
 class ALystro_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Lystro_C*   DinoCharacterStatus_BP_Lystro_C1;                         // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UAnimMontage*>                        PetAnims;                                                 // 0x2090(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UDinoCharacterStatusComponent_BP_Lystro_C*   DinoCharacterStatus_BP_Lystro_C1;                         // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UAnimMontage*>                        PetAnims;                                                 // 0x2110(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

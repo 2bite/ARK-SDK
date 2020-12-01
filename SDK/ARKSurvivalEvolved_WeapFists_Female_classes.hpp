@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapFists_Female.WeapFists_Female_C
-// 0x0000 (0x0D30 - 0x0D30)
+// 0x0000 (0x0D50 - 0x0D50)
 class AWeapFists_Female_C : public AWeapFists_C
 {
 public:

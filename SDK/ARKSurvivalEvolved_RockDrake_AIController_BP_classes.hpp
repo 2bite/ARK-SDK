@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RockDrake_AIController_BP.RockDrake_AIController_BP_C
-// 0x0001 (0x08EA - 0x08E9)
+// 0x0001 (0x0912 - 0x0911)
 class ARockDrake_AIController_BP_C : public ADino_AIController_BP_Climber_C
 {
 public:
-	bool                                               bWasDrakeUsingCamo;                                       // 0x08E9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bWasDrakeUsingCamo;                                       // 0x0911(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

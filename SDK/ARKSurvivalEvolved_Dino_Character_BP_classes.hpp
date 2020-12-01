@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dino_Character_BP.Dino_Character_BP_C
-// 0x0008 (0x2088 - 0x2080)
+// 0x0008 (0x2108 - 0x2100)
 class ADino_Character_BP_C : public APrimalDinoCharacter
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x2080(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x2100(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

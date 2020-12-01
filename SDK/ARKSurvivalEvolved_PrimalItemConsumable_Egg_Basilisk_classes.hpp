@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_Basilisk.PrimalItemConsumable_Egg_Basilisk_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_Egg_Basilisk_C : public UPrimalItemConsumable_Egg_XtraLarge_C
 {
 public:

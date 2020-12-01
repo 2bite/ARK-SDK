@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Lamprey_Poison.Buff_Lamprey_Poison_C
-// 0x0004 (0x08A4 - 0x08A0)
+// 0x0004 (0x0934 - 0x0930)
 class ABuff_Lamprey_Poison_C : public ABuff_Base_Disease_Low_C
 {
 public:
-	float                                              TimeLeft;                                                 // 0x08A0(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	float                                              TimeLeft;                                                 // 0x0930(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

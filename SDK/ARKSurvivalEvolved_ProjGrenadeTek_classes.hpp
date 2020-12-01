@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjGrenadeTek.ProjGrenadeTek_C
-// 0x00A8 (0x06F0 - 0x0648)
+// 0x00A8 (0x0700 - 0x0658)
 class AProjGrenadeTek_C : public AShooterProjectile
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioComponent*                             AudioAttached;                                            // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleSystemAttached;                                   // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioComponent*                             Audio1;                                                   // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FHitResult                                  K2Node_Event_Result;                                      // 0x0668(0x0088) (OutParm, Transient, DuplicateTransient, ReferenceParm)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             AudioAttached;                                            // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystemAttached;                                   // 0x0668(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Audio1;                                                   // 0x0670(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FHitResult                                  K2Node_Event_Result;                                      // 0x0678(0x0088) (OutParm, Transient, DuplicateTransient, ReferenceParm)
 
 	static UClass* StaticClass()
 	{

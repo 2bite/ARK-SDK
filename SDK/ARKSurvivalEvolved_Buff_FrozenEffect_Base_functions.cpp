@@ -92,11 +92,11 @@ void ABuff_FrozenEffect_Base_C::ReceiveDestroyed()
 
 
 // Function Buff_FrozenEffect_Base.Buff_FrozenEffect_Base_C.BPSetupForInstigator
-// (NetRequest, Exec, Protected, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, Public, Private, Delegate, DLLImport, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FrozenEffect_Base_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_FrozenEffect_Base_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FrozenEffect_Base.Buff_FrozenEffect_Base_C.BPSetupForInstigator");
 
@@ -104,6 +104,7 @@ void ABuff_FrozenEffect_Base_C::BPSetupForInstigator(class AActor** ForInstigato
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

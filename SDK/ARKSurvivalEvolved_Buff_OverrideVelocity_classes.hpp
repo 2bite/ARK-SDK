@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_OverrideVelocity.Buff_OverrideVelocity_C
-// 0x0010 (0x08B0 - 0x08A0)
+// 0x0010 (0x0940 - 0x0930)
 class ABuff_OverrideVelocity_C : public APrimalBuff
 {
 public:
-	struct FVector                                     NewFallVelocity;                                          // 0x08A0(0x000C) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxNewFallVelocity;                                       // 0x08AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     NewFallVelocity;                                          // 0x0930(0x000C) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxNewFallVelocity;                                       // 0x093C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

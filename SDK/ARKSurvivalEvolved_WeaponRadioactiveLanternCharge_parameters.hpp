@@ -27,7 +27,7 @@ struct AWeaponRadioactiveLanternCharge_C_Get_Charge_Variable_Interface_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.RemoveAllBeamsServer
@@ -79,7 +79,7 @@ struct AWeaponRadioactiveLanternCharge_C_BPAdjustAmmoPerShot_Params
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.SetBeamIntensity
 struct AWeaponRadioactiveLanternCharge_C_SetBeamIntensity_Params
 {
-	class UParticleSystemComponent*                    beamComponent;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    BeamComponent;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.BPSecondaryAction
@@ -281,7 +281,7 @@ struct AWeaponRadioactiveLanternCharge_C_Charge_Variable_Event_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.Charge Variable Event Trigger Multicast Interface
@@ -317,14 +317,14 @@ struct AWeaponRadioactiveLanternCharge_C_ChargeVariableEventDoubleInterface_Para
 struct AWeaponRadioactiveLanternCharge_C_ChargeVariableEventIntInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.ChargeVariableEventIntMulticastInterface
 struct AWeaponRadioactiveLanternCharge_C_ChargeVariableEventIntMulticastInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.ReceiveBeginPlay
@@ -364,7 +364,7 @@ struct AWeaponRadioactiveLanternCharge_C_Set_Charge_Variable_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               triggerEvent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               multicastEvent;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.FiringBeamLogic
@@ -463,7 +463,7 @@ struct AWeaponRadioactiveLanternCharge_C_CancelPlacement_Params
 struct AWeaponRadioactiveLanternCharge_C_BPAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

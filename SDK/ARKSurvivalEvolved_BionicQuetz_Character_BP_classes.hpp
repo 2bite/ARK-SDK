@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicQuetz_Character_BP.BionicQuetz_Character_BP_C
-// 0x0000 (0x2098 - 0x2098)
+// 0x0000 (0x2118 - 0x2118)
 class ABionicQuetz_Character_BP_C : public AQuetz_Character_BP_C
 {
 public:

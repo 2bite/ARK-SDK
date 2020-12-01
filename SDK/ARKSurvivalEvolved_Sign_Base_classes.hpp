@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sign_Base.Sign_Base_C
-// 0x0008 (0x0AD0 - 0x0AC8)
+// 0x0008 (0x0AE8 - 0x0AE0)
 class ASign_Base_C : public APrimalStructureSign
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0AC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0AE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

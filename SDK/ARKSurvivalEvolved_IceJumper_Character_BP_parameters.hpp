@@ -110,8 +110,8 @@ struct AIceJumper_Character_BP_C_BPModifyAimOffsetNoTarget_Params
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.BP_PreventMovementMode
 struct AIceJumper_Character_BP_C_BP_PreventMovementMode_Params
 {
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -219,9 +219,9 @@ struct AIceJumper_Character_BP_C_InAirStateIsResultOfJump_Params
 struct AIceJumper_Character_BP_C_K2_OnMovementModeChanged_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PrevCustomMode;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.IsOutOfStamina
@@ -394,7 +394,7 @@ struct AIceJumper_Character_BP_C_SetIceBreathProjectile_Params
 struct AIceJumper_Character_BP_C_UpdateDashCollider_Params
 {
 	float                                              Radius;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              DamageMult;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              damageMult;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               HitTarget;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

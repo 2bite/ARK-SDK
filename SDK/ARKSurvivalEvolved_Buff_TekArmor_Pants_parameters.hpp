@@ -234,7 +234,7 @@ struct ABuff_TekArmor_Pants_C_CalculateDeflectingImpulse_Params
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.SetPlayerRunSpeed
 struct ABuff_TekArmor_Pants_C_SetPlayerRunSpeed_Params
 {
-	float                                              NewSpeed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              newSpeed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.ClearHitActors
@@ -283,13 +283,13 @@ struct ABuff_TekArmor_Pants_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_84
-struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_84_Params
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_79
+struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_79_Params
 {
 };
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_83
-struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_83_Params
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_78
+struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_78_Params
 {
 };
 

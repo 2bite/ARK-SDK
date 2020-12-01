@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wall_Base_Small_SM.Wall_Base_Small_SM_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class AWall_Base_Small_SM_C : public AStructureBaseBP_C
 {
 public:

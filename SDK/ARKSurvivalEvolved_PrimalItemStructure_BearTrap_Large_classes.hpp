@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_BearTrap_Large.PrimalItemStructure_BearTrap_Large_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_BearTrap_Large_C : public UPrimalItemStructureGeneric_C
 {
 public:

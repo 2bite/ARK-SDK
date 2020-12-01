@@ -17,7 +17,7 @@ namespace sdk
 // Function AnimNotify_BlockTransition.AnimNotify_BlockTransition_C.Received_NotifyEnd
 struct UAnimNotify_BlockTransition_C_Received_NotifyEnd_Params
 {
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -25,7 +25,7 @@ struct UAnimNotify_BlockTransition_C_Received_NotifyEnd_Params
 // Function AnimNotify_BlockTransition.AnimNotify_BlockTransition_C.Received_NotifyBegin
 struct UAnimNotify_BlockTransition_C_Received_NotifyBegin_Params
 {
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             TotalDuration;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

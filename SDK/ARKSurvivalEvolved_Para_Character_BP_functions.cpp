@@ -77,7 +77,7 @@ void APara_Character_BP_C::GetNearbyEnemies(TArray<struct FVector>* Locations)
 
 
 // Function Para_Character_BP.Para_Character_BP_C.NotifyPlayerAboutAlert
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Static, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -89,6 +89,7 @@ void APara_Character_BP_C::STATIC_NotifyPlayerAboutAlert(class AShooterCharacter
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -470,7 +471,7 @@ bool APara_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* U
 
 
 // Function Para_Character_BP.Para_Character_BP_C.BPGetMultiUseEntries
-// (Event, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

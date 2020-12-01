@@ -36,7 +36,7 @@ public:
 	}
 
 
-	void STATIC_ReceiveExecute(class AActor** OwnerActor);
+	void ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_AttachToOverlappingTree(int EntryPoint);
 };
 

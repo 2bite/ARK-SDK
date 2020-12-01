@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChalicoSit.Buff_ChalicoSit_C
-// 0x0008 (0x08A8 - 0x08A0)
+// 0x0008 (0x0938 - 0x0930)
 class ABuff_ChalicoSit_C : public ABuff_Base_Stew_C
 {
 public:
-	float                                              percentHealthPerSecond;                                   // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              healthRecoveryThreshold;                                  // 0x08A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              percentHealthPerSecond;                                   // 0x0930(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              healthRecoveryThreshold;                                  // 0x0934(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

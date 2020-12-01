@@ -30,16 +30,15 @@ void AProjScoutTracker_C::SpawnImpactVFX()
 
 
 // Function ProjScoutTracker.ProjScoutTracker_C.ScheduleNextTrackerImpactVFXSpawn
-// (NetReliable, Native, Event, NetResponse, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Event, Static, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 
-void AProjScoutTracker_C::ScheduleNextTrackerImpactVFXSpawn()
+void AProjScoutTracker_C::STATIC_ScheduleNextTrackerImpactVFXSpawn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjScoutTracker.ProjScoutTracker_C.ScheduleNextTrackerImpactVFXSpawn");
 
 	AProjScoutTracker_C_ScheduleNextTrackerImpactVFXSpawn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -56,7 +56,7 @@ void AWyvern_Character_BP_Base_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.SpawnNestEgg
-// (NetRequest, Native, Event, NetResponse, Static, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Static, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
 
 void AWyvern_Character_BP_Base_C::STATIC_SpawnNestEgg()
 {
@@ -65,7 +65,6 @@ void AWyvern_Character_BP_Base_C::STATIC_SpawnNestEgg()
 	AWyvern_Character_BP_Base_C_SpawnNestEgg_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

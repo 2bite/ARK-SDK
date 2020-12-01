@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Gate_Tek.Gate_Tek_C
-// 0x0023 (0x0D30 - 0x0D0D)
+// 0x0023 (0x0D48 - 0x0D25)
 class AGate_Tek_C : public ADoor_Tek_Base_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0D0D(0x0003) MISSED OFFSET
-	class USphereComponent*                            Sphere1;                                                  // 0x0D10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0D18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        SecondDoor;                                               // 0x0D20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             SecondDoorTransform;                                      // 0x0D28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0D25(0x0003) MISSED OFFSET
+	class USphereComponent*                            Sphere1;                                                  // 0x0D28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0D30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        SecondDoor;                                               // 0x0D38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             SecondDoorTransform;                                      // 0x0D40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

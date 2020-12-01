@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_PoisonImmunity_Base.Buff_PoisonImmunity_Base_C
-// 0x0008 (0x08A8 - 0x08A0)
+// 0x0008 (0x0938 - 0x0930)
 class ABuff_PoisonImmunity_Base_C : public APrimalBuff
 {
 public:
-	class UClass*                                      ImmuneToBuff;                                             // 0x08A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ImmuneToBuff;                                             // 0x0930(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

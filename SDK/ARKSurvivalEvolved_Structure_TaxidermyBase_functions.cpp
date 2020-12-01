@@ -89,7 +89,7 @@ bool AStructure_TaxidermyBase_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -103,7 +103,6 @@ TArray<struct FMultiUseEntry> AStructure_TaxidermyBase_C::STATIC_BPGetMultiUseEn
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,11 +133,11 @@ void AStructure_TaxidermyBase_C::RemoveSnapshot()
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ApplySnapshot
-// (NetRequest, Exec, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalItem*             Snapshot                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TaxidermyBase_C::ApplySnapshot(class UPrimalItem* Snapshot)
+void AStructure_TaxidermyBase_C::STATIC_ApplySnapshot(class UPrimalItem* Snapshot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ApplySnapshot");
 

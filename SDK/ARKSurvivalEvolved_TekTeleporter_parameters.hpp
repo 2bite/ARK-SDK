@@ -78,7 +78,7 @@ struct ATekTeleporter_C_GetElementCostToTeleport_Params
 struct ATekTeleporter_C_GetCharactersForTeleport_Params
 {
 	TArray<class APrimalCharacter*>                    OutChars;                                                 // (Parm, OutParm, ZeroConstructor)
-	TArray<struct FTransform>                          OutTransforms;                                            // (Parm, OutParm, ZeroConstructor)
+	TArray<struct UObject_FTransform>                  OutTransforms;                                            // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function TekTeleporter.TekTeleporter_C.DoTeleport

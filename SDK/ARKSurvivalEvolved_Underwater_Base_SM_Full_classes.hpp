@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Underwater_Base_SM_Full.Underwater_Base_SM_Full_C
-// 0x0008 (0x0EB8 - 0x0EB0)
+// 0x0008 (0x0ED0 - 0x0EC8)
 class AUnderwater_Base_SM_Full_C : public AUnderwater_Base_SM_C
 {
 public:
-	class UBoxComponent*                               Collision_Bottom;                                         // 0x0EB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               Collision_Bottom;                                         // 0x0EC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

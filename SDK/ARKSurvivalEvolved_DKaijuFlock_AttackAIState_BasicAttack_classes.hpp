@@ -38,10 +38,10 @@ public:
 	}
 
 
-	void OnBeginEvent(class UPrimalAIState** InParentState);
+	void STATIC_OnBeginEvent(class UPrimalAIState** InParentState);
 	void BPOnAttackStart(int* AttackIndex);
 	bool BPShouldEndAttack();
-	void STATIC_OnTickEvent(float* DeltaSeconds);
+	void OnTickEvent(float* DeltaSeconds);
 	void ExecuteUbergraph_DKaijuFlock_AttackAIState_BasicAttack(int EntryPoint);
 };
 

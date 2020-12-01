@@ -34,7 +34,7 @@ public:
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void OnEndEvent();
 	void OnTickEvent(float* DeltaSeconds);
-	void OnBeginEvent(class UPrimalAIState** InParentState);
+	void STATIC_OnBeginEvent(class UPrimalAIState** InParentState);
 	void IsAIControlled(bool* NewParam);
 	void ExecuteUbergraph_DinoAttackState_IceJumper_Dash(int EntryPoint);
 };

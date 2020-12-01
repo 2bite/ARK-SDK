@@ -12,6 +12,50 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function DayCycleManagerBase.DayCycleManagerBase_C.Get Teleport Transfer World PP
+// ()
+// Parameters:
+// class APostProcessVolume*      PP                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADayCycleManagerBase_C::Get_Teleport_Transfer_World_PP(class APostProcessVolume** PP)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function DayCycleManagerBase.DayCycleManagerBase_C.Get Teleport Transfer World PP");
+
+	ADayCycleManagerBase_C_Get_Teleport_Transfer_World_PP_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (PP != nullptr)
+		*PP = params.PP;
+}
+
+
+// Function DayCycleManagerBase.DayCycleManagerBase_C.Get VR World PP
+// ()
+// Parameters:
+// class APostProcessVolume*      PP                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADayCycleManagerBase_C::Get_VR_World_PP(class APostProcessVolume** PP)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function DayCycleManagerBase.DayCycleManagerBase_C.Get VR World PP");
+
+	ADayCycleManagerBase_C_Get_VR_World_PP_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (PP != nullptr)
+		*PP = params.PP;
+}
+
+
 // Function DayCycleManagerBase.DayCycleManagerBase_C.HandleGrappleHookImpacted
 // ()
 // Parameters:

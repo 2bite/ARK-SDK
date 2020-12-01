@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Toad_Character_BP_Aberrant.Toad_Character_BP_Aberrant_C
-// 0x0000 (0x2090 - 0x2090)
+// 0x0000 (0x2110 - 0x2110)
 class AToad_Character_BP_Aberrant_C : public AToad_Character_BP_C
 {
 public:

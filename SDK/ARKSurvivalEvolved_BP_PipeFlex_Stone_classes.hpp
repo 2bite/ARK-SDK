@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PipeFlex_Stone.BP_PipeFlex_Stone_C
-// 0x0000 (0x0BE0 - 0x0BE0)
+// 0x0000 (0x0C00 - 0x0C00)
 class ABP_PipeFlex_Stone_C : public ABase_Pipe_Flex_C
 {
 public:

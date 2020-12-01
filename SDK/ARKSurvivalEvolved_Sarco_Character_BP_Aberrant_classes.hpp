@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sarco_Character_BP_Aberrant.Sarco_Character_BP_Aberrant_C
-// 0x0000 (0x2559 - 0x2559)
+// 0x0000 (0x25EF - 0x25EF)
 class ASarco_Character_BP_Aberrant_C : public ASarco_Character_BP_C
 {
 public:

@@ -122,7 +122,7 @@ int AStructureTurretBaseBP_C::BPIsAllowedToBuildEx(int* CurrentAllowedReason, cl
 
 
 // Function StructureTurretBaseBP.StructureTurretBaseBP_C.BlueprintDrawHUD
-// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)

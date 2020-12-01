@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TributeTerminal_Base.TributeTerminal_Base_C
-// 0x0000 (0x0DB8 - 0x0DB8)
+// 0x0000 (0x0DD0 - 0x0DD0)
 class ATributeTerminal_Base_C : public AStructureItemContainerBaseBP_C
 {
 public:

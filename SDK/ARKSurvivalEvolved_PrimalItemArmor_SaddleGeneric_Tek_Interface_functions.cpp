@@ -15,9 +15,9 @@ namespace sdk
 // Function PrimalItemArmor_SaddleGeneric_Tek_Interface.PrimalItemArmor_SaddleGeneric_Tek_Interface_C.IGet Max Ammo
 // ()
 // Parameters:
-// int                            RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int* RetVal)
+void UPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_SaddleGeneric_Tek_Interface.PrimalItemArmor_SaddleGeneric_Tek_Interface_C.IGet Max Ammo");
 
@@ -29,8 +29,8 @@ void UPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int* RetVal)
 
 	fn->FunctionFlags = flags;
 
-	if (RetVal != nullptr)
-		*RetVal = params.RetVal;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 

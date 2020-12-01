@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapRocketLauncher.WeapRocketLauncher_C
-// 0x0000 (0x0DD8 - 0x0DD8)
+// 0x0000 (0x0DF8 - 0x0DF8)
 class AWeapRocketLauncher_C : public AShooterWeapon_Projectile
 {
 public:

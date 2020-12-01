@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CompostBin.CompostBin_C
-// 0x0018 (0x0DD0 - 0x0DB8)
+// 0x0018 (0x0DE8 - 0x0DD0)
 class ACompostBin_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UAudioComponent*                             Audio1;                                                   // 0x0DB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    FliesParticles;                                           // 0x0DC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPrimalInventoryBP_CompostBin_C*             PrimalInventoryBP_CompostBin_C1;                          // 0x0DC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Audio1;                                                   // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    FliesParticles;                                           // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_CompostBin_C*             PrimalInventoryBP_CompostBin_C1;                          // 0x0DE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

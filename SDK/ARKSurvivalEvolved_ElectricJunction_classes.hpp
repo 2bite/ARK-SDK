@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElectricJunction.ElectricJunction_C
-// 0x0008 (0x0DC0 - 0x0DB8)
+// 0x0008 (0x0DD8 - 0x0DD0)
 class AElectricJunction_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0DB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

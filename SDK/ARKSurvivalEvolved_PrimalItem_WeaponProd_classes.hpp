@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponProd.PrimalItem_WeaponProd_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItem_WeaponProd_C : public UPrimalItem_WeaponBaseClub_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeDoor_BP.SM_AdobeDoor_BP_C
-// 0x0000 (0x0B20 - 0x0B20)
+// 0x0000 (0x0B38 - 0x0B38)
 class ASM_AdobeDoor_BP_C : public ADoor_Metal_C
 {
 public:

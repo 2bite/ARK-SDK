@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_SquidInk.Buff_SquidInk_C
-// 0x0068 (0x0908 - 0x08A0)
+// 0x0068 (0x0998 - 0x0930)
 class ABuff_SquidInk_C : public ABuff_Base_C
 {
 public:
-	float                                              durationPlayer;                                           // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              durationWildDino;                                         // 0x08A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FDamagePrimalCharacterStatusValueModifier   playerSpeedModifier;                                      // 0x08A8(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FDamagePrimalCharacterStatusValueModifier   wildDinoSpeedModifier;                                    // 0x08D8(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                              durationPlayer;                                           // 0x0930(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              durationWildDino;                                         // 0x0934(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FDamagePrimalCharacterStatusValueModifier   playerSpeedModifier;                                      // 0x0938(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FDamagePrimalCharacterStatusValueModifier   wildDinoSpeedModifier;                                    // 0x0968(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

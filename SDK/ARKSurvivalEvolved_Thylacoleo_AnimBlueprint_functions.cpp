@@ -12,26 +12,6 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Thylacoleo_AnimBlueprint.Thylacoleo_AnimBlueprint_C.BlueprintUpdateAnimation
-// ()
-// Parameters:
-// float*                         DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UThylacoleo_AnimBlueprint_C::BlueprintUpdateAnimation(float* DeltaTimeX)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Thylacoleo_AnimBlueprint.Thylacoleo_AnimBlueprint_C.BlueprintUpdateAnimation");
-
-	UThylacoleo_AnimBlueprint_C_BlueprintUpdateAnimation_Params params;
-	params.DeltaTimeX = DeltaTimeX;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Thylacoleo_AnimBlueprint.Thylacoleo_AnimBlueprint_C.ExecuteUbergraph_Thylacoleo_AnimBlueprint
 // ()
 // Parameters:

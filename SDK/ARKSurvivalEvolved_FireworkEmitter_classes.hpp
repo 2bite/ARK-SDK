@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass FireworkEmitter.FireworkEmitter_C
-// 0x0010 (0x0510 - 0x0500)
+// 0x0010 (0x0520 - 0x0510)
 class AFireworkEmitter_C : public APrimalEmitterSpawnable
 {
 public:
-	class UAudioComponent*                             Audio1;                                                   // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Audio1;                                                   // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

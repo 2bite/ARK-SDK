@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapFlareGun_Firework.WeapFlareGun_Firework_C
-// 0x0000 (0x0DD8 - 0x0DD8)
+// 0x0000 (0x0DF8 - 0x0DF8)
 class AWeapFlareGun_Firework_C : public AWeapFlareGun_C
 {
 public:

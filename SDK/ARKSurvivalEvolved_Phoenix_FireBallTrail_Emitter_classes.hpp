@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Phoenix_FireBallTrail_Emitter.Phoenix_FireBallTrail_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class APhoenix_FireBallTrail_Emitter_C : public APrimalEmitterSpawnable
 {
 public:

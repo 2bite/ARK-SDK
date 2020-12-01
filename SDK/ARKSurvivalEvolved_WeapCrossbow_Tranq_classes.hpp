@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapCrossbow_Tranq.WeapCrossbow_Tranq_C
-// 0x0000 (0x0DF8 - 0x0DF8)
+// 0x0000 (0x0E18 - 0x0E18)
 class AWeapCrossbow_Tranq_C : public AWeapCrossbow_C
 {
 public:

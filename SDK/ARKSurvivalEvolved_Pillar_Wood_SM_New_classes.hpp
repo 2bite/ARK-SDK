@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pillar_Wood_SM_New.Pillar_Wood_SM_New_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class APillar_Wood_SM_New_C : public APillar_Base_SM_C
 {
 public:

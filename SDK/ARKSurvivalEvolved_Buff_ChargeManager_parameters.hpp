@@ -42,7 +42,7 @@ struct ABuff_ChargeManager_C_GetChargeVariableExternalManager_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeManager.Buff_ChargeManager_C.Update Tick Delta Time
@@ -134,7 +134,7 @@ struct ABuff_ChargeManager_C_Batteries_Logic_Server_Params
 // Function Buff_ChargeManager.Buff_ChargeManager_C.Take Charge from Batteries
 struct ABuff_ChargeManager_C_Take_Charge_from_Batteries_Params
 {
-	float                                              amountToTake;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              AmountToTake;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      inventoryOwner;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               addChargeToBuff;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               updateItem;                                               // (Parm, ZeroConstructor, IsPlainOldData)
@@ -177,7 +177,7 @@ struct ABuff_ChargeManager_C_ChargeVariableEvent_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeManager.Buff_ChargeManager_C.SetChargeVariable
@@ -190,7 +190,7 @@ struct ABuff_ChargeManager_C_SetChargeVariable_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               triggerEvent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               multicastEvent;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeManager.Buff_ChargeManager_C.Get Charge Variable
@@ -200,7 +200,7 @@ struct ABuff_ChargeManager_C_Get_Charge_Variable_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeManager.Buff_ChargeManager_C.GetChargeMultiplierForSource
@@ -247,10 +247,10 @@ struct ABuff_ChargeManager_C_isGainingCharge_Params
 	bool                                               isGainingCharge;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Buff_ChargeManager.Buff_ChargeManager_C.IsGettingCharge
-struct ABuff_ChargeManager_C_IsGettingCharge_Params
+// Function Buff_ChargeManager.Buff_ChargeManager_C.isGettingCharge
+struct ABuff_ChargeManager_C_isGettingCharge_Params
 {
-	bool                                               IsGettingCharge;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isGettingCharge;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeManager.Buff_ChargeManager_C.CalculateChargeReceivedPerSecond
@@ -264,10 +264,10 @@ struct ABuff_ChargeManager_C_OnChargeEvent_Params
 {
 };
 
-// Function Buff_ChargeManager.Buff_ChargeManager_C.isFirstCharge
-struct ABuff_ChargeManager_C_isFirstCharge_Params
+// Function Buff_ChargeManager.Buff_ChargeManager_C.IsFirstCharge
+struct ABuff_ChargeManager_C_IsFirstCharge_Params
 {
-	bool                                               isFirstCharge;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFirstCharge;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeManager.Buff_ChargeManager_C.BuffTickClient

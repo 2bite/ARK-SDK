@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapBaseClub.WeapBaseClub_C
-// 0x0000 (0x0D30 - 0x0D30)
+// 0x0000 (0x0D50 - 0x0D50)
 class AWeapBaseClub_C : public AShooterWeapon_Melee
 {
 public:

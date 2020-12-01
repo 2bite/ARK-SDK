@@ -23,7 +23,7 @@ struct UAnimNotify_PlaySound_C_GetNotifyName_Params
 // Function AnimNotify_PlaySound.AnimNotify_PlaySound_C.Received_Notify
 struct UAnimNotify_PlaySound_C_Received_Notify_Params
 {
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

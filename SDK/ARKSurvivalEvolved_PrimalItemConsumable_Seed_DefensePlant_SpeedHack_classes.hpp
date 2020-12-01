@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Seed_DefensePlant_SpeedHack.PrimalItemConsumable_Seed_DefensePlant_SpeedHack_C
-// 0x0000 (0x0994 - 0x0994)
+// 0x0000 (0x09B4 - 0x09B4)
 class UPrimalItemConsumable_Seed_DefensePlant_SpeedHack_C : public UPrimalItemConsumable_Seed_DefensePlant_C
 {
 public:

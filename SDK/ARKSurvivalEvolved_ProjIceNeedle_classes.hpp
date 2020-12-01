@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjIceNeedle.ProjIceNeedle_C
-// 0x0019 (0x0661 - 0x0648)
+// 0x0019 (0x0671 - 0x0658)
 class AProjIceNeedle_C : public AShooterProjectile
 {
 public:
-	class UAudioComponent*                             ProjectileSFX;                                            // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh2;                                              // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EEndPlayReason>                        K2Node_Event_EndPlayReason;                               // 0x0660(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UAudioComponent*                             ProjectileSFX;                                            // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh2;                                              // 0x0668(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEndPlayReason>                        K2Node_Event_EndPlayReason;                               // 0x0670(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_Terrorbird.PrimalItemConsumable_Egg_Terrorbird_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_Egg_Terrorbird_C : public UPrimalItemConsumable_Egg_Medium_C
 {
 public:

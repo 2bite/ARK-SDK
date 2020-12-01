@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MegaRaptor_AIController_BP.MegaRaptor_AIController_BP_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class AMegaRaptor_AIController_BP_C : public ARaptor_AIController_BP_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_DiloPoison.Buff_DiloPoison_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_DiloPoison_C : public ABuff_Base_Disease_Low_GasMaskable_C
 {
 public:

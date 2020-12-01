@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass NotificationUI.NotificationUI_C
-// 0x0018 (0x0580 - 0x0568)
+// 0x0018 (0x0588 - 0x0570)
 class UNotificationUI_C : public UUI_Notification
 {
 public:
-	class UImage*                                      Image_2;                                                  // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      Image_3;                                                  // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UButton*                                     OkButton;                                                 // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      Image_2;                                                  // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      Image_3;                                                  // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UButton*                                     OkButton;                                                 // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

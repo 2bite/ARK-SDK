@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LampPostEmitterOmni.LampPostEmitterOmni_C
-// 0x0008 (0x0508 - 0x0500)
+// 0x0008 (0x0518 - 0x0510)
 class ALampPostEmitterOmni_C : public ACampFireEmitter_C
 {
 public:
-	class UPointLightComponent*                        PointLight1;                                              // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPointLightComponent*                        PointLight1;                                              // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

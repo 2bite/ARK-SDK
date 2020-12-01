@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Angler_Character_BP_Aberrant.Angler_Character_BP_Aberrant_C
-// 0x0000 (0x20A0 - 0x20A0)
+// 0x0000 (0x2120 - 0x2120)
 class AAngler_Character_BP_Aberrant_C : public AAngler_Character_BP_C
 {
 public:

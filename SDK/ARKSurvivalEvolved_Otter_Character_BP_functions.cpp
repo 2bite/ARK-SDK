@@ -33,13 +33,13 @@ void AOtter_Character_BP_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function Otter_Character_BP.Otter_Character_BP_C.OnLaunched
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector*                LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bZOverride                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AOtter_Character_BP_C::OnLaunched(struct FVector* LaunchVelocity, bool* bXYOverride, bool* bZOverride)
+void AOtter_Character_BP_C::STATIC_OnLaunched(struct FVector* LaunchVelocity, bool* bXYOverride, bool* bZOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Otter_Character_BP.Otter_Character_BP_C.OnLaunched");
 
@@ -49,6 +49,7 @@ void AOtter_Character_BP_C::OnLaunched(struct FVector* LaunchVelocity, bool* bXY
 	params.bZOverride = bZOverride;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -350,7 +351,7 @@ bool AOtter_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Otter_Character_BP.Otter_Character_BP_C.BPGetMultiUseEntries
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

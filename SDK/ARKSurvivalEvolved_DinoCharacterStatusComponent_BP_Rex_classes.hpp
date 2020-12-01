@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoCharacterStatusComponent_BP_Rex.DinoCharacterStatusComponent_BP_Rex_C
-// 0x0000 (0x1088 - 0x1088)
+// 0x0000 (0x1090 - 0x1090)
 class UDinoCharacterStatusComponent_BP_Rex_C : public UDinoCharacterStatusComponent_BP_C
 {
 public:

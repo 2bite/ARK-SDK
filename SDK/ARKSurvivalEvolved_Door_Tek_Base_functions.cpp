@@ -60,13 +60,13 @@ bool ADoor_Tek_Base_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIn
 
 
 // Function Door_Tek_Base.Door_Tek_Base_C.BPGetMultiUseEntries
-// (NetRequest, Exec, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ADoor_Tek_Base_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ADoor_Tek_Base_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Door_Tek_Base.Door_Tek_Base_C.BPGetMultiUseEntries");
 
@@ -74,6 +74,7 @@ TArray<struct FMultiUseEntry> ADoor_Tek_Base_C::BPGetMultiUseEntries(class APlay
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPGetDebugInfoString
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -24,6 +24,7 @@ class FString ABuff_SpindlesMinigunHit_C::BPGetDebugInfoString()
 	ABuff_SpindlesMinigunHit_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,17 +105,18 @@ void ABuff_SpindlesMinigunHit_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* End
 
 
 // Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPPreventflight
-// (Net, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (Net, NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_SpindlesMinigunHit_C::STATIC_BPPreventflight()
+bool ABuff_SpindlesMinigunHit_C::BPPreventflight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPPreventflight");
 
 	ABuff_SpindlesMinigunHit_C_BPPreventflight_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

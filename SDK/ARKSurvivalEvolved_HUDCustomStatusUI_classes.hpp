@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass HUDCustomStatusUI.HUDCustomStatusUI_C
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x05D8 - 0x05D8)
 class UHUDCustomStatusUI_C : public UHUDCustomStatusWidget
 {
 public:

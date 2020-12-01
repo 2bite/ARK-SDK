@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C
-// 0x0000 (0x20D0 - 0x20D0)
+// 0x0000 (0x2150 - 0x2150)
 class AJugbug_Water_Character_BP_C : public AJugbug_Character_BaseBP_C
 {
 public:

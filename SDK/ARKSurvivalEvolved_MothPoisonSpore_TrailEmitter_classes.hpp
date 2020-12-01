@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MothPoisonSpore_TrailEmitter.MothPoisonSpore_TrailEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AMothPoisonSpore_TrailEmitter_C : public APrimalEmitterSpawnable
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AirConditionerEmitter.AirConditionerEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AAirConditionerEmitter_C : public APrimalEmitterSpawnable
 {
 public:

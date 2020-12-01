@@ -222,7 +222,7 @@ public:
 
 	inline UObject* CreateDefaultObject()
 	{
-		return GetVFunction<UObject*(*)(UClass*)>(this, 36)(this);
+		return GetVFunction<UObject*(*)(UClass*)>(this, 37)(this);
 	}
 
 };

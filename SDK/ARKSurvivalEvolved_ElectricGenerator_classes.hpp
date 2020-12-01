@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElectricGenerator.ElectricGenerator_C
-// 0x0010 (0x0DC8 - 0x0DB8)
+// 0x0010 (0x0DE0 - 0x0DD0)
 class AElectricGenerator_C : public ABaseFuelBurner_GasOnly_C
 {
 public:
-	class UPrimalInventoryBP_ElectricGenerator_C*      PrimalInventoryBP_ElectricGenerator_C1;                   // 0x0DB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0DC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_ElectricGenerator_C*      PrimalInventoryBP_ElectricGenerator_C1;                   // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalBuffPersistentData_GenericTimeRemaining.PrimalBuffPersistentData_GenericTimeRemaining_C
-// 0x0004 (0x0034 - 0x0030)
+// 0x0004 (0x004C - 0x0048)
 class UPrimalBuffPersistentData_GenericTimeRemaining_C : public UPrimalBuffPersistentData
 {
 public:
-	float                                              TimeLeft;                                                 // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	float                                              TimeLeft;                                                 // 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

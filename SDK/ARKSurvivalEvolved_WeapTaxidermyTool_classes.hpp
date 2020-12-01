@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapTaxidermyTool.WeapTaxidermyTool_C
-// 0x0018 (0x0D48 - 0x0D30)
+// 0x0018 (0x0D68 - 0x0D50)
 class AWeapTaxidermyTool_C : public AShooterWeapon_Melee
 {
 public:
-	class UStaticMeshComponent*                        TPTool;                                                   // 0x0D30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        FPTool;                                                   // 0x0D38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AShooterCharacter*                           ShooterCharRef;                                           // 0x0D40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class UStaticMeshComponent*                        TPTool;                                                   // 0x0D50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        FPTool;                                                   // 0x0D58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           ShooterCharRef;                                           // 0x0D60(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

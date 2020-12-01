@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ChatMessage.ChatMessage_C
-// 0x0000 (0x0578 - 0x0578)
+// 0x0000 (0x0580 - 0x0580)
 class UChatMessage_C : public UUI_ChatMessage
 {
 public:

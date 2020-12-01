@@ -39,7 +39,7 @@ public:
 	void OnEndEvent();
 	void OnTickEvent(float* DeltaSeconds);
 	void StartAnimationStateEvent(struct FName* CustomEventName, TEnumAsByte<ENetRole>* Role);
-	void STATIC_GetAttackSocketLocations(TArray<struct FTransform>* Locations);
+	void GetAttackSocketLocations(TArray<struct UObject_FTransform>* Locations);
 	void STATIC_Find_Best_Grab_Target(class APrimalCharacter** bestTarget);
 	void Get_Best_Passenger_Candidate(const struct FVector& SocketWorldPos, TArray<class AActor*>* Chars, class AActor** BestChar);
 	void OnBeginEvent(class UPrimalAIState** InParentState);

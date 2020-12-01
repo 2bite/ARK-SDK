@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitter_Foliage_FlashBang.Buff_ChargeEmitter_Foliage_FlashBang_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0B50 - 0x0B50)
 class ABuff_ChargeEmitter_Foliage_FlashBang_C : public ABuff_ChargeEmitter_Foliage_C
 {
 public:

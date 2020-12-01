@@ -137,7 +137,7 @@ struct AXenomorph_Character_BP_Male_C_BPBecomeAdult_Params
 // Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.Can Dive
 struct AXenomorph_Character_BP_Male_C_Can_Dive_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.UserConstructionScript

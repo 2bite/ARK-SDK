@@ -284,7 +284,7 @@ bool AChalico_Character_BP_C::BPPreventRiding(class AShooterCharacter** ByPawn, 
 
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.BPGetMultiUseEntries
-// (Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -398,7 +398,7 @@ void AChalico_Character_BP_C::CanSitDown(bool* canSit)
 
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.Look for Chalicos
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 
 void AChalico_Character_BP_C::STATIC_Look_for_Chalicos()
 {
@@ -435,17 +435,17 @@ void AChalico_Character_BP_C::UserConstructionScript()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AChalico_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AChalico_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Chalico_Character_BP.Chalico_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	AChalico_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

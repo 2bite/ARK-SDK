@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_TekRifleScope.Buff_TekRifleScope_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_TekRifleScope_C : public ABuff_HiddenBuff_C
 {
 public:

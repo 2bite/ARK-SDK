@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Service_FKaijuMaybeSpawnTreesAndWyverns.Service_FKaijuMaybeSpawnTreesAndWyverns_C.SpawnBuffingTree
-// (NetReliable, Exec, Event, Static, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -24,6 +24,7 @@ void UService_FKaijuMaybeSpawnTreesAndWyverns_C::STATIC_SpawnBuffingTree(bool* S
 	UService_FKaijuMaybeSpawnTreesAndWyverns_C_SpawnBuffingTree_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,18 +75,17 @@ void UService_FKaijuMaybeSpawnTreesAndWyverns_C::MaybeSpawn_Tree_on_Enemy()
 
 
 // Function Service_FKaijuMaybeSpawnTreesAndWyverns.Service_FKaijuMaybeSpawnTreesAndWyverns_C.SpawnWyvern
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetRequest, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UService_FKaijuMaybeSpawnTreesAndWyverns_C::STATIC_SpawnWyvern(bool* Success)
+void UService_FKaijuMaybeSpawnTreesAndWyverns_C::SpawnWyvern(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Service_FKaijuMaybeSpawnTreesAndWyverns.Service_FKaijuMaybeSpawnTreesAndWyverns_C.SpawnWyvern");
 
 	UService_FKaijuMaybeSpawnTreesAndWyverns_C_SpawnWyvern_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

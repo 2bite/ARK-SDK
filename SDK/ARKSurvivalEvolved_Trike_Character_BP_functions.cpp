@@ -94,17 +94,17 @@ void ATrike_Character_BP_C::Start_Ram_Attack_Buildup()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ATrike_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ATrike_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Trike_Character_BP.Trike_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	ATrike_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 
@@ -249,12 +249,12 @@ bool ATrike_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Trike_Character_BP.Trike_Character_BP_C.BPHandleControllerInitiatedAttack
-// (Native, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATrike_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
+bool ATrike_Character_BP_C::STATIC_BPHandleControllerInitiatedAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Trike_Character_BP.Trike_Character_BP_C.BPHandleControllerInitiatedAttack");
 
@@ -368,7 +368,7 @@ void ATrike_Character_BP_C::GetPawnRootComponent(class AActor* Target, class UPr
 
 
 // Function Trike_Character_BP.Trike_Character_BP_C.BPAdjustDamage
-// (NetReliable, Native, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -378,7 +378,7 @@ void ATrike_Character_BP_C::GetPawnRootComponent(class AActor* Target, class UPr
 // struct FHitResult*             PointHitInfo                   (Parm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ATrike_Character_BP_C::STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
+float ATrike_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Trike_Character_BP.Trike_Character_BP_C.BPAdjustDamage");
 

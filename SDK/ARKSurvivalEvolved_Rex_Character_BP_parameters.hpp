@@ -14,6 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Rex_Character_BP.Rex_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+struct ARex_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Rex_Character_BP.Rex_Character_BP_C.BPGetMultiUseEntries
 struct ARex_Character_BP_C_BPGetMultiUseEntries_Params
 {
@@ -79,13 +86,13 @@ struct ARex_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_186
-struct ARex_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_186_Params
+// Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_178
+struct ARex_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_178_Params
 {
 };
 
-// Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185
-struct ARex_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185_Params
+// Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177
+struct ARex_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177_Params
 {
 };
 

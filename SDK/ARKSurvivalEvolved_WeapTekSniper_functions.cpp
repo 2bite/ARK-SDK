@@ -221,7 +221,7 @@ void AWeapTekSniper_C::BPOnScoped()
 
 
 // Function WeapTekSniper.WeapTekSniper_C.BPAppliedPrimalItemToWeapon
-// (Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
 
 void AWeapTekSniper_C::BPAppliedPrimalItemToWeapon()
 {
@@ -239,7 +239,7 @@ void AWeapTekSniper_C::BPAppliedPrimalItemToWeapon()
 
 
 // Function WeapTekSniper.WeapTekSniper_C.ReceiveDestroyed
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetResponse, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
 
 void AWeapTekSniper_C::ReceiveDestroyed()
 {
@@ -248,7 +248,6 @@ void AWeapTekSniper_C::ReceiveDestroyed()
 	AWeapTekSniper_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

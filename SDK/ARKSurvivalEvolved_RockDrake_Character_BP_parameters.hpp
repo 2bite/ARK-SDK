@@ -303,7 +303,7 @@ struct ARockDrake_Character_BP_C_ReceiveHit_Params
 struct ARockDrake_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -356,7 +356,7 @@ struct ARockDrake_Character_BP_C_PounceStart_Params
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.Climber_AI_OnSetTarget
 struct ARockDrake_Character_BP_C_Climber_AI_OnSetTarget_Params
 {
-	class AActor**                                     newTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     NewTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.BP_OnRiderChangeWeapons
@@ -630,7 +630,7 @@ struct ARockDrake_Character_BP_C_Get_Correct_Surface_Trace_OffsetTransforms_Para
 {
 	bool*                                              overrideUseMap;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<bool>                                       newUseMp;                                                 // (Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FTransform>                          offsetTransforms;                                         // (Parm, OutParm, ZeroConstructor)
+	TArray<struct UObject_FTransform>                  offsetTransforms;                                         // (Parm, OutParm, ZeroConstructor)
 	TArray<int>                                        TraceIndeces;                                             // (Parm, OutParm, ZeroConstructor)
 };
 
@@ -685,8 +685,8 @@ struct ARockDrake_Character_BP_C_FadeToInvisible_Rider__UpdateFunc_Params
 {
 };
 
-// Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_127
-struct ARockDrake_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_127_Params
+// Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_118
+struct ARockDrake_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_118_Params
 {
 };
 

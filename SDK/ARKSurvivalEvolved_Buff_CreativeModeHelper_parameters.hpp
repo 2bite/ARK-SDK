@@ -64,43 +64,43 @@ struct ABuff_CreativeModeHelper_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Jump_K2Node_InputActionEvent_206
-struct ABuff_CreativeModeHelper_C_InpActEvt_Jump_K2Node_InputActionEvent_206_Params
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Jump_K2Node_InputActionEvent_218
+struct ABuff_CreativeModeHelper_C_InpActEvt_Jump_K2Node_InputActionEvent_218_Params
 {
 };
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_205
-struct ABuff_CreativeModeHelper_C_InpActEvt_Run_K2Node_InputActionEvent_205_Params
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_217
+struct ABuff_CreativeModeHelper_C_InpActEvt_Run_K2Node_InputActionEvent_217_Params
 {
 };
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_204
-struct ABuff_CreativeModeHelper_C_InpActEvt_Run_K2Node_InputActionEvent_204_Params
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_216
+struct ABuff_CreativeModeHelper_C_InpActEvt_Run_K2Node_InputActionEvent_216_Params
 {
 };
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Prone_K2Node_InputActionEvent_203
-struct ABuff_CreativeModeHelper_C_InpActEvt_Prone_K2Node_InputActionEvent_203_Params
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Prone_K2Node_InputActionEvent_215
+struct ABuff_CreativeModeHelper_C_InpActEvt_Prone_K2Node_InputActionEvent_215_Params
 {
 };
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_202
-struct ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_202_Params
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_214
+struct ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_214_Params
 {
 };
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_201
-struct ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_201_Params
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_213
+struct ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_213_Params
 {
 };
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_200
-struct ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_200_Params
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_212
+struct ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_212_Params
 {
 };
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_60
-struct ABuff_CreativeModeHelper_C_InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_60_Params
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_62
+struct ABuff_CreativeModeHelper_C_InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_62_Params
 {
 };
 
@@ -113,7 +113,7 @@ struct ABuff_CreativeModeHelper_C_ServerSetFlight_Params
 // Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.ServerSetFlySpeed
 struct ABuff_CreativeModeHelper_C_ServerSetFlySpeed_Params
 {
-	float                                              NewSpeed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              newSpeed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.SetFlySpeed
@@ -140,7 +140,7 @@ struct ABuff_CreativeModeHelper_C_MultiReplicationDebugData_Params
 	TArray<struct FHitResult>                          Hits;                                                     // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<struct FVector>                             HitStarts;                                                // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<struct FVector>                             HitEnds;                                                  // (Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FTransform>                          Chars;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct UObject_FTransform>                  Chars;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	struct FVector                                     Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

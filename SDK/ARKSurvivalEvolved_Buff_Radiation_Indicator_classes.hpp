@@ -15,16 +15,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Radiation_Indicator.Buff_Radiation_Indicator_C
-// 0x0030 (0x08D0 - 0x08A0)
+// 0x0030 (0x0960 - 0x0930)
 class ABuff_Radiation_Indicator_C : public ABuff_Base_OnlyRelevantToOwner_C
 {
 public:
-	class UClass*                                      RadiationBuff;                                            // 0x08A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               InsideTekForcefield;                                      // 0x08A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               HasBuffThatMutesSound;                                    // 0x08A9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x08AA(0x0006) MISSED OFFSET
-	TArray<class UClass*>                              MuteSoundWhenHasOtherBuff;                                // 0x08B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class AActor*>                              CallFunc_SphereOverlapActors_NEW_ActorsToIgnore_RefProperty;// 0x08C0(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
+	class UClass*                                      RadiationBuff;                                            // 0x0930(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               InsideTekForcefield;                                      // 0x0938(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               HasBuffThatMutesSound;                                    // 0x0939(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x093A(0x0006) MISSED OFFSET
+	TArray<class UClass*>                              MuteSoundWhenHasOtherBuff;                                // 0x0940(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class AActor*>                              CallFunc_SphereOverlapActors_NEW_ActorsToIgnore_RefProperty;// 0x0950(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoDropInventoryComponent_Herbivore_Medium_GasBags.DinoDropInventoryComponent_Herbivore_Medium_GasBags_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoDropInventoryComponent_Herbivore_Medium_GasBags_C : public UDinoDropInventoryComponent_BP_Base_C
 {
 public:

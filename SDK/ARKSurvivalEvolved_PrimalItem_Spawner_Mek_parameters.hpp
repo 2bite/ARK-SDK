@@ -14,6 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PrimalItem_Spawner_Mek.PrimalItem_Spawner_Mek_C.BPCanUse
+struct UPrimalItem_Spawner_Mek_C_BPCanUse_Params
+{
+	bool*                                              bIgnoreCooldown;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function PrimalItem_Spawner_Mek.PrimalItem_Spawner_Mek_C.GetStatDisplayString
 struct UPrimalItem_Spawner_Mek_C_GetStatDisplayString_Params
 {

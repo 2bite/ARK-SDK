@@ -53,7 +53,7 @@ void APortableRope_Ladder_C::BPAttachedRootComponent()
 
 
 // Function PortableRope_Ladder.PortableRope_Ladder_C.BuildLadder
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const)
+// (Exec, NetResponse, NetMulticast, Private, NetServer, HasOutParms)
 
 void APortableRope_Ladder_C::BuildLadder()
 {
@@ -62,7 +62,6 @@ void APortableRope_Ladder_C::BuildLadder()
 	APortableRope_Ladder_C_BuildLadder_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

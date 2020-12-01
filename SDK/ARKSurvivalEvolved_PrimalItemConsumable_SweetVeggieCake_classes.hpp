@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_SweetVeggieCake_C : public UPrimalItemConsumableEatable_BuffingSoup_C
 {
 public:
@@ -28,7 +28,7 @@ public:
 
 
 	bool BPCanUse(bool* bIgnoreCooldown);
-	void STATIC_BPPreUseItem();
+	void BPPreUseItem();
 	void ExecuteUbergraph_PrimalItemConsumable_SweetVeggieCake(int EntryPoint);
 };
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ElectrocutedTranq.Buff_ElectrocutedTranq_C
-// 0x0000 (0x08B8 - 0x08B8)
+// 0x0000 (0x0948 - 0x0948)
 class ABuff_ElectrocutedTranq_C : public ABuff_Stunned_C
 {
 public:

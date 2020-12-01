@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_Furniture_WoodBench.PrimalItemStructure_Furniture_WoodBench_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_Furniture_WoodBench_C : public UPrimalItemStructure_BaseSign_C
 {
 public:

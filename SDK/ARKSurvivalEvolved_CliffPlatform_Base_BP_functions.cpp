@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CliffPlatform_Base_BP.CliffPlatform_Base_BP_C.BPIsAllowedToBuild
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, Native, Event, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FPlacementData          OutPlacementData               (Parm, OutParm, ReferenceParm)
 // int*                           CurrentAllowedReason           (Parm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ int ACliffPlatform_Base_BP_C::BPIsAllowedToBuild(int* CurrentAllowedReason, stru
 	params.CurrentAllowedReason = CurrentAllowedReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

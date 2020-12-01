@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_FocalChili.Buff_FocalChili_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_FocalChili_C : public ABuff_Base_Stew_C
 {
 public:

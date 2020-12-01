@@ -38,7 +38,7 @@ public:
 
 
 	class FString GetNotifyName();
-	bool Received_Notify(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation);
+	bool Received_Notify(class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation);
 };
 
 

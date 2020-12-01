@@ -7,8 +7,8 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_DmgType_Melee_Dino_Herbivore_Medium_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
+#include "ARKSurvivalEvolved_DmgType_Melee_Dino_Herbivore_Medium_classes.hpp"
 
 namespace sdk
 {

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_RockDrake.DinoTamedInventoryComponent_RockDrake_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoTamedInventoryComponent_RockDrake_C : public UPrimalInventoryComponent
 {
 public:

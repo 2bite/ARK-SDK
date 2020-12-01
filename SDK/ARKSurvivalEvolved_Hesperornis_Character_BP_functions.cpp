@@ -30,9 +30,9 @@ void AHesperornis_Character_BP_C::UpdateSwimOffsetLocal()
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.TryToLerpToZ
-// (NetReliable, Native, Event, Static, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, DLLImport)
 
-void AHesperornis_Character_BP_C::STATIC_TryToLerpToZ()
+void AHesperornis_Character_BP_C::TryToLerpToZ()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.TryToLerpToZ");
 
@@ -175,7 +175,7 @@ void AHesperornis_Character_BP_C::BPUnstasis()
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.OverrideFinalWanderLocation
-// (NetReliable, Native, Event, NetResponse, Static, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, DLLImport)
 // Parameters:
 // struct FVector                 outVec                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -201,12 +201,12 @@ bool AHesperornis_Character_BP_C::STATIC_OverrideFinalWanderLocation(struct FVec
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.OverrideRandomWanderLocation
-// (NetReliable, Event, NetMulticast, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, DLLImport)
 // Parameters:
 // struct FVector                 originalDestination            (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 inVec                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AHesperornis_Character_BP_C::OverrideRandomWanderLocation(struct FVector* originalDestination, struct FVector* inVec)
+void AHesperornis_Character_BP_C::STATIC_OverrideRandomWanderLocation(struct FVector* originalDestination, struct FVector* inVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.OverrideRandomWanderLocation");
 
@@ -228,15 +228,15 @@ void AHesperornis_Character_BP_C::OverrideRandomWanderLocation(struct FVector* o
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.IsTargetAFish
 // ()
 // Parameters:
-// class AActor*                  TargetedActor                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  targetedActor                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AHesperornis_Character_BP_C::IsTargetAFish(class AActor* TargetedActor, bool* IsValid)
+void AHesperornis_Character_BP_C::IsTargetAFish(class AActor* targetedActor, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.IsTargetAFish");
 
 	AHesperornis_Character_BP_C_IsTargetAFish_Params params;
-	params.TargetedActor = TargetedActor;
+	params.targetedActor = targetedActor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -296,7 +296,7 @@ bool AHesperornis_Character_BP_C::BPCanDragCharacter(class APrimalCharacter** Ch
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.FishHasVit
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Event, MulticastDelegate, Public, Private, Protected, DLLImport)
 // Parameters:
 // class APrimalCharacter*        Player                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -309,7 +309,6 @@ void AHesperornis_Character_BP_C::FishHasVit(class APrimalCharacter* Player, boo
 	params.Player = Player;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -390,7 +389,7 @@ void AHesperornis_Character_BP_C::BPClientDoMultiUse(class APlayerController** F
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -880,16 +879,16 @@ void AHesperornis_Character_BP_C::ReceiveBeginPlay()
 // Parameters:
 // struct FRotator                TargetRotation                 (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                InitialRotation                (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                initialRotation                (Parm, ZeroConstructor, IsPlainOldData)
 
-void AHesperornis_Character_BP_C::SlowlyRotateZTo(const struct FRotator& TargetRotation, float Time, const struct FRotator& InitialRotation)
+void AHesperornis_Character_BP_C::SlowlyRotateZTo(const struct FRotator& TargetRotation, float Time, const struct FRotator& initialRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.SlowlyRotateZTo");
 
 	AHesperornis_Character_BP_C_SlowlyRotateZTo_Params params;
 	params.TargetRotation = TargetRotation;
 	params.Time = Time;
-	params.InitialRotation = InitialRotation;
+	params.initialRotation = initialRotation;
 
 	auto flags = fn->FunctionFlags;
 

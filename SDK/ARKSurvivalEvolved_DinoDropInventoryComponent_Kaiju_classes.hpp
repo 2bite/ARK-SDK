@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoDropInventoryComponent_Kaiju.DinoDropInventoryComponent_Kaiju_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoDropInventoryComponent_Kaiju_C : public UDinoDropInventoryComponent_Corrupted_Huge_C
 {
 public:

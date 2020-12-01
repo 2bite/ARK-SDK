@@ -17,7 +17,7 @@ namespace sdk
 // Function ScorchedEarthDayCycle_Interface.ScorchedEarthDayCycle_Interface_C.GetIsElectricalStorm
 struct UScorchedEarthDayCycle_Interface_C_GetIsElectricalStorm_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ScorchedEarthDayCycle_Interface.ScorchedEarthDayCycle_Interface_C.GetElectricalStormValues

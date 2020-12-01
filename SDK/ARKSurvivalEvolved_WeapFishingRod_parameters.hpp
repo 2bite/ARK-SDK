@@ -79,7 +79,7 @@ struct AWeapFishingRod_C_PlayFishAttackAnimation_Params
 struct AWeapFishingRod_C_IsPointInWater_Params
 {
 	struct FVector                                     Point;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.HandleReleasingFish
@@ -121,7 +121,7 @@ struct AWeapFishingRod_C_OnRGKeySuccess_Params
 // Function WeapFishingRod.WeapFishingRod_C.TugFishingCable
 struct AWeapFishingRod_C_TugFishingCable_Params
 {
-	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.GetReelingGameDuration
@@ -296,7 +296,7 @@ struct AWeapFishingRod_C_OnFishReleasedEvent_Params
 struct AWeapFishingRod_C_BPAnimNotifyCustomState_Begin_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             TotalDuration;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotifyState**                           AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
@@ -318,13 +318,13 @@ struct AWeapFishingRod_C_ServerEndFishing_Params
 // Function WeapFishingRod.WeapFishingRod_C.ServerTugCable
 struct AWeapFishingRod_C_ServerTugCable_Params
 {
-	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.TugCableEvent
 struct AWeapFishingRod_C_TugCableEvent_Params
 {
-	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.StartFishingEventMulti
@@ -341,10 +341,25 @@ struct AWeapFishingRod_C_DrawRotation_Params
 	struct FVector                                     NewParam1;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function WeapFishingRod.WeapFishingRod_C.ServerStartDeathHarvest
+struct AWeapFishingRod_C_ServerStartDeathHarvest_Params
+{
+	class APrimalDinoCharacter*                        PrimalDinoChar;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function WeapFishingRod.WeapFishingRod_C.ExecuteUbergraph_WeapFishingRod
 struct AWeapFishingRod_C_ExecuteUbergraph_WeapFishingRod_Params
 {
 	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function WeapFishingRod.WeapFishingRod_C.FishCaughtDispatcherSingle__DelegateSignature
+struct AWeapFishingRod_C_FishCaughtDispatcherSingle__DelegateSignature_Params
+{
+	float                                              Caught_Fish_Wild_Scale;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Net_Owner;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      Fish_Class;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     Fish_Reference;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

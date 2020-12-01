@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function PlayerPawnTest.PlayerPawnTest_C.Get The Num Chibi Level Ups
-struct APlayerPawnTest_C_Get_The_Num_Chibi_Level_Ups_Params
+// Function PlayerPawnTest.PlayerPawnTest_C.GetTheNumChibiLevelUps
+struct APlayerPawnTest_C_GetTheNumChibiLevelUps_Params
 {
 	int                                                OutVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -24,6 +24,19 @@ struct APlayerPawnTest_C_Get_The_Num_Chibi_Level_Ups_Params
 struct APlayerPawnTest_C_SetNumChibiLevelUps_Params
 {
 	int                                                NewNum;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PlayerPawnTest.PlayerPawnTest_C.BPGetPlayerHexagonCount
+struct APlayerPawnTest_C_BPGetPlayerHexagonCount_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function PlayerPawnTest.PlayerPawnTest_C.BPSetPlayerHexagonCount
+struct APlayerPawnTest_C_BPSetPlayerHexagonCount_Params
+{
+	int*                                               NewHexagonCount;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPGetShowDebugAnimationComponents

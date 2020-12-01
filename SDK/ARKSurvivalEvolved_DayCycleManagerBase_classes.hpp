@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DayCycleManagerBase.DayCycleManagerBase_C
-// 0x0009 (0x0549 - 0x0540)
+// 0x0009 (0x0591 - 0x0588)
 class ADayCycleManagerBase_C : public ADayCycleManager
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bPreventNocturnalLogic;                                   // 0x0548(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bPreventNocturnalLogic;                                   // 0x0590(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,6 +29,8 @@ public:
 	}
 
 
+	void Get_Teleport_Transfer_World_PP(class APostProcessVolume** PP);
+	void Get_VR_World_PP(class APostProcessVolume** PP);
 	void HandleGrappleHookImpacted(class APrimalProjectileGrapplingHook* GrapHookProj, struct FHitResult* HitInfo);
 	void GetWeatherEventWarning(int* WeatherEventWarningType);
 	void Get_Golem_MeshClass(class UClass** isScorchedEarthMesh);

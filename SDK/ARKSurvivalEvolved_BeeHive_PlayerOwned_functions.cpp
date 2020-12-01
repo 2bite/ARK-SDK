@@ -38,11 +38,11 @@ bool ABeeHive_PlayerOwned_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BeeHive_PlayerOwned.BeeHive_PlayerOwned_C.BPGetInfoFromConsumedItemForPlacedStructure
-// (NetRequest, Static, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // class UPrimalItem**            ItemToConsumed                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABeeHive_PlayerOwned_C::STATIC_BPGetInfoFromConsumedItemForPlacedStructure(class UPrimalItem** ItemToConsumed)
+void ABeeHive_PlayerOwned_C::BPGetInfoFromConsumedItemForPlacedStructure(class UPrimalItem** ItemToConsumed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BeeHive_PlayerOwned.BeeHive_PlayerOwned_C.BPGetInfoFromConsumedItemForPlacedStructure");
 
@@ -50,6 +50,7 @@ void ABeeHive_PlayerOwned_C::STATIC_BPGetInfoFromConsumedItemForPlacedStructure(
 	params.ItemToConsumed = ItemToConsumed;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -68,12 +68,12 @@ class UTexture2D* UPrimalItem_StartingNote_C::BPGetItemIcon(class AShooterPlayer
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.IsLocalImplant
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (Native, Event, NetMulticast, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class AShooterPlayerController* ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsLocal                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_StartingNote_C::STATIC_IsLocalImplant(class AShooterPlayerController* ForPC, bool* IsLocal)
+void UPrimalItem_StartingNote_C::IsLocalImplant(class AShooterPlayerController* ForPC, bool* IsLocal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.IsLocalImplant");
 
@@ -81,6 +81,7 @@ void UPrimalItem_StartingNote_C::STATIC_IsLocalImplant(class AShooterPlayerContr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +118,7 @@ class FString UPrimalItem_StartingNote_C::BPGetItemName(class FString* ItemNameI
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.Get Survival Quotient String
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // TArray<float>                  SurvData                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class FString                  OutString                      (Parm, OutParm, ZeroConstructor)
@@ -129,7 +130,6 @@ void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<float>* Sur
 	UPrimalItem_StartingNote_C_Get_Survival_Quotient_String_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,7 +143,7 @@ void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<float>* Sur
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemDescription
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Private, Protected, HasDefaults, DLLImport, Const, NetValidate)
+// (Net, NetReliable, Native, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -160,6 +160,7 @@ class FString UPrimalItem_StartingNote_C::STATIC_BPGetItemDescription(class FStr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,7 +171,7 @@ class FString UPrimalItem_StartingNote_C::STATIC_BPGetItemDescription(class FStr
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPPreInitializeItem
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class UWorld**                 OptionalInitWorld              (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -182,6 +183,7 @@ void UPrimalItem_StartingNote_C::BPPreInitializeItem(class UWorld** OptionalInit
 	params.OptionalInitWorld = OptionalInitWorld;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

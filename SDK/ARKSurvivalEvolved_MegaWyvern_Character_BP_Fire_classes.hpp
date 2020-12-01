@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MegaWyvern_Character_BP_Fire.MegaWyvern_Character_BP_Fire_C
-// 0x0008 (0x21C8 - 0x21C0)
+// 0x0008 (0x2248 - 0x2240)
 class AMegaWyvern_Character_BP_Fire_C : public AWyvern_Character_BP_Fire_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_MegaWyvern_C* DinoCharacterStatus_BP_MegaWyvern_C1;                     // 0x21C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_MegaWyvern_C* DinoCharacterStatus_BP_MegaWyvern_C1;                     // 0x2240(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

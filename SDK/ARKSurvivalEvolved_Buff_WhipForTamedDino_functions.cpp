@@ -50,7 +50,7 @@ void ABuff_WhipForTamedDino_C::SetBuffCauser(class AActor** CausedBy)
 
 
 // Function Buff_WhipForTamedDino.Buff_WhipForTamedDino_C.BuffTickServer
-// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Exec, Static, NetMulticast, Public, Private, Delegate, HasDefaults, DLLImport)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -62,7 +62,6 @@ void ABuff_WhipForTamedDino_C::STATIC_BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

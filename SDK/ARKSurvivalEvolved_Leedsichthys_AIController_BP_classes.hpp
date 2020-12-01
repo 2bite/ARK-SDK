@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Leedsichthys_AIController_BP.Leedsichthys_AIController_BP_C
-// 0x0007 (0x08F0 - 0x08E9)
+// 0x0007 (0x0918 - 0x0911)
 class ALeedsichthys_AIController_BP_C : public ADino_AIController_BP_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x08E9(0x0003) MISSED OFFSET
-	float                                              RaftAggroMultiplier;                                      // 0x08EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0911(0x0003) MISSED OFFSET
+	float                                              RaftAggroMultiplier;                                      // 0x0914(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_WoodSign_Large.PrimalItemStructure_WoodSign_Large_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_WoodSign_Large_C : public UPrimalItemStructure_BaseSign_C
 {
 public:

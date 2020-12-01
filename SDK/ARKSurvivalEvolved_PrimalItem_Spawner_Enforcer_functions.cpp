@@ -13,15 +13,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_Spawner_Enforcer.PrimalItem_Spawner_Enforcer_C.PreDinoSpawned
-// (Net, NetReliable, NetRequest, Private, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, Static, Public, Protected, NetServer, DLLImport, Const, NetValidate)
 
-void UPrimalItem_Spawner_Enforcer_C::PreDinoSpawned()
+void UPrimalItem_Spawner_Enforcer_C::STATIC_PreDinoSpawned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_Spawner_Enforcer.PrimalItem_Spawner_Enforcer_C.PreDinoSpawned");
 
 	UPrimalItem_Spawner_Enforcer_C_PreDinoSpawned_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

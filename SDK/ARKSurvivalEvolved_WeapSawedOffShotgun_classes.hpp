@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapSawedOffShotgun.WeapSawedOffShotgun_C
-// 0x0000 (0x0D68 - 0x0D68)
+// 0x0000 (0x0D88 - 0x0D88)
 class AWeapSawedOffShotgun_C : public AShooterWeapon_Instant
 {
 public:

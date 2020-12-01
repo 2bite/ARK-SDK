@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proj_SpearSkin.Proj_SpearSkin_C
-// 0x0008 (0x0678 - 0x0670)
+// 0x0008 (0x0688 - 0x0680)
 class AProj_SpearSkin_C : public AProjSpear_C
 {
 public:
-	class UStaticMeshComponent*                        ThirdPersonAttachment;                                    // 0x0670(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        ThirdPersonAttachment;                                    // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Berry_Stimberry.PrimalItemConsumable_Berry_Stimberry_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_Berry_Stimberry_C : public UPrimalItemConsumable_Berry_Base_C
 {
 public:

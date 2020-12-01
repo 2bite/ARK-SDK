@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureBP_Gravestone.StructureBP_Gravestone_C
-// 0x0008 (0x0AD8 - 0x0AD0)
+// 0x0008 (0x0AF0 - 0x0AE8)
 class AStructureBP_Gravestone_C : public ASign_Small_Base_C
 {
 public:
-	class UStructurePaintingComponent*                 StructurePainting1;                                       // 0x0AD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStructurePaintingComponent*                 StructurePainting1;                                       // 0x0AE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -97,7 +97,7 @@ public:
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void OnEndEvent();
 	void OnBeginEvent(class UPrimalAIState** InParentState);
-	void Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
+	void STATIC_Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
 	void FireRandomSpines();
 	void FireGuaranteedSpines();
 	void ExecuteUbergraph_DinoAttackState_Spindles_MinigunAOE(int EntryPoint);

@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CaveWolf_FindAttachPointForZipline_TK.CaveWolf_FindAttachPointForZipline_TK_C.ReceiveExecute
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UCaveWolf_FindAttachPointForZipline_TK_C::STATIC_ReceiveExecute(class AActo
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

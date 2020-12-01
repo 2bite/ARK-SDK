@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TriRoof_Greenhouse.BP_TriRoof_Greenhouse_C
-// 0x0000 (0x0AA1 - 0x0AA1)
+// 0x0000 (0x0AB9 - 0x0AB9)
 class ABP_TriRoof_Greenhouse_C : public ABase_Roof_Tri_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_FlameThrower_OnFire_Short.Buff_FlameThrower_OnFire_Short_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0950 - 0x0950)
 class ABuff_FlameThrower_OnFire_Short_C : public ABuff_FlameThrower_OnFire_C
 {
 public:

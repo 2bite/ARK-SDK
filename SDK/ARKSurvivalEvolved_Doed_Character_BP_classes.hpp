@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Doed_Character_BP.Doed_Character_BP_C
-// 0x0018 (0x20A0 - 0x2088)
+// 0x0018 (0x2120 - 0x2108)
 class ADoed_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Doed_C*     DinoCharacterStatus_BP_Doed_C1;                           // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x2090(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x2091(0x0007) MISSED OFFSET
-	class USceneComponent*                             CallFunc_K2_GetRootComponent_ReturnValue;                 // 0x2098(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Doed_C*     DinoCharacterStatus_BP_Doed_C1;                           // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x2110(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x2111(0x0007) MISSED OFFSET
+	class USceneComponent*                             CallFunc_K2_GetRootComponent_ReturnValue;                 // 0x2118(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Trike_Character_BP_Aberrant.Trike_Character_BP_Aberrant_C
-// 0x0000 (0x2799 - 0x2799)
+// 0x0000 (0x2823 - 0x2823)
 class ATrike_Character_BP_Aberrant_C : public ATrike_Character_BP_C
 {
 public:

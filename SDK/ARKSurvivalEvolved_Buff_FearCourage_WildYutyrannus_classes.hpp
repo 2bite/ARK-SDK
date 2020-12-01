@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_FearCourage_WildYutyrannus.Buff_FearCourage_WildYutyrannus_C
-// 0x0000 (0x0DF0 - 0x0DF0)
+// 0x0000 (0x0E80 - 0x0E80)
 class ABuff_FearCourage_WildYutyrannus_C : public ABuff_FearCourage_C
 {
 public:

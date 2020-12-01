@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function chainsaw_TPV_RIG_AnimBlueprint.chainsaw_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_3686
-struct Uchainsaw_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_3686_Params
+// Function chainsaw_TPV_RIG_AnimBlueprint.chainsaw_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_3560
+struct Uchainsaw_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_3560_Params
 {
 };
 

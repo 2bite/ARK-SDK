@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjRock.ProjRock_C
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0680 - 0x0680)
 class AProjRock_C : public APrimalProjectileArrow
 {
 public:

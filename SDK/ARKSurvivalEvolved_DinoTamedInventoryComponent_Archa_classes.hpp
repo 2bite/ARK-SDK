@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Archa.DinoTamedInventoryComponent_Archa_C
-// 0x0000 (0x0548 - 0x0548)
+// 0x0000 (0x0580 - 0x0580)
 class UDinoTamedInventoryComponent_Archa_C : public UDinoTamedInventoryComponent_BP_RockGolem_C
 {
 public:

@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElevatorPlatform_Base.ElevatorPlatform_Base_C
-// 0x0018 (0x0B60 - 0x0B48)
+// 0x0018 (0x0B78 - 0x0B60)
 class AElevatorPlatform_Base_C : public APrimalStructureElevatorPlatform
 {
 public:
-	class UAudioComponent*                             Audio1;                                                   // 0x0B48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0B50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USoundBase*                                  ElevatorLoopSound;                                        // 0x0B58(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Audio1;                                                   // 0x0B60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USoundBase*                                  ElevatorLoopSound;                                        // 0x0B70(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

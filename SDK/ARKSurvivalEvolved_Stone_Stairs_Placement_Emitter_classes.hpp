@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Stone_Stairs_Placement_Emitter.Stone_Stairs_Placement_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AStone_Stairs_Placement_Emitter_C : public APrimalEmitterSpawnable
 {
 public:

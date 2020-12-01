@@ -15,24 +15,24 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Jugbug_Character_BaseBP.Jugbug_Character_BaseBP_C
-// 0x0048 (0x20D0 - 0x2088)
+// 0x0048 (0x2150 - 0x2108)
 class AJugbug_Character_BaseBP_C : public AInsect_Character_Base_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_JugBug_C*   DinoCharacterStatus_BP_JugBug_C1;                         // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioComponent*                             LivingAudio;                                              // 0x2090(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ResourceAmount;                                           // 0x2098(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	TEnumAsByte<EJugbugType>                           JugbugType;                                               // 0x209C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x209D(0x0003) MISSED OFFSET
-	float                                              MaxResourceAmount;                                        // 0x20A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ResourceAmountFillTime;                                   // 0x20A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinSpeed;                                                 // 0x20A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxItemsToGive;                                           // 0x20AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      PrimalItemToGive;                                         // 0x20B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	double                                             lastUpdateTime;                                           // 0x20B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxJugbugWaterGiveAmount;                                 // 0x20C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x20C4(0x0004) MISSED OFFSET
-	double                                             LastGiveResourcesTime;                                    // 0x20C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_JugBug_C*   DinoCharacterStatus_BP_JugBug_C1;                         // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             LivingAudio;                                              // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ResourceAmount;                                           // 0x2118(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	TEnumAsByte<EJugbugType>                           JugbugType;                                               // 0x211C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x211D(0x0003) MISSED OFFSET
+	float                                              MaxResourceAmount;                                        // 0x2120(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ResourceAmountFillTime;                                   // 0x2124(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinSpeed;                                                 // 0x2128(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MaxItemsToGive;                                           // 0x212C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      PrimalItemToGive;                                         // 0x2130(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	double                                             LastUpdateTime;                                           // 0x2138(0x0008) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxJugbugWaterGiveAmount;                                 // 0x2140(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x2144(0x0004) MISSED OFFSET
+	double                                             LastGiveResourcesTime;                                    // 0x2148(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

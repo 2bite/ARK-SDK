@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_AdobeCeiling.PrimalItemStructure_AdobeCeiling_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_AdobeCeiling_C : public UPrimalItemStructure_BaseCeiling_C
 {
 public:

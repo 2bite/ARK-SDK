@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass OilVein_Base_BP.OilVein_Base_BP_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class AOilVein_Base_BP_C : public AWaterPipe_Base_Straight_C
 {
 public:

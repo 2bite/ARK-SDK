@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapMachinedSniper_Silenced.WeapMachinedSniper_Silenced_C
-// 0x0010 (0x0D88 - 0x0D78)
+// 0x0010 (0x0DA8 - 0x0D98)
 class AWeapMachinedSniper_Silenced_C : public AWeapMachinedSniper_Scope_C
 {
 public:
-	class UStaticMeshComponent*                        _1pAttachmentSilencer;                                    // 0x0D78(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        _3pAttachementSilencer;                                   // 0x0D80(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        _1pAttachmentSilencer;                                    // 0x0D98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        _3pAttachementSilencer;                                   // 0x0DA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

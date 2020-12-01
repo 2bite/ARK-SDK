@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dino_AIController_BP_Climber.Dino_AIController_BP_Climber_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ADino_AIController_BP_Climber_C : public ADino_AIController_BP_C
 {
 public:

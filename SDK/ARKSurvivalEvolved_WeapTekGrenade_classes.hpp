@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapTekGrenade.WeapTekGrenade_C
-// 0x0008 (0x0E48 - 0x0E40)
+// 0x0008 (0x0E68 - 0x0E60)
 class AWeapTekGrenade_C : public APrimalWeaponGrenade
 {
 public:
-	class UStaticMeshComponent*                        TekGrenade;                                               // 0x0E40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        TekGrenade;                                               // 0x0E60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

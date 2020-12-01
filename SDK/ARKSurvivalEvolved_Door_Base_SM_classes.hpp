@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Door_Base_SM.Door_Base_SM_C
-// 0x0008 (0x0B20 - 0x0B18)
+// 0x0008 (0x0B38 - 0x0B30)
 class ADoor_Base_SM_C : public APrimalStructureDoor
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0B18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

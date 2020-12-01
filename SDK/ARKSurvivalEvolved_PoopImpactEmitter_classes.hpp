@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PoopImpactEmitter.PoopImpactEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class APoopImpactEmitter_C : public AExplosionEmitter_C
 {
 public:

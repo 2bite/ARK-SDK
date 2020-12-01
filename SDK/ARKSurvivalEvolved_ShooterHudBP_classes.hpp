@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ShooterHudBP.ShooterHudBP_C
-// 0x0008 (0x0AC8 - 0x0AC0)
+// 0x0008 (0x0B28 - 0x0B20)
 class AShooterHudBP_C : public AShooterHUD
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0AC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0B20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void GetAdditionalExplorerNoteDynamicMaterialParams(struct FExplorerNoteEntry* ExplorerNote, TArray<struct FNameScalarPair>* ScalarMaterialParams, TArray<struct FNameColorPair>* ColorMaterialParams);
+	void STATIC_GetAdditionalExplorerNoteDynamicMaterialParams(struct FExplorerNoteEntry* ExplorerNote, TArray<struct FNameScalarPair>* ScalarMaterialParams, TArray<struct FNameColorPair>* ColorMaterialParams);
 	void UserConstructionScript();
 	void ExecuteUbergraph_ShooterHudBP(int EntryPoint);
 };

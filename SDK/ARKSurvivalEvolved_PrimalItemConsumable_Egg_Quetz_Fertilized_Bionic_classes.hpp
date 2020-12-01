@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_Quetz_Fertilized_Bionic.PrimalItemConsumable_Egg_Quetz_Fertilized_Bionic_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_Egg_Quetz_Fertilized_Bionic_C : public UPrimalItemConsumable_Egg_Quetz_C
 {
 public:

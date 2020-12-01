@@ -67,14 +67,14 @@ void ABuff_CryoCooldown_C::ReceiveBeginPlay()
 
 
 // Function Buff_CryoCooldown.Buff_CryoCooldown_C.BPDrawBuffStatusHUD
-// (HasDefaults, DLLImport, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Delegate, DLLImport, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_CryoCooldown_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_CryoCooldown_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CryoCooldown.Buff_CryoCooldown_C.BPDrawBuffStatusHUD");
 
@@ -85,6 +85,7 @@ void ABuff_CryoCooldown_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* X
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

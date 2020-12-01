@@ -14,6 +14,11 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.hide skin
+struct UPrimalItemSkin_MiniHLNA_C_hide_skin_Params
+{
+};
+
 // Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.BPGetItemDescription
 struct UPrimalItemSkin_MiniHLNA_C_BPGetItemDescription_Params
 {

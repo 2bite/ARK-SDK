@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Baryonyx_AIController_BP.Baryonyx_AIController_BP_C
-// 0x000B (0x08F4 - 0x08E9)
+// 0x000B (0x091C - 0x0911)
 class ABaryonyx_AIController_BP_C : public ADino_AIController_BP_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x08E9(0x0003) MISSED OFFSET
-	float                                              LandDinoTargetingRange;                                   // 0x08EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              LandTargetDamageTakenAggroTime;                           // 0x08F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0911(0x0003) MISSED OFFSET
+	float                                              LandDinoTargetingRange;                                   // 0x0914(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LandTargetDamageTakenAggroTime;                           // 0x0918(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

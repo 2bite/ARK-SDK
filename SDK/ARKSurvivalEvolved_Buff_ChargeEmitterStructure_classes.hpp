@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitterStructure.Buff_ChargeEmitterStructure_C
-// 0x0008 (0x0AC0 - 0x0AB8)
+// 0x0008 (0x0B50 - 0x0B48)
 class ABuff_ChargeEmitterStructure_C : public ABuff_ChargeEmitter_C
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0AB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

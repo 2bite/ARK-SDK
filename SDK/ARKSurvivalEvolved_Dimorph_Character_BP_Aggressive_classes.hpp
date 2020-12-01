@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dimorph_Character_BP_Aggressive.Dimorph_Character_BP_Aggressive_C
-// 0x0008 (0x2098 - 0x2090)
+// 0x0008 (0x2118 - 0x2110)
 class ADimorph_Character_BP_Aggressive_C : public ADimorph_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Dimorph_Aggressive_C* DinoCharacterStatus_BP_Dimorph_Aggressive_C1;             // 0x2090(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Dimorph_Aggressive_C* DinoCharacterStatus_BP_Dimorph_Aggressive_C1;             // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

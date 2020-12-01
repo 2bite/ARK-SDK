@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_Impacts_Big.ProjArrow_Impacts_Big_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x0848 - 0x0848)
 class AProjArrow_Impacts_Big_C : public AProjArrow_Impacts_C
 {
 public:

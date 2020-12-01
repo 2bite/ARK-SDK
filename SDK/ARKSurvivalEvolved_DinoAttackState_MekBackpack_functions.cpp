@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackState_MekBackpack.DinoAttackState_MekBackpack_C.BPOnAttackTick
-// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekBackpack_C::STATIC_BPOnAttackTick(float* DeltaTime)
+void UDinoAttackState_MekBackpack_C::BPOnAttackTick(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekBackpack.DinoAttackState_MekBackpack_C.BPOnAttackTick");
 

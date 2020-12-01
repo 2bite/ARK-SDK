@@ -399,7 +399,7 @@ float AGasBags_Character_BP_C::GetCurrentExhaleStaminaCost()
 
 
 // Function GasBags_Character_BP.GasBags_Character_BP_C.RawDamageToInflationDamage
-// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, MulticastDelegate, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          RawDamageAmount                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsFallDamage                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -415,7 +415,6 @@ void AGasBags_Character_BP_C::RawDamageToInflationDamage(float RawDamageAmount, 
 	params.IsFallDamage = IsFallDamage;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -453,7 +452,7 @@ void AGasBags_Character_BP_C::GetFloatingVFX(const struct FName& SocketName, cla
 
 
 // Function GasBags_Character_BP.GasBags_Character_BP_C.NonDediTickFloatingVFX
-// (Net, NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Static, MulticastDelegate, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -515,7 +514,7 @@ void AGasBags_Character_BP_C::ServerTickRandomImpulses(bool* IsActive, struct FV
 
 
 // Function GasBags_Character_BP.GasBags_Character_BP_C.BPGrabDebugSnapshot
-// (NetRequest, Event, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // TArray<struct FBlueprintVisualLogEntry> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -526,6 +525,7 @@ TArray<struct FBlueprintVisualLogEntry> AGasBags_Character_BP_C::BPGrabDebugSnap
 	AGasBags_Character_BP_C_BPGrabDebugSnapshot_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -715,7 +715,7 @@ void AGasBags_Character_BP_C::GetExhaleCooldown(double* Clock, float* Duration)
 
 
 // Function GasBags_Character_BP.GasBags_Character_BP_C.BPPreventFallDamage
-// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FHitResult              HitResult                      (Parm, OutParm, ReferenceParm)
 // float*                         FallDamageAmount               (Parm, ZeroConstructor, IsPlainOldData)
@@ -729,7 +729,6 @@ bool AGasBags_Character_BP_C::BPPreventFallDamage(float* FallDamageAmount, struc
 	params.FallDamageAmount = FallDamageAmount;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1009,12 +1008,12 @@ void AGasBags_Character_BP_C::DoExhaleAttack(const struct FVector& Direction)
 
 
 // Function GasBags_Character_BP.GasBags_Character_BP_C.BPHandleControllerInitiatedAttack
-// (Native, Event, NetResponse, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, NetServer, HasDefaults)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AGasBags_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
+bool AGasBags_Character_BP_C::STATIC_BPHandleControllerInitiatedAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GasBags_Character_BP.GasBags_Character_BP_C.BPHandleControllerInitiatedAttack");
 
@@ -1022,7 +1021,6 @@ bool AGasBags_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1152,7 +1150,7 @@ void AGasBags_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, 
 
 
 // Function GasBags_Character_BP.GasBags_Character_BP_C.BPAdjustDamage
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (Net, NetReliable, Exec, Event, Protected, Delegate, NetServer, HasOutParms)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -1175,7 +1173,6 @@ float AGasBags_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDam
 	params.PointHitInfo = PointHitInfo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -61,7 +61,7 @@ bool AOwl_Character_BP_C::BPOnStartJump()
 
 
 // Function Owl_Character_BP.Owl_Character_BP_C.RidingTick
-// (MulticastDelegate, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -104,7 +104,7 @@ bool AOwl_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
 
 
 // Function Owl_Character_BP.Owl_Character_BP_C.IsOnOrNearGround
-// (NetReliable, NetRequest, Event, MulticastDelegate, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -115,6 +115,7 @@ void AOwl_Character_BP_C::IsOnOrNearGround(bool* Return_Value)
 	AOwl_Character_BP_C_IsOnOrNearGround_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -335,17 +336,17 @@ void AOwl_Character_BP_C::BPOnStaminaDrained()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AOwl_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	AOwl_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 
@@ -401,17 +402,17 @@ void AOwl_Character_BP_C::SetupEncapsulateState(bool Enabled)
 // Function Owl_Character_BP.Owl_Character_BP_C.BP_PreventMovementMode
 // ()
 // Parameters:
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AOwl_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* newCustomMode)
+bool AOwl_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.BP_PreventMovementMode");
 
 	AOwl_Character_BP_C_BP_PreventMovementMode_Params params;
-	params.newMovementMode = newMovementMode;
-	params.newCustomMode = newCustomMode;
+	params.NewMovementMode = NewMovementMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 

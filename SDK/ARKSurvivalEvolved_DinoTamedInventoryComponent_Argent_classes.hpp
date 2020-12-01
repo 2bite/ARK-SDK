@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Argent.DinoTamedInventoryComponent_Argent_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoTamedInventoryComponent_Argent_C : public UDinoTamedInventoryComponent_SmithyCapable_C
 {
 public:

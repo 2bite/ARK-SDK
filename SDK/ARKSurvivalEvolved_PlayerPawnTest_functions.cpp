@@ -12,16 +12,16 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function PlayerPawnTest.PlayerPawnTest_C.Get The Num Chibi Level Ups
+// Function PlayerPawnTest.PlayerPawnTest_C.GetTheNumChibiLevelUps
 // ()
 // Parameters:
 // int                            OutVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerPawnTest_C::Get_The_Num_Chibi_Level_Ups(int* OutVal)
+void APlayerPawnTest_C::GetTheNumChibiLevelUps(int* OutVal)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.Get The Num Chibi Level Ups");
+	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.GetTheNumChibiLevelUps");
 
-	APlayerPawnTest_C_Get_The_Num_Chibi_Level_Ups_Params params;
+	APlayerPawnTest_C_GetTheNumChibiLevelUps_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -51,6 +51,50 @@ void APlayerPawnTest_C::SetNumChibiLevelUps(int NewNum)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerPawnTest.PlayerPawnTest_C.BPGetPlayerHexagonCount
+// ()
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int APlayerPawnTest_C::BPGetPlayerHexagonCount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.BPGetPlayerHexagonCount");
+
+	APlayerPawnTest_C_BPGetPlayerHexagonCount_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PlayerPawnTest.PlayerPawnTest_C.BPSetPlayerHexagonCount
+// ()
+// Parameters:
+// int*                           NewHexagonCount                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APlayerPawnTest_C::BPSetPlayerHexagonCount(int* NewHexagonCount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.BPSetPlayerHexagonCount");
+
+	APlayerPawnTest_C_BPSetPlayerHexagonCount_Params params;
+	params.NewHexagonCount = NewHexagonCount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -281,7 +325,7 @@ void APlayerPawnTest_C::InitHairRestDistance()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetLastTransforms
-// (NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
 
 void APlayerPawnTest_C::STATIC_SetLastTransforms()
 {
@@ -333,9 +377,9 @@ void APlayerPawnTest_C::Setup_Collision_Volumes()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle
-// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, NetMulticast, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
 
-void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
+void APlayerPawnTest_C::SetupNewHairstyle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle");
 
@@ -350,15 +394,16 @@ void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair
-// (Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, NetMulticast, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
 
-void APlayerPawnTest_C::STATIC_UpdateHair()
+void APlayerPawnTest_C::UpdateHair()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair");
 
 	APlayerPawnTest_C_UpdateHair_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -30,7 +30,7 @@ void AFishBasket_C::ReceiveBeginPlay()
 
 
 // Function FishBasket.FishBasket_C.TrapFish
-// (NetReliable, Native, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // class APrimalDinoCharacter*    TrapFish                       (Parm, ZeroConstructor, IsPlainOldData)
 // class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -78,13 +78,13 @@ bool AFishBasket_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex
 
 
 // Function FishBasket.FishBasket_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AFishBasket_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AFishBasket_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FishBasket.FishBasket_C.BPGetMultiUseEntries");
 

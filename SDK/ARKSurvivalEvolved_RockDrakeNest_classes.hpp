@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RockDrakeNest.RockDrakeNest_C
-// 0x0010 (0x0AB0 - 0x0AA0)
+// 0x0010 (0x0AC8 - 0x0AB8)
 class ARockDrakeNest_C : public AStructureBaseBP_C
 {
 public:
-	class UClass*                                      DroppedItemEggClass;                                      // 0x0AA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CheckForEggsInterval_MIN;                                 // 0x0AA8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CheckForEggsInterval_MAX;                                 // 0x0AAC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      DroppedItemEggClass;                                      // 0x0AB8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CheckForEggsInterval_MIN;                                 // 0x0AC0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CheckForEggsInterval_MAX;                                 // 0x0AC4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

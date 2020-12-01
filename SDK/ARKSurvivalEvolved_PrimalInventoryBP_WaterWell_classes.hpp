@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_WaterWell.PrimalInventoryBP_WaterWell_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_WaterWell_C : public UPrimalInventoryComponent
 {
 public:

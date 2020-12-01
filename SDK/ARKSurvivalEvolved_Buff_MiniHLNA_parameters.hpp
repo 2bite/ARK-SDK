@@ -14,6 +14,11 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Buff_MiniHLNA.Buff_MiniHLNA_C.Clear Async Loaded Audio
+struct ABuff_MiniHLNA_C_Clear_Async_Loaded_Audio_Params
+{
+};
+
 // Function Buff_MiniHLNA.Buff_MiniHLNA_C.VerifySeasonPassFn
 struct ABuff_MiniHLNA_C_VerifySeasonPassFn_Params
 {
@@ -59,7 +64,7 @@ struct ABuff_MiniHLNA_C_OnUnequip_Params
 struct ABuff_MiniHLNA_C_Get_Random_UniqueInt_Params
 {
 	int                                                Max;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Exclude;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                exclude;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -91,6 +96,24 @@ struct ABuff_MiniHLNA_C_MultiPlaySound_Params
 
 // Function Buff_MiniHLNA.Buff_MiniHLNA_C.VerifySeasonPass
 struct ABuff_MiniHLNA_C_VerifySeasonPass_Params
+{
+};
+
+// Function Buff_MiniHLNA.Buff_MiniHLNA_C.Simple Load Async Sound Cue
+struct ABuff_MiniHLNA_C_Simple_Load_Async_Sound_Cue_Params
+{
+	TArray<struct FLocalizedSoundCueEntry>             Localized;                                                // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function Buff_MiniHLNA.Buff_MiniHLNA_C.AsyncAssetLoadedDelegate__ExplorerNoteAudio
+struct ABuff_MiniHLNA_C_AsyncAssetLoadedDelegate__ExplorerNoteAudio_Params
+{
+	class FString                                      AssetPath;                                                // (Parm, ZeroConstructor)
+	class UObject*                                     LoadedAsset;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_MiniHLNA.Buff_MiniHLNA_C.play hurt sfx
+struct ABuff_MiniHLNA_C_play_hurt_sfx_Params
 {
 };
 

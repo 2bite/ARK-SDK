@@ -3183,6 +3183,69 @@ void UCanvasPanelSlot::SetAlignment(const struct FVector2D& InAlignment)
 }
 
 
+// Function UMG.CanvasPanelSlot.GetSize
+// ()
+// Parameters:
+// struct FVector2D               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector2D UCanvasPanelSlot::GetSize()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetSize");
+
+	UCanvasPanelSlot_GetSize_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.CanvasPanelSlot.GetPosition
+// ()
+// Parameters:
+// struct FVector2D               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector2D UCanvasPanelSlot::GetPosition()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetPosition");
+
+	UCanvasPanelSlot_GetPosition_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.CanvasPanelSlot.GetAnchors
+// ()
+// Parameters:
+// struct FAnchors                ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FAnchors UCanvasPanelSlot::GetAnchors()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAnchors");
+
+	UCanvasPanelSlot_GetAnchors_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function UMG.GridSlot.SetVerticalAlignment
 // ()
 // Parameters:

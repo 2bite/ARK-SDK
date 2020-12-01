@@ -34,18 +34,18 @@ class FString UAnimNotify_PlayParticleEffect_C::GetNotifyName()
 
 
 // Function AnimNotify_PlayParticleEffect.AnimNotify_PlayParticleEffect_C.Received_Notify
-// (NetRequest, Event, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Exec, Event, NetResponse, NetMulticast, Public, Delegate, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotify_PlayParticleEffect_C::STATIC_Received_Notify(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation)
+bool UAnimNotify_PlayParticleEffect_C::Received_Notify(class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimNotify_PlayParticleEffect.AnimNotify_PlayParticleEffect_C.Received_Notify");
 
 	UAnimNotify_PlayParticleEffect_C_Received_Notify_Params params;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;

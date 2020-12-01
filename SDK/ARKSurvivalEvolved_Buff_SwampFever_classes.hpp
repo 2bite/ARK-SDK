@@ -15,25 +15,25 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_SwampFever.Buff_SwampFever_C
-// 0x00C9 (0x0969 - 0x08A0)
+// 0x00C9 (0x09F9 - 0x0930)
 class ABuff_SwampFever_C : public ABuff_Base_Disease_Low_GasMaskable_C
 {
 public:
-	class USphereComponent*                            TriggerSphere;                                            // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              CoughTimer;                                               // 0x08A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	float                                              CoughRadius;                                              // 0x08AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CoughInfectChance;                                        // 0x08B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CoughIntervalMin;                                         // 0x08B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CoughIntervalMax;                                         // 0x08B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x08BC(0x0004) MISSED OFFSET
-	class AActor*                                      K2Node_ComponentBoundEvent_OtherActor;                    // 0x08C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UPrimitiveComponent*                         K2Node_ComponentBoundEvent_OtherComp;                     // 0x08C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                K2Node_ComponentBoundEvent_OtherBodyIndex;                // 0x08D0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_ComponentBoundEvent_bFromSweep;                    // 0x08D4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x08D5(0x0003) MISSED OFFSET
-	struct FHitResult                                  K2Node_ComponentBoundEvent_SweepResult;                   // 0x08D8(0x0088) (OutParm, Transient, DuplicateTransient, ReferenceParm)
-	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x0960(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0968(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class USphereComponent*                            TriggerSphere;                                            // 0x0930(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CoughTimer;                                               // 0x0938(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	float                                              CoughRadius;                                              // 0x093C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CoughInfectChance;                                        // 0x0940(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CoughIntervalMin;                                         // 0x0944(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CoughIntervalMax;                                         // 0x0948(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x094C(0x0004) MISSED OFFSET
+	class AActor*                                      K2Node_ComponentBoundEvent_OtherActor;                    // 0x0950(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UPrimitiveComponent*                         K2Node_ComponentBoundEvent_OtherComp;                     // 0x0958(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                K2Node_ComponentBoundEvent_OtherBodyIndex;                // 0x0960(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_ComponentBoundEvent_bFromSweep;                    // 0x0964(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0965(0x0003) MISSED OFFSET
+	struct FHitResult                                  K2Node_ComponentBoundEvent_SweepResult;                   // 0x0968(0x0088) (OutParm, Transient, DuplicateTransient, ReferenceParm)
+	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x09F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x09F8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

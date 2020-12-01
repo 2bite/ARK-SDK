@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DiloSpit_TrailEmitter.DiloSpit_TrailEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ADiloSpit_TrailEmitter_C : public APrimalEmitterSpawnable
 {
 public:

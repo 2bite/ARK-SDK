@@ -30,7 +30,7 @@ public:
 	bool BPShouldEndAttack();
 	void OnEndEvent();
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
-	void STATIC_OnTickEvent(float* DeltaSeconds);
+	void OnTickEvent(float* DeltaSeconds);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void ExecuteUbergraph_IceBreathAttackStateRanged(int EntryPoint);
 };

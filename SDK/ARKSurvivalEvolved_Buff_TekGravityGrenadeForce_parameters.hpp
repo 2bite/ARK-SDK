@@ -35,8 +35,8 @@ struct ABuff_TekGravityGrenadeForce_C_BPActivated_Params
 // Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.BPPreventInstigatorMovementMode
 struct ABuff_TekGravityGrenadeForce_C_BPPreventInstigatorMovementMode_Params
 {
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

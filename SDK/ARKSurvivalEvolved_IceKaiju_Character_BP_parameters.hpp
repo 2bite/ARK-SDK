@@ -114,9 +114,9 @@ struct AIceKaiju_Character_BP_C_BPOverrideDamageCauserHitMarker_Params
 struct AIceKaiju_Character_BP_C_K2_OnMovementModeChanged_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PrevCustomMode;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPOverrideCharacterNewFallVelocity
@@ -278,15 +278,15 @@ struct AIceKaiju_Character_BP_C_UpdateFur_Params
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.SimulateFur
 struct AIceKaiju_Character_BP_C_SimulateFur_Params
 {
-	TArray<struct FTransform>                          InSocketTransforms;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct UObject_FTransform>                  InSocketTransforms;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FTransform>                          InLastSubstepSocketTransforms;                            // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct UObject_FTransform>                  InLastSubstepSocketTransforms;                            // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.SetFurParams
 struct AIceKaiju_Character_BP_C_SetFurParams_Params
 {
-	TArray<struct FTransform>                          InSocketTransforms;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct UObject_FTransform>                  InSocketTransforms;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.CreateNodeDynamicMATs
@@ -298,7 +298,7 @@ struct AIceKaiju_Character_BP_C_CreateNodeDynamicMATs_Params
 struct AIceKaiju_Character_BP_C_Get_Launch_DirectionForWildLeap_Params
 {
 	class AActor*                                      CalcActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPHandleOnStopFire
@@ -325,7 +325,7 @@ struct AIceKaiju_Character_BP_C_AngryAOEDmg_Params
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.ShouldStopJumpRotation
 struct AIceKaiju_Character_BP_C_ShouldStopJumpRotation_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LaunchLiquidBomb
@@ -347,7 +347,7 @@ struct AIceKaiju_Character_BP_C_FinishLeapTamed_Params
 struct AIceKaiju_Character_BP_C_GetLaunchDirection_Params
 {
 	class AActor*                                      CalcActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LaunchAtTracePoint
@@ -367,7 +367,7 @@ struct AIceKaiju_Character_BP_C_ShortestAngleDistance_Params
 struct AIceKaiju_Character_BP_C_GetClampedLookDir_Params
 {
 	bool                                               LimitLowerPitch;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LeapingTrace
@@ -762,7 +762,7 @@ struct AIceKaiju_Character_BP_C_Server_TraceTargetDir_Params
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               LeapInstant;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     MaxDistLeapTraceGroundLoc;                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               FailedToFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FailedtoFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Multi_TraceTargetDir
@@ -771,7 +771,7 @@ struct AIceKaiju_Character_BP_C_Multi_TraceTargetDir_Params
 	struct FVector                                     AimLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     MaxDistLeapTraceGroundLoc;                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               FailedToFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FailedtoFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.RequestLeapResponse

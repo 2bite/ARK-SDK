@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SupplyCrateEmitter.SupplyCrateEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ASupplyCrateEmitter_C : public APrimalEmitterSpawnable
 {
 public:

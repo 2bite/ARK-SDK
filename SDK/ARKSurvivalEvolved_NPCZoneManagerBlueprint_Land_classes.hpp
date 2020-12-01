@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass NPCZoneManagerBlueprint_Land.NPCZoneManagerBlueprint_Land_C
-// 0x0000 (0x05C0 - 0x05C0)
+// 0x0000 (0x05E8 - 0x05E8)
 class ANPCZoneManagerBlueprint_Land_C : public ANPCZoneManager
 {
 public:

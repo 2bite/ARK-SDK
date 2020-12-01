@@ -77,7 +77,7 @@ public:
 	float                                              MovementAnimRate;                                         // 0x10B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bIsFlying;                                                // 0x10BC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x10BD(0x0003) MISSED OFFSET
-	struct FTransform                                  RootOffsetTransform;                                      // 0x10C0(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct UObject_FTransform                          RootOffsetTransform;                                      // 0x10C0(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinimumMovementSpeed;                                     // 0x10F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              FallingAnimPlayRate;                                      // 0x10F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              FallingBlendInTime;                                       // 0x10F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -132,7 +132,7 @@ public:
 	bool                                               CallFunc_IsMeshGameplayRelevant_ReturnValue;              // 0x1195(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x1196(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x9];                                       // 0x1197(0x0009) MISSED OFFSET
-	struct FTransform                                  CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x11A0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
+	struct UObject_FTransform                          CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x11A0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_GetAimOffsetsTransform_TheRootYawSpeed;          // 0x11D0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_GetAimOffsetsTransform_RootLocOffset;            // 0x11D4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    CallFunc_GetAimOffsetsTransform_ReturnValue;              // 0x11E0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -216,33 +216,33 @@ public:
 
 
 	void BlueprintPlayAnimationEvent(class UAnimMontage** AnimationMontage, float* PlayRate, float* playedAnimLength);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3198();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_3959();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_ModifyBone_630();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3197();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_RotationOffsetBlendSpace_186();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3196();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3195();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_3957();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3194();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3193();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_3956();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_3955();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3192();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_3954();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_4145();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_ModifyBone_624();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3191();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_RotationOffsetBlendSpace_180();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3190();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_ApplyAdditive_234();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3189();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_4143();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3188();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3187();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_3949();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_4142();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_4141();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3186();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_4140();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3185();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_3948();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_3947();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3184();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_ApplyAdditive_252();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3183();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3182();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3181();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_4135();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3180();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3179();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_4134();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_SequencePlayer_4133();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3178();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming_AnimGraphNode_BlendListByBool_3177();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_DinoBlueprintBase_RootTransform_FlySwimming(int EntryPoint);
 };

@@ -19,7 +19,7 @@ namespace sdk
 class UDinoAttackState_MekSwordSwing_C : public UPrimalAIStateBPBase
 {
 public:
-	TArray<struct FTransform>                          SwordCapsuleTransforms;                                   // 0x00A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct UObject_FTransform>                  SwordCapsuleTransforms;                                   // 0x00A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	bool                                               DebugAttacks;                                             // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ECollisionChannel>                     SwordTraceChannel;                                        // 0x00B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               HitPause;                                                 // 0x00B2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -38,11 +38,11 @@ public:
 
 
 	void ShouldDoDamageTo(class AActor* Actor, bool* AllowDamage);
-	void STATIC_BPOnAttackEnd(int* AttackIndex);
+	void BPOnAttackEnd(int* AttackIndex);
 	void BPOnAnimNotifyCustomEvent(struct FName* CustomEventName, class UAnimSequenceBase** Animation, TEnumAsByte<ENetRole>* Role);
-	void STATIC_DoSwordDamage();
-	void GetSwordCapsule(struct FTransform* WorldTransform, float* CapsuleRadius, float* CapsuleHalfHeight);
-	void GetSwordDamagePoint(struct FVector* Loc, struct FRotator* Rot);
+	void DoSwordDamage();
+	void STATIC_GetSwordCapsule(struct UObject_FTransform* WorldTransform, float* CapsuleRadius, float* CapsuleHalfHeight);
+	void STATIC_GetSwordDamagePoint(struct FVector* Loc, struct FRotator* Rot);
 	void BPOnAttackStart(int* AttackIndex);
 	void ExecuteUbergraph_DinoAttackState_MekSwordSwing(int EntryPoint);
 };

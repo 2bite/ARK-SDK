@@ -15,16 +15,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ChangeTransponderWeaponFreaquancyEntryUI.ChangeTransponderWeaponFreaquancyEntryUI_C
-// 0x0030 (0x0570 - 0x0540)
+// 0x0030 (0x0578 - 0x0548)
 class UChangeTransponderWeaponFreaquancyEntryUI_C : public UUI_ChangeTransponderFreqencyEntry
 {
 public:
-	class UEditableTextBox*                            Frequency;                                                // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      FrontOverlayAdditive;                                     // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      Image_1;                                                  // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      Image_2;                                                  // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      Image_256;                                                // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UButton*                                     SetButton;                                                // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UEditableTextBox*                            Frequency;                                                // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      FrontOverlayAdditive;                                     // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      Image_1;                                                  // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      Image_2;                                                  // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      Image_256;                                                // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UButton*                                     SetButton;                                                // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

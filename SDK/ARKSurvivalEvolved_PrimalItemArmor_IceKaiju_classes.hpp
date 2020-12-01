@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_IceKaiju.PrimalItemArmor_IceKaiju_C
-// 0x0000 (0x0998 - 0x0998)
+// 0x0000 (0x09B8 - 0x09B8)
 class UPrimalItemArmor_IceKaiju_C : public UPrimalItemArmor_SaddleGeneric_C
 {
 public:

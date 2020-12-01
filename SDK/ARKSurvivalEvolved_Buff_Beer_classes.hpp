@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Beer.Buff_Beer_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_Beer_C : public ABuff_Base_C
 {
 public:

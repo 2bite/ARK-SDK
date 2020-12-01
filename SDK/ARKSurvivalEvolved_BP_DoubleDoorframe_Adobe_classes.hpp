@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DoubleDoorframe_Adobe.BP_DoubleDoorframe_Adobe_C
-// 0x0000 (0x0AB8 - 0x0AB8)
+// 0x0000 (0x0AD0 - 0x0AD0)
 class ABP_DoubleDoorframe_Adobe_C : public ABase_DoubleDoorframe_C
 {
 public:

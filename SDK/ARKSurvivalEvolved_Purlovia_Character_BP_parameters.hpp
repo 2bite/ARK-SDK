@@ -157,7 +157,7 @@ struct APurlovia_Character_BP_C_FinishBuriedJump_Params
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.CalculateBuryMeshTransform
 struct APurlovia_Character_BP_C_CalculateBuryMeshTransform_Params
 {
-	struct FTransform                                  Transform;                                                // (Parm, OutParm, IsPlainOldData)
+	struct UObject_FTransform                          Transform;                                                // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.BlueprintDrawFloatingHUD
@@ -341,7 +341,7 @@ struct APurlovia_Character_BP_C_OnMovementChanged_Params
 struct APurlovia_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

@@ -1,0 +1,124 @@
+// ARKSurvivalEvolved (301.1) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_Buff_OnFire_VentHeat_parameters.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Functions
+//---------------------------------------------------------------------------
+
+// Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.BuffTickServer
+// ()
+// Parameters:
+// float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_OnFire_VentHeat_C::BuffTickServer(float* DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.BuffTickServer");
+
+	ABuff_OnFire_VentHeat_C_BuffTickServer_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.BPOnInstigatorMovementModeChangedNotify
+// ()
+// Parameters:
+// TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 PreviousCustomMode             (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_OnFire_VentHeat_C::BPOnInstigatorMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.BPOnInstigatorMovementModeChangedNotify");
+
+	ABuff_OnFire_VentHeat_C_BPOnInstigatorMovementModeChangedNotify_Params params;
+	params.PrevMovementMode = PrevMovementMode;
+	params.PreviousCustomMode = PreviousCustomMode;
+	params.NewMovementMode = NewMovementMode;
+	params.NewCustomMode = NewCustomMode;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.SetupVentHeat
+// ()
+// Parameters:
+// struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Strength                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_OnFire_VentHeat_C::SetupVentHeat(const struct FVector& Direction, float Strength)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.SetupVentHeat");
+
+	ABuff_OnFire_VentHeat_C_SetupVentHeat_Params params;
+	params.Direction = Direction;
+	params.Strength = Strength;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.UserConstructionScript
+// ()
+
+void ABuff_OnFire_VentHeat_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.UserConstructionScript");
+
+	ABuff_OnFire_VentHeat_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.ExecuteUbergraph_Buff_OnFire_VentHeat
+// ()
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_OnFire_VentHeat_C::ExecuteUbergraph_Buff_OnFire_VentHeat(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_OnFire_VentHeat.Buff_OnFire_VentHeat_C.ExecuteUbergraph_Buff_OnFire_VentHeat");
+
+	ABuff_OnFire_VentHeat_C_ExecuteUbergraph_Buff_OnFire_VentHeat_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

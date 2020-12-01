@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Tent.Buff_Tent_C
-// 0x0008 (0x08A8 - 0x08A0)
+// 0x0008 (0x0938 - 0x0930)
 class ABuff_Tent_C : public APrimalBuff
 {
 public:
-	class APrimalStructure*                            Tent;                                                     // 0x08A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class APrimalStructure*                            Tent;                                                     // 0x0930(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

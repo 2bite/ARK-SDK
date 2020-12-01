@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_LazarusChowder.Buff_LazarusChowder_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_LazarusChowder_C : public ABuff_Base_Stew_C
 {
 public:

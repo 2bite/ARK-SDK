@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Greenhouse_Sloped_Wall_Right.Greenhouse_Sloped_Wall_Right_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class AGreenhouse_Sloped_Wall_Right_C : public ABaseWall_Sloped_Right_SM_C
 {
 public:

@@ -51,6 +51,28 @@ void AProjClusterGrenade_C::OnExplode(struct FHitResult* Result)
 }
 
 
+// Function ProjClusterGrenade.ProjClusterGrenade_C.BPSpawnedFragments
+// ()
+// Parameters:
+// TArray<class AShooterProjectile*> FragmentArray                  (Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void AProjClusterGrenade_C::BPSpawnedFragments(TArray<class AShooterProjectile*>* FragmentArray)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ProjClusterGrenade.ProjClusterGrenade_C.BPSpawnedFragments");
+
+	AProjClusterGrenade_C_BPSpawnedFragments_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (FragmentArray != nullptr)
+		*FragmentArray = params.FragmentArray;
+}
+
+
 // Function ProjClusterGrenade.ProjClusterGrenade_C.ExecuteUbergraph_ProjClusterGrenade
 // ()
 // Parameters:

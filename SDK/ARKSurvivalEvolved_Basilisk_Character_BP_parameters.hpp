@@ -61,7 +61,7 @@ struct ABasilisk_Character_BP_C_UpdatedTracedMoundTransform_Params
 struct ABasilisk_Character_BP_C_GetBuriedMoundTransform_Params
 {
 	float                                              HeightAlpha;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+	struct UObject_FTransform                          ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.Check Unburied State and Add Hungry Ineffectiveness
@@ -164,9 +164,9 @@ struct ABasilisk_Character_BP_C_OffSetFromBuriedGroundLocation_Params
 struct ABasilisk_Character_BP_C_K2_OnMovementModeChanged_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PrevCustomMode;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.SharedCanAttack

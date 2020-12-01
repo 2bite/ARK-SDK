@@ -15,18 +15,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjHarpoon.ProjHarpoon_C
-// 0x0024 (0x0694 - 0x0670)
+// 0x0024 (0x06A4 - 0x0680)
 class AProjHarpoon_C : public APrimalProjectileArrow
 {
 public:
-	class UChildActorComponent*                        ChildProjectileTrail;                                     // 0x0670(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              UnderwaterGravityScale;                                   // 0x0678(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              OutOfWaterGravityScale;                                   // 0x067C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              UnderwaterMaxSpeed;                                       // 0x0680(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              OutOfWaterMaxSpeed;                                       // 0x0684(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                DamageOutOfWater;                                         // 0x0688(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                DamageUnderwater;                                         // 0x068C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DamageMult;                                               // 0x0690(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UChildActorComponent*                        ChildProjectileTrail;                                     // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              UnderwaterGravityScale;                                   // 0x0688(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              OutOfWaterGravityScale;                                   // 0x068C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              UnderwaterMaxSpeed;                                       // 0x0690(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              OutOfWaterMaxSpeed;                                       // 0x0694(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                DamageOutOfWater;                                         // 0x0698(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                DamageUnderwater;                                         // 0x069C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              damageMult;                                               // 0x06A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -36,7 +36,7 @@ public:
 
 
 	void ReceiveBeginPlay();
-	void ReceiveTick(float* DeltaSeconds);
+	void STATIC_ReceiveTick(float* DeltaSeconds);
 	void UserConstructionScript();
 	void ExecuteUbergraph_ProjHarpoon(int EntryPoint);
 };

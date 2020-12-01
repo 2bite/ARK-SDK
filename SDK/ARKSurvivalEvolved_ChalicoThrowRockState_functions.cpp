@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ChalicoThrowRockState.ChalicoThrowRockState_C.BPRangedAttack
-// (NetReliable, Exec, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 TargetLocation                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 TargetVelocity                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -25,6 +25,7 @@ void UChalicoThrowRockState_C::BPRangedAttack(struct FVector* TargetLocation, st
 	UChalicoThrowRockState_C_BPRangedAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

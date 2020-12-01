@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_IndustrialGrinder.PrimalInventoryBP_IndustrialGrinder_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_IndustrialGrinder_C : public UPrimalInventoryComponent
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tek_Beam_Placement_Emitter.Tek_Beam_Placement_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ATek_Beam_Placement_Emitter_C : public APrimalEmitterSpawnable
 {
 public:

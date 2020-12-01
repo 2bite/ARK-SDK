@@ -130,23 +130,23 @@ struct ATapejara_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_144
-struct ATapejara_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_144_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_158
+struct ATapejara_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_158_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_143
-struct ATapejara_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_143_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_157
+struct ATapejara_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_157_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_142
-struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_142_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_156
+struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_156_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_141
-struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_141_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_155
+struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_155_Params
 {
 };
 
@@ -182,7 +182,7 @@ struct ATapejara_Character_BP_C_UnLatchStartAnimation_Params
 struct ATapejara_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

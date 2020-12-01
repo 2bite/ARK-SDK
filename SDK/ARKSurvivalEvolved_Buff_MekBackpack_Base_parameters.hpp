@@ -66,7 +66,7 @@ struct ABuff_MekBackpack_Base_C_NotifyActivateBackpack_Params
 struct ABuff_MekBackpack_Base_C_OverrideTurnInPlaceSpeed_Params
 {
 	float                                              DefaultSpeed;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              NewSpeed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              newSpeed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.NotifyStopAttack

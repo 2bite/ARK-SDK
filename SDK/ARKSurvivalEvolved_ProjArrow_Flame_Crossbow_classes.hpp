@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_Flame_Crossbow.ProjArrow_Flame_Crossbow_C
-// 0x0000 (0x0688 - 0x0688)
+// 0x0000 (0x0698 - 0x0698)
 class AProjArrow_Flame_Crossbow_C : public AProjArrow_Flame_C
 {
 public:

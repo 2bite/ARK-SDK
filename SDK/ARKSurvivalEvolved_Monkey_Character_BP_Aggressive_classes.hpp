@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Monkey_Character_BP_Aggressive.Monkey_Character_BP_Aggressive_C
-// 0x0000 (0x2090 - 0x2090)
+// 0x0000 (0x2110 - 0x2110)
 class AMonkey_Character_BP_Aggressive_C : public AMonkey_Character_BP_C
 {
 public:

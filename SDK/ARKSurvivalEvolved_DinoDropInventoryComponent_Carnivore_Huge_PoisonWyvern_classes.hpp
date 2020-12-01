@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoDropInventoryComponent_Carnivore_Huge_PoisonWyvern.DinoDropInventoryComponent_Carnivore_Huge_PoisonWyvern_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoDropInventoryComponent_Carnivore_Huge_PoisonWyvern_C : public UDinoDropInventoryComponent_Carnivore_Huge_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicPara_Character_BP.BionicPara_Character_BP_C
-// 0x0000 (0x2279 - 0x2279)
+// 0x0000 (0x22F9 - 0x22F9)
 class ABionicPara_Character_BP_C : public APara_Character_BP_C
 {
 public:

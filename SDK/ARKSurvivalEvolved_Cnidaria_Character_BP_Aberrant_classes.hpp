@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cnidaria_Character_BP_Aberrant.Cnidaria_Character_BP_Aberrant_C
-// 0x0000 (0x2098 - 0x2098)
+// 0x0000 (0x2118 - 0x2118)
 class ACnidaria_Character_BP_Aberrant_C : public ACnidaria_Character_BP_C
 {
 public:

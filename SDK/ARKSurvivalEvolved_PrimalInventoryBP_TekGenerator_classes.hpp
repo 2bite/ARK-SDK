@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_TekGenerator.PrimalInventoryBP_TekGenerator_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_TekGenerator_C : public UPrimalInventoryBP_BaseGasolineBurning_C
 {
 public:

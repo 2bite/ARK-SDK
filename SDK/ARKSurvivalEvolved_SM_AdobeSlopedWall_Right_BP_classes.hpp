@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeSlopedWall_Right_BP.SM_AdobeSlopedWall_Right_BP_C
-// 0x0008 (0x0AA8 - 0x0AA0)
+// 0x0008 (0x0AC0 - 0x0AB8)
 class ASM_AdobeSlopedWall_Right_BP_C : public AMetalWall_Sloped_Right_SM_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0AA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0AB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass MapSpawnPoint.MapSpawnPoint_C
-// 0x0008 (0x0570 - 0x0568)
+// 0x0008 (0x0578 - 0x0570)
 class UMapSpawnPoint_C : public UUI_SpawnPoint
 {
 public:
-	class UImage*                                      SpawnPointImage;                                          // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      SpawnPointImage;                                          // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

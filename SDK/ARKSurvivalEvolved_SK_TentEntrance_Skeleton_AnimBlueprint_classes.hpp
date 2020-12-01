@@ -48,8 +48,8 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint_AnimGraphNode_TransitionResult_1594();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint_AnimGraphNode_TransitionResult_1593();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint_AnimGraphNode_TransitionResult_1996();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint_AnimGraphNode_TransitionResult_1995();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint(int EntryPoint);
 };

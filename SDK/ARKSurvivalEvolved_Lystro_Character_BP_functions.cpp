@@ -60,7 +60,7 @@ void ALystro_Character_BP_C::Has_XPBuff(bool* Result)
 
 
 // Function Lystro_Character_BP.Lystro_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Native, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

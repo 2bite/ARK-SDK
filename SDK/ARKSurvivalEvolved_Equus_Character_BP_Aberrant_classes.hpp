@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Equus_Character_BP_Aberrant.Equus_Character_BP_Aberrant_C
-// 0x0000 (0x2253 - 0x2253)
+// 0x0000 (0x22D3 - 0x22D3)
 class AEquus_Character_BP_Aberrant_C : public AEquus_Character_BP_C
 {
 public:

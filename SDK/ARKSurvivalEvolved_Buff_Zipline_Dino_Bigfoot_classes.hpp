@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Zipline_Dino_Bigfoot.Buff_Zipline_Dino_Bigfoot_C
-// 0x0000 (0x0D20 - 0x0D20)
+// 0x0000 (0x0DB0 - 0x0DB0)
 class ABuff_Zipline_Dino_Bigfoot_C : public ABuff_Zipline_DinoBase_C
 {
 public:

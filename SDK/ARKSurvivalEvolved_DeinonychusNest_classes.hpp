@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DeinonychusNest.DeinonychusNest_C
-// 0x0000 (0x0AAC - 0x0AAC)
+// 0x0000 (0x0AC4 - 0x0AC4)
 class ADeinonychusNest_C : public AWyvernNest_C
 {
 public:

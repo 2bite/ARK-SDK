@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ArtifactCrate_Instantaneous_Alt.ArtifactCrate_Instantaneous_Alt_C
-// 0x0018 (0x0E78 - 0x0E60)
+// 0x0018 (0x0E90 - 0x0E78)
 class AArtifactCrate_Instantaneous_Alt_C : public ASupplyCrateBaseBP_Instantaneous_C
 {
 public:
-	class UPrimalInventoryBP_ArtifactCrate_C*          PrimalInventoryBP_ArtifactCrate_C1;                       // 0x0E60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0E68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0E70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_ArtifactCrate_C*          PrimalInventoryBP_ArtifactCrate_C1;                       // 0x0E78(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0E80(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0E88(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

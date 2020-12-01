@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Weap_SpearSkin.Weap_SpearSkin_C
-// 0x0010 (0x0E68 - 0x0E58)
+// 0x0010 (0x0E88 - 0x0E78)
 class AWeap_SpearSkin_C : public AWeapSpear_C
 {
 public:
-	class UStaticMeshComponent*                        FPVComponent;                                             // 0x0E58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        TPVComponent;                                             // 0x0E60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        FPVComponent;                                             // 0x0E78(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        TPVComponent;                                             // 0x0E80(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

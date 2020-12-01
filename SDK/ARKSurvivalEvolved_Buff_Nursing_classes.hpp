@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Nursing.Buff_Nursing_C
-// 0x0004 (0x08A4 - 0x08A0)
+// 0x0004 (0x0934 - 0x0930)
 class ABuff_Nursing_C : public ABuff_Base_C
 {
 public:
-	float                                              BuffImprintingEffectivenessMultiplier;                    // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BuffImprintingEffectivenessMultiplier;                    // 0x0930(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

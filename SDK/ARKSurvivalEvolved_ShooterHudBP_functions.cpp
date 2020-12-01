@@ -13,20 +13,19 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ShooterHudBP.ShooterHudBP_C.GetAdditionalExplorerNoteDynamicMaterialParams
-// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
 // Parameters:
 // struct FExplorerNoteEntry      ExplorerNote                   (Parm, OutParm, ReferenceParm)
 // TArray<struct FNameScalarPair> ScalarMaterialParams           (Parm, OutParm, ZeroConstructor)
 // TArray<struct FNameColorPair>  ColorMaterialParams            (Parm, OutParm, ZeroConstructor)
 
-void AShooterHudBP_C::GetAdditionalExplorerNoteDynamicMaterialParams(struct FExplorerNoteEntry* ExplorerNote, TArray<struct FNameScalarPair>* ScalarMaterialParams, TArray<struct FNameColorPair>* ColorMaterialParams)
+void AShooterHudBP_C::STATIC_GetAdditionalExplorerNoteDynamicMaterialParams(struct FExplorerNoteEntry* ExplorerNote, TArray<struct FNameScalarPair>* ScalarMaterialParams, TArray<struct FNameColorPair>* ColorMaterialParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterHudBP.ShooterHudBP_C.GetAdditionalExplorerNoteDynamicMaterialParams");
 
 	AShooterHudBP_C_GetAdditionalExplorerNoteDynamicMaterialParams_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

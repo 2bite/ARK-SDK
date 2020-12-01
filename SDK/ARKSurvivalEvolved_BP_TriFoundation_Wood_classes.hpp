@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TriFoundation_Wood.BP_TriFoundation_Wood_C
-// 0x0000 (0x0AB2 - 0x0AB2)
+// 0x0000 (0x0ACA - 0x0ACA)
 class ABP_TriFoundation_Wood_C : public ABase_Foundation_Tri_C
 {
 public:

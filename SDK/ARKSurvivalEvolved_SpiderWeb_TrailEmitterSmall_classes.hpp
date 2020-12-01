@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SpiderWeb_TrailEmitterSmall.SpiderWeb_TrailEmitterSmall_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ASpiderWeb_TrailEmitterSmall_C : public APrimalEmitterSpawnable
 {
 public:

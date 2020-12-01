@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RockGolem_TheIslandDisguise.RockGolem_TheIslandDisguise_C
-// 0x0010 (0x0460 - 0x0450)
+// 0x0010 (0x0470 - 0x0460)
 class ARockGolem_TheIslandDisguise_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0450(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Scene1;                                                   // 0x0458(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0460(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Scene1;                                                   // 0x0468(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

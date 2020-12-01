@@ -85,13 +85,13 @@ void AProjPlantSpeciesZFruit_C::IsWearingProtection(class AActor* Actor, bool* I
 
 
 // Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.IsNearbyStructure
-// (Exec, NetMulticast, Protected, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, DLLImport, Const, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          IndexOffset                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           StructureInBetween             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjPlantSpeciesZFruit_C::IsNearbyStructure(int index, float IndexOffset, bool* StructureInBetween)
+void AProjPlantSpeciesZFruit_C::STATIC_IsNearbyStructure(int index, float IndexOffset, bool* StructureInBetween)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.IsNearbyStructure");
 
@@ -100,6 +100,7 @@ void AProjPlantSpeciesZFruit_C::IsNearbyStructure(int index, float IndexOffset, 
 	params.IndexOffset = IndexOffset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,9 +116,9 @@ void AProjPlantSpeciesZFruit_C::IsNearbyStructure(int index, float IndexOffset, 
 // Parameters:
 // struct FVector                 v1                             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 v2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* RetVal)
+void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.GetAngleBetween");
 
@@ -131,8 +132,8 @@ void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const 
 
 	fn->FunctionFlags = flags;
 
-	if (RetVal != nullptr)
-		*RetVal = params.RetVal;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 

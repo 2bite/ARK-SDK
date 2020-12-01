@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeWindow_BP.SM_AdobeWindow_BP_C
-// 0x0000 (0x0B20 - 0x0B20)
+// 0x0000 (0x0B38 - 0x0B38)
 class ASM_AdobeWindow_BP_C : public AWindow_Metal_BP_C
 {
 public:

@@ -442,6 +442,13 @@ enum class EPawnActionFailHandling : uint8_t
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct AIModule.AIRequestID
+// 0x0004
+struct FAIRequestID
+{
+	uint32_t                                           RequestID;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct AIModule.BehaviorTreeTypes.BlackboardKeySelector
 // 0x0028
 struct FBlackboardKeySelector
@@ -453,13 +460,6 @@ struct FBlackboardKeySelector
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
 	unsigned char                                      bNoneIsAllowedValue : 1;                                  // 0x0024(0x0001) (Edit, Transient, DisableEditOnInstance)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct AIModule.AIRequestID
-// 0x0004
-struct FAIRequestID
-{
-	uint32_t                                           RequestID;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.PawnActionsComponent.PawnActionStack

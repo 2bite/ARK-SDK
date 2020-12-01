@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RightClimbing_ImpactEffect_Wood.RightClimbing_ImpactEffect_Wood_C
-// 0x0000 (0x04D0 - 0x04D0)
+// 0x0000 (0x04E0 - 0x04E0)
 class ARightClimbing_ImpactEffect_Wood_C : public AClimbing_ImpactEffect_C
 {
 public:

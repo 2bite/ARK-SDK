@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MetalWall_Sloped_Left_SM.MetalWall_Sloped_Left_SM_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class AMetalWall_Sloped_Left_SM_C : public ABaseWall_Sloped_Left_SM_C
 {
 public:

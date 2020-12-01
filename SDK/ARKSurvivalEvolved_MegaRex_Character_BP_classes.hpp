@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MegaRex_Character_BP.MegaRex_Character_BP_C
-// 0x0008 (0x2140 - 0x2138)
+// 0x0008 (0x21C0 - 0x21B8)
 class AMegaRex_Character_BP_C : public ARex_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_MegaRex_C*  DinoCharacterStatus_BP_MegaRex_C1;                        // 0x2138(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_MegaRex_C*  DinoCharacterStatus_BP_MegaRex_C1;                        // 0x21B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

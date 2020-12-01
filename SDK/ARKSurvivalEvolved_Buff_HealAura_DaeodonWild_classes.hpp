@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_HealAura_DaeodonWild.Buff_HealAura_DaeodonWild_C
-// 0x0000 (0x0C91 - 0x0C91)
+// 0x0000 (0x0D21 - 0x0D21)
 class ABuff_HealAura_DaeodonWild_C : public ABuff_HealAura_C
 {
 public:

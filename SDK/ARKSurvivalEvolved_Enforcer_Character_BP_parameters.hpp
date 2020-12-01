@@ -143,8 +143,8 @@ struct AEnforcer_Character_BP_C_BPGetRiderUnboardLocation_Params
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.BP_PreventMovementMode
 struct AEnforcer_Character_BP_C_BP_PreventMovementMode_Params
 {
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -174,7 +174,7 @@ struct AEnforcer_Character_BP_C_IsSurfaceNormalClimbable_Params
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.GetCustomSurfaceTraceDistance
 struct AEnforcer_Character_BP_C_GetCustomSurfaceTraceDistance_Params
 {
-	int*                                               traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              customDistance;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -301,9 +301,9 @@ struct AEnforcer_Character_BP_C_BPModifyFOV_Params
 struct AEnforcer_Character_BP_C_K2_OnMovementModeChanged_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PrevCustomMode;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.GetClimbingMoveDirFromRotation

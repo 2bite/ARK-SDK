@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Beaver_AIController_BP.Beaver_AIController_BP_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ABeaver_AIController_BP_C : public ADino_AIController_BP_C
 {
 public:

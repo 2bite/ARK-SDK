@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_SupplyCrate.PrimalInventoryBP_SupplyCrate_C
-// 0x0008 (0x0540 - 0x0538)
+// 0x0008 (0x0578 - 0x0570)
 class UPrimalInventoryBP_SupplyCrate_C : public UPrimalInventoryComponent
 {
 public:
-	class UClass*                                      SingleplayerDefaultItemToRemove;                          // 0x0538(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      SingleplayerDefaultItemToRemove;                          // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

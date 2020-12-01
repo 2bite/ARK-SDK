@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Stego_Character_BP_Aberrant.Stego_Character_BP_Aberrant_C
-// 0x0000 (0x2090 - 0x2090)
+// 0x0000 (0x2110 - 0x2110)
 class AStego_Character_BP_Aberrant_C : public AStego_Character_BP_C
 {
 public:

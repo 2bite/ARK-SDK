@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MekEmitter_SwarmMissile.MekEmitter_SwarmMissile_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AMekEmitter_SwarmMissile_C : public APrimalEmitterSpawnable
 {
 public:

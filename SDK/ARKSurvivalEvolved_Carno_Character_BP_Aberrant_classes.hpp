@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Carno_Character_BP_Aberrant.Carno_Character_BP_Aberrant_C
-// 0x0000 (0x2090 - 0x2090)
+// 0x0000 (0x2110 - 0x2110)
 class ACarno_Character_BP_Aberrant_C : public ACarno_Character_BP_C
 {
 public:

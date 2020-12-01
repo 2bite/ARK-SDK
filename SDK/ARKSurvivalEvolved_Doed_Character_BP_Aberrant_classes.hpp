@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Doed_Character_BP_Aberrant.Doed_Character_BP_Aberrant_C
-// 0x0000 (0x20A0 - 0x20A0)
+// 0x0000 (0x2120 - 0x2120)
 class ADoed_Character_BP_Aberrant_C : public ADoed_Character_BP_C
 {
 public:

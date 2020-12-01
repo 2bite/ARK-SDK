@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapBow_CupidBow_Flame.WeapBow_CupidBow_Flame_C
-// 0x0000 (0x0E73 - 0x0E73)
+// 0x0000 (0x0E93 - 0x0E93)
 class AWeapBow_CupidBow_Flame_C : public AWeapBow_Flame_C
 {
 public:

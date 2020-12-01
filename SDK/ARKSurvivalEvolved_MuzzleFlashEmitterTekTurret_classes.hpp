@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MuzzleFlashEmitterTekTurret.MuzzleFlashEmitterTekTurret_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AMuzzleFlashEmitterTekTurret_C : public APrimalEmitterSpawnable
 {
 public:

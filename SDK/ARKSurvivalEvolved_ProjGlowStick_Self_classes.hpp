@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjGlowStick_Self.ProjGlowStick_Self_C
-// 0x0004 (0x070C - 0x0708)
+// 0x0004 (0x071C - 0x0718)
 class AProjGlowStick_Self_C : public AProjGlowStick_C
 {
 public:
-	int                                                CallFunc_Array_Add_ReturnValue;                           // 0x0708(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                CallFunc_Array_Add_ReturnValue;                           // 0x0718(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

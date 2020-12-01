@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjWebBall.ProjWebBall_C
-// 0x0000 (0x0648 - 0x0648)
+// 0x0000 (0x0658 - 0x0658)
 class AProjWebBall_C : public AShooterProjectile
 {
 public:

@@ -48,7 +48,7 @@ struct AAIController_OnPossess_Params
 // Function AIModule.AIController.MoveToLocation
 struct AAIController_MoveToLocation_Params
 {
-	struct FVector                                     Dest;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FVector                                     dest;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	float                                              AcceptanceRadius;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bStopOnOverlap;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bUsePathfinding;                                          // (Parm, ZeroConstructor, IsPlainOldData)

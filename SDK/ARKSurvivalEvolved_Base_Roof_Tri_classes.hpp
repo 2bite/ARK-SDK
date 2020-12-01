@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Base_Roof_Tri.Base_Roof_Tri_C
-// 0x0001 (0x0AA1 - 0x0AA0)
+// 0x0001 (0x0AB9 - 0x0AB8)
 class ABase_Roof_Tri_C : public AStructureBaseBP_C
 {
 public:
-	bool                                               IsGlass;                                                  // 0x0AA0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsGlass;                                                  // 0x0AB8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

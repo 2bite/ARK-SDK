@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ServerSidePoint_Huge.ServerSidePoint_Huge_C
-// 0x0000 (0x0450 - 0x0450)
+// 0x0000 (0x0460 - 0x0460)
 class AServerSidePoint_Huge_C : public AServerSidePoint_C
 {
 public:

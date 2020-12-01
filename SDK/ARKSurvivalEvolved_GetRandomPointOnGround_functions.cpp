@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GetRandomPointOnGround.GetRandomPointOnGround_C.ReceiveExecute
-// (NetRequest, Native, NetResponse, Static, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 

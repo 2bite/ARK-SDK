@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponAlarmTrap.PrimalItem_WeaponAlarmTrap_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItem_WeaponAlarmTrap_C : public UPrimalItemWeaponGenericAmmolessConsumeSelf_C
 {
 public:

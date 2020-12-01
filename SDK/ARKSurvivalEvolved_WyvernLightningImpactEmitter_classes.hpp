@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WyvernLightningImpactEmitter.WyvernLightningImpactEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AWyvernLightningImpactEmitter_C : public AExplosionEmitter_C
 {
 public:

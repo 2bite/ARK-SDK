@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapChainsaw_Impacts.WeapChainsaw_Impacts_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x0848 - 0x0848)
 class AWeapChainsaw_Impacts_C : public AMeleeFist_Impacts_C
 {
 public:

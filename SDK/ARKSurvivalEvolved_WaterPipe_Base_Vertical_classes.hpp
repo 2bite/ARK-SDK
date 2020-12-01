@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterPipe_Base_Vertical.WaterPipe_Base_Vertical_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class AWaterPipe_Base_Vertical_C : public AWaterPipeBaseBP_C
 {
 public:

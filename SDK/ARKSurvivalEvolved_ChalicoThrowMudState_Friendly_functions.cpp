@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ChalicoThrowMudState_Friendly.ChalicoThrowMudState_Friendly_C.BPRangedAttack
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 TargetLocation                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 TargetVelocity                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -25,7 +25,6 @@ void UChalicoThrowMudState_Friendly_C::BPRangedAttack(struct FVector* TargetLoca
 	UChalicoThrowMudState_Friendly_C_BPRangedAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

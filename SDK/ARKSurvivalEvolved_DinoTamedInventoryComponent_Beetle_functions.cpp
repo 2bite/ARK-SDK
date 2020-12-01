@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.CraftItem
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Static, Public, Delegate, HasOutParms, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // int                            ItemToCraftIndex               (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -136,13 +136,13 @@ void UDinoTamedInventoryComponent_Beetle_C::UnsetAll()
 
 
 // Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.HasEnoughResources
-// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Static, Public, Delegate, HasOutParms, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // int                            IndexClassToCheck              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           hasEnough                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            NumberOfTimesCanCraft          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoTamedInventoryComponent_Beetle_C::HasEnoughResources(int IndexClassToCheck, bool* hasEnough, int* NumberOfTimesCanCraft)
+void UDinoTamedInventoryComponent_Beetle_C::STATIC_HasEnoughResources(int IndexClassToCheck, bool* hasEnough, int* NumberOfTimesCanCraft)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.HasEnoughResources");
 

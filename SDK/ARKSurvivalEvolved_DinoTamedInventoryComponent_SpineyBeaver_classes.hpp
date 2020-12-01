@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_SpineyBeaver.DinoTamedInventoryComponent_SpineyBeaver_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoTamedInventoryComponent_SpineyBeaver_C : public UDinoTamedInventoryComponent_SmithyCapable_C
 {
 public:

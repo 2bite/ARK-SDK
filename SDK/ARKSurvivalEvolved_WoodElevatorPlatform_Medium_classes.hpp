@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WoodElevatorPlatform_Medium.WoodElevatorPlatform_Medium_C
-// 0x0000 (0x0B60 - 0x0B60)
+// 0x0000 (0x0B78 - 0x0B78)
 class AWoodElevatorPlatform_Medium_C : public AWoodElevatorPlatform_Base_C
 {
 public:

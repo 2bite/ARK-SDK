@@ -12,30 +12,6 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss
-// ()
-// Parameters:
-// int*                           DifficultyIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName*                  BossName                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AShooterPlayerController** PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-
-void UPrimalPlayerDataBP_Base_C::BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss");
-
-	UPrimalPlayerDataBP_Base_C_BPForceDefeatedBoss_Params params;
-	params.DifficultyIndex = DifficultyIndex;
-	params.BossName = BossName;
-	params.PlayerController = PlayerController;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPCreatedNewPlayerData
 // ()
 

@@ -207,19 +207,19 @@ void ASpino_Character_BP_C::PreInit_SwitchStance()
 // ()
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpino_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* PrevCustomMode, unsigned char* newCustomMode)
+void ASpino_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Spino_Character_BP.Spino_Character_BP_C.K2_OnMovementModeChanged");
 
 	ASpino_Character_BP_C_K2_OnMovementModeChanged_Params params;
 	params.PrevMovementMode = PrevMovementMode;
-	params.newMovementMode = newMovementMode;
+	params.NewMovementMode = NewMovementMode;
 	params.PrevCustomMode = PrevCustomMode;
-	params.newCustomMode = newCustomMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 

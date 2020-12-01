@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BeeHive.BeeHive_C.BlueprintDrawHUD
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Net, NetReliable, NetRequest, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -29,7 +29,6 @@ void ABeeHive_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -190,13 +189,13 @@ bool ABeeHive_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function BeeHive.BeeHive_C.BPGetMultiUseEntries
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABeeHive_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABeeHive_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BeeHive.BeeHive_C.BPGetMultiUseEntries");
 
@@ -204,6 +203,7 @@ TArray<struct FMultiUseEntry> ABeeHive_C::STATIC_BPGetMultiUseEntries(class APla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

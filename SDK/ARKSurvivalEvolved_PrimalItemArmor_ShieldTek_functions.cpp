@@ -39,7 +39,7 @@ void UPrimalItemArmor_ShieldTek_C::BPClientHandleItemNetExecCommand(struct FName
 
 
 // Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.PlayHitShieldEffect
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           bLocalOnly                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -51,6 +51,7 @@ void UPrimalItemArmor_ShieldTek_C::STATIC_PlayHitShieldEffect(bool bLocalOnly)
 	params.bLocalOnly = bLocalOnly;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +138,7 @@ void UPrimalItemArmor_ShieldTek_C::ClientUpdatedWeaponClipAmmo()
 
 
 // Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.HandleShieldDamageBlocking
-// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (Native, NetResponse, Public, Delegate, HasOutParms, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter**      ForShooterCharacter            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DamageIn                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -146,7 +147,7 @@ void UPrimalItemArmor_ShieldTek_C::ClientUpdatedWeaponClipAmmo()
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UPrimalItemArmor_ShieldTek_C::STATIC_HandleShieldDamageBlocking(class AShooterCharacter** ForShooterCharacter, float* DamageIn, class AController** EventInstigator, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
+float UPrimalItemArmor_ShieldTek_C::HandleShieldDamageBlocking(class AShooterCharacter** ForShooterCharacter, float* DamageIn, class AController** EventInstigator, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.HandleShieldDamageBlocking");
 
@@ -157,6 +158,7 @@ float UPrimalItemArmor_ShieldTek_C::STATIC_HandleShieldDamageBlocking(class ASho
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

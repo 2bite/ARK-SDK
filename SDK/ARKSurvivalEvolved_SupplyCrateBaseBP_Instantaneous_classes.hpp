@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SupplyCrateBaseBP_Instantaneous.SupplyCrateBaseBP_Instantaneous_C
-// 0x0010 (0x0E60 - 0x0E50)
+// 0x0010 (0x0E78 - 0x0E68)
 class ASupplyCrateBaseBP_Instantaneous_C : public APrimalStructureItemContainer_SupplyCrate
 {
 public:
-	class UAudioComponent*                             Audio1;                                                   // 0x0E50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0E58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Audio1;                                                   // 0x0E68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0E70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

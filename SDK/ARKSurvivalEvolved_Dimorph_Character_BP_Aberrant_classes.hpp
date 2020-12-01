@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dimorph_Character_BP_Aberrant.Dimorph_Character_BP_Aberrant_C
-// 0x0000 (0x2090 - 0x2090)
+// 0x0000 (0x2110 - 0x2110)
 class ADimorph_Character_BP_Aberrant_C : public ADimorph_Character_BP_C
 {
 public:

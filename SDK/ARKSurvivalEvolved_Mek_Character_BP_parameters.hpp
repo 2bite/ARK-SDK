@@ -219,7 +219,7 @@ struct AMek_Character_BP_C_BPGetMultiUseEntries_Params
 struct AMek_Character_BP_C_GetTurnInPlaceSpeed_Params
 {
 	float                                              DefaultSpeed;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              NewSpeed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              newSpeed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BPAdjustDamage
@@ -294,8 +294,8 @@ struct AMek_Character_BP_C_GetCurrentSwordStatus_Params
 // Function Mek_Character_BP.Mek_Character_BP_C.BP_PreventMovementMode
 struct AMek_Character_BP_C_BP_PreventMovementMode_Params
 {
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -330,7 +330,7 @@ struct AMek_Character_BP_C_HasEquippedBackpack_Params
 struct AMek_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

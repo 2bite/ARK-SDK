@@ -133,11 +133,11 @@ bool UTask_IceKaijuFindBestMeleeAttack_C::CanGroundSmash(class AIceKaiju_Charact
 
 
 // Function Task_IceKaijuFindBestMeleeAttack.Task_IceKaijuFindBestMeleeAttack_C.CanUseGroundSmash
-// (Native, NetResponse, Static, NetMulticast, Private, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           IsOnCooldown                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTask_IceKaijuFindBestMeleeAttack_C::STATIC_CanUseGroundSmash(bool* IsOnCooldown)
+void UTask_IceKaijuFindBestMeleeAttack_C::CanUseGroundSmash(bool* IsOnCooldown)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Task_IceKaijuFindBestMeleeAttack.Task_IceKaijuFindBestMeleeAttack_C.CanUseGroundSmash");
 

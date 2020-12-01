@@ -57,11 +57,11 @@ void ABuff_TekSniper_XRay_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_TekSniper_XRay.Buff_TekSniper_XRay_C.BuffTickClient
-// (NetRequest, Native, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekSniper_XRay_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_TekSniper_XRay_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekSniper_XRay.Buff_TekSniper_XRay_C.BuffTickClient");
 

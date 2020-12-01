@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C
-// 0x0019 (0x09A9 - 0x0990)
+// 0x0019 (0x09C9 - 0x09B0)
 class UPrimalItemSkin_ChibiDino_Base_C : public UPrimalItem_Base_C
 {
 public:
-	int                                                ChibiLevel;                                               // 0x0990(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	float                                              ChibiXP;                                                  // 0x0994(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	TArray<float>                                      LevelExperienceRequirements;                              // 0x0998(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               bHasLoadedNetItemInfo;                                    // 0x09A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	int                                                ChibiLevel;                                               // 0x09B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	float                                              ChibiXP;                                                  // 0x09B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	TArray<float>                                      LevelExperienceRequirements;                              // 0x09B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               bHasLoadedNetItemInfo;                                    // 0x09C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -39,7 +39,7 @@ public:
 	void GetXPRequiredForNextLevel(float* XPOut);
 	float BPGetItemDurabilityPercentage();
 	void BPClientHandleItemNetExecCommand(struct FName* CommandName, class AShooterPlayerController** ForPC, struct FBPNetExecParams* ExecParams);
-	void RefreshLevelData(class APrimalCharacter* forChar);
+	void STATIC_RefreshLevelData(class APrimalCharacter* forChar);
 	void AddXP(float XPAmount, class APrimalCharacter* forChar);
 	void BPEquippedItemOnXPEarning(class APrimalCharacter** forChar, float* howMuchXP, TEnumAsByte<EXPType>* TheXPType);
 	void BPInitFromItemNetInfo();

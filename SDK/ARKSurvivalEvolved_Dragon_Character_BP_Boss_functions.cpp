@@ -54,16 +54,15 @@ void ADragon_Character_BP_Boss_C::BPSentKilledNotification(class AShooterPlayerC
 
 
 // Function Dragon_Character_BP_Boss.Dragon_Character_BP_Boss_C.Force to WanderOnLand
-// (Native, NetMulticast, Public, HasDefaults, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 
-void ADragon_Character_BP_Boss_C::Force_to_WanderOnLand()
+void ADragon_Character_BP_Boss_C::STATIC_Force_to_WanderOnLand()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dragon_Character_BP_Boss.Dragon_Character_BP_Boss_C.Force to WanderOnLand");
 
 	ADragon_Character_BP_Boss_C_Force_to_WanderOnLand_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,9 +71,9 @@ void ADragon_Character_BP_Boss_C::Force_to_WanderOnLand()
 
 
 // Function Dragon_Character_BP_Boss.Dragon_Character_BP_Boss_C.ForceToFlying
-// (NetReliable, NetRequest, Native, NetMulticast, Public, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 
-void ADragon_Character_BP_Boss_C::ForceToFlying()
+void ADragon_Character_BP_Boss_C::STATIC_ForceToFlying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dragon_Character_BP_Boss.Dragon_Character_BP_Boss_C.ForceToFlying");
 

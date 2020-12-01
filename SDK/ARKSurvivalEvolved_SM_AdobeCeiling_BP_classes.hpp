@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeCeiling_BP.SM_AdobeCeiling_BP_C
-// 0x0008 (0x0AB8 - 0x0AB0)
+// 0x0008 (0x0AD0 - 0x0AC8)
 class ASM_AdobeCeiling_BP_C : public ACeiling_Metal_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0AB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0AC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

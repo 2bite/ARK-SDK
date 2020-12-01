@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass C4HumanAnimBP.C4HumanAnimBP_C
-// 0x0000 (0x37A5 - 0x37A5)
+// 0x0000 (0x3A14 - 0x3A14)
 class UC4HumanAnimBP_C : public UBaseHumanAnimBP_C
 {
 public:

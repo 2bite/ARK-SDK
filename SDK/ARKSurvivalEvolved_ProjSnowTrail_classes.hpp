@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjSnowTrail.ProjSnowTrail_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AProjSnowTrail_C : public APrimalEmitterSpawnable
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoCharacterStatusComponent_BP_RubbleGolem.DinoCharacterStatusComponent_BP_RubbleGolem_C
-// 0x0000 (0x1089 - 0x1089)
+// 0x0000 (0x1091 - 0x1091)
 class UDinoCharacterStatusComponent_BP_RubbleGolem_C : public UDinoCharacterStatusComponent_BP_RockGolem_C
 {
 public:

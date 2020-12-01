@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Oviraptor.DinoTamedInventoryComponent_Oviraptor_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoTamedInventoryComponent_Oviraptor_C : public UDinoTamedInventoryComponent_BP_Base_C
 {
 public:

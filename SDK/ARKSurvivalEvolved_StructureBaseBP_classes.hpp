@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureBaseBP.StructureBaseBP_C
-// 0x0008 (0x0AA0 - 0x0A98)
+// 0x0008 (0x0AB8 - 0x0AB0)
 class AStructureBaseBP_C : public APrimalStructure
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0A98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0AB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

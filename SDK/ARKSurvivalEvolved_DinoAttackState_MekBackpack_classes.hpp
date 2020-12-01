@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void STATIC_BPOnAttackTick(float* DeltaTime);
+	void BPOnAttackTick(float* DeltaTime);
 	void BPOnAttackStart(int* AttackIndex);
 	void GetMuzzleInfo(struct FVector* Location, struct FVector* Direction);
 	void ExecuteUbergraph_DinoAttackState_MekBackpack(int EntryPoint);

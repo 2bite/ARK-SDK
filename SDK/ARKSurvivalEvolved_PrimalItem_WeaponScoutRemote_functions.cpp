@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.GetScoutStats
-// (Exec, Native, NetMulticast, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // TArray<float>                  Stats                          (Parm, OutParm, ZeroConstructor)
 
@@ -24,7 +24,6 @@ void UPrimalItem_WeaponScoutRemote_C::GetScoutStats(TArray<float>* Stats)
 	UPrimalItem_WeaponScoutRemote_C_GetScoutStats_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,7 +83,7 @@ class FString UPrimalItem_WeaponScoutRemote_C::BPGetItemName(class FString* Item
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.SetScoutCharacterStatusValues
-// (NetRequest, Native, Event, NetMulticast, HasDefaults, NetClient, Const, NetValidate)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // TArray<float>                  Stats                          (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -95,7 +94,6 @@ void UPrimalItem_WeaponScoutRemote_C::SetScoutCharacterStatusValues(TArray<float
 	UPrimalItem_WeaponScoutRemote_C_SetScoutCharacterStatusValues_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,14 +122,14 @@ void UPrimalItem_WeaponScoutRemote_C::OnRep_ScoutStats()
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.BPGetItemDescription
-// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItem_WeaponScoutRemote_C::STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
+class FString UPrimalItem_WeaponScoutRemote_C::BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.BPGetItemDescription");
 
@@ -202,12 +200,12 @@ void UPrimalItem_WeaponScoutRemote_C::BlueprintUnequipped()
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.Can FireWeapon
-// (Net, NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EScoutRemoteReturnCode> FailReason                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_WeaponScoutRemote_C::STATIC_Can_FireWeapon(bool* Result, TEnumAsByte<EScoutRemoteReturnCode>* FailReason)
+void UPrimalItem_WeaponScoutRemote_C::Can_FireWeapon(bool* Result, TEnumAsByte<EScoutRemoteReturnCode>* FailReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.Can FireWeapon");
 

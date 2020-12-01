@@ -114,11 +114,11 @@ void ABuff_InsideMekShield_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_InsideMekShield.Buff_InsideMekShield_C.GetBuffDescription
-// (Exec, Native, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_InsideMekShield_C::GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_InsideMekShield_C::STATIC_GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_InsideMekShield.Buff_InsideMekShield_C.GetBuffDescription");
 

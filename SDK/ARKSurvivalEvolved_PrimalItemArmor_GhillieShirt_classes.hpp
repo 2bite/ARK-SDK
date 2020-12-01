@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_GhillieShirt.PrimalItemArmor_GhillieShirt_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemArmor_GhillieShirt_C : public UPrimalItemArmor_BaseShirt_C
 {
 public:

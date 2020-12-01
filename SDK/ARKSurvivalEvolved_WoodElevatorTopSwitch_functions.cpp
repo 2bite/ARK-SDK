@@ -37,7 +37,7 @@ void AWoodElevatorTopSwitch_C::AllowedToChangePublicUse(class APlayerController*
 
 
 // Function WoodElevatorTopSwitch.WoodElevatorTopSwitch_C.Make Multi Use Entry
-// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<EPrimalStructureElevatorState> Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Priority                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -138,13 +138,13 @@ bool AWoodElevatorTopSwitch_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function WoodElevatorTopSwitch.WoodElevatorTopSwitch_C.BPGetMultiUseEntries
-// (NetRequest, Exec, MulticastDelegate, Private, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AWoodElevatorTopSwitch_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AWoodElevatorTopSwitch_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WoodElevatorTopSwitch.WoodElevatorTopSwitch_C.BPGetMultiUseEntries");
 
@@ -152,6 +152,7 @@ TArray<struct FMultiUseEntry> AWoodElevatorTopSwitch_C::BPGetMultiUseEntries(cla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

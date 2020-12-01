@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapOilJar.WeapOilJar_C
-// 0x0010 (0x0E50 - 0x0E40)
+// 0x0010 (0x0E70 - 0x0E60)
 class AWeapOilJar_C : public APrimalWeaponGrenade
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh3P;                                             // 0x0E40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh1P;                                             // 0x0E48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh3P;                                             // 0x0E60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1P;                                             // 0x0E68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

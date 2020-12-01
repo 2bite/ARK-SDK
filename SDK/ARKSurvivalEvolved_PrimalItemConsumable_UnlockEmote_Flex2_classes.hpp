@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_UnlockEmote_Flex2.PrimalItemConsumable_UnlockEmote_Flex2_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_UnlockEmote_Flex2_C : public UPrimalItemConsumableGeneric_C
 {
 public:

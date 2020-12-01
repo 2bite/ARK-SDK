@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wood_SignLarge_Placement_Emitter.Wood_SignLarge_Placement_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AWood_SignLarge_Placement_Emitter_C : public APrimalEmitterSpawnable
 {
 public:

@@ -57,24 +57,25 @@ void ABuff_Zipline_DinoBase_C::GetDistanceToAnchor(bool GetLower, float* Distanc
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CanZiplineFlip
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::CanZiplineFlip(bool* _return)
+void ABuff_Zipline_DinoBase_C::STATIC_CanZiplineFlip(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CanZiplineFlip");
 
 	ABuff_Zipline_DinoBase_C_CanZiplineFlip_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -135,17 +136,17 @@ void ABuff_Zipline_DinoBase_C::SetZiplineRunningSpeedAndAcceleration()
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.RotationNearlyEqual
 // ()
 // Parameters:
-// struct FRotator                rotA                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                RotA                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                rotB                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ErrorTolerance                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* _return)
+void ABuff_Zipline_DinoBase_C::RotationNearlyEqual(const struct FRotator& RotA, const struct FRotator& rotB, float ErrorTolerance, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.RotationNearlyEqual");
 
 	ABuff_Zipline_DinoBase_C_RotationNearlyEqual_Params params;
-	params.rotA = rotA;
+	params.RotA = RotA;
 	params.rotB = rotB;
 	params.ErrorTolerance = ErrorTolerance;
 
@@ -155,8 +156,8 @@ void ABuff_Zipline_DinoBase_C::RotationNearlyEqual(const struct FRotator& rotA, 
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -283,9 +284,9 @@ void ABuff_Zipline_DinoBase_C::Get_Zipline_Start_and_End_Point_NonPure(bool NoOf
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.SetAttachedCharacterTransform
 // ()
 // Parameters:
-// struct FTransform              NewTransform                   (Parm, IsPlainOldData)
+// struct UObject_FTransform      NewTransform                   (Parm, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::SetAttachedCharacterTransform(const struct FTransform& NewTransform)
+void ABuff_Zipline_DinoBase_C::SetAttachedCharacterTransform(const struct UObject_FTransform& NewTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.SetAttachedCharacterTransform");
 
@@ -341,15 +342,16 @@ void ABuff_Zipline_DinoBase_C::Deactivate_Local_Client(class AActor* Pawn)
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.IsStillColliding
-// (NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Native, Event, Static, Private, HasOutParms, DLLImport, Const, NetValidate)
 
-void ABuff_Zipline_DinoBase_C::IsStillColliding()
+void ABuff_Zipline_DinoBase_C::STATIC_IsStillColliding()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.IsStillColliding");
 
 	ABuff_Zipline_DinoBase_C_IsStillColliding_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -380,11 +382,11 @@ void ABuff_Zipline_DinoBase_C::HandleCollision(struct FHitResult* Hit)
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.HitZiplineEndStop
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Event, NetMulticast, Private, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class UMovementComponent*      MovementComp                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::STATIC_HitZiplineEndStop(class UMovementComponent* MovementComp)
+void ABuff_Zipline_DinoBase_C::HitZiplineEndStop(class UMovementComponent* MovementComp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.HitZiplineEndStop");
 
@@ -392,7 +394,6 @@ void ABuff_Zipline_DinoBase_C::STATIC_HitZiplineEndStop(class UMovementComponent
 	params.MovementComp = MovementComp;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -857,7 +858,7 @@ void ABuff_Zipline_DinoBase_C::ResetMeshPosition()
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.JumpImpulse
-// (Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Exec, Event, NetResponse, Static, Private, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -928,9 +929,9 @@ void ABuff_Zipline_DinoBase_C::GetZiplineStartAndEndPoint(bool NoOffset, struct 
 // Parameters:
 // float                          Accleration                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Length                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          maxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          MaxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::CalculateZiplineMaxVelocity(float Accleration, float Length, float* maxVelocity)
+void ABuff_Zipline_DinoBase_C::CalculateZiplineMaxVelocity(float Accleration, float Length, float* MaxVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CalculateZiplineMaxVelocity");
 
@@ -944,8 +945,8 @@ void ABuff_Zipline_DinoBase_C::CalculateZiplineMaxVelocity(float Accleration, fl
 
 	fn->FunctionFlags = flags;
 
-	if (maxVelocity != nullptr)
-		*maxVelocity = params.maxVelocity;
+	if (MaxVelocity != nullptr)
+		*MaxVelocity = params.MaxVelocity;
 }
 
 
@@ -1234,11 +1235,11 @@ void ABuff_Zipline_DinoBase_C::GetAttachOffset(struct FVector* AttachOffset)
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.BPSetupForInstigator
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Exec, Native, Event, Static, NetMulticast, Private, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_Zipline_DinoBase_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.BPSetupForInstigator");
 
@@ -1305,11 +1306,11 @@ struct FVector ABuff_Zipline_DinoBase_C::BPOverrideCharacterNewFallVelocity(floa
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.AttachToZipline
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::STATIC_AttachToZipline(const struct FVector& StartLocation)
+void ABuff_Zipline_DinoBase_C::AttachToZipline(const struct FVector& StartLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.AttachToZipline");
 
@@ -1388,13 +1389,31 @@ void ABuff_Zipline_DinoBase_C::StartMoveAlongZipline(const struct FVector& Start
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, Event, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, Native, Static, MulticastDelegate, HasOutParms, DLLImport, Const, NetValidate)
 
-void ABuff_Zipline_DinoBase_C::UserConstructionScript()
+void ABuff_Zipline_DinoBase_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.UserConstructionScript");
 
 	ABuff_Zipline_DinoBase_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_113
+// ()
+
+void ABuff_Zipline_DinoBase_C::InpActEvt_Run_K2Node_InputActionEvent_113()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_113");
+
+	ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_113_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1421,14 +1440,14 @@ void ABuff_Zipline_DinoBase_C::InpActEvt_Run_K2Node_InputActionEvent_112()
 }
 
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_111
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_111
 // ()
 
-void ABuff_Zipline_DinoBase_C::InpActEvt_Run_K2Node_InputActionEvent_111()
+void ABuff_Zipline_DinoBase_C::InpActEvt_Jump_K2Node_InputActionEvent_111()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_111");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_111");
 
-	ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_111_Params params;
+	ABuff_Zipline_DinoBase_C_InpActEvt_Jump_K2Node_InputActionEvent_111_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1438,14 +1457,14 @@ void ABuff_Zipline_DinoBase_C::InpActEvt_Run_K2Node_InputActionEvent_111()
 }
 
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_110
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_110
 // ()
 
-void ABuff_Zipline_DinoBase_C::InpActEvt_Jump_K2Node_InputActionEvent_110()
+void ABuff_Zipline_DinoBase_C::InpActEvt_Crouch_K2Node_InputActionEvent_110()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_110");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_110");
 
-	ABuff_Zipline_DinoBase_C_InpActEvt_Jump_K2Node_InputActionEvent_110_Params params;
+	ABuff_Zipline_DinoBase_C_InpActEvt_Crouch_K2Node_InputActionEvent_110_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1455,14 +1474,14 @@ void ABuff_Zipline_DinoBase_C::InpActEvt_Jump_K2Node_InputActionEvent_110()
 }
 
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_109
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_109
 // ()
 
-void ABuff_Zipline_DinoBase_C::InpActEvt_Crouch_K2Node_InputActionEvent_109()
+void ABuff_Zipline_DinoBase_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_109()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_109");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_109");
 
-	ABuff_Zipline_DinoBase_C_InpActEvt_Crouch_K2Node_InputActionEvent_109_Params params;
+	ABuff_Zipline_DinoBase_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_109_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1472,14 +1491,14 @@ void ABuff_Zipline_DinoBase_C::InpActEvt_Crouch_K2Node_InputActionEvent_109()
 }
 
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_108
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_56
 // ()
 
-void ABuff_Zipline_DinoBase_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_108()
+void ABuff_Zipline_DinoBase_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_56()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_108");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_56");
 
-	ABuff_Zipline_DinoBase_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_108_Params params;
+	ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_56_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1489,14 +1508,14 @@ void ABuff_Zipline_DinoBase_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActi
 }
 
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_55
 // ()
 
-void ABuff_Zipline_DinoBase_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51()
+void ABuff_Zipline_DinoBase_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_55()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_55");
 
-	ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51_Params params;
+	ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_55_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1506,31 +1525,14 @@ void ABuff_Zipline_DinoBase_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyE
 }
 
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_108
 // ()
 
-void ABuff_Zipline_DinoBase_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50()
+void ABuff_Zipline_DinoBase_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_108()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_108");
 
-	ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_107
-// ()
-
-void ABuff_Zipline_DinoBase_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_107()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_107");
-
-	ABuff_Zipline_DinoBase_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_107_Params params;
+	ABuff_Zipline_DinoBase_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_108_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1736,15 +1738,15 @@ void ABuff_Zipline_DinoBase_C::SecondJumpImpulse()
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.FlipOnZipline_Multicast
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 // class ADinoCharacter_BP_Zipline_C* attachedDino                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::FlipOnZipline_Multicast(bool fast, class ADinoCharacter_BP_Zipline_C* attachedDino)
+void ABuff_Zipline_DinoBase_C::FlipOnZipline_Multicast(bool Fast, class ADinoCharacter_BP_Zipline_C* attachedDino)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.FlipOnZipline_Multicast");
 
 	ABuff_Zipline_DinoBase_C_FlipOnZipline_Multicast_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 	params.attachedDino = attachedDino;
 
 	auto flags = fn->FunctionFlags;

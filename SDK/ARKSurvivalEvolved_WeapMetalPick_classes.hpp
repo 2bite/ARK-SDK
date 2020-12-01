@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapMetalPick.WeapMetalPick_C
-// 0x0000 (0x0D30 - 0x0D30)
+// 0x0000 (0x0D50 - 0x0D50)
 class AWeapMetalPick_C : public AWeapBasePick_C
 {
 public:

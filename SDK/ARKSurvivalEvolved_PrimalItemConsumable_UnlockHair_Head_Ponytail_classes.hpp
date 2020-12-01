@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_UnlockHair_Head_Ponytail.PrimalItemConsumable_UnlockHair_Head_Ponytail_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_UnlockHair_Head_Ponytail_C : public UPrimalItemConsumableGeneric_C
 {
 public:

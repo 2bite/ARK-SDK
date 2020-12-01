@@ -55,7 +55,7 @@ struct UDinoAttackStateFlyerPassengerGrab_C_StartAnimationStateEvent_Params
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.GetAttackSocketLocations
 struct UDinoAttackStateFlyerPassengerGrab_C_GetAttackSocketLocations_Params
 {
-	TArray<struct FTransform>                          Locations;                                                // (Parm, OutParm, ZeroConstructor)
+	TArray<struct UObject_FTransform>                  Locations;                                                // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.Find Best Grab Target

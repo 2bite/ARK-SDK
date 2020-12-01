@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophy_AlphaWorm.PrimalItemTrophy_AlphaWorm_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemTrophy_AlphaWorm_C : public UPrimalItemTrophyGenericWall_C
 {
 public:

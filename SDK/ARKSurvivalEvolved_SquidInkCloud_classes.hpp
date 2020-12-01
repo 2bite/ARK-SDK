@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SquidInkCloud.SquidInkCloud_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ASquidInkCloud_C : public ABuff_PoisonTrap_C
 {
 public:

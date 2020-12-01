@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.ApplyingSkinOntoItem
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class UPrimalItem**            ToOwnerItem                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsFirstTime                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_WeaponTorch_C::ApplyingSkinOntoItem(class UPrimalItem** ToOwnerItem, bool* bIsFirstTime)
+void UPrimalItem_WeaponTorch_C::STATIC_ApplyingSkinOntoItem(class UPrimalItem** ToOwnerItem, bool* bIsFirstTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.ApplyingSkinOntoItem");
 
@@ -35,12 +35,12 @@ void UPrimalItem_WeaponTorch_C::ApplyingSkinOntoItem(class UPrimalItem** ToOwner
 
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.RemovedSkinFromItem
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class UPrimalItem**            FromOwnerItem                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsFirstTime                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_WeaponTorch_C::RemovedSkinFromItem(class UPrimalItem** FromOwnerItem, bool* bIsFirstTime)
+void UPrimalItem_WeaponTorch_C::STATIC_RemovedSkinFromItem(class UPrimalItem** FromOwnerItem, bool* bIsFirstTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.RemovedSkinFromItem");
 

@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterTankBaseBP.WaterTankBaseBP_C
-// 0x0010 (0x0EA8 - 0x0E98)
+// 0x0010 (0x0EC0 - 0x0EB0)
 class AWaterTankBaseBP_C : public APrimalStructureItemContainer_CropPlot
 {
 public:
-	class UPrimalInventoryBP_WaterTank_C*              PrimalInventoryBP_WaterTank_C1;                           // 0x0E98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0EA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_WaterTank_C*              PrimalInventoryBP_WaterTank_C1;                           // 0x0EB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0EB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

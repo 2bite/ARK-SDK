@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElevatorTrack_Metal.ElevatorTrack_Metal_C
-// 0x0000 (0x0DC8 - 0x0DC8)
+// 0x0000 (0x0DE0 - 0x0DE0)
 class AElevatorTrack_Metal_C : public AElevatorTrack_Base_C
 {
 public:

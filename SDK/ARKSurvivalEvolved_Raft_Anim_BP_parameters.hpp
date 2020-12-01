@@ -14,13 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_590
-struct URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_590_Params
+// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_560
+struct URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_560_Params
 {
 };
 
-// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2942
-struct URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2942_Params
+// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2624
+struct URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2624_Params
 {
 };
 

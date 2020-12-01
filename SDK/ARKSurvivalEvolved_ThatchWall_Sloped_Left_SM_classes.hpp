@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ThatchWall_Sloped_Left_SM.ThatchWall_Sloped_Left_SM_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class AThatchWall_Sloped_Left_SM_C : public ABaseWall_Sloped_Left_SM_C
 {
 public:

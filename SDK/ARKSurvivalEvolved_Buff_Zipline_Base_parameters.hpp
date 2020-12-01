@@ -36,7 +36,7 @@ struct ABuff_Zipline_Base_C_Get_Zipline_Start_and_End_Point_NonPure_Params
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.SetAttachedCharacterTransform
 struct ABuff_Zipline_Base_C_SetAttachedCharacterTransform_Params
 {
-	struct FTransform                                  NewTransform;                                             // (Parm, IsPlainOldData)
+	struct UObject_FTransform                          NewTransform;                                             // (Parm, IsPlainOldData)
 };
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.SetupLocalClient
@@ -229,7 +229,7 @@ struct ABuff_Zipline_Base_C_CalculateZiplineMaxVelocity_Params
 {
 	float                                              Accleration;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Length;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              maxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.CalculateZiplineAcceleration
@@ -368,38 +368,38 @@ struct ABuff_Zipline_Base_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_99
-struct ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_99_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_100
+struct ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_100_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_98
-struct ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_98_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_99
+struct ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_99_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_97
-struct ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_97_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_98
+struct ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_98_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_96
-struct ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_96_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_97
+struct ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_97_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_46
-struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_46_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_51
+struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_51_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_45
-struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_45_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_50
+struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_50_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_44
-struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_44_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_49
+struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_49_Params
 {
 };
 

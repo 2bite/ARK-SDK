@@ -138,17 +138,18 @@ void UDinoAttackStateFlyerPassengerGrab_C::StartAnimationStateEvent(struct FName
 
 
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.GetAttackSocketLocations
-// (NetRequest, Event, Static, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient)
 // Parameters:
-// TArray<struct FTransform>      Locations                      (Parm, OutParm, ZeroConstructor)
+// TArray<struct UObject_FTransform> Locations                      (Parm, OutParm, ZeroConstructor)
 
-void UDinoAttackStateFlyerPassengerGrab_C::STATIC_GetAttackSocketLocations(TArray<struct FTransform>* Locations)
+void UDinoAttackStateFlyerPassengerGrab_C::GetAttackSocketLocations(TArray<struct UObject_FTransform>* Locations)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.GetAttackSocketLocations");
 
 	UDinoAttackStateFlyerPassengerGrab_C_GetAttackSocketLocations_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,7 +161,7 @@ void UDinoAttackStateFlyerPassengerGrab_C::STATIC_GetAttackSocketLocations(TArra
 
 
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.Find Best Grab Target
-// (NetRequest, Exec, NetResponse, Static, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient)
 // Parameters:
 // class APrimalCharacter*        bestTarget                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -171,6 +172,7 @@ void UDinoAttackStateFlyerPassengerGrab_C::STATIC_Find_Best_Grab_Target(class AP
 	UDinoAttackStateFlyerPassengerGrab_C_Find_Best_Grab_Target_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

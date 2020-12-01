@@ -203,11 +203,11 @@ bool AMek_Character_BP_C::BPOverrideMoveToOrder(struct FVector* MoveToLocation, 
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.Get Transform Key Name
-// (Net, NetResponse, MulticastDelegate, Public, Protected, BlueprintCallable, Const, NetValidate)
+// (Exec, NetResponse, Static, Public, Private, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FText                   KeyName                        (Parm, OutParm)
 
-void AMek_Character_BP_C::Get_Transform_Key_Name(struct FText* KeyName)
+void AMek_Character_BP_C::STATIC_Get_Transform_Key_Name(struct FText* KeyName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.Get Transform Key Name");
 
@@ -242,7 +242,7 @@ void AMek_Character_BP_C::BPPostLoadedFromSaveGame()
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BPPreSerializeSaveGame
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Protected, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 
 void AMek_Character_BP_C::STATIC_BPPreSerializeSaveGame()
 {
@@ -601,14 +601,14 @@ void AMek_Character_BP_C::AllowedToAutoRepair(bool* Allowed, float* CooldownTime
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BlueprintDrawFloatingHUD
-// (Net, Native, NetResponse, Static, MulticastDelegate, Public, Protected, BlueprintCallable, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DrawScale                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::STATIC_BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale)
+void AMek_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.BlueprintDrawFloatingHUD");
 
@@ -653,7 +653,7 @@ bool AMek_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* Us
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -683,9 +683,9 @@ TArray<struct FMultiUseEntry> AMek_Character_BP_C::STATIC_BPGetMultiUseEntries(c
 // ()
 // Parameters:
 // float                          DefaultSpeed                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewSpeed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          newSpeed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::GetTurnInPlaceSpeed(float DefaultSpeed, float* NewSpeed)
+void AMek_Character_BP_C::GetTurnInPlaceSpeed(float DefaultSpeed, float* newSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.GetTurnInPlaceSpeed");
 
@@ -698,8 +698,8 @@ void AMek_Character_BP_C::GetTurnInPlaceSpeed(float DefaultSpeed, float* NewSpee
 
 	fn->FunctionFlags = flags;
 
-	if (NewSpeed != nullptr)
-		*NewSpeed = params.NewSpeed;
+	if (newSpeed != nullptr)
+		*newSpeed = params.newSpeed;
 }
 
 
@@ -758,7 +758,7 @@ bool AMek_Character_BP_C::BPHandleOnStopFire()
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.HoverTrace
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, NetResponse, Public, NetServer, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // float                          TraceDistance                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DebugDraw                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -768,7 +768,7 @@ bool AMek_Character_BP_C::BPHandleOnStopFire()
 // struct FVector                 TraceStart                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 TraceEnd                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::STATIC_HoverTrace(float TraceDistance, bool DebugDraw, float DebugDrawDuration, struct FHitResult* HitResult, bool* BlockingHit, struct FVector* TraceStart, struct FVector* TraceEnd)
+void AMek_Character_BP_C::HoverTrace(float TraceDistance, bool DebugDraw, float DebugDrawDuration, struct FHitResult* HitResult, bool* BlockingHit, struct FVector* TraceStart, struct FVector* TraceEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.HoverTrace");
 
@@ -796,12 +796,12 @@ void AMek_Character_BP_C::STATIC_HoverTrace(float TraceDistance, bool DebugDraw,
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.IsPlayingAttackAnim
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Public, NetServer, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Playing                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::STATIC_IsPlayingAttackAnim(int AttackIndex, bool* Playing)
+void AMek_Character_BP_C::IsPlayingAttackAnim(int AttackIndex, bool* Playing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.IsPlayingAttackAnim");
 
@@ -889,14 +889,14 @@ class UAnimMontage* AMek_Character_BP_C::BPOverrideHurtAnim(float* DamageTaken, 
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.GetCurrentSwordStatus
-// (NetReliable, Event, NetResponse, MulticastDelegate, Private, Protected, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetResponse, Static, Public, NetServer, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           IsSwingingSword                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            CurrentMontage                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            AttackAnimIndex                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          AnimTimeRemaining              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::GetCurrentSwordStatus(bool* IsSwingingSword, class UAnimMontage** CurrentMontage, int* AttackAnimIndex, float* AnimTimeRemaining)
+void AMek_Character_BP_C::STATIC_GetCurrentSwordStatus(bool* IsSwingingSword, class UAnimMontage** CurrentMontage, int* AttackAnimIndex, float* AnimTimeRemaining)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.GetCurrentSwordStatus");
 
@@ -922,17 +922,17 @@ void AMek_Character_BP_C::GetCurrentSwordStatus(bool* IsSwingingSword, class UAn
 // Function Mek_Character_BP.Mek_Character_BP_C.BP_PreventMovementMode
 // ()
 // Parameters:
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AMek_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* newCustomMode)
+bool AMek_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.BP_PreventMovementMode");
 
 	AMek_Character_BP_C_BP_PreventMovementMode_Params params;
-	params.newMovementMode = newMovementMode;
-	params.newCustomMode = newCustomMode;
+	params.NewMovementMode = NewMovementMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1043,17 +1043,17 @@ bool AMek_Character_BP_C::HasEquippedBackpack()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AMek_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	AMek_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 
@@ -1161,12 +1161,12 @@ void AMek_Character_BP_C::ModifyHeatLevel(float Delta, bool Subtract, float* New
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.GetPistolMuzzleInfo
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 MuzzleLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 MuzzleDirection                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::GetPistolMuzzleInfo(struct FVector* MuzzleLocation, struct FVector* MuzzleDirection)
+void AMek_Character_BP_C::STATIC_GetPistolMuzzleInfo(struct FVector* MuzzleLocation, struct FVector* MuzzleDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.GetPistolMuzzleInfo");
 
@@ -1206,11 +1206,11 @@ void AMek_Character_BP_C::UpdateTargetingMode(bool NewTargetingState)
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.ReceiveTick
-// (Net, NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Native, Public, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void AMek_Character_BP_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.ReceiveTick");
 
@@ -1608,11 +1608,11 @@ bool AMek_Character_BP_C::BPPreventFallDamage(float* FallDamageAmount, struct FH
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.RidingTick
-// (Net, NetRequest, Exec, Event, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (Net, NetRequest, Native, Event, NetMulticast, Public, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
+void AMek_Character_BP_C::RidingTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.RidingTick");
 
@@ -1620,6 +1620,7 @@ void AMek_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1628,12 +1629,12 @@ void AMek_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BPGetRiderUnboardLocation
-// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (Event, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter**       RidingCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector AMek_Character_BP_C::STATIC_BPGetRiderUnboardLocation(class APrimalCharacter** RidingCharacter)
+struct FVector AMek_Character_BP_C::BPGetRiderUnboardLocation(class APrimalCharacter** RidingCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.BPGetRiderUnboardLocation");
 
@@ -1641,7 +1642,6 @@ struct FVector AMek_Character_BP_C::STATIC_BPGetRiderUnboardLocation(class APrim
 	params.RidingCharacter = RidingCharacter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

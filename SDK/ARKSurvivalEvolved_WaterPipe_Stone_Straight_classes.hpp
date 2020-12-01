@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterPipe_Stone_Straight.WaterPipe_Stone_Straight_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class AWaterPipe_Stone_Straight_C : public AWaterPipe_Base_Straight_C
 {
 public:

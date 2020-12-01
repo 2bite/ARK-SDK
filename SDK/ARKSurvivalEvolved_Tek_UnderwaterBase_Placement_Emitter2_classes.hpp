@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tek_UnderwaterBase_Placement_Emitter2.Tek_UnderwaterBase_Placement_Emitter2_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ATek_UnderwaterBase_Placement_Emitter2_C : public APrimalEmitterSpawnable
 {
 public:

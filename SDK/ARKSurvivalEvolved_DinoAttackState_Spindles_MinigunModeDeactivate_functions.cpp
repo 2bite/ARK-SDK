@@ -30,7 +30,7 @@ void UDinoAttackState_Spindles_MinigunModeDeactivate_C::OnEndEvent()
 
 
 // Function DinoAttackState_Spindles_MinigunModeDeactivate.DinoAttackState_Spindles_MinigunModeDeactivate_C.BPCanAttack
-// (NetRequest, Exec, Static, MulticastDelegate, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         attackRangeOffset              (Parm, ZeroConstructor, IsPlainOldData)

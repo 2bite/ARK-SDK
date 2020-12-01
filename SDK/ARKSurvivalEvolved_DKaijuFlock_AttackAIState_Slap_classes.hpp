@@ -35,7 +35,7 @@ public:
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void BPOnAttackStart(int* AttackIndex);
 	bool BPShouldEndAttack();
-	void OnTickEvent(float* DeltaSeconds);
+	void STATIC_OnTickEvent(float* DeltaSeconds);
 	void ExecuteUbergraph_DKaijuFlock_AttackAIState_Slap(int EntryPoint);
 };
 

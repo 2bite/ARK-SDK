@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Door_Stone.Door_Stone_C
-// 0x0000 (0x0B20 - 0x0B20)
+// 0x0000 (0x0B38 - 0x0B38)
 class ADoor_Stone_C : public ADoor_Base_SM_C
 {
 public:

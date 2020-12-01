@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Kentro.DinoTamedInventoryComponent_Kentro_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoTamedInventoryComponent_Kentro_C : public UDinoTamedInventoryComponent_BP_Base_C
 {
 public:

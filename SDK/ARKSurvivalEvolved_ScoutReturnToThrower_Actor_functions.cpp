@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ScoutReturnToThrower_Actor.ScoutReturnToThrower_Actor_C.OnRep_Colors
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, NetServer, BlueprintCallable, Const, NetValidate)
+// (Net, Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 
-void AScoutReturnToThrower_Actor_C::OnRep_Colors()
+void AScoutReturnToThrower_Actor_C::STATIC_OnRep_Colors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScoutReturnToThrower_Actor.ScoutReturnToThrower_Actor_C.OnRep_Colors");
 

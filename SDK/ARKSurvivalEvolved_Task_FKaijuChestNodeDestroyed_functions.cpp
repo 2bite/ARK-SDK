@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Task_FKaijuChestNodeDestroyed.Task_FKaijuChestNodeDestroyed_C.Wipe Out All Poison Trees And Wyverns
-// (NetRequest, Exec, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, Exec, Native, Event, Public, Private, Protected, NetServer, HasOutParms)
 
 void UTask_FKaijuChestNodeDestroyed_C::Wipe_Out_All_Poison_Trees_And_Wyverns()
 {
@@ -22,6 +22,7 @@ void UTask_FKaijuChestNodeDestroyed_C::Wipe_Out_All_Poison_Trees_And_Wyverns()
 	UTask_FKaijuChestNodeDestroyed_C_Wipe_Out_All_Poison_Trees_And_Wyverns_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

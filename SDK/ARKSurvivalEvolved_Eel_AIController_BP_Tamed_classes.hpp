@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Eel_AIController_BP_Tamed.Eel_AIController_BP_Tamed_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class AEel_AIController_BP_Tamed_C : public ADino_AIController_BP_C
 {
 public:

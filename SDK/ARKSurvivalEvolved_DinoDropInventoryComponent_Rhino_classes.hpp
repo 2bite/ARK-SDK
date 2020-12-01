@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoDropInventoryComponent_Rhino.DinoDropInventoryComponent_Rhino_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoDropInventoryComponent_Rhino_C : public UDinoDropInventoryComponent_Carnivore_Small_C
 {
 public:

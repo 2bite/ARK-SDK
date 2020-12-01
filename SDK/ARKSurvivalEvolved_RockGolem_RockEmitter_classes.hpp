@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RockGolem_RockEmitter.RockGolem_RockEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ARockGolem_RockEmitter_C : public APrimalEmitterSpawnable
 {
 public:

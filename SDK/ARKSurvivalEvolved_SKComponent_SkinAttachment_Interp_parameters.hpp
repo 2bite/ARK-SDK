@@ -14,6 +14,11 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.Clear Async Loaded Audio
+struct USKComponent_SkinAttachment_Interp_C_Clear_Async_Loaded_Audio_Params
+{
+};
+
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.PrintDMICAnimTextureParams
 struct USKComponent_SkinAttachment_Interp_C_PrintDMICAnimTextureParams_Params
 {
@@ -154,10 +159,26 @@ struct USKComponent_SkinAttachment_Interp_C_InitializeForPlayerController_Params
 	class AShooterPlayerController*                    Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.load sound cue anim texture
+struct USKComponent_SkinAttachment_Interp_C_load_sound_cue_anim_texture_Params
+{
+};
+
+// Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.Simple Load Async Sound Cue
+struct USKComponent_SkinAttachment_Interp_C_Simple_Load_Async_Sound_Cue_Params
+{
+	TArray<struct FLocalizedSoundCueEntry>             Localized_Sound_Cues;                                     // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.ExecuteUbergraph_SKComponent_SkinAttachment_Interp
 struct USKComponent_SkinAttachment_Interp_C_ExecuteUbergraph_SKComponent_SkinAttachment_Interp_Params
 {
 	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.Finished Loading Localized Sound Cue__DelegateSignature
+struct USKComponent_SkinAttachment_Interp_C_Finished_Loading_Localized_Sound_Cue__DelegateSignature_Params
+{
 };
 
 }

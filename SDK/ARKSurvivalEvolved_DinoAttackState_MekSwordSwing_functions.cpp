@@ -37,11 +37,11 @@ void UDinoAttackState_MekSwordSwing_C::ShouldDoDamageTo(class AActor* Actor, boo
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.BPOnAttackEnd
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (Native, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekSwordSwing_C::STATIC_BPOnAttackEnd(int* AttackIndex)
+void UDinoAttackState_MekSwordSwing_C::BPOnAttackEnd(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.BPOnAttackEnd");
 
@@ -49,6 +49,7 @@ void UDinoAttackState_MekSwordSwing_C::STATIC_BPOnAttackEnd(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,9 +82,9 @@ void UDinoAttackState_MekSwordSwing_C::BPOnAnimNotifyCustomEvent(struct FName* C
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.DoSwordDamage
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
 
-void UDinoAttackState_MekSwordSwing_C::STATIC_DoSwordDamage()
+void UDinoAttackState_MekSwordSwing_C::DoSwordDamage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.DoSwordDamage");
 
@@ -98,13 +99,13 @@ void UDinoAttackState_MekSwordSwing_C::STATIC_DoSwordDamage()
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordCapsule
-// (NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
-// struct FTransform              WorldTransform                 (Parm, OutParm, IsPlainOldData)
+// struct UObject_FTransform      WorldTransform                 (Parm, OutParm, IsPlainOldData)
 // float                          CapsuleRadius                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          CapsuleHalfHeight              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekSwordSwing_C::GetSwordCapsule(struct FTransform* WorldTransform, float* CapsuleRadius, float* CapsuleHalfHeight)
+void UDinoAttackState_MekSwordSwing_C::STATIC_GetSwordCapsule(struct UObject_FTransform* WorldTransform, float* CapsuleRadius, float* CapsuleHalfHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordCapsule");
 
@@ -126,12 +127,12 @@ void UDinoAttackState_MekSwordSwing_C::GetSwordCapsule(struct FTransform* WorldT
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordDamagePoint
-// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Loc                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rot                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekSwordSwing_C::GetSwordDamagePoint(struct FVector* Loc, struct FRotator* Rot)
+void UDinoAttackState_MekSwordSwing_C::STATIC_GetSwordDamagePoint(struct FVector* Loc, struct FRotator* Rot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordDamagePoint");
 

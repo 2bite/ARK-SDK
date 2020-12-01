@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Greenhouse_Door.Greenhouse_Door_C
-// 0x0000 (0x0B20 - 0x0B20)
+// 0x0000 (0x0B38 - 0x0B38)
 class AGreenhouse_Door_C : public ADoor_Base_SM_C
 {
 public:

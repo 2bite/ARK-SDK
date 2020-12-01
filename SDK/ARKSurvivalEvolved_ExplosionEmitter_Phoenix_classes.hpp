@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ExplosionEmitter_Phoenix.ExplosionEmitter_Phoenix_C
-// 0x0004 (0x08A4 - 0x08A0)
+// 0x0004 (0x0934 - 0x0930)
 class AExplosionEmitter_Phoenix_C : public ABuff_Base_C
 {
 public:
-	float                                              DeactivateAfterTime_1;                                    // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DeactivateAfterTime_1;                                    // 0x0930(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

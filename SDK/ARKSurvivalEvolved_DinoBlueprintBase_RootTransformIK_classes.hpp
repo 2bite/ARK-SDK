@@ -82,7 +82,7 @@ public:
 	float                                              MovementAnimRate;                                         // 0x1270(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bIsFlying;                                                // 0x1274(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0xB];                                       // 0x1275(0x000B) MISSED OFFSET
-	struct FTransform                                  RootOffsetTransform;                                      // 0x1280(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct UObject_FTransform                          RootOffsetTransform;                                      // 0x1280(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinimumMovementSpeed;                                     // 0x12B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              FallingAnimPlayRate;                                      // 0x12B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              FallingBlendInTime;                                       // 0x12B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -153,7 +153,7 @@ public:
 	bool                                               CallFunc_IsMeshGameplayRelevant_ReturnValue;              // 0x13E7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x13E8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData08[0x7];                                       // 0x13E9(0x0007) MISSED OFFSET
-	struct FTransform                                  CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x13F0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
+	struct UObject_FTransform                          CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x13F0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_GetAimOffsetsTransform_TheRootYawSpeed;          // 0x1420(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_GetAimOffsetsTransform_RootLocOffset;            // 0x1424(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    CallFunc_GetAimOffsetsTransform_ReturnValue;              // 0x1430(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -252,35 +252,35 @@ public:
 
 
 	void BlueprintPlayAnimationEvent(class UAnimMontage** AnimationMontage, float* PlayRate, float* playedAnimLength);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2900();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_ModifyBone_570();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2899();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_RotationOffsetBlendSpace_170();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2898();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2897();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3606();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2896();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2895();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3605();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3604();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2894();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3603();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2893();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2892();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3601();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2891();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2890();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3600();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3599();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2889();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2888();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3598();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3597();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_3596();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendSpacePlayer_154();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2886();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_2885();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_ApplyAdditive_206();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3978();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_ModifyBone_750();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3977();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_RotationOffsetBlendSpace_252();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3976();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3975();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4846();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3974();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3973();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4845();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4844();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3972();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4843();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3971();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3970();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4841();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3969();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3968();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4840();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4839();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3967();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3966();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4838();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4837();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_SequencePlayer_4836();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendSpacePlayer_192();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3964();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_BlendListByBool_3963();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransformIK_AnimGraphNode_ApplyAdditive_324();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_DinoBlueprintBase_RootTransformIK(int EntryPoint);
 };

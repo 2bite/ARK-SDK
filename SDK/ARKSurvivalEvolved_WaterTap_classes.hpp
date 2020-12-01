@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterTap.WaterTap_C
-// 0x0008 (0x0DC8 - 0x0DC0)
+// 0x0008 (0x0DE0 - 0x0DD8)
 class AWaterTap_C : public AWaterTap_Base_C
 {
 public:
-	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0DC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

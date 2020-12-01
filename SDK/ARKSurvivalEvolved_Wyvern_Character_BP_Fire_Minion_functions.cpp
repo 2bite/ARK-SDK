@@ -107,7 +107,7 @@ void AWyvern_Character_BP_Fire_Minion_C::BP_OnSetDeath()
 
 
 // Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPTimerServer
-// (NetRequest, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Private, Protected, HasDefaults)
 
 void AWyvern_Character_BP_Fire_Minion_C::STATIC_BPTimerServer()
 {
@@ -337,13 +337,13 @@ bool AWyvern_Character_BP_Fire_Minion_C::BPTryMultiUse(class APlayerController**
 
 
 // Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPGetMultiUseEntries
-// (Net, Exec, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
+// (Net, NetReliable, Exec, Native, NetResponse, Private, Protected, HasDefaults)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AWyvern_Character_BP_Fire_Minion_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AWyvern_Character_BP_Fire_Minion_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPGetMultiUseEntries");
 
@@ -351,6 +351,7 @@ TArray<struct FMultiUseEntry> AWyvern_Character_BP_Fire_Minion_C::STATIC_BPGetMu
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

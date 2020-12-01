@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SM_AdobeGateDoor_BP.SM_AdobeGateDoor_BP_C.UserConstructionScript
-// (NetRequest, Exec, Native, Event, NetMulticast, HasDefaults, NetClient, DLLImport)
+// (Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, Const, NetValidate)
 
 void ASM_AdobeGateDoor_BP_C::UserConstructionScript()
 {

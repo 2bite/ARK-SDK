@@ -17,7 +17,7 @@ namespace sdk
 // Function AnimNotifyState_MuteIKLeg.AnimNotifyState_MuteIKLeg_C.Received_NotifyEnd
 struct UAnimNotifyState_MuteIKLeg_C_Received_NotifyEnd_Params
 {
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -25,7 +25,7 @@ struct UAnimNotifyState_MuteIKLeg_C_Received_NotifyEnd_Params
 // Function AnimNotifyState_MuteIKLeg.AnimNotifyState_MuteIKLeg_C.Received_NotifyBegin
 struct UAnimNotifyState_MuteIKLeg_C_Received_NotifyBegin_Params
 {
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             TotalDuration;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

@@ -221,7 +221,7 @@ struct ACrab_Character_BP_C_GrabFoundCharacter_Params
 // Function Crab_Character_BP.Crab_Character_BP_C.Is Better Grab Target
 struct ACrab_Character_BP_C_Is_Better_Grab_Target_Params
 {
-	class AActor*                                      newTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      NewTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     NewTargHitLoc;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -332,18 +332,23 @@ struct ACrab_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_162
-struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_162_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_146
+struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_146_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_161
-struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_161_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_145
+struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_145_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_160
-struct ACrab_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_160_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_144
+struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_144_Params
+{
+};
+
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_143
+struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_143_Params
 {
 };
 
@@ -444,7 +449,7 @@ struct ACrab_Character_BP_C_Server_TraceTargetDir_Params
 	struct FVector                                     AimLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               JumpInstant;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               throwInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ThrowInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Crab_Character_BP.Crab_Character_BP_C.StartThrowIdle

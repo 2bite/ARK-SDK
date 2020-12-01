@@ -17,18 +17,18 @@ namespace sdk
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PreviousCustomMode             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_GasBagsExhale_C::BPOnInstigatorMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode, TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* newCustomMode)
+void ABuff_GasBagsExhale_C::BPOnInstigatorMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_GasBagsExhale.Buff_GasBagsExhale_C.BPOnInstigatorMovementModeChangedNotify");
 
 	ABuff_GasBagsExhale_C_BPOnInstigatorMovementModeChangedNotify_Params params;
 	params.PrevMovementMode = PrevMovementMode;
 	params.PreviousCustomMode = PreviousCustomMode;
-	params.newMovementMode = newMovementMode;
-	params.newCustomMode = newCustomMode;
+	params.NewMovementMode = NewMovementMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 

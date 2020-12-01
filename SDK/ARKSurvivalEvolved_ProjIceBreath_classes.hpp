@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjIceBreath.ProjIceBreath_C
-// 0x0000 (0x0648 - 0x0648)
+// 0x0000 (0x0658 - 0x0658)
 class AProjIceBreath_C : public AShooterProjectile
 {
 public:

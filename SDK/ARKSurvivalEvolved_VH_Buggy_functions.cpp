@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function VH_Buggy.VH_Buggy_C.BPPlayDying
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Event, NetResponse, MulticastDelegate, Public, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
 // class APawn**                  InstigatingPawn                (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AVH_Buggy_C::STATIC_BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
+void AVH_Buggy_C::BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.BPPlayDying");
 
@@ -30,7 +30,6 @@ void AVH_Buggy_C::STATIC_BPPlayDying(float* KillingDamage, class APawn** Instiga
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,14 +57,14 @@ void AVH_Buggy_C::UserConstructionScript()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_74
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_65
 // ()
 
-void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_74()
+void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_65()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_74");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_65");
 
-	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_74_Params params;
+	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_65_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -75,14 +74,14 @@ void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_74()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_73
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_64
 // ()
 
-void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_73()
+void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_64()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_73");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_64");
 
-	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_73_Params params;
+	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_64_Params params;
 
 	auto flags = fn->FunctionFlags;
 

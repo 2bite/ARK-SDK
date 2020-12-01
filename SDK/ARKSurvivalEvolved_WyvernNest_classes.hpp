@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WyvernNest.WyvernNest_C
-// 0x000C (0x0AAC - 0x0AA0)
+// 0x000C (0x0AC4 - 0x0AB8)
 class AWyvernNest_C : public AStructureBaseBP_C
 {
 public:
-	class UClass*                                      DroppedItemEggClass;                                      // 0x0AA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x0AA8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UClass*                                      DroppedItemEggClass;                                      // 0x0AB8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x0AC0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

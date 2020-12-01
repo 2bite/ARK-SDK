@@ -15,44 +15,44 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Direwolf_Character_BP.Direwolf_Character_BP_C
-// 0x0130 (0x2248 - 0x2118)
+// 0x0130 (0x22C8 - 0x2198)
 class ADirewolf_Character_BP_C : public ADino_Character_BP_Pack_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Direwolf_C* DinoCharacterStatus_BP_Direwolf_C1;                       // 0x2118(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<float>                                      ResourceTypeScales;                                       // 0x2120(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              ResourceTypesToScale;                                     // 0x2130(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                              SniffPassiveRadius;                                       // 0x2140(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SniffPassiveHealthTreshold;                               // 0x2144(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SniffPassiveUpdateInterval;                               // 0x2148(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x214C(0x0004) MISSED OFFSET
-	class UTexture*                                    SniffPassiveIcon;                                         // 0x2150(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SniffAbilityRadiusChests;                                 // 0x2158(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SniffAbilityRadiusHiddenDinos;                            // 0x215C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SniffAbilityDisplayTime;                                  // 0x2160(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x2164(0x0004) MISSED OFFSET
-	class UTexture*                                    SniffAbilityHiddenDinoIcon;                               // 0x2168(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture*                                    SniffAbilityChestIcon;                                    // 0x2170(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class AActor*>                              SniffedPassiveTargets;                                    // 0x2178(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                              SniffedExplorerChests;                                    // 0x2188(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                              SniffedHiddenDinos;                                       // 0x2198(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	double                                             LastSniffedTime;                                          // 0x21A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      DinoPackMateBuffClass;                                    // 0x21B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsPackLeaderReplicated;                                  // 0x21B8(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x21B9(0x0007) MISSED OFFSET
-	class FString                                      PackLeaderHUDText;                                        // 0x21C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                              PackLeaderHUDTextYOffset;                                 // 0x21D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PackLeaderHUDTextDrawScale;                               // 0x21D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                PackLeaderHUDTextColor;                                   // 0x21D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bAllowCopycatRoarWithRider;                               // 0x21E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x21E9(0x0003) MISSED OFFSET
-	struct FLinearColor                                CorpseIconColor;                                          // 0x21EC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                ChestIconColor;                                           // 0x21FC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                HiddenDinoIconColor;                                      // 0x220C(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x221C(0x0004) MISSED OFFSET
-	double                                             lastHowlTime;                                             // 0x2220(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class AActor*>                              CallFunc_SphereOverlapActors_NEW_ActorsToIgnore_RefProperty;// 0x2228(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
-	TArray<class AActor*>                              CallFunc_SphereOverlapActors_NEW_ActorsToIgnore2_RefProperty;// 0x2238(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
+	class UDinoCharacterStatusComponent_BP_Direwolf_C* DinoCharacterStatus_BP_Direwolf_C1;                       // 0x2198(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<float>                                      ResourceTypeScales;                                       // 0x21A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ResourceTypesToScale;                                     // 0x21B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              SniffPassiveRadius;                                       // 0x21C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SniffPassiveHealthTreshold;                               // 0x21C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SniffPassiveUpdateInterval;                               // 0x21C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x21CC(0x0004) MISSED OFFSET
+	class UTexture*                                    SniffPassiveIcon;                                         // 0x21D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SniffAbilityRadiusChests;                                 // 0x21D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SniffAbilityRadiusHiddenDinos;                            // 0x21DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SniffAbilityDisplayTime;                                  // 0x21E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x21E4(0x0004) MISSED OFFSET
+	class UTexture*                                    SniffAbilityHiddenDinoIcon;                               // 0x21E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture*                                    SniffAbilityChestIcon;                                    // 0x21F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class AActor*>                              SniffedPassiveTargets;                                    // 0x21F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                              SniffedExplorerChests;                                    // 0x2208(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                              SniffedHiddenDinos;                                       // 0x2218(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	double                                             LastSniffedTime;                                          // 0x2228(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      DinoPackMateBuffClass;                                    // 0x2230(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bIsPackLeaderReplicated;                                  // 0x2238(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x2239(0x0007) MISSED OFFSET
+	class FString                                      PackLeaderHUDText;                                        // 0x2240(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              PackLeaderHUDTextYOffset;                                 // 0x2250(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PackLeaderHUDTextDrawScale;                               // 0x2254(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                PackLeaderHUDTextColor;                                   // 0x2258(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bAllowCopycatRoarWithRider;                               // 0x2268(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x2269(0x0003) MISSED OFFSET
+	struct FLinearColor                                CorpseIconColor;                                          // 0x226C(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                ChestIconColor;                                           // 0x227C(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                HiddenDinoIconColor;                                      // 0x228C(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x229C(0x0004) MISSED OFFSET
+	double                                             lastHowlTime;                                             // 0x22A0(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class AActor*>                              CallFunc_SphereOverlapActors_NEW_ActorsToIgnore_RefProperty;// 0x22A8(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
+	TArray<class AActor*>                              CallFunc_SphereOverlapActors_NEW_ActorsToIgnore2_RefProperty;// 0x22B8(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
 
 	static UClass* StaticClass()
 	{
@@ -67,9 +67,9 @@ public:
 	void BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
 	void GatherPack();
 	void BPDoAttack(int* AttackIndex);
-	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void DoSniffAbility();
-	void GetHiddenDinos(float Radius, TArray<class AActor*>* FoundDinos);
+	void GetHiddenDinos(float Radius, TArray<class AActor*>* foundDinos);
 	void GetExplorerChestsInRange(float Radius, TArray<class AActor*>* FoundExplorerChests);
 	void UpdateSniffedTargets();
 	void BPDrawToRiderHUD(class AShooterHUD** HUD);

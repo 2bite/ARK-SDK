@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass QuillShatterImpactEmitter.QuillShatterImpactEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AQuillShatterImpactEmitter_C : public APrimalEmitterSpawnable
 {
 public:

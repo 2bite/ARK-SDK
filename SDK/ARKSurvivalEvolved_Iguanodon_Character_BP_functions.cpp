@@ -126,17 +126,17 @@ void AIguanodon_Character_BP_C::BPTimerServer()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AIguanodon_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AIguanodon_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	AIguanodon_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 
@@ -318,7 +318,7 @@ bool AIguanodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPGetMultiUseEntries
-// (Event, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -402,11 +402,11 @@ void AIguanodon_Character_BP_C::Net_SetCurrentStance(bool isBiped)
 
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPDoAttack
-// (NetReliable, NetRequest, Native, Event, NetResponse, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIguanodon_Character_BP_C::BPDoAttack(int* AttackIndex)
+void AIguanodon_Character_BP_C::STATIC_BPDoAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPDoAttack");
 
@@ -514,9 +514,9 @@ void AIguanodon_Character_BP_C::ClientSetBipedState(bool isBiped)
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.GetDefaultDino
 // ()
 // Parameters:
-// class AIguanodon_Character_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AIguanodon_Character_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C** ref)
+void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.GetDefaultDino");
 
@@ -528,8 +528,8 @@ void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C**
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 

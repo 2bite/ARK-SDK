@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_AlphaWyvern.Buff_AlphaWyvern_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_AlphaWyvern_C : public ABuff_AlphaBase_C
 {
 public:

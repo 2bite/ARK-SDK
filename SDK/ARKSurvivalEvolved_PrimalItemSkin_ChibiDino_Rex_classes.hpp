@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_ChibiDino_Rex.PrimalItemSkin_ChibiDino_Rex_C
-// 0x0000 (0x09A9 - 0x09A9)
+// 0x0000 (0x09C9 - 0x09C9)
 class UPrimalItemSkin_ChibiDino_Rex_C : public UPrimalItemSkin_ChibiDino_Base_C
 {
 public:

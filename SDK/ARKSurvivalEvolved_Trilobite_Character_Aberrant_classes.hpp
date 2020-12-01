@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Trilobite_Character_Aberrant.Trilobite_Character_Aberrant_C
-// 0x0000 (0x2090 - 0x2090)
+// 0x0000 (0x2110 - 0x2110)
 class ATrilobite_Character_Aberrant_C : public ATrilobite_Character_C
 {
 public:

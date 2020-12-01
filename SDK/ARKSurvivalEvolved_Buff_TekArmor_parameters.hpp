@@ -14,6 +14,25 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Buff_TekArmor.Buff_TekArmor_C.check genesis restrictions for player
+struct ABuff_TekArmor_C_check_genesis_restrictions_for_player_Params
+{
+	class APrimalCharacter*                            Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               is_restricted;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor.Buff_TekArmor_C.BPActivated
+struct ABuff_TekArmor_C_BPActivated_Params
+{
+	class AActor**                                     ForInstigator;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor.Buff_TekArmor_C.Is Restricted Because Of Genesis Map
+struct ABuff_TekArmor_C_Is_Restricted_Because_Of_Genesis_Map_Params
+{
+	bool                                               restricted;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Is Player in SealedSpace
 struct ABuff_TekArmor_C_Get_Is_Player_in_SealedSpace_Params
 {
@@ -37,7 +56,7 @@ struct ABuff_TekArmor_C_IsPlayerInWaterVolume_Params
 struct ABuff_TekArmor_C_SpawnFX_Params
 {
 	class UParticleSystem*                             EmitterTemplate;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  InTransform;                                              // (Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct UObject_FTransform                          InTransform;                                              // (Parm, OutParm, ReferenceParm, IsPlainOldData)
 	class USoundBase*                                  Sound;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              VolumeMultiplier;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              PitchMultiplier;                                          // (Parm, ZeroConstructor, IsPlainOldData)
@@ -93,20 +112,20 @@ struct ABuff_TekArmor_C_IsWarping_FOV_Params
 // Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff
 struct ABuff_TekArmor_C_Get_DefaultTekBuff_Params
 {
-	class ABuff_TekArmor_C*                            ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ABuff_TekArmor_C*                            Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer
 struct ABuff_TekArmor_C_GetDefaultPlayer_Params
 {
-	class APrimalCharacter*                            ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Client_Consume Element After Time
 struct ABuff_TekArmor_C_Client_Consume_Element_After_Time_Params
 {
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                elementCost;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ElementCost;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.BPSetupForInstigator
@@ -124,7 +143,7 @@ struct ABuff_TekArmor_C_IsPlayerGrounded_Params
 // Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager
 struct ABuff_TekArmor_C_Get_RefOwningPlayer_Camera_Manager_Params
 {
-	class AShooterPlayerCameraManager*                 ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AShooterPlayerCameraManager*                 Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.UpdatePlayerFOV
@@ -137,7 +156,7 @@ struct ABuff_TekArmor_C_UpdatePlayerFOV_Params
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement
 struct ABuff_TekArmor_C_Get_Ref_Owning_PlayerMovement_Params
 {
-	class UCharacterMovementComponent*                 movement;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UCharacterMovementComponent*                 Movement;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerController
@@ -223,7 +242,7 @@ struct ABuff_TekArmor_C_Multi_SpawnFX_Params
 {
 	class UParticleSystem*                             particleTemplate;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	class USoundBase*                                  Sound;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  Transform;                                                // (Parm, IsPlainOldData)
+	struct UObject_FTransform                          Transform;                                                // (Parm, IsPlainOldData)
 	float                                              soundVolume;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              soundPitch;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -237,6 +256,21 @@ struct ABuff_TekArmor_C_CheckForArmorRef_Params
 struct ABuff_TekArmor_C_Server_SetTekAbilityActive_Params
 {
 	bool                                               newActive;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor.Buff_TekArmor_C.RateLimitedGenesisAbilityWarning
+struct ABuff_TekArmor_C_RateLimitedGenesisAbilityWarning_Params
+{
+};
+
+// Function Buff_TekArmor.Buff_TekArmor_C.ReceiveBeginPlay
+struct ABuff_TekArmor_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function Buff_TekArmor.Buff_TekArmor_C.ReceiveDestroyed
+struct ABuff_TekArmor_C_ReceiveDestroyed_Params
+{
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.ExecuteUbergraph_Buff_TekArmor

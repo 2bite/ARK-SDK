@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PlayerControllerBlueprint.PlayerControllerBlueprint_C.CanFit
-// (Exec, MulticastDelegate, Protected, Delegate, HasDefaults, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, Const, NetValidate)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VerticalOffset                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -26,7 +26,7 @@ namespace sdk
 // bool                           Can                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewLocation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerControllerBlueprint_C::CanFit(const struct FVector& Location, float VerticalOffset, float Angle, float HorizontalOffset, float Radius, float HalfHeight, class AActor* SpawningActor, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation)
+void APlayerControllerBlueprint_C::STATIC_CanFit(const struct FVector& Location, float VerticalOffset, float Angle, float HorizontalOffset, float Radius, float HalfHeight, class AActor* SpawningActor, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerControllerBlueprint.PlayerControllerBlueprint_C.CanFit");
 
@@ -41,6 +41,7 @@ void APlayerControllerBlueprint_C::CanFit(const struct FVector& Location, float 
 	params.IgnoreActor = IgnoreActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

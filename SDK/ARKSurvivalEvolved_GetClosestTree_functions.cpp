@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GetClosestTree.GetClosestTree_C.GetClosestTree
-// (NetRequest, Event, NetMulticast, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Private, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AllowPrev                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -42,7 +42,7 @@ void UGetClosestTree_C::GetClosestTree(class AActor* OwnerActor, bool AllowPrev,
 
 
 // Function GetClosestTree.GetClosestTree_C.GetPointOnTreeSurface
-// (Exec, Static, NetMulticast, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Event, Static, NetMulticast, Private, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class UPrimitiveComponent*     treeComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 origPoint                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -72,7 +72,7 @@ void UGetClosestTree_C::STATIC_GetPointOnTreeSurface(class UPrimitiveComponent* 
 
 
 // Function GetClosestTree.GetClosestTree_C.ReceiveExecute
-// (Exec, NetResponse, Static, NetMulticast, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 

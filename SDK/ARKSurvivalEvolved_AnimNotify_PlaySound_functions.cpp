@@ -36,16 +36,16 @@ class FString UAnimNotify_PlaySound_C::GetNotifyName()
 // Function AnimNotify_PlaySound.AnimNotify_PlaySound_C.Received_Notify
 // ()
 // Parameters:
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotify_PlaySound_C::Received_Notify(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation)
+bool UAnimNotify_PlaySound_C::Received_Notify(class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimNotify_PlaySound.AnimNotify_PlaySound_C.Received_Notify");
 
 	UAnimNotify_PlaySound_C_Received_Notify_Params params;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;

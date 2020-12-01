@@ -106,14 +106,14 @@ public:
 
 
 // Class ScriptPlugin.ScriptTestActor
-// 0x0018 (0x0468 - 0x0450)
+// 0x0018 (0x0478 - 0x0460)
 class AScriptTestActor : public AActor
 {
 public:
-	class FString                                      TestString;                                               // 0x0450(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              TestValue;                                                // 0x0460(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               TestBool;                                                 // 0x0464(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0465(0x0003) MISSED OFFSET
+	class FString                                      TestString;                                               // 0x0460(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              TestValue;                                                // 0x0470(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               TestBool;                                                 // 0x0474(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0475(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

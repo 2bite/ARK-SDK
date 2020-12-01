@@ -30,7 +30,7 @@ public:
 	}
 
 
-	void BPOnAttackStart(int* AttackIndex);
+	void STATIC_BPOnAttackStart(int* AttackIndex);
 	void ExecuteUbergraph_DinoAttackState_EnforcerBlast(int EntryPoint);
 };
 

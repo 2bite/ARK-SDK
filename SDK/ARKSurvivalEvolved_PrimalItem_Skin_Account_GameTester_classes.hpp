@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_Skin_Account_GameTester.PrimalItem_Skin_Account_GameTester_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItem_Skin_Account_GameTester_C : public UPrimalItemSkinGeneric_C
 {
 public:

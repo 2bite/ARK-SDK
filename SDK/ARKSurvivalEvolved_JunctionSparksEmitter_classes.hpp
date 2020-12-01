@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass JunctionSparksEmitter.JunctionSparksEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AJunctionSparksEmitter_C : public APrimalEmitterSpawnable
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterTank_Metal.WaterTank_Metal_C
-// 0x0000 (0x0EA8 - 0x0EA8)
+// 0x0000 (0x0EC0 - 0x0EC0)
 class AWaterTank_Metal_C : public AWaterTankBaseBP_C
 {
 public:

@@ -80,7 +80,7 @@ struct ADinoCharacter_BP_Zipline_C_BPTimerServer_Params
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.SoftSetTransform
 struct ADinoCharacter_BP_Zipline_C_SoftSetTransform_Params
 {
-	struct FTransform                                  NewTransform;                                             // (Parm, IsPlainOldData)
+	struct UObject_FTransform                          NewTransform;                                             // (Parm, IsPlainOldData)
 };
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.UpdateTPViewOffset
@@ -91,7 +91,7 @@ struct ADinoCharacter_BP_Zipline_C_UpdateTPViewOffset_Params
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.GetTargetMeshRelativeTransformPure
 struct ADinoCharacter_BP_Zipline_C_GetTargetMeshRelativeTransformPure_Params
 {
-	struct FTransform                                  Result;                                                   // (Parm, OutParm, IsPlainOldData)
+	struct UObject_FTransform                          Result;                                                   // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.InterpMeshRelativeTransform
@@ -103,7 +103,7 @@ struct ADinoCharacter_BP_Zipline_C_InterpMeshRelativeTransform_Params
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.GetTargetedZipline
 struct ADinoCharacter_BP_Zipline_C_GetTargetedZipline_Params
 {
-	class AZipline_Anchor_C*                           targetedZipline;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AZipline_Anchor_C*                           TargetedZipline;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -163,8 +163,8 @@ struct ADinoCharacter_BP_Zipline_C_TryAttachingToZipline_Params
 {
 	class AZipline_Anchor_C*                           overrideAnchor;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     overrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              overrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     overrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              OverrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     OverrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -200,7 +200,7 @@ struct ADinoCharacter_BP_Zipline_C_UserConstructionScript_Params
 struct ADinoCharacter_BP_Zipline_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -253,7 +253,7 @@ struct ADinoCharacter_BP_Zipline_C_SetInitialVelocity_Multicast_Params
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.Multi_SoftSetTransform
 struct ADinoCharacter_BP_Zipline_C_Multi_SoftSetTransform_Params
 {
-	struct FTransform                                  NewTransform;                                             // (Parm, IsPlainOldData)
+	struct UObject_FTransform                          NewTransform;                                             // (Parm, IsPlainOldData)
 };
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.DoZiplineTurn

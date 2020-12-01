@@ -21,7 +21,7 @@ struct AStructure_PlantSpeciesZ_Base_C_Get_Charge_Variable_Interface_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_PlantSpeciesZ_Base.Structure_PlantSpeciesZ_Base_C.GetNumBatteries
@@ -67,7 +67,7 @@ struct AStructure_PlantSpeciesZ_Base_C_Charge_Variable_Event_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_PlantSpeciesZ_Base.Structure_PlantSpeciesZ_Base_C.Charge Variable Event Trigger Multicast Interface
@@ -90,7 +90,7 @@ struct AStructure_PlantSpeciesZ_Base_C_Set_Charge_Variable_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               triggerEvent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               multicastEvent;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_PlantSpeciesZ_Base.Structure_PlantSpeciesZ_Base_C.CheckForBatteriesAndUpdate_Multicast
@@ -191,28 +191,28 @@ struct AStructure_PlantSpeciesZ_Base_C_Charge_Variable_Event_Double_MulticastInt
 struct AStructure_PlantSpeciesZ_Base_C_ChargeVariableEventIntInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_PlantSpeciesZ_Base.Structure_PlantSpeciesZ_Base_C.ChargeVariableEventIntMulticastInterface
 struct AStructure_PlantSpeciesZ_Base_C_ChargeVariableEventIntMulticastInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_PlantSpeciesZ_Base.Structure_PlantSpeciesZ_Base_C.ChargeVariableEvent_Int
 struct AStructure_PlantSpeciesZ_Base_C_ChargeVariableEvent_Int_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_PlantSpeciesZ_Base.Structure_PlantSpeciesZ_Base_C.ChargeVariableEvent_Int_Multicast
 struct AStructure_PlantSpeciesZ_Base_C_ChargeVariableEvent_Int_Multicast_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_PlantSpeciesZ_Base.Structure_PlantSpeciesZ_Base_C.ReceiveBeginPlay

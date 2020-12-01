@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjSpiderAcid.ProjSpiderAcid_C
-// 0x0008 (0x0650 - 0x0648)
+// 0x0008 (0x0660 - 0x0658)
 class AProjSpiderAcid_C : public APrimalProjectileSpiderAcid
 {
 public:
-	class UChildActorComponent*                        ChildProjectile;                                          // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        ChildProjectile;                                          // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

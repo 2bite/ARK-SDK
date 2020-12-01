@@ -14,6 +14,18 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function DayCycleManagerBase.DayCycleManagerBase_C.Get Teleport Transfer World PP
+struct ADayCycleManagerBase_C_Get_Teleport_Transfer_World_PP_Params
+{
+	class APostProcessVolume*                          PP;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DayCycleManagerBase.DayCycleManagerBase_C.Get VR World PP
+struct ADayCycleManagerBase_C_Get_VR_World_PP_Params
+{
+	class APostProcessVolume*                          PP;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function DayCycleManagerBase.DayCycleManagerBase_C.HandleGrappleHookImpacted
 struct ADayCycleManagerBase_C_HandleGrappleHookImpacted_Params
 {

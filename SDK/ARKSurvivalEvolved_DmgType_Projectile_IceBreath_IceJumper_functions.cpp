@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DmgType_Projectile_IceBreath_IceJumper.DmgType_Projectile_IceBreath_IceJumper_C.GetFreezeBuffAmountPerHit
-// (Net, NetReliable, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintEvent, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, Event, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter**       Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDmgType_Projectile_IceBreath_IceJumper_C::STATIC_GetFreezeBuffAmountPerHit(class APrimalCharacter** Target, class AActor** DamageCauser, float* Result)
+void UDmgType_Projectile_IceBreath_IceJumper_C::GetFreezeBuffAmountPerHit(class APrimalCharacter** Target, class AActor** DamageCauser, float* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DmgType_Projectile_IceBreath_IceJumper.DmgType_Projectile_IceBreath_IceJumper_C.GetFreezeBuffAmountPerHit");
 
@@ -28,6 +28,7 @@ void UDmgType_Projectile_IceBreath_IceJumper_C::STATIC_GetFreezeBuffAmountPerHit
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_DinoTekHelmet_Rex.Buff_DinoTekHelmet_Rex_C
-// 0x0000 (0x0B78 - 0x0B78)
+// 0x0000 (0x0C08 - 0x0C08)
 class ABuff_DinoTekHelmet_Rex_C : public ABuff_DinoTekHelmet_Base_C
 {
 public:

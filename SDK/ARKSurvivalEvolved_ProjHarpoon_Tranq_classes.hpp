@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjHarpoon_Tranq.ProjHarpoon_Tranq_C
-// 0x000C (0x06A0 - 0x0694)
+// 0x000C (0x06B0 - 0x06A4)
 class AProjHarpoon_Tranq_C : public AProjHarpoon_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0694(0x0004) MISSED OFFSET
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x06A4(0x0004) MISSED OFFSET
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x06A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

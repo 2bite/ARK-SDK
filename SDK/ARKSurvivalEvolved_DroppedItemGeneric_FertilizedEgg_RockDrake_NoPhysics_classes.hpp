@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DroppedItemGeneric_FertilizedEgg_RockDrake_NoPhysics.DroppedItemGeneric_FertilizedEgg_RockDrake_NoPhysics_C
-// 0x0000 (0x0728 - 0x0728)
+// 0x0000 (0x0730 - 0x0730)
 class ADroppedItemGeneric_FertilizedEgg_RockDrake_NoPhysics_C : public ADroppedItemGeneric_FertilizedEgg_NoPhysics_C
 {
 public:

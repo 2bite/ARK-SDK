@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_BaseLadder.PrimalItemStructure_BaseLadder_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_BaseLadder_C : public UPrimalItemStructureGeneric_C
 {
 public:

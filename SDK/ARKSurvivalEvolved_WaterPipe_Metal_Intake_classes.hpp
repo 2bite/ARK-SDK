@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterPipe_Metal_Intake.WaterPipe_Metal_Intake_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class AWaterPipe_Metal_Intake_C : public AWaterPipe_Base_Intake_C
 {
 public:

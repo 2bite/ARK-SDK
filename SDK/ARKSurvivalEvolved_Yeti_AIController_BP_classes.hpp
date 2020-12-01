@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Yeti_AIController_BP.Yeti_AIController_BP_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class AYeti_AIController_BP_C : public ABigfoot_AIController_BP_C
 {
 public:

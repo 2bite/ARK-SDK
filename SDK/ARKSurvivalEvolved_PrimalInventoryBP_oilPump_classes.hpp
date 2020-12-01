@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_oilPump.PrimalInventoryBP_oilPump_C
-// 0x0000 (0x055D - 0x055D)
+// 0x0000 (0x0595 - 0x0595)
 class UPrimalInventoryBP_oilPump_C : public UPrimalInventoryBP_BaseAutoGenerateItems_C
 {
 public:

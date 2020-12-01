@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dino_Character_BP_Climber_ForceAllowBoss.Dino_Character_BP_Climber_ForceAllowBoss_C
-// 0x0000 (0x2D18 - 0x2D18)
+// 0x0000 (0x2E30 - 0x2E30)
 class ADino_Character_BP_Climber_ForceAllowBoss_C : public ADino_Character_BP_Climber_C
 {
 public:

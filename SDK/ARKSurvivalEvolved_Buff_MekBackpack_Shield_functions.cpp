@@ -50,11 +50,11 @@ void ABuff_MekBackpack_Shield_C::PlayShieldSound(int SoundIndex)
 
 
 // Function Buff_MekBackpack_Shield.Buff_MekBackpack_Shield_C.GetBackpackSaveData
-// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
-void ABuff_MekBackpack_Shield_C::STATIC_GetBackpackSaveData(struct FMekBackpackData* Data)
+void ABuff_MekBackpack_Shield_C::GetBackpackSaveData(struct FMekBackpackData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_Shield.Buff_MekBackpack_Shield_C.GetBackpackSaveData");
 

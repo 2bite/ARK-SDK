@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjBallista.ProjBallista_C
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0680 - 0x0680)
 class AProjBallista_C : public APrimalProjectileArrow
 {
 public:

@@ -77,12 +77,12 @@ void ABuff_NamelessPreggers_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.BPModifyPlayerBoneModifiers
-// (Native, NetResponse, Static, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FBoneModifier>   InBoneModifiers                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FBoneModifier>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FBoneModifier> ABuff_NamelessPreggers_C::STATIC_BPModifyPlayerBoneModifiers(TArray<struct FBoneModifier>* InBoneModifiers)
+TArray<struct FBoneModifier> ABuff_NamelessPreggers_C::BPModifyPlayerBoneModifiers(TArray<struct FBoneModifier>* InBoneModifiers)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.BPModifyPlayerBoneModifiers");
 
@@ -103,12 +103,12 @@ TArray<struct FBoneModifier> ABuff_NamelessPreggers_C::STATIC_BPModifyPlayerBone
 
 
 // Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.HandleBuffAnimNotify
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Exec, Native, NetResponse, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  AnimNotifyName                 (Parm, ZeroConstructor, IsPlainOldData)
 // class FString*                 AnimNotifyStringData           (Parm, ZeroConstructor)
 
-void ABuff_NamelessPreggers_C::STATIC_HandleBuffAnimNotify(struct FName* AnimNotifyName, class FString* AnimNotifyStringData)
+void ABuff_NamelessPreggers_C::HandleBuffAnimNotify(struct FName* AnimNotifyName, class FString* AnimNotifyStringData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.HandleBuffAnimNotify");
 
@@ -143,9 +143,9 @@ void ABuff_NamelessPreggers_C::UpdateBuffPersistentData()
 
 
 // Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.ReceiveBeginPlay
-// (Native, Event, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetRequest, Exec, Native, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_NamelessPreggers_C::ReceiveBeginPlay()
+void ABuff_NamelessPreggers_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.ReceiveBeginPlay");
 
@@ -181,14 +181,14 @@ void ABuff_NamelessPreggers_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.BPDrawBuffStatusHUD
-// (Exec, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_NamelessPreggers_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_NamelessPreggers_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.BPDrawBuffStatusHUD");
 

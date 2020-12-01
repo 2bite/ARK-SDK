@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Monkey_Character_BP.Monkey_Character_BP_C
-// 0x0008 (0x2090 - 0x2088)
+// 0x0008 (0x2110 - 0x2108)
 class AMonkey_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Monkey_C*   DinoCharacterStatus_BP_Monkey_C1;                         // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Monkey_C*   DinoCharacterStatus_BP_Monkey_C1;                         // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

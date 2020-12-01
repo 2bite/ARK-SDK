@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetBackpackSaveData
-// (Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
-void ABuff_MekBackpack_MissilePod_C::STATIC_GetBackpackSaveData(struct FMekBackpackData* Data)
+void ABuff_MekBackpack_MissilePod_C::GetBackpackSaveData(struct FMekBackpackData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetBackpackSaveData");
 
@@ -120,9 +120,9 @@ void ABuff_MekBackpack_MissilePod_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.OnRep_MissilePodMalfunctioned
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
 
-void ABuff_MekBackpack_MissilePod_C::OnRep_MissilePodMalfunctioned()
+void ABuff_MekBackpack_MissilePod_C::STATIC_OnRep_MissilePodMalfunctioned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.OnRep_MissilePodMalfunctioned");
 
@@ -207,11 +207,11 @@ void ABuff_MekBackpack_MissilePod_C::GetCurrentAmmo(int* AmmoQuantity)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetFireDirection
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Direction                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MekBackpack_MissilePod_C::GetFireDirection(struct FVector* Direction)
+void ABuff_MekBackpack_MissilePod_C::STATIC_GetFireDirection(struct FVector* Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetFireDirection");
 

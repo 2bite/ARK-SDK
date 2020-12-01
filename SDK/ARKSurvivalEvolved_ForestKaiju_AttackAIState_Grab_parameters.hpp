@@ -29,7 +29,7 @@ struct UForestKaiju_AttackAIState_Grab_C_Is_Location_in_Grab_Attack_Wedge_Params
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.DebugPrintString
 struct UForestKaiju_AttackAIState_Grab_C_DebugPrintString_Params
 {
-	class FString                                      string;                                                   // (Parm, ZeroConstructor)
+	class FString                                      String;                                                   // (Parm, ZeroConstructor)
 };
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.StartAttackAnim

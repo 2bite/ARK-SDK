@@ -12,6 +12,35 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Buff_Freeze.Buff_Freeze_C.BPServerHandleNetExecCommand
+// ()
+// Parameters:
+// class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_Freeze_C::BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Freeze.Buff_Freeze_C.BPServerHandleNetExecCommand");
+
+	ABuff_Freeze_C_BPServerHandleNetExecCommand_Params params;
+	params.FromPC = FromPC;
+	params.CommandName = CommandName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ExecParams != nullptr)
+		*ExecParams = params.ExecParams;
+
+	return params.ReturnValue;
+}
+
+
 // Function Buff_Freeze.Buff_Freeze_C.BPPreventFirstPerson
 // ()
 // Parameters:
@@ -148,7 +177,7 @@ void ABuff_Freeze_C::Initialize()
 
 
 // Function Buff_Freeze.Buff_Freeze_C.CreateMIC
-// (Static, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ABuff_Freeze_C::STATIC_CreateMIC()
 {
@@ -157,6 +186,7 @@ void ABuff_Freeze_C::STATIC_CreateMIC()
 	ABuff_Freeze_C_CreateMIC_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,7 +232,7 @@ void ABuff_Freeze_C::ApplyFrozenDebuff()
 
 
 // Function Buff_Freeze.Buff_Freeze_C.AddFreeze
-// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (Net, Native, Event, NetResponse, NetMulticast, Public, Private, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // float                          amount                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)

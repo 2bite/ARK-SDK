@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Thatch_Door.Thatch_Door_C
-// 0x0008 (0x0B28 - 0x0B20)
+// 0x0008 (0x0B40 - 0x0B38)
 class AThatch_Door_C : public ADoor_Base_SM_C
 {
 public:
-	class USphereComponent*                            StasisComponent_1;                                        // 0x0B20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent_1;                                        // 0x0B38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass TutorialUI.TutorialUI_C
-// 0x0028 (0x0568 - 0x0540)
+// 0x0028 (0x0570 - 0x0548)
 class UTutorialUI_C : public UUI_Tutorial
 {
 public:
-	class UWidgetAnimation*                            Close;                                                    // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWidgetAnimation*                            Open;                                                     // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      Image_2;                                                  // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      Image_5;                                                  // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      TutorialImage;                                            // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWidgetAnimation*                            Close;                                                    // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWidgetAnimation*                            Open;                                                     // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      Image_2;                                                  // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      Image_5;                                                  // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      TutorialImage;                                            // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

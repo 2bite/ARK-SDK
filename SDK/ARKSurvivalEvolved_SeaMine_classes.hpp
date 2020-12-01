@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SeaMine.SeaMine_C
-// 0x0008 (0x0B30 - 0x0B28)
+// 0x0008 (0x0B48 - 0x0B40)
 class ASeaMine_C : public APrimalStructureSeaMine
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0B28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

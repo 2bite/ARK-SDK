@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjRock_Nutcracker.ProjRock_Nutcracker_C
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0680 - 0x0680)
 class AProjRock_Nutcracker_C : public AProjRock_C
 {
 public:

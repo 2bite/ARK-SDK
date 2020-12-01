@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_BossTributeGeneric.PrimalItem_BossTributeGeneric_C
-// 0x0018 (0x09A8 - 0x0990)
+// 0x0018 (0x09C8 - 0x09B0)
 class UPrimalItem_BossTributeGeneric_C : public UPrimalItem_Base_C
 {
 public:
-	class UClass*                                      BossArenaManagerClass;                                    // 0x0990(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UClass*>                              AdditionalBossArenaManagersToCheck;                       // 0x0998(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      BossArenaManagerClass;                                    // 0x09B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              AdditionalBossArenaManagersToCheck;                       // 0x09B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

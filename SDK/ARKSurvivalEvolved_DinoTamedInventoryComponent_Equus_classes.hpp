@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Equus.DinoTamedInventoryComponent_Equus_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoTamedInventoryComponent_Equus_C : public UDinoTamedInventoryComponent_BP_MortarCapable_C
 {
 public:

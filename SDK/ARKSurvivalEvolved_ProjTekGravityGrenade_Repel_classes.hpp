@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjTekGravityGrenade_Repel.ProjTekGravityGrenade_Repel_C
-// 0x0000 (0x09B2 - 0x09B2)
+// 0x0000 (0x09C2 - 0x09C2)
 class AProjTekGravityGrenade_Repel_C : public AProjTekGravityGrenade_C
 {
 public:

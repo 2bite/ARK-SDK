@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_FurGloves.PrimalItemArmor_FurGloves_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemArmor_FurGloves_C : public UPrimalItemArmor_BaseGloves_C
 {
 public:

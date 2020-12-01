@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TekGravityGrenadeExplosionEmitter_Repel.TekGravityGrenadeExplosionEmitter_Repel_C
-// 0x0000 (0x0558 - 0x0558)
+// 0x0000 (0x0568 - 0x0568)
 class ATekGravityGrenadeExplosionEmitter_Repel_C : public ATekGravityGrenadeExplosionEmitter_C
 {
 public:

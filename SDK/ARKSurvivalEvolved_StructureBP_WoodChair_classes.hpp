@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureBP_WoodChair.StructureBP_WoodChair_C
-// 0x0000 (0x0E89 - 0x0E89)
+// 0x0000 (0x0EA1 - 0x0EA1)
 class AStructureBP_WoodChair_C : public AStructureSeatingBaseBP_C
 {
 public:

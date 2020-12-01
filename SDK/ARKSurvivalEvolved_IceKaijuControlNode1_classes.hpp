@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass IceKaijuControlNode1.IceKaijuControlNode1_C
-// 0x0010 (0x0460 - 0x0450)
+// 0x0010 (0x0470 - 0x0460)
 class AIceKaijuControlNode1_C : public AActor
 {
 public:
-	class USkeletalMeshComponent*                      Node;                                                     // 0x0450(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCapsuleComponent*                           Capsule1;                                                 // 0x0458(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      Node;                                                     // 0x0460(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCapsuleComponent*                           Capsule1;                                                 // 0x0468(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

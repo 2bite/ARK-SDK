@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_RageEffect_RareFlower.Buff_RageEffect_RareFlower_C
-// 0x0004 (0x08D8 - 0x08D4)
+// 0x0004 (0x0968 - 0x0964)
 class ABuff_RageEffect_RareFlower_C : public ABuff_RageEffect_C
 {
 public:
-	float                                              MaxBuffTime;                                              // 0x08D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxBuffTime;                                              // 0x0964(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

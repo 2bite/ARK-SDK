@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_Hair.PrimalItemResource_Hair_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemResource_Hair_C : public UPrimalItemResource_PeltOrHair_C
 {
 public:

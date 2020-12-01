@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterPipe_Metal_Up.WaterPipe_Metal_Up_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class AWaterPipe_Metal_Up_C : public AWaterPipe_Base_Up_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dino_Character_BP_Haircuttable.Dino_Character_BP_Haircuttable_C
-// 0x0000 (0x2088 - 0x2088)
+// 0x0000 (0x2108 - 0x2108)
 class ADino_Character_BP_Haircuttable_C : public ADino_Character_BP_C
 {
 public:

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CropPlotBaseBP.CropPlotBaseBP_C
-// 0x0008 (0x0EA0 - 0x0E98)
+// 0x0008 (0x0EB8 - 0x0EB0)
 class ACropPlotBaseBP_C : public APrimalStructureItemContainer_CropPlot
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0E98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0EB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

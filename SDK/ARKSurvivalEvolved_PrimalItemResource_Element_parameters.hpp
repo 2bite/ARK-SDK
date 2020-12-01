@@ -14,6 +14,33 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPServerHandleItemNetExecCommand
+struct UPrimalItemResource_Element_C_BPServerHandleItemNetExecCommand_Params
+{
+	class AShooterPlayerController**                   ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBPNetExecParams                            ExecParams;                                               // (Parm, OutParm, ReferenceParm)
+};
+
+// Function PrimalItemResource_Element.PrimalItemResource_Element_C.FindShapeshifter
+struct UPrimalItemResource_Element_C_FindShapeshifter_Params
+{
+	class APrimalDinoCharacter*                        Shapeshifter;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               RetMounted;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPPreUseItem
+struct UPrimalItemResource_Element_C_BPPreUseItem_Params
+{
+};
+
+// Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPCanUse
+struct UPrimalItemResource_Element_C_BPCanUse_Params
+{
+	bool*                                              bIgnoreCooldown;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPSupportUseOntoItem
 struct UPrimalItemResource_Element_C_BPSupportUseOntoItem_Params
 {

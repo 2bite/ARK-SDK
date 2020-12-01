@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_PowerCableIncline.PrimalItemStructure_PowerCableIncline_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_PowerCableIncline_C : public UPrimalItemStructure_BaseStonePipe_C
 {
 public:

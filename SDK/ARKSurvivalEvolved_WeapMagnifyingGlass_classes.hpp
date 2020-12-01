@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapMagnifyingGlass.WeapMagnifyingGlass_C
-// 0x0000 (0x0D30 - 0x0D30)
+// 0x0000 (0x0D50 - 0x0D50)
 class AWeapMagnifyingGlass_C : public AShooterWeapon_Melee
 {
 public:

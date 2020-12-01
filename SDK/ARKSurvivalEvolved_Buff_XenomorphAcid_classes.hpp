@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_XenomorphAcid.Buff_XenomorphAcid_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_XenomorphAcid_C : public ABuff_Base_C
 {
 public:

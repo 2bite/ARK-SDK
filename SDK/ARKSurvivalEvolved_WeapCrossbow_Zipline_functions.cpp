@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.ZiplineObstructionTrace
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Hit                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapCrossbow_Zipline_C::STATIC_ZiplineObstructionTrace(const struct FVector& Start, bool* Hit)
+void AWeapCrossbow_Zipline_C::ZiplineObstructionTrace(const struct FVector& Start, bool* Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.ZiplineObstructionTrace");
 
@@ -26,6 +26,7 @@ void AWeapCrossbow_Zipline_C::STATIC_ZiplineObstructionTrace(const struct FVecto
 	params.Start = Start;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -122,15 +123,16 @@ void AWeapCrossbow_Zipline_C::Get_ZipProjectile_Default_Object(class AProjZiplin
 
 
 // Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.Update Preview Cable
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Static, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AWeapCrossbow_Zipline_C::Update_Preview_Cable()
+void AWeapCrossbow_Zipline_C::STATIC_Update_Preview_Cable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.Update Preview Cable");
 
 	AWeapCrossbow_Zipline_C_Update_Preview_Cable_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

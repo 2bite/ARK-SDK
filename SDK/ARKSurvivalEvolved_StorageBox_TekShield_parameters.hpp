@@ -14,6 +14,11 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function StorageBox_TekShield.StorageBox_TekShield_C.CheckCharactersInsideWhenActive
+struct AStorageBox_TekShield_C_CheckCharactersInsideWhenActive_Params
+{
+};
+
 // Function StorageBox_TekShield.StorageBox_TekShield_C.ReceiveBeginPlay
 struct AStorageBox_TekShield_C_ReceiveBeginPlay_Params
 {

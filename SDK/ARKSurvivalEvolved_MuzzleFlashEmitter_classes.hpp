@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MuzzleFlashEmitter.MuzzleFlashEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AMuzzleFlashEmitter_C : public APrimalEmitterSpawnable
 {
 public:

@@ -288,7 +288,7 @@ void AIceKaiju_Character_BP_C::HealNodesAndHealthFromLeashing()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPOverrideDamageCauserHitMarker
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class AShooterPlayerController** DamageCauserController         (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bHitFriendlyTarget             (Parm, ZeroConstructor, IsPlainOldData)
@@ -299,7 +299,7 @@ void AIceKaiju_Character_BP_C::HealNodesAndHealthFromLeashing()
 // struct FHitResult              PointDamageHitResult           (Parm, OutParm, ReferenceParm)
 // struct FHitMarkerSettings      ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FHitMarkerSettings AIceKaiju_Character_BP_C::STATIC_BPOverrideDamageCauserHitMarker(class AShooterPlayerController** DamageCauserController, bool* bHitFriendlyTarget, float* PreDamageHealth, float* DamageAmount, bool* bIsPointDamage, struct FDamageEvent* DamageEvent, struct FHitResult* PointDamageHitResult)
+struct FHitMarkerSettings AIceKaiju_Character_BP_C::BPOverrideDamageCauserHitMarker(class AShooterPlayerController** DamageCauserController, bool* bHitFriendlyTarget, float* PreDamageHealth, float* DamageAmount, bool* bIsPointDamage, struct FDamageEvent* DamageEvent, struct FHitResult* PointDamageHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPOverrideDamageCauserHitMarker");
 
@@ -330,19 +330,19 @@ struct FHitMarkerSettings AIceKaiju_Character_BP_C::STATIC_BPOverrideDamageCause
 // ()
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIceKaiju_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* PrevCustomMode, unsigned char* newCustomMode)
+void AIceKaiju_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.K2_OnMovementModeChanged");
 
 	AIceKaiju_Character_BP_C_K2_OnMovementModeChanged_Params params;
 	params.PrevMovementMode = PrevMovementMode;
-	params.newMovementMode = newMovementMode;
+	params.NewMovementMode = NewMovementMode;
 	params.PrevCustomMode = PrevCustomMode;
-	params.newCustomMode = newCustomMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 
@@ -790,16 +790,15 @@ float AIceKaiju_Character_BP_C::BPGetGravityZScale()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.DealAOECollisionDamage
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
 
-void AIceKaiju_Character_BP_C::DealAOECollisionDamage()
+void AIceKaiju_Character_BP_C::STATIC_DealAOECollisionDamage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.DealAOECollisionDamage");
 
 	AIceKaiju_Character_BP_C_DealAOECollisionDamage_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -842,15 +841,16 @@ void AIceKaiju_Character_BP_C::InitFurRestDistance()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.SetLastTransforms
-// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Exec, Native, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AIceKaiju_Character_BP_C::STATIC_SetLastTransforms()
+void AIceKaiju_Character_BP_C::SetLastTransforms()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.SetLastTransforms");
 
 	AIceKaiju_Character_BP_C_SetLastTransforms_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -859,9 +859,9 @@ void AIceKaiju_Character_BP_C::STATIC_SetLastTransforms()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.UpdateFur
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Native, Event, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AIceKaiju_Character_BP_C::STATIC_UpdateFur()
+void AIceKaiju_Character_BP_C::UpdateFur()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.UpdateFur");
 
@@ -877,13 +877,13 @@ void AIceKaiju_Character_BP_C::STATIC_UpdateFur()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.SimulateFur
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// TArray<struct FTransform>      InSocketTransforms             (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct UObject_FTransform> InSocketTransforms             (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FTransform>      InLastSubstepSocketTransforms  (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct UObject_FTransform> InLastSubstepSocketTransforms  (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AIceKaiju_Character_BP_C::STATIC_SimulateFur(float DeltaTime, TArray<struct FTransform>* InSocketTransforms, TArray<struct FTransform>* InLastSubstepSocketTransforms)
+void AIceKaiju_Character_BP_C::SimulateFur(float DeltaTime, TArray<struct UObject_FTransform>* InSocketTransforms, TArray<struct UObject_FTransform>* InLastSubstepSocketTransforms)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.SimulateFur");
 
@@ -891,6 +891,7 @@ void AIceKaiju_Character_BP_C::STATIC_SimulateFur(float DeltaTime, TArray<struct
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -904,17 +905,18 @@ void AIceKaiju_Character_BP_C::STATIC_SimulateFur(float DeltaTime, TArray<struct
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.SetFurParams
-// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// TArray<struct FTransform>      InSocketTransforms             (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct UObject_FTransform> InSocketTransforms             (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AIceKaiju_Character_BP_C::STATIC_SetFurParams(TArray<struct FTransform>* InSocketTransforms)
+void AIceKaiju_Character_BP_C::SetFurParams(TArray<struct UObject_FTransform>* InSocketTransforms)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.SetFurParams");
 
 	AIceKaiju_Character_BP_C_SetFurParams_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -946,9 +948,9 @@ void AIceKaiju_Character_BP_C::CreateNodeDynamicMATs()
 // ()
 // Parameters:
 // class AActor*                  CalcActor                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceKaiju_Character_BP_C::Get_Launch_DirectionForWildLeap(class AActor* CalcActor, struct FVector* _return)
+void AIceKaiju_Character_BP_C::Get_Launch_DirectionForWildLeap(class AActor* CalcActor, struct FVector* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Get Launch DirectionForWildLeap");
 
@@ -961,8 +963,8 @@ void AIceKaiju_Character_BP_C::Get_Launch_DirectionForWildLeap(class AActor* Cal
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -1005,7 +1007,7 @@ void AIceKaiju_Character_BP_C::BP_OnSetDeath()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.TraceForLeapCollisionDamage
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AIceKaiju_Character_BP_C::STATIC_TraceForLeapCollisionDamage()
 {
@@ -1014,6 +1016,7 @@ void AIceKaiju_Character_BP_C::STATIC_TraceForLeapCollisionDamage()
 	AIceKaiju_Character_BP_C_TraceForLeapCollisionDamage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1022,9 +1025,9 @@ void AIceKaiju_Character_BP_C::STATIC_TraceForLeapCollisionDamage()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.AngryAOEDmg
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AIceKaiju_Character_BP_C::STATIC_AngryAOEDmg()
+void AIceKaiju_Character_BP_C::AngryAOEDmg()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.AngryAOEDmg");
 
@@ -1041,9 +1044,9 @@ void AIceKaiju_Character_BP_C::STATIC_AngryAOEDmg()
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.ShouldStopJumpRotation
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceKaiju_Character_BP_C::ShouldStopJumpRotation(bool* _return)
+void AIceKaiju_Character_BP_C::ShouldStopJumpRotation(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.ShouldStopJumpRotation");
 
@@ -1055,15 +1058,15 @@ void AIceKaiju_Character_BP_C::ShouldStopJumpRotation(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LaunchLiquidBomb
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AIceKaiju_Character_BP_C::STATIC_LaunchLiquidBomb()
+void AIceKaiju_Character_BP_C::LaunchLiquidBomb()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LaunchLiquidBomb");
 
@@ -1079,9 +1082,9 @@ void AIceKaiju_Character_BP_C::STATIC_LaunchLiquidBomb()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LiquidBombTrace
-// (NetReliable, Native, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Native, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AIceKaiju_Character_BP_C::LiquidBombTrace()
+void AIceKaiju_Character_BP_C::STATIC_LiquidBombTrace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LiquidBombTrace");
 
@@ -1117,9 +1120,9 @@ void AIceKaiju_Character_BP_C::FinishLeapTamed()
 // ()
 // Parameters:
 // class AActor*                  CalcActor                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceKaiju_Character_BP_C::GetLaunchDirection(class AActor* CalcActor, struct FVector* _return)
+void AIceKaiju_Character_BP_C::GetLaunchDirection(class AActor* CalcActor, struct FVector* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.GetLaunchDirection");
 
@@ -1132,8 +1135,8 @@ void AIceKaiju_Character_BP_C::GetLaunchDirection(class AActor* CalcActor, struc
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -1184,9 +1187,9 @@ void AIceKaiju_Character_BP_C::ShortestAngleDistance(float AngleCurrent, float A
 // ()
 // Parameters:
 // bool                           LimitLowerPitch                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceKaiju_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch, struct FVector* _return)
+void AIceKaiju_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch, struct FVector* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.GetClampedLookDir");
 
@@ -1199,15 +1202,15 @@ void AIceKaiju_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch, struct FV
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LeapingTrace
-// (NetRequest, Native, Event, Static, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AIceKaiju_Character_BP_C::STATIC_LeapingTrace()
+void AIceKaiju_Character_BP_C::LeapingTrace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LeapingTrace");
 
@@ -1289,7 +1292,7 @@ void AIceKaiju_Character_BP_C::UpdateLeapTargetVFXLocation(bool IsVisible, const
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Calc Leap TargetTamed
-// (NetRequest, Exec, Native, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FProjectileArc          Arc                            (Parm)
 // float                          DebugDrawDuration              (Parm, ZeroConstructor, IsPlainOldData)
@@ -1301,7 +1304,7 @@ void AIceKaiju_Character_BP_C::UpdateLeapTargetVFXLocation(bool IsVisible, const
 // float                          ArcTime                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              HitResult                      (Parm, OutParm)
 
-void AIceKaiju_Character_BP_C::Calc_Leap_TargetTamed(const struct FProjectileArc& Arc, float DebugDrawDuration, bool* FoundValidTarget, bool* IsAirTarget, struct FVector* Location, struct FRotator* Rotation, struct FVector* TargetNormal, float* ArcTime, struct FHitResult* HitResult)
+void AIceKaiju_Character_BP_C::STATIC_Calc_Leap_TargetTamed(const struct FProjectileArc& Arc, float DebugDrawDuration, bool* FoundValidTarget, bool* IsAirTarget, struct FVector* Location, struct FRotator* Rotation, struct FVector* TargetNormal, float* ArcTime, struct FHitResult* HitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Calc Leap TargetTamed");
 
@@ -1439,13 +1442,13 @@ void AIceKaiju_Character_BP_C::BPClientDoMultiUse(class APlayerController** ForP
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPGetMultiUseEntries
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Event, NetResponse, Public, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AIceKaiju_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AIceKaiju_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPGetMultiUseEntries");
 
@@ -1453,7 +1456,6 @@ TArray<struct FMultiUseEntry> AIceKaiju_Character_BP_C::STATIC_BPGetMultiUseEntr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1798,7 +1800,7 @@ float AIceKaiju_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDa
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BlueprintAdjustOutputDamage
-// (Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -1807,7 +1809,7 @@ float AIceKaiju_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDa
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AIceKaiju_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AIceKaiju_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -1905,16 +1907,15 @@ void AIceKaiju_Character_BP_C::CheckLeapAttackEnd()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPTimerServer
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetResponse, Private, Protected, Delegate, BlueprintCallable, BlueprintPure, NetValidate)
 
-void AIceKaiju_Character_BP_C::STATIC_BPTimerServer()
+void AIceKaiju_Character_BP_C::BPTimerServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPTimerServer");
 
 	AIceKaiju_Character_BP_C_BPTimerServer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1957,9 +1958,9 @@ void AIceKaiju_Character_BP_C::OnRep_bDoingLeap()
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.StartLeap
-// (NetReliable, Event, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Event, Static, Private, Protected, Delegate, BlueprintCallable, BlueprintPure, NetValidate)
 
-void AIceKaiju_Character_BP_C::StartLeap()
+void AIceKaiju_Character_BP_C::STATIC_StartLeap()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.StartLeap");
 
@@ -2042,11 +2043,11 @@ int AIceKaiju_Character_BP_C::BPAdjustAttackIndex(int* AttackIndex)
 
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Ice Kaiju Perform Attack
-// (NetRequest, Native, Static, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (Exec, Native, NetMulticast, Private, Protected, Delegate, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<EIceKaijuAttackList> Attack                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIceKaiju_Character_BP_C::STATIC_Ice_Kaiju_Perform_Attack(TEnumAsByte<EIceKaijuAttackList> Attack)
+void AIceKaiju_Character_BP_C::Ice_Kaiju_Perform_Attack(TEnumAsByte<EIceKaijuAttackList> Attack)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Ice Kaiju Perform Attack");
 
@@ -2483,9 +2484,9 @@ void AIceKaiju_Character_BP_C::DelayedPress()
 // bool                           AimHit                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           LeapInstant                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 MaxDistLeapTraceGroundLoc      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FailedToFindMaxDistLeapTraceGroundLoc (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FailedtoFindMaxDistLeapTraceGroundLoc (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIceKaiju_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool LeapInstant, const struct FVector& MaxDistLeapTraceGroundLoc, bool FailedToFindMaxDistLeapTraceGroundLoc)
+void AIceKaiju_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool LeapInstant, const struct FVector& MaxDistLeapTraceGroundLoc, bool FailedtoFindMaxDistLeapTraceGroundLoc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Server_TraceTargetDir");
 
@@ -2494,7 +2495,7 @@ void AIceKaiju_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLo
 	params.AimHit = AimHit;
 	params.LeapInstant = LeapInstant;
 	params.MaxDistLeapTraceGroundLoc = MaxDistLeapTraceGroundLoc;
-	params.FailedToFindMaxDistLeapTraceGroundLoc = FailedToFindMaxDistLeapTraceGroundLoc;
+	params.FailedtoFindMaxDistLeapTraceGroundLoc = FailedtoFindMaxDistLeapTraceGroundLoc;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2510,9 +2511,9 @@ void AIceKaiju_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLo
 // struct FVector                 AimLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AimHit                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 MaxDistLeapTraceGroundLoc      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FailedToFindMaxDistLeapTraceGroundLoc (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           FailedtoFindMaxDistLeapTraceGroundLoc (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIceKaiju_Character_BP_C::Multi_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, const struct FVector& MaxDistLeapTraceGroundLoc, bool FailedToFindMaxDistLeapTraceGroundLoc)
+void AIceKaiju_Character_BP_C::Multi_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, const struct FVector& MaxDistLeapTraceGroundLoc, bool FailedtoFindMaxDistLeapTraceGroundLoc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Multi_TraceTargetDir");
 
@@ -2520,7 +2521,7 @@ void AIceKaiju_Character_BP_C::Multi_TraceTargetDir(const struct FVector& AimLoc
 	params.AimLoc = AimLoc;
 	params.AimHit = AimHit;
 	params.MaxDistLeapTraceGroundLoc = MaxDistLeapTraceGroundLoc;
-	params.FailedToFindMaxDistLeapTraceGroundLoc = FailedToFindMaxDistLeapTraceGroundLoc;
+	params.FailedtoFindMaxDistLeapTraceGroundLoc = FailedtoFindMaxDistLeapTraceGroundLoc;
 
 	auto flags = fn->FunctionFlags;
 

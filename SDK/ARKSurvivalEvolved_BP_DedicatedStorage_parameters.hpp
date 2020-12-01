@@ -44,6 +44,7 @@ struct ABP_DedicatedStorage_C_GetResourceStackSize_Params
 struct ABP_DedicatedStorage_C_BPOnDemolish_Params
 {
 	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.FillInventory

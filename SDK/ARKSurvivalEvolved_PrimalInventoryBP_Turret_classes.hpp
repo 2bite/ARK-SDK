@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_Turret.PrimalInventoryBP_Turret_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_Turret_C : public UPrimalInventoryBP_StorageBox_Base_C
 {
 public:

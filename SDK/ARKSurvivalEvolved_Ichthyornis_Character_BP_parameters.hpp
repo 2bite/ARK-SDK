@@ -58,7 +58,7 @@ struct AIchthyornis_Character_BP_C_RemoveDragWeightIfNeeded_Params
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.CancelAttack
 struct AIchthyornis_Character_BP_C_CancelAttack_Params
 {
-	bool                                               goBackToOwner;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               GoBackToOwner;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.GetTamedOrderFromAggressionState
@@ -156,7 +156,7 @@ struct AIchthyornis_Character_BP_C_BPKilledSomethingEvent_Params
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.SetTargetForLaunchedAttack
 struct AIchthyornis_Character_BP_C_SetTargetForLaunchedAttack_Params
 {
-	class APrimalCharacter*                            newTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            NewTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DoLaunchAttack
@@ -479,7 +479,7 @@ struct AIchthyornis_Character_BP_C_Calculate_Dive_Up_Impulse_Params
 struct AIchthyornis_Character_BP_C_CanGrabPawn_Params
 {
 	class APawn*                                       Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               canGrab;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               CanGrab;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Rotate Z to Target
@@ -567,7 +567,7 @@ struct AIchthyornis_Character_BP_C_SlowlyRotateZTo_Params
 {
 	struct FRotator                                    TargetRotation;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    InitialRotation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    initialRotation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DropCarriedAfterTime
@@ -596,7 +596,7 @@ struct AIchthyornis_Character_BP_C_SpawnWaterParticles_Params
 struct AIchthyornis_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

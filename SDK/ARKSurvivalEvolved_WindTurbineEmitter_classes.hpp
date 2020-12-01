@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WindTurbineEmitter.WindTurbineEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AWindTurbineEmitter_C : public APrimalEmitterSpawnable
 {
 public:

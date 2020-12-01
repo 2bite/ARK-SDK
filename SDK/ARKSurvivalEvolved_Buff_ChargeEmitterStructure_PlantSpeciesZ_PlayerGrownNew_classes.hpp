@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitterStructure_PlantSpeciesZ_PlayerGrownNew.Buff_ChargeEmitterStructure_PlantSpeciesZ_PlayerGrownNew_C
-// 0x0000 (0x0B20 - 0x0B20)
+// 0x0000 (0x0BB0 - 0x0BB0)
 class ABuff_ChargeEmitterStructure_PlantSpeciesZ_PlayerGrownNew_C : public ABuff_ChargeEmitterStructure_PlantSpeciesZ_Base_C
 {
 public:

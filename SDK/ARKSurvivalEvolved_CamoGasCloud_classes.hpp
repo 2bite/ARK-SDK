@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CamoGasCloud.CamoGasCloud_C
-// 0x0003 (0x08A3 - 0x08A0)
+// 0x0003 (0x0933 - 0x0930)
 class ACamoGasCloud_C : public ABuff_PoisonTrap_C
 {
 public:
-	bool                                               drainStaminaAffectsDinos;                                 // 0x08A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               drainStaminaAffectsBigDinos;                              // 0x08A1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               drainStaminaAffectsTamedDinos;                            // 0x08A2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               drainStaminaAffectsDinos;                                 // 0x0930(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               drainStaminaAffectsBigDinos;                              // 0x0931(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               drainStaminaAffectsTamedDinos;                            // 0x0932(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

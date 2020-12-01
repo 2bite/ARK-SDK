@@ -14,6 +14,15 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Buff_Freeze.Buff_Freeze_C.BPServerHandleNetExecCommand
+struct ABuff_Freeze_C_BPServerHandleNetExecCommand_Params
+{
+	class APlayerController**                          FromPC;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBPNetExecParams                            ExecParams;                                               // (Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Buff_Freeze.Buff_Freeze_C.BPPreventFirstPerson
 struct ABuff_Freeze_C_BPPreventFirstPerson_Params
 {

@@ -14,6 +14,11 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExternalVisorToggle
+struct ABuff_TekArmor_Helmet_C_ExternalVisorToggle_Params
+{
+};
+
 // Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPNotifyOtherBuffActivated
 struct ABuff_TekArmor_Helmet_C_BPNotifyOtherBuffActivated_Params
 {
@@ -70,10 +75,9 @@ struct ABuff_TekArmor_Helmet_C_BPDeactivated_Params
 	class AActor**                                     ForInstigator;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPActivated
-struct ABuff_TekArmor_Helmet_C_BPActivated_Params
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPActivated_1
+struct ABuff_TekArmor_Helmet_C_BPActivated_1_Params
 {
-	class AActor**                                     ForInstigator;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.UserConstructionScript
@@ -101,13 +105,13 @@ struct ABuff_TekArmor_Helmet_C_FadeOut__UpdateFunc_Params
 {
 };
 
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_90
-struct ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_90_Params
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_81
+struct ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_81_Params
 {
 };
 
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_89
-struct ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_89_Params
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_80
+struct ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_80_Params
 {
 };
 
@@ -195,6 +199,11 @@ struct ABuff_TekArmor_Helmet_C_Server_RemoveAllPostProcessBuffs_Params
 struct ABuff_TekArmor_Helmet_C_RemovePostProcessBuff_Params
 {
 	int                                                index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExternalVisorOnOffToggle
+struct ABuff_TekArmor_Helmet_C_ExternalVisorOnOffToggle_Params
+{
 };
 
 // Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExecuteUbergraph_Buff_TekArmor_Helmet

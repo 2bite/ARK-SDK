@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_CupidArrow_Tranq.ProjArrow_CupidArrow_Tranq_C
-// 0x0008 (0x0680 - 0x0678)
+// 0x0008 (0x0690 - 0x0688)
 class AProjArrow_CupidArrow_Tranq_C : public AProjArrow_Tranq_C
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0678(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

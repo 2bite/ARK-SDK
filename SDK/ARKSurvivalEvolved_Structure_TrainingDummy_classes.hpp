@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Structure_TrainingDummy.Structure_TrainingDummy_C
-// 0x0005 (0x0AA5 - 0x0AA0)
+// 0x0005 (0x0ABD - 0x0AB8)
 class AStructure_TrainingDummy_C : public AStructureBaseBP_C
 {
 public:
-	float                                              CachedDamage;                                             // 0x0AA0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x0AA4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CachedDamage;                                             // 0x0AB8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x0ABC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

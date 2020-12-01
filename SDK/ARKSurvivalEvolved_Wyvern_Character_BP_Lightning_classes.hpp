@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wyvern_Character_BP_Lightning.Wyvern_Character_BP_Lightning_C
-// 0x000C (0x21CC - 0x21C0)
+// 0x000C (0x224C - 0x2240)
 class AWyvern_Character_BP_Lightning_C : public AWyvern_Character_BP_Base_C
 {
 public:
-	struct FVector                                     TargetAimOffset;                                          // 0x21C0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     TargetAimOffset;                                          // 0x2240(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

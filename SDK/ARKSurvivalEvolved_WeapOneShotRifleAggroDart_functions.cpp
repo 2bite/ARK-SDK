@@ -50,18 +50,18 @@ void AWeapOneShotRifleAggroDart_C::ReceiveBeginPlay()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         TotalDuration                  (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotifyState**       AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapOneShotRifleAggroDart_C::BPAnimNotifyCustomState_Begin(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration, class UAnimNotifyState** AnimNotifyObject)
+void AWeapOneShotRifleAggroDart_C::BPAnimNotifyCustomState_Begin(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, float* TotalDuration, class UAnimNotifyState** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapOneShotRifleAggroDart.WeapOneShotRifleAggroDart_C.BPAnimNotifyCustomState_Begin");
 
 	AWeapOneShotRifleAggroDart_C_BPAnimNotifyCustomState_Begin_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.TotalDuration = TotalDuration;
 	params.AnimNotifyObject = AnimNotifyObject;
@@ -78,17 +78,17 @@ void AWeapOneShotRifleAggroDart_C::BPAnimNotifyCustomState_Begin(struct FName* C
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotifyState**       AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapOneShotRifleAggroDart_C::BPAnimNotifyCustomState_End(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotifyState** AnimNotifyObject)
+void AWeapOneShotRifleAggroDart_C::BPAnimNotifyCustomState_End(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotifyState** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapOneShotRifleAggroDart.WeapOneShotRifleAggroDart_C.BPAnimNotifyCustomState_End");
 
 	AWeapOneShotRifleAggroDart_C_BPAnimNotifyCustomState_End_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

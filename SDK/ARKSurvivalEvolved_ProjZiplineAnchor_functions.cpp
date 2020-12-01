@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Event, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjZiplineAnchor_C::STATIC_CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* _return)
+void AProjZiplineAnchor_C::CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall");
 
@@ -28,14 +28,13 @@ void AProjZiplineAnchor_C::STATIC_CheckForInvisibleWall(const struct FVector& St
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -65,9 +64,9 @@ void AProjZiplineAnchor_C::HitValidForAttachment(struct FHitResult* Hit, bool* V
 
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.SpawnBreakEmitter
-// (Native, NetResponse, MulticastDelegate, Public, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Exec, Native, Event, Static, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AProjZiplineAnchor_C::SpawnBreakEmitter()
+void AProjZiplineAnchor_C::STATIC_SpawnBreakEmitter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjZiplineAnchor.ProjZiplineAnchor_C.SpawnBreakEmitter");
 

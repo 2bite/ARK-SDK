@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_RareMushroom.PrimalItemResource_RareMushroom_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemResource_RareMushroom_C : public UPrimalItemConsumableEatable_C
 {
 public:

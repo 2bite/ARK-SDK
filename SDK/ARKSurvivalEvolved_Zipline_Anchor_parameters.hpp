@@ -92,7 +92,7 @@ struct AZipline_Anchor_C_HasLineOfSight_Params
 struct AZipline_Anchor_C_CheckForHarness_Params
 {
 	class APlayerController*                           Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Zipline_Anchor.Zipline_Anchor_C.SpawnBreakEmitter
@@ -130,8 +130,8 @@ struct AZipline_Anchor_C_IsZiplineBlocked_Params
 	float                                              StartEndOffset;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              AttachOffset;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     overrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              overrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     overrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              OverrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     OverrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               DontUseLineOfSightCheck;                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  HitResult;                                                // (Parm, OutParm)
 	bool                                               HitReturn;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

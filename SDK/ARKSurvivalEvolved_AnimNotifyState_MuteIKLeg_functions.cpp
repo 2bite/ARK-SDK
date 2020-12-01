@@ -15,16 +15,16 @@ namespace sdk
 // Function AnimNotifyState_MuteIKLeg.AnimNotifyState_MuteIKLeg_C.Received_NotifyEnd
 // ()
 // Parameters:
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotifyState_MuteIKLeg_C::Received_NotifyEnd(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation)
+bool UAnimNotifyState_MuteIKLeg_C::Received_NotifyEnd(class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimNotifyState_MuteIKLeg.AnimNotifyState_MuteIKLeg_C.Received_NotifyEnd");
 
 	UAnimNotifyState_MuteIKLeg_C_Received_NotifyEnd_Params params;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
@@ -40,17 +40,17 @@ bool UAnimNotifyState_MuteIKLeg_C::Received_NotifyEnd(class USkeletalMeshCompone
 // Function AnimNotifyState_MuteIKLeg.AnimNotifyState_MuteIKLeg_C.Received_NotifyBegin
 // ()
 // Parameters:
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         TotalDuration                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotifyState_MuteIKLeg_C::Received_NotifyBegin(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration)
+bool UAnimNotifyState_MuteIKLeg_C::Received_NotifyBegin(class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, float* TotalDuration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimNotifyState_MuteIKLeg.AnimNotifyState_MuteIKLeg_C.Received_NotifyBegin");
 
 	UAnimNotifyState_MuteIKLeg_C_Received_NotifyBegin_Params params;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.TotalDuration = TotalDuration;
 

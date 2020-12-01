@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemDye_Cyan.PrimalItemDye_Cyan_C
-// 0x0000 (0x09B0 - 0x09B0)
+// 0x0000 (0x09D0 - 0x09D0)
 class UPrimalItemDye_Cyan_C : public UPrimalItemDyeGeneric_C
 {
 public:

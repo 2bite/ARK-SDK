@@ -15,11 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass FeedingTrough.FeedingTrough_C
-// 0x0008 (0x0DF0 - 0x0DE8)
+// 0x000C (0x0E20 - 0x0E14)
 class AFeedingTrough_C : public AFeedingTroughBaseBP_C
 {
 public:
-	class UPrimalInventoryBP_FeedingTrough_C*          PrimalInventoryBP_FeedingTrough_C1;                       // 0x0DE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0E14(0x0004) MISSED OFFSET
+	class UPrimalInventoryBP_FeedingTrough_C*          PrimalInventoryBP_FeedingTrough_C1;                       // 0x0E18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

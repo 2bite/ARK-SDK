@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_DeinonychusPinned.Buff_DeinonychusPinned_C
-// 0x000C (0x0970 - 0x0964)
+// 0x000C (0x0A00 - 0x09F4)
 class ABuff_DeinonychusPinned_C : public ABuff_Pinned_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0964(0x0004) MISSED OFFSET
-	class UClass*                                      DebuffClass_1;                                            // 0x0968(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x09F4(0x0004) MISSED OFFSET
+	class UClass*                                      DebuffClass_1;                                            // 0x09F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

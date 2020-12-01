@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass TPV_Female_ScoutGrenade_AnimBlueprint.TPV_Female_ScoutGrenade_AnimBlueprint_C
-// 0x0000 (0x37A5 - 0x37A5)
+// 0x0000 (0x3A14 - 0x3A14)
 class UTPV_Female_ScoutGrenade_AnimBlueprint_C : public UTPV_Female_NoWeapon_AnimBlueprint_C
 {
 public:

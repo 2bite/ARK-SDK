@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_EncapsulateFixedTime.Buff_EncapsulateFixedTime_C
-// 0x0000 (0x097C - 0x097C)
+// 0x0000 (0x0A0C - 0x0A0C)
 class ABuff_EncapsulateFixedTime_C : public ABuff_Encapsulated_C
 {
 public:

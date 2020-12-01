@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Baryonyx_Character_BP_Aberrant.Baryonyx_Character_BP_Aberrant_C
-// 0x0000 (0x20E8 - 0x20E8)
+// 0x0000 (0x2168 - 0x2168)
 class ABaryonyx_Character_BP_Aberrant_C : public ABaryonyx_Character_BP_C
 {
 public:

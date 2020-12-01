@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ptero_Minion_Character_BP.Ptero_Minion_Character_BP_C
-// 0x0008 (0x2098 - 0x2090)
+// 0x0008 (0x2118 - 0x2110)
 class APtero_Minion_Character_BP_C : public APtero_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Ptero_Minion_C* DinoCharacterStatus_BP_Ptero_Minion_C1;                   // 0x2090(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Ptero_Minion_C* DinoCharacterStatus_BP_Ptero_Minion_C1;                   // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

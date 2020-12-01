@@ -48,7 +48,7 @@ public:
 	}
 
 
-	void FindTargetAreas(bool* found);
+	void FindTargetAreas(bool* Found);
 	bool OnCanUseStateEvent();
 	void OnEndEvent();
 	void OnTickEvent(float* DeltaSeconds);

@@ -154,7 +154,7 @@ struct ABuff_Glider_C_BuffAdjustDamage_Params
 // Function Buff_Glider.Buff_Glider_C.AreRotatorsNearlyEqual
 struct ABuff_Glider_C_AreRotatorsNearlyEqual_Params
 {
-	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    RotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    rotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Error;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -200,7 +200,7 @@ struct ABuff_Glider_C_GetGlideSpeedRatio_Pure_Params
 // Function Buff_Glider.Buff_Glider_C.GetDefaultOwningPlayer
 struct ABuff_Glider_C_GetDefaultOwningPlayer_Params
 {
-	class AShooterCharacter*                           ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Glider.Buff_Glider_C.IsPlayerGrounded
@@ -249,7 +249,7 @@ struct ABuff_Glider_C_Reset_Owning_PlayerVariables_Params
 // Function Buff_Glider.Buff_Glider_C.ClampPlayerVelocity
 struct ABuff_Glider_C_ClampPlayerVelocity_Params
 {
-	float                                              maxVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Glider.Buff_Glider_C.NetSetCurrentGliderState
@@ -286,28 +286,28 @@ struct ABuff_Glider_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_122
-struct ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_122_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_96
+struct ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_96_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_121
-struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_121_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_95
+struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_95_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_120
-struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_120_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_94
+struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_94_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_119
-struct ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_119_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_93
+struct ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_93_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_56
-struct ABuff_Glider_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_56_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_48
+struct ABuff_Glider_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_48_Params
 {
 };
 

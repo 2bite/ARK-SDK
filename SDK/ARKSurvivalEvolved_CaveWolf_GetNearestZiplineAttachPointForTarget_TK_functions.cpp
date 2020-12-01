@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CaveWolf_GetNearestZiplineAttachPointForTarget_TK.CaveWolf_GetNearestZiplineAttachPointForTarget_TK_C.FindAttachLocation
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, HasOutParms, DLLImport, Const, NetValidate)
+// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 GroundLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 AttachLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -25,7 +25,6 @@ void UCaveWolf_GetNearestZiplineAttachPointForTarget_TK_C::FindAttachLocation(st
 	UCaveWolf_GetNearestZiplineAttachPointForTarget_TK_C_FindAttachLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

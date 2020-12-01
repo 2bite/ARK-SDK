@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_BaseCeilingDoorGiant_BP.SM_BaseCeilingDoorGiant_BP_C
-// 0x0000 (0x0B20 - 0x0B20)
+// 0x0000 (0x0B38 - 0x0B38)
 class ASM_BaseCeilingDoorGiant_BP_C : public ADoor_Base_SM_C
 {
 public:

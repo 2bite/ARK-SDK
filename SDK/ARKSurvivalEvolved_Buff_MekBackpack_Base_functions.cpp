@@ -70,11 +70,11 @@ void ABuff_MekBackpack_Base_C::RestoreBackpackSaveData(const struct FMekBackpack
 
 
 // Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.GetBackpackSaveData
-// (NetRequest, Event, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (Exec, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
-void ABuff_MekBackpack_Base_C::GetBackpackSaveData(struct FMekBackpackData* Data)
+void ABuff_MekBackpack_Base_C::STATIC_GetBackpackSaveData(struct FMekBackpackData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.GetBackpackSaveData");
 
@@ -176,9 +176,9 @@ void ABuff_MekBackpack_Base_C::NotifyActivateBackpack()
 // ()
 // Parameters:
 // float                          DefaultSpeed                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewSpeed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          newSpeed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MekBackpack_Base_C::OverrideTurnInPlaceSpeed(float DefaultSpeed, float* NewSpeed)
+void ABuff_MekBackpack_Base_C::OverrideTurnInPlaceSpeed(float DefaultSpeed, float* newSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.OverrideTurnInPlaceSpeed");
 
@@ -191,8 +191,8 @@ void ABuff_MekBackpack_Base_C::OverrideTurnInPlaceSpeed(float DefaultSpeed, floa
 
 	fn->FunctionFlags = flags;
 
-	if (NewSpeed != nullptr)
-		*NewSpeed = params.NewSpeed;
+	if (newSpeed != nullptr)
+		*newSpeed = params.newSpeed;
 }
 
 

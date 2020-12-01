@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BeeHive_Placement_Emitter.BeeHive_Placement_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ABeeHive_Placement_Emitter_C : public APrimalEmitterSpawnable
 {
 public:

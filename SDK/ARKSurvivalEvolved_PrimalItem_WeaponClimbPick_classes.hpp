@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponClimbPick.PrimalItem_WeaponClimbPick_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItem_WeaponClimbPick_C : public UPrimalItemWeaponGenericAmmoless_C
 {
 public:

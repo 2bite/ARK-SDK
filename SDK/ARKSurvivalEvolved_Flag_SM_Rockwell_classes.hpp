@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Flag_SM_Rockwell.Flag_SM_Rockwell_C
-// 0x0000 (0x0AA8 - 0x0AA8)
+// 0x0000 (0x0AC0 - 0x0AC0)
 class AFlag_SM_Rockwell_C : public AFlag_SM_C
 {
 public:

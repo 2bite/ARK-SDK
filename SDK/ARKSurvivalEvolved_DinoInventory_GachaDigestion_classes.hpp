@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoInventory_GachaDigestion.DinoInventory_GachaDigestion_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoInventory_GachaDigestion_C : public UDinoTamedInventoryComponent_BP_Base_C
 {
 public:

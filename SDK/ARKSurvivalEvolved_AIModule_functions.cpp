@@ -118,7 +118,7 @@ void AAIController::OnPossess(class APawn* PossessedPawn)
 // Function AIModule.AIController.MoveToLocation
 // ()
 // Parameters:
-// struct FVector                 Dest                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 dest                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          AcceptanceRadius               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bStopOnOverlap                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bUsePathfinding                (Parm, ZeroConstructor, IsPlainOldData)
@@ -128,12 +128,12 @@ void AAIController::OnPossess(class APawn* PossessedPawn)
 // bool                           WasPlayerCommand               (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EPathFollowingRequestResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EPathFollowingRequestResult> AAIController::MoveToLocation(const struct FVector& Dest, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bProjectDestinationToNavigation, bool bCanStrafe, class UClass* FilterClass, bool WasPlayerCommand)
+TEnumAsByte<EPathFollowingRequestResult> AAIController::MoveToLocation(const struct FVector& dest, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bProjectDestinationToNavigation, bool bCanStrafe, class UClass* FilterClass, bool WasPlayerCommand)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIModule.AIController.MoveToLocation");
 
 	AAIController_MoveToLocation_Params params;
-	params.Dest = Dest;
+	params.dest = dest;
 	params.AcceptanceRadius = AcceptanceRadius;
 	params.bStopOnOverlap = bStopOnOverlap;
 	params.bUsePathfinding = bUsePathfinding;

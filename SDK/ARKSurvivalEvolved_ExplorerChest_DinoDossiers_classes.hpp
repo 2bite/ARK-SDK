@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ExplorerChest_DinoDossiers.ExplorerChest_DinoDossiers_C
-// 0x000B (0x0590 - 0x0585)
+// 0x000B (0x05A0 - 0x0595)
 class AExplorerChest_DinoDossiers_C : public AExplorerChest_Base_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0585(0x0003) MISSED OFFSET
-	class USkeletalMeshComponent*                      SkeletalMesh2;                                            // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0595(0x0003) MISSED OFFSET
+	class USkeletalMeshComponent*                      SkeletalMesh2;                                            // 0x0598(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

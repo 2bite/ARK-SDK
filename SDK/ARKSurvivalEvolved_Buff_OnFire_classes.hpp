@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_OnFire.Buff_OnFire_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_OnFire_C : public ABuff_Base_C
 {
 public:
@@ -27,6 +27,7 @@ public:
 	}
 
 
+	bool BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_OnFire(int EntryPoint);
 };

@@ -14,6 +14,14 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPCustomAllowAddBuff
+struct ABuff_OwlIceCrash_C_BPCustomAllowAddBuff_Params
+{
+	class APrimalCharacter**                           forCharacter;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BuffTickClient
 struct ABuff_OwlIceCrash_C_BuffTickClient_Params
 {
@@ -59,8 +67,8 @@ struct ABuff_OwlIceCrash_C_BPOnInstigatorMovementModeChangedNotify_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PreviousCustomMode;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.UserConstructionScript

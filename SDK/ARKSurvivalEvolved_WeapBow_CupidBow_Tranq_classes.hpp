@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapBow_CupidBow_Tranq.WeapBow_CupidBow_Tranq_C
-// 0x0000 (0x0E58 - 0x0E58)
+// 0x0000 (0x0E78 - 0x0E78)
 class AWeapBow_CupidBow_Tranq_C : public AWeapBow_Tranq_C
 {
 public:

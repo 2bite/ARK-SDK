@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureTurretBallistaBaseBP.StructureTurretBallistaBaseBP_C
-// 0x0018 (0x1038 - 0x1020)
+// 0x0018 (0x1050 - 0x1038)
 class AStructureTurretBallistaBaseBP_C : public APrimalStructureTurretBallista
 {
 public:
-	class UPrimalInventoryBP_Ballista_C*               PrimalInventoryBP_Ballista_C1;                            // 0x1020(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x1028(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x1030(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_Ballista_C*               PrimalInventoryBP_Ballista_C1;                            // 0x1038(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x1040(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x1048(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass C4Charge.C4Charge_C
-// 0x0008 (0x0B40 - 0x0B38)
+// 0x0008 (0x0B58 - 0x0B50)
 class AC4Charge_C : public APrimalStructureExplosive
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0B38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

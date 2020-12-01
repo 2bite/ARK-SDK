@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Thylaco_CanPounceOnTargetFromTree_DK.Thylaco_CanPounceOnTargetFromTree_DK_C.ReceiveConditionCheck
-// (Exec, Native, NetResponse, Static, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 

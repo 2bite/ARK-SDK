@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wyvern_Character_BP_Fire.Wyvern_Character_BP_Fire_C
-// 0x0000 (0x21C0 - 0x21C0)
+// 0x0000 (0x2240 - 0x2240)
 class AWyvern_Character_BP_Fire_C : public AWyvern_Character_BP_Base_C
 {
 public:

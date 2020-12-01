@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WoodElevatorTrack.WoodElevatorTrack_C
-// 0x0008 (0x0DC8 - 0x0DC0)
+// 0x0008 (0x0DE0 - 0x0DD8)
 class AWoodElevatorTrack_C : public APrimalStructureElevatorTrack
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0DC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

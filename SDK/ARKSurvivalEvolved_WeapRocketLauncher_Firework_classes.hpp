@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapRocketLauncher_Firework.WeapRocketLauncher_Firework_C
-// 0x0000 (0x0DD8 - 0x0DD8)
+// 0x0000 (0x0DF8 - 0x0DF8)
 class AWeapRocketLauncher_Firework_C : public AWeapRocketLauncher_C
 {
 public:

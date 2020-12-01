@@ -105,6 +105,7 @@ struct ABP_Wire_Flex_C_BPOnWaterStateChange_Params
 struct ABP_Wire_Flex_C_BPOnDemolish_Params
 {
 	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.ExecuteUbergraph_BP_Wire_Flex

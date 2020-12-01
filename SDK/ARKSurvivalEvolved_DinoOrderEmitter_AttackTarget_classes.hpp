@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoOrderEmitter_AttackTarget.DinoOrderEmitter_AttackTarget_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ADinoOrderEmitter_AttackTarget_C : public APrimalEmitterSpawnable
 {
 public:

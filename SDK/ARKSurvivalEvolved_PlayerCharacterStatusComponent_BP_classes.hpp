@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PlayerCharacterStatusComponent_BP.PlayerCharacterStatusComponent_BP_C
-// 0x0000 (0x1088 - 0x1088)
+// 0x0000 (0x1090 - 0x1090)
 class UPlayerCharacterStatusComponent_BP_C : public UPrimalPlayerStatusComponent
 {
 public:

@@ -54,7 +54,7 @@ struct ADirewolf_Character_BP_C_BPDoAttack_Params
 struct ADirewolf_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -68,7 +68,7 @@ struct ADirewolf_Character_BP_C_DoSniffAbility_Params
 struct ADirewolf_Character_BP_C_GetHiddenDinos_Params
 {
 	float                                              Radius;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<class AActor*>                              FoundDinos;                                               // (Parm, OutParm, ZeroConstructor)
+	TArray<class AActor*>                              foundDinos;                                               // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function Direwolf_Character_BP.Direwolf_Character_BP_C.GetExplorerChestsInRange

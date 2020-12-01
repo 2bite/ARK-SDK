@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_StoneGateframe_Large.PrimalItemStructure_StoneGateframe_Large_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_StoneGateframe_Large_C : public UPrimalItemStructure_BaseWallWithDoor_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoCharacterStatusComponent_BP_RockGolem.DinoCharacterStatusComponent_BP_RockGolem_C
-// 0x0000 (0x1089 - 0x1089)
+// 0x0000 (0x1091 - 0x1091)
 class UDinoCharacterStatusComponent_BP_RockGolem_C : public UDinoCharacterStatusComponent_BP_TorpidityControl_C
 {
 public:

@@ -106,7 +106,7 @@ bool ABuff_Leech_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex
 
 
 // Function Buff_Leech.Buff_Leech_C.BPGetMultiUseEntries
-// (MulticastDelegate, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Public, Protected, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -133,7 +133,7 @@ TArray<struct FMultiUseEntry> ABuff_Leech_C::BPGetMultiUseEntries(class APlayerC
 
 
 // Function Buff_Leech.Buff_Leech_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, Public, Protected, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

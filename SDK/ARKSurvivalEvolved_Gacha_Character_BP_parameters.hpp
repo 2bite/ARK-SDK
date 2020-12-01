@@ -326,9 +326,9 @@ struct AGacha_Character_BP_C_LookForTamingDrops_Params
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GiveAffinity
 struct AGacha_Character_BP_C_GiveAffinity_Params
 {
-	class APrimalCharacter*                            tamer;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	float                                              AffinityToGive;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               wasTamed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            Tamer;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	float                                              affinityToGive;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               WasTamed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.WantsResource

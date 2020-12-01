@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Eel_Character_BP_Aberrant.Eel_Character_BP_Aberrant_C
-// 0x0000 (0x2394 - 0x2394)
+// 0x0000 (0x2414 - 0x2414)
 class AEel_Character_BP_Aberrant_C : public AEel_Character_BP_C
 {
 public:

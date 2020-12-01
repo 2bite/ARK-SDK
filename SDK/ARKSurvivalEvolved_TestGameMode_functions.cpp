@@ -49,23 +49,6 @@ void ATestGameMode_C::UserConstructionScript()
 }
 
 
-// Function TestGameMode.TestGameMode_C.ReceiveBeginPlay
-// ()
-
-void ATestGameMode_C::ReceiveBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TestGameMode.TestGameMode_C.ReceiveBeginPlay");
-
-	ATestGameMode_C_ReceiveBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function TestGameMode.TestGameMode_C.ExecuteUbergraph_TestGameMode
 // ()
 // Parameters:

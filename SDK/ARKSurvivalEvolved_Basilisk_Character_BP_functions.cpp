@@ -34,7 +34,7 @@ bool ABasilisk_Character_BP_C::BPIsHidden()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPostLoadedFromSaveGame
-// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
+// (Static, NetMulticast, Public, Protected, Delegate, HasOutParms)
 
 void ABasilisk_Character_BP_C::STATIC_BPPostLoadedFromSaveGame()
 {
@@ -139,7 +139,7 @@ void ABasilisk_Character_BP_C::BPNotifyInventoryItemChange(bool* bIsItemAdd, cla
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.UpdatedTracedMoundTransform
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Protected, Delegate, HasOutParms)
 
 void ABasilisk_Character_BP_C::STATIC_UpdatedTracedMoundTransform()
 {
@@ -157,12 +157,12 @@ void ABasilisk_Character_BP_C::STATIC_UpdatedTracedMoundTransform()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.GetBuriedMoundTransform
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms)
 // Parameters:
 // float                          HeightAlpha                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct UObject_FTransform      ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FTransform ABasilisk_Character_BP_C::STATIC_GetBuriedMoundTransform(float HeightAlpha)
+struct UObject_FTransform ABasilisk_Character_BP_C::STATIC_GetBuriedMoundTransform(float HeightAlpha)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.GetBuriedMoundTransform");
 
@@ -351,7 +351,7 @@ void ABasilisk_Character_BP_C::PlayUndergroundEffectPulse()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.TraceForInvalidGround
-// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, Public, Protected, Delegate, HasOutParms)
 
 void ABasilisk_Character_BP_C::STATIC_TraceForInvalidGround()
 {
@@ -360,7 +360,6 @@ void ABasilisk_Character_BP_C::STATIC_TraceForInvalidGround()
 	ABasilisk_Character_BP_C_TraceForInvalidGround_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -499,19 +498,19 @@ struct FVector ABasilisk_Character_BP_C::OffSetFromBuriedGroundLocation(const st
 // ()
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABasilisk_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* PrevCustomMode, unsigned char* newCustomMode)
+void ABasilisk_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.K2_OnMovementModeChanged");
 
 	ABasilisk_Character_BP_C_K2_OnMovementModeChanged_Params params;
 	params.PrevMovementMode = PrevMovementMode;
-	params.newMovementMode = newMovementMode;
+	params.NewMovementMode = NewMovementMode;
 	params.PrevCustomMode = PrevCustomMode;
-	params.newCustomMode = newCustomMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 
@@ -597,13 +596,13 @@ bool ABasilisk_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Dista
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
+// (NetReliable, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABasilisk_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABasilisk_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPGetMultiUseEntries");
 
@@ -649,7 +648,7 @@ bool ABasilisk_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.TimeSinceLastAttackForIndex
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
+// (Static, NetMulticast, Public, Protected, Delegate, HasOutParms)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -897,12 +896,12 @@ void ABasilisk_Character_BP_C::DiveIdle()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.CanDive
-// (NetReliable, Exec, Native, Event, Static, Protected, NetClient, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           DiveInCheck                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABasilisk_Character_BP_C::STATIC_CanDive(bool DiveInCheck)
+bool ABasilisk_Character_BP_C::CanDive(bool DiveInCheck)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.CanDive");
 
@@ -910,7 +909,6 @@ bool ABasilisk_Character_BP_C::STATIC_CanDive(bool DiveInCheck)
 	params.DiveInCheck = DiveInCheck;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -7,8 +7,8 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_AIModule_classes.hpp"
+#include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
 #include "ARKSurvivalEvolved_ScoutStrafeState_classes.hpp"
 

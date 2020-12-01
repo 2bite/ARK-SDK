@@ -70,7 +70,7 @@ public:
 	void TickRangedState();
 	void GotoNextSpline();
 	void UpgradePawnAcceleration(bool Upgrade);
-	void FindDragonSplines(bool* found);
+	void FindDragonSplines(bool* Found);
 	void ExecuteUbergraph_DinoAttackStateFollowSpline(int EntryPoint);
 };
 

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_IceBomb.Buff_IceBomb_C
-// 0x0004 (0x08A4 - 0x08A0)
+// 0x0004 (0x0934 - 0x0930)
 class ABuff_IceBomb_C : public ABuff_Base_C
 {
 public:
-	float                                              PercentOfBaseHealthToSubtractPerSecond;                   // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              PercentOfBaseHealthToSubtractPerSecond;                   // 0x0930(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,6 +28,7 @@ public:
 	}
 
 
+	bool BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_IceBomb(int EntryPoint);

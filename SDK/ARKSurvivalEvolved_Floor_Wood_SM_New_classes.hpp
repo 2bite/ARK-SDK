@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Floor_Wood_SM_New.Floor_Wood_SM_New_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class AFloor_Wood_SM_New_C : public AFloor_Base_SM_C
 {
 public:

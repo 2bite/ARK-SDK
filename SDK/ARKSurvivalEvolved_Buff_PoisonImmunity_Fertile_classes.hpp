@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_PoisonImmunity_Fertile.Buff_PoisonImmunity_Fertile_C
-// 0x0000 (0x08A8 - 0x08A8)
+// 0x0000 (0x0938 - 0x0938)
 class ABuff_PoisonImmunity_Fertile_C : public ABuff_PoisonImmunity_Base_C
 {
 public:

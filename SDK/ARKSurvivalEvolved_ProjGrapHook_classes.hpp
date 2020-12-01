@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjGrapHook.ProjGrapHook_C
-// 0x0000 (0x0688 - 0x0688)
+// 0x0000 (0x0698 - 0x0698)
 class AProjGrapHook_C : public APrimalProjectileGrapplingHook
 {
 public:

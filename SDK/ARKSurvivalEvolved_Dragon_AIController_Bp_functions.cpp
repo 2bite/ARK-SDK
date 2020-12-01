@@ -52,9 +52,9 @@ void ADragon_AIController_Bp_C::ReceiveTick(float* DeltaSeconds)
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.ShouldStayOnLand
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADragon_AIController_Bp_C::ShouldStayOnLand(bool* _return)
+void ADragon_AIController_Bp_C::ShouldStayOnLand(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.ShouldStayOnLand");
 
@@ -66,17 +66,17 @@ void ADragon_AIController_Bp_C::ShouldStayOnLand(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.IsUsingSpline
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADragon_AIController_Bp_C::IsUsingSpline(bool* _return)
+void ADragon_AIController_Bp_C::IsUsingSpline(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.IsUsingSpline");
 
@@ -88,13 +88,13 @@ void ADragon_AIController_Bp_C::IsUsingSpline(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.CalculateAndSetWonderingAIStateEvent
-// (Native, NetResponse, NetMulticast, Protected, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Private, Protected, HasDefaults, NetClient)
 // Parameters:
 // bool*                          StateChanged                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -107,7 +107,6 @@ bool ADragon_AIController_Bp_C::CalculateAndSetWonderingAIStateEvent(bool* State
 	params.StateChanged = StateChanged;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

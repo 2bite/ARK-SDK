@@ -15,9 +15,9 @@ namespace sdk
 // Function AIStateWanderOnLand.AIStateWanderOnLand_C.FindTargetAreas
 // ()
 // Parameters:
-// bool                           found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UAIStateWanderOnLand_C::FindTargetAreas(bool* found)
+void UAIStateWanderOnLand_C::FindTargetAreas(bool* Found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIStateWanderOnLand.AIStateWanderOnLand_C.FindTargetAreas");
 
@@ -29,8 +29,8 @@ void UAIStateWanderOnLand_C::FindTargetAreas(bool* found)
 
 	fn->FunctionFlags = flags;
 
-	if (found != nullptr)
-		*found = params.found;
+	if (Found != nullptr)
+		*Found = params.Found;
 }
 
 

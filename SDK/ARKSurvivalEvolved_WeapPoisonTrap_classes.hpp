@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapPoisonTrap.WeapPoisonTrap_C
-// 0x0000 (0x0DA8 - 0x0DA8)
+// 0x0000 (0x0DC8 - 0x0DC8)
 class AWeapPoisonTrap_C : public AShooterWeapon_Placer
 {
 public:

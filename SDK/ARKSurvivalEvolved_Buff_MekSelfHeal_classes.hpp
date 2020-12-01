@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_MekSelfHeal.Buff_MekSelfHeal_C
-// 0x0014 (0x08B4 - 0x08A0)
+// 0x0014 (0x0944 - 0x0930)
 class ABuff_MekSelfHeal_C : public ABuff_Base_C
 {
 public:
-	class UClass*                                      ItemTypeToRemoveOnBuffActivation;                         // 0x08A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PercentOfMaxHealthToRestore;                              // 0x08A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HealthAtBuffStart;                                        // 0x08AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CalculatedHealthPerSecond;                                // 0x08B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ItemTypeToRemoveOnBuffActivation;                         // 0x0930(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              PercentOfMaxHealthToRestore;                              // 0x0938(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HealthAtBuffStart;                                        // 0x093C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CalculatedHealthPerSecond;                                // 0x0940(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

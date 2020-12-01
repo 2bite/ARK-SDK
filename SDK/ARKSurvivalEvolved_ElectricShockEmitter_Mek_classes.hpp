@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElectricShockEmitter_Mek.ElectricShockEmitter_Mek_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AElectricShockEmitter_Mek_C : public AExplosionEmitter_C
 {
 public:

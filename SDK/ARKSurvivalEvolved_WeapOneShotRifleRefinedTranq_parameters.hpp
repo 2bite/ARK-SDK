@@ -28,7 +28,7 @@ struct AWeapOneShotRifleRefinedTranq_C_ReceiveBeginPlay_Params
 struct AWeapOneShotRifleRefinedTranq_C_BPAnimNotifyCustomState_Begin_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             TotalDuration;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotifyState**                           AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ struct AWeapOneShotRifleRefinedTranq_C_BPAnimNotifyCustomState_Begin_Params
 struct AWeapOneShotRifleRefinedTranq_C_BPAnimNotifyCustomState_End_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotifyState**                           AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

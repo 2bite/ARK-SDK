@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_IsBeingCarried_AllowUnconscious.Buff_IsBeingCarried_AllowUnconscious_C
-// 0x0000 (0x08AD - 0x08AD)
+// 0x0000 (0x093D - 0x093D)
 class ABuff_IsBeingCarried_AllowUnconscious_C : public ABuff_IsBeingCarried_C
 {
 public:

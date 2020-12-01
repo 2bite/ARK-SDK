@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SleepingBag.SleepingBag_C
-// 0x0000 (0x0EE8 - 0x0EE8)
+// 0x0000 (0x0F00 - 0x0F00)
 class ASleepingBag_C : public ABedBaseBP_C
 {
 public:

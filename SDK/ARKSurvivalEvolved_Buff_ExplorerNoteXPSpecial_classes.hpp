@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ExplorerNoteXPSpecial.Buff_ExplorerNoteXPSpecial_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0950 - 0x0950)
 class ABuff_ExplorerNoteXPSpecial_C : public ABuff_ExplorerNoteXP_C
 {
 public:

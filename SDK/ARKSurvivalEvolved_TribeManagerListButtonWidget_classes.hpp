@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass TribeManagerListButtonWidget.TribeManagerListButtonWidget_C
-// 0x0008 (0x0530 - 0x0528)
+// 0x0008 (0x0538 - 0x0530)
 class UTribeManagerListButtonWidget_C : public UTribeManagerListButton
 {
 public:
-	class UCustomButtonWidget*                         Button;                                                   // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCustomButtonWidget*                         Button;                                                   // 0x0530(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

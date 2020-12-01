@@ -89,9 +89,9 @@ void ABuff_ChargeManager_C::Should_Receive_Charge_FromEmitter(class ABuff_Charge
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeManager_C::GetChargeVariableExternalManager(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue)
+void ABuff_ChargeManager_C::GetChargeVariableExternalManager(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.GetChargeVariableExternalManager");
 
@@ -110,8 +110,8 @@ void ABuff_ChargeManager_C::GetChargeVariableExternalManager(TEnumAsByte<E_Charg
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (ivalue != nullptr)
-		*ivalue = params.ivalue;
+	if (iValue != nullptr)
+		*iValue = params.iValue;
 }
 
 
@@ -403,7 +403,7 @@ void ABuff_ChargeManager_C::Batteries_Logic_Server(float DeltaTime)
 // Function Buff_ChargeManager.Buff_ChargeManager_C.Take Charge from Batteries
 // ()
 // Parameters:
-// float                          amountToTake                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          AmountToTake                   (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  inventoryOwner                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           addChargeToBuff                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           updateItem                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -411,12 +411,12 @@ void ABuff_ChargeManager_C::Batteries_Logic_Server(float DeltaTime)
 // float                          chargeTaken                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            accessedBatteries              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeManager_C::Take_Charge_from_Batteries(float amountToTake, class AActor* inventoryOwner, bool addChargeToBuff, bool updateItem, bool multicastCharge, float* chargeTaken, int* accessedBatteries)
+void ABuff_ChargeManager_C::Take_Charge_from_Batteries(float AmountToTake, class AActor* inventoryOwner, bool addChargeToBuff, bool updateItem, bool multicastCharge, float* chargeTaken, int* accessedBatteries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.Take Charge from Batteries");
 
 	ABuff_ChargeManager_C_Take_Charge_from_Batteries_Params params;
-	params.amountToTake = amountToTake;
+	params.AmountToTake = AmountToTake;
 	params.inventoryOwner = inventoryOwner;
 	params.addChargeToBuff = addChargeToBuff;
 	params.updateItem = updateItem;
@@ -531,9 +531,9 @@ void ABuff_ChargeManager_C::Check_BatteriesAndUpdate()
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeManager_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue)
+void ABuff_ChargeManager_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.ChargeVariableEvent");
 
@@ -542,7 +542,7 @@ void ABuff_ChargeManager_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableName
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -562,9 +562,9 @@ void ABuff_ChargeManager_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableName
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           triggerEvent                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           multicastEvent                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeManager_C::SetChargeVariable(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue)
+void ABuff_ChargeManager_C::SetChargeVariable(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.SetChargeVariable");
 
@@ -576,7 +576,7 @@ void ABuff_ChargeManager_C::SetChargeVariable(TEnumAsByte<E_ChargeVariableNames>
 	params.bBValue = bBValue;
 	params.triggerEvent = triggerEvent;
 	params.multicastEvent = multicastEvent;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -593,9 +593,9 @@ void ABuff_ChargeManager_C::SetChargeVariable(TEnumAsByte<E_ChargeVariableNames>
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeManager_C::Get_Charge_Variable(TEnumAsByte<E_ChargeVariableNames> VariableName, float* fValue, double* dValue, bool* bBValue, int* ivalue)
+void ABuff_ChargeManager_C::Get_Charge_Variable(TEnumAsByte<E_ChargeVariableNames> VariableName, float* fValue, double* dValue, bool* bBValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.Get Charge Variable");
 
@@ -614,8 +614,8 @@ void ABuff_ChargeManager_C::Get_Charge_Variable(TEnumAsByte<E_ChargeVariableName
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (ivalue != nullptr)
-		*ivalue = params.ivalue;
+	if (iValue != nullptr)
+		*iValue = params.iValue;
 }
 
 
@@ -771,16 +771,16 @@ void ABuff_ChargeManager_C::isGainingCharge(bool* isGainingCharge)
 }
 
 
-// Function Buff_ChargeManager.Buff_ChargeManager_C.IsGettingCharge
+// Function Buff_ChargeManager.Buff_ChargeManager_C.isGettingCharge
 // ()
 // Parameters:
-// bool                           IsGettingCharge                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           isGettingCharge                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeManager_C::IsGettingCharge(bool* IsGettingCharge)
+void ABuff_ChargeManager_C::isGettingCharge(bool* isGettingCharge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.IsGettingCharge");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.isGettingCharge");
 
-	ABuff_ChargeManager_C_IsGettingCharge_Params params;
+	ABuff_ChargeManager_C_isGettingCharge_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -788,8 +788,8 @@ void ABuff_ChargeManager_C::IsGettingCharge(bool* IsGettingCharge)
 
 	fn->FunctionFlags = flags;
 
-	if (IsGettingCharge != nullptr)
-		*IsGettingCharge = params.IsGettingCharge;
+	if (isGettingCharge != nullptr)
+		*isGettingCharge = params.isGettingCharge;
 }
 
 
@@ -832,16 +832,16 @@ void ABuff_ChargeManager_C::OnChargeEvent()
 }
 
 
-// Function Buff_ChargeManager.Buff_ChargeManager_C.isFirstCharge
+// Function Buff_ChargeManager.Buff_ChargeManager_C.IsFirstCharge
 // ()
 // Parameters:
-// bool                           isFirstCharge                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsFirstCharge                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeManager_C::isFirstCharge(bool* isFirstCharge)
+void ABuff_ChargeManager_C::IsFirstCharge(bool* IsFirstCharge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.isFirstCharge");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.IsFirstCharge");
 
-	ABuff_ChargeManager_C_isFirstCharge_Params params;
+	ABuff_ChargeManager_C_IsFirstCharge_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -849,8 +849,8 @@ void ABuff_ChargeManager_C::isFirstCharge(bool* isFirstCharge)
 
 	fn->FunctionFlags = flags;
 
-	if (isFirstCharge != nullptr)
-		*isFirstCharge = params.isFirstCharge;
+	if (IsFirstCharge != nullptr)
+		*IsFirstCharge = params.IsFirstCharge;
 }
 
 

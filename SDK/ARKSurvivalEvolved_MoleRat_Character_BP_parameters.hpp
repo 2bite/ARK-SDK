@@ -64,8 +64,8 @@ struct AMoleRat_Character_BP_C_BPOnEndCharging_Params
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.GiveAffinity
 struct AMoleRat_Character_BP_C_GiveAffinity_Params
 {
-	class APrimalCharacter*                            tamer;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               wasTamed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            Tamer;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               WasTamed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.SlidingUpdate
@@ -144,7 +144,7 @@ struct AMoleRat_Character_BP_C_GetChargeValueScaled_Params
 	float                                              CurrentValue;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MinValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MaxValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              velocityAlpha;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              VelocityAlpha;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              scaledValue;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -152,7 +152,7 @@ struct AMoleRat_Character_BP_C_GetChargeValueScaled_Params
 struct AMoleRat_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

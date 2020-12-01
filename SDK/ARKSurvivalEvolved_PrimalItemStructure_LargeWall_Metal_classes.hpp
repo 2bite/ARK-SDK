@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_LargeWall_Metal.PrimalItemStructure_LargeWall_Metal_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_LargeWall_Metal_C : public UPrimalItemStructure_BaseWall_C
 {
 public:

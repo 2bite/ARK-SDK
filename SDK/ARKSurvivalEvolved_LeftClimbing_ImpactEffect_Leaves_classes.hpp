@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LeftClimbing_ImpactEffect_Leaves.LeftClimbing_ImpactEffect_Leaves_C
-// 0x0000 (0x04D0 - 0x04D0)
+// 0x0000 (0x04E0 - 0x04E0)
 class ALeftClimbing_ImpactEffect_Leaves_C : public AClimbing_ImpactEffect_C
 {
 public:

@@ -90,7 +90,7 @@ struct UDinoAttackStateFollowSpline_C_UpgradePawnAcceleration_Params
 // Function DinoAttackStateFollowSpline.DinoAttackStateFollowSpline_C.FindDragonSplines
 struct UDinoAttackStateFollowSpline_C_FindDragonSplines_Params
 {
-	bool                                               found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DinoAttackStateFollowSpline.DinoAttackStateFollowSpline_C.ExecuteUbergraph_DinoAttackStateFollowSpline

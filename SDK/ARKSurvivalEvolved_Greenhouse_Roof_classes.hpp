@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Greenhouse_Roof.Greenhouse_Roof_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class AGreenhouse_Roof_C : public ABaseRoof_SM_C
 {
 public:

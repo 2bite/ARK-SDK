@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ChatBoxUI.ChatBoxUI_C
-// 0x0008 (0x05D0 - 0x05C8)
+// 0x0008 (0x05D8 - 0x05D0)
 class UChatBoxUI_C : public UUI_ChatBox
 {
 public:
-	class UEditableTextBox*                            EditTextBox;                                              // 0x05C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UEditableTextBox*                            EditTextBox;                                              // 0x05D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

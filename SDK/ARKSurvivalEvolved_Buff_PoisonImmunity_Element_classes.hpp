@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_PoisonImmunity_Element.Buff_PoisonImmunity_Element_C
-// 0x0000 (0x08A8 - 0x08A8)
+// 0x0000 (0x0938 - 0x0938)
 class ABuff_PoisonImmunity_Element_C : public ABuff_PoisonImmunity_Base_C
 {
 public:

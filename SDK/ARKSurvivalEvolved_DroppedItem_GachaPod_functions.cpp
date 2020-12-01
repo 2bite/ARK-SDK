@@ -100,7 +100,7 @@ void ADroppedItem_GachaPod_C::ReceiveBeginPlay()
 
 
 // Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.CheckForItem
-// (Exec, Event, Static, Public, Private, Protected, Delegate, HasOutParms, BlueprintPure, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Delegate, HasDefaults)
 
 void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
 {
@@ -117,7 +117,7 @@ void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
 
 
 // Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ActivateFX
-// (NetRequest, Exec, Native, Event, Static, Public, Private, Protected, Delegate, HasOutParms, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Delegate, HasDefaults)
 
 void ADroppedItem_GachaPod_C::STATIC_ActivateFX()
 {

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoDropInventoryComponent_Basilo.DinoDropInventoryComponent_Basilo_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoDropInventoryComponent_Basilo_C : public UDinoDropInventoryComponent_Carnivore_Large_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SupplyCrateExplosion_Level03.SupplyCrateExplosion_Level03_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ASupplyCrateExplosion_Level03_C : public ASupplyCrateExplosion_C
 {
 public:

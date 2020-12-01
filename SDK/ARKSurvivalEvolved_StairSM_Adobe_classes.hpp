@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StairSM_Adobe.StairSM_Adobe_C
-// 0x0008 (0x0AC8 - 0x0AC0)
+// 0x0008 (0x0AE0 - 0x0AD8)
 class AStairSM_Adobe_C : public AStairSM_Base_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1_1;                                            // 0x0AC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1_1;                                            // 0x0AD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

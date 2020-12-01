@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElevatorPlatfrom_Large.ElevatorPlatfrom_Large_C
-// 0x0000 (0x0B60 - 0x0B60)
+// 0x0000 (0x0B78 - 0x0B78)
 class AElevatorPlatfrom_Large_C : public AElevatorPlatform_Base_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_WW_WinterHatB.PrimalItemSkin_WW_WinterHatB_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemSkin_WW_WinterHatB_C : public UPrimalItemSkinGeneric_C
 {
 public:

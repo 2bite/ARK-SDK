@@ -85,11 +85,11 @@ void AIceJumper_Character_BP_C::SetPositionErrorTolerance(float Tolerance, float
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.Queue Random Boredom
-// (NetReliable, Native, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           IncludePossibleInstantBoredom  (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_Character_BP_C::Queue_Random_Boredom(bool IncludePossibleInstantBoredom)
+void AIceJumper_Character_BP_C::STATIC_Queue_Random_Boredom(bool IncludePossibleInstantBoredom)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.Queue Random Boredom");
 
@@ -151,13 +151,13 @@ bool AIceJumper_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Native, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Net, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AIceJumper_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AIceJumper_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.BPGetMultiUseEntries");
 
@@ -165,7 +165,6 @@ TArray<struct FMultiUseEntry> AIceJumper_Character_BP_C::BPGetMultiUseEntries(cl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,11 +195,11 @@ void AIceJumper_Character_BP_C::BPUnstasis()
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.BPGetDebugInfoString
-// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Net, NetReliable, Exec, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString AIceJumper_Character_BP_C::BPGetDebugInfoString()
+class FString AIceJumper_Character_BP_C::STATIC_BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.BPGetDebugInfoString");
 
@@ -324,17 +323,17 @@ struct FRotator AIceJumper_Character_BP_C::BPModifyAimOffsetNoTarget(struct FRot
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.BP_PreventMovementMode
 // ()
 // Parameters:
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AIceJumper_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* newCustomMode)
+bool AIceJumper_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.BP_PreventMovementMode");
 
 	AIceJumper_Character_BP_C_BP_PreventMovementMode_Params params;
-	params.newMovementMode = newMovementMode;
-	params.newCustomMode = newCustomMode;
+	params.NewMovementMode = NewMovementMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 
@@ -618,13 +617,13 @@ void AIceJumper_Character_BP_C::Is_AIControlled(bool* AIControlled)
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.BPOverrideGetAttackAnimationIndex
-// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UAnimMontage*>    AnimationArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int AIceJumper_Character_BP_C::STATIC_BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray)
+int AIceJumper_Character_BP_C::BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.BPOverrideGetAttackAnimationIndex");
 
@@ -691,19 +690,19 @@ void AIceJumper_Character_BP_C::InAirStateIsResultOfJump(bool* Result)
 // ()
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* PrevCustomMode, unsigned char* newCustomMode)
+void AIceJumper_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.K2_OnMovementModeChanged");
 
 	AIceJumper_Character_BP_C_K2_OnMovementModeChanged_Params params;
 	params.PrevMovementMode = PrevMovementMode;
-	params.newMovementMode = newMovementMode;
+	params.NewMovementMode = NewMovementMode;
 	params.PrevCustomMode = PrevCustomMode;
-	params.newCustomMode = newCustomMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 
@@ -736,11 +735,11 @@ void AIceJumper_Character_BP_C::IsOutOfStamina(bool* OutOfStamina)
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.GetIceBreathRange
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // float                          Range                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_Character_BP_C::STATIC_GetIceBreathRange(float* Range)
+void AIceJumper_Character_BP_C::GetIceBreathRange(float* Range)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.GetIceBreathRange");
 
@@ -759,12 +758,12 @@ void AIceJumper_Character_BP_C::STATIC_GetIceBreathRange(float* Range)
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.GetForwardDashDamage
-// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Damage                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_Character_BP_C::GetForwardDashDamage(class APrimalCharacter* Target, float* Damage)
+void AIceJumper_Character_BP_C::STATIC_GetForwardDashDamage(class APrimalCharacter* Target, float* Damage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.GetForwardDashDamage");
 
@@ -783,12 +782,12 @@ void AIceJumper_Character_BP_C::GetForwardDashDamage(class APrimalCharacter* Tar
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.GetThawSpeed
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          FrozenThawAmountPerRate        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_Character_BP_C::STATIC_GetThawSpeed(class AActor* Target, float* FrozenThawAmountPerRate)
+void AIceJumper_Character_BP_C::GetThawSpeed(class AActor* Target, float* FrozenThawAmountPerRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.GetThawSpeed");
 
@@ -796,7 +795,6 @@ void AIceJumper_Character_BP_C::STATIC_GetThawSpeed(class AActor* Target, float*
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -870,12 +868,12 @@ void AIceJumper_Character_BP_C::OnRep_PreviousAbilityReplicated()
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.BP_InterceptMoveForward
-// (Net, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         AxisValue                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AIceJumper_Character_BP_C::STATIC_BP_InterceptMoveForward(float* AxisValue)
+bool AIceJumper_Character_BP_C::BP_InterceptMoveForward(float* AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.BP_InterceptMoveForward");
 
@@ -883,7 +881,6 @@ bool AIceJumper_Character_BP_C::STATIC_BP_InterceptMoveForward(float* AxisValue)
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1232,12 +1229,12 @@ bool AIceJumper_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Dist
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.DeductStamina
-// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // float                          Stamina                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_Character_BP_C::DeductStamina(float Stamina, bool* Success)
+void AIceJumper_Character_BP_C::STATIC_DeductStamina(float Stamina, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.DeductStamina");
 
@@ -1245,6 +1242,7 @@ void AIceJumper_Character_BP_C::DeductStamina(float Stamina, bool* Success)
 	params.Stamina = Stamina;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1276,19 +1274,19 @@ void AIceJumper_Character_BP_C::SetIceBreathProjectile(class AIceJumperProjIceBr
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.UpdateDashCollider
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DamageMult                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          damageMult                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           HitTarget                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_Character_BP_C::UpdateDashCollider(float Radius, float DamageMult, bool* HitTarget)
+void AIceJumper_Character_BP_C::STATIC_UpdateDashCollider(float Radius, float damageMult, bool* HitTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.UpdateDashCollider");
 
 	AIceJumper_Character_BP_C_UpdateDashCollider_Params params;
 	params.Radius = Radius;
-	params.DamageMult = DamageMult;
+	params.damageMult = damageMult;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1327,11 +1325,11 @@ void AIceJumper_Character_BP_C::GetStartTimeForMovementAbility(TEnumAsByte<EIceJ
 
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.BPGetCrosshairColor
-// (NetReliable, NetRequest, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FLinearColor AIceJumper_Character_BP_C::STATIC_BPGetCrosshairColor()
+struct FLinearColor AIceJumper_Character_BP_C::BPGetCrosshairColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_Character_BP.IceJumper_Character_BP_C.BPGetCrosshairColor");
 

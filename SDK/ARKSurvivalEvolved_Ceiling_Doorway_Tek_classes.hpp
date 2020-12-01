@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ceiling_Doorway_Tek.Ceiling_Doorway_Tek_C
-// 0x0008 (0x0AB8 - 0x0AB0)
+// 0x0008 (0x0AD0 - 0x0AC8)
 class ACeiling_Doorway_Tek_C : public ACeiling_Doorway_Base_SM_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0AB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0AC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

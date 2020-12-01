@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LargeWall_Stone.BP_LargeWall_Stone_C
-// 0x0000 (0x0AD8 - 0x0AD8)
+// 0x0000 (0x0AF0 - 0x0AF0)
 class ABP_LargeWall_Stone_C : public ABase_Wall_Large_C
 {
 public:

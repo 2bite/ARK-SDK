@@ -109,7 +109,7 @@ void AMegatherium_Character_BP_C::BPOnAnimPlayedNotify(class UAnimMontage** Anim
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Static, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetResponse, Static, Public, Private, NetServer, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -247,7 +247,7 @@ void AMegatherium_Character_BP_C::BPDoAttack(int* AttackIndex)
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintCanRiderAttack
-// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, NetServer, DLLImport)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -333,7 +333,7 @@ void AMegatherium_Character_BP_C::OnNewTarget()
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Native, Event, NetResponse, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, Public, Private, NetServer, DLLImport)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -352,7 +352,6 @@ float AMegatherium_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex,
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

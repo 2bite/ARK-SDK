@@ -66,14 +66,14 @@ void ADino_Character_BP_Pack_C::CanDinoBeAddedToPack(class APrimalDinoCharacter*
 // Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.Add Dino to Pack
 // ()
 // Parameters:
-// class AActor*                  actorToAdd                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  ActorToAdd                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Pack_C::Add_Dino_to_Pack(class AActor* actorToAdd)
+void ADino_Character_BP_Pack_C::Add_Dino_to_Pack(class AActor* ActorToAdd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.Add Dino to Pack");
 
 	ADino_Character_BP_Pack_C_Add_Dino_to_Pack_Params params;
-	params.actorToAdd = actorToAdd;
+	params.ActorToAdd = ActorToAdd;
 
 	auto flags = fn->FunctionFlags;
 

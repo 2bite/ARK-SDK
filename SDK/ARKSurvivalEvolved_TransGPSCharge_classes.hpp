@@ -15,12 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TransGPSCharge.TransGPSCharge_C
-// 0x0038 (0x0B90 - 0x0B58)
+// 0x0040 (0x0BB0 - 0x0B70)
 class ATransGPSCharge_C : public APrimalStructureExplosiveTransGPS
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0B58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  RelativeTransform;                                        // 0x0B60(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0B78(0x0008) MISSED OFFSET
+	struct UObject_FTransform                          RelativeTransform;                                        // 0x0B80(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, SaveGame, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

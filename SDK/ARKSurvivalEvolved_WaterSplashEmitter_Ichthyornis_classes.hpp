@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterSplashEmitter_Ichthyornis.WaterSplashEmitter_Ichthyornis_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AWaterSplashEmitter_Ichthyornis_C : public APrimalEmitterSpawnable
 {
 public:

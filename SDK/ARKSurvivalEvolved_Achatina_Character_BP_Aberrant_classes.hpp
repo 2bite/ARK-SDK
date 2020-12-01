@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Achatina_Character_BP_Aberrant.Achatina_Character_BP_Aberrant_C
-// 0x0000 (0x20BB - 0x20BB)
+// 0x0000 (0x213B - 0x213B)
 class AAchatina_Character_BP_Aberrant_C : public AAchatina_Character_BP_C
 {
 public:

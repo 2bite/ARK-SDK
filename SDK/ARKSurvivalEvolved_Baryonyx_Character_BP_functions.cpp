@@ -99,9 +99,9 @@ bool ABaryonyx_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 // ()
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* RetVal)
+void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BaryCanAttack");
 
@@ -114,8 +114,8 @@ void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* RetVal)
 
 	fn->FunctionFlags = flags;
 
-	if (RetVal != nullptr)
-		*RetVal = params.RetVal;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -169,22 +169,22 @@ void ABaryonyx_Character_BP_C::BPKilledSomethingEvent(class APrimalCharacter** k
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.K2_OnMovementModeChanged
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABaryonyx_Character_BP_C::STATIC_K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* PrevCustomMode, unsigned char* newCustomMode)
+void ABaryonyx_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.K2_OnMovementModeChanged");
 
 	ABaryonyx_Character_BP_C_K2_OnMovementModeChanged_Params params;
 	params.PrevMovementMode = PrevMovementMode;
-	params.newMovementMode = newMovementMode;
+	params.NewMovementMode = NewMovementMode;
 	params.PrevCustomMode = PrevCustomMode;
-	params.newCustomMode = newCustomMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 
@@ -195,7 +195,7 @@ void ABaryonyx_Character_BP_C::STATIC_K2_OnMovementModeChanged(TEnumAsByte<EMove
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, Protected, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -204,7 +204,7 @@ void ABaryonyx_Character_BP_C::STATIC_K2_OnMovementModeChanged(TEnumAsByte<EMove
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABaryonyx_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ABaryonyx_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -214,7 +214,6 @@ float ABaryonyx_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIn
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -230,13 +229,13 @@ float ABaryonyx_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIn
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Event, NetMulticast, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABaryonyx_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABaryonyx_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BPGetMultiUseEntries");
 

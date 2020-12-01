@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MudHitImpact_Emitter.MudHitImpact_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AMudHitImpact_Emitter_C : public AQuillShatterImpactEmitter_C
 {
 public:

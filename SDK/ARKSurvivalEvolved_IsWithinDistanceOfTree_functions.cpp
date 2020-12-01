@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function IsWithinDistanceOfTree.IsWithinDistanceOfTree_C.ReceiveTick
-// (Exec, Native, Event, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Private, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)

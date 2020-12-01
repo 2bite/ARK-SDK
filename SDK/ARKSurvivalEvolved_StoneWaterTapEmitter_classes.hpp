@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StoneWaterTapEmitter.StoneWaterTapEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AStoneWaterTapEmitter_C : public APrimalEmitterSpawnable
 {
 public:

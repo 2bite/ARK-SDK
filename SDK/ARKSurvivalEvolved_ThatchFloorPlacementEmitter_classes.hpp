@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ThatchFloorPlacementEmitter.ThatchFloorPlacementEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AThatchFloorPlacementEmitter_C : public APrimalEmitterSpawnable
 {
 public:

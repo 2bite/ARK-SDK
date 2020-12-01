@@ -14,6 +14,18 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.GrindAllItems
+struct AStorageBox_IndustrialGrinder_C_GrindAllItems_Params
+{
+	class APlayerController*                           ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.IsValidForGrindingAll
+struct AStorageBox_IndustrialGrinder_C_IsValidForGrindingAll_Params
+{
+	bool                                               IsValid;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.BPPreGetMultiUseEntries
 struct AStorageBox_IndustrialGrinder_C_BPPreGetMultiUseEntries_Params
 {
@@ -47,6 +59,7 @@ struct AStorageBox_IndustrialGrinder_C_GrindItem_Params
 	class UPrimalItem*                                 ItemToGrind;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	class AShooterPlayerController*                    ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               GrindStack;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               MuteSound;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.BPServerHandleNetExecCommand

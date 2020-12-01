@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_Tranq_Bolt.ProjArrow_Tranq_Bolt_C
-// 0x0000 (0x0678 - 0x0678)
+// 0x0000 (0x0688 - 0x0688)
 class AProjArrow_Tranq_Bolt_C : public AProjArrow_C
 {
 public:

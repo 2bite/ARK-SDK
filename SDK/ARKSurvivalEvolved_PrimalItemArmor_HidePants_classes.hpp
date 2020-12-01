@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_HidePants.PrimalItemArmor_HidePants_C
-// 0x0000 (0x09B8 - 0x09B8)
+// 0x0000 (0x09D8 - 0x09D8)
 class UPrimalItemArmor_HidePants_C : public UPrimalItemArmor_BasePants_C
 {
 public:

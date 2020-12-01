@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Mosa_AIController_BP.Mosa_AIController_BP_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class AMosa_AIController_BP_C : public ADino_AIController_BP_C
 {
 public:

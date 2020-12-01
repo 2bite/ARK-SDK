@@ -33,11 +33,11 @@ void AExplorerChest_Glitch_C::DrawBasicFloatingHUD(class AHUD** ForHUD)
 
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA
-// (NetReliable, Event, NetResponse, Static, Protected, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
+// (Exec, Native, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintPure, Const)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExplorerChest_Glitch_C::STATIC_PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
+void AExplorerChest_Glitch_C::PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA");
 
@@ -45,6 +45,7 @@ void AExplorerChest_Glitch_C::STATIC_PlayExplorerNoteOnHLNA(class UPrimalItem* I
 	params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

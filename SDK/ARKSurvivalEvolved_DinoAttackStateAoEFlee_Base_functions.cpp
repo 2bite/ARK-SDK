@@ -82,7 +82,7 @@ bool UDinoAttackStateAoEFlee_Base_C::BPCanAttack(float* Distance, float* attackR
 
 
 // Function DinoAttackStateAoEFlee_Base.DinoAttackStateAoEFlee_Base_C.Get AoE Radius
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Protected, HasDefaults, NetClient)
 // Parameters:
 // float                          Radius                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -93,6 +93,7 @@ void UDinoAttackStateAoEFlee_Base_C::Get_AoE_Radius(float* Radius)
 	UDinoAttackStateAoEFlee_Base_C_Get_AoE_Radius_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

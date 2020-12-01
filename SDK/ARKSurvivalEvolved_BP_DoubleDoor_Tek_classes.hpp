@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DoubleDoor_Tek.BP_DoubleDoor_Tek_C
-// 0x0020 (0x0D18 - 0x0CF8)
+// 0x0020 (0x0D30 - 0x0D10)
 class ABP_DoubleDoor_Tek_C : public ABase_TekDoor_C
 {
 public:
-	class USphereComponent*                            Sphere1;                                                  // 0x0CF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0D00(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        SecondDoor;                                               // 0x0D08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             SecondDoorTransform;                                      // 0x0D10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            Sphere1;                                                  // 0x0D10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0D18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        SecondDoor;                                               // 0x0D20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             SecondDoorTransform;                                      // 0x0D28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -76,7 +76,7 @@ struct UChargeFunctions_FakeLibrary_C_Charge_Variable_Event_Boolean_Library_Para
 struct UChargeFunctions_FakeLibrary_C_GetChargeAtActorAccurate_Params
 {
 	struct FVector                                     Location;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      fromActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      FromActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Radius;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      chargeEmitterClass;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Charge;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

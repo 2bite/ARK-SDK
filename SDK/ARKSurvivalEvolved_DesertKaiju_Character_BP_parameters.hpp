@@ -59,7 +59,7 @@ struct ADesertKaiju_Character_BP_C_BPCanBaseOnCharacter_Params
 struct ADesertKaiju_Character_BP_C_ActorIsKaiju_Params
 {
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BPDinoARKDownloadedEnd
@@ -134,8 +134,8 @@ struct ADesertKaiju_Character_BP_C_Client_ReplicateNodeStatusOnBegin_Params
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BP_PreventMovementMode
 struct ADesertKaiju_Character_BP_C_BP_PreventMovementMode_Params
 {
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -143,15 +143,15 @@ struct ADesertKaiju_Character_BP_C_BP_PreventMovementMode_Params
 struct ADesertKaiju_Character_BP_C_K2_OnMovementModeChanged_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PrevCustomMode;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Get Kaiju Transform
 struct ADesertKaiju_Character_BP_C_Get_Kaiju_Transform_Params
 {
-	struct FTransform                                  ActualTransform;                                          // (Parm, OutParm, IsPlainOldData)
+	struct UObject_FTransform                          ActualTransform;                                          // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BPSetupTamed
@@ -382,7 +382,7 @@ struct ADesertKaiju_Character_BP_C_ShortestAngleDistance_Params
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.GetLookDir
 struct ADesertKaiju_Character_BP_C_GetLookDir_Params
 {
-	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.LightningTrace
@@ -511,13 +511,13 @@ struct ADesertKaiju_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_135
-struct ADesertKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_135_Params
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_126
+struct ADesertKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_126_Params
 {
 };
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_134
-struct ADesertKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_134_Params
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_125
+struct ADesertKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_125_Params
 {
 };
 

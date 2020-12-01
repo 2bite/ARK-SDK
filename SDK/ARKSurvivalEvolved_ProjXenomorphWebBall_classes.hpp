@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjXenomorphWebBall.ProjXenomorphWebBall_C
-// 0x0000 (0x0648 - 0x0648)
+// 0x0000 (0x0658 - 0x0658)
 class AProjXenomorphWebBall_C : public AProjWebBall_C
 {
 public:

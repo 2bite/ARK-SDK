@@ -62,13 +62,13 @@ bool ABP_Wire_Flex_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.BPGetMultiUseEntries
-// (NetRequest, Event, Static, NetMulticast, Public, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, Private, Protected, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABP_Wire_Flex_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABP_Wire_Flex_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wire_Flex.BP_Wire_Flex_C.BPGetMultiUseEntries");
 
@@ -111,11 +111,11 @@ void ABP_Wire_Flex_C::LinkWires(TArray<class APrimalStructure*>* Connections)
 
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.AddSplineMeshComponents
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Private, Protected, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           UsePreviewMaterial             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Wire_Flex_C::STATIC_AddSplineMeshComponents(bool UsePreviewMaterial)
+void ABP_Wire_Flex_C::AddSplineMeshComponents(bool UsePreviewMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wire_Flex.BP_Wire_Flex_C.AddSplineMeshComponents");
 
@@ -309,13 +309,15 @@ void ABP_Wire_Flex_C::BPOnWaterStateChange(bool* bPipeHasWaterOrPower)
 // ()
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Wire_Flex_C::BPOnDemolish(class APlayerController** ForPC)
+void ABP_Wire_Flex_C::BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wire_Flex.BP_Wire_Flex_C.BPOnDemolish");
 
 	ABP_Wire_Flex_C_BPOnDemolish_Params params;
 	params.ForPC = ForPC;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_Ramp_Metal.PrimalItemStructure_Ramp_Metal_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_Ramp_Metal_C : public UPrimalItemStructure_BaseRamp_C
 {
 public:

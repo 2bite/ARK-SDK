@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapHandcuffs_Fuzzy.WeapHandcuffs_Fuzzy_C
-// 0x0000 (0x0D30 - 0x0D30)
+// 0x0000 (0x0D50 - 0x0D50)
 class AWeapHandcuffs_Fuzzy_C : public AWeapHandcuffs_C
 {
 public:

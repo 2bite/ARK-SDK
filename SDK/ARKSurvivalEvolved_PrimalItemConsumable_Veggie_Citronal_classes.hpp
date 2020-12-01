@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Veggie_Citronal.PrimalItemConsumable_Veggie_Citronal_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_Veggie_Citronal_C : public UPrimalItemConsumable_Veggie_Base_C
 {
 public:

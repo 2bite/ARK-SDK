@@ -111,13 +111,13 @@ void ABee_Queen_Character_BP_C::AddBeeReference(class APrimalDinoCharacter* BeeR
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPTryMultiUse
-// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, NetResponse, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABee_Queen_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
+bool ABee_Queen_Character_BP_C::STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPTryMultiUse");
 
@@ -137,7 +137,7 @@ bool ABee_Queen_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -254,12 +254,12 @@ void ABee_Queen_Character_BP_C::OnRep_bIsHidden()
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.SearchTreesForValidHiveSpawnLocation
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // bool                           succeeded                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Transform                      (Parm, OutParm, IsPlainOldData)
+// struct UObject_FTransform      Transform                      (Parm, OutParm, IsPlainOldData)
 
-void ABee_Queen_Character_BP_C::STATIC_SearchTreesForValidHiveSpawnLocation(bool* succeeded, struct FTransform* Transform)
+void ABee_Queen_Character_BP_C::SearchTreesForValidHiveSpawnLocation(bool* succeeded, struct UObject_FTransform* Transform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.SearchTreesForValidHiveSpawnLocation");
 

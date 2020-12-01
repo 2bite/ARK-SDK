@@ -93,7 +93,7 @@ struct ACaveWolf_Character_BP_C_BPTimerServer_Params
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.GetTargetMeshRelativeTransform_Pure
 struct ACaveWolf_Character_BP_C_GetTargetMeshRelativeTransform_Pure_Params
 {
-	struct FTransform                                  Result;                                                   // (Parm, OutParm, IsPlainOldData)
+	struct UObject_FTransform                          Result;                                                   // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.SetNonDediTimer_TickEveryFrame
@@ -105,7 +105,7 @@ struct ACaveWolf_Character_BP_C_SetNonDediTimer_TickEveryFrame_Params
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.GetTargetMeshRelativeTransform
 struct ACaveWolf_Character_BP_C_GetTargetMeshRelativeTransform_Params
 {
-	struct FTransform                                  Result;                                                   // (Parm, OutParm, IsPlainOldData)
+	struct UObject_FTransform                          Result;                                                   // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.DebugDrawRotationAxes
@@ -121,7 +121,7 @@ struct ACaveWolf_Character_BP_C_DebugDrawRotationAxes_Params
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.SoftSetCaveWolfTransform
 struct ACaveWolf_Character_BP_C_SoftSetCaveWolfTransform_Params
 {
-	struct FTransform                                  NewTransform;                                             // (Parm, IsPlainOldData)
+	struct UObject_FTransform                          NewTransform;                                             // (Parm, IsPlainOldData)
 };
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.InterpCaveWolfMeshRelativeTransform
@@ -177,7 +177,7 @@ struct ACaveWolf_Character_BP_C_GetZiplineBuff_Params
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.GetTargetedZipline
 struct ACaveWolf_Character_BP_C_GetTargetedZipline_Params
 {
-	class AZipline_Anchor_C*                           targetedZipline;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AZipline_Anchor_C*                           TargetedZipline;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -199,7 +199,7 @@ struct ACaveWolf_Character_BP_C_IsRotation_Nearly_Equal_Params
 	struct FRotator                                    A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Tolerance;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.IsVectorNearlyEqual
@@ -223,8 +223,8 @@ struct ACaveWolf_Character_BP_C_TryAttachingToZipline_Params
 {
 	class AZipline_Anchor_C*                           overrideAnchor;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     overrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              overrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     overrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              OverrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     OverrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               DontUseLineOfSightCheck;                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -251,7 +251,7 @@ struct ACaveWolf_Character_BP_C_TryAttachToZipline_RunOnServer_Params
 struct ACaveWolf_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -299,7 +299,7 @@ struct ACaveWolf_Character_BP_C_CreateZiplineBuffAndStartRiding_Params
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.Multi_SoftSetCaveWolfTransform
 struct ACaveWolf_Character_BP_C_Multi_SoftSetCaveWolfTransform_Params
 {
-	struct FTransform                                  NewTransform;                                             // (Parm, IsPlainOldData)
+	struct UObject_FTransform                          NewTransform;                                             // (Parm, IsPlainOldData)
 };
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.SetInitialVelocity_Multicast

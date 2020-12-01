@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lystro_Character_BP_Aberrant.Lystro_Character_BP_Aberrant_C
-// 0x0000 (0x20A0 - 0x20A0)
+// 0x0000 (0x2120 - 0x2120)
 class ALystro_Character_BP_Aberrant_C : public ALystro_Character_BP_C
 {
 public:

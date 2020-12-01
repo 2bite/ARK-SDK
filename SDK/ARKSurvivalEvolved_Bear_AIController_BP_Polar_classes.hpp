@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bear_AIController_BP_Polar.Bear_AIController_BP_Polar_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ABear_AIController_BP_Polar_C : public ABear_AIController_BP_C
 {
 public:

@@ -241,13 +241,13 @@ void ADino_Character_BP_Nocturnal_C::IsTamedFollowing(bool* Result)
 
 
 // Function Dino_Character_BP_Nocturnal.Dino_Character_BP_Nocturnal_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Private, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ADino_Character_BP_Nocturnal_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ADino_Character_BP_Nocturnal_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Nocturnal.Dino_Character_BP_Nocturnal_C.BPGetMultiUseEntries");
 
@@ -255,6 +255,7 @@ TArray<struct FMultiUseEntry> ADino_Character_BP_Nocturnal_C::STATIC_BPGetMultiU
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -312,15 +313,15 @@ void ADino_Character_BP_Nocturnal_C::BPTimerServer()
 // Function Dino_Character_BP_Nocturnal.Dino_Character_BP_Nocturnal_C.PrintStringWithAuth
 // ()
 // Parameters:
-// class FString                  string                         (Parm, ZeroConstructor)
+// class FString                  String                         (Parm, ZeroConstructor)
 // struct FLinearColor            Color                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Nocturnal_C::PrintStringWithAuth(const class FString& string, const struct FLinearColor& Color)
+void ADino_Character_BP_Nocturnal_C::PrintStringWithAuth(const class FString& String, const struct FLinearColor& Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Nocturnal.Dino_Character_BP_Nocturnal_C.PrintStringWithAuth");
 
 	ADino_Character_BP_Nocturnal_C_PrintStringWithAuth_Params params;
-	params.string = string;
+	params.String = String;
 	params.Color = Color;
 
 	auto flags = fn->FunctionFlags;

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Base_Disease_Low_Troodon_TorporPosion.Buff_Base_Disease_Low_Troodon_TorporPosion_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_Base_Disease_Low_Troodon_TorporPosion_C : public ABuff_Base_Disease_Low_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Mantis_AIController.Mantis_AIController_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class AMantis_AIController_C : public ADino_AIController_BP_C
 {
 public:

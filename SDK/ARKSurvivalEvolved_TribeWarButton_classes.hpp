@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass TribeWarButton.TribeWarButton_C
-// 0x0008 (0x0548 - 0x0540)
+// 0x0008 (0x0550 - 0x0548)
 class UTribeWarButton_C : public UTribeWarButtonWidget
 {
 public:
-	class UCustomButtonWidget*                         Button;                                                   // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCustomButtonWidget*                         Button;                                                   // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

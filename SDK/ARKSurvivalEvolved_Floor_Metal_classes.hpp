@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Floor_Metal.Floor_Metal_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class AFloor_Metal_C : public AFloor_Base_SM_C
 {
 public:

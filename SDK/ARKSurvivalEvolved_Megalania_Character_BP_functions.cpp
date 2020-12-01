@@ -54,15 +54,15 @@ void AMegalania_Character_BP_C::GetClimbingIK_BlendspaceAxes_Front(struct FVecto
 // Function Megalania_Character_BP.Megalania_Character_BP_C.GetCustomSurfaceTraceDistance
 // ()
 // Parameters:
-// int*                           traceIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           TraceIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          customDistance                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMegalania_Character_BP_C::GetCustomSurfaceTraceDistance(int* traceIndex, float* customDistance)
+void AMegalania_Character_BP_C::GetCustomSurfaceTraceDistance(int* TraceIndex, float* customDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megalania_Character_BP.Megalania_Character_BP_C.GetCustomSurfaceTraceDistance");
 
 	AMegalania_Character_BP_C_GetCustomSurfaceTraceDistance_Params params;
-	params.traceIndex = traceIndex;
+	params.TraceIndex = TraceIndex;
 
 	auto flags = fn->FunctionFlags;
 

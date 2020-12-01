@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterPipe_Stone_Intersection.WaterPipe_Stone_Intersection_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class AWaterPipe_Stone_Intersection_C : public AWaterPipe_Base_Intersection_C
 {
 public:

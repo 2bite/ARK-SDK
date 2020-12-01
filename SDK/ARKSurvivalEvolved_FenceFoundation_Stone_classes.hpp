@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass FenceFoundation_Stone.FenceFoundation_Stone_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class AFenceFoundation_Stone_C : public AFenceFoundation_Base_New_C
 {
 public:

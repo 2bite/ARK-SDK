@@ -36,7 +36,7 @@ struct AProjGlowStick_C_ReceiveHit_Params
 // Function ProjGlowStick.ProjGlowStick_C.GetDefaultGlowStickRef
 struct AProjGlowStick_C_GetDefaultGlowStickRef_Params
 {
-	class AWeapGlowStick_C*                            ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AWeapGlowStick_C*                            Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ProjGlowStick.ProjGlowStick_C.HideAttachedComponents

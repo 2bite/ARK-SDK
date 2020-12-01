@@ -32,26 +32,6 @@ void UDinoAttackStateMelee_Spindles_NormalMode_Spin180_C::OnBeginEvent(class UPr
 }
 
 
-// Function DinoAttackStateMelee_Spindles_NormalMode_Spin180.DinoAttackStateMelee_Spindles_NormalMode_Spin180_C.OnTickEvent
-// ()
-// Parameters:
-// float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UDinoAttackStateMelee_Spindles_NormalMode_Spin180_C::OnTickEvent(float* DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateMelee_Spindles_NormalMode_Spin180.DinoAttackStateMelee_Spindles_NormalMode_Spin180_C.OnTickEvent");
-
-	UDinoAttackStateMelee_Spindles_NormalMode_Spin180_C_OnTickEvent_Params params;
-	params.DeltaSeconds = DeltaSeconds;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function DinoAttackStateMelee_Spindles_NormalMode_Spin180.DinoAttackStateMelee_Spindles_NormalMode_Spin180_C.BPCanAttack
 // ()
 // Parameters:

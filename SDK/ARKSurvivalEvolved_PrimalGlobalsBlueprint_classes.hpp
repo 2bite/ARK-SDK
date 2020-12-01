@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalGlobalsBlueprint.PrimalGlobalsBlueprint_C
-// 0x0000 (0x0158 - 0x0158)
+// 0x0000 (0x0198 - 0x0198)
 class UPrimalGlobalsBlueprint_C : public UPrimalGlobals
 {
 public:

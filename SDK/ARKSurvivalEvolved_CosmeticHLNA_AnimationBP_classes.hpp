@@ -25,7 +25,7 @@ public:
 	struct FAnimNode_BlendSpacePlayer                  AnimGraphNode_BlendSpacePlayer_0711F52949C56A9D628EF4AB14CCF957;// 0x0498(0x00E0)
 	struct FAnimNode_Slot                              AnimGraphNode_Slot_EA7D59CB497B2E7318FFA3809DF54283;      // 0x0578(0x0038)
 	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_DD4491844B97E6DB5875498449C67B53;// 0x05B0(0x0060)
-	struct FVector                                     PrevWorldLoc;                                             // 0x0610(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     prevWorldLoc;                                             // 0x0610(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     _2DMovementDeltaNormalized;                               // 0x061C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MovementDeltaInterpSpeed;                                 // 0x0628(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x062C(0x0004) MISSED OFFSET
@@ -90,10 +90,10 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendSpacePlayer_192();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_TwoWayBlend_72();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendSpacePlayer_191();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendListByBool_4314();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendSpacePlayer_324();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_TwoWayBlend_120();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendSpacePlayer_323();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendListByBool_5352();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_CosmeticHLNA_AnimationBP(int EntryPoint);
 };

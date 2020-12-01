@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Zipline_NonMotorized.Buff_Zipline_NonMotorized_C
-// 0x0000 (0x0BEC - 0x0BEC)
+// 0x0000 (0x0C7C - 0x0C7C)
 class ABuff_Zipline_NonMotorized_C : public ABuff_Zipline_Base_C
 {
 public:

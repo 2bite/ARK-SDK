@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ChalicoProj_Base.ChalicoProj_Base_C
-// 0x0004 (0x064C - 0x0648)
+// 0x0004 (0x065C - 0x0658)
 class AChalicoProj_Base_C : public AShooterProjectile
 {
 public:
-	float                                              notAChalicoDamage;                                        // 0x0648(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              notAChalicoDamage;                                        // 0x0658(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

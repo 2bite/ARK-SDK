@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoDropInventoryComponent_Carnivore_Huge_MegaFireWyvern.DinoDropInventoryComponent_Carnivore_Huge_MegaFireWyvern_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoDropInventoryComponent_Carnivore_Huge_MegaFireWyvern_C : public UDinoDropInventoryComponent_Carnivore_Huge_FireWyvern_C
 {
 public:

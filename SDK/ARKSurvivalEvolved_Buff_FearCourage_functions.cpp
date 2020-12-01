@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_FearCourage.Buff_FearCourage_C.GetBuffType
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -24,7 +24,6 @@ int ABuff_FearCourage_C::STATIC_GetBuffType()
 	ABuff_FearCourage_C_GetBuffType_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,18 +137,17 @@ void ABuff_FearCourage_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XP
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.GetBuffDescription
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_FearCourage_C::STATIC_GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_FearCourage_C::GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.GetBuffDescription");
 
 	ABuff_FearCourage_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,10 +190,10 @@ void ABuff_FearCourage_C::Add_Fear_Or_CourageClient(float amountToAdd, bool isFe
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           useClientIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           courage                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           fear                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Courage                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Fear                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FearCourage_C::IsAtMax_f(class APrimalCharacter* Character, bool useClientIndex, bool* courage, bool* fear)
+void ABuff_FearCourage_C::IsAtMax_f(class APrimalCharacter* Character, bool useClientIndex, bool* Courage, bool* Fear)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.IsAtMax_f");
 
@@ -209,10 +207,10 @@ void ABuff_FearCourage_C::IsAtMax_f(class APrimalCharacter* Character, bool useC
 
 	fn->FunctionFlags = flags;
 
-	if (courage != nullptr)
-		*courage = params.courage;
-	if (fear != nullptr)
-		*fear = params.fear;
+	if (Courage != nullptr)
+		*Courage = params.Courage;
+	if (Fear != nullptr)
+		*Fear = params.Fear;
 }
 
 
@@ -330,12 +328,12 @@ void ABuff_FearCourage_C::UpdateFleePoint()
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.Send HUDMessage to Rider From Server
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class FString                  messageID                      (Parm, ZeroConstructor)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FearCourage_C::Send_HUDMessage_to_Rider_From_Server(const class FString& messageID, float Duration)
+void ABuff_FearCourage_C::STATIC_Send_HUDMessage_to_Rider_From_Server(const class FString& messageID, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.Send HUDMessage to Rider From Server");
 
@@ -344,7 +342,6 @@ void ABuff_FearCourage_C::Send_HUDMessage_to_Rider_From_Server(const class FStri
 	params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -636,7 +633,7 @@ void ABuff_FearCourage_C::SendHUDMessageToRider(const struct FStatusValueModifie
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.TerrorActions
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -648,7 +645,6 @@ void ABuff_FearCourage_C::STATIC_TerrorActions(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -996,14 +992,14 @@ void ABuff_FearCourage_C::DecelerationTimeline__UpdateFunc()
 }
 
 
-// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Fire_K2Node_InputActionEvent_156
+// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Fire_K2Node_InputActionEvent_138
 // ()
 
-void ABuff_FearCourage_C::InpActEvt_Fire_K2Node_InputActionEvent_156()
+void ABuff_FearCourage_C::InpActEvt_Fire_K2Node_InputActionEvent_138()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Fire_K2Node_InputActionEvent_156");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Fire_K2Node_InputActionEvent_138");
 
-	ABuff_FearCourage_C_InpActEvt_Fire_K2Node_InputActionEvent_156_Params params;
+	ABuff_FearCourage_C_InpActEvt_Fire_K2Node_InputActionEvent_138_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1013,14 +1009,14 @@ void ABuff_FearCourage_C::InpActEvt_Fire_K2Node_InputActionEvent_156()
 }
 
 
-// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Targeting_K2Node_InputActionEvent_155
+// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Targeting_K2Node_InputActionEvent_137
 // ()
 
-void ABuff_FearCourage_C::InpActEvt_Targeting_K2Node_InputActionEvent_155()
+void ABuff_FearCourage_C::InpActEvt_Targeting_K2Node_InputActionEvent_137()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Targeting_K2Node_InputActionEvent_155");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Targeting_K2Node_InputActionEvent_137");
 
-	ABuff_FearCourage_C_InpActEvt_Targeting_K2Node_InputActionEvent_155_Params params;
+	ABuff_FearCourage_C_InpActEvt_Targeting_K2Node_InputActionEvent_137_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1030,14 +1026,14 @@ void ABuff_FearCourage_C::InpActEvt_Targeting_K2Node_InputActionEvent_155()
 }
 
 
-// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Crouch_K2Node_InputActionEvent_154
+// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Crouch_K2Node_InputActionEvent_136
 // ()
 
-void ABuff_FearCourage_C::InpActEvt_Crouch_K2Node_InputActionEvent_154()
+void ABuff_FearCourage_C::InpActEvt_Crouch_K2Node_InputActionEvent_136()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Crouch_K2Node_InputActionEvent_154");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Crouch_K2Node_InputActionEvent_136");
 
-	ABuff_FearCourage_C_InpActEvt_Crouch_K2Node_InputActionEvent_154_Params params;
+	ABuff_FearCourage_C_InpActEvt_Crouch_K2Node_InputActionEvent_136_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1047,14 +1043,14 @@ void ABuff_FearCourage_C::InpActEvt_Crouch_K2Node_InputActionEvent_154()
 }
 
 
-// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Jump_K2Node_InputActionEvent_153
+// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Jump_K2Node_InputActionEvent_135
 // ()
 
-void ABuff_FearCourage_C::InpActEvt_Jump_K2Node_InputActionEvent_153()
+void ABuff_FearCourage_C::InpActEvt_Jump_K2Node_InputActionEvent_135()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Jump_K2Node_InputActionEvent_153");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Jump_K2Node_InputActionEvent_135");
 
-	ABuff_FearCourage_C_InpActEvt_Jump_K2Node_InputActionEvent_153_Params params;
+	ABuff_FearCourage_C_InpActEvt_Jump_K2Node_InputActionEvent_135_Params params;
 
 	auto flags = fn->FunctionFlags;
 

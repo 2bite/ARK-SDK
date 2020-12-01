@@ -35,7 +35,7 @@ void ABuff_ParaWarningAlert_C::Add_Enemy_Indicators(TArray<struct FVector>* Enem
 
 
 // Function Buff_ParaWarningAlert.Buff_ParaWarningAlert_C.BPActivated
-// (Net, Exec, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,6 +47,7 @@ void ABuff_ParaWarningAlert_C::STATIC_BPActivated(class AActor** ForInstigator)
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

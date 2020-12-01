@@ -50,7 +50,7 @@ struct AIguanodon_Character_BP_C_BPTimerServer_Params
 struct AIguanodon_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -167,7 +167,7 @@ struct AIguanodon_Character_BP_C_ClientSetBipedState_Params
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.GetDefaultDino
 struct AIguanodon_Character_BP_C_GetDefaultDino_Params
 {
-	class AIguanodon_Character_BP_C*                   ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AIguanodon_Character_BP_C*                   Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.UserConstructionScript

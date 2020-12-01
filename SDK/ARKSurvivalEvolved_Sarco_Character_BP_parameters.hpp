@@ -36,9 +36,9 @@ struct ASarco_Character_BP_C_TriggerLungeImpulse_Params
 struct ASarco_Character_BP_C_K2_OnMovementModeChanged_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PrevCustomMode;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Sarco_Character_BP.Sarco_Character_BP_C.BPNotifyBumpedPawn
@@ -101,13 +101,13 @@ struct ASarco_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_76
-struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_76_Params
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_67
+struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_67_Params
 {
 };
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_75
-struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_75_Params
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_66
+struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_66_Params
 {
 };
 

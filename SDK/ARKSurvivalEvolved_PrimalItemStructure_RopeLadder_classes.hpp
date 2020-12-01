@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_RopeLadder.PrimalItemStructure_RopeLadder_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_RopeLadder_C : public UPrimalItemStructure_BaseLadder_C
 {
 public:

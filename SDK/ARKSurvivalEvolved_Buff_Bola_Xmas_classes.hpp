@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Bola_Xmas.Buff_Bola_Xmas_C
-// 0x0000 (0x0952 - 0x0952)
+// 0x0000 (0x09E2 - 0x09E2)
 class ABuff_Bola_Xmas_C : public ABuff_Bola_C
 {
 public:

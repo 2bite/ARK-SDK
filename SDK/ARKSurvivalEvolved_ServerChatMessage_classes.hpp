@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ServerChatMessage.ServerChatMessage_C
-// 0x0000 (0x0568 - 0x0568)
+// 0x0000 (0x0570 - 0x0570)
 class UServerChatMessage_C : public UUI_ServerBroadcastMessage
 {
 public:

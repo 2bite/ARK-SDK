@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Greenhouse_Doorframe.Greenhouse_Doorframe_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class AGreenhouse_Doorframe_C : public ADoorframe_Base_SM_C
 {
 public:

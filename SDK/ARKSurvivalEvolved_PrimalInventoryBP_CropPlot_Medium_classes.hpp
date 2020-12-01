@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_CropPlot_Medium.PrimalInventoryBP_CropPlot_Medium_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_CropPlot_Medium_C : public UPrimalInventoryBP_CropPlot_Base_C
 {
 public:

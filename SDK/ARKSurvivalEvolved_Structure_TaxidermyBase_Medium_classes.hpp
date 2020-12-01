@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Structure_TaxidermyBase_Medium.Structure_TaxidermyBase_Medium_C
-// 0x0000 (0x0DE8 - 0x0DE8)
+// 0x0000 (0x0E00 - 0x0E00)
 class AStructure_TaxidermyBase_Medium_C : public AStructure_TaxidermyBase_C
 {
 public:

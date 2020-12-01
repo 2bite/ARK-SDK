@@ -25,11 +25,6 @@ struct ATestGameMode_C_UserConstructionScript_Params
 {
 };
 
-// Function TestGameMode.TestGameMode_C.ReceiveBeginPlay
-struct ATestGameMode_C_ReceiveBeginPlay_Params
-{
-};
-
 // Function TestGameMode.TestGameMode_C.ExecuteUbergraph_TestGameMode
 struct ATestGameMode_C_ExecuteUbergraph_TestGameMode_Params
 {

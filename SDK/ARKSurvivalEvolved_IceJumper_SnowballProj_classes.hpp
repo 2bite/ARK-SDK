@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass IceJumper_SnowballProj.IceJumper_SnowballProj_C
-// 0x0010 (0x065C - 0x064C)
+// 0x0010 (0x066C - 0x065C)
 class AIceJumper_SnowballProj_C : public AChalicoProj_Base_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x064C(0x0004) MISSED OFFSET
-	class UChildActorComponent*                        Trail;                                                    // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxSnowBallScale;                                         // 0x0658(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x065C(0x0004) MISSED OFFSET
+	class UChildActorComponent*                        Trail;                                                    // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxSnowBallScale;                                         // 0x0668(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

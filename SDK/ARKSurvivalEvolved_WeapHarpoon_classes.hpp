@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapHarpoon.WeapHarpoon_C
-// 0x0008 (0x0DE0 - 0x0DD8)
+// 0x0008 (0x0E00 - 0x0DF8)
 class AWeapHarpoon_C : public AShooterWeapon_Projectile
 {
 public:
-	class UStaticMeshComponent*                        Mesh3PSM;                                                 // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Mesh3PSM;                                                 // 0x0DF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

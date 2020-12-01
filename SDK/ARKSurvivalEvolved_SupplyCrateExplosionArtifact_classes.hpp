@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SupplyCrateExplosionArtifact.SupplyCrateExplosionArtifact_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ASupplyCrateExplosionArtifact_C : public APrimalEmitterSpawnable
 {
 public:

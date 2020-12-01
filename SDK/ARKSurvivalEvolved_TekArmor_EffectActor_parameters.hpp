@@ -61,7 +61,7 @@ struct ATekArmor_EffectActor_C_UserConstructionScript_Params
 struct ATekArmor_EffectActor_C_InitTekEffect_Params
 {
 	class UParticleSystem*                             particle;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ParticleScale;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     particleScale;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class USoundBase*                                  Sound;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class APrimalCharacter*                            Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -76,7 +76,7 @@ struct ATekArmor_EffectActor_C_PlayerDied_Params
 struct ATekArmor_EffectActor_C_SetTekFX_Params
 {
 	class UParticleSystem*                             particle;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ParticleScale;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     particleScale;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class USoundBase*                                  Sound;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

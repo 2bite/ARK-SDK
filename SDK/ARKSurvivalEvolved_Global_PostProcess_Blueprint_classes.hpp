@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Global_PostProcess_Blueprint.Global_PostProcess_Blueprint_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0858 - 0x0858)
 class AGlobal_PostProcess_Blueprint_C : public APostProcessVolume
 {
 public:

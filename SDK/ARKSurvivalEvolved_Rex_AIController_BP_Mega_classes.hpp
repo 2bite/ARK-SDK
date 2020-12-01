@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rex_AIController_BP_Mega.Rex_AIController_BP_Mega_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ARex_AIController_BP_Mega_C : public ARex_AIController_BP_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Flag_SM_Manticore.Flag_SM_Manticore_C
-// 0x0000 (0x0AA8 - 0x0AA8)
+// 0x0000 (0x0AC0 - 0x0AC0)
 class AFlag_SM_Manticore_C : public AFlag_SM_C
 {
 public:

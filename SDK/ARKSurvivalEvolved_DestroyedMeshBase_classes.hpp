@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DestroyedMeshBase.DestroyedMeshBase_C
-// 0x0000 (0x0488 - 0x0488)
+// 0x0000 (0x0498 - 0x0498)
 class ADestroyedMeshBase_C : public ADestroyedMeshActor
 {
 public:

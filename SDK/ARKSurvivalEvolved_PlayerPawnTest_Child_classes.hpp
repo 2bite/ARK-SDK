@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PlayerPawnTest_Child.PlayerPawnTest_Child_C
-// 0x0000 (0x2090 - 0x2090)
+// 0x0000 (0x2139 - 0x2139)
 class APlayerPawnTest_Child_C : public APlayerPawnTest_C
 {
 public:

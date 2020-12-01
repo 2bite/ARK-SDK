@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjSpear.ProjSpear_C
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0680 - 0x0680)
 class AProjSpear_C : public APrimalProjectileArrow
 {
 public:

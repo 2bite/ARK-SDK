@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_AdobeRoof.PrimalItemStructure_AdobeRoof_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_AdobeRoof_C : public UPrimalItemStructure_BaseRoof_C
 {
 public:

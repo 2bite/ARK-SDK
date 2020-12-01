@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Jerboa.DinoTamedInventoryComponent_Jerboa_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoTamedInventoryComponent_Jerboa_C : public UDinoTamedInventoryComponent_BP_Base_C
 {
 public:

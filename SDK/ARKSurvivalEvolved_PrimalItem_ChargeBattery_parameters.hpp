@@ -31,7 +31,7 @@ struct UPrimalItem_ChargeBattery_C_BPGetCustomInventoryWidgetText_Params
 struct UPrimalItem_ChargeBattery_C_AddDurabilitySafe_Params
 {
 	float                                              amountToAdd;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              amountAdded;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              AmountAdded;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PrimalItem_ChargeBattery.PrimalItem_ChargeBattery_C.BPUsedOntoItem

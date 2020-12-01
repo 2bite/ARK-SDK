@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Vulture_Character_BP.Vulture_Character_BP_C
-// 0x0008 (0x2090 - 0x2088)
+// 0x0008 (0x2110 - 0x2108)
 class AVulture_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Vulture_C*  DinoCharacterStatus_BP_Vulture_C1;                        // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Vulture_C*  DinoCharacterStatus_BP_Vulture_C1;                        // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

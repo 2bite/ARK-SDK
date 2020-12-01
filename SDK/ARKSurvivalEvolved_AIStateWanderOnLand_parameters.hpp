@@ -17,7 +17,7 @@ namespace sdk
 // Function AIStateWanderOnLand.AIStateWanderOnLand_C.FindTargetAreas
 struct UAIStateWanderOnLand_C_FindTargetAreas_Params
 {
-	bool                                               found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AIStateWanderOnLand.AIStateWanderOnLand_C.OnCanUseStateEvent

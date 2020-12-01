@@ -20,12 +20,6 @@ struct UDinoAttackStateMelee_Spindles_NormalMode_Spin180_C_OnBeginEvent_Params
 	class UPrimalAIState**                             InParentState;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function DinoAttackStateMelee_Spindles_NormalMode_Spin180.DinoAttackStateMelee_Spindles_NormalMode_Spin180_C.OnTickEvent
-struct UDinoAttackStateMelee_Spindles_NormalMode_Spin180_C_OnTickEvent_Params
-{
-	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function DinoAttackStateMelee_Spindles_NormalMode_Spin180.DinoAttackStateMelee_Spindles_NormalMode_Spin180_C.BPCanAttack
 struct UDinoAttackStateMelee_Spindles_NormalMode_Spin180_C_BPCanAttack_Params
 {

@@ -38,7 +38,7 @@ bool AStructureBP_Toilet_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function StructureBP_Toilet.StructureBP_Toilet_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Native, Static, Protected, Delegate, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -52,7 +52,6 @@ TArray<struct FMultiUseEntry> AStructureBP_Toilet_C::STATIC_BPGetMultiUseEntries
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

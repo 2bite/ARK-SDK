@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureTurretPlant.StructureTurretPlant_C
-// 0x001D (0x0F3D - 0x0F20)
+// 0x001D (0x0F55 - 0x0F38)
 class AStructureTurretPlant_C : public APrimalStructureTurretPlant
 {
 public:
-	class UStaticMeshComponent*                        Collision;                                                // 0x0F20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0F28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0F30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxTurretsNearby;                                         // 0x0F38(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bTooManyInRangeInactive;                                  // 0x0F3C(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	class UStaticMeshComponent*                        Collision;                                                // 0x0F38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0F40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0F48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MaxTurretsNearby;                                         // 0x0F50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bTooManyInRangeInactive;                                  // 0x0F54(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,7 @@ public:
 	void BPPostLoadedFromSaveGame();
 	bool BPCanBeActivated();
 	void Turret_Check_Hard_Limit();
-	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
+	void STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	void UserConstructionScript();
 	void ExecuteUbergraph_StructureTurretPlant(int EntryPoint);
 };

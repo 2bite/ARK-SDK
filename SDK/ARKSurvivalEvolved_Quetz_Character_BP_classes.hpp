@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Quetz_Character_BP.Quetz_Character_BP_C
-// 0x0010 (0x2098 - 0x2088)
+// 0x0010 (0x2118 - 0x2108)
 class AQuetz_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UBoxComponent*                               PlatformSaddleBuildArea;                                  // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDinoCharacterStatusComponent_BP_Quetz_C*    DinoCharacterStatus_BP_Quetz_C1;                          // 0x2090(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               PlatformSaddleBuildArea;                                  // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Quetz_C*    DinoCharacterStatus_BP_Quetz_C1;                          // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

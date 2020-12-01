@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass ScoutAnimBlueprint.ScoutAnimBlueprint_C
-// 0x0000 (0x18EF - 0x18EF)
+// 0x0000 (0x1BC8 - 0x1BC8)
 class UScoutAnimBlueprint_C : public UDinoBlueprintBase_RootTransform_FlyStrafing_C
 {
 public:

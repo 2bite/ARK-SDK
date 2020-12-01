@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Purlovia_Character_BP_Polar.Purlovia_Character_BP_Polar_C
-// 0x0008 (0x2880 - 0x2878)
+// 0x0008 (0x2900 - 0x28F8)
 class APurlovia_Character_BP_Polar_C : public APurlovia_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Purlovia_Polar_C* DinoCharacterStatus_BP_Purlovia_Polar_C1;                 // 0x2878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Purlovia_Polar_C* DinoCharacterStatus_BP_Purlovia_Polar_C1;                 // 0x28F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

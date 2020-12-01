@@ -13,18 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ScoutTracker.Buff_ScoutTracker_C.BPGetDebugInfoString
-// (NetReliable, NetRequest, Native, Static, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Delegate, DLLImport, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ABuff_ScoutTracker_C::STATIC_BPGetDebugInfoString()
+class FString ABuff_ScoutTracker_C::BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutTracker.Buff_ScoutTracker_C.BPGetDebugInfoString");
 
 	ABuff_ScoutTracker_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

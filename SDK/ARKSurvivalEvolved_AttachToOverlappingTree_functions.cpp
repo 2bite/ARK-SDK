@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function AttachToOverlappingTree.AttachToOverlappingTree_C.ReceiveExecute
-// (NetRequest, Native, Static, Protected, Delegate, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, NetClient)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAttachToOverlappingTree_C::STATIC_ReceiveExecute(class AActor** OwnerActor)
+void UAttachToOverlappingTree_C::ReceiveExecute(class AActor** OwnerActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AttachToOverlappingTree.AttachToOverlappingTree_C.ReceiveExecute");
 

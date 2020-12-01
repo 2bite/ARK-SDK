@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjFlare_Firework.ProjFlare_Firework_C
-// 0x0000 (0x0680 - 0x0680)
+// 0x0000 (0x0690 - 0x0690)
 class AProjFlare_Firework_C : public AProjFlare_C
 {
 public:

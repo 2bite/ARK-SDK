@@ -14,15 +14,15 @@ namespace sdk
 //Classes
 //---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass EngramEntry_Glowstick.EngramEntry_GlowStick_C
+// BlueprintGeneratedClass EngramEntry_Glowstick.EngramEntry_Glowstick_C
 // 0x0000 (0x0090 - 0x0090)
-class UEngramEntry_GlowStick_C : public UPrimalEngramEntry
+class UEngramEntry_Glowstick_C : public UPrimalEngramEntry
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass EngramEntry_Glowstick.EngramEntry_GlowStick_C");
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass EngramEntry_Glowstick.EngramEntry_Glowstick_C");
 		return ptr;
 	}
 

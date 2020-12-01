@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Electrocuted_Rockwell.Buff_Electrocuted_Rockwell_C
-// 0x0000 (0x08B8 - 0x08B8)
+// 0x0000 (0x0948 - 0x0948)
 class ABuff_Electrocuted_Rockwell_C : public ABuff_Electrocuted_C
 {
 public:

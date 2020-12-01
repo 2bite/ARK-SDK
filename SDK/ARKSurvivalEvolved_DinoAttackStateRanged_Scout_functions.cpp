@@ -35,7 +35,7 @@ void UDinoAttackStateRanged_Scout_C::GetScout(class AScout_Character_BP_C** Resu
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnTickEvent
-// (NetReliable, Native, Event, MulticastDelegate, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,7 +47,6 @@ void UDinoAttackStateRanged_Scout_C::OnTickEvent(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +55,7 @@ void UDinoAttackStateRanged_Scout_C::OnTickEvent(float* DeltaSeconds)
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnEndEvent
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (Native, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 
 void UDinoAttackStateRanged_Scout_C::OnEndEvent()
 {
@@ -125,7 +124,7 @@ void UDinoAttackStateRanged_Scout_C::Tracker_Impact_Pawn_or_Terrain(class AActor
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.CalculateProjectileImpacts
-// (NetReliable, NetRequest, Static, MulticastDelegate, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -139,6 +138,7 @@ void UDinoAttackStateRanged_Scout_C::STATIC_CalculateProjectileImpacts(const str
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

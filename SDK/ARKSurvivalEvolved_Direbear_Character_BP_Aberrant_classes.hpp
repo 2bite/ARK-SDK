@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Direbear_Character_BP_Aberrant.Direbear_Character_BP_Aberrant_C
-// 0x0000 (0x2090 - 0x2090)
+// 0x0000 (0x2110 - 0x2110)
 class ADirebear_Character_BP_Aberrant_C : public ADirebear_Character_BP_C
 {
 public:

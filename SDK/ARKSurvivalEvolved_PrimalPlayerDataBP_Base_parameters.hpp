@@ -14,14 +14,6 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss
-struct UPrimalPlayerDataBP_Base_C_BPForceDefeatedBoss_Params
-{
-	int*                                               DifficultyIndex;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName*                                      BossName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	class AShooterPlayerController**                   PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPCreatedNewPlayerData
 struct UPrimalPlayerDataBP_Base_C_BPCreatedNewPlayerData_Params
 {

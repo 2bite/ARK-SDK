@@ -658,6 +658,9 @@ public:
 	void SetAutoSize(bool InbAutoSize);
 	void SetAnchors(const struct FAnchors& InAnchors);
 	void SetAlignment(const struct FVector2D& InAlignment);
+	struct FVector2D GetSize();
+	struct FVector2D GetPosition();
+	struct FAnchors GetAnchors();
 };
 
 

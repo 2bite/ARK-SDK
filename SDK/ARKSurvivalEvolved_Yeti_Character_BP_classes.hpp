@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Yeti_Character_BP.Yeti_Character_BP_C
-// 0x0008 (0x2870 - 0x2868)
+// 0x0008 (0x28F0 - 0x28E8)
 class AYeti_Character_BP_C : public ABigfoot_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Yeti_C*     DinoCharacterStatus_BP_Yeti_C1;                           // 0x2868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Yeti_C*     DinoCharacterStatus_BP_Yeti_C1;                           // 0x28E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TreePlatform_Metal_SM.TreePlatform_Metal_SM_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class ATreePlatform_Metal_SM_C : public ATreePlatform_Base_SM_C
 {
 public:

@@ -12,6 +12,72 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Buff_TekArmor.Buff_TekArmor_C.check genesis restrictions for player
+// ()
+// Parameters:
+// class APrimalCharacter*        Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           is_restricted                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_TekArmor_C::check_genesis_restrictions_for_player(class APrimalCharacter* Player, bool* is_restricted)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.check genesis restrictions for player");
+
+	ABuff_TekArmor_C_check_genesis_restrictions_for_player_Params params;
+	params.Player = Player;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (is_restricted != nullptr)
+		*is_restricted = params.is_restricted;
+}
+
+
+// Function Buff_TekArmor.Buff_TekArmor_C.BPActivated
+// ()
+// Parameters:
+// class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_TekArmor_C::BPActivated(class AActor** ForInstigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.BPActivated");
+
+	ABuff_TekArmor_C_BPActivated_Params params;
+	params.ForInstigator = ForInstigator;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_TekArmor.Buff_TekArmor_C.Is Restricted Because Of Genesis Map
+// ()
+// Parameters:
+// bool                           restricted                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_TekArmor_C::Is_Restricted_Because_Of_Genesis_Map(bool* restricted)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Is Restricted Because Of Genesis Map");
+
+	ABuff_TekArmor_C_Is_Restricted_Because_Of_Genesis_Map_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (restricted != nullptr)
+		*restricted = params.restricted;
+}
+
+
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Is Player in SealedSpace
 // ()
 // Parameters:
@@ -85,12 +151,12 @@ void ABuff_TekArmor_C::IsPlayerInWaterVolume(bool* Result, float* waterVolumeTop
 // ()
 // Parameters:
 // class UParticleSystem*         EmitterTemplate                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              InTransform                    (Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct UObject_FTransform      InTransform                    (Parm, OutParm, ReferenceParm, IsPlainOldData)
 // class USoundBase*              Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VolumeMultiplier               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          PitchMultiplier                (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::SpawnFX(class UParticleSystem* EmitterTemplate, class USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier, struct FTransform* InTransform)
+void ABuff_TekArmor_C::SpawnFX(class UParticleSystem* EmitterTemplate, class USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier, struct UObject_FTransform* InTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.SpawnFX");
 
@@ -275,9 +341,9 @@ void ABuff_TekArmor_C::IsWarping_FOV(bool* Result)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff
 // ()
 // Parameters:
-// class ABuff_TekArmor_C*        ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ABuff_TekArmor_C*        Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** ref)
+void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff");
 
@@ -289,17 +355,17 @@ void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** ref)
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer
 // ()
 // Parameters:
-// class APrimalCharacter*        ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
+void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer");
 
@@ -311,8 +377,8 @@ void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -320,15 +386,15 @@ void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
 // ()
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            elementCost                    (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ElementCost                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Client_Consume_Element_After_Time(float DeltaTime, int elementCost)
+void ABuff_TekArmor_C::Client_Consume_Element_After_Time(float DeltaTime, int ElementCost)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Client_Consume Element After Time");
 
 	ABuff_TekArmor_C_Client_Consume_Element_After_Time_Params params;
 	params.DeltaTime = DeltaTime;
-	params.elementCost = elementCost;
+	params.ElementCost = ElementCost;
 
 	auto flags = fn->FunctionFlags;
 
@@ -383,9 +449,9 @@ void ABuff_TekArmor_C::IsPlayerGrounded(bool* Result)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager
 // ()
 // Parameters:
-// class AShooterPlayerCameraManager* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerCameraManager* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** ref)
+void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager");
 
@@ -397,8 +463,8 @@ void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCa
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -427,9 +493,9 @@ void ABuff_TekArmor_C::UpdatePlayerFOV(float intensityRatio, bool warpIn)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement
 // ()
 // Parameters:
-// class UCharacterMovementComponent* movement                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UCharacterMovementComponent* Movement                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** movement)
+void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** Movement)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement");
 
@@ -441,8 +507,8 @@ void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementCom
 
 	fn->FunctionFlags = flags;
 
-	if (movement != nullptr)
-		*movement = params.movement;
+	if (Movement != nullptr)
+		*Movement = params.Movement;
 }
 
 
@@ -719,11 +785,11 @@ void ABuff_TekArmor_C::Equipped_SetToMaxElement(TEnumAsByte<EPrimalEquipmentType
 // Parameters:
 // class UParticleSystem*         particleTemplate               (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundBase*              Sound                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Transform                      (Parm, IsPlainOldData)
+// struct UObject_FTransform      Transform                      (Parm, IsPlainOldData)
 // float                          soundVolume                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          soundPitch                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Multi_SpawnFX(class UParticleSystem* particleTemplate, class USoundBase* Sound, const struct FTransform& Transform, float soundVolume, float soundPitch)
+void ABuff_TekArmor_C::Multi_SpawnFX(class UParticleSystem* particleTemplate, class USoundBase* Sound, const struct UObject_FTransform& Transform, float soundVolume, float soundPitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Multi_SpawnFX");
 
@@ -770,6 +836,57 @@ void ABuff_TekArmor_C::Server_SetTekAbilityActive(bool newActive)
 
 	ABuff_TekArmor_C_Server_SetTekAbilityActive_Params params;
 	params.newActive = newActive;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_TekArmor.Buff_TekArmor_C.RateLimitedGenesisAbilityWarning
+// ()
+
+void ABuff_TekArmor_C::RateLimitedGenesisAbilityWarning()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.RateLimitedGenesisAbilityWarning");
+
+	ABuff_TekArmor_C_RateLimitedGenesisAbilityWarning_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_TekArmor.Buff_TekArmor_C.ReceiveBeginPlay
+// ()
+
+void ABuff_TekArmor_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.ReceiveBeginPlay");
+
+	ABuff_TekArmor_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_TekArmor.Buff_TekArmor_C.ReceiveDestroyed
+// ()
+
+void ABuff_TekArmor_C::ReceiveDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.ReceiveDestroyed");
+
+	ABuff_TekArmor_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
 

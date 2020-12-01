@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BearTrap.BearTrap_C
-// 0x0000 (0x0B38 - 0x0B38)
+// 0x0000 (0x0B60 - 0x0B60)
 class ABearTrap_C : public ABaseBearTrap_C
 {
 public:

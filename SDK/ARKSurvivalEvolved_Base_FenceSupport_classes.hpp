@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Base_FenceSupport.Base_FenceSupport_C
-// 0x0010 (0x0AB0 - 0x0AA0)
+// 0x0010 (0x0AC8 - 0x0AB8)
 class ABase_FenceSupport_C : public AFenceFoundation_Base_New_C
 {
 public:
-	class UStaticMeshComponent*                        RightTarget;                                              // 0x0AA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        LeftTarget;                                               // 0x0AA8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        RightTarget;                                              // 0x0AB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        LeftTarget;                                               // 0x0AC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

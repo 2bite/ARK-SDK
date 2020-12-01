@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BaseBearTrap.BaseBearTrap_C
-// 0x0008 (0x0B38 - 0x0B30)
+// 0x0008 (0x0B60 - 0x0B58)
 class ABaseBearTrap_C : public APrimalStructureBearTrap
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0B30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

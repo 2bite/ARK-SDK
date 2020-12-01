@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_StorageBox_Balloon.PrimalItemStructure_StorageBox_Balloon_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_StorageBox_Balloon_C : public UPrimalItemStructureGeneric_C
 {
 public:

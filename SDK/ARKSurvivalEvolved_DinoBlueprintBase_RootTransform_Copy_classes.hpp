@@ -82,7 +82,7 @@ public:
 	float                                              MovementAnimRate;                                         // 0x11B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bIsFlying;                                                // 0x11B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0xB];                                       // 0x11B5(0x000B) MISSED OFFSET
-	struct FTransform                                  RootOffsetTransform;                                      // 0x11C0(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct UObject_FTransform                          RootOffsetTransform;                                      // 0x11C0(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinimumMovementSpeed;                                     // 0x11F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              FallingAnimPlayRate;                                      // 0x11F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              FallingBlendInTime;                                       // 0x11F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -134,7 +134,7 @@ public:
 	bool                                               CallFunc_IsMeshGameplayRelevant_ReturnValue;              // 0x1292(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x1293(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData08[0xC];                                       // 0x1294(0x000C) MISSED OFFSET
-	struct FTransform                                  CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x12A0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
+	struct UObject_FTransform                          CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x12A0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_GetAimOffsetsTransform_TheRootYawSpeed;          // 0x12D0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_GetAimOffsetsTransform_RootLocOffset;            // 0x12D4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    CallFunc_GetAimOffsetsTransform_ReturnValue;              // 0x12E0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -199,33 +199,33 @@ public:
 
 
 	void BlueprintPlayAnimationEvent(class UAnimMontage** AnimationMontage, float* PlayRate, float* playedAnimLength);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4308();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5069();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ModifyBone_780();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4307();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_RotationOffsetBlendSpace_282();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4306();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4305();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5067();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4304();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4303();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5066();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5065();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4302();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5064();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4301();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4300();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ApplyAdditive_330();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4299();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4298();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4297();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5059();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4296();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4295();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5058();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_5057();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ApplyAdditive_329();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_4294();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5346();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_6401();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ModifyBone_846();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5345();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_RotationOffsetBlendSpace_318();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5344();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5343();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_6399();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5342();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5341();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_6398();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_6397();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5340();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_6396();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5339();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5338();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ApplyAdditive_450();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5337();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5336();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5335();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_6391();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5334();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5333();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_6390();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_SequencePlayer_6389();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_ApplyAdditive_449();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy_AnimGraphNode_BlendListByBool_5332();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_DinoBlueprintBase_RootTransform_Copy(int EntryPoint);
 };

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureBP_Wardrums.StructureBP_Wardrums_C
-// 0x0000 (0x0EE0 - 0x0EE0)
+// 0x0000 (0x0EF8 - 0x0EF8)
 class AStructureBP_Wardrums_C : public AStructureSeatingMusicBaseBP_C
 {
 public:

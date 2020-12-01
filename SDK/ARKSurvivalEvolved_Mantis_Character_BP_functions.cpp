@@ -133,7 +133,7 @@ bool AMantis_Character_BP_C::BPCanNotifyTeamAggroAI(class APrimalDinoCharacter**
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.Start Leap Attack
-// (NetReliable, NetRequest, Exec, NetMulticast, Public, NetServer, NetClient, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, Delegate, HasDefaults, DLLImport)
 
 void AMantis_Character_BP_C::Start_Leap_Attack()
 {
@@ -150,7 +150,7 @@ void AMantis_Character_BP_C::Start_Leap_Attack()
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.CheckLeapAttackEnd
-// (NetRequest, NetResponse, NetMulticast, Public, NetServer, NetClient, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Delegate, HasDefaults, DLLImport)
 
 void AMantis_Character_BP_C::CheckLeapAttackEnd()
 {
@@ -159,6 +159,7 @@ void AMantis_Character_BP_C::CheckLeapAttackEnd()
 	AMantis_Character_BP_C_CheckLeapAttackEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -302,17 +303,17 @@ void AMantis_Character_BP_C::OnLanded(struct FHitResult* Hit)
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AMantis_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AMantis_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mantis_Character_BP.Mantis_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	AMantis_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 
@@ -325,7 +326,7 @@ void AMantis_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custom
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, NetServer, NetClient, BlueprintEvent)
+// (NetReliable, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -334,7 +335,7 @@ void AMantis_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custom
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AMantis_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AMantis_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mantis_Character_BP.Mantis_Character_BP_C.BlueprintAdjustOutputDamage");
 

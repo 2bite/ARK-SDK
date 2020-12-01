@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Deathworm_AIController_BP.Deathworm_AIController_BP_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ADeathworm_AIController_BP_C : public ADino_AIController_BP_C
 {
 public:

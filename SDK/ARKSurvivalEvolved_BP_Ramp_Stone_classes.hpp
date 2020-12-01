@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Ramp_Stone.BP_Ramp_Stone_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class ABP_Ramp_Stone_C : public ABase_Ramp_C
 {
 public:

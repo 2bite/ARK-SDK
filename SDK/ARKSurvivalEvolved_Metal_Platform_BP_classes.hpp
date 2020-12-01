@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Metal_Platform_BP.Metal_Platform_BP_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class AMetal_Platform_BP_C : public ACliffPlatform_Base_BP_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElectricCableStraight.ElectricCableStraight_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class AElectricCableStraight_C : public AElectricCableBaseBP_C
 {
 public:

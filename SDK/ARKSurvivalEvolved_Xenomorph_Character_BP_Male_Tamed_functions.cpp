@@ -220,9 +220,9 @@ void AXenomorph_Character_BP_Male_Tamed_C::ProcessJump()
 
 
 // Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.Jump Trace
-// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void AXenomorph_Character_BP_Male_Tamed_C::Jump_Trace()
+void AXenomorph_Character_BP_Male_Tamed_C::STATIC_Jump_Trace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.Jump Trace");
 

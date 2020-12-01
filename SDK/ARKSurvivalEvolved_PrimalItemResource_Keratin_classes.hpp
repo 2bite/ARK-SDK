@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_Keratin.PrimalItemResource_Keratin_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemResource_Keratin_C : public UPrimalItemResource_ChitinOrKeratin_C
 {
 public:

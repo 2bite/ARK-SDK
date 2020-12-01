@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DoubleDoor_Wood.BP_DoubleDoor_Wood_C
-// 0x0010 (0x0B68 - 0x0B58)
+// 0x0010 (0x0B80 - 0x0B70)
 class ABP_DoubleDoor_Wood_C : public ABase_DoubleDoor_C
 {
 public:
-	class UStaticMeshComponent*                        SecondDoor;                                               // 0x0B58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             SecondDoorTransform;                                      // 0x0B60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        SecondDoor;                                               // 0x0B70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             SecondDoorTransform;                                      // 0x0B78(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

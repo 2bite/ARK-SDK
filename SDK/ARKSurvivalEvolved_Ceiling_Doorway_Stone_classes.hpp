@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ceiling_Doorway_Stone.Ceiling_Doorway_Stone_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class ACeiling_Doorway_Stone_C : public ACeiling_Doorway_Base_SM_C
 {
 public:

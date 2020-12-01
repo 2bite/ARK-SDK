@@ -268,12 +268,12 @@ float ABuff_Encapsulated_C::BuffAdjustDamage(float* Damage, class AController** 
 
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.ApplyDamageToIceShield
-// (Net, NetMulticast, HasDefaults, DLLImport, Const, NetValidate)
+// (Net, Exec, Native, Static, NetMulticast, MulticastDelegate, Delegate, DLLImport, Const, NetValidate)
 // Parameters:
 // float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsRemoteDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Encapsulated_C::ApplyDamageToIceShield(float Damage, bool IsRemoteDamage)
+void ABuff_Encapsulated_C::STATIC_ApplyDamageToIceShield(float Damage, bool IsRemoteDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Encapsulated.Buff_Encapsulated_C.ApplyDamageToIceShield");
 
@@ -282,6 +282,7 @@ void ABuff_Encapsulated_C::ApplyDamageToIceShield(float Damage, bool IsRemoteDam
 	params.IsRemoteDamage = IsRemoteDamage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -355,7 +356,7 @@ void ABuff_Encapsulated_C::FreezeCharacter(class APrimalCharacter* Character, bo
 
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.BPDeactivated
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Protected, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetRequest, Event, Static, Public, Private, Delegate, DLLImport, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -367,7 +368,6 @@ void ABuff_Encapsulated_C::STATIC_BPDeactivated(class AActor** ForInstigator)
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

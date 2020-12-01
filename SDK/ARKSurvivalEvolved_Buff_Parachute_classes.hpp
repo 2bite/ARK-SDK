@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Parachute.Buff_Parachute_C
-// 0x0018 (0x08B8 - 0x08A0)
+// 0x0018 (0x0948 - 0x0930)
 class ABuff_Parachute_C : public APrimalBuff
 {
 public:
-	class USkeletalMeshComponent*                      HarnessHF;                                                // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      HarnessHM;                                                // 0x08A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      ParachuteSK;                                              // 0x08B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      HarnessHF;                                                // 0x0930(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      HarnessHM;                                                // 0x0938(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      ParachuteSK;                                              // 0x0940(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

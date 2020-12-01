@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjDart_RefinedTranq.ProjDart_RefinedTranq_C
-// 0x0000 (0x0678 - 0x0678)
+// 0x0000 (0x0688 - 0x0688)
 class AProjDart_RefinedTranq_C : public AProjDart_Tranq_C
 {
 public:

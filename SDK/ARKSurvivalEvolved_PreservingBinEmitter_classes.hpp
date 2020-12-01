@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PreservingBinEmitter.PreservingBinEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class APreservingBinEmitter_C : public APrimalEmitterSpawnable
 {
 public:

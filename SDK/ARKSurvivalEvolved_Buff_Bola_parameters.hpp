@@ -17,6 +17,7 @@ namespace sdk
 // Function Buff_Bola.Buff_Bola_C.BPHandleOnStartFire
 struct ABuff_Bola_C_BPHandleOnStartFire_Params
 {
+	bool*                                              bFromGamepad;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Bola.Buff_Bola_C.BPServerHandleNetExecCommand

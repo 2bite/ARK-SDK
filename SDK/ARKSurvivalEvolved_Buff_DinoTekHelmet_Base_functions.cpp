@@ -15,9 +15,9 @@ namespace sdk
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsElectricalStormActive
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* _return)
+void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsElectricalStormActive");
 
@@ -29,8 +29,8 @@ void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -103,7 +103,7 @@ void ABuff_DinoTekHelmet_Base_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, fl
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsAllowedToFire
-// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           bAllowed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -186,7 +186,7 @@ void ABuff_DinoTekHelmet_Base_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.LocalDoAttack
-// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           bDidAttack                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

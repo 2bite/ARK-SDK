@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjTekDinoHelmet_Tapejara.ProjTekDinoHelmet_Tapejara_C
-// 0x0000 (0x0772 - 0x0772)
+// 0x0000 (0x0782 - 0x0782)
 class AProjTekDinoHelmet_Tapejara_C : public AProjTekDinoHelmet_C
 {
 public:

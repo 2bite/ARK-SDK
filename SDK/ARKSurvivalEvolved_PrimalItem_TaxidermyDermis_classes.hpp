@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_TaxidermyDermis.PrimalItem_TaxidermyDermis_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItem_TaxidermyDermis_C : public UPrimalItem_Base_C
 {
 public:
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void BPInitIconMaterial();
+	void STATIC_BPInitIconMaterial();
 	void ExecuteUbergraph_PrimalItem_TaxidermyDermis(int EntryPoint);
 };
 

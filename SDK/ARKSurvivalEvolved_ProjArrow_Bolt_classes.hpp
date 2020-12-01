@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_Bolt.ProjArrow_Bolt_C
-// 0x0008 (0x0678 - 0x0670)
+// 0x0008 (0x0688 - 0x0680)
 class AProjArrow_Bolt_C : public APrimalProjectileArrow
 {
 public:
-	class UAudioComponent*                             Projectile_SFX;                                           // 0x0670(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Projectile_SFX;                                           // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

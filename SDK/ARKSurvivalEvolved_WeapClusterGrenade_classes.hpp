@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapClusterGrenade.WeapClusterGrenade_C
-// 0x0000 (0x0E40 - 0x0E40)
+// 0x0000 (0x0E60 - 0x0E60)
 class AWeapClusterGrenade_C : public AWeapGrenade_C
 {
 public:

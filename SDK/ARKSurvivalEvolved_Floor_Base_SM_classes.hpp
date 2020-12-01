@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Floor_Base_SM.Floor_Base_SM_C
-// 0x0010 (0x0AB0 - 0x0AA0)
+// 0x0010 (0x0AC8 - 0x0AB8)
 class AFloor_Base_SM_C : public AStructureBaseBP_C
 {
 public:
-	TArray<struct FName>                               AllowSnapRotationToStructuresWithTag;                     // 0x0AA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               AllowSnapRotationToStructuresWithTag;                     // 0x0AB8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

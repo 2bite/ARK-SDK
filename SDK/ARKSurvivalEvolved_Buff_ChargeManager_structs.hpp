@@ -7,8 +7,8 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_Buff_Base_classes.hpp"
 #include "ARKSurvivalEvolved_E_ChargeManagerType_classes.hpp"
+#include "ARKSurvivalEvolved_Buff_Base_classes.hpp"
 #include "ARKSurvivalEvolved_E_ChargeVariableNames_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
 

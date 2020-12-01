@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalPlayerDataBP.PrimalPlayerDataBP_C
-// 0x0000 (0x04A4 - 0x04A4)
+// 0x0000 (0x04F8 - 0x04F8)
 class UPrimalPlayerDataBP_C : public UPrimalPlayerDataBP_Base_C
 {
 public:

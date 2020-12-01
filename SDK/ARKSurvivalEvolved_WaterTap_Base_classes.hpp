@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterTap_Base.WaterTap_Base_C
-// 0x0008 (0x0DC0 - 0x0DB8)
+// 0x0008 (0x0DD8 - 0x0DD0)
 class AWaterTap_Base_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UPrimalInventoryBP_Tap_C*                    PrimalInventoryBP_Tap_C1;                                 // 0x0DB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_Tap_C*                    PrimalInventoryBP_Tap_C1;                                 // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

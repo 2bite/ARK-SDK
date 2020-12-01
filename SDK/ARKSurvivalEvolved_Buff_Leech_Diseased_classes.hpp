@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Leech_Diseased.Buff_Leech_Diseased_C
-// 0x0000 (0x0920 - 0x0920)
+// 0x0000 (0x09B0 - 0x09B0)
 class ABuff_Leech_Diseased_C : public ABuff_Leech_C
 {
 public:

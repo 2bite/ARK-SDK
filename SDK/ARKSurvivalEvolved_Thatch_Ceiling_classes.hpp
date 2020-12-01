@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Thatch_Ceiling.Thatch_Ceiling_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class AThatch_Ceiling_C : public ACeiling_Base_C
 {
 public:

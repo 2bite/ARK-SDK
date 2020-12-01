@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_TaxidermyBase_C : public UPrimalInventoryComponent
 {
 public:
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	bool BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType);
+	bool STATIC_BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType);
 	void ExecuteUbergraph_PrimalInventoryBP_TaxidermyBase(int EntryPoint);
 };
 

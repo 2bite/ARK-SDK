@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_HasBees.Buff_HasBees_C
-// 0x0004 (0x08A4 - 0x08A0)
+// 0x0004 (0x0934 - 0x0930)
 class ABuff_HasBees_C : public ABuff_Base_C
 {
 public:
-	float                                              DamageToDoOnTick;                                         // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DamageToDoOnTick;                                         // 0x0930(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

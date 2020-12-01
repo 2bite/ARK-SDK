@@ -111,9 +111,9 @@ void ABuff_ChargeEmitter_C::TakeChargeConsumedByReceivers(float chargeToTake)
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_C::GetChargeVariableExternalEmitter(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue)
+void ABuff_ChargeEmitter_C::GetChargeVariableExternalEmitter(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.GetChargeVariableExternalEmitter");
 
@@ -132,8 +132,8 @@ void ABuff_ChargeEmitter_C::GetChargeVariableExternalEmitter(TEnumAsByte<E_Charg
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (ivalue != nullptr)
-		*ivalue = params.ivalue;
+	if (iValue != nullptr)
+		*iValue = params.iValue;
 }
 
 
@@ -399,13 +399,13 @@ void ABuff_ChargeEmitter_C::GetEmitterActor(class AActor** emitterActor)
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is Point Affected By Emitter
-// (NetRequest, Exec, Native, Event, Private, Protected, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, Static, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 affectedPoint                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  requestingActor                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isAffected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_C::Is_Point_Affected_By_Emitter(const struct FVector& affectedPoint, class AActor* requestingActor, bool* isAffected)
+void ABuff_ChargeEmitter_C::STATIC_Is_Point_Affected_By_Emitter(const struct FVector& affectedPoint, class AActor* requestingActor, bool* isAffected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is Point Affected By Emitter");
 
@@ -513,9 +513,9 @@ void ABuff_ChargeEmitter_C::OnEmitterIsActiveChanged()
 // bool*                          bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double*                        dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int*                           ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue)
+void ABuff_ChargeEmitter_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.ChargeVariableEvent");
 
@@ -524,7 +524,7 @@ void ABuff_ChargeEmitter_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableName
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -644,13 +644,13 @@ void ABuff_ChargeEmitter_C::HarvestCharge(bool MountedDino, class APlayerControl
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.BPGetMultiUseEntries
-// (NetReliable, Event, NetResponse, Static, Private, Protected, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABuff_ChargeEmitter_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABuff_ChargeEmitter_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.BPGetMultiUseEntries");
 
@@ -845,13 +845,13 @@ void ABuff_ChargeEmitter_C::CanEmitCharge(bool* canEmit)
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is ActorAffected by Emitter
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  affectedActor                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           skipLineTrace                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isAffected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_C::Is_ActorAffected_by_Emitter(class AActor* affectedActor, bool skipLineTrace, bool* isAffected)
+void ABuff_ChargeEmitter_C::STATIC_Is_ActorAffected_by_Emitter(class AActor* affectedActor, bool skipLineTrace, bool* isAffected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is ActorAffected by Emitter");
 

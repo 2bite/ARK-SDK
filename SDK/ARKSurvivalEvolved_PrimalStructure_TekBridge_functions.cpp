@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.SetupSnaps
-// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 
 void APrimalStructure_TekBridge_C::STATIC_SetupSnaps()
 {
@@ -30,7 +30,7 @@ void APrimalStructure_TekBridge_C::STATIC_SetupSnaps()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPPlayDying
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
@@ -110,7 +110,7 @@ struct FRotator APrimalStructure_TekBridge_C::CalculatePlacementRotation(class A
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPOverridePlacementRotation
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector*                ViewPos                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator*               ViewRot                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -135,7 +135,7 @@ struct FRotator APrimalStructure_TekBridge_C::STATIC_BPOverridePlacementRotation
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPIsAllowedToBuildEx
-// (Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FPlacementData          OutPlacementData               (Parm, OutParm, ReferenceParm)
 // int*                           CurrentAllowedReason           (Parm, ZeroConstructor, IsPlainOldData)
@@ -155,6 +155,7 @@ int APrimalStructure_TekBridge_C::BPIsAllowedToBuildEx(int* CurrentAllowedReason
 	params.bChoosingRotation = bChoosingRotation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -305,7 +306,7 @@ void APrimalStructure_TekBridge_C::BPContainerActivated()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.DeactivationComplete
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 
 void APrimalStructure_TekBridge_C::STATIC_DeactivationComplete()
 {
@@ -314,7 +315,6 @@ void APrimalStructure_TekBridge_C::STATIC_DeactivationComplete()
 	APrimalStructure_TekBridge_C_DeactivationComplete_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -502,7 +502,7 @@ void APrimalStructure_TekBridge_C::OnRep_Activating()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.TryActivate
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           ActivateBridge                 (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -543,7 +543,7 @@ void APrimalStructure_TekBridge_C::Activate(bool ActivateBridge)
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPGetMultiUseEntries
-// (Exec, Native, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -557,7 +557,6 @@ TArray<struct FMultiUseEntry> APrimalStructure_TekBridge_C::BPGetMultiUseEntries
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -596,7 +595,7 @@ bool APrimalStructure_TekBridge_C::BPTryMultiUse(class APlayerController** ForPC
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.IsBlocked
-// (Exec, NetResponse, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -615,6 +614,7 @@ void APrimalStructure_TekBridge_C::IsBlocked(const struct FVector& Start, const 
 	params.CheckLanding = CheckLanding;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -677,7 +677,7 @@ void APrimalStructure_TekBridge_C::PreviewLanding()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.TestExtension
-// (Exec, Static, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -687,7 +687,7 @@ void APrimalStructure_TekBridge_C::PreviewLanding()
 // bool                           Good                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Placement                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APrimalStructure_TekBridge_C::STATIC_TestExtension(const struct FVector& Start, const struct FRotator& Rotation, int Extension, class APrimalStructure* SnapTarget, bool ChoosingRotation, bool* Good, struct FVector* Placement)
+void APrimalStructure_TekBridge_C::TestExtension(const struct FVector& Start, const struct FRotator& Rotation, int Extension, class APrimalStructure* SnapTarget, bool ChoosingRotation, bool* Good, struct FVector* Placement)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.TestExtension");
 
@@ -699,6 +699,7 @@ void APrimalStructure_TekBridge_C::STATIC_TestExtension(const struct FVector& St
 	params.ChoosingRotation = ChoosingRotation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -749,7 +750,7 @@ void APrimalStructure_TekBridge_C::BPBeginPreview()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.ExtendBridge
-// (NetReliable, Event, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetRequest, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnBeginEvent
-// (NetRequest, Event, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
 // Parameters:
 // class UPrimalAIState**         InParentState                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDKaijuFlock_AttackAIState_BasicAttack_C::OnBeginEvent(class UPrimalAIState** InParentState)
+void UDKaijuFlock_AttackAIState_BasicAttack_C::STATIC_OnBeginEvent(class UPrimalAIState** InParentState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnBeginEvent");
 
@@ -25,6 +25,7 @@ void UDKaijuFlock_AttackAIState_BasicAttack_C::OnBeginEvent(class UPrimalAIState
 	params.InParentState = InParentState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +75,11 @@ bool UDKaijuFlock_AttackAIState_BasicAttack_C::BPShouldEndAttack()
 
 
 // Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnTickEvent
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDKaijuFlock_AttackAIState_BasicAttack_C::STATIC_OnTickEvent(float* DeltaSeconds)
+void UDKaijuFlock_AttackAIState_BasicAttack_C::OnTickEvent(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnTickEvent");
 

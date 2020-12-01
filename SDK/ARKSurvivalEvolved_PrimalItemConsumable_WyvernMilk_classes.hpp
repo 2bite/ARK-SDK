@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_WyvernMilk.PrimalItemConsumable_WyvernMilk_C
-// 0x0008 (0x0998 - 0x0990)
+// 0x0008 (0x09B8 - 0x09B0)
 class UPrimalItemConsumable_WyvernMilk_C : public UPrimalItemConsumableEatable_NoIceBox_C
 {
 public:
-	class UPrimalItem*                                 SelfObj;                                                  // 0x0990(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UPrimalItem*                                 SelfObj;                                                  // 0x09B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

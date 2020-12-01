@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function tek_megalodon_helmet_RIG_AnimBP.tek_megalodon_helmet_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2932
-struct Utek_megalodon_helmet_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2932_Params
+// Function tek_megalodon_helmet_RIG_AnimBP.tek_megalodon_helmet_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2614
+struct Utek_megalodon_helmet_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2614_Params
 {
 };
 

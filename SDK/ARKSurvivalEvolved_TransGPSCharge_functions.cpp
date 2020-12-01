@@ -30,7 +30,7 @@ void ATransGPSCharge_C::BPPostLoadedFromSaveGame()
 
 
 // Function TransGPSCharge.TransGPSCharge_C.BPPlacedStructure
-// (NetRequest, Exec, Native, NetResponse, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -42,7 +42,6 @@ void ATransGPSCharge_C::BPPlacedStructure(class APlayerController** ForPC)
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

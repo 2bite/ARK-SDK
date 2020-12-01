@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Cannon_SM.Cannon_SM_C.IsValidToFire
-// (Exec, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // bool                           ValidToFire                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -24,6 +24,7 @@ void ACannon_SM_C::IsValidToFire(bool* ValidToFire)
 	ACannon_SM_C_IsValidToFire_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,13 +61,13 @@ bool ACannon_SM_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function Cannon_SM.Cannon_SM_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ACannon_SM_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ACannon_SM_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Cannon_SM.Cannon_SM_C.BPGetMultiUseEntries");
 
@@ -74,7 +75,6 @@ TArray<struct FMultiUseEntry> ACannon_SM_C::BPGetMultiUseEntries(class APlayerCo
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

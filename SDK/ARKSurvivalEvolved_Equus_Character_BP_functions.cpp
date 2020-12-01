@@ -80,7 +80,7 @@ bool AEquus_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Equus_Character_BP.Equus_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

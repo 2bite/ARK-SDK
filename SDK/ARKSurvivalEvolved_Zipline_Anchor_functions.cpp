@@ -183,7 +183,7 @@ void AZipline_Anchor_C::CreateCable()
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.AllowManualMultiUseActivation
-// (NetReliable, Event, Static, Public, Protected, HasDefaults, NetClient, Const, NetValidate)
+// (Exec, Static, NetMulticast, Public, Private, Protected, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -227,7 +227,7 @@ bool AZipline_Anchor_C::IsUpperAnchorPoint()
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.HasLineOfSight
-// (NetRequest, Native, NetResponse, Static, Public, Protected, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, DLLImport, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        PrimalCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StartPoint                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -257,9 +257,9 @@ void AZipline_Anchor_C::STATIC_HasLineOfSight(class APrimalCharacter* PrimalChar
 // ()
 // Parameters:
 // class APlayerController*       Controller                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AZipline_Anchor_C::CheckForHarness(class APlayerController* Controller, bool* _return)
+void AZipline_Anchor_C::CheckForHarness(class APlayerController* Controller, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Zipline_Anchor.Zipline_Anchor_C.CheckForHarness");
 
@@ -272,15 +272,15 @@ void AZipline_Anchor_C::CheckForHarness(class APlayerController* Controller, boo
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.SpawnBreakEmitter
-// (NetRequest, NetMulticast, Public, Protected, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, DLLImport, Const, NetValidate)
 
-void AZipline_Anchor_C::SpawnBreakEmitter()
+void AZipline_Anchor_C::STATIC_SpawnBreakEmitter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Zipline_Anchor.Zipline_Anchor_C.SpawnBreakEmitter");
 
@@ -371,20 +371,20 @@ void AZipline_Anchor_C::Get_Zipline_Info(struct FVector* DownDirection, class AZ
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.IsZiplineBlocked
-// (NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, Static, Public, Private, DLLImport, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        primalChar                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartEndOffset                 (Parm, ZeroConstructor, IsPlainOldData)
 // float                          AttachOffset                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 overrideStartLocation          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          overrideFindLocationDistance   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 overrideFindLocationDirection  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          OverrideFindLocationDistance   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 OverrideFindLocationDirection  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DontUseLineOfSightCheck        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              HitResult                      (Parm, OutParm)
 // bool                           HitReturn                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StartLocation                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AZipline_Anchor_C::STATIC_IsZiplineBlocked(class APrimalCharacter* primalChar, float StartEndOffset, float AttachOffset, const struct FVector& overrideStartLocation, float overrideFindLocationDistance, const struct FVector& overrideFindLocationDirection, bool DontUseLineOfSightCheck, struct FHitResult* HitResult, bool* HitReturn, struct FVector* StartLocation)
+void AZipline_Anchor_C::STATIC_IsZiplineBlocked(class APrimalCharacter* primalChar, float StartEndOffset, float AttachOffset, const struct FVector& overrideStartLocation, float OverrideFindLocationDistance, const struct FVector& OverrideFindLocationDirection, bool DontUseLineOfSightCheck, struct FHitResult* HitResult, bool* HitReturn, struct FVector* StartLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Zipline_Anchor.Zipline_Anchor_C.IsZiplineBlocked");
 
@@ -393,12 +393,11 @@ void AZipline_Anchor_C::STATIC_IsZiplineBlocked(class APrimalCharacter* primalCh
 	params.StartEndOffset = StartEndOffset;
 	params.AttachOffset = AttachOffset;
 	params.overrideStartLocation = overrideStartLocation;
-	params.overrideFindLocationDistance = overrideFindLocationDistance;
-	params.overrideFindLocationDirection = overrideFindLocationDirection;
+	params.OverrideFindLocationDistance = OverrideFindLocationDistance;
+	params.OverrideFindLocationDirection = OverrideFindLocationDirection;
 	params.DontUseLineOfSightCheck = DontUseLineOfSightCheck;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -459,7 +458,7 @@ void AZipline_Anchor_C::GetClosestPointOnLine(const struct FVector& LineStart, c
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.RideZipline
-// (Exec, NetResponse, Public, Protected, HasDefaults, NetClient, Const, NetValidate)
+// (Native, Event, NetMulticast, Public, Private, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ZiplineBuff                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -473,6 +472,7 @@ void AZipline_Anchor_C::RideZipline(class APlayerController* PC, class UClass* Z
 	params.ZiplineBuff = ZiplineBuff;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -506,7 +506,7 @@ bool AZipline_Anchor_C::BPTryMultiUse(class APlayerController** ForPC, int* UseI
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -520,6 +520,7 @@ TArray<struct FMultiUseEntry> AZipline_Anchor_C::BPGetMultiUseEntries(class APla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

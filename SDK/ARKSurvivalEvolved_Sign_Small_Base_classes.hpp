@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sign_Small_Base.Sign_Small_Base_C
-// 0x0000 (0x0AD0 - 0x0AD0)
+// 0x0000 (0x0AE8 - 0x0AE8)
 class ASign_Small_Base_C : public ASign_Base_C
 {
 public:

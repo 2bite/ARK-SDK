@@ -14,12 +14,6 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Thylacoleo_AnimBlueprint.Thylacoleo_AnimBlueprint_C.BlueprintUpdateAnimation
-struct UThylacoleo_AnimBlueprint_C_BlueprintUpdateAnimation_Params
-{
-	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Thylacoleo_AnimBlueprint.Thylacoleo_AnimBlueprint_C.ExecuteUbergraph_Thylacoleo_AnimBlueprint
 struct UThylacoleo_AnimBlueprint_C_ExecuteUbergraph_Thylacoleo_AnimBlueprint_Params
 {

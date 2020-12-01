@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DefPlant_ProjectileEmitter.DefPlant_ProjectileEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ADefPlant_ProjectileEmitter_C : public APrimalEmitterSpawnable
 {
 public:

@@ -33,11 +33,11 @@ void ABuff_OilSlick_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Buff_OilSlick.Buff_OilSlick_C.SpawnOilFire
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 OverrideOriginLocation         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_OilSlick_C::SpawnOilFire(const struct FVector& OverrideOriginLocation)
+void ABuff_OilSlick_C::STATIC_SpawnOilFire(const struct FVector& OverrideOriginLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_OilSlick.Buff_OilSlick_C.SpawnOilFire");
 
@@ -45,6 +45,7 @@ void ABuff_OilSlick_C::SpawnOilFire(const struct FVector& OverrideOriginLocation
 	params.OverrideOriginLocation = OverrideOriginLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

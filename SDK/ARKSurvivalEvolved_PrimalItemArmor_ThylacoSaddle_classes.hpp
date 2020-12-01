@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_ThylacoSaddle.PrimalItemArmor_ThylacoSaddle_C
-// 0x0000 (0x0998 - 0x0998)
+// 0x0000 (0x09B8 - 0x09B8)
 class UPrimalItemArmor_ThylacoSaddle_C : public UPrimalItemArmor_SaddleGeneric_C
 {
 public:

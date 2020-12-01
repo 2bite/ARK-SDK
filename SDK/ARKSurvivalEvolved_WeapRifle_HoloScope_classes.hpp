@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapRifle_HoloScope.WeapRifle_HoloScope_C
-// 0x0010 (0x0D78 - 0x0D68)
+// 0x0010 (0x0D98 - 0x0D88)
 class AWeapRifle_HoloScope_C : public AWeapRifle_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh2;                                              // 0x0D68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0D70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh2;                                              // 0x0D88(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0D90(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

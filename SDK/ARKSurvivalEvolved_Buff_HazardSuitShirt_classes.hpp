@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_HazardSuitShirt.Buff_HazardSuitShirt_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x0950 - 0x0950)
 class ABuff_HazardSuitShirt_C : public ABuff_HazardSuit_Base_C
 {
 public:

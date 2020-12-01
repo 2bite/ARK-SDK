@@ -77,7 +77,7 @@ public:
 	bool CanAngryAttack(class AIceKaiju_Character_BP_C** MyIceKaiju);
 	bool CanIceBreath(class AIceKaiju_Character_BP_C** MyIceKaiju);
 	bool CanGroundSmash(class AIceKaiju_Character_BP_C** MyIceKaiju);
-	void STATIC_CanUseGroundSmash(bool* IsOnCooldown);
+	void CanUseGroundSmash(bool* IsOnCooldown);
 	void ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_Task_IceKaijuFindBestMeleeAttack(int EntryPoint);
 };

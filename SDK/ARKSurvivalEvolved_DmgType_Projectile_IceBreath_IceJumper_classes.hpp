@@ -30,7 +30,7 @@ public:
 	}
 
 
-	void STATIC_GetFreezeBuffAmountPerHit(class APrimalCharacter** Target, class AActor** DamageCauser, float* Result);
+	void GetFreezeBuffAmountPerHit(class APrimalCharacter** Target, class AActor** DamageCauser, float* Result);
 };
 
 

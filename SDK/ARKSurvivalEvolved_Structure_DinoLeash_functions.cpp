@@ -63,9 +63,9 @@ void AStructure_DinoLeash_C::UpdateVisibility()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.ReceiveBeginPlay
-// (Native, Event, NetMulticast, Public, NetServer, BlueprintCallable, Const, NetValidate)
+// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 
-void AStructure_DinoLeash_C::ReceiveBeginPlay()
+void AStructure_DinoLeash_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.ReceiveBeginPlay");
 
@@ -153,7 +153,7 @@ void AStructure_DinoLeash_C::BPContainerActivated()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BlueprintDrawPreviewHUD
-// (Net, NetRequest, NetResponse, NetMulticast, Public, NetServer, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -347,7 +347,7 @@ void AStructure_DinoLeash_C::Activate(bool Activated)
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.OnRep_Activated
-// (Net, NetReliable, NetResponse, Static, NetMulticast, Public, NetServer, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, Static, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 
 void AStructure_DinoLeash_C::STATIC_OnRep_Activated()
 {
@@ -389,7 +389,7 @@ bool AStructure_DinoLeash_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, NetServer, BlueprintCallable, Const, NetValidate)
+// (Event, Static, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -403,7 +403,6 @@ TArray<struct FMultiUseEntry> AStructure_DinoLeash_C::STATIC_BPGetMultiUseEntrie
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

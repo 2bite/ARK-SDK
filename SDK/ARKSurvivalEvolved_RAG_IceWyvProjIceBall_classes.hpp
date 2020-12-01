@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RAG_IceWyvProjIceBall.RAG_IceWyvProjIceBall_C
-// 0x0000 (0x0648 - 0x0648)
+// 0x0000 (0x0658 - 0x0658)
 class ARAG_IceWyvProjIceBall_C : public AShooterProjectile
 {
 public:

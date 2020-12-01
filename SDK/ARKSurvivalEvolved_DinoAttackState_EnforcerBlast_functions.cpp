@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackState_EnforcerBlast.DinoAttackState_EnforcerBlast_C.BPOnAttackStart
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_EnforcerBlast_C::BPOnAttackStart(int* AttackIndex)
+void UDinoAttackState_EnforcerBlast_C::STATIC_BPOnAttackStart(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_EnforcerBlast.DinoAttackState_EnforcerBlast_C.BPOnAttackStart");
 

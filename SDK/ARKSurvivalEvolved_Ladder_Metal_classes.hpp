@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ladder_Metal.Ladder_Metal_C
-// 0x0000 (0x0B00 - 0x0B00)
+// 0x0000 (0x0B18 - 0x0B18)
 class ALadder_Metal_C : public ALadderBaseBP_C
 {
 public:

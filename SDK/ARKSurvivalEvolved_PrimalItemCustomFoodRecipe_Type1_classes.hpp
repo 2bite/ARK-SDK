@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemCustomFoodRecipe_Type1.PrimalItemCustomFoodRecipe_Type1_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemCustomFoodRecipe_Type1_C : public UPrimalItemCustomFoodRecipe_Base_C
 {
 public:

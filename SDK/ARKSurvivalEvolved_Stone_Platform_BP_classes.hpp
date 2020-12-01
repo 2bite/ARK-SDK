@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Stone_Platform_BP.Stone_Platform_BP_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class AStone_Platform_BP_C : public ACliffPlatform_Base_BP_C
 {
 public:

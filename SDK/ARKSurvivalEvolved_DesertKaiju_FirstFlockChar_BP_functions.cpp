@@ -156,11 +156,11 @@ void ADesertKaiju_FirstFlockChar_BP_C::TickFlockGroup(int Shape, float DeltaTime
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.GetFlockAvoidanceArea
-// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
 // Parameters:
-// TArray<struct FAvoidanceArea>  _return                        (Parm, OutParm, ZeroConstructor)
+// TArray<struct FAvoidanceArea>  Return                         (Parm, OutParm, ZeroConstructor)
 
-void ADesertKaiju_FirstFlockChar_BP_C::GetFlockAvoidanceArea(TArray<struct FAvoidanceArea>* _return)
+void ADesertKaiju_FirstFlockChar_BP_C::STATIC_GetFlockAvoidanceArea(TArray<struct FAvoidanceArea>* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.GetFlockAvoidanceArea");
 
@@ -173,17 +173,17 @@ void ADesertKaiju_FirstFlockChar_BP_C::GetFlockAvoidanceArea(TArray<struct FAvoi
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.DistanceToKaiju
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_FirstFlockChar_BP_C::DistanceToKaiju(float* Distance)
+void ADesertKaiju_FirstFlockChar_BP_C::STATIC_DistanceToKaiju(float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.DistanceToKaiju");
 
@@ -234,9 +234,9 @@ float ADesertKaiju_FirstFlockChar_BP_C::BPAdjustDamage(float* IncomingDamage, st
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BPDinoPostBeginPlay
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
 
-void ADesertKaiju_FirstFlockChar_BP_C::BPDinoPostBeginPlay()
+void ADesertKaiju_FirstFlockChar_BP_C::STATIC_BPDinoPostBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BPDinoPostBeginPlay");
 
@@ -251,11 +251,11 @@ void ADesertKaiju_FirstFlockChar_BP_C::BPDinoPostBeginPlay()
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.ReceiveTick
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_FirstFlockChar_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void ADesertKaiju_FirstFlockChar_BP_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.ReceiveTick");
 
@@ -289,7 +289,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::BP_OnSetDeath()
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -298,7 +298,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::BP_OnSetDeath()
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ADesertKaiju_FirstFlockChar_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ADesertKaiju_FirstFlockChar_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BlueprintAdjustOutputDamage");
 

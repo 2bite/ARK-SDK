@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_DinoPackLeader_Raptor.Buff_DinoPackLeader_Raptor_C
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x0A10 - 0x0A10)
 class ABuff_DinoPackLeader_Raptor_C : public ABuff_DinoPackLeader_C
 {
 public:

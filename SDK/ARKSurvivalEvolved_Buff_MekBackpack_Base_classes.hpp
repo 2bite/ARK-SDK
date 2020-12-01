@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_MekBackpack_Base.Buff_MekBackpack_Base_C
-// 0x0002 (0x08A2 - 0x08A0)
+// 0x0002 (0x0932 - 0x0930)
 class ABuff_MekBackpack_Base_C : public APrimalBuff
 {
 public:
-	bool                                               InterceptMekAttacks;                                      // 0x08A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverrideTurnInPlaceSpeed;                              // 0x08A1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               InterceptMekAttacks;                                      // 0x0930(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               UseOverrideTurnInPlaceSpeed;                              // 0x0931(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32,12 +32,12 @@ public:
 	void OnSyncColorization();
 	void NotifySetRider(class AShooterCharacter* Rider);
 	void RestoreBackpackSaveData(const struct FMekBackpackData& SaveData);
-	void GetBackpackSaveData(struct FMekBackpackData* Data);
+	void STATIC_GetBackpackSaveData(struct FMekBackpackData* Data);
 	void NotifyInventoryChange(class UPrimalItem* Item, bool ItemAdded, bool ItemEquipped);
 	void BPActivated(class AActor** ForInstigator);
 	void SetBackpackMalfunctioned(bool IsBackpackDisabled);
 	void NotifyActivateBackpack();
-	void OverrideTurnInPlaceSpeed(float DefaultSpeed, float* NewSpeed);
+	void OverrideTurnInPlaceSpeed(float DefaultSpeed, float* newSpeed);
 	void NotifyStopAttack();
 	void NotifyStartAttack(int AttackIndex);
 	void AllowHurtAnim(bool* Allow);

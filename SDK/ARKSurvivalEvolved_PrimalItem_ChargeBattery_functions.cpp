@@ -60,9 +60,9 @@ class FString UPrimalItem_ChargeBattery_C::BPGetCustomInventoryWidgetText()
 // ()
 // Parameters:
 // float                          amountToAdd                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          amountAdded                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          AmountAdded                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_ChargeBattery_C::AddDurabilitySafe(float amountToAdd, float* amountAdded)
+void UPrimalItem_ChargeBattery_C::AddDurabilitySafe(float amountToAdd, float* AmountAdded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_ChargeBattery.PrimalItem_ChargeBattery_C.AddDurabilitySafe");
 
@@ -75,8 +75,8 @@ void UPrimalItem_ChargeBattery_C::AddDurabilitySafe(float amountToAdd, float* am
 
 	fn->FunctionFlags = flags;
 
-	if (amountAdded != nullptr)
-		*amountAdded = params.amountAdded;
+	if (AmountAdded != nullptr)
+		*AmountAdded = params.AmountAdded;
 }
 
 

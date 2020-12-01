@@ -28,13 +28,13 @@ struct AVH_Buggy_C_UserConstructionScript_Params
 {
 };
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_74
-struct AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_74_Params
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_65
+struct AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_65_Params
 {
 };
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_73
-struct AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_73_Params
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_64
+struct AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_64_Params
 {
 };
 

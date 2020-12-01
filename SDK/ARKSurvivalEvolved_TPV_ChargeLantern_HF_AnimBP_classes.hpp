@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass TPV_ChargeLantern_HF_AnimBP.TPV_ChargeLantern_HF_AnimBP_C
-// 0x0000 (0x37A5 - 0x37A5)
+// 0x0000 (0x3A14 - 0x3A14)
 class UTPV_ChargeLantern_HF_AnimBP_C : public UTPV_Spear_HF_AnimBP_C
 {
 public:

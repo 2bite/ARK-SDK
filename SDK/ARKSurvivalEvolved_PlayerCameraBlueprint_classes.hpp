@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PlayerCameraBlueprint.PlayerCameraBlueprint_C
-// 0x0000 (0x1E98 - 0x1E98)
+// 0x0000 (0x2000 - 0x2000)
 class APlayerCameraBlueprint_C : public AShooterPlayerCameraManager
 {
 public:

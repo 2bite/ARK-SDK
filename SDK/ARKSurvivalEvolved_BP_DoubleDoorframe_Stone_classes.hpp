@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DoubleDoorframe_Stone.BP_DoubleDoorframe_Stone_C
-// 0x0010 (0x0AC8 - 0x0AB8)
+// 0x0010 (0x0AE0 - 0x0AD0)
 class ABP_DoubleDoorframe_Stone_C : public ABase_DoubleDoorframe_C
 {
 public:
-	class UStaticMeshComponent*                        RightPillar;                                              // 0x0AB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        LeftPillar;                                               // 0x0AC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        RightPillar;                                              // 0x0AD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        LeftPillar;                                               // 0x0AD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

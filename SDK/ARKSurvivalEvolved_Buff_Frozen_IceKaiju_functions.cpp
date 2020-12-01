@@ -103,12 +103,15 @@ bool ABuff_Frozen_IceKaiju_C::BPPreventflight()
 
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BPHandleOnStartFire
 // ()
+// Parameters:
+// bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Frozen_IceKaiju_C::BPHandleOnStartFire()
+void ABuff_Frozen_IceKaiju_C::BPHandleOnStartFire(bool* bFromGamepad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BPHandleOnStartFire");
 
 	ABuff_Frozen_IceKaiju_C_BPHandleOnStartFire_Params params;
+	params.bFromGamepad = bFromGamepad;
 
 	auto flags = fn->FunctionFlags;
 
@@ -264,11 +267,11 @@ void ABuff_Frozen_IceKaiju_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BuffTickServer
-// (NetReliable, NetRequest, Native, Static, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Delegate, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Frozen_IceKaiju_C::STATIC_BuffTickServer(float* DeltaTime)
+void ABuff_Frozen_IceKaiju_C::BuffTickServer(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BuffTickServer");
 
@@ -276,7 +279,6 @@ void ABuff_Frozen_IceKaiju_C::STATIC_BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

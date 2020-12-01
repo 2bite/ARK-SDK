@@ -33,7 +33,7 @@ void ADirewolf_Character_BP_C::RidingTick(float* DeltaSeconds)
 
 
 // Function Direwolf_Character_BP.Direwolf_Character_BP_C.AddHowlCooldownBuff
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport)
 
 void ADirewolf_Character_BP_C::STATIC_AddHowlCooldownBuff()
 {
@@ -134,17 +134,17 @@ void ADirewolf_Character_BP_C::BPDoAttack(int* AttackIndex)
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ADirewolf_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ADirewolf_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Direwolf_Character_BP.Direwolf_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	ADirewolf_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 
@@ -177,9 +177,9 @@ void ADirewolf_Character_BP_C::DoSniffAbility()
 // ()
 // Parameters:
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          FoundDinos                     (Parm, OutParm, ZeroConstructor)
+// TArray<class AActor*>          foundDinos                     (Parm, OutParm, ZeroConstructor)
 
-void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*>* FoundDinos)
+void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*>* foundDinos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Direwolf_Character_BP.Direwolf_Character_BP_C.GetHiddenDinos");
 
@@ -192,8 +192,8 @@ void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*
 
 	fn->FunctionFlags = flags;
 
-	if (FoundDinos != nullptr)
-		*FoundDinos = params.FoundDinos;
+	if (foundDinos != nullptr)
+		*foundDinos = params.foundDinos;
 }
 
 

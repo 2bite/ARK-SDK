@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MatineeActor1_Blueprint.MatineeActor1_Blueprint_C
-// 0x0000 (0x04D8 - 0x04D8)
+// 0x0000 (0x04E8 - 0x04E8)
 class AMatineeActor1_Blueprint_C : public AMatineeActor
 {
 public:

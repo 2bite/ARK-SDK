@@ -101,13 +101,13 @@ int AStructureTurretTek_C::BPIsAllowedToBuildEx(int* CurrentAllowedReason, class
 
 
 // Function StructureTurretTek.StructureTurretTek_C.BlueprintDrawHUD
-// (NetRequest, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructureTurretTek_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void AStructureTurretTek_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretTek.StructureTurretTek_C.BlueprintDrawHUD");
 
@@ -117,6 +117,7 @@ void AStructureTurretTek_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* Cen
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,7 +226,7 @@ bool AStructureTurretTek_C::BPServerHandleNetExecCommand(class APlayerController
 
 
 // Function StructureTurretTek.StructureTurretTek_C.BPClientDoMultiUse
-// (Event, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -272,7 +273,7 @@ bool AStructureTurretTek_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function StructureTurretTek.StructureTurretTek_C.BPGetMultiUseEntries
-// (NetReliable, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_BeerJarAlt.PrimalItemConsumable_BeerJarAlt_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemConsumable_BeerJarAlt_C : public UPrimalItemConsumableEatable_C
 {
 public:

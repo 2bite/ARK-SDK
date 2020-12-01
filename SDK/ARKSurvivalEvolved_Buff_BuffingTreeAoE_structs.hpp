@@ -8,8 +8,8 @@
 
 #include "ARKSurvivalEvolved_Basic.hpp"
 #include "ARKSurvivalEvolved_Buff_Base_AoE_classes.hpp"
-#include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
+#include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
 
 namespace sdk
 {

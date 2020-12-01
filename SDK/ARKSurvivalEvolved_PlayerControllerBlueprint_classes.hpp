@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PlayerControllerBlueprint.PlayerControllerBlueprint_C
-// 0x0008 (0x10D8 - 0x10D0)
+// 0x0008 (0x11B0 - 0x11A8)
 class APlayerControllerBlueprint_C : public AShooterPlayerController
 {
 public:
-	class UUserWidget*                                 InventoryScene;                                           // 0x10D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UUserWidget*                                 InventoryScene;                                           // 0x11A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void CanFit(const struct FVector& Location, float VerticalOffset, float Angle, float HorizontalOffset, float Radius, float HalfHeight, class AActor* SpawningActor, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation);
+	void STATIC_CanFit(const struct FVector& Location, float VerticalOffset, float Angle, float HorizontalOffset, float Radius, float HalfHeight, class AActor* SpawningActor, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation);
 	void CanDeploy(class UClass* Class, const struct FVector& Location, class AActor* Actor, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation);
 	struct FVector BPCheckCanDinoSpawnFromLocation(class UClass** DinoClass, struct FVector* CheckLocation);
 	void UserConstructionScript();

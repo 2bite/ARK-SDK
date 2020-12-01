@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_AdobeTrapdoor.PrimalItemStructure_AdobeTrapdoor_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_AdobeTrapdoor_C : public UPrimalItemStructure_BaseTrapdoor_C
 {
 public:

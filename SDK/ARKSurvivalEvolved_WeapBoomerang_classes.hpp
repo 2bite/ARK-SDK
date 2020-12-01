@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapBoomerang.WeapBoomerang_C
-// 0x0000 (0x0E60 - 0x0E60)
+// 0x0000 (0x0E80 - 0x0E80)
 class AWeapBoomerang_C : public APrimalWeaponBoomerang
 {
 public:

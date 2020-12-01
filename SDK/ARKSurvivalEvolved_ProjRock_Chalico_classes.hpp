@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjRock_Chalico.ProjRock_Chalico_C
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0680 - 0x0680)
 class AProjRock_Chalico_C : public APrimalProjectileArrow
 {
 public:

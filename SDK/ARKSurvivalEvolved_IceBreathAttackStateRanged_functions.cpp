@@ -78,11 +78,11 @@ bool UIceBreathAttackStateRanged_C::BPCanAttack(float* Distance, float* attackRa
 
 
 // Function IceBreathAttackStateRanged.IceBreathAttackStateRanged_C.OnTickEvent
-// (Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Delegate, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UIceBreathAttackStateRanged_C::STATIC_OnTickEvent(float* DeltaSeconds)
+void UIceBreathAttackStateRanged_C::OnTickEvent(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceBreathAttackStateRanged.IceBreathAttackStateRanged_C.OnTickEvent");
 
@@ -90,6 +90,7 @@ void UIceBreathAttackStateRanged_C::STATIC_OnTickEvent(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -103,7 +103,7 @@ struct ADino_Character_BP_Nocturnal_C_BPTimerServer_Params
 // Function Dino_Character_BP_Nocturnal.Dino_Character_BP_Nocturnal_C.PrintStringWithAuth
 struct ADino_Character_BP_Nocturnal_C_PrintStringWithAuth_Params
 {
-	class FString                                      string;                                                   // (Parm, ZeroConstructor)
+	class FString                                      String;                                                   // (Parm, ZeroConstructor)
 	struct FLinearColor                                Color;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

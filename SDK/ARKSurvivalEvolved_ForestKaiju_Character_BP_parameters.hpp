@@ -120,9 +120,9 @@ struct AForestKaiju_Character_BP_C_RidingTick_Params
 struct AForestKaiju_Character_BP_C_K2_OnMovementModeChanged_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PrevCustomMode;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPOverrideCharacterNewFallVelocity
@@ -466,7 +466,7 @@ struct AForestKaiju_Character_BP_C_RegrowLeftComplete_Params
 struct AForestKaiju_Character_BP_C_RegrowTick_Params
 {
 	class USkeletalMeshComponent*                      Appendage;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     CurrentScale;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     currentScale;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     OutScale;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               Complete;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -559,7 +559,7 @@ struct AForestKaiju_Character_BP_C_ShortestAngleDistance_Params
 struct AForestKaiju_Character_BP_C_GetClampedLookDir_Params
 {
 	bool                                               LimitLowerPitch;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPHandleControllerInitiatedAttack
@@ -676,23 +676,23 @@ struct AForestKaiju_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_174
-struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_174_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_166
+struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_166_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_173
-struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_173_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_165
+struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_165_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_172
-struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_172_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_164
+struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_164_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_171
-struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_171_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_163
+struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_163_Params
 {
 };
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass C4Female_AnimBP.C4Female_AnimBP_C
-// 0x0000 (0x37A5 - 0x37A5)
+// 0x0000 (0x3A14 - 0x3A14)
 class UC4Female_AnimBP_C : public UTPV_Female_NoWeapon_AnimBlueprint_C
 {
 public:

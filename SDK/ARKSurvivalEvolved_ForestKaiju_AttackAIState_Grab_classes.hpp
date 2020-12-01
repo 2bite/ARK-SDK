@@ -49,12 +49,12 @@ public:
 
 	void UpdateGrabAttackLocation();
 	void Is_Location_in_Grab_Attack_Wedge(const struct FVector& Location, bool* Result);
-	void DebugPrintString(const class FString& string);
+	void DebugPrintString(const class FString& String);
 	void StartAttackAnim();
 	void PublicIsValidVineTarget(class APrimalCharacter* Target, class APrimalCharacter* ForestKaiju, bool* Valid);
 	void IsValidVineTarget(class APrimalCharacter* Target, class APrimalCharacter* ForestKaiju, bool* ValidTarget);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
-	void VineRetracted(TArray<struct FVineTargetData>* Targets);
+	void STATIC_VineRetracted(TArray<struct FVineTargetData>* Targets);
 	void OnEndEvent();
 	void Debug_Draw_Sphere(const struct FVector& Center, float Radius, const struct FLinearColor& Color);
 	void STATIC_AnimNotifyGrabAttackSmash();

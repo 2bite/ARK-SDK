@@ -15,17 +15,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DungBeetle_Character_BP.DungBeetle_Character_BP_C
-// 0x0031 (0x20B9 - 0x2088)
+// 0x0031 (0x2139 - 0x2108)
 class ADungBeetle_Character_BP_C : public ADino_Character_BP_RepelType_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Beetle_C*   DinoCharacterStatus_BP_Beetle_C1;                         // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x2090(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
-	class APrimalCharacter*                            K2Node_CustomEvent_DiedCharacter;                         // 0x20A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x20A8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x20A9(0x0007) MISSED OFFSET
-	class UDinoTamedInventoryComponent_Beetle_C*       K2Node_DynamicCast_AsDinoTamedInventoryComponent_Beetle_C;// 0x20B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x20B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Beetle_C*   DinoCharacterStatus_BP_Beetle_C1;                         // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x2110(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
+	class APrimalCharacter*                            K2Node_CustomEvent_DiedCharacter;                         // 0x2120(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x2128(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x2129(0x0007) MISSED OFFSET
+	class UDinoTamedInventoryComponent_Beetle_C*       K2Node_DynamicCast_AsDinoTamedInventoryComponent_Beetle_C;// 0x2130(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x2138(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

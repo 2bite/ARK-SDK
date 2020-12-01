@@ -15,9 +15,9 @@ namespace sdk
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_DifficultyIndex
 // ()
 // Parameters:
-// int                            _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UKingKaiju_Character_Interface_C::GetVar_DifficultyIndex(int* _return)
+void UKingKaiju_Character_Interface_C::GetVar_DifficultyIndex(int* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_DifficultyIndex");
 
@@ -29,17 +29,17 @@ void UKingKaiju_Character_Interface_C::GetVar_DifficultyIndex(int* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_InHordeMode
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UKingKaiju_Character_Interface_C::GetVar_InHordeMode(bool* _return)
+void UKingKaiju_Character_Interface_C::GetVar_InHordeMode(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_InHordeMode");
 
@@ -51,8 +51,8 @@ void UKingKaiju_Character_Interface_C::GetVar_InHordeMode(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 

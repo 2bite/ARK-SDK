@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function SK_windTurbine_AnimBlueprint.SK_windTurbine_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_602
-struct USK_windTurbine_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_602_Params
+// Function SK_windTurbine_AnimBlueprint.SK_windTurbine_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_572
+struct USK_windTurbine_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_572_Params
 {
 };
 

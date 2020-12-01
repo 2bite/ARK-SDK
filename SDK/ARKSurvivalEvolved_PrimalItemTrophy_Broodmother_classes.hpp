@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophy_Broodmother.PrimalItemTrophy_Broodmother_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemTrophy_Broodmother_C : public UPrimalItemTrophyGenericWall_C
 {
 public:

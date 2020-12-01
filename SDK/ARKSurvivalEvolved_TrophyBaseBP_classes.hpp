@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TrophyBaseBP.TrophyBaseBP_C
-// 0x0008 (0x0DC0 - 0x0DB8)
+// 0x0008 (0x0DD8 - 0x0DD0)
 class ATrophyBaseBP_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UPrimalInventoryBP_TrophyBase_C*             PrimalInventoryBP_TrophyBase_C1;                          // 0x0DB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_TrophyBase_C*             PrimalInventoryBP_TrophyBase_C1;                          // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -104,13 +104,15 @@ void ABP_DedicatedStorage_C::GetResourceStackSize(int* StackSize)
 // ()
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DedicatedStorage_C::BPOnDemolish(class APlayerController** ForPC)
+void ABP_DedicatedStorage_C::BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPOnDemolish");
 
 	ABP_DedicatedStorage_C_BPOnDemolish_Params params;
 	params.ForPC = ForPC;
+	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
 
@@ -384,7 +386,7 @@ bool ABP_DedicatedStorage_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPGetMultiUseEntries
-// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -398,7 +400,6 @@ TArray<struct FMultiUseEntry> ABP_DedicatedStorage_C::BPGetMultiUseEntries(class
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

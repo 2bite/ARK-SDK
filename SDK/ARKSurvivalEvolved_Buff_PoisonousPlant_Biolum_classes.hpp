@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_PoisonousPlant_Biolum.Buff_PoisonousPlant_Biolum_C
-// 0x0000 (0x08B4 - 0x08B4)
+// 0x0000 (0x0944 - 0x0944)
 class ABuff_PoisonousPlant_Biolum_C : public ABuff_PoisonousTrap_Base_C
 {
 public:

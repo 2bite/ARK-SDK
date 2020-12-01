@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_RageEffect_Quick.Buff_RageEffect_Quick_C
-// 0x0000 (0x08D4 - 0x08D4)
+// 0x0000 (0x0964 - 0x0964)
 class ABuff_RageEffect_Quick_C : public ABuff_RageEffect_Ammonite_C
 {
 public:

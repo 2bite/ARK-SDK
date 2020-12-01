@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C
-// 0x0010 (0x09A0 - 0x0990)
+// 0x0010 (0x09C0 - 0x09B0)
 class UPrimalItemConsumable_GachaPod_C : public UPrimalItemConsumableGeneric_C
 {
 public:
-	class USoundCue*                                   ResourceOpen_Cue;                                         // 0x0990(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USoundCue*                                   ItemOpen_Cue;                                             // 0x0998(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundCue*                                   ResourceOpen_Cue;                                         // 0x09B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundCue*                                   ItemOpen_Cue;                                             // 0x09B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,8 +30,8 @@ public:
 
 
 	void STATIC_ShowHUDNotification(class UPrimalItem* Item, class UClass* Resource, int Quanity);
-	void STATIC_BPPostInitializeItem(class UWorld** OptionalInitWorld);
-	void STATIC_BlueprintUsed();
+	void BPPostInitializeItem(class UWorld** OptionalInitWorld);
+	void BlueprintUsed();
 	void ExecuteUbergraph_PrimalItemConsumable_GachaPod(int EntryPoint);
 };
 

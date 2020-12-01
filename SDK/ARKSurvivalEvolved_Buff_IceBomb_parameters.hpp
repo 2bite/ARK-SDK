@@ -14,6 +14,14 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Buff_IceBomb.Buff_IceBomb_C.BPCustomAllowAddBuff
+struct ABuff_IceBomb_C_BPCustomAllowAddBuff_Params
+{
+	class APrimalCharacter**                           forCharacter;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Buff_IceBomb.Buff_IceBomb_C.BPSetupForInstigator
 struct ABuff_IceBomb_C_BPSetupForInstigator_Params
 {

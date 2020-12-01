@@ -160,13 +160,13 @@ bool AXenomorph_Character_BP_Male_C::BPAllowClaiming(class AShooterPlayerControl
 
 
 // Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AXenomorph_Character_BP_Male_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AXenomorph_Character_BP_Male_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.BPGetMultiUseEntries");
 
@@ -174,7 +174,6 @@ TArray<struct FMultiUseEntry> AXenomorph_Character_BP_Male_C::BPGetMultiUseEntri
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -410,9 +409,9 @@ void AXenomorph_Character_BP_Male_C::BPBecomeAdult()
 // Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.Can Dive
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_Male_C::Can_Dive(bool* _return)
+void AXenomorph_Character_BP_Male_C::Can_Dive(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.Can Dive");
 
@@ -424,8 +423,8 @@ void AXenomorph_Character_BP_Male_C::Can_Dive(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 

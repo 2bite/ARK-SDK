@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass StructureStatWidget.StructureStatWidget_C
-// 0x0010 (0x0590 - 0x0580)
+// 0x0010 (0x0598 - 0x0588)
 class UStructureStatWidget_C : public UStructureStatWidget
 {
 public:
-	class UImage*                                      IconImage;                                                // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UProgressBar*                                StatBar;                                                  // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      IconImage;                                                // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UProgressBar*                                StatBar;                                                  // 0x0590(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

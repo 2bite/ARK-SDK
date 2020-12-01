@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Window_Stone_BP.Window_Stone_BP_C
-// 0x0000 (0x0B20 - 0x0B20)
+// 0x0000 (0x0B38 - 0x0B38)
 class AWindow_Stone_BP_C : public ADoor_Base_SM_C
 {
 public:

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BunnyOviraptor_Character_BP.BunnyOviraptor_Character_BP_C
-// 0x0008 (0x2178 - 0x2170)
+// 0x0008 (0x21F8 - 0x21F0)
 class ABunnyOviraptor_Character_BP_C : public AOviraptor_Character_BP_C
 {
 public:
-	class UStaticMeshComponent*                        Hat;                                                      // 0x2170(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Hat;                                                      // 0x21F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -72,7 +72,7 @@ struct AYutyrannus_Character_BP_C_BPShouldCancelDoAttack_Params
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.All WildFollowers Attack Target
 struct AYutyrannus_Character_BP_C_All_WildFollowers_Attack_Target_Params
 {
-	class AActor*                                      newTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      NewTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.Cone Check Custom
@@ -185,7 +185,7 @@ struct AYutyrannus_Character_BP_C_WildYuty_Can_Add_Fear_Params
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.WildOrderFollowersAttackTarget
 struct AYutyrannus_Character_BP_C_WildOrderFollowersAttackTarget_Params
 {
-	class AActor*                                      newTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      NewTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.Can Add Courage TamedToWild
@@ -322,7 +322,7 @@ struct AYutyrannus_Character_BP_C_WildTryAddCourageToFollowers_Params
 struct AYutyrannus_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

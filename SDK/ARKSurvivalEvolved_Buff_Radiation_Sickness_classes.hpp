@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Radiation_Sickness.Buff_Radiation_Sickness_C
-// 0x000C (0x08AC - 0x08A0)
+// 0x000C (0x093C - 0x0930)
 class ABuff_Radiation_Sickness_C : public ABuff_Base_OnlyRelevantToOwner_C
 {
 public:
-	float                                              BuffTimeDecreaseRate;                                     // 0x08A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InitialMaxStamina;                                        // 0x08A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              InitialMaxWeight;                                         // 0x08A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BuffTimeDecreaseRate;                                     // 0x0930(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InitialMaxStamina;                                        // 0x0934(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              InitialMaxWeight;                                         // 0x0938(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

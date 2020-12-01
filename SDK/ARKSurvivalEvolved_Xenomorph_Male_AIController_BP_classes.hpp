@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Xenomorph_Male_AIController_BP.Xenomorph_Male_AIController_BP_C
-// 0x0000 (0x090A - 0x090A)
+// 0x0000 (0x0932 - 0x0932)
 class AXenomorph_Male_AIController_BP_C : public AXenomorph_AIController_BP_C
 {
 public:

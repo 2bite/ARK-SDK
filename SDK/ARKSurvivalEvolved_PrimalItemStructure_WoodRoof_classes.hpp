@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_WoodRoof.PrimalItemStructure_WoodRoof_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_WoodRoof_C : public UPrimalItemStructure_BaseRoof_C
 {
 public:

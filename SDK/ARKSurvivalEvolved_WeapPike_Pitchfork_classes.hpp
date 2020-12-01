@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapPike_Pitchfork.WeapPike_Pitchfork_C
-// 0x0000 (0x0D30 - 0x0D30)
+// 0x0000 (0x0D50 - 0x0D50)
 class AWeapPike_Pitchfork_C : public AWeapPike_C
 {
 public:

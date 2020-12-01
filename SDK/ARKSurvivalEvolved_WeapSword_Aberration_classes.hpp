@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapSword_Aberration.WeapSword_Aberration_C
-// 0x0010 (0x0D40 - 0x0D30)
+// 0x0010 (0x0D60 - 0x0D50)
 class AWeapSword_Aberration_C : public AWeapSword_C
 {
 public:
-	class UStaticMeshComponent*                        SM1P;                                                     // 0x0D30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        SM3P;                                                     // 0x0D38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        SM1P;                                                     // 0x0D50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        SM3P;                                                     // 0x0D58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

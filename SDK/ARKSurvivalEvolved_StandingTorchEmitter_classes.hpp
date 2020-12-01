@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StandingTorchEmitter.StandingTorchEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AStandingTorchEmitter_C : public ACampFireEmitter_C
 {
 public:

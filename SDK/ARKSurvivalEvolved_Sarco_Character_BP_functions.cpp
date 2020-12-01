@@ -77,19 +77,19 @@ void ASarco_Character_BP_C::TriggerLungeImpulse()
 // ()
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASarco_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* PrevCustomMode, unsigned char* newCustomMode)
+void ASarco_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.K2_OnMovementModeChanged");
 
 	ASarco_Character_BP_C_K2_OnMovementModeChanged_Params params;
 	params.PrevMovementMode = PrevMovementMode;
-	params.newMovementMode = newMovementMode;
+	params.NewMovementMode = NewMovementMode;
 	params.PrevCustomMode = PrevCustomMode;
-	params.newCustomMode = newCustomMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 
@@ -302,14 +302,14 @@ void ASarco_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_76
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_67
 // ()
 
-void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_76()
+void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_67()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_76");
+	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_67");
 
-	ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_76_Params params;
+	ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_67_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -319,14 +319,14 @@ void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_76()
 }
 
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_75
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_66
 // ()
 
-void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_75()
+void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_66()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_75");
+	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_66");
 
-	ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_75_Params params;
+	ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_66_Params params;
 
 	auto flags = fn->FunctionFlags;
 

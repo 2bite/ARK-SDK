@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureTurretBaseBP_BaseHeavy.StructureTurretBaseBP_BaseHeavy_C
-// 0x0019 (0x0ED9 - 0x0EC0)
+// 0x0019 (0x0EF1 - 0x0ED8)
 class AStructureTurretBaseBP_BaseHeavy_C : public APrimalStructureTurret
 {
 public:
-	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0EC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0EC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0ED0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bTooManyInRangeInactive;                                  // 0x0ED8(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0ED8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0EE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0EE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bTooManyInRangeInactive;                                  // 0x0EF0(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

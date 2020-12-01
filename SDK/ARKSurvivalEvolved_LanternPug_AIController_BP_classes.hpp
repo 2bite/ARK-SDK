@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LanternPug_AIController_BP.LanternPug_AIController_BP_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ALanternPug_AIController_BP_C : public ALanternPet_AIController_Base_BP_C
 {
 public:

@@ -15,11 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PlayerPawnTest_Male.PlayerPawnTest_Male_C
-// 0x0008 (0x2098 - 0x2090)
+// 0x000F (0x2148 - 0x2139)
 class APlayerPawnTest_Male_C : public APlayerPawnTest_Child_C
 {
 public:
-	class UPlayerCharacterStatusComponent_BP_C*        PlayerCharacterStatus;                                    // 0x2090(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x2139(0x0007) MISSED OFFSET
+	class UPlayerCharacterStatusComponent_BP_C*        PlayerCharacterStatus;                                    // 0x2140(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoCharacterStatusComponent_BP_LanternBird.DinoCharacterStatusComponent_BP_LanternBird_C
-// 0x0000 (0x1088 - 0x1088)
+// 0x0000 (0x1090 - 0x1090)
 class UDinoCharacterStatusComponent_BP_LanternBird_C : public UDinoCharacterStatusComponent_BP_LanternBase_C
 {
 public:

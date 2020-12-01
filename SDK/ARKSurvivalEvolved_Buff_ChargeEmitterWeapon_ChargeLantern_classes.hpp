@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitterWeapon_ChargeLantern.Buff_ChargeEmitterWeapon_ChargeLantern_C
-// 0x000C (0x0AF8 - 0x0AEC)
+// 0x000C (0x0B88 - 0x0B7C)
 class ABuff_ChargeEmitterWeapon_ChargeLantern_C : public ABuff_ChargeEmitterWeapon_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0AEC(0x0004) MISSED OFFSET
-	class UStaticMesh*                                 chargeEffectMeshOverride;                                 // 0x0AF0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0B7C(0x0004) MISSED OFFSET
+	class UStaticMesh*                                 chargeEffectMeshOverride;                                 // 0x0B80(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

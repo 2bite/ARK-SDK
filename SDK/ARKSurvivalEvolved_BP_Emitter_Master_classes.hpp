@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Emitter_Master.BP_Emitter_Master_C
-// 0x0008 (0x04A8 - 0x04A0)
+// 0x0008 (0x04B8 - 0x04B0)
 class ABP_Emitter_Master_C : public AEmitter
 {
 public:
-	class UChildActorComponent*                        AudioChild;                                               // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        AudioChild;                                               // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

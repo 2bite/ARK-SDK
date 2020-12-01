@@ -344,7 +344,7 @@ void ARaptor_Character_BP_C::OnRep_bCanMaul()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintCanRiderAttack
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -384,7 +384,7 @@ void ARaptor_Character_BP_C::BPTimerServer()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.CheckForPounceTarget
-// (Net, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        RetTarget                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -395,6 +395,7 @@ void ARaptor_Character_BP_C::STATIC_CheckForPounceTarget(class APrimalCharacter*
 	ARaptor_Character_BP_C_CheckForPounceTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -448,17 +449,17 @@ void ARaptor_Character_BP_C::ImmobilizeTarget(class APrimalCharacter* Char, bool
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ARaptor_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ARaptor_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	ARaptor_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

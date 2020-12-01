@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Equus_AI_Blueprint.Equus_AI_Blueprint_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class AEquus_AI_Blueprint_C : public ADino_AIController_BP_C
 {
 public:

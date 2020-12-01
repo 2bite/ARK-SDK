@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_IndustrialForge.PrimalInventoryBP_IndustrialForge_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_IndustrialForge_C : public UPrimalInventoryBP_BaseFuelBurning_C
 {
 public:

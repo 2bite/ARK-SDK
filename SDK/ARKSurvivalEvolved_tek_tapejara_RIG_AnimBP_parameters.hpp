@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function tek_tapejara_RIG_AnimBP.tek_tapejara_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2938
-struct Utek_tapejara_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2938_Params
+// Function tek_tapejara_RIG_AnimBP.tek_tapejara_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2620
+struct Utek_tapejara_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2620_Params
 {
 };
 

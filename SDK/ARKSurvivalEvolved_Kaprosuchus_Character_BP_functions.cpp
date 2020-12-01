@@ -38,13 +38,13 @@ bool AKaprosuchus_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC,
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Event, NetResponse, Static, Public, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Native, Event, NetResponse, NetMulticast, Public, Private, NetServer, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AKaprosuchus_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AKaprosuchus_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BPGetMultiUseEntries");
 
@@ -52,6 +52,7 @@ TArray<struct FMultiUseEntry> AKaprosuchus_Character_BP_C::STATIC_BPGetMultiUseE
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,11 +88,11 @@ void AKaprosuchus_Character_BP_C::Play_Leap_FX(int MovementMode, bool IsLeapStar
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.EvaluateHeightInWater
-// (Event, NetMulticast, Public, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, NetServer, DLLImport)
 // Parameters:
 // bool                           NearSurface                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AKaprosuchus_Character_BP_C::EvaluateHeightInWater(bool* NearSurface)
+void AKaprosuchus_Character_BP_C::STATIC_EvaluateHeightInWater(bool* NearSurface)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.EvaluateHeightInWater");
 
@@ -172,12 +173,12 @@ void AKaprosuchus_Character_BP_C::BPTimerServer()
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BlueprintCanRiderAttack
-// (NetRequest, Event, NetResponse, NetMulticast, Public, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, DLLImport)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AKaprosuchus_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
+bool AKaprosuchus_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BlueprintCanRiderAttack");
 
@@ -185,6 +186,7 @@ bool AKaprosuchus_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +197,7 @@ bool AKaprosuchus_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.CalcLeapImpulse
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, MulticastDelegate, Private, NetServer, DLLImport)
 // Parameters:
 // struct FVector                 RetImpulse                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -206,7 +208,6 @@ void AKaprosuchus_Character_BP_C::CalcLeapImpulse(struct FVector* RetImpulse)
 	AKaprosuchus_Character_BP_C_CalcLeapImpulse_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -247,11 +248,11 @@ bool AKaprosuchus_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Di
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.ChangeGroundSwimAttackAnims
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Public, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Event, NetResponse, MulticastDelegate, Private, NetServer, DLLImport)
 // Parameters:
 // int                            NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AKaprosuchus_Character_BP_C::STATIC_ChangeGroundSwimAttackAnims(int NewState)
+void AKaprosuchus_Character_BP_C::ChangeGroundSwimAttackAnims(int NewState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.ChangeGroundSwimAttackAnims");
 
@@ -259,7 +260,6 @@ void AKaprosuchus_Character_BP_C::STATIC_ChangeGroundSwimAttackAnims(int NewStat
 	params.NewState = NewState;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

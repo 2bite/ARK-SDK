@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AlarmTrapEmitter.AlarmTrapEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AAlarmTrapEmitter_C : public AExplosionEmitter_C
 {
 public:

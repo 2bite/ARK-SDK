@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_IsBeingCarried_DontDismountRider.Buff_IsBeingCarried_DontDismountRider_C
-// 0x0000 (0x08AD - 0x08AD)
+// 0x0000 (0x093D - 0x093D)
 class ABuff_IsBeingCarried_DontDismountRider_C : public ABuff_IsBeingCarried_C
 {
 public:

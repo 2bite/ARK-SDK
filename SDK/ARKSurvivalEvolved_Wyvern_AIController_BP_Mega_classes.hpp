@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wyvern_AIController_BP_Mega.Wyvern_AIController_BP_Mega_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class AWyvern_AIController_BP_Mega_C : public AWyvern_AIController_BP_C
 {
 public:

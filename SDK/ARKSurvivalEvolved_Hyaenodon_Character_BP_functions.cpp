@@ -232,9 +232,9 @@ void AHyaenodon_Character_BP_C::OnSaddleUnequipped()
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnSaddleEquipped
-// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, Private, Protected, Delegate, DLLImport)
 
-void AHyaenodon_Character_BP_C::OnSaddleEquipped()
+void AHyaenodon_Character_BP_C::STATIC_OnSaddleEquipped()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnSaddleEquipped");
 
@@ -715,13 +715,13 @@ void AHyaenodon_Character_BP_C::IsInTamingFriendlyState(bool* tamingCanOccur, bo
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetResponse, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AHyaenodon_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AHyaenodon_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.BPGetMultiUseEntries");
 
@@ -767,11 +767,11 @@ bool AHyaenodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnEatFood
-// (NetReliable, NetResponse, Static, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, DLLImport)
 // Parameters:
 // class UPrimalItem*             foodItem                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AHyaenodon_Character_BP_C::STATIC_OnEatFood(class UPrimalItem* foodItem)
+void AHyaenodon_Character_BP_C::OnEatFood(class UPrimalItem* foodItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnEatFood");
 

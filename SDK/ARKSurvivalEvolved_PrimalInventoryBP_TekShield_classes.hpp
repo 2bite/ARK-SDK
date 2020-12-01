@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_TekShield.PrimalInventoryBP_TekShield_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_TekShield_C : public UPrimalInventoryBP_BaseGasolineBurning_C
 {
 public:

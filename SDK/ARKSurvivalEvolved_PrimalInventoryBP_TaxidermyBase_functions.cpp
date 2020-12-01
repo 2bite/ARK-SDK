@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPPreventEquipItemType
-// (NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms)
 // Parameters:
 // TEnumAsByte<EPrimalEquipmentType>* equipmentType                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalInventoryBP_TaxidermyBase_C::BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType)
+bool UPrimalInventoryBP_TaxidermyBase_C::STATIC_BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPPreventEquipItemType");
 
@@ -26,7 +26,6 @@ bool UPrimalInventoryBP_TaxidermyBase_C::BPPreventEquipItemType(TEnumAsByte<EPri
 	params.equipmentType = equipmentType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

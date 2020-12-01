@@ -35,9 +35,9 @@ void ABuff_ChargeEmitterWeapon_C::IsWeaponFiring(bool* IsFiring)
 
 
 // Function Buff_ChargeEmitterWeapon.Buff_ChargeEmitterWeapon_C.InitializeEmitter
-// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (Exec, NetResponse, Static, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_ChargeEmitterWeapon_C::InitializeEmitter()
+void ABuff_ChargeEmitterWeapon_C::STATIC_InitializeEmitter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitterWeapon.Buff_ChargeEmitterWeapon_C.InitializeEmitter");
 

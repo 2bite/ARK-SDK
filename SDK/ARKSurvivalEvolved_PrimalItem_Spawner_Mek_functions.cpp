@@ -12,6 +12,29 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function PrimalItem_Spawner_Mek.PrimalItem_Spawner_Mek_C.BPCanUse
+// ()
+// Parameters:
+// bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPrimalItem_Spawner_Mek_C::BPCanUse(bool* bIgnoreCooldown)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_Spawner_Mek.PrimalItem_Spawner_Mek_C.BPCanUse");
+
+	UPrimalItem_Spawner_Mek_C_BPCanUse_Params params;
+	params.bIgnoreCooldown = bIgnoreCooldown;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function PrimalItem_Spawner_Mek.PrimalItem_Spawner_Mek_C.GetStatDisplayString
 // ()
 // Parameters:

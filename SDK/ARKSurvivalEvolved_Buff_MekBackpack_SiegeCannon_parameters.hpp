@@ -36,8 +36,8 @@ struct ABuff_MekBackpack_SiegeCannon_C_BuffTickServer_Params
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BPPreventInstigatorMovementMode
 struct ABuff_MekBackpack_SiegeCannon_C_BPPreventInstigatorMovementMode_Params
 {
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -130,7 +130,7 @@ struct ABuff_MekBackpack_SiegeCannon_C_BPGetHUDElements_Params
 struct ABuff_MekBackpack_SiegeCannon_C_OverrideTurnInPlaceSpeed_Params
 {
 	float*                                             DefaultSpeed;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              NewSpeed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              newSpeed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.AllowHurtAnim

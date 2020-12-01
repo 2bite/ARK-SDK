@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CropPlotMedium_SM.CropPlotMedium_SM_C
-// 0x0010 (0x0EB0 - 0x0EA0)
+// 0x0010 (0x0EC8 - 0x0EB8)
 class ACropPlotMedium_SM_C : public ACropPlotBaseBP_C
 {
 public:
-	class UBoxComponent*                               Box1;                                                     // 0x0EA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPrimalInventoryBP_CropPlot_Medium_C*        PrimalInventoryBP_CropPlot_Medium_C1;                     // 0x0EA8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               Box1;                                                     // 0x0EB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_CropPlot_Medium_C*        PrimalInventoryBP_CropPlot_Medium_C1;                     // 0x0EC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

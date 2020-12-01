@@ -79,7 +79,7 @@ struct AHesperornis_Character_BP_C_OverrideRandomWanderLocation_Params
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.IsTargetAFish
 struct AHesperornis_Character_BP_C_IsTargetAFish_Params
 {
-	class AActor*                                      TargetedActor;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      targetedActor;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsValid;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -276,7 +276,7 @@ struct AHesperornis_Character_BP_C_SlowlyRotateZTo_Params
 {
 	struct FRotator                                    TargetRotation;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    InitialRotation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    initialRotation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.MultiUnsetPitch

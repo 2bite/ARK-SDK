@@ -33,7 +33,7 @@ void AGasBags_AIController_BP_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function GasBags_AIController_BP.GasBags_AIController_BP_C.TickCheckDangerLevels
-// (NetResponse, Static, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms)
 
 void AGasBags_AIController_BP_C::STATIC_TickCheckDangerLevels()
 {

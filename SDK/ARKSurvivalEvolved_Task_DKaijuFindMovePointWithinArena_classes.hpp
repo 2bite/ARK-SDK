@@ -38,9 +38,9 @@ public:
 	}
 
 
-	void Get_Random_PointNoMin(const struct FVector& Origin, struct FVector* _return);
-	void Get_Random_PointMin(const struct FVector& Origin, struct FVector* _return, bool* DidNotFindLoc);
-	void ReceiveExecute(class AActor** OwnerActor);
+	void Get_Random_PointNoMin(const struct FVector& Origin, struct FVector* Return);
+	void Get_Random_PointMin(const struct FVector& Origin, struct FVector* Return, bool* DidNotFindLoc);
+	void STATIC_ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_Task_DKaijuFindMovePointWithinArena(int EntryPoint);
 };
 

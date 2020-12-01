@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DroppedItemGeneric_GemElement.DroppedItemGeneric_GemElement_C
-// 0x0000 (0x0710 - 0x0710)
+// 0x0000 (0x0718 - 0x0718)
 class ADroppedItemGeneric_GemElement_C : public ADroppedItemGeneric_Gem_C
 {
 public:

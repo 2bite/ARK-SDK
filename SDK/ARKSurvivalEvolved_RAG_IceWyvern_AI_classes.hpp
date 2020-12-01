@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RAG_IceWyvern_AI.RAG_IceWyvern_AI_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ARAG_IceWyvern_AI_C : public AWyvern_AIController_BP_C
 {
 public:

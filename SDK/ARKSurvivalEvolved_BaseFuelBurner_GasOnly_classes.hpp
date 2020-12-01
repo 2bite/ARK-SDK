@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BaseFuelBurner_GasOnly.BaseFuelBurner_GasOnly_C
-// 0x0000 (0x0DB8 - 0x0DB8)
+// 0x0000 (0x0DD0 - 0x0DD0)
 class ABaseFuelBurner_GasOnly_C : public ABaseFuelBurner_C
 {
 public:

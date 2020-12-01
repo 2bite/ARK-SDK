@@ -99,7 +99,7 @@ void ALampPost_C::SetLampLightIntensity(int intensityLevel)
 
 
 // Function LampPost.LampPost_C.BPGetMultiUseEntries
-// (NetReliable, Event, Static, NetMulticast, Protected, Delegate, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -113,6 +113,7 @@ TArray<struct FMultiUseEntry> ALampPost_C::STATIC_BPGetMultiUseEntries(class APl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -256,9 +256,9 @@ void UDinoAttackStateFollowSpline_C::UpgradePawnAcceleration(bool Upgrade)
 // Function DinoAttackStateFollowSpline.DinoAttackStateFollowSpline_C.FindDragonSplines
 // ()
 // Parameters:
-// bool                           found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateFollowSpline_C::FindDragonSplines(bool* found)
+void UDinoAttackStateFollowSpline_C::FindDragonSplines(bool* Found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateFollowSpline.DinoAttackStateFollowSpline_C.FindDragonSplines");
 
@@ -270,8 +270,8 @@ void UDinoAttackStateFollowSpline_C::FindDragonSplines(bool* found)
 
 	fn->FunctionFlags = flags;
 
-	if (found != nullptr)
-		*found = params.found;
+	if (Found != nullptr)
+		*Found = params.Found;
 }
 
 

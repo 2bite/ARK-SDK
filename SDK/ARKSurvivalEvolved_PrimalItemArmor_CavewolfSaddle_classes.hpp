@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_CavewolfSaddle.PrimalItemArmor_CavewolfSaddle_C
-// 0x0000 (0x0998 - 0x0998)
+// 0x0000 (0x09B8 - 0x09B8)
 class UPrimalItemArmor_CavewolfSaddle_C : public UPrimalItemArmor_SaddleGeneric_C
 {
 public:

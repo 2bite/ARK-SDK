@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_Ramp_Tek.PrimalItemStructure_Ramp_Tek_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_Ramp_Tek_C : public UPrimalItemStructure_BaseRamp_C
 {
 public:

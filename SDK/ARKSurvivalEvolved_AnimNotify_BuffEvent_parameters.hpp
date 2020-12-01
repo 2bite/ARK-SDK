@@ -23,7 +23,7 @@ struct UAnimNotify_BuffEvent_C_GetNotifyName_Params
 // Function AnimNotify_BuffEvent.AnimNotify_BuffEvent_C.Received_Notify
 struct UAnimNotify_BuffEvent_C_Received_Notify_Params
 {
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

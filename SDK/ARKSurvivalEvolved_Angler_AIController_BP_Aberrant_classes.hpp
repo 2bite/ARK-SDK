@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Angler_AIController_BP_Aberrant.Angler_AIController_BP_Aberrant_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class AAngler_AIController_BP_Aberrant_C : public AAngler_AIController_BP_C
 {
 public:

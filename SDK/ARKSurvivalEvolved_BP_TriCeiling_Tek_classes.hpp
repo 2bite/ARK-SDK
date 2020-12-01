@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TriCeiling_Tek.BP_TriCeiling_Tek_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class ABP_TriCeiling_Tek_C : public ABase_Ceiling_Tri_C
 {
 public:

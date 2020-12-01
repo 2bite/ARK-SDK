@@ -33,13 +33,13 @@ void AArgent_Character_BP_C::BPDidClearCarriedCharacter(class APrimalCharacter**
 
 
 // Function Argent_Character_BP.Argent_Character_BP_C.Allow Passenger in Slot
-// (Event, Static, MulticastDelegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Slot                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Allowed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AArgent_Character_BP_C::STATIC_Allow_Passenger_in_Slot(class APrimalCharacter* Character, int Slot, bool* Allowed)
+void AArgent_Character_BP_C::Allow_Passenger_in_Slot(class APrimalCharacter* Character, int Slot, bool* Allowed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Argent_Character_BP.Argent_Character_BP_C.Allow Passenger in Slot");
 

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_Adobe_Fence_BP.SM_Adobe_Fence_BP_C
-// 0x0008 (0x0AA8 - 0x0AA0)
+// 0x0008 (0x0AC0 - 0x0AB8)
 class ASM_Adobe_Fence_BP_C : public AFenceFoundation_Base_New_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0AA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0AB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

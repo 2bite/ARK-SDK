@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cage_Wood.Cage_Wood_C
-// 0x0000 (0x0B28 - 0x0B28)
+// 0x0000 (0x0B40 - 0x0B40)
 class ACage_Wood_C : public ACage_Base_C
 {
 public:

@@ -13,13 +13,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Bola.Buff_Bola_C.BPHandleOnStartFire
-// (NetRequest, Exec, Event, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// Parameters:
+// bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Bola_C::BPHandleOnStartFire()
+void ABuff_Bola_C::STATIC_BPHandleOnStartFire(bool* bFromGamepad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Bola.Buff_Bola_C.BPHandleOnStartFire");
 
 	ABuff_Bola_C_BPHandleOnStartFire_Params params;
+	params.bFromGamepad = bFromGamepad;
 
 	auto flags = fn->FunctionFlags;
 
@@ -104,7 +107,7 @@ bool ABuff_Bola_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function Buff_Bola.Buff_Bola_C.BPGetMultiUseEntries
-// (NetReliable, Native, NetResponse, NetServer, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Exec, NetMulticast, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -118,7 +121,6 @@ TArray<struct FMultiUseEntry> ABuff_Bola_C::BPGetMultiUseEntries(class APlayerCo
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

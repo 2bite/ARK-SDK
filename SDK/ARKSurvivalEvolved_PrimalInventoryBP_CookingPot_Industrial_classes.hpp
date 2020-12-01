@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_CookingPot_Industrial.PrimalInventoryBP_CookingPot_Industrial_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_CookingPot_Industrial_C : public UPrimalInventoryBP_CookingPot_C
 {
 public:

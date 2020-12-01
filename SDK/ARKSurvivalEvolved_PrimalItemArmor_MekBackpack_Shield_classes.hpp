@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_MekBackpack_Shield.PrimalItemArmor_MekBackpack_Shield_C
-// 0x0000 (0x099C - 0x099C)
+// 0x0000 (0x09BC - 0x09BC)
 class UPrimalItemArmor_MekBackpack_Shield_C : public UPrimalItemArmor_MekBackpack_Base_C
 {
 public:

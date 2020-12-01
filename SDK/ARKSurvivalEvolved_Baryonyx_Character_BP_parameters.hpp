@@ -43,7 +43,7 @@ struct ABaryonyx_Character_BP_C_BlueprintCanRiderAttack_Params
 struct ABaryonyx_Character_BP_C_BaryCanAttack_Params
 {
 	int                                                AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BlueprintCanAttack
@@ -66,9 +66,9 @@ struct ABaryonyx_Character_BP_C_BPKilledSomethingEvent_Params
 struct ABaryonyx_Character_BP_C_K2_OnMovementModeChanged_Params
 {
 	TEnumAsByte<EMovementMode>*                        PrevMovementMode;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>*                        newMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>*                        NewMovementMode;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	unsigned char*                                     PrevCustomMode;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char*                                     newCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char*                                     NewCustomMode;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BlueprintAdjustOutputDamage

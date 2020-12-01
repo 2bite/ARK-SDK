@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicRex_Character_BP.BionicRex_Character_BP_C
-// 0x0014 (0x214C - 0x2138)
+// 0x0014 (0x21CC - 0x21B8)
 class ABionicRex_Character_BP_C : public ARex_Character_BP_C
 {
 public:
-	bool                                               NewVar;                                                   // 0x2138(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x2139(0x0003) MISSED OFFSET
-	struct FLinearColor                                Color5;                                                   // 0x213C(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               NewVar;                                                   // 0x21B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x21B9(0x0003) MISSED OFFSET
+	struct FLinearColor                                Color5;                                                   // 0x21BC(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -35,7 +35,7 @@ void ABuff_IsTameRiding_C::GetTimeBasedAlpha(float* Alpha)
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.GetBuffDescription
-// (NetReliable, NetRequest, Static, MulticastDelegate, Private, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Static, Public, Protected, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -108,14 +108,14 @@ void ABuff_IsTameRiding_C::GetActiveTameState(class APrimalDinoCharacter* MyRidi
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.BPDrawBuffStatusHUD
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (Exec, Native, Public, Private, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_IsTameRiding_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_IsTameRiding_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.BPDrawBuffStatusHUD");
 
@@ -126,6 +126,7 @@ void ABuff_IsTameRiding_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, f
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,14 +194,14 @@ void ABuff_IsTameRiding_C::UserConstructionScript()
 }
 
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_148
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_130
 // ()
 
-void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_148()
+void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_130()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_148");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_130");
 
-	ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_148_Params params;
+	ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_130_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -210,14 +211,14 @@ void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_148()
 }
 
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_147
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_129
 // ()
 
-void ABuff_IsTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_147()
+void ABuff_IsTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_129()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_147");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_129");
 
-	ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_147_Params params;
+	ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_129_Params params;
 
 	auto flags = fn->FunctionFlags;
 

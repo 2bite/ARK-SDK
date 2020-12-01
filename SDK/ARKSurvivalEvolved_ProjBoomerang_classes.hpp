@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjBoomerang.ProjBoomerang_C
-// 0x001C (0x0714 - 0x06F8)
+// 0x001C (0x0724 - 0x0708)
 class AProjBoomerang_C : public APrimalProjectileBoomerang
 {
 public:
-	class UAudioComponent*                             Projectile_SFX;                                           // 0x06F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             RotationPoint;                                            // 0x0700(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     CallFunc_GetWorldLocation_ReturnValue;                    // 0x0708(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UAudioComponent*                             Projectile_SFX;                                           // 0x0708(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             RotationPoint;                                            // 0x0710(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     CallFunc_GetWorldLocation_ReturnValue;                    // 0x0718(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

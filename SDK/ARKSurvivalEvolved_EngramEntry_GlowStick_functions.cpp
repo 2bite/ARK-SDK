@@ -12,16 +12,16 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function EngramEntry_Glowstick.EngramEntry_GlowStick_C.ExecuteUbergraph_EngramEntry_GlowStick
+// Function EngramEntry_Glowstick.EngramEntry_Glowstick_C.ExecuteUbergraph_EngramEntry_GlowStick
 // ()
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UEngramEntry_GlowStick_C::ExecuteUbergraph_EngramEntry_GlowStick(int EntryPoint)
+void UEngramEntry_Glowstick_C::ExecuteUbergraph_EngramEntry_GlowStick(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function EngramEntry_Glowstick.EngramEntry_GlowStick_C.ExecuteUbergraph_EngramEntry_GlowStick");
+	static auto fn = UObject::FindObject<UFunction>("Function EngramEntry_Glowstick.EngramEntry_Glowstick_C.ExecuteUbergraph_EngramEntry_GlowStick");
 
-	UEngramEntry_GlowStick_C_ExecuteUbergraph_EngramEntry_GlowStick_Params params;
+	UEngramEntry_Glowstick_C_ExecuteUbergraph_EngramEntry_GlowStick_Params params;
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;

@@ -44,6 +44,7 @@ struct ABuff_Frozen_IceKaiju_C_BPPreventflight_Params
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BPHandleOnStartFire
 struct ABuff_Frozen_IceKaiju_C_BPHandleOnStartFire_Params
 {
+	bool*                                              bFromGamepad;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BuffAdjustDamage

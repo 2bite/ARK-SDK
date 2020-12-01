@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass DataListEntryWidgetGeneric_DyeResources.DataListEntryWidgetGeneric_DyeResources_C
-// 0x0008 (0x0528 - 0x0520)
+// 0x0008 (0x0530 - 0x0528)
 class UDataListEntryWidgetGeneric_DyeResources_C : public UDataListEntryButton_DyeResources
 {
 public:
-	class UImage*                                      ItemIcon;                                                 // 0x0520(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      ItemIcon;                                                 // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_NoBuild.Buff_NoBuild_C
-// 0x0008 (0x08A8 - 0x08A0)
+// 0x0008 (0x0938 - 0x0930)
 class ABuff_NoBuild_C : public APrimalBuff
 {
 public:
-	class USphereComponent*                            NoBuildOctree;                                            // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            NoBuildOctree;                                            // 0x0930(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

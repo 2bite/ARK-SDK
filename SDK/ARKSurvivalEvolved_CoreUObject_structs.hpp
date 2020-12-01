@@ -252,7 +252,7 @@ struct FVector
 
 // ScriptStruct CoreUObject.Object.Transform
 // 0x0030
-struct FTransform
+struct UObject_FTransform
 {
 	struct FQuat                                       Rotation;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, SaveGame, IsPlainOldData)
 	struct FVector                                     Translation;                                              // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)

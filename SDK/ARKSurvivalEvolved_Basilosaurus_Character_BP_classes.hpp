@@ -15,19 +15,19 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Basilosaurus_Character_BP.Basilosaurus_Character_BP_C
-// 0x0038 (0x20C0 - 0x2088)
+// 0x0038 (0x2140 - 0x2108)
 class ABasilosaurus_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Basil_C*    DinoCharacterStatus_BP_Basil_C1;                          // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FollowMeRadius;                                           // 0x2090(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x2094(0x0004) MISSED OFFSET
-	double                                             LastTimeShotByPlayer;                                     // 0x2098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              TimeBeingHitAllowsAggroTowardsPlayers;                    // 0x20A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxWeightToBeAbleToFollow;                                // 0x20A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxNumberOfFollowTargets;                                 // 0x20A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x20AC(0x0004) MISSED OFFSET
-	TArray<class UClass*>                              ValidFollowClasses;                                       // 0x20B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UDinoCharacterStatusComponent_BP_Basil_C*    DinoCharacterStatus_BP_Basil_C1;                          // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FollowMeRadius;                                           // 0x2110(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x2114(0x0004) MISSED OFFSET
+	double                                             LastTimeShotByPlayer;                                     // 0x2118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TimeBeingHitAllowsAggroTowardsPlayers;                    // 0x2120(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxWeightToBeAbleToFollow;                                // 0x2124(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MaxNumberOfFollowTargets;                                 // 0x2128(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x212C(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              ValidFollowClasses;                                       // 0x2130(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

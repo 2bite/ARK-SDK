@@ -122,23 +122,6 @@ void USubtitlesUI_C::AddedToViewport()
 }
 
 
-// Function SubtitlesUI.SubtitlesUI_C.RemovedFromViewport
-// ()
-
-void USubtitlesUI_C::RemovedFromViewport()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function SubtitlesUI.SubtitlesUI_C.RemovedFromViewport");
-
-	USubtitlesUI_C_RemovedFromViewport_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function SubtitlesUI.SubtitlesUI_C.ShowNextSubtitle
 // ()
 

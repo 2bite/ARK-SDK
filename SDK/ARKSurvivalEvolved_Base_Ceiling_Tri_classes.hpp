@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Base_Ceiling_Tri.Base_Ceiling_Tri_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class ABase_Ceiling_Tri_C : public ACeiling_Base_C
 {
 public:

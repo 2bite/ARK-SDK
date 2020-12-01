@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapFishingRodLeech.WeapFishingRodLeech_C
-// 0x0000 (0x109C - 0x109C)
+// 0x0000 (0x1118 - 0x1118)
 class AWeapFishingRodLeech_C : public AWeapFishingRod_C
 {
 public:

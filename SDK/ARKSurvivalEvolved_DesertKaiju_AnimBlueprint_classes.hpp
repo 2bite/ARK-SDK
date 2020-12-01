@@ -88,7 +88,7 @@ public:
 	unsigned char                                      UnknownData06[0x3];                                       // 0x0AB1(0x0003) MISSED OFFSET
 	float                                              CallFunc_GetWorldDeltaSeconds_ReturnValue;                // 0x0AB4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x8];                                       // 0x0AB8(0x0008) MISSED OFFSET
-	struct FTransform                                  CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x0AC0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
+	struct UObject_FTransform                          CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x0AC0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_GetAimOffsetsTransform_TheRootYawSpeed;          // 0x0AF0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_GetAimOffsetsTransform_RootLocOffset;            // 0x0AF4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    CallFunc_GetAimOffsetsTransform_ReturnValue;              // 0x0B00(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -106,15 +106,15 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2834();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2833();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2832();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2831();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2830();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2829();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_564();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2610();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2609();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2608();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2607();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2606();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2605();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_544();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_TwoWayBlend_46();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2828();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DesertKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2604();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_DesertKaiju_AnimBlueprint(int EntryPoint);
 };

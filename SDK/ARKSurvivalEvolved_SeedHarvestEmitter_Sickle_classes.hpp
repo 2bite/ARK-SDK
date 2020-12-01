@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SeedHarvestEmitter_Sickle.SeedHarvestEmitter_Sickle_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ASeedHarvestEmitter_Sickle_C : public APrimalEmitterSpawnable
 {
 public:

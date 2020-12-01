@@ -13,17 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.DinoUberpounce
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_AIController_BP_C::DinoUberpounce(bool* Success)
+void ADeinonychus_AIController_BP_C::STATIC_DinoUberpounce(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.DinoUberpounce");
 
 	ADeinonychus_AIController_BP_C_DinoUberpounce_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ void ADeinonychus_AIController_BP_C::DinoUberpounce(bool* Success)
 
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.LocationUberpounce
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport)
 
 void ADeinonychus_AIController_BP_C::STATIC_LocationUberpounce()
 {
@@ -130,7 +131,7 @@ void ADeinonychus_AIController_BP_C::Deinonychus_AttackedWhileLatched()
 
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.OnUberpounceStateChanged
-// (NetReliable, NetResponse, Static, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EUberpounceState>  NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EUberpounceState>  PrevState                      (Parm, ZeroConstructor, IsPlainOldData)

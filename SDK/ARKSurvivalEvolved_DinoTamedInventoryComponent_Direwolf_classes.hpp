@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Direwolf.DinoTamedInventoryComponent_Direwolf_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoTamedInventoryComponent_Direwolf_C : public UDinoTamedInventoryComponent_BP_NoSaddle_C
 {
 public:

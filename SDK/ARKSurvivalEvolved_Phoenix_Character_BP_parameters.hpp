@@ -57,7 +57,7 @@ struct APhoenix_Character_BP_C_CanUseSuperCharge_Params
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.UpdateTimerServer
 struct APhoenix_Character_BP_C_UpdateTimerServer_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnRep_isCharging
@@ -120,7 +120,7 @@ struct APhoenix_Character_BP_C_BPTryMultiUse_Params
 struct APhoenix_Character_BP_C_On_StateChanged_Client_Params
 {
 	bool                                               hasRisen;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Is In Water
@@ -138,8 +138,8 @@ struct APhoenix_Character_BP_C_CanAshStayOnLocation_Params
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Calculate BuryMeshTransform
 struct APhoenix_Character_BP_C_Calculate_BuryMeshTransform_Params
 {
-	bool                                               rise;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  buryMeshTransform;                                        // (Parm, OutParm, IsPlainOldData)
+	bool                                               Rise;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct UObject_FTransform                          buryMeshTransform;                                        // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.GetSuperheatState
@@ -242,10 +242,10 @@ struct APhoenix_Character_BP_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function Phoenix_Character_BP.Phoenix_Character_BP_C.rise
-struct APhoenix_Character_BP_C_rise_Params
+// Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise
+struct APhoenix_Character_BP_C_Rise_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnRise
@@ -256,13 +256,13 @@ struct APhoenix_Character_BP_C_OnRise_Params
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.DissolveMound
 struct APhoenix_Character_BP_C_DissolveMound_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.FakeDie
 struct APhoenix_Character_BP_C_FakeDie_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnFakeDie
@@ -273,7 +273,7 @@ struct APhoenix_Character_BP_C_OnFakeDie_Params
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_AshFireParticles
 struct APhoenix_Character_BP_C_Die_AshFireParticles_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.PhoenixDie_MeshVisuals
@@ -295,13 +295,13 @@ struct APhoenix_Character_BP_C_BPUnstasis_Params
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnPhoenixRise_Multicast
 struct APhoenix_Character_BP_C_OnPhoenixRise_Multicast_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnPhoenixFakeDies_Multicast
 struct APhoenix_Character_BP_C_OnPhoenixFakeDies_Multicast_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.KillPhoenix
@@ -323,7 +323,7 @@ struct APhoenix_Character_BP_C_FakeDieFailsafe_Params
 struct APhoenix_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -331,25 +331,25 @@ struct APhoenix_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_AshFireParticles
 struct APhoenix_Character_BP_C_Rise_AshFireParticles_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.UndissolveMound
 struct APhoenix_Character_BP_C_UndissolveMound_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_AllEffects
 struct APhoenix_Character_BP_C_Rise_AllEffects_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_AllEffects
 struct APhoenix_Character_BP_C_Die_AllEffects_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.ChangeChargeState_Server
@@ -371,13 +371,13 @@ struct APhoenix_Character_BP_C_StartSuperCharge_Params
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_BodyFireParticles
 struct APhoenix_Character_BP_C_Rise_BodyFireParticles_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_BodyFireParticles
 struct APhoenix_Character_BP_C_Die_BodyFireParticles_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.DropInventory

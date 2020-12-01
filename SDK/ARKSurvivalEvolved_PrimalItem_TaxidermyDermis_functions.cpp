@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_TaxidermyDermis.PrimalItem_TaxidermyDermis_C.BPInitIconMaterial
-// (NetReliable, NetRequest, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetResponse, Static, MulticastDelegate, Public, Delegate, DLLImport, Const, NetValidate)
 
-void UPrimalItem_TaxidermyDermis_C::BPInitIconMaterial()
+void UPrimalItem_TaxidermyDermis_C::STATIC_BPInitIconMaterial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_TaxidermyDermis.PrimalItem_TaxidermyDermis_C.BPInitIconMaterial");
 

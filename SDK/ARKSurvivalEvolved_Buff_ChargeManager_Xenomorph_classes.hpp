@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeManager_Xenomorph.Buff_ChargeManager_Xenomorph_C
-// 0x0000 (0x0970 - 0x0970)
+// 0x0000 (0x0A00 - 0x0A00)
 class ABuff_ChargeManager_Xenomorph_C : public ABuff_ChargeManager_C
 {
 public:

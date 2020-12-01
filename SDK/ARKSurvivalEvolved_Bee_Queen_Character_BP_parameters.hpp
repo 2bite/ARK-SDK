@@ -92,7 +92,7 @@ struct ABee_Queen_Character_BP_C_OnRep_bIsHidden_Params
 struct ABee_Queen_Character_BP_C_SearchTreesForValidHiveSpawnLocation_Params
 {
 	bool                                               succeeded;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  Transform;                                                // (Parm, OutParm, IsPlainOldData)
+	struct UObject_FTransform                          Transform;                                                // (Parm, OutParm, IsPlainOldData)
 };
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.HideInHive

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemCostume_BionicGigant.PrimalItemCostume_BionicGigant_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemCostume_BionicGigant_C : public UPrimalItemCostumeGeneric_C
 {
 public:

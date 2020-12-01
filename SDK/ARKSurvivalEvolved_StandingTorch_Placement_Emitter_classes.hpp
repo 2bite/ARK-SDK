@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StandingTorch_Placement_Emitter.StandingTorch_Placement_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AStandingTorch_Placement_Emitter_C : public APrimalEmitterSpawnable
 {
 public:

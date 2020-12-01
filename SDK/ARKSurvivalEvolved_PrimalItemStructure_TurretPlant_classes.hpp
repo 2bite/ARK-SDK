@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_TurretPlant.PrimalItemStructure_TurretPlant_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_TurretPlant_C : public UPrimalItemStructureGeneric_C
 {
 public:

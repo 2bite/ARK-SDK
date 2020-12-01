@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LadderBaseBP.LadderBaseBP_C
-// 0x0008 (0x0B00 - 0x0AF8)
+// 0x0008 (0x0B18 - 0x0B10)
 class ALadderBaseBP_C : public APrimalStructureLadder
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0AF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

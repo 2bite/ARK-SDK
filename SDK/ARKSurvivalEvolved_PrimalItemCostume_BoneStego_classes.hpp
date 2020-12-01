@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemCostume_BoneStego.PrimalItemCostume_BoneStego_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemCostume_BoneStego_C : public UPrimalItemCostumeGeneric_C
 {
 public:

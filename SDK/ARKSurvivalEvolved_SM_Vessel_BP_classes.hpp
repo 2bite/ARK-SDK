@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_Vessel_BP.SM_Vessel_BP_C
-// 0x0008 (0x0DF0 - 0x0DE8)
+// 0x0008 (0x0E08 - 0x0E00)
 class ASM_Vessel_BP_C : public AStructureItemContainerBaseBP_VisualItems_C
 {
 public:
-	class UPrimalInventoryBP_Vessel_C*                 PrimalInventoryBP_Vessel_C1;                              // 0x0DE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_Vessel_C*                 PrimalInventoryBP_Vessel_C1;                              // 0x0E00(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

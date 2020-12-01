@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeGateFrame_Large_BP.SM_AdobeGateFrame_Large_BP_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class ASM_AdobeGateFrame_Large_BP_C : public AGateFrame_Large_Metal_C
 {
 public:

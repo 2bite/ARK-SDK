@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.UpdateFX
-// (NetReliable, Static, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ABuff_Zipline_Motorized_C::STATIC_UpdateFX()
 {
@@ -75,9 +75,9 @@ void ABuff_Zipline_Motorized_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.Try Refill Gas
-// (Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Zipline_Motorized_C::STATIC_Try_Refill_Gas()
+void ABuff_Zipline_Motorized_C::Try_Refill_Gas()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.Try Refill Gas");
 
@@ -93,14 +93,14 @@ void ABuff_Zipline_Motorized_C::STATIC_Try_Refill_Gas()
 
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.BPDrawBuffStatusHUD
-// (NetRequest, Native, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_Motorized_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_Zipline_Motorized_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.BPDrawBuffStatusHUD");
 

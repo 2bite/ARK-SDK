@@ -14,13 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1244
-struct Uparachute_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1244_Params
+// Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1518
+struct Uparachute_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1518_Params
 {
 };
 
-// Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_530
-struct Uparachute_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_530_Params
+// Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_524
+struct Uparachute_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_524_Params
 {
 };
 

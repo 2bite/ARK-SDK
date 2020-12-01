@@ -321,13 +321,13 @@ bool Acamelsaurus_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC,
 
 
 // Function camelsaurus_Character_BP.camelsaurus_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> Acamelsaurus_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> Acamelsaurus_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function camelsaurus_Character_BP.camelsaurus_Character_BP_C.BPGetMultiUseEntries");
 
@@ -335,7 +335,6 @@ TArray<struct FMultiUseEntry> Acamelsaurus_Character_BP_C::STATIC_BPGetMultiUseE
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

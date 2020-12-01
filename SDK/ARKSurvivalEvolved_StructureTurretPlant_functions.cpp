@@ -68,13 +68,13 @@ void AStructureTurretPlant_C::Turret_Check_Hard_Limit()
 
 
 // Function StructureTurretPlant.StructureTurretPlant_C.BlueprintDrawHUD
-// (Net, NetReliable, Exec, Native, Private, Delegate, NetServer, DLLImport, BlueprintEvent, Const, NetValidate)
+// (Net, NetRequest, Exec, NetResponse, Static, Public, Protected, Delegate, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructureTurretPlant_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void AStructureTurretPlant_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretPlant.StructureTurretPlant_C.BlueprintDrawHUD");
 
@@ -84,7 +84,6 @@ void AStructureTurretPlant_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* C
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

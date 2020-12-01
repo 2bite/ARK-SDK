@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Doorframe_Stone.Doorframe_Stone_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class ADoorframe_Stone_C : public ADoorframe_Base_SM_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LadderBP.LadderBP_C
-// 0x0000 (0x0B00 - 0x0B00)
+// 0x0000 (0x0B18 - 0x0B18)
 class ALadderBP_C : public ALadderBaseBP_C
 {
 public:

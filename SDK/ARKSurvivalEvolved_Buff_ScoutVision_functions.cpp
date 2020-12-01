@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPGetDebugInfoString
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ABuff_ScoutVision_C::BPGetDebugInfoString()
+class FString ABuff_ScoutVision_C::STATIC_BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutVision.Buff_ScoutVision_C.BPGetDebugInfoString");
 
@@ -75,9 +75,9 @@ void ABuff_ScoutVision_C::ReceiveBeginPlay()
 // Function Buff_ScoutVision.Buff_ScoutVision_C.IsLocalScout
 // ()
 // Parameters:
-// bool                           RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ScoutVision_C::IsLocalScout(bool* RetVal)
+void ABuff_ScoutVision_C::IsLocalScout(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutVision.Buff_ScoutVision_C.IsLocalScout");
 
@@ -89,8 +89,8 @@ void ABuff_ScoutVision_C::IsLocalScout(bool* RetVal)
 
 	fn->FunctionFlags = flags;
 
-	if (RetVal != nullptr)
-		*RetVal = params.RetVal;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -185,14 +185,14 @@ void ABuff_ScoutVision_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPDrawBuffStatusHUD
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ScoutVision_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_ScoutVision_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutVision.Buff_ScoutVision_C.BPDrawBuffStatusHUD");
 

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Honey.PrimalItemConsumable_Honey_C
-// 0x0008 (0x0998 - 0x0990)
+// 0x0008 (0x09B8 - 0x09B0)
 class UPrimalItemConsumable_Honey_C : public UPrimalItemConsumableEatable_C
 {
 public:
-	class UClass*                                      WasThrownBuffToAdd;                                       // 0x0990(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      WasThrownBuffToAdd;                                       // 0x09B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

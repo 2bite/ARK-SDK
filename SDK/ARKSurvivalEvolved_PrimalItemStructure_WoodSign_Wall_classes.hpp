@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_WoodSign_Wall.PrimalItemStructure_WoodSign_Wall_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_WoodSign_Wall_C : public UPrimalItemStructure_BaseSign_C
 {
 public:

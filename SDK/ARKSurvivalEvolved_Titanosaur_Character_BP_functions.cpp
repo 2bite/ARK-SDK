@@ -65,7 +65,7 @@ bool ATitanosaur_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.BPSetupTamed
-// (Exec, Native, Event, NetResponse, Private, Protected, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Native, Private, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // bool*                          bWasJustTamed                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,7 +110,7 @@ void ATitanosaur_Character_BP_C::CheckTorporDistanceTravel(float torporIn, bool*
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.IsHeadObstructed
-// (NetReliable, Exec, Native, Event, NetResponse, Private, Protected, Delegate, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, Event, Private, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // bool                           OutVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -121,7 +121,6 @@ void ATitanosaur_Character_BP_C::IsHeadObstructed(bool* OutVal)
 	ATitanosaur_Character_BP_C_IsHeadObstructed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ForestKaijuAppendage_Actor.ForestKaijuAppendage_Actor_C
-// 0x0008 (0x0458 - 0x0450)
+// 0x0008 (0x0468 - 0x0460)
 class AForestKaijuAppendage_Actor_C : public AActor
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0450(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0460(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

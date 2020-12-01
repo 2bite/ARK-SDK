@@ -17,7 +17,7 @@ namespace sdk
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits
 struct AMegalosaurus_Character_BP_C_UpdateSeverTimerLimits_Params
 {
-	float                                              newMIN;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              newMin;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              newMAX;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass DataListButtonCenteredText.DataListButtonCenteredText_C
-// 0x0010 (0x06A0 - 0x0690)
+// 0x0010 (0x06A8 - 0x0698)
 class UDataListButtonCenteredText_C : public UDinoListButtonWidget
 {
 public:
-	class UCustomButtonWidget*                         Button;                                                   // 0x0690(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMenuAnchor*                                 CtxMenu;                                                  // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCustomButtonWidget*                         Button;                                                   // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMenuAnchor*                                 CtxMenu;                                                  // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

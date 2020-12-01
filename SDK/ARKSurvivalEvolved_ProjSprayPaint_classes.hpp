@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjSprayPaint.ProjSprayPaint_C
-// 0x0008 (0x0650 - 0x0648)
+// 0x0008 (0x0660 - 0x0658)
 class AProjSprayPaint_C : public APrimalProjectileDilo
 {
 public:
-	class UAudioComponent*                             Audio1;                                                   // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Audio1;                                                   // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

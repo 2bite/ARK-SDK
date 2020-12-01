@@ -143,14 +143,14 @@ void APhoenix_Character_BP_C::CanUseSuperCharge(bool* canSupercharge)
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.UpdateTimerServer
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::UpdateTimerServer(bool fast)
+void APhoenix_Character_BP_C::UpdateTimerServer(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.UpdateTimerServer");
 
 	APhoenix_Character_BP_C_UpdateTimerServer_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -221,7 +221,7 @@ bool APhoenix_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.SetAnimsWeightForAttack
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasDefaults, DLLImport)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -233,7 +233,6 @@ void APhoenix_Character_BP_C::STATIC_SetAnimsWeightForAttack(int AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -293,13 +292,13 @@ void APhoenix_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, 
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Public, Delegate, HasDefaults, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> APhoenix_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> APhoenix_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.BPGetMultiUseEntries");
 
@@ -349,15 +348,15 @@ bool APhoenix_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 // ()
 // Parameters:
 // bool                           hasRisen                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::On_StateChanged_Client(bool hasRisen, bool fast)
+void APhoenix_Character_BP_C::On_StateChanged_Client(bool hasRisen, bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.On StateChanged Client");
 
 	APhoenix_Character_BP_C_On_StateChanged_Client_Params params;
 	params.hasRisen = hasRisen;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -390,7 +389,7 @@ void APhoenix_Character_BP_C::Is_In_Water(bool* currentlyOnWater)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.CanAshStayOnLocation
-// (NetReliable, Event, Public, NetServer, NetClient, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Public, Delegate, HasDefaults, DLLImport)
 // Parameters:
 // bool                           canAshStay                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -412,17 +411,17 @@ void APhoenix_Character_BP_C::CanAshStayOnLocation(bool* canAshStay)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Calculate BuryMeshTransform
-// (NetReliable, Exec, NetResponse, Public, NetServer, NetClient, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, Public, Delegate, HasDefaults, DLLImport)
 // Parameters:
-// bool                           rise                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              buryMeshTransform              (Parm, OutParm, IsPlainOldData)
+// bool                           Rise                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct UObject_FTransform      buryMeshTransform              (Parm, OutParm, IsPlainOldData)
 
-void APhoenix_Character_BP_C::Calculate_BuryMeshTransform(bool rise, struct FTransform* buryMeshTransform)
+void APhoenix_Character_BP_C::STATIC_Calculate_BuryMeshTransform(bool Rise, struct UObject_FTransform* buryMeshTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Calculate BuryMeshTransform");
 
 	APhoenix_Character_BP_C_Calculate_BuryMeshTransform_Params params;
-	params.rise = rise;
+	params.Rise = Rise;
 
 	auto flags = fn->FunctionFlags;
 
@@ -758,17 +757,17 @@ void APhoenix_Character_BP_C::ReceiveBeginPlay()
 }
 
 
-// Function Phoenix_Character_BP.Phoenix_Character_BP_C.rise
+// Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::rise(bool fast)
+void APhoenix_Character_BP_C::Rise(bool Fast)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.rise");
+	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise");
 
-	APhoenix_Character_BP_C_rise_Params params;
-	params.fast = fast;
+	APhoenix_Character_BP_C_Rise_Params params;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -798,14 +797,14 @@ void APhoenix_Character_BP_C::OnRise()
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.DissolveMound
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::DissolveMound(bool fast)
+void APhoenix_Character_BP_C::DissolveMound(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.DissolveMound");
 
 	APhoenix_Character_BP_C_DissolveMound_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -818,14 +817,14 @@ void APhoenix_Character_BP_C::DissolveMound(bool fast)
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.FakeDie
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::FakeDie(bool fast)
+void APhoenix_Character_BP_C::FakeDie(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.FakeDie");
 
 	APhoenix_Character_BP_C_FakeDie_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -855,14 +854,14 @@ void APhoenix_Character_BP_C::OnFakeDie()
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_AshFireParticles
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::Die_AshFireParticles(bool fast)
+void APhoenix_Character_BP_C::Die_AshFireParticles(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_AshFireParticles");
 
 	APhoenix_Character_BP_C_Die_AshFireParticles_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -929,14 +928,14 @@ void APhoenix_Character_BP_C::BPUnstasis()
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnPhoenixRise_Multicast
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::OnPhoenixRise_Multicast(bool fast)
+void APhoenix_Character_BP_C::OnPhoenixRise_Multicast(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnPhoenixRise_Multicast");
 
 	APhoenix_Character_BP_C_OnPhoenixRise_Multicast_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -949,14 +948,14 @@ void APhoenix_Character_BP_C::OnPhoenixRise_Multicast(bool fast)
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnPhoenixFakeDies_Multicast
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::OnPhoenixFakeDies_Multicast(bool fast)
+void APhoenix_Character_BP_C::OnPhoenixFakeDies_Multicast(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.OnPhoenixFakeDies_Multicast");
 
 	APhoenix_Character_BP_C_OnPhoenixFakeDies_Multicast_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1021,17 +1020,17 @@ void APhoenix_Character_BP_C::FakeDieFailsafe()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void APhoenix_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	APhoenix_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 
@@ -1046,14 +1045,14 @@ void APhoenix_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custo
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_AshFireParticles
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::Rise_AshFireParticles(bool fast)
+void APhoenix_Character_BP_C::Rise_AshFireParticles(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_AshFireParticles");
 
 	APhoenix_Character_BP_C_Rise_AshFireParticles_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1066,14 +1065,14 @@ void APhoenix_Character_BP_C::Rise_AshFireParticles(bool fast)
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.UndissolveMound
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::UndissolveMound(bool fast)
+void APhoenix_Character_BP_C::UndissolveMound(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.UndissolveMound");
 
 	APhoenix_Character_BP_C_UndissolveMound_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1086,14 +1085,14 @@ void APhoenix_Character_BP_C::UndissolveMound(bool fast)
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_AllEffects
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::Rise_AllEffects(bool fast)
+void APhoenix_Character_BP_C::Rise_AllEffects(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_AllEffects");
 
 	APhoenix_Character_BP_C_Rise_AllEffects_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1106,14 +1105,14 @@ void APhoenix_Character_BP_C::Rise_AllEffects(bool fast)
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_AllEffects
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::Die_AllEffects(bool fast)
+void APhoenix_Character_BP_C::Die_AllEffects(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_AllEffects");
 
 	APhoenix_Character_BP_C_Die_AllEffects_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1180,14 +1179,14 @@ void APhoenix_Character_BP_C::StartSuperCharge()
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_BodyFireParticles
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::Rise_BodyFireParticles(bool fast)
+void APhoenix_Character_BP_C::Rise_BodyFireParticles(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise_BodyFireParticles");
 
 	APhoenix_Character_BP_C_Rise_BodyFireParticles_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1200,14 +1199,14 @@ void APhoenix_Character_BP_C::Rise_BodyFireParticles(bool fast)
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_BodyFireParticles
 // ()
 // Parameters:
-// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::Die_BodyFireParticles(bool fast)
+void APhoenix_Character_BP_C::Die_BodyFireParticles(bool Fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Die_BodyFireParticles");
 
 	APhoenix_Character_BP_C_Die_BodyFireParticles_Params params;
-	params.fast = fast;
+	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;
 

@@ -145,7 +145,7 @@ struct ABigfoot_Character_BP_C_On_Throw_Pressed_Params
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsThrowing
 struct ABigfoot_Character_BP_C_IsThrowing_Params
 {
-	bool                                               retValue;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               RetValue;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.GetLaunchDirection
@@ -278,28 +278,28 @@ struct ABigfoot_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_140
-struct ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_140_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_202
+struct ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_202_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_139
-struct ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_139_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_201
+struct ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_201_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_138
-struct ABigfoot_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_138_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_200
+struct ABigfoot_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_200_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_137
-struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_137_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_199
+struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_199_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_136
-struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_136_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_198
+struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_198_Params
 {
 };
 
@@ -325,7 +325,7 @@ struct ABigfoot_Character_BP_C_Server_TraceTargetDir_Params
 {
 	struct FVector                                     AimLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               throwInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ThrowInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.Multi_TraceTargetDir
@@ -374,7 +374,7 @@ struct ABigfoot_Character_BP_C_DelayedClearThrowing_Params
 struct ABigfoot_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

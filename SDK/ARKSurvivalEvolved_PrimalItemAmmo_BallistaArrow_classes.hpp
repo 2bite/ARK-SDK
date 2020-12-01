@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemAmmo_BallistaArrow.PrimalItemAmmo_BallistaArrow_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemAmmo_BallistaArrow_C : public UPrimalItemAmmo_Base_C
 {
 public:

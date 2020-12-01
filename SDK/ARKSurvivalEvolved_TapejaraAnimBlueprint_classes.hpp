@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass TapejaraAnimBlueprint.TapejaraAnimBlueprint_C
-// 0x0000 (0x18EF - 0x18EF)
+// 0x0000 (0x1BC8 - 0x1BC8)
 class UTapejaraAnimBlueprint_C : public UDinoBlueprintBase_RootTransform_FlyStrafing_C
 {
 public:

@@ -30,7 +30,7 @@ void ABuff_DKaijuLightningNoTarget_C::OnRep_guy()
 
 
 // Function Buff_DKaijuLightningNoTarget.Buff_DKaijuLightningNoTarget_C.BPDeactivated
-// (NetReliable, NetRequest, Event, NetResponse, Protected, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetRequest, Native, Event, NetMulticast, Public, Private, Delegate, DLLImport, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -42,6 +42,7 @@ void ABuff_DKaijuLightningNoTarget_C::BPDeactivated(class AActor** ForInstigator
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

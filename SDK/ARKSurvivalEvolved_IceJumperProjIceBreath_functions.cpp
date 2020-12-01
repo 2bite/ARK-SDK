@@ -83,7 +83,7 @@ void AIceJumperProjIceBreath_C::Get_Normalized_Vector_On_Ice_Jumper_Plane_from_L
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.Get Best Impact Location
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -92,7 +92,7 @@ void AIceJumperProjIceBreath_C::Get_Normalized_Vector_On_Ice_Jumper_Plane_from_L
 // struct FVector                 ImpactNormal                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           FoundNewimpactLocation         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumperProjIceBreath_C::Get_Best_Impact_Location(const struct FVector& Start, const struct FVector& End, class APrimalCharacter* Rider, struct FVector* ImpactLocation, struct FVector* ImpactNormal, bool* FoundNewimpactLocation)
+void AIceJumperProjIceBreath_C::STATIC_Get_Best_Impact_Location(const struct FVector& Start, const struct FVector& End, class APrimalCharacter* Rider, struct FVector* ImpactLocation, struct FVector* ImpactNormal, bool* FoundNewimpactLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.Get Best Impact Location");
 
@@ -163,9 +163,9 @@ void AIceJumperProjIceBreath_C::ValidateTick(bool* Result)
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.UpdateBeamLength
-// (Event, NetResponse, Static, NetMulticast, Public, BlueprintCallable, Const, NetValidate)
+// (Event, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
 
-void AIceJumperProjIceBreath_C::STATIC_UpdateBeamLength()
+void AIceJumperProjIceBreath_C::UpdateBeamLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.UpdateBeamLength");
 
@@ -180,14 +180,14 @@ void AIceJumperProjIceBreath_C::STATIC_UpdateBeamLength()
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.GetBeamStartEnd
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ValidatedStart                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ValidatedEnd                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumperProjIceBreath_C::GetBeamStartEnd(const struct FVector& Start, const struct FVector& End, struct FVector* ValidatedStart, struct FVector* ValidatedEnd)
+void AIceJumperProjIceBreath_C::STATIC_GetBeamStartEnd(const struct FVector& Start, const struct FVector& End, struct FVector* ValidatedStart, struct FVector* ValidatedEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.GetBeamStartEnd");
 
@@ -196,6 +196,7 @@ void AIceJumperProjIceBreath_C::GetBeamStartEnd(const struct FVector& Start, con
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

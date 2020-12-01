@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_TekTrapdoor.PrimalItemStructure_TekTrapdoor_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_TekTrapdoor_C : public UPrimalItemStructure_BaseTrapdoor_C
 {
 public:

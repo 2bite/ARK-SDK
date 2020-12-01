@@ -161,14 +161,14 @@ void UPrimalItemConsumable_EasterDinoCandy_C::BPPostAddBuffToGiveOwnerCharacter(
 
 
 // Function PrimalItemConsumable_EasterDinoCandy.PrimalItemConsumable_EasterDinoCandy_C.BPGetItemDescription
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItemConsumable_EasterDinoCandy_C::BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
+class FString UPrimalItemConsumable_EasterDinoCandy_C::STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_EasterDinoCandy.PrimalItemConsumable_EasterDinoCandy_C.BPGetItemDescription");
 
@@ -178,7 +178,6 @@ class FString UPrimalItemConsumable_EasterDinoCandy_C::BPGetItemDescription(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

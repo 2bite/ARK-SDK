@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructurePlacerBlueprint.StructurePlacerBlueprint_C
-// 0x0008 (0x04F8 - 0x04F0)
+// 0x0008 (0x0508 - 0x0500)
 class AStructurePlacerBlueprint_C : public APrimalStructurePlacer
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TriRoofTek_PlacementEmitter.TriRoofTek_PlacementEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ATriRoofTek_PlacementEmitter_C : public APrimalEmitterSpawnable
 {
 public:

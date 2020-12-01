@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_MegatheriumSaddle.PrimalItemArmor_MegatheriumSaddle_C
-// 0x0000 (0x0998 - 0x0998)
+// 0x0000 (0x09B8 - 0x09B8)
 class UPrimalItemArmor_MegatheriumSaddle_C : public UPrimalItemArmor_SaddleGeneric_C
 {
 public:

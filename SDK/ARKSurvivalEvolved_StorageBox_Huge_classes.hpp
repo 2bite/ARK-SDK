@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StorageBox_Huge.StorageBox_Huge_C
-// 0x0008 (0x0DC0 - 0x0DB8)
+// 0x0008 (0x0DD8 - 0x0DD0)
 class AStorageBox_Huge_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UPrimalInventoryBP_StorageBox_Huge_C*        PrimalInventoryBP_StorageBox_Huge_C1;                     // 0x0DB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_StorageBox_Huge_C*        PrimalInventoryBP_StorageBox_Huge_C1;                     // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

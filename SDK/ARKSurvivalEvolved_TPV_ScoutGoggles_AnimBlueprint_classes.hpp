@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass TPV_ScoutGoggles_AnimBlueprint.TPV_ScoutGoggles_AnimBlueprint_C
-// 0x0000 (0x37A5 - 0x37A5)
+// 0x0000 (0x3A14 - 0x3A14)
 class UTPV_ScoutGoggles_AnimBlueprint_C : public UBaseHumanAnimBP_C
 {
 public:

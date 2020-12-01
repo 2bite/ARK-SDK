@@ -46,11 +46,6 @@ struct USubtitlesUI_C_AddedToViewport_Params
 {
 };
 
-// Function SubtitlesUI.SubtitlesUI_C.RemovedFromViewport
-struct USubtitlesUI_C_RemovedFromViewport_Params
-{
-};
-
 // Function SubtitlesUI.SubtitlesUI_C.ShowNextSubtitle
 struct USubtitlesUI_C_ShowNextSubtitle_Params
 {

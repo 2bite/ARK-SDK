@@ -69,7 +69,7 @@ struct ABuff_Flashbang_PlayerPawn_C_Get_Normalized_Distance_Params
 {
 	class AActor*                                      Actor1;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor2;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.Get NormalizedViewing Angle
@@ -77,7 +77,7 @@ struct ABuff_Flashbang_PlayerPawn_C_Get_NormalizedViewing_Angle_Params
 {
 	struct FVector                                     v1;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     v2;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              retValue;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              RetValue;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.GetNormalizedExposure

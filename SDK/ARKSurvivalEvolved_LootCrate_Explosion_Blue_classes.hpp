@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LootCrate_Explosion_Blue.LootCrate_Explosion_Blue_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ALootCrate_Explosion_Blue_C : public ASupplyCrateExplosion_C
 {
 public:

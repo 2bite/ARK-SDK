@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_Grill.PrimalInventoryBP_Grill_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UPrimalInventoryBP_Grill_C : public UPrimalInventoryBP_BaseFuelBurning_C
 {
 public:

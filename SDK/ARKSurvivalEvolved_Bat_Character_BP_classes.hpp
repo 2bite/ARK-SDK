@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bat_Character_BP.Bat_Character_BP_C
-// 0x000D (0x2095 - 0x2088)
+// 0x000D (0x2115 - 0x2108)
 class ABat_Character_BP_C : public ADino_Character_BP_RepelType_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Bat_C*      DinoCharacterStatus_BP_Bat_C1;                            // 0x2088(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ChanceForMegaRabies;                                      // 0x2090(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bCanTryGiveRabies;                                        // 0x2094(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Bat_C*      DinoCharacterStatus_BP_Bat_C1;                            // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ChanceForMegaRabies;                                      // 0x2110(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bCanTryGiveRabies;                                        // 0x2114(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

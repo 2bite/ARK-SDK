@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Native, NetMulticast, Delegate, NetServer, DLLImport)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -22,7 +22,7 @@ namespace sdk
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float APachyrhino_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -32,6 +32,7 @@ float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attack
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -47,16 +48,15 @@ float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attack
 
 
 // Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.OnDecidedToFlee
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Exec, Event, NetMulticast, Delegate, NetServer, DLLImport)
 
-void APachyrhino_Character_BP_C::STATIC_OnDecidedToFlee()
+void APachyrhino_Character_BP_C::OnDecidedToFlee()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.OnDecidedToFlee");
 
 	APachyrhino_Character_BP_C_OnDecidedToFlee_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,17 +137,17 @@ void APachyrhino_Character_BP_C::UserConstructionScript()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void APachyrhino_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void APachyrhino_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	APachyrhino_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.MeshComp = MeshComp;
+	params.meshComp = meshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

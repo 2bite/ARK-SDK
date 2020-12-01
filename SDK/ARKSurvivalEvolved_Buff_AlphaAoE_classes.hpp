@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_AlphaAoE.Buff_AlphaAoE_C
-// 0x0000 (0x08A0 - 0x08A0)
+// 0x0000 (0x0930 - 0x0930)
 class ABuff_AlphaAoE_C : public ABuff_AlphaBase_C
 {
 public:

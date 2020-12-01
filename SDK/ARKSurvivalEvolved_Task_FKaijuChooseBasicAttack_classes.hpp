@@ -89,7 +89,7 @@ public:
 
 
 	void CheckIfTargetIsCloseToFoot(bool* FoundFootAttack, bool* RightFoot);
-	void MaybeFootstomp(bool* _return);
+	void MaybeFootstomp(bool* Return);
 	void TargetIsFlying(bool* IsFlying);
 	void CanUseFootstompBoth(bool* CanAttack);
 	void ReceiveExecute(class AActor** OwnerActor);

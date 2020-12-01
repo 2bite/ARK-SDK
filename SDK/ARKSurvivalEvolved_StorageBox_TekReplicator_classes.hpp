@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StorageBox_TekReplicator.StorageBox_TekReplicator_C
-// 0x0020 (0x0DD8 - 0x0DB8)
+// 0x0020 (0x0DF0 - 0x0DD0)
 class AStorageBox_TekReplicator_C : public ABaseFuelBurner_GasOnly_C
 {
 public:
-	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0DB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0DC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPrimalInventoryBP_TekReplicator_C*          PrimalInventoryBP_TekReplicator_C1;                       // 0x0DC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	double                                             LastCraftingNotificationTime;                             // 0x0DD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_TekReplicator_C*          PrimalInventoryBP_TekReplicator_C1;                       // 0x0DE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	double                                             LastCraftingNotificationTime;                             // 0x0DE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

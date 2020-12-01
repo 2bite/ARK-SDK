@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cage_Base.Cage_Base_C
-// 0x0010 (0x0B28 - 0x0B18)
+// 0x0010 (0x0B40 - 0x0B30)
 class ACage_Base_C : public APrimalStructureDoor
 {
 public:
-	class UStaticMeshComponent*                        ExtraMesh;                                                // 0x0B18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0B20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        ExtraMesh;                                                // 0x0B30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

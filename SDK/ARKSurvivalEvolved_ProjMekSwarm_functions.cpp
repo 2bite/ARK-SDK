@@ -86,14 +86,14 @@ void AProjMekSwarm_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function ProjMekSwarm.ProjMekSwarm_C.BPGetBoidSpawnLocationAndVelocity
-// (Event, NetResponse, Static, Public, Private, Protected, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // int*                           BoidIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBoid                   BoidData                       (Parm, OutParm, ReferenceParm)
 // struct FVector                 SpawnLocation                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 SpawnVelocity                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjMekSwarm_C::STATIC_BPGetBoidSpawnLocationAndVelocity(int* BoidIndex, struct FBoid* BoidData, struct FVector* SpawnLocation, struct FVector* SpawnVelocity)
+void AProjMekSwarm_C::BPGetBoidSpawnLocationAndVelocity(int* BoidIndex, struct FBoid* BoidData, struct FVector* SpawnLocation, struct FVector* SpawnVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjMekSwarm.ProjMekSwarm_C.BPGetBoidSpawnLocationAndVelocity");
 

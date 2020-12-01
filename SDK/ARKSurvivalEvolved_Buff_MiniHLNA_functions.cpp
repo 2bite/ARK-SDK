@@ -12,6 +12,23 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Buff_MiniHLNA.Buff_MiniHLNA_C.Clear Async Loaded Audio
+// ()
+
+void ABuff_MiniHLNA_C::Clear_Async_Loaded_Audio()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_MiniHLNA.Buff_MiniHLNA_C.Clear Async Loaded Audio");
+
+	ABuff_MiniHLNA_C_Clear_Async_Loaded_Audio_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Buff_MiniHLNA.Buff_MiniHLNA_C.VerifySeasonPassFn
 // ()
 
@@ -152,16 +169,16 @@ void ABuff_MiniHLNA_C::OnUnequip()
 // ()
 // Parameters:
 // int                            Max                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Exclude                        (Parm, ZeroConstructor, IsPlainOldData)
+// int                            exclude                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MiniHLNA_C::Get_Random_UniqueInt(int Max, int Exclude, int* Result)
+void ABuff_MiniHLNA_C::Get_Random_UniqueInt(int Max, int exclude, int* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MiniHLNA.Buff_MiniHLNA_C.Get Random UniqueInt");
 
 	ABuff_MiniHLNA_C_Get_Random_UniqueInt_Params params;
 	params.Max = Max;
-	params.Exclude = Exclude;
+	params.exclude = exclude;
 
 	auto flags = fn->FunctionFlags;
 
@@ -192,7 +209,7 @@ void ABuff_MiniHLNA_C::ReceiveBeginPlay()
 
 
 // Function Buff_MiniHLNA.Buff_MiniHLNA_C.BuffPostAdjustDamage
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintEvent)
+// ()
 // Parameters:
 // float*                         Damage                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              HitInfo                        (Parm, OutParm, ReferenceParm)
@@ -200,7 +217,7 @@ void ABuff_MiniHLNA_C::ReceiveBeginPlay()
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass**                 TheDamgeType                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MiniHLNA_C::STATIC_BuffPostAdjustDamage(float* Damage, class AController** EventInstigator, class AActor** DamageCauser, class UClass** TheDamgeType, struct FHitResult* HitInfo)
+void ABuff_MiniHLNA_C::BuffPostAdjustDamage(float* Damage, class AController** EventInstigator, class AActor** DamageCauser, class UClass** TheDamgeType, struct FHitResult* HitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MiniHLNA.Buff_MiniHLNA_C.BuffPostAdjustDamage");
 
@@ -211,7 +228,6 @@ void ABuff_MiniHLNA_C::STATIC_BuffPostAdjustDamage(float* Damage, class AControl
 	params.TheDamgeType = TheDamgeType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -267,6 +283,67 @@ void ABuff_MiniHLNA_C::VerifySeasonPass()
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MiniHLNA.Buff_MiniHLNA_C.VerifySeasonPass");
 
 	ABuff_MiniHLNA_C_VerifySeasonPass_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_MiniHLNA.Buff_MiniHLNA_C.Simple Load Async Sound Cue
+// ()
+// Parameters:
+// TArray<struct FLocalizedSoundCueEntry> Localized                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void ABuff_MiniHLNA_C::Simple_Load_Async_Sound_Cue(TArray<struct FLocalizedSoundCueEntry>* Localized)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_MiniHLNA.Buff_MiniHLNA_C.Simple Load Async Sound Cue");
+
+	ABuff_MiniHLNA_C_Simple_Load_Async_Sound_Cue_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Localized != nullptr)
+		*Localized = params.Localized;
+}
+
+
+// Function Buff_MiniHLNA.Buff_MiniHLNA_C.AsyncAssetLoadedDelegate__ExplorerNoteAudio
+// ()
+// Parameters:
+// class FString                  AssetPath                      (Parm, ZeroConstructor)
+// class UObject*                 LoadedAsset                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_MiniHLNA_C::AsyncAssetLoadedDelegate__ExplorerNoteAudio(const class FString& AssetPath, class UObject* LoadedAsset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_MiniHLNA.Buff_MiniHLNA_C.AsyncAssetLoadedDelegate__ExplorerNoteAudio");
+
+	ABuff_MiniHLNA_C_AsyncAssetLoadedDelegate__ExplorerNoteAudio_Params params;
+	params.AssetPath = AssetPath;
+	params.LoadedAsset = LoadedAsset;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_MiniHLNA.Buff_MiniHLNA_C.play hurt sfx
+// ()
+
+void ABuff_MiniHLNA_C::play_hurt_sfx()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_MiniHLNA.Buff_MiniHLNA_C.play hurt sfx");
+
+	ABuff_MiniHLNA_C_play_hurt_sfx_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureTurretBaseBP.StructureTurretBaseBP_C
-// 0x0021 (0x0EE1 - 0x0EC0)
+// 0x0021 (0x0EF9 - 0x0ED8)
 class AStructureTurretBaseBP_C : public APrimalStructureTurret
 {
 public:
-	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0EC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0EC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPrimalInventoryBP_Turret_C*                 PrimalInventoryBP_Turret_C1;                              // 0x0ED0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0ED8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bTooManyInRangeInactive;                                  // 0x0EE0(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0ED8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0EE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_Turret_C*                 PrimalInventoryBP_Turret_C1;                              // 0x0EE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0EF0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bTooManyInRangeInactive;                                  // 0x0EF8(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

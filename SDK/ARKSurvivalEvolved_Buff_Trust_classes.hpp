@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Trust.Buff_Trust_C
-// 0x0000 (0x0DF0 - 0x0DF0)
+// 0x0000 (0x0E80 - 0x0E80)
 class ABuff_Trust_C : public ABuff_FearCourage_C
 {
 public:

@@ -88,7 +88,7 @@ public:
 	float                                              InflationPercent;                                         // 0x1748(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               UseAdditiveInflate;                                       // 0x174C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x174D(0x0003) MISSED OFFSET
-	struct FTransform                                  RootOffsetTransform;                                      // 0x1750(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct UObject_FTransform                          RootOffsetTransform;                                      // 0x1750(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     RootLocationOffset;                                       // 0x1780(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              DinoGroundSpeedPercent;                                   // 0x178C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               IsMovingBackwards;                                        // 0x1790(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -192,7 +192,7 @@ public:
 	bool                                               CallFunc_IsRunning_ReturnValue;                           // 0x1960(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue3;                         // 0x1961(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData18[0xE];                                       // 0x1962(0x000E) MISSED OFFSET
-	struct FTransform                                  CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x1970(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
+	struct UObject_FTransform                          CallFunc_GetAimOffsetsTransform_RootRotOffsetTransform;   // 0x1970(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_GetAimOffsetsTransform_TheRootYawSpeed;          // 0x19A0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_GetAimOffsetsTransform_RootLocOffset;            // 0x19A4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    CallFunc_GetAimOffsetsTransform_ReturnValue;              // 0x19B0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -274,37 +274,37 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_672();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3378();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_162();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4134();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_671();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3377();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3376();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4133();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4132();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_204();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_203();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3375();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_120();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_GroundBones_192();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3374();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_263();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3373();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_666();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3372();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_670();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_262();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_669();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_261();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_162();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4320();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_665();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3371();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4126();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3370();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4319();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4318();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_198();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_197();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3369();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_114();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_GroundBones_192();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3368();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4122();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_281();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3367();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3366();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_668();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_664();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_280();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_663();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ApplyAdditive_279();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3365();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4312();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3364();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3363();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3362();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_SequencePlayer_4308();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3361();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_BlendListByBool_3360();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_GasBags_AnimBlueprint_AnimGraphNode_ModifyBone_662();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_GasBags_AnimBlueprint(int EntryPoint);
 };

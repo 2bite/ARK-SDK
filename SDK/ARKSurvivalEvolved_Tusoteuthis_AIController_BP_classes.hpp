@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tusoteuthis_AIController_BP.Tusoteuthis_AIController_BP_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ATusoteuthis_AIController_BP_C : public ADino_AIController_BP_C
 {
 public:

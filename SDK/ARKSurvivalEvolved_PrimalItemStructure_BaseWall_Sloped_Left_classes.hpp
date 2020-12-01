@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_BaseWall_Sloped_Left.PrimalItemStructure_BaseWall_Sloped_Left_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_BaseWall_Sloped_Left_C : public UPrimalItemStructure_BaseWall_C
 {
 public:

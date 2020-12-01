@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FenceSupport_Tek.BP_FenceSupport_Tek_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0AC8 - 0x0AC8)
 class ABP_FenceSupport_Tek_C : public ABase_FenceSupport_C
 {
 public:

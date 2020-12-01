@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_RecipeNote_Kibble_Kairuku.PrimalItem_RecipeNote_Kibble_Kairuku_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItem_RecipeNote_Kibble_Kairuku_C : public UPrimalItem_RecipeNote_Base_C
 {
 public:

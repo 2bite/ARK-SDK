@@ -42,7 +42,7 @@ struct ABuff_ChargeEmitterStructure_PlantSpeciesZ_Base_C_ChargeVariableEvent_Par
 	bool*                                              bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double*                                            dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int*                                               ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeEmitterStructure_PlantSpeciesZ_Base.Buff_ChargeEmitterStructure_PlantSpeciesZ_Base_C.GetLightTargetIntensity

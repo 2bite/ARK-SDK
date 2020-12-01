@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjDart_Tranq.ProjDart_Tranq_C
-// 0x0000 (0x0678 - 0x0678)
+// 0x0000 (0x0688 - 0x0688)
 class AProjDart_Tranq_C : public AProjArrow_C
 {
 public:

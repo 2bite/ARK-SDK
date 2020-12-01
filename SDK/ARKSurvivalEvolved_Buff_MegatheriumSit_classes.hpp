@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_MegatheriumSit.Buff_MegatheriumSit_C
-// 0x0000 (0x08A8 - 0x08A8)
+// 0x0000 (0x0938 - 0x0938)
 class ABuff_MegatheriumSit_C : public ABuff_ChalicoSit_C
 {
 public:

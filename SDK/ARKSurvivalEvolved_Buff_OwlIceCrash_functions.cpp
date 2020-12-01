@@ -12,6 +12,31 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPCustomAllowAddBuff
+// ()
+// Parameters:
+// class APrimalCharacter**       forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_OwlIceCrash_C::BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPCustomAllowAddBuff");
+
+	ABuff_OwlIceCrash_C_BPCustomAllowAddBuff_Params params;
+	params.forCharacter = forCharacter;
+	params.DamageCauser = DamageCauser;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BuffTickClient
 // ()
 // Parameters:
@@ -124,11 +149,11 @@ void ABuff_OwlIceCrash_C::SetupIceCrash(class APrimalCharacter* Character, bool 
 
 
 // Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Private, Protected, BlueprintCallable, Const, NetValidate)
+// (Exec, Event, Static, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_OwlIceCrash_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_OwlIceCrash_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPSetupForInstigator");
 
@@ -136,7 +161,6 @@ void ABuff_OwlIceCrash_C::BPSetupForInstigator(class AActor** ForInstigator)
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,18 +173,18 @@ void ABuff_OwlIceCrash_C::BPSetupForInstigator(class AActor** ForInstigator)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PreviousCustomMode             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_OwlIceCrash_C::BPOnInstigatorMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode, TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* newCustomMode)
+void ABuff_OwlIceCrash_C::BPOnInstigatorMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPOnInstigatorMovementModeChangedNotify");
 
 	ABuff_OwlIceCrash_C_BPOnInstigatorMovementModeChangedNotify_Params params;
 	params.PrevMovementMode = PrevMovementMode;
 	params.PreviousCustomMode = PreviousCustomMode;
-	params.newMovementMode = newMovementMode;
-	params.newCustomMode = newCustomMode;
+	params.NewMovementMode = NewMovementMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 

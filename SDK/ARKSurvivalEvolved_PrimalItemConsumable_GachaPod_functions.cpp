@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.ShowHUDNotification
-// (NetRequest, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (Net, NetReliable, NetRequest, Native, Static, Protected, Delegate, NetServer, HasOutParms)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  Resource                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -29,6 +29,7 @@ void UPrimalItemConsumable_GachaPod_C::STATIC_ShowHUDNotification(class UPrimalI
 	params.Quanity = Quanity;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,11 +38,11 @@ void UPrimalItemConsumable_GachaPod_C::STATIC_ShowHUDNotification(class UPrimalI
 
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BPPostInitializeItem
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms)
 // Parameters:
 // class UWorld**                 OptionalInitWorld              (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemConsumable_GachaPod_C::STATIC_BPPostInitializeItem(class UWorld** OptionalInitWorld)
+void UPrimalItemConsumable_GachaPod_C::BPPostInitializeItem(class UWorld** OptionalInitWorld)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BPPostInitializeItem");
 
@@ -49,6 +50,7 @@ void UPrimalItemConsumable_GachaPod_C::STATIC_BPPostInitializeItem(class UWorld*
 	params.OptionalInitWorld = OptionalInitWorld;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,16 +59,15 @@ void UPrimalItemConsumable_GachaPod_C::STATIC_BPPostInitializeItem(class UWorld*
 
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BlueprintUsed
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms)
 
-void UPrimalItemConsumable_GachaPod_C::STATIC_BlueprintUsed()
+void UPrimalItemConsumable_GachaPod_C::BlueprintUsed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BlueprintUsed");
 
 	UPrimalItemConsumable_GachaPod_C_BlueprintUsed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

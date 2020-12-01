@@ -48,11 +48,11 @@ struct FVector ABuff_MekBackpack_SiegeCannon_C::BPAdjustImpulseFromDamage(struct
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BuffTickServer
-// (Native, Static, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, Const, NetValidate)
+// (NetRequest, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MekBackpack_SiegeCannon_C::STATIC_BuffTickServer(float* DeltaTime)
+void ABuff_MekBackpack_SiegeCannon_C::BuffTickServer(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BuffTickServer");
 
@@ -60,7 +60,6 @@ void ABuff_MekBackpack_SiegeCannon_C::STATIC_BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,17 +70,17 @@ void ABuff_MekBackpack_SiegeCannon_C::STATIC_BuffTickServer(float* DeltaTime)
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BPPreventInstigatorMovementMode
 // ()
 // Parameters:
-// TEnumAsByte<EMovementMode>*    newMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char*                 newCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_MekBackpack_SiegeCannon_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* newMovementMode, unsigned char* newCustomMode)
+bool ABuff_MekBackpack_SiegeCannon_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BPPreventInstigatorMovementMode");
 
 	ABuff_MekBackpack_SiegeCannon_C_BPPreventInstigatorMovementMode_Params params;
-	params.newMovementMode = newMovementMode;
-	params.newCustomMode = newCustomMode;
+	params.NewMovementMode = NewMovementMode;
+	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
 
@@ -193,18 +192,17 @@ void ABuff_MekBackpack_SiegeCannon_C::BPInstigatorPossessed(class AController** 
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.GetBackpackSaveData
-// (Exec, Native, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
-void ABuff_MekBackpack_SiegeCannon_C::STATIC_GetBackpackSaveData(struct FMekBackpackData* Data)
+void ABuff_MekBackpack_SiegeCannon_C::GetBackpackSaveData(struct FMekBackpackData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.GetBackpackSaveData");
 
 	ABuff_MekBackpack_SiegeCannon_C_GetBackpackSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -297,15 +295,16 @@ void ABuff_MekBackpack_SiegeCannon_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.OnRep_SiegeCannonMalfunctioned
-// (NetRequest, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, Const, NetValidate)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 
-void ABuff_MekBackpack_SiegeCannon_C::OnRep_SiegeCannonMalfunctioned()
+void ABuff_MekBackpack_SiegeCannon_C::STATIC_OnRep_SiegeCannonMalfunctioned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.OnRep_SiegeCannonMalfunctioned");
 
 	ABuff_MekBackpack_SiegeCannon_C_OnRep_SiegeCannonMalfunctioned_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -380,9 +379,9 @@ void ABuff_MekBackpack_SiegeCannon_C::BPGetHUDElements(class APlayerController**
 // ()
 // Parameters:
 // float*                         DefaultSpeed                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewSpeed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          newSpeed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MekBackpack_SiegeCannon_C::OverrideTurnInPlaceSpeed(float* DefaultSpeed, float* NewSpeed)
+void ABuff_MekBackpack_SiegeCannon_C::OverrideTurnInPlaceSpeed(float* DefaultSpeed, float* newSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.OverrideTurnInPlaceSpeed");
 
@@ -395,8 +394,8 @@ void ABuff_MekBackpack_SiegeCannon_C::OverrideTurnInPlaceSpeed(float* DefaultSpe
 
 	fn->FunctionFlags = flags;
 
-	if (NewSpeed != nullptr)
-		*NewSpeed = params.NewSpeed;
+	if (newSpeed != nullptr)
+		*newSpeed = params.newSpeed;
 }
 
 
@@ -553,14 +552,14 @@ void ABuff_MekBackpack_SiegeCannon_C::AllowMekPistol(bool* Allowed)
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.GetLaunchParams
-// (NetReliable, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, Const, NetValidate)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // class AMek_Character_BP_C*     Mek                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Direction                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Speed                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MekBackpack_SiegeCannon_C::GetLaunchParams(class AMek_Character_BP_C* Mek, struct FVector* Location, struct FVector* Direction, float* Speed)
+void ABuff_MekBackpack_SiegeCannon_C::STATIC_GetLaunchParams(class AMek_Character_BP_C* Mek, struct FVector* Location, struct FVector* Direction, float* Speed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.GetLaunchParams");
 
@@ -568,7 +567,6 @@ void ABuff_MekBackpack_SiegeCannon_C::GetLaunchParams(class AMek_Character_BP_C*
 	params.Mek = Mek;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -584,11 +582,11 @@ void ABuff_MekBackpack_SiegeCannon_C::GetLaunchParams(class AMek_Character_BP_C*
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BuffTickClient
-// (Net, NetReliable, Exec, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (Net, Native, NetMulticast, Public, Delegate, HasOutParms, DLLImport, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MekBackpack_SiegeCannon_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_MekBackpack_SiegeCannon_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BuffTickClient");
 
@@ -596,6 +594,7 @@ void ABuff_MekBackpack_SiegeCannon_C::STATIC_BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

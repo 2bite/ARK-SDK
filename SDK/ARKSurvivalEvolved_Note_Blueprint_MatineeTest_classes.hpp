@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Note_Blueprint_MatineeTest.Note_Blueprint_MatineeTest_C
-// 0x0000 (0x0450 - 0x0450)
+// 0x0000 (0x0460 - 0x0460)
 class ANote_Blueprint_MatineeTest_C : public ANote
 {
 public:

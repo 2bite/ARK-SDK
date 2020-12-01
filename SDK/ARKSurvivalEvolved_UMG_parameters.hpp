@@ -970,6 +970,24 @@ struct UCanvasPanelSlot_SetAlignment_Params
 	struct FVector2D                                   InAlignment;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function UMG.CanvasPanelSlot.GetSize
+struct UCanvasPanelSlot_GetSize_Params
+{
+	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.CanvasPanelSlot.GetPosition
+struct UCanvasPanelSlot_GetPosition_Params
+{
+	struct FVector2D                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function UMG.CanvasPanelSlot.GetAnchors
+struct UCanvasPanelSlot_GetAnchors_Params
+{
+	struct FAnchors                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function UMG.GridSlot.SetVerticalAlignment
 struct UGridSlot_SetVerticalAlignment_Params
 {

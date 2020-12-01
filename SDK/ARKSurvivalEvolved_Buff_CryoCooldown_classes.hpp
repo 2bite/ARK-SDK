@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_CryoCooldown.Buff_CryoCooldown_C
-// 0x0004 (0x08A4 - 0x08A0)
+// 0x0004 (0x0934 - 0x0930)
 class ABuff_CryoCooldown_C : public ABuff_Base_C
 {
 public:
-	float                                              TimeLeft;                                                 // 0x08A0(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TimeLeft;                                                 // 0x0930(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,7 +31,7 @@ public:
 	void BPActivated(class AActor** ForInstigator);
 	void UpdateBuffPersistentData();
 	void ReceiveBeginPlay();
-	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void BuffTickServer(float* DeltaTime);
 	void BuffTickClient(float* DeltaTime);
 	void UserConstructionScript();

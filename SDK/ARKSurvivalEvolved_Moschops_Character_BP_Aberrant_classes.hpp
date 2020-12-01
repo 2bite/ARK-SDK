@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Moschops_Character_BP_Aberrant.Moschops_Character_BP_Aberrant_C
-// 0x0000 (0x21BC - 0x21BC)
+// 0x0000 (0x223C - 0x223C)
 class AMoschops_Character_BP_Aberrant_C : public AMoschops_Character_BP_C
 {
 public:

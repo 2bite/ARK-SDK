@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Ramp_Metal.BP_Ramp_Metal_C
-// 0x0000 (0x0AA0 - 0x0AA0)
+// 0x0000 (0x0AB8 - 0x0AB8)
 class ABP_Ramp_Metal_C : public ABase_Ramp_C
 {
 public:

@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoCharacterStatusComponent_BP_CaveCrab.DinoCharacterStatusComponent_BP_CaveCrab_C
-// 0x0001 (0x1089 - 0x1088)
+// 0x0001 (0x1091 - 0x1090)
 class UDinoCharacterStatusComponent_BP_CaveCrab_C : public UDinoCharacterStatusComponent_BP_C
 {
 public:
-	bool                                               AllowTorpidityIncrease;                                   // 0x1088(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               AllowTorpidityIncrease;                                   // 0x1090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

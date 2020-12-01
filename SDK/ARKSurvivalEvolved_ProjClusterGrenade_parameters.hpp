@@ -25,6 +25,12 @@ struct AProjClusterGrenade_C_OnExplode_Params
 	struct FHitResult                                  Result;                                                   // (Parm, OutParm, ReferenceParm)
 };
 
+// Function ProjClusterGrenade.ProjClusterGrenade_C.BPSpawnedFragments
+struct AProjClusterGrenade_C_BPSpawnedFragments_Params
+{
+	TArray<class AShooterProjectile*>                  FragmentArray;                                            // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function ProjClusterGrenade.ProjClusterGrenade_C.ExecuteUbergraph_ProjClusterGrenade
 struct AProjClusterGrenade_C_ExecuteUbergraph_ProjClusterGrenade_Params
 {

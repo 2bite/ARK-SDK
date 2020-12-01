@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapGPS.WeapGPS_C
-// 0x0008 (0x0FE0 - 0x0FD8)
+// 0x0008 (0x1000 - 0x0FF8)
 class AWeapGPS_C : public APrimalWeaponGPS
 {
 public:
-	class UPointLightComponent*                        PointLight1;                                              // 0x0FD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPointLightComponent*                        PointLight1;                                              // 0x0FF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

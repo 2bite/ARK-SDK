@@ -30,16 +30,15 @@ void ASpindles_Character_BP_C::BPTimerNonDedicated()
 
 
 // Function Spindles_Character_BP.Spindles_Character_BP_C.UpdateMiniGunState
-// (NetReliable, Native, NetResponse, NetMulticast, Protected, Delegate, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 
-void ASpindles_Character_BP_C::UpdateMiniGunState()
+void ASpindles_Character_BP_C::STATIC_UpdateMiniGunState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.UpdateMiniGunState");
 
 	ASpindles_Character_BP_C_UpdateMiniGunState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +86,7 @@ void ASpindles_Character_BP_C::GetClampedCameraLocation(struct FVector* OutLoc)
 
 
 // Function Spindles_Character_BP.Spindles_Character_BP_C.BPGetDebugInfoString
-// (NetReliable, NetRequest, Native, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Event, Static, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -98,7 +97,6 @@ class FString ASpindles_Character_BP_C::STATIC_BPGetDebugInfoString()
 	ASpindles_Character_BP_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -152,7 +150,7 @@ bool ASpindles_Character_BP_C::BPHandlePoop()
 
 
 // Function Spindles_Character_BP.Spindles_Character_BP_C.BPOverrideHurtAnim
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Protected, Delegate, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DamageTaken                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
@@ -164,7 +162,7 @@ bool ASpindles_Character_BP_C::BPHandlePoop()
 // struct FVector*                PointDamageHitNormal           (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAnimMontage* ASpindles_Character_BP_C::STATIC_BPOverrideHurtAnim(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, bool* bIsPointDamage, struct FVector* PointDamageLocation, struct FVector* PointDamageHitNormal, struct FDamageEvent* DamageEvent)
+class UAnimMontage* ASpindles_Character_BP_C::BPOverrideHurtAnim(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, bool* bIsPointDamage, struct FVector* PointDamageLocation, struct FVector* PointDamageHitNormal, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.BPOverrideHurtAnim");
 
@@ -178,6 +176,7 @@ class UAnimMontage* ASpindles_Character_BP_C::STATIC_BPOverrideHurtAnim(float* D
 	params.PointDamageHitNormal = PointDamageHitNormal;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,16 +190,15 @@ class UAnimMontage* ASpindles_Character_BP_C::STATIC_BPOverrideHurtAnim(float* D
 
 
 // Function Spindles_Character_BP.Spindles_Character_BP_C.UpdateCachedActivateMinigunModeWeightCheck
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 
-void ASpindles_Character_BP_C::STATIC_UpdateCachedActivateMinigunModeWeightCheck()
+void ASpindles_Character_BP_C::UpdateCachedActivateMinigunModeWeightCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.UpdateCachedActivateMinigunModeWeightCheck");
 
 	ASpindles_Character_BP_C_UpdateCachedActivateMinigunModeWeightCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -814,14 +812,14 @@ void ASpindles_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_166
+// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_150
 // ()
 
-void ASpindles_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_166()
+void ASpindles_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_150()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_166");
+	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_150");
 
-	ASpindles_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_166_Params params;
+	ASpindles_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_150_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -831,14 +829,14 @@ void ASpindles_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_166()
 }
 
 
-// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_165
+// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_149
 // ()
 
-void ASpindles_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_165()
+void ASpindles_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_149()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_165");
+	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_149");
 
-	ASpindles_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_165_Params params;
+	ASpindles_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_149_Params params;
 
 	auto flags = fn->FunctionFlags;
 

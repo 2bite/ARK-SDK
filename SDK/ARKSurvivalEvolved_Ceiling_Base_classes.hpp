@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ceiling_Base.Ceiling_Base_C
-// 0x0010 (0x0AB0 - 0x0AA0)
+// 0x0010 (0x0AC8 - 0x0AB8)
 class ACeiling_Base_C : public AStructureBaseBP_C
 {
 public:
-	TArray<struct FName>                               AllowSnapRotationToStructuresWithTag;                     // 0x0AA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FName>                               AllowSnapRotationToStructuresWithTag;                     // 0x0AB8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

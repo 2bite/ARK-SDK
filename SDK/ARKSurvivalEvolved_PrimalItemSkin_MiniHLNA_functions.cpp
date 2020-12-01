@@ -12,15 +12,32 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.hide skin
+// ()
+
+void UPrimalItemSkin_MiniHLNA_C::hide_skin()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.hide skin");
+
+	UPrimalItemSkin_MiniHLNA_C_hide_skin_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.BPGetItemDescription
-// (Net, NetReliable, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItemSkin_MiniHLNA_C::STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
+class FString UPrimalItemSkin_MiniHLNA_C::BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.BPGetItemDescription");
 
@@ -30,6 +47,7 @@ class FString UPrimalItemSkin_MiniHLNA_C::STATIC_BPGetItemDescription(class FStr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

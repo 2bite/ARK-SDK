@@ -30,7 +30,6 @@ public:
 
 
 	void OnBeginEvent(class UPrimalAIState** InParentState);
-	void OnTickEvent(float* DeltaSeconds);
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void ExecuteUbergraph_DinoAttackStateMelee_Spindles_NormalMode_Spin180(int EntryPoint);
 };

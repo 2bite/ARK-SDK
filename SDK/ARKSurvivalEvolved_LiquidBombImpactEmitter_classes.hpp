@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LiquidBombImpactEmitter.LiquidBombImpactEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ALiquidBombImpactEmitter_C : public APrimalEmitterSpawnable
 {
 public:

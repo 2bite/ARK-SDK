@@ -33,11 +33,11 @@ void ABuff_FlameThrower_OnFire_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_FlameThrower_OnFire.Buff_FlameThrower_OnFire_C.BPSetupForInstigator
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetResponse, MulticastDelegate, Public, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FlameThrower_OnFire_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_FlameThrower_OnFire_C::BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FlameThrower_OnFire.Buff_FlameThrower_OnFire_C.BPSetupForInstigator");
 
@@ -45,7 +45,6 @@ void ABuff_FlameThrower_OnFire_C::STATIC_BPSetupForInstigator(class AActor** For
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

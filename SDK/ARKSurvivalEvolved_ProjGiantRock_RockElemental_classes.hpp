@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjGiantRock_RockElemental.ProjGiantRock_RockElemental_C
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0680 - 0x0680)
 class AProjGiantRock_RockElemental_C : public APrimalProjectileArrow
 {
 public:

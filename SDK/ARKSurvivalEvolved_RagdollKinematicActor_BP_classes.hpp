@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RagdollKinematicActor_BP.RagdollKinematicActor_BP_C
-// 0x0000 (0x0460 - 0x0460)
+// 0x0000 (0x0470 - 0x0470)
 class ARagdollKinematicActor_BP_C : public AStaticMeshActor
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjGrenade_ValentineBear.ProjGrenade_ValentineBear_C
-// 0x0000 (0x06D8 - 0x06D8)
+// 0x0000 (0x06E8 - 0x06E8)
 class AProjGrenade_ValentineBear_C : public AProjGrenade_C
 {
 public:

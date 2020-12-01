@@ -76,7 +76,7 @@ bool AJugbug_Character_BaseBP_C::BlueprintCanAttack(int* AttackIndex, float* Dis
 
 
 // Function Jugbug_Character_BaseBP.Jugbug_Character_BaseBP_C.BPGetMultiUseEntries
-// (Exec, Native, Static, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -90,7 +90,6 @@ TArray<struct FMultiUseEntry> AJugbug_Character_BaseBP_C::STATIC_BPGetMultiUseEn
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

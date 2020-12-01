@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoDropInventoryComponent_BossSpider_Easy.DinoDropInventoryComponent_BossSpider_Easy_C
-// 0x0000 (0x0538 - 0x0538)
+// 0x0000 (0x0570 - 0x0570)
 class UDinoDropInventoryComponent_BossSpider_Easy_C : public UDinoDropInventoryComponent_Carnivore_Small_C
 {
 public:

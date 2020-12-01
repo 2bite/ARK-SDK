@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass GasVeinExplosionEmitter.GasVeinExplosionEmitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AGasVeinExplosionEmitter_C : public APrimalEmitterSpawnable
 {
 public:

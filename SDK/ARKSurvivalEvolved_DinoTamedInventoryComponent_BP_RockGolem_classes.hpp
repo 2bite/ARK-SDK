@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_BP_RockGolem.DinoTamedInventoryComponent_BP_RockGolem_C
-// 0x0010 (0x0548 - 0x0538)
+// 0x0010 (0x0580 - 0x0570)
 class UDinoTamedInventoryComponent_BP_RockGolem_C : public UDinoTamedInventoryComponent_BP_Base_C
 {
 public:
-	TArray<class UClass*>                              ForceAllowUseItemClasses;                                 // 0x0538(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ForceAllowUseItemClasses;                                 // 0x0570(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

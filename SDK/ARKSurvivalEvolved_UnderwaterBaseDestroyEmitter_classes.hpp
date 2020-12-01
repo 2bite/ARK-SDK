@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass UnderwaterBaseDestroyEmitter.UnderwaterBaseDestroyEmitter_C
-// 0x0008 (0x0508 - 0x0500)
+// 0x0008 (0x0518 - 0x0510)
 class AUnderwaterBaseDestroyEmitter_C : public APrimalEmitterSpawnable
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

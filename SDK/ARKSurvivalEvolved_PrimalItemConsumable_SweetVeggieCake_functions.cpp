@@ -36,9 +36,9 @@ bool UPrimalItemConsumable_SweetVeggieCake_C::BPCanUse(bool* bIgnoreCooldown)
 
 
 // Function PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C.BPPreUseItem
-// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, Const, NetValidate)
 
-void UPrimalItemConsumable_SweetVeggieCake_C::STATIC_BPPreUseItem()
+void UPrimalItemConsumable_SweetVeggieCake_C::BPPreUseItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C.BPPreUseItem");
 

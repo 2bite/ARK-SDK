@@ -12,6 +12,23 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExternalVisorToggle
+// ()
+
+void ABuff_TekArmor_Helmet_C::ExternalVisorToggle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExternalVisorToggle");
+
+	ABuff_TekArmor_Helmet_C_ExternalVisorToggle_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPNotifyOtherBuffActivated
 // ()
 // Parameters:
@@ -200,17 +217,14 @@ void ABuff_TekArmor_Helmet_C::BPDeactivated(class AActor** ForInstigator)
 }
 
 
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPActivated
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPActivated_1
 // ()
-// Parameters:
-// class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Helmet_C::BPActivated(class AActor** ForInstigator)
+void ABuff_TekArmor_Helmet_C::BPActivated_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPActivated");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPActivated_1");
 
-	ABuff_TekArmor_Helmet_C_BPActivated_Params params;
-	params.ForInstigator = ForInstigator;
+	ABuff_TekArmor_Helmet_C_BPActivated_1_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -305,14 +319,14 @@ void ABuff_TekArmor_Helmet_C::FadeOut__UpdateFunc()
 }
 
 
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_90
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_81
 // ()
 
-void ABuff_TekArmor_Helmet_C::InpActEvt_Use_K2Node_InputActionEvent_90()
+void ABuff_TekArmor_Helmet_C::InpActEvt_Use_K2Node_InputActionEvent_81()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_90");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_81");
 
-	ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_90_Params params;
+	ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_81_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -322,14 +336,14 @@ void ABuff_TekArmor_Helmet_C::InpActEvt_Use_K2Node_InputActionEvent_90()
 }
 
 
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_89
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_80
 // ()
 
-void ABuff_TekArmor_Helmet_C::InpActEvt_Use_K2Node_InputActionEvent_89()
+void ABuff_TekArmor_Helmet_C::InpActEvt_Use_K2Node_InputActionEvent_80()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_89");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_80");
 
-	ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_89_Params params;
+	ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_80_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -620,6 +634,23 @@ void ABuff_TekArmor_Helmet_C::RemovePostProcessBuff(int index)
 
 	ABuff_TekArmor_Helmet_C_RemovePostProcessBuff_Params params;
 	params.index = index;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExternalVisorOnOffToggle
+// ()
+
+void ABuff_TekArmor_Helmet_C::ExternalVisorOnOffToggle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExternalVisorOnOffToggle");
+
+	ABuff_TekArmor_Helmet_C_ExternalVisorOnOffToggle_Params params;
 
 	auto flags = fn->FunctionFlags;
 

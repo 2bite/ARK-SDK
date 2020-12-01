@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoCharacterStatusComponent_BP_MoleRat.DinoCharacterStatusComponent_BP_MoleRat_C
-// 0x0000 (0x1088 - 0x1088)
+// 0x0000 (0x1090 - 0x1090)
 class UDinoCharacterStatusComponent_BP_MoleRat_C : public UDinoCharacterStatusComponent_BP_C
 {
 public:

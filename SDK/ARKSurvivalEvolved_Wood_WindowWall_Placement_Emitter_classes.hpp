@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wood_WindowWall_Placement_Emitter.Wood_WindowWall_Placement_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AWood_WindowWall_Placement_Emitter_C : public APrimalEmitterSpawnable
 {
 public:

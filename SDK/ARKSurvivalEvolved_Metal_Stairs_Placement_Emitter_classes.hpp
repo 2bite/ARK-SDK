@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Metal_Stairs_Placement_Emitter.Metal_Stairs_Placement_Emitter_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class AMetal_Stairs_Placement_Emitter_C : public APrimalEmitterSpawnable
 {
 public:

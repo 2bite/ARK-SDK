@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BP_OverseerText_EX.BP_OverseerText_EX_C.ConstructionProcess
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Protected, NetServer, DLLImport, Const, NetValidate)
 
-void ABP_OverseerText_EX_C::STATIC_ConstructionProcess()
+void ABP_OverseerText_EX_C::ConstructionProcess()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OverseerText_EX.BP_OverseerText_EX_C.ConstructionProcess");
 

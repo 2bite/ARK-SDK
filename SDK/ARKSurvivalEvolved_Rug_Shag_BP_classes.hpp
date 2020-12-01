@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rug_Shag_BP.Rug_Shag_BP_C
-// 0x0000 (0x0AA8 - 0x0AA8)
+// 0x0000 (0x0AC0 - 0x0AC0)
 class ARug_Shag_BP_C : public ARug_Base_BP_C
 {
 public:

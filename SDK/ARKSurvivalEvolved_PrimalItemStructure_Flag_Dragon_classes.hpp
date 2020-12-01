@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_Flag_Dragon.PrimalItemStructure_Flag_Dragon_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09B0 - 0x09B0)
 class UPrimalItemStructure_Flag_Dragon_C : public UPrimalItemStructureGeneric_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bigfoot_AIController_BP_Aggressive.Bigfoot_AIController_BP_Aggressive_C
-// 0x0000 (0x08E9 - 0x08E9)
+// 0x0000 (0x0911 - 0x0911)
 class ABigfoot_AIController_BP_Aggressive_C : public ABigfoot_AIController_BP_C
 {
 public:
