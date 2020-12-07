@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ void UPrimalItemResource_Element_C::BPServerHandleItemNetExecCommand(class AShoo
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.FindShapeshifter
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    Shapeshifter                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           RetMounted                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -51,6 +51,7 @@ void UPrimalItemResource_Element_C::FindShapeshifter(class APrimalDinoCharacter*
 	UPrimalItemResource_Element_C_FindShapeshifter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,7 +65,7 @@ void UPrimalItemResource_Element_C::FindShapeshifter(class APrimalDinoCharacter*
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPPreUseItem
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 
 void UPrimalItemResource_Element_C::STATIC_BPPreUseItem()
 {
@@ -73,7 +74,6 @@ void UPrimalItemResource_Element_C::STATIC_BPPreUseItem()
 	UPrimalItemResource_Element_C_BPPreUseItem_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +82,7 @@ void UPrimalItemResource_Element_C::STATIC_BPPreUseItem()
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPCanUse
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

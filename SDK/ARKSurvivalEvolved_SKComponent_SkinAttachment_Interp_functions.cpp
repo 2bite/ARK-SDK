@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,12 @@ void USKComponent_SkinAttachment_Interp_C::Clear_Async_Loaded_Audio()
 
 
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.PrintDMICAnimTextureParams
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
+// (Net, NetRequest, Exec, Static, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UMaterialInstanceDynamic* DMIC                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            MatIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void USKComponent_SkinAttachment_Interp_C::PrintDMICAnimTextureParams(class UMaterialInstanceDynamic* DMIC, int MatIndex)
+void USKComponent_SkinAttachment_Interp_C::STATIC_PrintDMICAnimTextureParams(class UMaterialInstanceDynamic* DMIC, int MatIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.PrintDMICAnimTextureParams");
 
@@ -44,7 +44,6 @@ void USKComponent_SkinAttachment_Interp_C::PrintDMICAnimTextureParams(class UMat
 	params.MatIndex = MatIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,16 +96,15 @@ void USKComponent_SkinAttachment_Interp_C::IsPlayingAnimTexture(bool* Result)
 
 
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.UpdateAnimTextureStatus
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void USKComponent_SkinAttachment_Interp_C::UpdateAnimTextureStatus()
+void USKComponent_SkinAttachment_Interp_C::STATIC_UpdateAnimTextureStatus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.UpdateAnimTextureStatus");
 
 	USKComponent_SkinAttachment_Interp_C_UpdateAnimTextureStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,15 +130,16 @@ void USKComponent_SkinAttachment_Interp_C::BPOnComponentDestroyed()
 
 
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.PlayLoaded Explorer Note
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, Event, Static, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void USKComponent_SkinAttachment_Interp_C::PlayLoaded_Explorer_Note()
+void USKComponent_SkinAttachment_Interp_C::STATIC_PlayLoaded_Explorer_Note()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.PlayLoaded Explorer Note");
 
 	USKComponent_SkinAttachment_Interp_C_PlayLoaded_Explorer_Note_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +148,7 @@ void USKComponent_SkinAttachment_Interp_C::PlayLoaded_Explorer_Note()
 
 
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.Set HLNA Visibility
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Visibility                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -161,6 +160,7 @@ void USKComponent_SkinAttachment_Interp_C::STATIC_Set_HLNA_Visibility(bool Visib
 	params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -257,11 +257,11 @@ void USKComponent_SkinAttachment_Interp_C::PlaySound(class USoundBase* Sound)
 
 
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.PlayEmote
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, HasOutParms, NetClient, Const, NetValidate)
+// (Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            EmoteIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void USKComponent_SkinAttachment_Interp_C::STATIC_PlayEmote(int EmoteIndex)
+void USKComponent_SkinAttachment_Interp_C::PlayEmote(int EmoteIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.PlayEmote");
 
@@ -269,7 +269,6 @@ void USKComponent_SkinAttachment_Interp_C::STATIC_PlayEmote(int EmoteIndex)
 	params.EmoteIndex = EmoteIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,11 +297,11 @@ void USKComponent_SkinAttachment_Interp_C::CheckEmotes(class AShooterCharacter* 
 
 
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.UpdateInterpolation
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Private, HasOutParms, NetClient, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class ACharacter*              Character                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void USKComponent_SkinAttachment_Interp_C::STATIC_UpdateInterpolation(class ACharacter* Character)
+void USKComponent_SkinAttachment_Interp_C::UpdateInterpolation(class ACharacter* Character)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.UpdateInterpolation");
 

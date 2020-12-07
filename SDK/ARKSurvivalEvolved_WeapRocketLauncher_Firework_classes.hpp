@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapRocketLauncher_Firework.WeapRocketLauncher_Firework_C
-// 0x0000 (0x0DF8 - 0x0DF8)
+// 0x0000 (0x0E00 - 0x0E00)
 class AWeapRocketLauncher_Firework_C : public AWeapRocketLauncher_C
 {
 public:

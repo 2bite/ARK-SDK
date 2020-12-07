@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,9 +73,9 @@ void AProjGlowStick_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AAct
 // Function ProjGlowStick.ProjGlowStick_C.GetDefaultGlowStickRef
 // ()
 // Parameters:
-// class AWeapGlowStick_C*        Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AWeapGlowStick_C*        ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjGlowStick_C::GetDefaultGlowStickRef(class AWeapGlowStick_C** Ref)
+void AProjGlowStick_C::GetDefaultGlowStickRef(class AWeapGlowStick_C** ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjGlowStick.ProjGlowStick_C.GetDefaultGlowStickRef");
 
@@ -87,8 +87,8 @@ void AProjGlowStick_C::GetDefaultGlowStickRef(class AWeapGlowStick_C** Ref)
 
 	fn->FunctionFlags = flags;
 
-	if (Ref != nullptr)
-		*Ref = params.Ref;
+	if (ref != nullptr)
+		*ref = params.ref;
 }
 
 
@@ -149,13 +149,13 @@ void AProjGlowStick_C::IsAttachedToCharacter(bool* Result)
 
 
 // Function ProjGlowStick.ProjGlowStick_C.Get Average Normal Within Radius
-// (NetRequest, Exec, NetResponse, Private, NetServer, HasOutParms)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjGlowStick_C::Get_Average_Normal_Within_Radius(const struct FVector& Location, float Radius, struct FVector* Result)
+void AProjGlowStick_C::STATIC_Get_Average_Normal_Within_Radius(const struct FVector& Location, float Radius, struct FVector* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjGlowStick.ProjGlowStick_C.Get Average Normal Within Radius");
 

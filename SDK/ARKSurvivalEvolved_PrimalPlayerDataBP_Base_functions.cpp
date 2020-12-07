@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,74 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss
+// (Exec, Event, NetResponse, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// Parameters:
+// int*                           DifficultyIndex                (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  BossName                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerController** PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalPlayerDataBP_Base_C::STATIC_BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss");
+
+	UPrimalPlayerDataBP_Base_C_BPForceDefeatedBoss_Params params;
+	params.DifficultyIndex = DifficultyIndex;
+	params.BossName = BossName;
+	params.PlayerController = PlayerController;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.SetPlayerHexagonCount
+// ()
+// Parameters:
+// int*                           NewHexagonCount                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPrimalPlayerDataBP_Base_C::SetPlayerHexagonCount(int* NewHexagonCount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.SetPlayerHexagonCount");
+
+	UPrimalPlayerDataBP_Base_C_SetPlayerHexagonCount_Params params;
+	params.NewHexagonCount = NewHexagonCount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.GetPlayerHexagonCount
+// ()
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UPrimalPlayerDataBP_Base_C::GetPlayerHexagonCount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.GetPlayerHexagonCount");
+
+	UPrimalPlayerDataBP_Base_C_GetPlayerHexagonCount_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPCreatedNewPlayerData
 // ()

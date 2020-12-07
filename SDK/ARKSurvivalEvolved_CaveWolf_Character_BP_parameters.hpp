@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.ValidateZipLineTransform
+struct ACaveWolf_Character_BP_C_ValidateZipLineTransform_Params
+{
+	struct UObject_FTransform                          InTransform;                                              // (Parm, OutParm, ReferenceParm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    Rotation;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.BPOnTamedProcessOrder
 struct ACaveWolf_Character_BP_C_BPOnTamedProcessOrder_Params
@@ -177,7 +186,7 @@ struct ACaveWolf_Character_BP_C_GetZiplineBuff_Params
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.GetTargetedZipline
 struct ACaveWolf_Character_BP_C_GetTargetedZipline_Params
 {
-	class AZipline_Anchor_C*                           TargetedZipline;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AZipline_Anchor_C*                           targetedZipline;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -222,7 +231,7 @@ struct ACaveWolf_Character_BP_C_BlueprintCanRiderAttack_Params
 struct ACaveWolf_Character_BP_C_TryAttachingToZipline_Params
 {
 	class AZipline_Anchor_C*                           overrideAnchor;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     overrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     OverrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              OverrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     OverrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               DontUseLineOfSightCheck;                                  // (Parm, ZeroConstructor, IsPlainOldData)
@@ -251,7 +260,7 @@ struct ACaveWolf_Character_BP_C_TryAttachToZipline_RunOnServer_Params
 struct ACaveWolf_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

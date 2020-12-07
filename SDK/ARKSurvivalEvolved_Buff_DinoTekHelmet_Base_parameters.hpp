@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,6 +44,8 @@ struct ABuff_DinoTekHelmet_Base_C_BPDrawBuffStatusHUD_Params
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsAllowedToFire
 struct ABuff_DinoTekHelmet_Base_C_IsAllowedToFire_Params
 {
+	struct FVector                                     AimAtLoc;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ServerSpawnAtLoc;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bAllowed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

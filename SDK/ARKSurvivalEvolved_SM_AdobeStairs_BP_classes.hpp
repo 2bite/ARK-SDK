@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeStairs_BP.SM_AdobeStairs_BP_C
-// 0x0008 (0x0B20 - 0x0B18)
+// 0x0008 (0x0B28 - 0x0B20)
 class ASM_AdobeStairs_BP_C : public ALadder_Metal_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0B18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0B20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

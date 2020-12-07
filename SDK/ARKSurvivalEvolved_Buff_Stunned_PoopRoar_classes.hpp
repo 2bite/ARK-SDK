@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Stunned_PoopRoar.Buff_Stunned_PoopRoar_C
-// 0x0000 (0x0948 - 0x0948)
+// 0x0000 (0x0968 - 0x0968)
 class ABuff_Stunned_PoopRoar_C : public ABuff_Stunned_C
 {
 public:

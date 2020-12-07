@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass C4Tripwire.C4Tripwire_C
-// 0x0008 (0x0BB8 - 0x0BB0)
+// 0x0008 (0x0BC0 - 0x0BB8)
 class AC4Tripwire_C : public APrimalStructureTripwire
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0BB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0BB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

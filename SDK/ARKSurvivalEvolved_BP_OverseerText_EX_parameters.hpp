@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,7 +71,7 @@ struct ABP_OverseerText_EX_C_RenderGlyph_Params
 	class FString                                      GlyphRepresentation;                                      // (Parm, ZeroConstructor)
 	struct FLinearColor                                Color;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class UTextRenderComponent*                        TextRender;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               offsetLeft;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               OffsetLeft;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Offset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

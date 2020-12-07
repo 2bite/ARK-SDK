@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Iguanodon_Character_BP_Aberrant.Iguanodon_Character_BP_Aberrant_C
-// 0x0000 (0x2242 - 0x2242)
+// 0x0000 (0x22C2 - 0x22C2)
 class AIguanodon_Character_BP_Aberrant_C : public AIguanodon_Character_BP_C
 {
 public:

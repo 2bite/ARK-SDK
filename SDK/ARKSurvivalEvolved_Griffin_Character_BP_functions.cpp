@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void AGriffin_Character_BP_C::UpdateDivingFX()
 
 
 // Function Griffin_Character_BP.Griffin_Character_BP_C.OnDiveSwipe
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
 
 void AGriffin_Character_BP_C::STATIC_OnDiveSwipe()
 {
@@ -171,7 +171,7 @@ void AGriffin_Character_BP_C::Update_Diving_Effects()
 
 
 // Function Griffin_Character_BP.Griffin_Character_BP_C.CheckGroundForWingFlap
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport)
+// (NetReliable, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
 
 void AGriffin_Character_BP_C::CheckGroundForWingFlap()
 {

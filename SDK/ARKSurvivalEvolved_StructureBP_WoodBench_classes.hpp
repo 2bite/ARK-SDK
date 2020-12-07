@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureBP_WoodBench.StructureBP_WoodBench_C
-// 0x0000 (0x0EA1 - 0x0EA1)
+// 0x0000 (0x0EA9 - 0x0EA9)
 class AStructureBP_WoodBench_C : public AStructureSeatingBaseBP_C
 {
 public:

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.IsDebugMode
 // ()
 // Parameters:
-// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_Spindles_MinigunBase_C::IsDebugMode(bool* Ret)
+void UDinoAttackState_Spindles_MinigunBase_C::IsDebugMode(bool* ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.IsDebugMode");
 
@@ -29,8 +29,8 @@ void UDinoAttackState_Spindles_MinigunBase_C::IsDebugMode(bool* Ret)
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 }
 
 
@@ -59,9 +59,9 @@ void UDinoAttackState_Spindles_MinigunBase_C::GetDamageForSpine(class APrimalCha
 
 
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.FireSpine
-// (NetReliable, Event, NetResponse, Public, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 
-void UDinoAttackState_Spindles_MinigunBase_C::FireSpine()
+void UDinoAttackState_Spindles_MinigunBase_C::STATIC_FireSpine()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.FireSpine");
 
@@ -129,11 +129,11 @@ void UDinoAttackState_Spindles_MinigunBase_C::GetAttackIndex(int* AttackIndex)
 
 
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.BPShouldEndAttack
-// (Net, NetRequest, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDinoAttackState_Spindles_MinigunBase_C::STATIC_BPShouldEndAttack()
+bool UDinoAttackState_Spindles_MinigunBase_C::BPShouldEndAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.BPShouldEndAttack");
 

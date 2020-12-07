@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,7 +37,7 @@ void AEnforcer_Character_BP_C::IsHostileTekShield(class AActor* Actor, bool* IsS
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.ProjectileArcSweep
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FProjectileArc          Arc                            (Parm)
 // struct FRotator                CapsuleRotation                (Parm, ZeroConstructor, IsPlainOldData)
@@ -53,7 +53,7 @@ void AEnforcer_Character_BP_C::IsHostileTekShield(class AActor* Actor, bool* IsS
 // float                          EndArcTime                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AEnforcer_Character_BP_C::ProjectileArcSweep(const struct FProjectileArc& Arc, const struct FRotator& CapsuleRotation, float CapsuleRadius, float CapsuleHalfHeight, float MaxArcLength, TEnumAsByte<ECollisionChannel> CollisionChannel, bool bDrawDebug, float DebugDrawDuration, TArray<class AActor*>* ActorsToIgnore, struct FHitResult* HitResult, struct FVector* EndLocation, float* EndArcTime)
+bool AEnforcer_Character_BP_C::STATIC_ProjectileArcSweep(const struct FProjectileArc& Arc, const struct FRotator& CapsuleRotation, float CapsuleRadius, float CapsuleHalfHeight, float MaxArcLength, TEnumAsByte<ECollisionChannel> CollisionChannel, bool bDrawDebug, float DebugDrawDuration, TArray<class AActor*>* ActorsToIgnore, struct FHitResult* HitResult, struct FVector* EndLocation, float* EndArcTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.ProjectileArcSweep");
 
@@ -68,6 +68,7 @@ bool AEnforcer_Character_BP_C::ProjectileArcSweep(const struct FProjectileArc& A
 	params.DebugDrawDuration = DebugDrawDuration;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -395,12 +396,12 @@ void AEnforcer_Character_BP_C::StopClimbing(bool* resetRestoreToSeeking, bool* s
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPGetRiderUnboardLocation
-// (NetReliable, Native, NetResponse, MulticastDelegate, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter**       RidingCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector AEnforcer_Character_BP_C::BPGetRiderUnboardLocation(class APrimalCharacter** RidingCharacter)
+struct FVector AEnforcer_Character_BP_C::STATIC_BPGetRiderUnboardLocation(class APrimalCharacter** RidingCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPGetRiderUnboardLocation");
 
@@ -408,7 +409,6 @@ struct FVector AEnforcer_Character_BP_C::BPGetRiderUnboardLocation(class APrimal
 	params.RidingCharacter = RidingCharacter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -465,7 +465,7 @@ bool AEnforcer_Character_BP_C::HasEnoughStaminaToBlink()
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.SweepTestBlinkClimbPoint
-// (Exec, Static, MulticastDelegate, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (Exec, Native, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Normal                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -473,7 +473,7 @@ bool AEnforcer_Character_BP_C::HasEnoughStaminaToBlink()
 // float                          DebugDrawTime                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEnforcer_Character_BP_C::STATIC_SweepTestBlinkClimbPoint(const struct FVector& Location, const struct FVector& Normal, const struct FRotator& TargetRot, float DebugDrawTime, bool* IsValid)
+void AEnforcer_Character_BP_C::SweepTestBlinkClimbPoint(const struct FVector& Location, const struct FVector& Normal, const struct FRotator& TargetRot, float DebugDrawTime, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.SweepTestBlinkClimbPoint");
 
@@ -484,6 +484,7 @@ void AEnforcer_Character_BP_C::STATIC_SweepTestBlinkClimbPoint(const struct FVec
 	params.DebugDrawTime = DebugDrawTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -497,15 +498,15 @@ void AEnforcer_Character_BP_C::STATIC_SweepTestBlinkClimbPoint(const struct FVec
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.IsSurfaceNormalClimbable
 // ()
 // Parameters:
-// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ShouldClimb                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEnforcer_Character_BP_C::IsSurfaceNormalClimbable(const struct FVector& SurfaceNormal, bool* ShouldClimb)
+void AEnforcer_Character_BP_C::IsSurfaceNormalClimbable(const struct FVector& surfaceNormal, bool* ShouldClimb)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.IsSurfaceNormalClimbable");
 
 	AEnforcer_Character_BP_C_IsSurfaceNormalClimbable_Params params;
-	params.SurfaceNormal = SurfaceNormal;
+	params.surfaceNormal = surfaceNormal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -608,18 +609,17 @@ void AEnforcer_Character_BP_C::GetClimbingIK_BlendspaceAxes_Front(struct FVector
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPGetHUDOverrideBuffProgressBarPercent
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AEnforcer_Character_BP_C::STATIC_BPGetHUDOverrideBuffProgressBarPercent()
+float AEnforcer_Character_BP_C::BPGetHUDOverrideBuffProgressBarPercent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPGetHUDOverrideBuffProgressBarPercent");
 
 	AEnforcer_Character_BP_C_BPGetHUDOverrideBuffProgressBarPercent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -652,14 +652,14 @@ void AEnforcer_Character_BP_C::GetDesiredMoveDirection(struct FVector* Direction
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.BlinkCooldownToString
-// (Event, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // double                         LastUsedTime                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Cooldown                       (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReadyString                    (Parm, ZeroConstructor)
 // class FString                  Return_Value                   (Parm, OutParm, ZeroConstructor)
 
-void AEnforcer_Character_BP_C::STATIC_BlinkCooldownToString(double LastUsedTime, float Cooldown, const class FString& ReadyString, class FString* Return_Value)
+void AEnforcer_Character_BP_C::BlinkCooldownToString(double LastUsedTime, float Cooldown, const class FString& ReadyString, class FString* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.BlinkCooldownToString");
 
@@ -669,6 +669,7 @@ void AEnforcer_Character_BP_C::STATIC_BlinkCooldownToString(double LastUsedTime,
 	params.ReadyString = ReadyString;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -680,18 +681,17 @@ void AEnforcer_Character_BP_C::STATIC_BlinkCooldownToString(double LastUsedTime,
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPGrabDebugSnapshot
-// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FBlueprintVisualLogEntry> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FBlueprintVisualLogEntry> AEnforcer_Character_BP_C::STATIC_BPGrabDebugSnapshot()
+TArray<struct FBlueprintVisualLogEntry> AEnforcer_Character_BP_C::BPGrabDebugSnapshot()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPGrabDebugSnapshot");
 
 	AEnforcer_Character_BP_C_BPGrabDebugSnapshot_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -819,7 +819,7 @@ void AEnforcer_Character_BP_C::IsBlinkOnCooldown(bool* OnCooldown, int* FirstAva
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPGetHUDElements
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, NetMulticast, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -832,7 +832,6 @@ void AEnforcer_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC,
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1004,18 +1003,17 @@ void AEnforcer_Character_BP_C::GetClimbingMoveDirFromRotation(struct FRotator* R
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.Can Receive Climbing Input Strafe
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEnforcer_Character_BP_C::STATIC_Can_Receive_Climbing_Input_Strafe(bool* Return_Value)
+void AEnforcer_Character_BP_C::Can_Receive_Climbing_Input_Strafe(bool* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.Can Receive Climbing Input Strafe");
 
 	AEnforcer_Character_BP_C_Can_Receive_Climbing_Input_Strafe_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1074,9 +1072,9 @@ void AEnforcer_Character_BP_C::IsBlinkInProgress(bool* InBlinkDelay, bool* IsBli
 // TArray<bool>                   traceHitsArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int*                           numValidHits                   (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           numTraces                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           allowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           AllowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEnforcer_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing)
+void AEnforcer_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.Check For Prevent Stop Climbing");
 
@@ -1092,8 +1090,8 @@ void AEnforcer_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits
 
 	if (traceHitsArray != nullptr)
 		*traceHitsArray = params.traceHitsArray;
-	if (allowClimbing != nullptr)
-		*allowClimbing = params.allowClimbing;
+	if (AllowClimbing != nullptr)
+		*AllowClimbing = params.AllowClimbing;
 }
 
 
@@ -1165,11 +1163,11 @@ void AEnforcer_Character_BP_C::BPOverrideCameraViewTarget(struct FName* CurrentC
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.ClientSetBlinkStatus
-// (NetRequest, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           BlinkInProgress                (Parm, ZeroConstructor, IsPlainOldData)
 
-void AEnforcer_Character_BP_C::STATIC_ClientSetBlinkStatus(bool BlinkInProgress)
+void AEnforcer_Character_BP_C::ClientSetBlinkStatus(bool BlinkInProgress)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.ClientSetBlinkStatus");
 
@@ -1177,6 +1175,7 @@ void AEnforcer_Character_BP_C::STATIC_ClientSetBlinkStatus(bool BlinkInProgress)
 	params.BlinkInProgress = BlinkInProgress;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1185,7 +1184,7 @@ void AEnforcer_Character_BP_C::STATIC_ClientSetBlinkStatus(bool BlinkInProgress)
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.CalcBlinkTarget
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FProjectileArc          Arc                            (Parm)
 // bool                           ForVFX                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -1199,7 +1198,7 @@ void AEnforcer_Character_BP_C::STATIC_ClientSetBlinkStatus(bool BlinkInProgress)
 // float                          ArcTime                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              HitResult                      (Parm, OutParm)
 
-void AEnforcer_Character_BP_C::STATIC_CalcBlinkTarget(const struct FProjectileArc& Arc, bool ForVFX, float DebugDrawDuration, bool* FoundValidTarget, bool* IsAirTarget, bool* IsClimbTarget, struct FVector* Location, struct FRotator* Rotation, struct FVector* TargetNormal, float* ArcTime, struct FHitResult* HitResult)
+void AEnforcer_Character_BP_C::CalcBlinkTarget(const struct FProjectileArc& Arc, bool ForVFX, float DebugDrawDuration, bool* FoundValidTarget, bool* IsAirTarget, bool* IsClimbTarget, struct FVector* Location, struct FRotator* Rotation, struct FVector* TargetNormal, float* ArcTime, struct FHitResult* HitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.CalcBlinkTarget");
 
@@ -1241,9 +1240,9 @@ void AEnforcer_Character_BP_C::STATIC_CalcBlinkTarget(const struct FProjectileAr
 // struct FVector                 WorldLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                WorldRotation                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              HitResult                      (Parm)
-// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void AEnforcer_Character_BP_C::Update_Blink_Target_VFX_Location(bool IsVisible, bool IsInvalid, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, const struct FHitResult& HitResult, const struct FVector& SurfaceNormal)
+void AEnforcer_Character_BP_C::Update_Blink_Target_VFX_Location(bool IsVisible, bool IsInvalid, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, const struct FHitResult& HitResult, const struct FVector& surfaceNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.Update Blink Target VFX Location");
 
@@ -1253,7 +1252,7 @@ void AEnforcer_Character_BP_C::Update_Blink_Target_VFX_Location(bool IsVisible, 
 	params.WorldLocation = WorldLocation;
 	params.WorldRotation = WorldRotation;
 	params.HitResult = HitResult;
-	params.SurfaceNormal = SurfaceNormal;
+	params.surfaceNormal = surfaceNormal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1330,11 +1329,11 @@ void AEnforcer_Character_BP_C::Get_Vertical_View_Angle(float* Angle)
 
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.ReceiveTick
-// (NetRequest, Event, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AEnforcer_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void AEnforcer_Character_BP_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.ReceiveTick");
 
@@ -1342,6 +1341,7 @@ void AEnforcer_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1458,9 +1458,9 @@ void AEnforcer_Character_BP_C::ServerRequestBlink(const struct FVector& BlinkSta
 // struct FRotator                OrigRotation                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 BlinkLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                BlinkRotation                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           startedClimbing                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           StartedClimbing                (Parm, ZeroConstructor, IsPlainOldData)
 
-void AEnforcer_Character_BP_C::MulticastOnBlinkCompleted(const struct FVector& OrigLocation, const struct FRotator& OrigRotation, const struct FVector& BlinkLocation, const struct FRotator& BlinkRotation, bool startedClimbing)
+void AEnforcer_Character_BP_C::MulticastOnBlinkCompleted(const struct FVector& OrigLocation, const struct FRotator& OrigRotation, const struct FVector& BlinkLocation, const struct FRotator& BlinkRotation, bool StartedClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_Character_BP.Enforcer_Character_BP_C.MulticastOnBlinkCompleted");
 
@@ -1469,7 +1469,7 @@ void AEnforcer_Character_BP_C::MulticastOnBlinkCompleted(const struct FVector& O
 	params.OrigRotation = OrigRotation;
 	params.BlinkLocation = BlinkLocation;
 	params.BlinkRotation = BlinkRotation;
-	params.startedClimbing = startedClimbing;
+	params.StartedClimbing = StartedClimbing;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -139,12 +139,12 @@ class UClass* ATekTeleporter_C::GetBedFilterClass()
 
 
 // Function TekTeleporter.TekTeleporter_C.BPClientDoMultiUse
-// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekTeleporter_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void ATekTeleporter_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekTeleporter.TekTeleporter_C.BPClientDoMultiUse");
 
@@ -208,12 +208,12 @@ void ATekTeleporter_C::GetElementCostToTeleport(int* ElementCostToTeleport)
 
 
 // Function TekTeleporter.TekTeleporter_C.GetCharactersForTeleport
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // TArray<class APrimalCharacter*> OutChars                       (Parm, OutParm, ZeroConstructor)
 // TArray<struct UObject_FTransform> OutTransforms                  (Parm, OutParm, ZeroConstructor)
 
-void ATekTeleporter_C::STATIC_GetCharactersForTeleport(TArray<class APrimalCharacter*>* OutChars, TArray<struct UObject_FTransform>* OutTransforms)
+void ATekTeleporter_C::GetCharactersForTeleport(TArray<class APrimalCharacter*>* OutChars, TArray<struct UObject_FTransform>* OutTransforms)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekTeleporter.TekTeleporter_C.GetCharactersForTeleport");
 
@@ -233,11 +233,11 @@ void ATekTeleporter_C::STATIC_GetCharactersForTeleport(TArray<class APrimalChara
 
 
 // Function TekTeleporter.TekTeleporter_C.DoTeleport
-// (NetReliable, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class ATekTeleporter_C*        ToTeleporter                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekTeleporter_C::DoTeleport(class ATekTeleporter_C* ToTeleporter)
+void ATekTeleporter_C::STATIC_DoTeleport(class ATekTeleporter_C* ToTeleporter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekTeleporter.TekTeleporter_C.DoTeleport");
 
@@ -278,13 +278,13 @@ bool ATekTeleporter_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIn
 
 
 // Function TekTeleporter.TekTeleporter_C.BPGetMultiUseEntries
-// (NetResponse, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATekTeleporter_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATekTeleporter_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekTeleporter.TekTeleporter_C.BPGetMultiUseEntries");
 
@@ -292,6 +292,7 @@ TArray<struct FMultiUseEntry> ATekTeleporter_C::BPGetMultiUseEntries(class APlay
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

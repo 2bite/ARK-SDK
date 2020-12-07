@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Bola.Buff_Bola_C.BPHandleOnStartFire
-// (NetReliable, NetRequest, Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABuff_Bola_C::STATIC_BPHandleOnStartFire(bool* bFromGamepad)
 	params.bFromGamepad = bFromGamepad;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,7 +108,7 @@ bool ABuff_Bola_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function Buff_Bola.Buff_Bola_C.BPGetMultiUseEntries
-// (NetRequest, Exec, NetMulticast, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (Exec, Native, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -121,6 +122,7 @@ TArray<struct FMultiUseEntry> ABuff_Bola_C::BPGetMultiUseEntries(class APlayerCo
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

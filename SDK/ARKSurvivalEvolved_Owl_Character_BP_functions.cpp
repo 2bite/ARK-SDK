@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,11 +61,11 @@ bool AOwl_Character_BP_C::BPOnStartJump()
 
 
 // Function Owl_Character_BP.Owl_Character_BP_C.RidingTick
-// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::RidingTick(float* DeltaSeconds)
+void AOwl_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.RidingTick");
 
@@ -104,18 +104,17 @@ bool AOwl_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
 
 
 // Function Owl_Character_BP.Owl_Character_BP_C.IsOnOrNearGround
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::IsOnOrNearGround(bool* Return_Value)
+void AOwl_Character_BP_C::STATIC_IsOnOrNearGround(bool* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.IsOnOrNearGround");
 
 	AOwl_Character_BP_C_IsOnOrNearGround_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -336,17 +335,17 @@ void AOwl_Character_BP_C::BPOnStaminaDrained()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AOwl_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	AOwl_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ struct ABuff_BiglyPostProccess_C_BPGetHUDElements_Params
 struct ABuff_BiglyPostProccess_C_IsAnotherDinoAlreadyAttached_Params
 {
 	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.Can Ignore Traced Actor

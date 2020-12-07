@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider.DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C.ReceiveBeginPlay
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
 
-void ADroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C::ReceiveBeginPlay()
+void ADroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider.DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C.ReceiveBeginPlay");
 

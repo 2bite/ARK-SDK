@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C
-// 0x0000 (0x2150 - 0x2150)
+// 0x0000 (0x21D0 - 0x21D0)
 class AJugbug_Water_Character_BP_C : public AJugbug_Character_BaseBP_C
 {
 public:

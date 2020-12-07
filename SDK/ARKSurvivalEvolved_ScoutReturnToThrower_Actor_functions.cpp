@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,16 +13,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ScoutReturnToThrower_Actor.ScoutReturnToThrower_Actor_C.OnRep_Colors
-// (Net, Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AScoutReturnToThrower_Actor_C::STATIC_OnRep_Colors()
+void AScoutReturnToThrower_Actor_C::OnRep_Colors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScoutReturnToThrower_Actor.ScoutReturnToThrower_Actor_C.OnRep_Colors");
 
 	AScoutReturnToThrower_Actor_C_OnRep_Colors_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

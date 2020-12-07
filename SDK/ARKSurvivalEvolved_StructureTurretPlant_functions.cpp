@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,13 +68,13 @@ void AStructureTurretPlant_C::Turret_Check_Hard_Limit()
 
 
 // Function StructureTurretPlant.StructureTurretPlant_C.BlueprintDrawHUD
-// (Net, NetRequest, Exec, NetResponse, Static, Public, Protected, Delegate, NetClient, BlueprintCallable, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructureTurretPlant_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void AStructureTurretPlant_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretPlant.StructureTurretPlant_C.BlueprintDrawHUD");
 
@@ -84,6 +84,7 @@ void AStructureTurretPlant_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, f
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

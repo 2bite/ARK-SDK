@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,16 +15,16 @@ namespace sdk
 // Function AnimNotify_BlockTransition.AnimNotify_BlockTransition_C.Received_NotifyEnd
 // ()
 // Parameters:
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotify_BlockTransition_C::Received_NotifyEnd(class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation)
+bool UAnimNotify_BlockTransition_C::Received_NotifyEnd(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimNotify_BlockTransition.AnimNotify_BlockTransition_C.Received_NotifyEnd");
 
 	UAnimNotify_BlockTransition_C_Received_NotifyEnd_Params params;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
@@ -40,17 +40,17 @@ bool UAnimNotify_BlockTransition_C::Received_NotifyEnd(class USkeletalMeshCompon
 // Function AnimNotify_BlockTransition.AnimNotify_BlockTransition_C.Received_NotifyBegin
 // ()
 // Parameters:
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         TotalDuration                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotify_BlockTransition_C::Received_NotifyBegin(class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, float* TotalDuration)
+bool UAnimNotify_BlockTransition_C::Received_NotifyBegin(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimNotify_BlockTransition.AnimNotify_BlockTransition_C.Received_NotifyBegin");
 
 	UAnimNotify_BlockTransition_C_Received_NotifyBegin_Params params;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.TotalDuration = TotalDuration;
 

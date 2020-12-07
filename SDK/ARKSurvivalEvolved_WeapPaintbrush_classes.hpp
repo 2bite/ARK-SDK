@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapPaintbrush.WeapPaintbrush_C
-// 0x0008 (0x0D58 - 0x0D50)
+// 0x0008 (0x0D60 - 0x0D58)
 class AWeapPaintbrush_C : public AShooterWeapon_Melee
 {
 public:
-	class AShooterCharacter*                           ShooterCharRef;                                           // 0x0D50(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AShooterCharacter*                           ShooterCharRef;                                           // 0x0D58(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +29,7 @@ public:
 
 
 	struct FWeaponAnim BPGetSelectedMeleeAttackAnim();
-	void BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void UserConstructionScript();
 	void ExecuteUbergraph_WeapPaintbrush(int EntryPoint);
 };

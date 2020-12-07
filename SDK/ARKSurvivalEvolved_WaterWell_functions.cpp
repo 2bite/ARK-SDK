@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -122,7 +122,7 @@ bool AWaterWell_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function WaterWell.WaterWell_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Event, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

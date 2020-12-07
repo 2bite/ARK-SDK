@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BeerBarrel.BeerBarrel_C
-// 0x0010 (0x0EF8 - 0x0EE8)
+// 0x0010 (0x0F00 - 0x0EF0)
 class ABeerBarrel_C : public AWaterTankBaseBP_NoInv_C
 {
 public:
-	class UParticleSystemComponent*                    BeerParticles;                                            // 0x0EE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPrimalInventoryBP_BeerBarrel_C*             PrimalInventoryBP_BeerBarrel_C1;                          // 0x0EF0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    BeerParticles;                                            // 0x0EF0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_BeerBarrel_C*             PrimalInventoryBP_BeerBarrel_C1;                          // 0x0EF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

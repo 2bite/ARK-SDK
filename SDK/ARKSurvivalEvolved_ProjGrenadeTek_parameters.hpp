@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function ProjGrenadeTek.ProjGrenadeTek_C.BPProjectileBounced
+struct AProjGrenadeTek_C_BPProjectileBounced_Params
+{
+	struct FHitResult                                  ImpactResult;                                             // (Parm, OutParm, ReferenceParm)
+	struct FVector                                     ImpactVelocity;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
 
 // Function ProjGrenadeTek.ProjGrenadeTek_C.BPAttachedRootComponent
 struct AProjGrenadeTek_C_BPAttachedRootComponent_Params

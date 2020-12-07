@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct FLinearColor UHoverSkiffHudWidget_C::Get_RepairPanel_BrushColor_1()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_SkiffModeSubStatusTextBlock_Text_1
-// (NetReliable, NetRequest, Exec, Native, Static, Public, NetServer, HasDefaults, DLLImport)
+// (Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -45,7 +45,6 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_SkiffModeSubStatusTextBlock_Text
 	UHoverSkiffHudWidget_C_Get_SkiffModeSubStatusTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +55,7 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_SkiffModeSubStatusTextBlock_Text
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_RepairLabelTextBlock_Text_1
-// (Net, NetReliable, NetResponse, Static, Public, NetServer, HasDefaults, DLLImport)
+// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -101,7 +100,7 @@ void UHoverSkiffHudWidget_C::WidgetBoolToVisibilty(class UObject* TargetWidget, 
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.UpdateRepairProgressBarsPercentAndForegroundColor
-// (NetReliable, Exec, Event, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintPure)
 
 void UHoverSkiffHudWidget_C::UpdateRepairProgressBarsPercentAndForegroundColor()
 {
@@ -152,7 +151,7 @@ void UHoverSkiffHudWidget_C::UpdateAllFuelGaugesPanelVisibility()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_AltFuelLabelTextBlock_Text_1
-// (Net, Exec, Native, NetResponse, Static, Public, NetServer, HasDefaults, DLLImport)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -208,7 +207,7 @@ void UHoverSkiffHudWidget_C::UpdateNeedleRotation()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Update Tractor Beam Crosshair Visuals
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintPure)
 
 void UHoverSkiffHudWidget_C::Update_Tractor_Beam_Crosshair_Visuals()
 {
@@ -411,7 +410,7 @@ void UHoverSkiffHudWidget_C::OnShowExtendedInfoKeyPressed()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_RepairValueTextBlock_Text_1
-// (NetReliable, Native, NetResponse, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (NetRequest, Native, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -433,7 +432,7 @@ struct FText UHoverSkiffHudWidget_C::Get_RepairValueTextBlock_Text_1()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_AltFuelValueTextBlock_Text_1
-// (Net, NetRequest, Event, NetResponse, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (Net, NetReliable, NetRequest, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -454,18 +453,17 @@ struct FText UHoverSkiffHudWidget_C::Get_AltFuelValueTextBlock_Text_1()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_AltFuelIcon_Brush_1
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSlateBrush UHoverSkiffHudWidget_C::Get_AltFuelIcon_Brush_1()
+struct FSlateBrush UHoverSkiffHudWidget_C::STATIC_Get_AltFuelIcon_Brush_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_AltFuelIcon_Brush_1");
 
 	UHoverSkiffHudWidget_C_Get_AltFuelIcon_Brush_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -476,7 +474,7 @@ struct FSlateBrush UHoverSkiffHudWidget_C::Get_AltFuelIcon_Brush_1()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_SkiffModeValueTextBlock_Text_1
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (Net, NetRequest, Exec, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -497,11 +495,11 @@ struct FText UHoverSkiffHudWidget_C::Get_SkiffModeValueTextBlock_Text_1()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_AltitudeValueTextBlock_Text_1
-// (Exec, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (NetReliable, Exec, Event, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UHoverSkiffHudWidget_C::STATIC_Get_AltitudeValueTextBlock_Text_1()
+struct FText UHoverSkiffHudWidget_C::Get_AltitudeValueTextBlock_Text_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_AltitudeValueTextBlock_Text_1");
 
@@ -518,7 +516,7 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_AltitudeValueTextBlock_Text_1()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_AltitudeLabelTextBlock_Text_1
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (Net, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -529,7 +527,6 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_AltitudeLabelTextBlock_Text_1()
 	UHoverSkiffHudWidget_C_Get_AltitudeLabelTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -540,7 +537,7 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_AltitudeLabelTextBlock_Text_1()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get Debug Text 0
-// (NetRequest, Event, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -561,7 +558,7 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_Debug_Text_0()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_FuelReserveTextBlock_Text_1
-// (NetReliable, Exec, Event, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (NetRequest, Exec, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -582,13 +579,13 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_FuelReserveTextBlock_Text_1()
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Set Progress Bar Fill And Background Colors
-// (Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport)
+// (Exec, Native, NetResponse, NetServer, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UProgressBar*            ProgressBar                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            LinearColor                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FProgressBarStyle       ProgressBarStyle               (Parm, OutParm)
 
-void UHoverSkiffHudWidget_C::STATIC_Set_Progress_Bar_Fill_And_Background_Colors(class UProgressBar* ProgressBar, const struct FLinearColor& LinearColor, struct FProgressBarStyle* ProgressBarStyle)
+void UHoverSkiffHudWidget_C::Set_Progress_Bar_Fill_And_Background_Colors(class UProgressBar* ProgressBar, const struct FLinearColor& LinearColor, struct FProgressBarStyle* ProgressBarStyle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Set Progress Bar Fill And Background Colors");
 
@@ -597,6 +594,7 @@ void UHoverSkiffHudWidget_C::STATIC_Set_Progress_Bar_Fill_And_Background_Colors(
 	params.LinearColor = LinearColor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -608,7 +606,7 @@ void UHoverSkiffHudWidget_C::STATIC_Set_Progress_Bar_Fill_And_Background_Colors(
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_CurrentElementValueTextBlock_Text_1
-// (NetRequest, Native, Event, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Native, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -693,7 +691,7 @@ struct FLinearColor UHoverSkiffHudWidget_C::Get_CameraLockIcon_ColorAndOpacity_1
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_FuelConsumptionRateValueTextBlock_Text_1
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (Net, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -704,7 +702,6 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_FuelConsumptionRateValueTextBloc
 	UHoverSkiffHudWidget_C_Get_FuelConsumptionRateValueTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -715,7 +712,7 @@ struct FText UHoverSkiffHudWidget_C::STATIC_Get_FuelConsumptionRateValueTextBloc
 
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.Get_ElementFuelValueTextBlock_Text_1
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport)
+// (Net, Exec, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 

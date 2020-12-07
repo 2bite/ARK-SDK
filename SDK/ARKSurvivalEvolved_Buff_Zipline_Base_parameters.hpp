@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -229,7 +229,7 @@ struct ABuff_Zipline_Base_C_CalculateZiplineMaxVelocity_Params
 {
 	float                                              Accleration;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Length;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              MaxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              maxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.CalculateZiplineAcceleration

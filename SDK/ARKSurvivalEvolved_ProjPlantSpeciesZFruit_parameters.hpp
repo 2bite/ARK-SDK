@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,7 +48,7 @@ struct AProjPlantSpeciesZFruit_C_GetAngleBetween_Params
 {
 	struct FVector                                     v1;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     v2;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.UserConstructionScript

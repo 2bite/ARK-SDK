@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapHarpoon.WeapHarpoon_C
-// 0x0008 (0x0E00 - 0x0DF8)
+// 0x0008 (0x0E08 - 0x0E00)
 class AWeapHarpoon_C : public AShooterWeapon_Projectile
 {
 public:
-	class UStaticMeshComponent*                        Mesh3PSM;                                                 // 0x0DF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Mesh3PSM;                                                 // 0x0E00(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

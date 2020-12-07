@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Yeti_AIController_BP.Yeti_AIController_BP_C
-// 0x0000 (0x0911 - 0x0911)
+// 0x0000 (0x0919 - 0x0919)
 class AYeti_AIController_BP_C : public ABigfoot_AIController_BP_C
 {
 public:

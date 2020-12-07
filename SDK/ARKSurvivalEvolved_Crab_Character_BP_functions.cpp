@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -103,12 +103,12 @@ void ACrab_Character_BP_C::Should_Stop_Jump_Rotation(bool* Return_Value)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ACrab_Character_BP_C::STATIC_BPShouldCancelDoAttack(int* AttackIndex)
+bool ACrab_Character_BP_C::BPShouldCancelDoAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack");
 
@@ -116,7 +116,6 @@ bool ACrab_Character_BP_C::STATIC_BPShouldCancelDoAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,7 +126,7 @@ bool ACrab_Character_BP_C::STATIC_BPShouldCancelDoAttack(int* AttackIndex)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -146,6 +145,7 @@ float ACrab_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex,
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -548,7 +548,7 @@ struct FVector ACrab_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.ThrowTrace
-// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, NetServer, DLLImport, BlueprintPure)
 
 void ACrab_Character_BP_C::STATIC_ThrowTrace()
 {
@@ -557,6 +557,7 @@ void ACrab_Character_BP_C::STATIC_ThrowTrace()
 	ACrab_Character_BP_C_ThrowTrace_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -565,7 +566,7 @@ void ACrab_Character_BP_C::STATIC_ThrowTrace()
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPAdjustDamage
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -575,7 +576,7 @@ void ACrab_Character_BP_C::STATIC_ThrowTrace()
 // struct FHitResult*             PointHitInfo                   (Parm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ACrab_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
+float ACrab_Character_BP_C::STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.BPAdjustDamage");
 
@@ -588,6 +589,7 @@ float ACrab_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamage
 	params.PointHitInfo = PointHitInfo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -783,7 +785,7 @@ void ACrab_Character_BP_C::Throw_Grabbed_Characters()
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.Retrieve Any Grabbable Character
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms)
+// (Exec, Native, MulticastDelegate, Private, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           FoundCharacter                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -794,6 +796,7 @@ void ACrab_Character_BP_C::Retrieve_Any_Grabbable_Character(bool* FoundCharacter
 	ACrab_Character_BP_C_Retrieve_Any_Grabbable_Character_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -964,7 +967,7 @@ void ACrab_Character_BP_C::SharedCanAttack(int AttackIndex, bool* CanAttack)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BlueprintCanAttack
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms)
+// (Event, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -1451,9 +1454,9 @@ void ACrab_Character_BP_C::DelayedClearThrowing()
 // struct FVector                 AimLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AimHit                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           JumpInstant                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ThrowInstant                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           throwInstant                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ACrab_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool JumpInstant, bool ThrowInstant)
+void ACrab_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool JumpInstant, bool throwInstant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.Server_TraceTargetDir");
 
@@ -1461,7 +1464,7 @@ void ACrab_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, b
 	params.AimLoc = AimLoc;
 	params.AimHit = AimHit;
 	params.JumpInstant = JumpInstant;
-	params.ThrowInstant = ThrowInstant;
+	params.throwInstant = throwInstant;
 
 	auto flags = fn->FunctionFlags;
 

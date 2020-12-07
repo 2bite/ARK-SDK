@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,26 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BPOnItemConsumed
+struct UPrimalItemConsumable_GachaPod_C_BPOnItemConsumed_Params
+{
+	class UPrimalInventoryComponent**                  inventory;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               remainingQuantity;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.RollLoot
+struct UPrimalItemConsumable_GachaPod_C_RollLoot_Params
+{
+	class UPrimalInventoryComponent*                   Inv;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.ShowHUDNotification
 struct UPrimalItemConsumable_GachaPod_C_ShowHUDNotification_Params
 {
 	class UPrimalItem*                                 Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      Resource;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Quanity;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryComponent*                   Inv;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BPPostInitializeItem

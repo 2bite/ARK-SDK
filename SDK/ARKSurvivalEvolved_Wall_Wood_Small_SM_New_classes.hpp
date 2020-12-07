@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wall_Wood_Small_SM_New.Wall_Wood_Small_SM_New_C
-// 0x0000 (0x0AB8 - 0x0AB8)
+// 0x0000 (0x0AC0 - 0x0AC0)
 class AWall_Wood_Small_SM_New_C : public AWall_Base_Small_SM_C
 {
 public:

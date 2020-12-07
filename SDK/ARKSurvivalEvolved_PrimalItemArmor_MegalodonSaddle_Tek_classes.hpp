@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_MegalodonSaddle_Tek.PrimalItemArmor_MegalodonSaddle_Tek_C
-// 0x0000 (0x0A54 - 0x0A54)
+// 0x0000 (0x0A8C - 0x0A8C)
 class UPrimalItemArmor_MegalodonSaddle_Tek_C : public UPrimalItemArmor_SaddleGeneric_Tek_C
 {
 public:

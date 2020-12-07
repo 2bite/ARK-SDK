@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapBow_CupidBow_Flame.WeapBow_CupidBow_Flame_C
-// 0x0000 (0x0E93 - 0x0E93)
+// 0x0000 (0x0E9B - 0x0E9B)
 class AWeapBow_CupidBow_Flame_C : public AWeapBow_Flame_C
 {
 public:

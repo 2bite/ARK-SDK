@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Purlovia_Character_BP_Polar.Purlovia_Character_BP_Polar_C
-// 0x0008 (0x2900 - 0x28F8)
+// 0x0008 (0x2980 - 0x2978)
 class APurlovia_Character_BP_Polar_C : public APurlovia_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Purlovia_Polar_C* DinoCharacterStatus_BP_Purlovia_Polar_C1;                 // 0x28F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Purlovia_Polar_C* DinoCharacterStatus_BP_Purlovia_Polar_C1;                 // 0x2978(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

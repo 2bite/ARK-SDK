@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -449,7 +449,7 @@ struct ACrab_Character_BP_C_Server_TraceTargetDir_Params
 	struct FVector                                     AimLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               JumpInstant;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ThrowInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               throwInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Crab_Character_BP.Crab_Character_BP_C.StartThrowIdle

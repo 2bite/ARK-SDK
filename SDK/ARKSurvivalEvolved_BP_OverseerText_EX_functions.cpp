@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BP_OverseerText_EX.BP_OverseerText_EX_C.ConstructionProcess
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Protected, NetServer, DLLImport, Const, NetValidate)
+// (Exec, Native, NetResponse, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ABP_OverseerText_EX_C::ConstructionProcess()
 {
@@ -190,10 +190,10 @@ void ABP_OverseerText_EX_C::RenderOriginalText(class UTextRenderComponent* TextR
 // class FString                  GlyphRepresentation            (Parm, ZeroConstructor)
 // struct FLinearColor            Color                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UTextRenderComponent*    TextRender                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           offsetLeft                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           OffsetLeft                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Offset                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OverseerText_EX_C::RenderGlyph(const class FString& GlyphRepresentation, const struct FLinearColor& Color, class UTextRenderComponent* TextRender, bool offsetLeft, bool Offset)
+void ABP_OverseerText_EX_C::RenderGlyph(const class FString& GlyphRepresentation, const struct FLinearColor& Color, class UTextRenderComponent* TextRender, bool OffsetLeft, bool Offset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OverseerText_EX.BP_OverseerText_EX_C.RenderGlyph");
 
@@ -201,7 +201,7 @@ void ABP_OverseerText_EX_C::RenderGlyph(const class FString& GlyphRepresentation
 	params.GlyphRepresentation = GlyphRepresentation;
 	params.Color = Color;
 	params.TextRender = TextRender;
-	params.offsetLeft = offsetLeft;
+	params.OffsetLeft = OffsetLeft;
 	params.Offset = Offset;
 
 	auto flags = fn->FunctionFlags;

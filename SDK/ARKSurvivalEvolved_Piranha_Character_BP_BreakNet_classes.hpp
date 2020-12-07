@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Piranha_Character_BP_BreakNet.Piranha_Character_BP_BreakNet_C
-// 0x0000 (0x2110 - 0x2110)
+// 0x0000 (0x2190 - 0x2190)
 class APiranha_Character_BP_BreakNet_C : public APiranha_Character_BP_C
 {
 public:

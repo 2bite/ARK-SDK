@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -64,11 +64,11 @@ void UTask_DKaijuFindMovePointWithinArena_C::Get_Random_PointMin(const struct FV
 
 
 // Function Task_DKaijuFindMovePointWithinArena.Task_DKaijuFindMovePointWithinArena_C.ReceiveExecute
-// (NetReliable, Event, Static, MulticastDelegate, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UTask_DKaijuFindMovePointWithinArena_C::STATIC_ReceiveExecute(class AActor** OwnerActor)
+void UTask_DKaijuFindMovePointWithinArena_C::ReceiveExecute(class AActor** OwnerActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Task_DKaijuFindMovePointWithinArena.Task_DKaijuFindMovePointWithinArena_C.ReceiveExecute");
 
@@ -76,6 +76,7 @@ void UTask_DKaijuFindMovePointWithinArena_C::STATIC_ReceiveExecute(class AActor*
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

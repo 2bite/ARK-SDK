@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,7 +57,7 @@ void ABuff_TekSniper_XRay_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_TekSniper_XRay.Buff_TekSniper_XRay_C.BuffTickClient
-// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

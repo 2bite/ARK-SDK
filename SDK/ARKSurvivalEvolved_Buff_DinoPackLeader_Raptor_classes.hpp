@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_DinoPackLeader_Raptor.Buff_DinoPackLeader_Raptor_C
-// 0x0000 (0x0A10 - 0x0A10)
+// 0x0000 (0x0A30 - 0x0A30)
 class ABuff_DinoPackLeader_Raptor_C : public ABuff_DinoPackLeader_C
 {
 public:

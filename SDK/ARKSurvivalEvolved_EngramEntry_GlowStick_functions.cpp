@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,16 +12,16 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function EngramEntry_Glowstick.EngramEntry_Glowstick_C.ExecuteUbergraph_EngramEntry_GlowStick
+// Function EngramEntry_Glowstick.EngramEntry_GlowStick_C.ExecuteUbergraph_EngramEntry_Glowstick
 // ()
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UEngramEntry_Glowstick_C::ExecuteUbergraph_EngramEntry_GlowStick(int EntryPoint)
+void UEngramEntry_GlowStick_C::ExecuteUbergraph_EngramEntry_Glowstick(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function EngramEntry_Glowstick.EngramEntry_Glowstick_C.ExecuteUbergraph_EngramEntry_GlowStick");
+	static auto fn = UObject::FindObject<UFunction>("Function EngramEntry_Glowstick.EngramEntry_GlowStick_C.ExecuteUbergraph_EngramEntry_Glowstick");
 
-	UEngramEntry_Glowstick_C_ExecuteUbergraph_EngramEntry_GlowStick_Params params;
+	UEngramEntry_GlowStick_C_ExecuteUbergraph_EngramEntry_Glowstick_Params params;
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;

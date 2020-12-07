@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjFlare_Firework.ProjFlare_Firework_C
-// 0x0000 (0x0690 - 0x0690)
+// 0x0000 (0x0698 - 0x0698)
 class AProjFlare_Firework_C : public AProjFlare_C
 {
 public:

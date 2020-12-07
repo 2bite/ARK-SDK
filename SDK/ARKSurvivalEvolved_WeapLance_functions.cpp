@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapLance.WeapLance_C.DoTrace
-// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapLance_C::DoTrace(const struct FVector& Start, const struct FVector& End)
+void AWeapLance_C::STATIC_DoTrace(const struct FVector& Start, const struct FVector& End)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapLance.WeapLance_C.DoTrace");
 
@@ -27,7 +27,6 @@ void AWeapLance_C::DoTrace(const struct FVector& Start, const struct FVector& En
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

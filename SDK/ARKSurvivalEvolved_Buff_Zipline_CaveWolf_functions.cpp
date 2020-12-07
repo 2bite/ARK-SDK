@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -240,9 +240,9 @@ void ABuff_Zipline_CaveWolf_C::Play_Detach_Animation(float* Duration)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.IsStillColliding
-// (NetRequest, Native, Event, MulticastDelegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Zipline_CaveWolf_C::IsStillColliding()
+void ABuff_Zipline_CaveWolf_C::STATIC_IsStillColliding()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.IsStillColliding");
 
@@ -258,11 +258,11 @@ void ABuff_Zipline_CaveWolf_C::IsStillColliding()
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.CanZiplineFlip
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_CaveWolf_C::CanZiplineFlip(bool* Return)
+void ABuff_Zipline_CaveWolf_C::STATIC_CanZiplineFlip(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.CanZiplineFlip");
 
@@ -320,11 +320,11 @@ void ABuff_Zipline_CaveWolf_C::HandleCollision(struct FHitResult* Hit)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.HitZiplineEndStop
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, HasOutParms, DLLImport, Const, NetValidate)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UMovementComponent**     MovementComp                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_CaveWolf_C::STATIC_HitZiplineEndStop(class UMovementComponent** MovementComp)
+void ABuff_Zipline_CaveWolf_C::HitZiplineEndStop(class UMovementComponent** MovementComp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.HitZiplineEndStop");
 
@@ -332,7 +332,6 @@ void ABuff_Zipline_CaveWolf_C::STATIC_HitZiplineEndStop(class UMovementComponent
 	params.MovementComp = MovementComp;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -482,7 +481,7 @@ void ABuff_Zipline_CaveWolf_C::ProcessMotorInput(float* A)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.JumpImpulse
-// (Static, NetMulticast, MulticastDelegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector*                Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -502,9 +501,9 @@ void ABuff_Zipline_CaveWolf_C::STATIC_JumpImpulse(struct FVector* Direction)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.UpdateActorZiplineOffset
-// (Native, Event, Static, NetMulticast, MulticastDelegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Zipline_CaveWolf_C::STATIC_UpdateActorZiplineOffset()
+void ABuff_Zipline_CaveWolf_C::UpdateActorZiplineOffset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.UpdateActorZiplineOffset");
 
@@ -559,11 +558,11 @@ void ABuff_Zipline_CaveWolf_C::SetHurtAnim(bool Hanging, bool Reset)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.AttachToZipline
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector*                StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_CaveWolf_C::STATIC_AttachToZipline(struct FVector* StartLocation)
+void ABuff_Zipline_CaveWolf_C::AttachToZipline(struct FVector* StartLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.AttachToZipline");
 
@@ -571,7 +570,6 @@ void ABuff_Zipline_CaveWolf_C::STATIC_AttachToZipline(struct FVector* StartLocat
 	params.StartLocation = StartLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -713,17 +711,17 @@ void ABuff_Zipline_CaveWolf_C::SetZiplineControlRotation()
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.RotationNearlyEqual
 // ()
 // Parameters:
-// struct FRotator                RotA                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                rotA                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                rotB                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ErrorTolerance                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_CaveWolf_C::RotationNearlyEqual(const struct FRotator& RotA, const struct FRotator& rotB, float ErrorTolerance, bool* Return)
+void ABuff_Zipline_CaveWolf_C::RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.RotationNearlyEqual");
 
 	ABuff_Zipline_CaveWolf_C_RotationNearlyEqual_Params params;
-	params.RotA = RotA;
+	params.rotA = rotA;
 	params.rotB = rotB;
 	params.ErrorTolerance = ErrorTolerance;
 

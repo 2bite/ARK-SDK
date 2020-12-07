@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rex_AIController_BP_Mega.Rex_AIController_BP_Mega_C
-// 0x0000 (0x0911 - 0x0911)
+// 0x0000 (0x0919 - 0x0919)
 class ARex_AIController_BP_Mega_C : public ARex_AIController_BP_C
 {
 public:

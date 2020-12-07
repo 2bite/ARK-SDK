@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Baryonyx_Character_BP_Aberrant.Baryonyx_Character_BP_Aberrant_C
-// 0x0000 (0x2168 - 0x2168)
+// 0x0000 (0x21E8 - 0x21E8)
 class ABaryonyx_Character_BP_Aberrant_C : public ABaryonyx_Character_BP_C
 {
 public:

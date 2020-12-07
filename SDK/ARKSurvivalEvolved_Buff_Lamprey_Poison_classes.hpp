@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Lamprey_Poison.Buff_Lamprey_Poison_C
-// 0x0004 (0x0934 - 0x0930)
+// 0x0004 (0x0954 - 0x0950)
 class ABuff_Lamprey_Poison_C : public ABuff_Base_Disease_Low_C
 {
 public:
-	float                                              TimeLeft;                                                 // 0x0930(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	float                                              TimeLeft;                                                 // 0x0950(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,7 +31,7 @@ public:
 	void UpdateBuffPersistentData();
 	void ReceiveBeginPlay();
 	void BuffTickClient(float* DeltaTime);
-	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void BuffTickServer(float* DeltaTime);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_Lamprey_Poison(int EntryPoint);

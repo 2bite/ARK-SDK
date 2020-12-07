@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -369,7 +369,7 @@ struct AIchthyornis_Character_BP_C_CanStealItem_Params
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DoStealItem
 struct AIchthyornis_Character_BP_C_DoStealItem_Params
 {
-	class APrimalCharacter*                            characterToStealFrom;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            CharacterToStealFrom;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimalItem*                                 itemToSteal;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -575,15 +575,15 @@ struct AIchthyornis_Character_BP_C_DropCarriedAfterTime_Params
 {
 	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               dropDragged;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               DropCarried;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               dropCarried;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               restoreFollowingVariables;                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DropCarried
-struct AIchthyornis_Character_BP_C_DropCarried_Params
+// Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.dropCarried
+struct AIchthyornis_Character_BP_C_dropCarried_Params
 {
 	bool                                               dropDragged;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               DropCarried;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               dropCarried;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               restoreFollowingVariables;                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -596,7 +596,7 @@ struct AIchthyornis_Character_BP_C_SpawnWaterParticles_Params
 struct AIchthyornis_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

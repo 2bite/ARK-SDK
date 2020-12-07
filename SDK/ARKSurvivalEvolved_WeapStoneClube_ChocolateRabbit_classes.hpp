@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapStoneClube_ChocolateRabbit.WeapStoneClube_ChocolateRabbit_C
-// 0x0008 (0x0D58 - 0x0D50)
+// 0x0008 (0x0D60 - 0x0D58)
 class AWeapStoneClube_ChocolateRabbit_C : public AWeapStoneClub_C
 {
 public:
-	class USkeletalMeshComponent*                      MeshFPVAdditional;                                        // 0x0D50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      MeshFPVAdditional;                                        // 0x0D58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

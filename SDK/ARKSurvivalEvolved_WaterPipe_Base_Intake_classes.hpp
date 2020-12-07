@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterPipe_Base_Intake.WaterPipe_Base_Intake_C
-// 0x0000 (0x0AD8 - 0x0AD8)
+// 0x0000 (0x0AE0 - 0x0AE0)
 class AWaterPipe_Base_Intake_C : public AWaterPipeBaseBP_C
 {
 public:

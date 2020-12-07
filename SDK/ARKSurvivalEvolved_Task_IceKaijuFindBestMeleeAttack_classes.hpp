@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,7 +77,7 @@ public:
 	bool CanAngryAttack(class AIceKaiju_Character_BP_C** MyIceKaiju);
 	bool CanIceBreath(class AIceKaiju_Character_BP_C** MyIceKaiju);
 	bool CanGroundSmash(class AIceKaiju_Character_BP_C** MyIceKaiju);
-	void CanUseGroundSmash(bool* IsOnCooldown);
+	void STATIC_CanUseGroundSmash(bool* IsOnCooldown);
 	void ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_Task_IceKaijuFindBestMeleeAttack(int EntryPoint);
 };

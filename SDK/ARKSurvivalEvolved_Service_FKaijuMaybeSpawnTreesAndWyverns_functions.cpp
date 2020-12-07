@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,18 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Service_FKaijuMaybeSpawnTreesAndWyverns.Service_FKaijuMaybeSpawnTreesAndWyverns_C.SpawnBuffingTree
-// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UService_FKaijuMaybeSpawnTreesAndWyverns_C::STATIC_SpawnBuffingTree(bool* Success)
+void UService_FKaijuMaybeSpawnTreesAndWyverns_C::SpawnBuffingTree(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Service_FKaijuMaybeSpawnTreesAndWyverns.Service_FKaijuMaybeSpawnTreesAndWyverns_C.SpawnBuffingTree");
 
 	UService_FKaijuMaybeSpawnTreesAndWyverns_C_SpawnBuffingTree_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,17 +74,18 @@ void UService_FKaijuMaybeSpawnTreesAndWyverns_C::MaybeSpawn_Tree_on_Enemy()
 
 
 // Function Service_FKaijuMaybeSpawnTreesAndWyverns.Service_FKaijuMaybeSpawnTreesAndWyverns_C.SpawnWyvern
-// (NetRequest, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UService_FKaijuMaybeSpawnTreesAndWyverns_C::SpawnWyvern(bool* Success)
+void UService_FKaijuMaybeSpawnTreesAndWyverns_C::STATIC_SpawnWyvern(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Service_FKaijuMaybeSpawnTreesAndWyverns.Service_FKaijuMaybeSpawnTreesAndWyverns_C.SpawnWyvern");
 
 	UService_FKaijuMaybeSpawnTreesAndWyverns_C_SpawnWyvern_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

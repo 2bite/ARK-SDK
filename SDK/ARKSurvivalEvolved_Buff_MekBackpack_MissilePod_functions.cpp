@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetBackpackSaveData
-// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
-void ABuff_MekBackpack_MissilePod_C::GetBackpackSaveData(struct FMekBackpackData* Data)
+void ABuff_MekBackpack_MissilePod_C::STATIC_GetBackpackSaveData(struct FMekBackpackData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetBackpackSaveData");
 
 	ABuff_MekBackpack_MissilePod_C_GetBackpackSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,9 +121,9 @@ void ABuff_MekBackpack_MissilePod_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.OnRep_MissilePodMalfunctioned
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
+// (Event, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_MekBackpack_MissilePod_C::STATIC_OnRep_MissilePodMalfunctioned()
+void ABuff_MekBackpack_MissilePod_C::OnRep_MissilePodMalfunctioned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.OnRep_MissilePodMalfunctioned");
 
@@ -207,11 +208,11 @@ void ABuff_MekBackpack_MissilePod_C::GetCurrentAmmo(int* AmmoQuantity)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetFireDirection
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
+// (NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Direction                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MekBackpack_MissilePod_C::STATIC_GetFireDirection(struct FVector* Direction)
+void ABuff_MekBackpack_MissilePod_C::GetFireDirection(struct FVector* Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetFireDirection");
 

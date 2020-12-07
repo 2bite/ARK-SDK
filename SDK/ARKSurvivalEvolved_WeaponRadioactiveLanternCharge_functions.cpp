@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -307,7 +307,7 @@ void AWeaponRadioactiveLanternCharge_C::BPWaitingForPlacement()
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.CheckIfFireStopped
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           NewParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -318,7 +318,6 @@ void AWeaponRadioactiveLanternCharge_C::CheckIfFireStopped(bool* NewParam)
 	AWeaponRadioactiveLanternCharge_C_CheckIfFireStopped_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -437,7 +436,7 @@ void AWeaponRadioactiveLanternCharge_C::OnStopFiring()
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.DestroyBeamForTarget
-// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -449,7 +448,6 @@ void AWeaponRadioactiveLanternCharge_C::STATIC_DestroyBeamForTarget(class APrima
 	params.forCharacter = forCharacter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -495,7 +493,7 @@ void AWeaponRadioactiveLanternCharge_C::ServerTick()
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.ClientTick
-// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (Native, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AWeaponRadioactiveLanternCharge_C::ClientTick()
 {
@@ -513,7 +511,7 @@ void AWeaponRadioactiveLanternCharge_C::ClientTick()
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.Remove All BeamsClient
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (Exec, Native, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AWeaponRadioactiveLanternCharge_C::Remove_All_BeamsClient()
 {
@@ -522,6 +520,7 @@ void AWeaponRadioactiveLanternCharge_C::Remove_All_BeamsClient()
 	AWeaponRadioactiveLanternCharge_C_Remove_All_BeamsClient_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -678,7 +677,7 @@ void AWeaponRadioactiveLanternCharge_C::ConnectBeamToTarget(const struct FSTR_Ch
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.CreateNewBeam
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (Native, Static, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor*                  ToActor                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1486,17 +1485,17 @@ void AWeaponRadioactiveLanternCharge_C::CancelPlacement()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeaponRadioactiveLanternCharge_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AWeaponRadioactiveLanternCharge_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.BPAnimNotifyCustomEvent");
 
 	AWeaponRadioactiveLanternCharge_C_BPAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

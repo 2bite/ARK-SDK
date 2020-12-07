@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_PoisonImmunity_Element.Buff_PoisonImmunity_Element_C
-// 0x0000 (0x0938 - 0x0938)
+// 0x0000 (0x0958 - 0x0958)
 class ABuff_PoisonImmunity_Element_C : public ABuff_PoisonImmunity_Base_C
 {
 public:

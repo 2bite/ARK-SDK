@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Overheat_DayCycleManager.Overheat_DayCycleManager_C
-// 0x0000 (0x0591 - 0x0591)
+// 0x0000 (0x0599 - 0x0599)
 class AOverheat_DayCycleManager_C : public ADayCycleManagerBase_C
 {
 public:

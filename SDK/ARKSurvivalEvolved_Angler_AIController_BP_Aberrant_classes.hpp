@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Angler_AIController_BP_Aberrant.Angler_AIController_BP_Aberrant_C
-// 0x0000 (0x0911 - 0x0911)
+// 0x0000 (0x0919 - 0x0919)
 class AAngler_AIController_BP_Aberrant_C : public AAngler_AIController_BP_C
 {
 public:

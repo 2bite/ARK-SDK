@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Zipline_NonMotorized.Buff_Zipline_NonMotorized_C
-// 0x0000 (0x0C7C - 0x0C7C)
+// 0x0000 (0x0C9C - 0x0C9C)
 class ABuff_Zipline_NonMotorized_C : public ABuff_Zipline_Base_C
 {
 public:

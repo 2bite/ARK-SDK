@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -140,7 +140,7 @@ struct AProjFishingNet_C_BndEvt__StaticMesh3_K2Node_ComponentBoundEvent_458_Comp
 // Function ProjFishingNet.ProjFishingNet_C.try catch fish
 struct AProjFishingNet_C_try_catch_fish_Params
 {
-	class AActor*                                      Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ProjFishingNet.ProjFishingNet_C.Stop Projectile on Clients
@@ -152,7 +152,7 @@ struct AProjFishingNet_C_Stop_Projectile_on_Clients_Params
 // Function ProjFishingNet.ProjFishingNet_C.try add fish to net
 struct AProjFishingNet_C_try_add_fish_to_net_Params
 {
-	class AActor*                                      Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ProjFishingNet.ProjFishingNet_C.Launch a little faster initially

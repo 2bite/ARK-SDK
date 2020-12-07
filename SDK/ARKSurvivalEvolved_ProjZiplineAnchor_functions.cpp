@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall
-// (Event, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Static, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjZiplineAnchor_C::CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return)
+void AProjZiplineAnchor_C::STATIC_CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall");
 
@@ -64,16 +64,15 @@ void AProjZiplineAnchor_C::HitValidForAttachment(struct FHitResult* Hit, bool* V
 
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.SpawnBreakEmitter
-// (Exec, Native, Event, Static, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, NetMulticast, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AProjZiplineAnchor_C::STATIC_SpawnBreakEmitter()
+void AProjZiplineAnchor_C::SpawnBreakEmitter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjZiplineAnchor.ProjZiplineAnchor_C.SpawnBreakEmitter");
 
 	AProjZiplineAnchor_C_SpawnBreakEmitter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

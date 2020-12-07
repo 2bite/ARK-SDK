@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Leech_Character_Diseased.Leech_Character_Diseased_C
-// 0x0008 (0x2118 - 0x2110)
+// 0x0008 (0x2198 - 0x2190)
 class ALeech_Character_Diseased_C : public ALeech_Character_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Leech_Diseased_C* DinoCharacterStatus_BP_Leech_Diseased_C1;                 // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Leech_Diseased_C* DinoCharacterStatus_BP_Leech_Diseased_C1;                 // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

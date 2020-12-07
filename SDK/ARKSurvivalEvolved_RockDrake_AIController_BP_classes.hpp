@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RockDrake_AIController_BP.RockDrake_AIController_BP_C
-// 0x0001 (0x0912 - 0x0911)
+// 0x0001 (0x091A - 0x0919)
 class ARockDrake_AIController_BP_C : public ADino_AIController_BP_Climber_C
 {
 public:
-	bool                                               bWasDrakeUsingCamo;                                       // 0x0911(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bWasDrakeUsingCamo;                                       // 0x0919(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArctic_ShapeShifter.ProjArctic_ShapeShifter_C
-// 0x000C (0x068C - 0x0680)
+// 0x000C (0x0694 - 0x0688)
 class AProjArctic_ShapeShifter_C : public APrimalProjectileArrow
 {
 public:
-	struct FVector                                     ExtraVelocity;                                            // 0x0680(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     ExtraVelocity;                                            // 0x0688(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

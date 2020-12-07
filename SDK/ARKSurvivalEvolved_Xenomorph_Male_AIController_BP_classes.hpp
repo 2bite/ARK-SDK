@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Xenomorph_Male_AIController_BP.Xenomorph_Male_AIController_BP_C
-// 0x0000 (0x0932 - 0x0932)
+// 0x0000 (0x093A - 0x093A)
 class AXenomorph_Male_AIController_BP_C : public AXenomorph_AIController_BP_C
 {
 public:

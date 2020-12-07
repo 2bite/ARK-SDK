@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DroppedItemGeneric_GemElement.DroppedItemGeneric_GemElement_C
-// 0x0000 (0x0718 - 0x0718)
+// 0x0000 (0x0720 - 0x0720)
 class ADroppedItemGeneric_GemElement_C : public ADroppedItemGeneric_Gem_C
 {
 public:

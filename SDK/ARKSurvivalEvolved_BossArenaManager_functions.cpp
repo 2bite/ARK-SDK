@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,15 +47,16 @@ void ABossArenaManager_C::SFXBack_to_Home()
 
 
 // Function BossArenaManager.BossArenaManager_C.IssueReturnWarning
-// (Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABossArenaManager_C::STATIC_IssueReturnWarning()
+void ABossArenaManager_C::IssueReturnWarning()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.IssueReturnWarning");
 
 	ABossArenaManager_C_IssueReturnWarning_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,14 +65,14 @@ void ABossArenaManager_C::STATIC_IssueReturnWarning()
 
 
 // Function BossArenaManager.BossArenaManager_C.BPClientHandleNetExecCommand
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABossArenaManager_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool ABossArenaManager_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.BPClientHandleNetExecCommand");
 
@@ -80,7 +81,6 @@ bool ABossArenaManager_C::STATIC_BPClientHandleNetExecCommand(struct FName* Comm
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,7 +162,7 @@ void ABossArenaManager_C::GetAllActorsInBossArena(bool bIncludeUnconscious, bool
 
 
 // Function BossArenaManager.BossArenaManager_C.IssueTimeWarning
-// (NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ABossArenaManager_C::STATIC_IssueTimeWarning()
 {
@@ -171,6 +171,7 @@ void ABossArenaManager_C::STATIC_IssueTimeWarning()
 	ABossArenaManager_C_IssueTimeWarning_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,17 +236,18 @@ void ABossArenaManager_C::DidTeleport(const struct FVector& ReturnPosition, clas
 
 
 // Function BossArenaManager.BossArenaManager_C.IsValidForTeleport
-// (Net, Exec, Event, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  InvalidReason                  (Parm, OutParm, ZeroConstructor)
 
-void ABossArenaManager_C::IsValidForTeleport(class FString* InvalidReason)
+void ABossArenaManager_C::STATIC_IsValidForTeleport(class FString* InvalidReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.IsValidForTeleport");
 
 	ABossArenaManager_C_IsValidForTeleport_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

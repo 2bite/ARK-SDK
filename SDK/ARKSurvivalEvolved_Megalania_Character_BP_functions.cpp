@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -107,9 +107,9 @@ void AMegalania_Character_BP_C::IsNormalClimbable(struct FVector* Normal, bool* 
 // TArray<bool>                   traceHitsArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int*                           numValidHits                   (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           numTraces                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           allowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           AllowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMegalania_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing)
+void AMegalania_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megalania_Character_BP.Megalania_Character_BP_C.Check For Prevent Stop Climbing");
 
@@ -125,8 +125,8 @@ void AMegalania_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHit
 
 	if (traceHitsArray != nullptr)
 		*traceHitsArray = params.traceHitsArray;
-	if (allowClimbing != nullptr)
-		*allowClimbing = params.allowClimbing;
+	if (AllowClimbing != nullptr)
+		*AllowClimbing = params.AllowClimbing;
 }
 
 

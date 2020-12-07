@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,6 +28,38 @@ struct AXenomorph_Character_BP_C_Get_Charge_Variable_Interface_Params
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPPreventAttachments
+struct AXenomorph_Character_BP_C_BPPreventAttachments_Params
+{
+	class UObject**                                    ForItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.RefreshTamedAttachments
+struct AXenomorph_Character_BP_C_RefreshTamedAttachments_Params
+{
+};
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.AllowPlayMontage
+struct AXenomorph_Character_BP_C_AllowPlayMontage_Params
+{
+	class UAnimMontage**                               AnimMontage;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.GetDinoLevelUpAnimation
+struct AXenomorph_Character_BP_C_GetDinoLevelUpAnimation_Params
+{
+	class UAnimMontage*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+struct AXenomorph_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPIsHidden
@@ -382,7 +414,7 @@ struct AXenomorph_Character_BP_C_ReceiveBeginPlay_Params
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.StartAcidSpray
 struct AXenomorph_Character_BP_C_StartAcidSpray_Params
 {
-	struct FVector                                     hitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     HitDir;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       HitBone;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -390,7 +422,7 @@ struct AXenomorph_Character_BP_C_StartAcidSpray_Params
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Server_StartAcidSpray
 struct AXenomorph_Character_BP_C_Server_StartAcidSpray_Params
 {
-	struct FVector                                     hitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     HitDir;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       HitBone;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -488,6 +520,11 @@ struct AXenomorph_Character_BP_C_Server_TailWeb_Params
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Server_ImpregnateAttack
 struct AXenomorph_Character_BP_C_Server_ImpregnateAttack_Params
+{
+};
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Proxy_RefreshAttachments
+struct AXenomorph_Character_BP_C_Proxy_RefreshAttachments_Params
 {
 };
 

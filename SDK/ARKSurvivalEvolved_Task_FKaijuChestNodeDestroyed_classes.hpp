@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ public:
 	}
 
 
-	void Wipe_Out_All_Poison_Trees_And_Wyverns();
+	void STATIC_Wipe_Out_All_Poison_Trees_And_Wyverns();
 	void ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_Task_FKaijuChestNodeDestroyed(int EntryPoint);
 };

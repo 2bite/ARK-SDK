@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,13 +60,13 @@ bool ADoor_Tek_Base_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIn
 
 
 // Function Door_Tek_Base.Door_Tek_Base_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ADoor_Tek_Base_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ADoor_Tek_Base_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Door_Tek_Base.Door_Tek_Base_C.BPGetMultiUseEntries");
 

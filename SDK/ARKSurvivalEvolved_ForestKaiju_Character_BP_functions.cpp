@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -242,7 +242,7 @@ void AForestKaiju_Character_BP_C::HealNodesAndHealthFromLeashing()
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPOverrideDamageCauserHitMarker
-// (NetResponse, MulticastDelegate, Private, Protected, HasDefaults)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // class AShooterPlayerController** DamageCauserController         (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bHitFriendlyTarget             (Parm, ZeroConstructor, IsPlainOldData)
@@ -253,7 +253,7 @@ void AForestKaiju_Character_BP_C::HealNodesAndHealthFromLeashing()
 // struct FHitResult              PointDamageHitResult           (Parm, OutParm, ReferenceParm)
 // struct FHitMarkerSettings      ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FHitMarkerSettings AForestKaiju_Character_BP_C::BPOverrideDamageCauserHitMarker(class AShooterPlayerController** DamageCauserController, bool* bHitFriendlyTarget, float* PreDamageHealth, float* DamageAmount, bool* bIsPointDamage, struct FDamageEvent* DamageEvent, struct FHitResult* PointDamageHitResult)
+struct FHitMarkerSettings AForestKaiju_Character_BP_C::STATIC_BPOverrideDamageCauserHitMarker(class AShooterPlayerController** DamageCauserController, bool* bHitFriendlyTarget, float* PreDamageHealth, float* DamageAmount, bool* bIsPointDamage, struct FDamageEvent* DamageEvent, struct FHitResult* PointDamageHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPOverrideDamageCauserHitMarker");
 
@@ -265,6 +265,7 @@ struct FHitMarkerSettings AForestKaiju_Character_BP_C::BPOverrideDamageCauserHit
 	params.bIsPointDamage = bIsPointDamage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -280,13 +281,13 @@ struct FHitMarkerSettings AForestKaiju_Character_BP_C::BPOverrideDamageCauserHit
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPOnDinoCheat
-// (NetRequest, NetResponse, Static, Private, Protected, HasDefaults)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // struct FName*                  CheatName                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bSetValue                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::STATIC_BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value)
+void AForestKaiju_Character_BP_C::BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPOnDinoCheat");
 
@@ -296,6 +297,7 @@ void AForestKaiju_Character_BP_C::STATIC_BPOnDinoCheat(struct FName* CheatName, 
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -446,7 +448,7 @@ void AForestKaiju_Character_BP_C::InterpSpawnInMesh(float Delta)
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.CanFit
-// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, HasDefaults)
+// (Exec, Event, NetResponse, MulticastDelegate, Delegate, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VerticalOffset                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -458,7 +460,7 @@ void AForestKaiju_Character_BP_C::InterpSpawnInMesh(float Delta)
 // bool                           Can                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewLocation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::STATIC_CanFit(const struct FVector& Location, float VerticalOffset, float Angle, float HorizontalOffset, float Radius, float HalfHeight, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation)
+void AForestKaiju_Character_BP_C::CanFit(const struct FVector& Location, float VerticalOffset, float Angle, float HorizontalOffset, float Radius, float HalfHeight, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.CanFit");
 
@@ -505,7 +507,7 @@ void AForestKaiju_Character_BP_C::LerpDyingMaterials(float Delta)
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, HasDefaults)
+// (Native, Static, MulticastDelegate, Delegate, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -645,9 +647,9 @@ void AForestKaiju_Character_BP_C::DissolveArm(float Delta)
 // ()
 // Parameters:
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::Is_Location_Valid_Vine_Attack_Range(const struct FVector& Loc, bool* Ret)
+void AForestKaiju_Character_BP_C::Is_Location_Valid_Vine_Attack_Range(const struct FVector& Loc, bool* ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Is Location Valid Vine Attack Range");
 
@@ -660,8 +662,8 @@ void AForestKaiju_Character_BP_C::Is_Location_Valid_Vine_Attack_Range(const stru
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 }
 
 
@@ -958,9 +960,9 @@ void AForestKaiju_Character_BP_C::OnRep_CurrentAttackIndexReplicated()
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnMaxVinesThisFrame
-// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Protected, HasDefaults)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintPure)
 
-void AForestKaiju_Character_BP_C::STATIC_SpawnMaxVinesThisFrame()
+void AForestKaiju_Character_BP_C::SpawnMaxVinesThisFrame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnMaxVinesThisFrame");
 
@@ -975,12 +977,12 @@ void AForestKaiju_Character_BP_C::STATIC_SpawnMaxVinesThisFrame()
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnVineInternal
-// (NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::STATIC_SpawnVineInternal(const struct FVector& Start, const struct FVector& End)
+void AForestKaiju_Character_BP_C::SpawnVineInternal(const struct FVector& Start, const struct FVector& End)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnVineInternal");
 
@@ -989,6 +991,7 @@ void AForestKaiju_Character_BP_C::STATIC_SpawnVineInternal(const struct FVector&
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1106,11 +1109,11 @@ void AForestKaiju_Character_BP_C::BlinkDamageNodeInterp(float Delta)
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnPoisonTreeSeeds
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // float                          TreeCount                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::SpawnPoisonTreeSeeds(float TreeCount)
+void AForestKaiju_Character_BP_C::STATIC_SpawnPoisonTreeSeeds(float TreeCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnPoisonTreeSeeds");
 
@@ -1118,6 +1121,7 @@ void AForestKaiju_Character_BP_C::SpawnPoisonTreeSeeds(float TreeCount)
 	params.TreeCount = TreeCount;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1242,12 +1246,12 @@ void AForestKaiju_Character_BP_C::IsRightArmGrabAttack(bool* RightArmGrabAttack)
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.CanPlayerGrabAttack
-// (MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms)
+// (Net, NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           GrabAttack                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Hit                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::CanPlayerGrabAttack(bool* GrabAttack, bool* Hit)
+void AForestKaiju_Character_BP_C::STATIC_CanPlayerGrabAttack(bool* GrabAttack, bool* Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.CanPlayerGrabAttack");
 
@@ -1310,12 +1314,12 @@ void AForestKaiju_Character_BP_C::GetGrabAttackVineSocketName(struct FName* Name
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnVine
-// (Exec, Native, Event, MulticastDelegate, Public, Private, HasDefaults)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::SpawnVine(const struct FVector& Start, const struct FVector& End)
+void AForestKaiju_Character_BP_C::STATIC_SpawnVine(const struct FVector& Start, const struct FVector& End)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnVine");
 
@@ -1406,13 +1410,13 @@ void AForestKaiju_Character_BP_C::VineGrabMissed()
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms)
+// (Net, NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AForestKaiju_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AForestKaiju_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPGetMultiUseEntries");
 
@@ -1420,7 +1424,6 @@ TArray<struct FMultiUseEntry> AForestKaiju_Character_BP_C::BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1522,11 +1525,11 @@ void AForestKaiju_Character_BP_C::RegrowTick(class USkeletalMeshComponent* Appen
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Regrow
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults)
+// (Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           LeftArm                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::STATIC_Regrow(bool LeftArm)
+void AForestKaiju_Character_BP_C::Regrow(bool LeftArm)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Regrow");
 
@@ -1543,11 +1546,11 @@ void AForestKaiju_Character_BP_C::STATIC_Regrow(bool LeftArm)
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Dismember
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // class USkeletalMeshComponent*  Appendage                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::STATIC_Dismember(class USkeletalMeshComponent* Appendage)
+void AForestKaiju_Character_BP_C::Dismember(class USkeletalMeshComponent* Appendage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Dismember");
 
@@ -1719,12 +1722,12 @@ void AForestKaiju_Character_BP_C::StartTorpid()
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnPoisonTree
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, HasDefaults)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // class AActor*                  SpawnOnEnemy                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::SpawnPoisonTree(class AActor* SpawnOnEnemy, bool* Success)
+void AForestKaiju_Character_BP_C::STATIC_SpawnPoisonTree(class AActor* SpawnOnEnemy, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.SpawnPoisonTree");
 
@@ -1732,6 +1735,7 @@ void AForestKaiju_Character_BP_C::SpawnPoisonTree(class AActor* SpawnOnEnemy, bo
 	params.SpawnOnEnemy = SpawnOnEnemy;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1854,9 +1858,9 @@ bool AForestKaiju_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackI
 
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.GrabTrace
-// (Exec, Native, MulticastDelegate, Public, Private, HasDefaults)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintPure)
 
-void AForestKaiju_Character_BP_C::GrabTrace()
+void AForestKaiju_Character_BP_C::STATIC_GrabTrace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.GrabTrace");
 
@@ -2461,15 +2465,15 @@ void AForestKaiju_Character_BP_C::Server_GrabTraceTargetDir(const struct FVector
 // ()
 // Parameters:
 // TEnumAsByte<EDesertKaiju_ControlNodes> Node                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Expose                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           expose                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::Multi_ExposeNodes(TEnumAsByte<EDesertKaiju_ControlNodes> Node, bool Expose)
+void AForestKaiju_Character_BP_C::Multi_ExposeNodes(TEnumAsByte<EDesertKaiju_ControlNodes> Node, bool expose)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Multi_ExposeNodes");
 
 	AForestKaiju_Character_BP_C_Multi_ExposeNodes_Params params;
 	params.Node = Node;
-	params.Expose = Expose;
+	params.expose = expose;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2604,14 +2608,14 @@ void AForestKaiju_Character_BP_C::AnimNotify_EndRootAttack()
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Multi_PreventInput
 // ()
 // Parameters:
-// bool                           prevent                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Prevent                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AForestKaiju_Character_BP_C::Multi_PreventInput(bool prevent)
+void AForestKaiju_Character_BP_C::Multi_PreventInput(bool Prevent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Multi_PreventInput");
 
 	AForestKaiju_Character_BP_C_Multi_PreventInput_Params params;
-	params.prevent = prevent;
+	params.Prevent = Prevent;
 
 	auto flags = fn->FunctionFlags;
 

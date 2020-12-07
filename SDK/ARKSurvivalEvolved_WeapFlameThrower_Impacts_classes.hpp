@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapFlameThrower_Impacts.WeapFlameThrower_Impacts_C
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x0850 - 0x0850)
 class AWeapFlameThrower_Impacts_C : public AMeleeFist_Impacts_C
 {
 public:

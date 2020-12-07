@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnBeginEvent
-// (NetRequest, Exec, Native, NetResponse, Static, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (Exec, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimalAIState**         InParentState                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDKaijuFlock_AttackAIState_BasicAttack_C::STATIC_OnBeginEvent(class UPrimalAIState** InParentState)
+void UDKaijuFlock_AttackAIState_BasicAttack_C::OnBeginEvent(class UPrimalAIState** InParentState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnBeginEvent");
 
@@ -25,7 +25,6 @@ void UDKaijuFlock_AttackAIState_BasicAttack_C::STATIC_OnBeginEvent(class UPrimal
 	params.InParentState = InParentState;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,11 +74,11 @@ bool UDKaijuFlock_AttackAIState_BasicAttack_C::BPShouldEndAttack()
 
 
 // Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnTickEvent
-// (NetReliable, NetRequest, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDKaijuFlock_AttackAIState_BasicAttack_C::OnTickEvent(float* DeltaSeconds)
+void UDKaijuFlock_AttackAIState_BasicAttack_C::STATIC_OnTickEvent(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnTickEvent");
 
@@ -87,6 +86,7 @@ void UDKaijuFlock_AttackAIState_BasicAttack_C::OnTickEvent(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

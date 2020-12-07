@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function DinoAttackState_Spindles_MinigunAOE.DinoAttackState_Spindles_MinigunAOE_C.IsDebugMode
 // ()
 // Parameters:
-// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_Spindles_MinigunAOE_C::IsDebugMode(bool* Ret)
+void UDinoAttackState_Spindles_MinigunAOE_C::IsDebugMode(bool* ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunAOE.DinoAttackState_Spindles_MinigunAOE_C.IsDebugMode");
 
@@ -29,17 +29,17 @@ void UDinoAttackState_Spindles_MinigunAOE_C::IsDebugMode(bool* Ret)
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 }
 
 
 // Function DinoAttackState_Spindles_MinigunAOE.DinoAttackState_Spindles_MinigunAOE_C.BPShouldEndAttack
-// (Exec, Native, Event, NetResponse, Static, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDinoAttackState_Spindles_MinigunAOE_C::STATIC_BPShouldEndAttack()
+bool UDinoAttackState_Spindles_MinigunAOE_C::BPShouldEndAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunAOE.DinoAttackState_Spindles_MinigunAOE_C.BPShouldEndAttack");
 
@@ -98,14 +98,14 @@ void UDinoAttackState_Spindles_MinigunAOE_C::FireGuaranteedHitSpine()
 
 
 // Function DinoAttackState_Spindles_MinigunAOE.DinoAttackState_Spindles_MinigunAOE_C.BPCanAttack
-// (Exec, Native, Event, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         attackRangeOffset              (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 OtherTarget                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDinoAttackState_Spindles_MinigunAOE_C::BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
+bool UDinoAttackState_Spindles_MinigunAOE_C::STATIC_BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunAOE.DinoAttackState_Spindles_MinigunAOE_C.BPCanAttack");
 
@@ -163,14 +163,14 @@ void UDinoAttackState_Spindles_MinigunAOE_C::OnBeginEvent(class UPrimalAIState**
 
 
 // Function DinoAttackState_Spindles_MinigunAOE.DinoAttackState_Spindles_MinigunAOE_C.Get Spine Start and End Position
-// (NetRequest, Native, Static, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Native, NetMulticast, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 VFXStart                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 VFXEnd                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_Spindles_MinigunAOE_C::STATIC_Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd)
+void UDinoAttackState_Spindles_MinigunAOE_C::Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunAOE.DinoAttackState_Spindles_MinigunAOE_C.Get Spine Start and End Position");
 

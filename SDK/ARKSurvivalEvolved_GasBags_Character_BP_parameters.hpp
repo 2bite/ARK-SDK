@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -411,7 +411,7 @@ struct AGasBags_Character_BP_C_MultiUpdateFloatingDirection_Params
 // Function GasBags_Character_BP.GasBags_Character_BP_C.MultiUpdateVelocity
 struct AGasBags_Character_BP_C_MultiUpdateVelocity_Params
 {
-	struct FVector                                     Vel;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     vel;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GasBags_Character_BP.GasBags_Character_BP_C.ServerRequestAttachment

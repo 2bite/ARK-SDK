@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void ASpaceWhale_AIController_BP_C::BPOnFleeEvent()
 
 
 // Function SpaceWhale_AIController_BP.SpaceWhale_AIController_BP_C.ReceiveTick
-// (Exec, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults)
+// (Net, NetRequest, Event, NetResponse, Static, Public, NetServer, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 

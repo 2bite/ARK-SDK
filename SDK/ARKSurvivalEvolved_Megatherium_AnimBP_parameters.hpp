@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Megatherium_AnimBP.Megatherium_AnimBP_C.BlueprintUpdateAnimation
+struct UMegatherium_AnimBP_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Megatherium_AnimBP.Megatherium_AnimBP_C.ExecuteUbergraph_Megatherium_AnimBP
 struct UMegatherium_AnimBP_C_ExecuteUbergraph_Megatherium_AnimBP_Params

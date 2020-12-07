@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElectricCableIntersection.ElectricCableIntersection_C
-// 0x0000 (0x0AD8 - 0x0AD8)
+// 0x0000 (0x0AE0 - 0x0AE0)
 class AElectricCableIntersection_C : public AElectricCableBaseBP_C
 {
 public:

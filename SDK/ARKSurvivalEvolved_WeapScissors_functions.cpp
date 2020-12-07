@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void AWeapScissors_C::ReceiveBeginPlay()
 
 
 // Function WeapScissors.WeapScissors_C.IsValidHairCutTarget
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Native, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AActor*                  PotentialTarget                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bIsValid                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -43,6 +43,7 @@ void AWeapScissors_C::STATIC_IsValidHairCutTarget(class AActor* PotentialTarget,
 	params.PotentialTarget = PotentialTarget;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,24 +95,25 @@ void AWeapScissors_C::GiveHairLocks(int NumLocks)
 
 
 // Function WeapScissors.WeapScissors_C.BPAnimNotifyCustomEvent
-// (NetReliable, NetRequest, Exec, Event, Private, Protected, Delegate, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapScissors_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AWeapScissors_C::STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScissors.WeapScissors_C.BPAnimNotifyCustomEvent");
 
 	AWeapScissors_C_BPAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

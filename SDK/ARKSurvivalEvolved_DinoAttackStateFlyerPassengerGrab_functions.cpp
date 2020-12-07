@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -138,7 +138,7 @@ void UDinoAttackStateFlyerPassengerGrab_C::StartAnimationStateEvent(struct FName
 
 
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.GetAttackSocketLocations
-// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // TArray<struct UObject_FTransform> Locations                      (Parm, OutParm, ZeroConstructor)
 
@@ -161,11 +161,11 @@ void UDinoAttackStateFlyerPassengerGrab_C::GetAttackSocketLocations(TArray<struc
 
 
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.Find Best Grab Target
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // class APrimalCharacter*        bestTarget                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateFlyerPassengerGrab_C::STATIC_Find_Best_Grab_Target(class APrimalCharacter** bestTarget)
+void UDinoAttackStateFlyerPassengerGrab_C::Find_Best_Grab_Target(class APrimalCharacter** bestTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.Find Best Grab Target");
 

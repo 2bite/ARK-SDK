@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -243,7 +243,7 @@ struct AThylacoleo_Character_BP_C_SetAI_LatchedToTree_Params
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Get Thylaco Ai Controller
 struct AThylacoleo_Character_BP_C_Get_Thylaco_Ai_Controller_Params
 {
-	class AThylacoleo_AIController_BP_C*               Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AThylacoleo_AIController_BP_C*               ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.BPTryMultiUse
@@ -382,7 +382,7 @@ struct AThylacoleo_Character_BP_C_BlueprintCanRiderAttack_Params
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.GetDefaultDino
 struct AThylacoleo_Character_BP_C_GetDefaultDino_Params
 {
-	class AThylacoleo_Character_BP_C*                  Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AThylacoleo_Character_BP_C*                  ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.IsDinoGrounded

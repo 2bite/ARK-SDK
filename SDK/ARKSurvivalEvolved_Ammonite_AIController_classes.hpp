@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ammonite_AIController.Ammonite_AIController_C
-// 0x0002 (0x0913 - 0x0911)
+// 0x0002 (0x091B - 0x0919)
 class AAmmonite_AIController_C : public ADino_AIController_BP_C
 {
 public:
-	bool                                               onlyNotifyWaterAndAmphibiousNeighbors;                    // 0x0911(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               onlyNotifyCarnivoreNeighbors;                             // 0x0912(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               onlyNotifyWaterAndAmphibiousNeighbors;                    // 0x0919(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               onlyNotifyCarnivoreNeighbors;                             // 0x091A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

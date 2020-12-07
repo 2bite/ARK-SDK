@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.validate proper impact location
+struct ATekCruiseMissile_Character_BP_C_validate_proper_impact_location_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.has missile exceeded allowed distance
 struct ATekCruiseMissile_Character_BP_C_has_missile_exceeded_allowed_distance_Params
@@ -165,7 +171,7 @@ struct ATekCruiseMissile_Character_BP_C_BP_PreventMovementMode_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ServerIsFiringItemInInventory
 struct ATekCruiseMissile_Character_BP_C_ServerIsFiringItemInInventory_Params
 {
-	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BP_InterceptTurnInput
@@ -242,7 +248,7 @@ struct ATekCruiseMissile_Character_BP_C_ReceiveTick_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ScoutIsFirstPerson
 struct ATekCruiseMissile_Character_BP_C_ScoutIsFirstPerson_Params
 {
-	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.SetTargetImpactMaterial

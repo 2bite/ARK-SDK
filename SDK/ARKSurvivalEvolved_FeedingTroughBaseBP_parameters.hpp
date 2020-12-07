@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,25 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.Check Team and Set Visual Visibility
+struct AFeedingTroughBaseBP_C_Check_Team_and_Set_Visual_Visibility_Params
+{
+};
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPServerHandleNetExecCommand
+struct AFeedingTroughBaseBP_C_BPServerHandleNetExecCommand_Params
+{
+	class APlayerController**                          FromPC;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBPNetExecParams                            ExecParams;                                               // (Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.OnRep_ShowArea
+struct AFeedingTroughBaseBP_C_OnRep_ShowArea_Params
+{
+};
 
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPClientDoMultiUse
 struct AFeedingTroughBaseBP_C_BPClientDoMultiUse_Params
@@ -41,6 +60,11 @@ struct AFeedingTroughBaseBP_C_ThrottledTick_Params
 
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.UserConstructionScript
 struct AFeedingTroughBaseBP_C_UserConstructionScript_Params
+{
+};
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ServerRequest_ToggleShowarea
+struct AFeedingTroughBaseBP_C_ServerRequest_ToggleShowarea_Params
 {
 };
 

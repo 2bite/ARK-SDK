@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,24 +15,24 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapClimbPick.WeapClimbPick_C
-// 0x0064 (0x1474 - 0x1410)
+// 0x0064 (0x1484 - 0x1420)
 class AWeapClimbPick_C : public AShooterWeapon_Climb
 {
 public:
-	class UStaticMeshComponent*                        ClimbingPickLeftTPV;                                      // 0x1410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ClimbAnchorParticles;                                     // 0x1418(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             ClimbAnchor;                                              // 0x1420(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ClimbTargetParticles;                                     // 0x1428(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             ClimbTarget;                                              // 0x1430(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        ClimbingPickLeft;                                         // 0x1438(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        ClimbingPickTPV;                                          // 0x1440(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        ClimbingPick;                                             // 0x1448(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ClimbAnchorInterpSpeed;                                   // 0x1450(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ClimbTargetInterpSpeed;                                   // 0x1454(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             Valid_Template;                                           // 0x1458(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             Walkable_Template;                                        // 0x1460(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             Invalid_Template;                                         // 0x1468(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ClimbingFOVMultiplier;                                    // 0x1470(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UStaticMeshComponent*                        ClimbingPickLeftTPV;                                      // 0x1420(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ClimbAnchorParticles;                                     // 0x1428(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             ClimbAnchor;                                              // 0x1430(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ClimbTargetParticles;                                     // 0x1438(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             ClimbTarget;                                              // 0x1440(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        ClimbingPickLeft;                                         // 0x1448(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        ClimbingPickTPV;                                          // 0x1450(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        ClimbingPick;                                             // 0x1458(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ClimbAnchorInterpSpeed;                                   // 0x1460(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ClimbTargetInterpSpeed;                                   // 0x1464(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             Valid_Template;                                           // 0x1468(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             Walkable_Template;                                        // 0x1470(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             Invalid_Template;                                         // 0x1478(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ClimbingFOVMultiplier;                                    // 0x1480(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

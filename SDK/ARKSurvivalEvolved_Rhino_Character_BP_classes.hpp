@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Rhino_Character_BP.Rhino_Character_BP_C
-// 0x000C (0x2114 - 0x2108)
+// 0x000C (0x2194 - 0x2188)
 class ARhino_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Rhino_C*    DinoCharacterStatus_BP_Rhino_C1;                          // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxExtraSpeedAdditionalDamagePercent;                     // 0x2110(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Rhino_C*    DinoCharacterStatus_BP_Rhino_C1;                          // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MaxExtraSpeedAdditionalDamagePercent;                     // 0x2190(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

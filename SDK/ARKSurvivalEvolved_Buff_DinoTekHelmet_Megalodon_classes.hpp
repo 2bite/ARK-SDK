@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_DinoTekHelmet_Megalodon.Buff_DinoTekHelmet_Megalodon_C
-// 0x0000 (0x0C08 - 0x0C08)
+// 0x0000 (0x0C38 - 0x0C38)
 class ABuff_DinoTekHelmet_Megalodon_C : public ABuff_DinoTekHelmet_Base_C
 {
 public:

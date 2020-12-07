@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -221,11 +221,11 @@ bool APhoenix_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.SetAnimsWeightForAttack
-// (Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasDefaults, DLLImport)
+// (Exec, Event, NetMulticast, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::STATIC_SetAnimsWeightForAttack(int AttackIndex)
+void APhoenix_Character_BP_C::SetAnimsWeightForAttack(int AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.SetAnimsWeightForAttack");
 
@@ -292,7 +292,7 @@ void APhoenix_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, 
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Public, Delegate, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -306,7 +306,6 @@ TArray<struct FMultiUseEntry> APhoenix_Character_BP_C::BPGetMultiUseEntries(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -389,11 +388,11 @@ void APhoenix_Character_BP_C::Is_In_Water(bool* currentlyOnWater)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.CanAshStayOnLocation
-// (NetReliable, Event, NetResponse, Public, Delegate, HasDefaults, DLLImport)
+// (NetRequest, Exec, Event, Static, NetMulticast, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           canAshStay                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::CanAshStayOnLocation(bool* canAshStay)
+void APhoenix_Character_BP_C::STATIC_CanAshStayOnLocation(bool* canAshStay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.CanAshStayOnLocation");
 
@@ -411,7 +410,7 @@ void APhoenix_Character_BP_C::CanAshStayOnLocation(bool* canAshStay)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Calculate BuryMeshTransform
-// (NetReliable, NetRequest, Exec, Event, Static, Public, Delegate, HasDefaults, DLLImport)
+// (Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Rise                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      buryMeshTransform              (Parm, OutParm, IsPlainOldData)
@@ -424,6 +423,7 @@ void APhoenix_Character_BP_C::STATIC_Calculate_BuryMeshTransform(bool Rise, stru
 	params.Rise = Rise;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1020,17 +1020,17 @@ void APhoenix_Character_BP_C::FakeDieFailsafe()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void APhoenix_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	APhoenix_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

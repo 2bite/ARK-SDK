@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_TT_Pike_Pitchfork.PrimalItemSkin_TT_Pike_Pitchfork_C
-// 0x0000 (0x09B0 - 0x09B0)
+// 0x0000 (0x09E8 - 0x09E8)
 class UPrimalItemSkin_TT_Pike_Pitchfork_C : public UPrimalItemSkinGeneric_C
 {
 public:

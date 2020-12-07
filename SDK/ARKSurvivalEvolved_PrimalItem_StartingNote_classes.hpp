@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,21 +15,21 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_StartingNote.PrimalItem_StartingNote_C
-// 0x0098 (0x0A48 - 0x09B0)
+// 0x0098 (0x0A80 - 0x09E8)
 class UPrimalItem_StartingNote_C : public UPrimalItem_Note_C
 {
 public:
-	TArray<class UTexture2D*>                          AscensionIcons;                                           // 0x09B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      LocalCustomItemDesc;                                      // 0x09C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class FString>                              DifficultyStrings;                                        // 0x09D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class FString>                              BossStrings;                                              // 0x09E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FArrayOfStrings>                     BossPostStrings;                                          // 0x09F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UTexture2D*                                  LocalItemIcon;                                            // 0x0A00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UTexture2D*>                          LocalAscensionIcons;                                      // 0x0A08(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UTexture2D*>                          SecondaryAscensionIcons;                                  // 0x0A18(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UTexture2D*                                  SecondaryIcon;                                            // 0x0A28(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UTexture2D*>                          TertiaryAscensionIcons;                                   // 0x0A30(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UTexture2D*                                  TertiaryIcon;                                             // 0x0A40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UTexture2D*>                          AscensionIcons;                                           // 0x09E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      LocalCustomItemDesc;                                      // 0x09F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class FString>                              DifficultyStrings;                                        // 0x0A08(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class FString>                              BossStrings;                                              // 0x0A18(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FArrayOfStrings>                     BossPostStrings;                                          // 0x0A28(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UTexture2D*                                  LocalItemIcon;                                            // 0x0A38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UTexture2D*>                          LocalAscensionIcons;                                      // 0x0A40(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UTexture2D*>                          SecondaryAscensionIcons;                                  // 0x0A50(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UTexture2D*                                  SecondaryIcon;                                            // 0x0A60(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UTexture2D*>                          TertiaryAscensionIcons;                                   // 0x0A68(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UTexture2D*                                  TertiaryIcon;                                             // 0x0A78(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -43,7 +43,7 @@ public:
 	void IsLocalImplant(class AShooterPlayerController* ForPC, bool* IsLocal);
 	class FString BPGetItemName(class FString* ItemNameIn, class AShooterPlayerController** ForPC);
 	void Get_Survival_Quotient_String(TArray<float>* SurvData, class FString* OutString);
-	class FString STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC);
+	class FString BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC);
 	void BPPreInitializeItem(class UWorld** OptionalInitWorld);
 	void ExecuteUbergraph_PrimalItem_StartingNote(int EntryPoint);
 };

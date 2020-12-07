@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InstigatorDie
+struct ABuff_TekArmor_Pants_C_InstigatorDie_Params
+{
+};
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.IsPlayerUsingJetpack
 struct ABuff_TekArmor_Pants_C_IsPlayerUsingJetpack_Params
@@ -220,7 +225,7 @@ struct ABuff_TekArmor_Pants_C_BuffTickClient_Params
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.SetPreventEquipWeapons
 struct ABuff_TekArmor_Pants_C_SetPreventEquipWeapons_Params
 {
-	bool                                               prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.CalculateDeflectingImpulse

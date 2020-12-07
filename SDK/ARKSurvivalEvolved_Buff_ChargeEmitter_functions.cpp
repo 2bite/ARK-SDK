@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -399,13 +399,13 @@ void ABuff_ChargeEmitter_C::GetEmitterActor(class AActor** emitterActor)
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is Point Affected By Emitter
-// (NetRequest, Exec, Native, Event, Static, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, Event, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 affectedPoint                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  requestingActor                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isAffected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_C::STATIC_Is_Point_Affected_By_Emitter(const struct FVector& affectedPoint, class AActor* requestingActor, bool* isAffected)
+void ABuff_ChargeEmitter_C::Is_Point_Affected_By_Emitter(const struct FVector& affectedPoint, class AActor* requestingActor, bool* isAffected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is Point Affected By Emitter");
 
@@ -644,13 +644,13 @@ void ABuff_ChargeEmitter_C::HarvestCharge(bool MountedDino, class APlayerControl
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.BPGetMultiUseEntries
-// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABuff_ChargeEmitter_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABuff_ChargeEmitter_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.BPGetMultiUseEntries");
 
@@ -658,6 +658,7 @@ TArray<struct FMultiUseEntry> ABuff_ChargeEmitter_C::BPGetMultiUseEntries(class 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -845,13 +846,13 @@ void ABuff_ChargeEmitter_C::CanEmitCharge(bool* canEmit)
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is ActorAffected by Emitter
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Native, NetResponse, MulticastDelegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor*                  affectedActor                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           skipLineTrace                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isAffected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_C::STATIC_Is_ActorAffected_by_Emitter(class AActor* affectedActor, bool skipLineTrace, bool* isAffected)
+void ABuff_ChargeEmitter_C::Is_ActorAffected_by_Emitter(class AActor* affectedActor, bool skipLineTrace, bool* isAffected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is ActorAffected by Emitter");
 

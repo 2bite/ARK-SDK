@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function WyvProjFireBall.WyvProjFireBall_C.GetSocketForFinalTraceCheckFromInstigatorToDirectDamageVictim
+// ()
+// Parameters:
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName AWyvProjFireBall_C::GetSocketForFinalTraceCheckFromInstigatorToDirectDamageVictim()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WyvProjFireBall.WyvProjFireBall_C.GetSocketForFinalTraceCheckFromInstigatorToDirectDamageVictim");
+
+	AWyvProjFireBall_C_GetSocketForFinalTraceCheckFromInstigatorToDirectDamageVictim_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function WyvProjFireBall.WyvProjFireBall_C.UserConstructionScript
 // ()

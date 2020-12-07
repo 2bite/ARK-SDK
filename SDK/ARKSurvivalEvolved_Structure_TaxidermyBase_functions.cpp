@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -89,13 +89,13 @@ bool AStructure_TaxidermyBase_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructure_TaxidermyBase_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructure_TaxidermyBase_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPGetMultiUseEntries");
 
@@ -103,6 +103,7 @@ TArray<struct FMultiUseEntry> AStructure_TaxidermyBase_C::STATIC_BPGetMultiUseEn
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,11 +134,11 @@ void AStructure_TaxidermyBase_C::RemoveSnapshot()
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ApplySnapshot
-// (NetReliable, Event, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // class UPrimalItem*             Snapshot                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TaxidermyBase_C::STATIC_ApplySnapshot(class UPrimalItem* Snapshot)
+void AStructure_TaxidermyBase_C::ApplySnapshot(class UPrimalItem* Snapshot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ApplySnapshot");
 

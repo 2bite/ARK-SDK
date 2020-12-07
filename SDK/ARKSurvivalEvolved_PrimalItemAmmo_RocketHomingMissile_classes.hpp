@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemAmmo_RocketHomingMissile.PrimalItemAmmo_RocketHomingMissile_C
-// 0x0000 (0x09B0 - 0x09B0)
+// 0x0000 (0x09E8 - 0x09E8)
 class UPrimalItemAmmo_RocketHomingMissile_C : public UPrimalItemAmmo_Base_C
 {
 public:

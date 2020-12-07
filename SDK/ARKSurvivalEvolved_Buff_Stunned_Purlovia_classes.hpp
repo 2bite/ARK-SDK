@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Stunned_Purlovia.Buff_Stunned_Purlovia_C
-// 0x0008 (0x0950 - 0x0948)
+// 0x0008 (0x0970 - 0x0968)
 class ABuff_Stunned_Purlovia_C : public ABuff_Stunned_C
 {
 public:
-	class APrimalCharacter*                            Attacker;                                                 // 0x0948(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class APrimalCharacter*                            Attacker;                                                 // 0x0968(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

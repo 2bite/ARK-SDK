@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function SK_CruiseMissile_RIG_AnimBlueprint.SK_CruiseMissile_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2130
+// Function SK_CruiseMissile_RIG_AnimBlueprint.SK_CruiseMissile_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2166
 // ()
 
-void USK_CruiseMissile_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2130()
+void USK_CruiseMissile_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2166()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SK_CruiseMissile_RIG_AnimBlueprint.SK_CruiseMissile_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2130");
+	static auto fn = UObject::FindObject<UFunction>("Function SK_CruiseMissile_RIG_AnimBlueprint.SK_CruiseMissile_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2166");
 
-	USK_CruiseMissile_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2130_Params params;
+	USK_CruiseMissile_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2166_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void USK_CruiseMissile_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUb
 }
 
 
-// Function SK_CruiseMissile_RIG_AnimBlueprint.SK_CruiseMissile_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2129
+// Function SK_CruiseMissile_RIG_AnimBlueprint.SK_CruiseMissile_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2165
 // ()
 
-void USK_CruiseMissile_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2129()
+void USK_CruiseMissile_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2165()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SK_CruiseMissile_RIG_AnimBlueprint.SK_CruiseMissile_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2129");
+	static auto fn = UObject::FindObject<UFunction>("Function SK_CruiseMissile_RIG_AnimBlueprint.SK_CruiseMissile_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2165");
 
-	USK_CruiseMissile_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2129_Params params;
+	USK_CruiseMissile_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_CruiseMissile_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2165_Params params;
 
 	auto flags = fn->FunctionFlags;
 

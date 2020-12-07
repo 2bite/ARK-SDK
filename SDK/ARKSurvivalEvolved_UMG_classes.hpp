@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1580,11 +1580,11 @@ public:
 	}
 
 
-	void SetValue(float newValue);
-	void SetMinValue(float newValue);
-	void SetMinSliderValue(float newValue);
-	void SetMaxValue(float newValue);
-	void SetMaxSliderValue(float newValue);
+	void SetValue(float NewValue);
+	void SetMinValue(float NewValue);
+	void SetMinSliderValue(float NewValue);
+	void SetMaxValue(float NewValue);
+	void SetMaxSliderValue(float NewValue);
 	void SetForegroundColor(const struct FSlateColor& InForegroundColor);
 	void OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
 	void OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);

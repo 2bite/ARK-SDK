@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass HoverSkiff_Deathsplosion.HoverSkiff_Deathsplosion_C
-// 0x0010 (0x0490 - 0x0480)
+// 0x0010 (0x0498 - 0x0488)
 class AHoverSkiff_Deathsplosion_C : public ADestructibleActor
 {
 public:
-	class URadialForceComponent*                       ExplosionForce;                                           // 0x0480(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ExplosionParticles;                                       // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class URadialForceComponent*                       ExplosionForce;                                           // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ExplosionParticles;                                       // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

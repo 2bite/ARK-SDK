@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjGrapHook.ProjGrapHook_C
-// 0x0000 (0x0698 - 0x0698)
+// 0x0000 (0x06A0 - 0x06A0)
 class AProjGrapHook_C : public APrimalProjectileGrapplingHook
 {
 public:

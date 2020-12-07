@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,14 +36,14 @@ bool APurlovia_Character_BP_C::BPIsHidden()
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.UpdateCollisions
 // ()
 // Parameters:
-// bool                           buried                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Buried                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void APurlovia_Character_BP_C::UpdateCollisions(bool buried)
+void APurlovia_Character_BP_C::UpdateCollisions(bool Buried)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.UpdateCollisions");
 
 	APurlovia_Character_BP_C_UpdateCollisions_Params params;
-	params.buried = buried;
+	params.Buried = Buried;
 
 	auto flags = fn->FunctionFlags;
 
@@ -110,11 +110,11 @@ void APurlovia_Character_BP_C::BPTimerNonDedicated()
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.Update Bury Mesh Transform Variable
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           updateMeshLocation             (Parm, ZeroConstructor, IsPlainOldData)
 
-void APurlovia_Character_BP_C::Update_Bury_Mesh_Transform_Variable(bool updateMeshLocation)
+void APurlovia_Character_BP_C::STATIC_Update_Bury_Mesh_Transform_Variable(bool updateMeshLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.Update Bury Mesh Transform Variable");
 
@@ -122,7 +122,6 @@ void APurlovia_Character_BP_C::Update_Bury_Mesh_Transform_Variable(bool updateMe
 	params.updateMeshLocation = updateMeshLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -182,7 +181,7 @@ void APurlovia_Character_BP_C::Hide_Bury_Mound()
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.RotateToTarget
-// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 
 void APurlovia_Character_BP_C::STATIC_RotateToTarget()
 {
@@ -191,6 +190,7 @@ void APurlovia_Character_BP_C::STATIC_RotateToTarget()
 	APurlovia_Character_BP_C_RotateToTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,7 +225,7 @@ void APurlovia_Character_BP_C::IsValidTarget(bool DoWeightCheck, class AActor* T
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Event, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -234,7 +234,7 @@ void APurlovia_Character_BP_C::IsValidTarget(bool DoWeightCheck, class AActor* T
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APurlovia_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float APurlovia_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -244,7 +244,6 @@ float APurlovia_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIn
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -385,18 +384,17 @@ float APurlovia_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDa
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.IsValidSurface
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (Exec, Static, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APurlovia_Character_BP_C::IsValidSurface(bool* IsValid)
+void APurlovia_Character_BP_C::STATIC_IsValidSurface(bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.IsValidSurface");
 
 	APurlovia_Character_BP_C_IsValidSurface_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -474,7 +472,7 @@ void APurlovia_Character_BP_C::FinishBuriedJump()
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.CalculateBuryMeshTransform
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (Event, NetResponse, Static, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct UObject_FTransform      Transform                      (Parm, OutParm, IsPlainOldData)
 
@@ -522,18 +520,17 @@ void APurlovia_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD,
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.Get Buried Attack Up Impulse
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (Exec, Event, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 UpImpulse                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APurlovia_Character_BP_C::STATIC_Get_Buried_Attack_Up_Impulse(struct FVector* UpImpulse)
+void APurlovia_Character_BP_C::Get_Buried_Attack_Up_Impulse(struct FVector* UpImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.Get Buried Attack Up Impulse");
 
 	APurlovia_Character_BP_C_Get_Buried_Attack_Up_Impulse_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -545,18 +542,17 @@ void APurlovia_Character_BP_C::STATIC_Get_Buried_Attack_Up_Impulse(struct FVecto
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.Get Buried Attack Down Impulse
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 Impulse                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APurlovia_Character_BP_C::STATIC_Get_Buried_Attack_Down_Impulse(struct FVector* Impulse)
+void APurlovia_Character_BP_C::Get_Buried_Attack_Down_Impulse(struct FVector* Impulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.Get Buried Attack Down Impulse");
 
 	APurlovia_Character_BP_C_Get_Buried_Attack_Down_Impulse_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -624,9 +620,9 @@ void APurlovia_Character_BP_C::FinishNormalJump()
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.ApplyNormalJumpImpulse
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 
-void APurlovia_Character_BP_C::ApplyNormalJumpImpulse()
+void APurlovia_Character_BP_C::STATIC_ApplyNormalJumpImpulse()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.ApplyNormalJumpImpulse");
 
@@ -794,27 +790,28 @@ void APurlovia_Character_BP_C::Has_Conflict_with_AI(bool* hasConflict)
 }
 
 
-// Function Purlovia_Character_BP.Purlovia_Character_BP_C.canBury
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanBury
+// (NetRequest, Exec, Native, Event, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           forceBury                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           canBury                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           CanBury                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APurlovia_Character_BP_C::STATIC_canBury(bool forceBury, bool* canBury)
+void APurlovia_Character_BP_C::CanBury(bool forceBury, bool* CanBury)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.canBury");
+	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanBury");
 
-	APurlovia_Character_BP_C_canBury_Params params;
+	APurlovia_Character_BP_C_CanBury_Params params;
 	params.forceBury = forceBury;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (canBury != nullptr)
-		*canBury = params.canBury;
+	if (CanBury != nullptr)
+		*CanBury = params.CanBury;
 }
 
 
@@ -880,13 +877,13 @@ void APurlovia_Character_BP_C::BPTimerServer()
 
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Native, Static, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> APurlovia_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> APurlovia_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.BPGetMultiUseEntries");
 
@@ -1101,17 +1098,17 @@ void APurlovia_Character_BP_C::OnMovementChanged()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void APurlovia_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void APurlovia_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Purlovia_Character_BP.Purlovia_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	APurlovia_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

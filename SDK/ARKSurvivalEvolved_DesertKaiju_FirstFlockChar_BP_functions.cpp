@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -156,18 +156,17 @@ void ADesertKaiju_FirstFlockChar_BP_C::TickFlockGroup(int Shape, float DeltaTime
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.GetFlockAvoidanceArea
-// (Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetRequest, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FAvoidanceArea>  Return                         (Parm, OutParm, ZeroConstructor)
 
-void ADesertKaiju_FirstFlockChar_BP_C::STATIC_GetFlockAvoidanceArea(TArray<struct FAvoidanceArea>* Return)
+void ADesertKaiju_FirstFlockChar_BP_C::GetFlockAvoidanceArea(TArray<struct FAvoidanceArea>* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.GetFlockAvoidanceArea");
 
 	ADesertKaiju_FirstFlockChar_BP_C_GetFlockAvoidanceArea_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,17 +178,18 @@ void ADesertKaiju_FirstFlockChar_BP_C::STATIC_GetFlockAvoidanceArea(TArray<struc
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.DistanceToKaiju
-// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_FirstFlockChar_BP_C::STATIC_DistanceToKaiju(float* Distance)
+void ADesertKaiju_FirstFlockChar_BP_C::DistanceToKaiju(float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.DistanceToKaiju");
 
 	ADesertKaiju_FirstFlockChar_BP_C_DistanceToKaiju_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,15 +234,16 @@ float ADesertKaiju_FirstFlockChar_BP_C::BPAdjustDamage(float* IncomingDamage, st
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BPDinoPostBeginPlay
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ADesertKaiju_FirstFlockChar_BP_C::STATIC_BPDinoPostBeginPlay()
+void ADesertKaiju_FirstFlockChar_BP_C::BPDinoPostBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BPDinoPostBeginPlay");
 
 	ADesertKaiju_FirstFlockChar_BP_C_BPDinoPostBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,11 +252,11 @@ void ADesertKaiju_FirstFlockChar_BP_C::STATIC_BPDinoPostBeginPlay()
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.ReceiveTick
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, Const, NetValidate)
+// (Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_FirstFlockChar_BP_C::ReceiveTick(float* DeltaSeconds)
+void ADesertKaiju_FirstFlockChar_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.ReceiveTick");
 
@@ -263,7 +264,6 @@ void ADesertKaiju_FirstFlockChar_BP_C::ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -289,7 +289,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::BP_OnSetDeath()
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, Const, NetValidate)
+// (NetRequest, NetResponse, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -298,7 +298,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::BP_OnSetDeath()
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ADesertKaiju_FirstFlockChar_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ADesertKaiju_FirstFlockChar_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BlueprintAdjustOutputDamage");
 
@@ -308,7 +308,6 @@ float ADesertKaiju_FirstFlockChar_BP_C::STATIC_BlueprintAdjustOutputDamage(int* 
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

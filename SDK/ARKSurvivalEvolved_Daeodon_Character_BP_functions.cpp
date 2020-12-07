@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,7 +62,7 @@ void ADaeodon_Character_BP_C::IsAlly(int otherTargetingTeam, bool* isSameTeamOrA
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.TryTrigger Attack
-// (NetRequest, Native, NetResponse, Static, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -74,7 +74,6 @@ void ADaeodon_Character_BP_C::STATIC_TryTrigger_Attack(int AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,7 +108,7 @@ void ADaeodon_Character_BP_C::ReceiveAnyDamage(float* Damage, class UDamageType*
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.SendNetExecCommandToCharacter
-// (NetReliable, Exec, Event, NetResponse, Static, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -123,6 +122,7 @@ void ADaeodon_Character_BP_C::STATIC_SendNetExecCommandToCharacter(class AShoote
 	params.CommandName = CommandName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -401,7 +401,7 @@ void ADaeodon_Character_BP_C::Toggle_Passive_Healing()
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Event, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -415,7 +415,6 @@ TArray<struct FMultiUseEntry> ADaeodon_Character_BP_C::BPGetMultiUseEntries(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -626,17 +625,17 @@ void ADaeodon_Character_BP_C::MovementChangedEvent()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ADaeodon_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ADaeodon_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Daeodon_Character_BP.Daeodon_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	ADaeodon_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

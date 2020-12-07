@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_FlameThrower_OnFire_Short.Buff_FlameThrower_OnFire_Short_C
-// 0x0000 (0x0950 - 0x0950)
+// 0x0000 (0x0970 - 0x0970)
 class ABuff_FlameThrower_OnFire_Short_C : public ABuff_FlameThrower_OnFire_C
 {
 public:

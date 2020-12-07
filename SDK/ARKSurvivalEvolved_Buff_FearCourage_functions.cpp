@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_FearCourage.Buff_FearCourage_C.GetBuffType
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABuff_FearCourage_C::STATIC_GetBuffType()
+int ABuff_FearCourage_C::GetBuffType()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.GetBuffType");
 
 	ABuff_FearCourage_C_GetBuffType_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,17 +138,18 @@ void ABuff_FearCourage_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XP
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.GetBuffDescription
-// (NetRequest, Exec, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_FearCourage_C::GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_FearCourage_C::STATIC_GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.GetBuffDescription");
 
 	ABuff_FearCourage_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -328,12 +330,12 @@ void ABuff_FearCourage_C::UpdateFleePoint()
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.Send HUDMessage to Rider From Server
-// (NetReliable, Exec, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient)
+// (NetReliable, Exec, Native, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // class FString                  messageID                      (Parm, ZeroConstructor)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FearCourage_C::STATIC_Send_HUDMessage_to_Rider_From_Server(const class FString& messageID, float Duration)
+void ABuff_FearCourage_C::Send_HUDMessage_to_Rider_From_Server(const class FString& messageID, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.Send HUDMessage to Rider From Server");
 
@@ -342,6 +344,7 @@ void ABuff_FearCourage_C::STATIC_Send_HUDMessage_to_Rider_From_Server(const clas
 	params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -633,11 +636,11 @@ void ABuff_FearCourage_C::SendHUDMessageToRider(const struct FStatusValueModifie
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.TerrorActions
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FearCourage_C::STATIC_TerrorActions(float DeltaTime)
+void ABuff_FearCourage_C::TerrorActions(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.TerrorActions");
 
@@ -645,6 +648,7 @@ void ABuff_FearCourage_C::STATIC_TerrorActions(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

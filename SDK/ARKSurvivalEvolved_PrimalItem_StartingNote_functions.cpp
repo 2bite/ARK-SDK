@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,7 +68,7 @@ class UTexture2D* UPrimalItem_StartingNote_C::BPGetItemIcon(class AShooterPlayer
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.IsLocalImplant
-// (Native, Event, NetMulticast, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterPlayerController* ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsLocal                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -81,7 +81,6 @@ void UPrimalItem_StartingNote_C::IsLocalImplant(class AShooterPlayerController* 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,7 +117,7 @@ class FString UPrimalItem_StartingNote_C::BPGetItemName(class FString* ItemNameI
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.Get Survival Quotient String
-// (NetReliable, NetResponse, NetMulticast, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<float>                  SurvData                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class FString                  OutString                      (Parm, OutParm, ZeroConstructor)
@@ -130,6 +129,7 @@ void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<float>* Sur
 	UPrimalItem_StartingNote_C_Get_Survival_Quotient_String_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,14 +143,14 @@ void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<float>* Sur
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemDescription
-// (Net, NetReliable, Native, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItem_StartingNote_C::STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
+class FString UPrimalItem_StartingNote_C::BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemDescription");
 
@@ -160,7 +160,6 @@ class FString UPrimalItem_StartingNote_C::STATIC_BPGetItemDescription(class FStr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,7 +170,7 @@ class FString UPrimalItem_StartingNote_C::STATIC_BPGetItemDescription(class FStr
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPPreInitializeItem
-// (Exec, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UWorld**                 OptionalInitWorld              (Parm, ZeroConstructor, IsPlainOldData)
 

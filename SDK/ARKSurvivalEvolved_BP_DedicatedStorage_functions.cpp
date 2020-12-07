@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -166,16 +166,16 @@ void ABP_DedicatedStorage_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* Ce
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.IsFuel
 // ()
 // Parameters:
-// class UPrimalInventoryComponent* Inventory                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalInventoryComponent* inventory                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ItemClass                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Fuel                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DedicatedStorage_C::IsFuel(class UPrimalInventoryComponent* Inventory, class UClass* ItemClass, bool* Fuel)
+void ABP_DedicatedStorage_C::IsFuel(class UPrimalInventoryComponent* inventory, class UClass* ItemClass, bool* Fuel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.IsFuel");
 
 	ABP_DedicatedStorage_C_IsFuel_Params params;
-	params.Inventory = Inventory;
+	params.inventory = inventory;
 	params.ItemClass = ItemClass;
 
 	auto flags = fn->FunctionFlags;
@@ -386,13 +386,13 @@ bool ABP_DedicatedStorage_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Static, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABP_DedicatedStorage_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABP_DedicatedStorage_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPGetMultiUseEntries");
 

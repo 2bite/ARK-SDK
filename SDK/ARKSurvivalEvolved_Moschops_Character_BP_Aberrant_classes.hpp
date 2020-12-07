@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Moschops_Character_BP_Aberrant.Moschops_Character_BP_Aberrant_C
-// 0x0000 (0x223C - 0x223C)
+// 0x0000 (0x22BC - 0x22BC)
 class AMoschops_Character_BP_Aberrant_C : public AMoschops_Character_BP_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -10,8 +10,8 @@
 #include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 #include "ARKSurvivalEvolved_E_ChargeVariableNames_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
-#include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
 #include "ARKSurvivalEvolved_STR_ChargeBeamInfo_classes.hpp"
+#include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
 
 namespace sdk
 {

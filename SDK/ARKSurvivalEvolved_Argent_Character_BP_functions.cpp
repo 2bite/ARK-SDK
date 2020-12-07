@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ void AArgent_Character_BP_C::BPDidClearCarriedCharacter(class APrimalCharacter**
 
 
 // Function Argent_Character_BP.Argent_Character_BP_C.Allow Passenger in Slot
-// (NetReliable, NetRequest, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, NetMulticast, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Slot                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -48,6 +48,7 @@ void AArgent_Character_BP_C::Allow_Passenger_in_Slot(class APrimalCharacter* Cha
 	params.Slot = Slot;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

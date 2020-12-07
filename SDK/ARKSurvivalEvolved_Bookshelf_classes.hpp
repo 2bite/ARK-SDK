@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bookshelf.Bookshelf_C
-// 0x0008 (0x0DD8 - 0x0DD0)
+// 0x0008 (0x0DE0 - 0x0DD8)
 class ABookshelf_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UPrimalInventoryBP_Bookshelf_C*              PrimalInventoryBP_Bookshelf_C1;                           // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_Bookshelf_C*              PrimalInventoryBP_Bookshelf_C1;                           // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -64,6 +64,113 @@ void AXenomorph_Character_BP_C::Get_Charge_Variable_Interface(TEnumAsByte<E_Char
 		*bBValue = params.bBValue;
 	if (iValue != nullptr)
 		*iValue = params.iValue;
+}
+
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPPreventAttachments
+// ()
+// Parameters:
+// class UObject**                ForItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AXenomorph_Character_BP_C::BPPreventAttachments(class UObject** ForItem)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPPreventAttachments");
+
+	AXenomorph_Character_BP_C_BPPreventAttachments_Params params;
+	params.ForItem = ForItem;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.RefreshTamedAttachments
+// ()
+
+void AXenomorph_Character_BP_C::RefreshTamedAttachments()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.RefreshTamedAttachments");
+
+	AXenomorph_Character_BP_C_RefreshTamedAttachments_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.AllowPlayMontage
+// ()
+// Parameters:
+// class UAnimMontage**           AnimMontage                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AXenomorph_Character_BP_C::AllowPlayMontage(class UAnimMontage** AnimMontage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.AllowPlayMontage");
+
+	AXenomorph_Character_BP_C_AllowPlayMontage_Params params;
+	params.AnimMontage = AnimMontage;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.GetDinoLevelUpAnimation
+// ()
+// Parameters:
+// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UAnimMontage* AXenomorph_Character_BP_C::GetDinoLevelUpAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.GetDinoLevelUpAnimation");
+
+	AXenomorph_Character_BP_C_GetDinoLevelUpAnimation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+// ()
+// Parameters:
+// int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName AXenomorph_Character_BP_C::GetSocketForMeleeTraceForHitBlockers(int* AttackIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.GetSocketForMeleeTraceForHitBlockers");
+
+	AXenomorph_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params params;
+	params.AttackIndex = AttackIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -203,11 +310,11 @@ void AXenomorph_Character_BP_C::DisableEyeGlow()
 
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.UpdateBuryMound
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           ShouldShow                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::UpdateBuryMound(bool ShouldShow)
+void AXenomorph_Character_BP_C::STATIC_UpdateBuryMound(bool ShouldShow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.UpdateBuryMound");
 
@@ -215,6 +322,7 @@ void AXenomorph_Character_BP_C::UpdateBuryMound(bool ShouldShow)
 	params.ShouldShow = ShouldShow;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -356,12 +464,12 @@ bool AXenomorph_Character_BP_C::BPAllowCarryCharacter(class APrimalCharacter** c
 
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.TimeSinceLastAttackForIndex
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Event, Private, Protected, Delegate, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AXenomorph_Character_BP_C::STATIC_TimeSinceLastAttackForIndex(int index)
+float AXenomorph_Character_BP_C::TimeSinceLastAttackForIndex(int index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.TimeSinceLastAttackForIndex");
 
@@ -369,7 +477,6 @@ float AXenomorph_Character_BP_C::STATIC_TimeSinceLastAttackForIndex(int index)
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -488,13 +595,13 @@ void AXenomorph_Character_BP_C::BPOnTamedProcessOrder(class APrimalCharacter** F
 
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Static, Private, Protected, Delegate, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AXenomorph_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AXenomorph_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPGetMultiUseEntries");
 
@@ -502,7 +609,6 @@ TArray<struct FMultiUseEntry> AXenomorph_Character_BP_C::BPGetMultiUseEntries(cl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -585,7 +691,7 @@ bool AXenomorph_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Can Dive
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, NetResponse, Static, Private, Protected, Delegate, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -596,7 +702,6 @@ void AXenomorph_Character_BP_C::STATIC_Can_Dive(bool* Return)
 	AXenomorph_Character_BP_C_Can_Dive_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1211,16 +1316,16 @@ void AXenomorph_Character_BP_C::ReceiveBeginPlay()
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.StartAcidSpray
 // ()
 // Parameters:
-// struct FVector                 hitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 HitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HitDir                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   HitBone                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::StartAcidSpray(const struct FVector& hitLoc, const struct FVector& HitDir, const struct FName& HitBone)
+void AXenomorph_Character_BP_C::StartAcidSpray(const struct FVector& HitLoc, const struct FVector& HitDir, const struct FName& HitBone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.StartAcidSpray");
 
 	AXenomorph_Character_BP_C_StartAcidSpray_Params params;
-	params.hitLoc = hitLoc;
+	params.HitLoc = HitLoc;
 	params.HitDir = HitDir;
 	params.HitBone = HitBone;
 
@@ -1235,16 +1340,16 @@ void AXenomorph_Character_BP_C::StartAcidSpray(const struct FVector& hitLoc, con
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Server_StartAcidSpray
 // ()
 // Parameters:
-// struct FVector                 hitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 HitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HitDir                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   HitBone                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::Server_StartAcidSpray(const struct FVector& hitLoc, const struct FVector& HitDir, const struct FName& HitBone)
+void AXenomorph_Character_BP_C::Server_StartAcidSpray(const struct FVector& HitLoc, const struct FVector& HitDir, const struct FName& HitBone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Server_StartAcidSpray");
 
 	AXenomorph_Character_BP_C_Server_StartAcidSpray_Params params;
-	params.hitLoc = hitLoc;
+	params.HitLoc = HitLoc;
 	params.HitDir = HitDir;
 	params.HitBone = HitBone;
 
@@ -1573,6 +1678,23 @@ void AXenomorph_Character_BP_C::Server_ImpregnateAttack()
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Server_ImpregnateAttack");
 
 	AXenomorph_Character_BP_C_Server_ImpregnateAttack_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Proxy_RefreshAttachments
+// ()
+
+void AXenomorph_Character_BP_C::Proxy_RefreshAttachments()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Proxy_RefreshAttachments");
+
+	AXenomorph_Character_BP_C_Proxy_RefreshAttachments_Params params;
 
 	auto flags = fn->FunctionFlags;
 

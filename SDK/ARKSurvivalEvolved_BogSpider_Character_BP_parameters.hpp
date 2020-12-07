@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -227,7 +227,7 @@ struct ABogSpider_Character_BP_C_AdjustClimbTraceTransform_Params
 {
 	struct FName*                                      WithSocketName;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          WithTraceTransform;                                       // (Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct UObject_FTransform                          ClimberTransform;                                         // (Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct UObject_FTransform                          climberTransform;                                         // (Parm, OutParm, ReferenceParm, IsPlainOldData)
 	struct UObject_FTransform                          AdjustedTransform;                                        // (Parm, OutParm, IsPlainOldData)
 };
 
@@ -473,7 +473,7 @@ struct ABogSpider_Character_BP_C_Check_For_Prevent_Stop_Climbing_Params
 	TArray<bool>                                       traceHitsArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int*                                               numValidHits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               numTraces;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetCorrectSurfaceTraceDistance
@@ -725,7 +725,7 @@ struct ABogSpider_Character_BP_C_BP_OverrideTerminalVelocity_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.SetImpendingLand
 struct ABogSpider_Character_BP_C_SetImpendingLand_Params
 {
-	bool                                               newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.CanChargeJump
@@ -1120,7 +1120,7 @@ struct ABogSpider_Character_BP_C_IsWebSprinting_Pure_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetBitmaskAsString
 struct ABogSpider_Character_BP_C_GetBitmaskAsString_Params
 {
-	int                                                Bitmask;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                bitMask;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class FString                                      String;                                                   // (Parm, OutParm, ZeroConstructor)
 };
 
@@ -1188,7 +1188,7 @@ struct ABogSpider_Character_BP_C_GetIgnoreWebHitRadius_Params
 struct ABogSpider_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

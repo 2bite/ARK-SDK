@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function StructureTurretTek.StructureTurretTek_C.BPCopyCustomSettingsFromTurret
+// ()
+// Parameters:
+// class APrimalStructureTurret** FromTurret                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AStructureTurretTek_C::BPCopyCustomSettingsFromTurret(class APrimalStructureTurret** FromTurret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretTek.StructureTurretTek_C.BPCopyCustomSettingsFromTurret");
+
+	AStructureTurretTek_C_BPCopyCustomSettingsFromTurret_Params params;
+	params.FromTurret = FromTurret;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function StructureTurretTek.StructureTurretTek_C.BPCanBeActivated
 // ()
@@ -101,7 +124,7 @@ int AStructureTurretTek_C::BPIsAllowedToBuildEx(int* CurrentAllowedReason, class
 
 
 // Function StructureTurretTek.StructureTurretTek_C.BlueprintDrawHUD
-// (Net, NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Net, NetRequest, Static, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -117,7 +140,6 @@ void AStructureTurretTek_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, flo
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,12 +248,12 @@ bool AStructureTurretTek_C::BPServerHandleNetExecCommand(class APlayerController
 
 
 // Function StructureTurretTek.StructureTurretTek_C.BPClientDoMultiUse
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Native, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructureTurretTek_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void AStructureTurretTek_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretTek.StructureTurretTek_C.BPClientDoMultiUse");
 
@@ -240,6 +262,7 @@ void AStructureTurretTek_C::STATIC_BPClientDoMultiUse(class APlayerController** 
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -273,13 +296,13 @@ bool AStructureTurretTek_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function StructureTurretTek.StructureTurretTek_C.BPGetMultiUseEntries
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructureTurretTek_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructureTurretTek_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretTek.StructureTurretTek_C.BPGetMultiUseEntries");
 
@@ -287,6 +310,7 @@ TArray<struct FMultiUseEntry> AStructureTurretTek_C::BPGetMultiUseEntries(class 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

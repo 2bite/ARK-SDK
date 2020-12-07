@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -286,7 +286,7 @@ struct AWeapFishingNet_C_Set_Fish_Position_To_Normal_Offset_Params
 // Function WeapFishingNet.WeapFishingNet_C.Get Initial Fish Location Offset
 struct AWeapFishingNet_C_Get_Initial_Fish_Location_Offset_Params
 {
-	class AActor*                                      Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Offset;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -307,7 +307,7 @@ struct AWeapFishingNet_C_BPCanEquip_Params
 struct AWeapFishingNet_C_Reel_Velocity_Params
 {
 	struct FVector                                     Weapon_Location;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class AProjFishingNet_C*                           Net_Projectile;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class AProjFishingNet_C*                           net_projectile;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -315,7 +315,7 @@ struct AWeapFishingNet_C_Reel_Velocity_Params
 struct AWeapFishingNet_C_BPAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -331,7 +331,7 @@ struct AWeapFishingNet_C_Give_Fish_Loot_Params
 // Function WeapFishingNet.WeapFishingNet_C.Generate Fish Meat
 struct AWeapFishingNet_C_Generate_Fish_Meat_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingNet.WeapFishingNet_C.Check For Fish Collision
@@ -342,13 +342,13 @@ struct AWeapFishingNet_C_Check_For_Fish_Collision_Params
 // Function WeapFishingNet.WeapFishingNet_C.On Fish Released
 struct AWeapFishingNet_C_On_Fish_Released_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingNet.WeapFishingNet_C.release fish
 struct AWeapFishingNet_C_release_fish_Params
 {
-	class UObject*                                     Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               pulled_completely_up;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -471,13 +471,13 @@ struct AWeapFishingNet_C_server_reel_Params
 // Function WeapFishingNet.WeapFishingNet_C.OnFishSnaredEvent
 struct AWeapFishingNet_C_OnFishSnaredEvent_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingNet.WeapFishingNet_C.Projectile net collided with fish
 struct AWeapFishingNet_C_Projectile_net_collided_with_fish_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Events

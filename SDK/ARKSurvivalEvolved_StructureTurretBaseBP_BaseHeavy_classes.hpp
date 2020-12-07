@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureTurretBaseBP_BaseHeavy.StructureTurretBaseBP_BaseHeavy_C
-// 0x0019 (0x0EF1 - 0x0ED8)
+// 0x0019 (0x0F01 - 0x0EE8)
 class AStructureTurretBaseBP_BaseHeavy_C : public APrimalStructureTurret
 {
 public:
-	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0ED8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0EE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0EE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bTooManyInRangeInactive;                                  // 0x0EF0(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0EE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SkeletalMesh1;                                            // 0x0EF0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0EF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bTooManyInRangeInactive;                                  // 0x0F00(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34,7 +34,7 @@ public:
 	bool BPCanBeActivated();
 	void BPPostLoadedFromSaveGame();
 	void TurretCheckHardLimit();
-	void STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
+	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void UserConstructionScript();
 	void ExecuteUbergraph_StructureTurretBaseBP_BaseHeavy(int EntryPoint);

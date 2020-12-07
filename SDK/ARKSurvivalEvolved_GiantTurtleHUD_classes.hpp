@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,7 +59,7 @@ public:
 	}
 
 
-	struct FText STATIC_Get_AbilityTextBlock_Text_1();
+	struct FText Get_AbilityTextBlock_Text_1();
 	float Get_BubbleBreathProgressBar_Percent_1();
 	void InitFromGiantTurtle(class AGiantTurtle_Character_BP_C* GiantTurtle_Char_BP);
 	void StartClosingWidget(float NewLifespan);

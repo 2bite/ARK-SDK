@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,7 +106,7 @@ public:
 	}
 
 
-	struct FText Get_HyperdriveValueTextBlock_Text_1();
+	struct FText STATIC_Get_HyperdriveValueTextBlock_Text_1();
 	void Set_Progress_Bar_Foreground_Color(class UObject* ProgressBarObject, const struct FLinearColor& LinearColor);
 	float Get_CosmicPowerBelowProgressBar_Percent_1();
 	struct FText Get_CosmicPowerValueTextBlock_Text_1();

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,16 +13,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Structure_TrainingDummy.Structure_TrainingDummy_C.ReportDPS
-// (Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
+// (Net, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AStructure_TrainingDummy_C::ReportDPS()
+void AStructure_TrainingDummy_C::STATIC_ReportDPS()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TrainingDummy.Structure_TrainingDummy_C.ReportDPS");
 
 	AStructure_TrainingDummy_C_ReportDPS_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

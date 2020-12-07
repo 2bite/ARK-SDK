@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Sheep_Character_BP.Sheep_Character_BP_C.BPClampMaxHarvestHealth
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ASheep_Character_BP_C::BPClampMaxHarvestHealth()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Sheep_Character_BP.Sheep_Character_BP_C.BPClampMaxHarvestHealth");
+
+	ASheep_Character_BP_C_BPClampMaxHarvestHealth_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Sheep_Character_BP.Sheep_Character_BP_C.BPTryMultiUse
 // ()
@@ -38,13 +59,13 @@ bool ASheep_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Sheep_Character_BP.Sheep_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport)
+// (NetReliable, NetRequest, Event, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ASheep_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ASheep_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Sheep_Character_BP.Sheep_Character_BP_C.BPGetMultiUseEntries");
 
@@ -52,7 +73,6 @@ TArray<struct FMultiUseEntry> ASheep_Character_BP_C::STATIC_BPGetMultiUseEntries
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

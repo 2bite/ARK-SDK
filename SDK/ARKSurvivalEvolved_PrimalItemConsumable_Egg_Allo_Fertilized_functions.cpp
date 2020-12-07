@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function PrimalItemConsumable_Egg_Allo_Fertilized.PrimalItemConsumable_Egg_Allo_Fertilized_C.BPPreUseItem
+// ()
+
+void UPrimalItemConsumable_Egg_Allo_Fertilized_C::BPPreUseItem()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_Egg_Allo_Fertilized.PrimalItemConsumable_Egg_Allo_Fertilized_C.BPPreUseItem");
+
+	UPrimalItemConsumable_Egg_Allo_Fertilized_C_BPPreUseItem_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function PrimalItemConsumable_Egg_Allo_Fertilized.PrimalItemConsumable_Egg_Allo_Fertilized_C.ExecuteUbergraph_PrimalItemConsumable_Egg_Allo_Fertilized
 // ()

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Tek_JumpPad_AnimBluePrint.Tek_JumpPad_AnimBluePrint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_852
+// Function Tek_JumpPad_AnimBluePrint.Tek_JumpPad_AnimBluePrint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_870
 // ()
 
-void UTek_JumpPad_AnimBluePrint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_852()
+void UTek_JumpPad_AnimBluePrint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_870()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tek_JumpPad_AnimBluePrint.Tek_JumpPad_AnimBluePrint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_852");
+	static auto fn = UObject::FindObject<UFunction>("Function Tek_JumpPad_AnimBluePrint.Tek_JumpPad_AnimBluePrint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_870");
 
-	UTek_JumpPad_AnimBluePrint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_852_Params params;
+	UTek_JumpPad_AnimBluePrint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_870_Params params;
 
 	auto flags = fn->FunctionFlags;
 

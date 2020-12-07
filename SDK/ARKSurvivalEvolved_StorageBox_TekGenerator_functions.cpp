@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -316,7 +316,7 @@ bool AStorageBox_TekGenerator_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.BPGetMultiUseEntries
-// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, BlueprintCallable, Const, NetValidate)
+// (MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

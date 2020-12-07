@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,7 +83,7 @@ void AIceJumperProjIceBreath_C::Get_Normalized_Vector_On_Ice_Jumper_Plane_from_L
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.Get Best Impact Location
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -92,7 +92,7 @@ void AIceJumperProjIceBreath_C::Get_Normalized_Vector_On_Ice_Jumper_Plane_from_L
 // struct FVector                 ImpactNormal                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           FoundNewimpactLocation         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumperProjIceBreath_C::STATIC_Get_Best_Impact_Location(const struct FVector& Start, const struct FVector& End, class APrimalCharacter* Rider, struct FVector* ImpactLocation, struct FVector* ImpactNormal, bool* FoundNewimpactLocation)
+void AIceJumperProjIceBreath_C::Get_Best_Impact_Location(const struct FVector& Start, const struct FVector& End, class APrimalCharacter* Rider, struct FVector* ImpactLocation, struct FVector* ImpactNormal, bool* FoundNewimpactLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.Get Best Impact Location");
 
@@ -163,7 +163,7 @@ void AIceJumperProjIceBreath_C::ValidateTick(bool* Result)
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.UpdateBeamLength
-// (Event, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AIceJumperProjIceBreath_C::UpdateBeamLength()
 {
@@ -172,6 +172,7 @@ void AIceJumperProjIceBreath_C::UpdateBeamLength()
 	AIceJumperProjIceBreath_C_UpdateBeamLength_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,14 +181,14 @@ void AIceJumperProjIceBreath_C::UpdateBeamLength()
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.GetBeamStartEnd
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ValidatedStart                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ValidatedEnd                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumperProjIceBreath_C::STATIC_GetBeamStartEnd(const struct FVector& Start, const struct FVector& End, struct FVector* ValidatedStart, struct FVector* ValidatedEnd)
+void AIceJumperProjIceBreath_C::GetBeamStartEnd(const struct FVector& Start, const struct FVector& End, struct FVector* ValidatedStart, struct FVector* ValidatedEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.GetBeamStartEnd");
 
@@ -196,7 +197,6 @@ void AIceJumperProjIceBreath_C::STATIC_GetBeamStartEnd(const struct FVector& Sta
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

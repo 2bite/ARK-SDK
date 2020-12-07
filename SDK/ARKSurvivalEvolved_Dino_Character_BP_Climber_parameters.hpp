@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,7 +43,7 @@ struct ADino_Character_BP_Climber_C_AdjustClimbTraceTransform_Params
 {
 	struct FName                                       WithSocketName;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          WithTraceTransform;                                       // (Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct UObject_FTransform                          ClimberTransform;                                         // (Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct UObject_FTransform                          climberTransform;                                         // (Parm, OutParm, ReferenceParm, IsPlainOldData)
 	struct UObject_FTransform                          AdjustedTransform;                                        // (Parm, OutParm, IsPlainOldData)
 };
 
@@ -503,14 +503,14 @@ struct ADino_Character_BP_Climber_C_GetCorrectClimbingTraceType_Params
 struct ADino_Character_BP_Climber_C_GetCorrectLookLockDot_Pure_Params
 {
 	int                                                TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.GetCorrectLookLockDot
 struct ADino_Character_BP_Climber_C_GetCorrectLookLockDot_Params
 {
 	int                                                TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.GetCorrectClimbingTraceWeight_Pure
@@ -560,9 +560,9 @@ struct ADino_Character_BP_Climber_C_ProcessResultsOfClimbingTraces_Params
 	struct FVector                                     desiredSurfaceLocation;                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isSurfaceValid;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     surfaceLocation;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceLocation_Move;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     surfaceNormal_Move;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceLocation_Move;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal_Move;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.CenterSphereTraceForSurfaceLocation
@@ -577,7 +577,7 @@ struct ADino_Character_BP_Climber_C_CenterSphereTraceForSurfaceLocation_Params
 struct ADino_Character_BP_Climber_C_TraceForClimbableSurface_Params
 {
 	TArray<struct UObject_FTransform>                  traceSocketOffsetTransforms;                              // (Parm, OutParm, ZeroConstructor, ReferenceParm)
-	struct UObject_FTransform                          ClimberTransform;                                         // (Parm, IsPlainOldData)
+	struct UObject_FTransform                          climberTransform;                                         // (Parm, IsPlainOldData)
 	float                                              TraceLength;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               preventTraceRetries;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<int>                                        currSurfaceTraceIndecesArray;                             // (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -599,7 +599,7 @@ struct ADino_Character_BP_Climber_C_ConvertRotatorToLocal_Pure_Params
 struct ADino_Character_BP_Climber_C_ClimbingIK_TraceForNewSurfaceNormals_Params
 {
 	class FString                                      socketGroupSubstring;                                     // (Parm, ZeroConstructor)
-	float                                              dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ClimbingIK_UpdateMeshHeightOffset
@@ -640,7 +640,7 @@ struct ADino_Character_BP_Climber_C_ReceiveHit_Params
 struct ADino_Character_BP_Climber_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -722,13 +722,13 @@ struct ADino_Character_BP_Climber_C_RemoveRiderFromFinalCameraRotationArrays_Par
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.GetClimberLookDirDotToClimbingNormal_Pure
 struct ADino_Character_BP_Climber_C_GetClimberLookDirDotToClimbingNormal_Pure_Params
 {
-	float                                              dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.GetClimberLookDirDotToClimbingNormal
 struct ADino_Character_BP_Climber_C_GetClimberLookDirDotToClimbingNormal_Params
 {
-	float                                              dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.GetClimberUpVector_Pure
@@ -747,7 +747,7 @@ struct ADino_Character_BP_Climber_C_GetCurrentRiderFinalCameraRotationArrayIndex
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Update Riding Players Final Camera Rotations
 struct ADino_Character_BP_Climber_C_Update_Riding_Players_Final_Camera_Rotations_Params
 {
-	bool                                               startedClimbing;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               StartedClimbing;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.BPDoAttack
@@ -801,7 +801,7 @@ struct ADino_Character_BP_Climber_C_IsPrimalCharacterFriendly_Params
 struct ADino_Character_BP_Climber_C_Get_Climber_Look_Dir_Dot_to_Normal_Params
 {
 	struct FVector                                     Normal;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Dot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.GetClimberViewLocation_Pure
@@ -882,7 +882,7 @@ struct ADino_Character_BP_Climber_C_Stop_All_Climber_Logic_Params
 struct ADino_Character_BP_Climber_C_GetClimbingSurfaceNormalFromRotation_Params
 {
 	struct FRotator                                    climbingRotation;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.GetAngleDeltaBetweenVectors
@@ -1383,7 +1383,7 @@ struct ADino_Character_BP_Climber_C_LerpRotatorToTarget_Params
 {
 	struct FRotator                                    currentRotator;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    targetRotator;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              LerpSpeed;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              lerpSpeed;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    lerpedRotator;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -1502,7 +1502,7 @@ struct ADino_Character_BP_Climber_C_GetClimbingMoveDirFromRotation_Params
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Make Climbing Rotation fromSurfaceNormal
 struct ADino_Character_BP_Climber_C_Make_Climbing_Rotation_fromSurfaceNormal_Params
 {
-	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Rotation;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -1540,7 +1540,7 @@ struct ADino_Character_BP_Climber_C_Can_Climber_Currently_Climb_Out_Of_Water_Par
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.CheckForClimbOutOfWater
 struct ADino_Character_BP_Climber_C_CheckForClimbOutOfWater_Params
 {
-	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.UpdateControlledClientClimber
@@ -1731,7 +1731,7 @@ struct ADino_Character_BP_Climber_C_Check_For_Prevent_Stop_Climbing_Params
 	TArray<bool>                                       traceHitsArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int                                                numValidHits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                numTraces;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Update RiderWithClimberState
@@ -1889,10 +1889,10 @@ struct ADino_Character_BP_Climber_C_ReachedTop_Of_Climb_Params
 struct ADino_Character_BP_Climber_C_UpdateClimbingVars_Params
 {
 	bool                                               validSurfaceFound;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     surfaceNormal_Move;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal_Move;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     surfaceLocation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceLocation_Move;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceLocation_Move;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<bool>                                       hitMap;                                                   // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	TArray<int>                                        traceIndexArray;                                          // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
@@ -2148,7 +2148,7 @@ struct ADino_Character_BP_Climber_C_Climber_AI_SetAttachedToSurface_Params
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Get Climber Ai Controller
 struct ADino_Character_BP_Climber_C_Get_Climber_Ai_Controller_Params
 {
-	class ADino_AIController_BP_Climber_C*             Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ADino_AIController_BP_Climber_C*             ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber_AI_DetachFromSurface
@@ -2188,7 +2188,7 @@ struct ADino_Character_BP_Climber_C_Update_Climber_Transforms_Params
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Get Default Climber
 struct ADino_Character_BP_Climber_C_Get_Default_Climber_Params
 {
-	class ADino_Character_BP_Climber_C*                Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ADino_Character_BP_Climber_C*                ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.IsClimberGrounded
@@ -2208,10 +2208,10 @@ struct ADino_Character_BP_Climber_C_CalcCurrentClimbableSurface_Params
 	bool                                               OverrideTraceUseMap;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<bool>                                       newUseMap;                                                // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	bool                                               validSurfaceFound;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     surfaceNormal_Move;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal_Move;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     surfaceLocation;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceLocation_Move;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceLocation_Move;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	TArray<bool>                                       hitMap;                                                   // (Parm, OutParm, ZeroConstructor)
 	TArray<int>                                        traceIndexArray;                                          // (Parm, OutParm, ZeroConstructor)
 };

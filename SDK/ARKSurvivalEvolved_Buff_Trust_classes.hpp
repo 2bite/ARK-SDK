@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Trust.Buff_Trust_C
-// 0x0000 (0x0E80 - 0x0E80)
+// 0x0000 (0x0EA0 - 0x0EA0)
 class ABuff_Trust_C : public ABuff_FearCourage_C
 {
 public:

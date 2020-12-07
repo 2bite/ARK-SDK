@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,7 +58,7 @@ struct AStorageBox_IndustrialGrinder_C_GrindItem_Params
 {
 	class UPrimalItem*                                 ItemToGrind;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	class AShooterPlayerController*                    ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               GrindStack;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               grindStack;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               MuteSound;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

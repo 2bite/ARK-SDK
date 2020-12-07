@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,12 @@ void AFishBasket_C::ReceiveBeginPlay()
 
 
 // Function FishBasket.FishBasket_C.TrapFish
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport)
+// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    TrapFish                       (Parm, ZeroConstructor, IsPlainOldData)
 // class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void AFishBasket_C::STATIC_TrapFish(class APrimalDinoCharacter* TrapFish, class APlayerController* ForPC)
+void AFishBasket_C::TrapFish(class APrimalDinoCharacter* TrapFish, class APlayerController* ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FishBasket.FishBasket_C.TrapFish");
 
@@ -44,7 +44,6 @@ void AFishBasket_C::STATIC_TrapFish(class APrimalDinoCharacter* TrapFish, class 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +77,7 @@ bool AFishBasket_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex
 
 
 // Function FishBasket.FishBasket_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

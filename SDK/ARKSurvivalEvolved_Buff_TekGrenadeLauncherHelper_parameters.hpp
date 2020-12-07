@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.GetValidAmmoTypes_1
+struct ABuff_TekGrenadeLauncherHelper_C_GetValidAmmoTypes_1_Params
+{
+	TArray<class UClass*>                              TypesInInventory;                                         // (Parm, OutParm, ZeroConstructor)
+};
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.ReceiveDestroyed
 struct ABuff_TekGrenadeLauncherHelper_C_ReceiveDestroyed_Params

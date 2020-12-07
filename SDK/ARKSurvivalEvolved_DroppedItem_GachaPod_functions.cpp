@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,9 +100,9 @@ void ADroppedItem_GachaPod_C::ReceiveBeginPlay()
 
 
 // Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.CheckForItem
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Delegate, HasDefaults)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
 
-void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
+void ADroppedItem_GachaPod_C::CheckForItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.CheckForItem");
 
@@ -117,9 +117,9 @@ void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
 
 
 // Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ActivateFX
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Delegate, HasDefaults)
+// (Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
 
-void ADroppedItem_GachaPod_C::STATIC_ActivateFX()
+void ADroppedItem_GachaPod_C::ActivateFX()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ActivateFX");
 

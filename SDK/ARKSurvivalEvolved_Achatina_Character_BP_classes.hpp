@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,18 +15,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Achatina_Character_BP.Achatina_Character_BP_C
-// 0x0033 (0x213B - 0x2108)
+// 0x0033 (0x21BB - 0x2188)
 class AAchatina_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UParticleSystemComponent*                    Trail;                                                    // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDinoCharacterStatusComponent_BP_Achatina_C* DinoCharacterStatus_BP_Achatina_C1;                       // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      AchaSleepingDinoSettings;                                 // 0x2118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x2120(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
-	class APrimalCharacter*                            K2Node_CustomEvent_DiedCharacter;                         // 0x2130(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x2138(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x2139(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x213A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UParticleSystemComponent*                    trail;                                                    // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Achatina_C* DinoCharacterStatus_BP_Achatina_C1;                       // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      AchaSleepingDinoSettings;                                 // 0x2198(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x21A0(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
+	class APrimalCharacter*                            K2Node_CustomEvent_DiedCharacter;                         // 0x21B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x21B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x21B9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x21BA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

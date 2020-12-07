@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ struct UFishingNetHelperFunction_C_Cancel_Cast_Params
 struct UFishingNetHelperFunction_C_Caught_Fish_Params
 {
 	class UObject*                                     Projectile_Owner;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FishingNetHelperFunction.FishingNetHelperFunction_C.Pass Projectile Reference
@@ -49,7 +49,7 @@ struct UFishingNetHelperFunction_C_reel_Params
 // Function FishingNetHelperFunction.FishingNetHelperFunction_C.Update Rope
 struct UFishingNetHelperFunction_C_Update_Rope_Params
 {
-	class AShooterProjectile*                          Net_Projectile;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterProjectile*                          net_projectile;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Rope_Endpoint_Location;                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

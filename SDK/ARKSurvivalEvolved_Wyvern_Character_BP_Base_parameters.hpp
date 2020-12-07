@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.GetSocketForMeleeTraceForHitBlockers
+struct AWyvern_Character_BP_Base_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.SetTurretMode
 struct AWyvern_Character_BP_Base_C_SetTurretMode_Params

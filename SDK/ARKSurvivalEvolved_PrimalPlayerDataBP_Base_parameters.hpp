@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss
+struct UPrimalPlayerDataBP_Base_C_BPForceDefeatedBoss_Params
+{
+	int*                                               DifficultyIndex;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      BossName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterPlayerController**                   PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.SetPlayerHexagonCount
+struct UPrimalPlayerDataBP_Base_C_SetPlayerHexagonCount_Params
+{
+	int*                                               NewHexagonCount;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.GetPlayerHexagonCount
+struct UPrimalPlayerDataBP_Base_C_GetPlayerHexagonCount_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPCreatedNewPlayerData
 struct UPrimalPlayerDataBP_Base_C_BPCreatedNewPlayerData_Params

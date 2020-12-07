@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function EngramEntry_Glowstick.EngramEntry_Glowstick_C.ExecuteUbergraph_EngramEntry_GlowStick
-struct UEngramEntry_Glowstick_C_ExecuteUbergraph_EngramEntry_GlowStick_Params
+// Function EngramEntry_Glowstick.EngramEntry_GlowStick_C.ExecuteUbergraph_EngramEntry_Glowstick
+struct UEngramEntry_GlowStick_C_ExecuteUbergraph_EngramEntry_Glowstick_Params
 {
 	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };

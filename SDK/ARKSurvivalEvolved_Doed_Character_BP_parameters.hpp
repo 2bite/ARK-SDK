@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Doed_Character_BP.Doed_Character_BP_C.BPChargingModifyInputAcceleration
+struct ADoed_Character_BP_C_BPChargingModifyInputAcceleration_Params
+{
+	struct FVector*                                    inputAcceleration;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Doed_Character_BP.Doed_Character_BP_C.BlueprintCanAttack
 struct ADoed_Character_BP_C_BlueprintCanAttack_Params

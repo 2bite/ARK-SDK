@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,8 +21,8 @@ struct UBaseNoteMeshAnimBP_C_BlueprintTriggerAnimationEvent_Params
 	float                                              playedAnimLength;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BaseNoteMeshAnimBP.BaseNoteMeshAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2220
-struct UBaseNoteMeshAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2220_Params
+// Function BaseNoteMeshAnimBP.BaseNoteMeshAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2256
+struct UBaseNoteMeshAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2256_Params
 {
 };
 

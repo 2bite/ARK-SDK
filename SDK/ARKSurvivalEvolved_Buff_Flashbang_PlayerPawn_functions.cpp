@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -96,13 +96,13 @@ void ABuff_Flashbang_PlayerPawn_C::ShouldStartFading(bool* ShouldFade)
 
 
 // Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.IsNearbyStructure
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            CheckIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          IndexOffset                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           StructureInBetween             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Flashbang_PlayerPawn_C::IsNearbyStructure(int CheckIndex, float IndexOffset, bool* StructureInBetween)
+void ABuff_Flashbang_PlayerPawn_C::STATIC_IsNearbyStructure(int CheckIndex, float IndexOffset, bool* StructureInBetween)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.IsNearbyStructure");
 
@@ -111,7 +111,6 @@ void ABuff_Flashbang_PlayerPawn_C::IsNearbyStructure(int CheckIndex, float Index
 	params.IndexOffset = IndexOffset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,9 +182,9 @@ void ABuff_Flashbang_PlayerPawn_C::CalculateWeightedIntensityAverage(float Expos
 // Parameters:
 // class AActor*                  Actor1                         (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor2                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* retVal)
+void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* Retval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.Get Normalized Distance");
 
@@ -199,8 +198,8 @@ void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1,
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (Retval != nullptr)
+		*Retval = params.Retval;
 }
 
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,31 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function MissionType_Race.MissionType_Race_C.BPCanRideMissionDino
+// ()
+// Parameters:
+// class AShooterCharacter**      Character                      (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter**   Dino                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMissionType_Race_C::BPCanRideMissionDino(class AShooterCharacter** Character, class APrimalDinoCharacter** Dino)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MissionType_Race.MissionType_Race_C.BPCanRideMissionDino");
+
+	AMissionType_Race_C_BPCanRideMissionDino_Params params;
+	params.Character = Character;
+	params.Dino = Dino;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function MissionType_Race.MissionType_Race_C.OnTeleportedCharInBounds
 // ()
@@ -33,14 +58,14 @@ void AMissionType_Race_C::OnTeleportedCharInBounds(class APrimalCharacter* forCh
 
 
 // Function MissionType_Race.MissionType_Race_C.GetNearbyWaterLocation
-// (NetReliable, NetMulticast, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // struct FVector                 StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Forward                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          OverrideZOffset                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 FinalLocation                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMissionType_Race_C::GetNearbyWaterLocation(const struct FVector& StartLocation, const struct FVector& Forward, float OverrideZOffset, struct FVector* FinalLocation)
+void AMissionType_Race_C::STATIC_GetNearbyWaterLocation(const struct FVector& StartLocation, const struct FVector& Forward, float OverrideZOffset, struct FVector* FinalLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MissionType_Race.MissionType_Race_C.GetNearbyWaterLocation");
 
@@ -50,6 +75,7 @@ void AMissionType_Race_C::GetNearbyWaterLocation(const struct FVector& StartLoca
 	params.OverrideZOffset = OverrideZOffset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +113,7 @@ void AMissionType_Race_C::Is_Power_Up_Active_for_Player(class AShooterPlayerCont
 
 
 // Function MissionType_Race.MissionType_Race_C.Handle Out Of Bounds
-// (NetRequest, Native, Event, NetMulticast, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (Exec, Event, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetValidate)
 
 void AMissionType_Race_C::Handle_Out_Of_Bounds()
 {
@@ -96,7 +122,6 @@ void AMissionType_Race_C::Handle_Out_Of_Bounds()
 	AMissionType_Race_C_Handle_Out_Of_Bounds_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,12 +152,12 @@ void AMissionType_Race_C::TeleportPlayerAndDinoToCheckpoint(class APrimalDinoCha
 
 
 // Function MissionType_Race.MissionType_Race_C.SpawnDinoForPlayer
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetReliable, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class AShooterCharacter*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalDinoCharacter*    SpawnedDino                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMissionType_Race_C::STATIC_SpawnDinoForPlayer(class AShooterCharacter* Player, class APrimalDinoCharacter** SpawnedDino)
+void AMissionType_Race_C::SpawnDinoForPlayer(class AShooterCharacter* Player, class APrimalDinoCharacter** SpawnedDino)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MissionType_Race.MissionType_Race_C.SpawnDinoForPlayer");
 
@@ -140,7 +165,6 @@ void AMissionType_Race_C::STATIC_SpawnDinoForPlayer(class AShooterCharacter* Pla
 	params.Player = Player;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -152,7 +176,7 @@ void AMissionType_Race_C::STATIC_SpawnDinoForPlayer(class AShooterCharacter* Pla
 
 
 // Function MissionType_Race.MissionType_Race_C.Handle Player Time Outs
-// (NetRequest, Exec, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 
 void AMissionType_Race_C::Handle_Player_Time_Outs()
 {
@@ -161,6 +185,7 @@ void AMissionType_Race_C::Handle_Player_Time_Outs()
 	AMissionType_Race_C_Handle_Player_Time_Outs_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,7 +227,7 @@ bool AMissionType_Race_C::BPOverrideMissionTimerColor(class AShooterPlayerContro
 
 
 // Function MissionType_Race.MissionType_Race_C.GetBestTimeForPlayer
-// (NetReliable, NetRequest, NetResponse, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class AShooterPlayerController* ShooterCont                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          BestValidTime                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -226,7 +251,7 @@ void AMissionType_Race_C::GetBestTimeForPlayer(class AShooterPlayerController* S
 
 
 // Function MissionType_Race.MissionType_Race_C.BPGetExtraLocalMissionIndicators
-// (NetReliable, NetRequest, Event, NetResponse, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class APlayerController**      Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter**      PlayerPawn                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -255,7 +280,7 @@ void AMissionType_Race_C::BPGetExtraLocalMissionIndicators(class APlayerControll
 
 
 // Function MissionType_Race.MissionType_Race_C.GetBestTime
-// (NetReliable, NetRequest, Static, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // float                          BestTime                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -277,7 +302,7 @@ void AMissionType_Race_C::STATIC_GetBestTime(float* BestTime)
 
 
 // Function MissionType_Race.MissionType_Race_C.NotifyAllTopPlayerFinish
-// (NetReliable, NetRequest, Exec, Native, Static, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // bool                           Finished                       (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -291,7 +316,6 @@ void AMissionType_Race_C::STATIC_NotifyAllTopPlayerFinish(bool Finished, class A
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -300,7 +324,7 @@ void AMissionType_Race_C::STATIC_NotifyAllTopPlayerFinish(bool Finished, class A
 
 
 // Function MissionType_Race.MissionType_Race_C.Play Leaderboard Reactions
-// (NetReliable, Exec, NetResponse, Static, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // float                          Leaderboard_Score_Float        (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -314,6 +338,7 @@ void AMissionType_Race_C::STATIC_Play_Leaderboard_Reactions(float Leaderboard_Sc
 	params.Player = Player;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -573,7 +598,7 @@ void AMissionType_Race_C::Play_Checkpoint_Reaction(bool Final_Checkpoint, class 
 
 
 // Function MissionType_Race.MissionType_Race_C.GeneratePerPlayerPhaseRequirements
-// (NetReliable, Exec, Event, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class AShooterPlayerController** Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter**      Character                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -700,7 +725,7 @@ class FString AMissionType_Race_C::BPGetMissionTimerText(class AShooterPlayerCon
 
 
 // Function MissionType_Race.MissionType_Race_C.GeneratePhaseRequirements
-// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // struct FName*                  PhaseName                      (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMissionPhaseRequirement> Requirements                   (Parm, OutParm, ZeroConstructor)
@@ -713,6 +738,7 @@ void AMissionType_Race_C::STATIC_GeneratePhaseRequirements(struct FName* PhaseNa
 	params.PhaseName = PhaseName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -748,7 +774,7 @@ void AMissionType_Race_C::GetDinoNameFromArray(int ArrayIndex, class FString* It
 
 
 // Function MissionType_Race.MissionType_Race_C.GetNamedDinoSetup
-// (NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // struct FDinoSetup              InSetup                        (Parm)
 // class FString                  Name                           (Parm, ZeroConstructor)
@@ -799,7 +825,7 @@ bool AMissionType_Race_C::IsMissionComplete(class AShooterCharacter** forCharact
 
 
 // Function MissionType_Race.MissionType_Race_C.TryIncrementCheckpoint
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class AShooterPlayerController* PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class AMissionTrigger*         HitTrigger                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -829,7 +855,7 @@ void AMissionType_Race_C::STATIC_TryIncrementCheckpoint(class AShooterPlayerCont
 
 
 // Function MissionType_Race.MissionType_Race_C.BPIsPhaseComplete
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // struct FName*                  PhaseName                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -853,7 +879,7 @@ bool AMissionType_Race_C::BPIsPhaseComplete(struct FName* PhaseName)
 
 
 // Function MissionType_Race.MissionType_Race_C.GetPerPlayerWorldIndicators
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class AShooterPlayerController** Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter**      Character                      (Parm, ZeroConstructor, IsPlainOldData)

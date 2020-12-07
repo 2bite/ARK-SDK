@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,9 +71,9 @@ bool AUnderwater_Base_SM_C::BPForceConsideredEnemyFoundation(class APlayerContro
 
 
 // Function Underwater_Base_SM.Underwater_Base_SM_C.ChangedCompartmentFloodState
-// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Exec, Event, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AUnderwater_Base_SM_C::STATIC_ChangedCompartmentFloodState()
+void AUnderwater_Base_SM_C::ChangedCompartmentFloodState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Underwater_Base_SM.Underwater_Base_SM_C.ChangedCompartmentFloodState");
 

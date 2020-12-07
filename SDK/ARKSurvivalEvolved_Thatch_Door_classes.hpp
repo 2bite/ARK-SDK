@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Thatch_Door.Thatch_Door_C
-// 0x0008 (0x0B40 - 0x0B38)
+// 0x0008 (0x0B50 - 0x0B48)
 class AThatch_Door_C : public ADoor_Base_SM_C
 {
 public:
-	class USphereComponent*                            StasisComponent_1;                                        // 0x0B38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent_1;                                        // 0x0B48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

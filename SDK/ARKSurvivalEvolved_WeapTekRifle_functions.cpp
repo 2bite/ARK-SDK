@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapTekRifle.WeapTekRifle_C.BPAppliedPrimalItemToWeapon
-// (NetRequest, Exec, Native, Event, NetResponse, Private, Protected, Delegate, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
 {
@@ -22,7 +22,6 @@ void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
 	AWeapTekRifle_C_BPAppliedPrimalItemToWeapon_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +30,9 @@ void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
 
 
 // Function WeapTekRifle.WeapTekRifle_C.ReceiveDestroyed
-// (NetRequest, Static, Private, Protected, Delegate, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AWeapTekRifle_C::STATIC_ReceiveDestroyed()
+void AWeapTekRifle_C::ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekRifle.WeapTekRifle_C.ReceiveDestroyed");
 

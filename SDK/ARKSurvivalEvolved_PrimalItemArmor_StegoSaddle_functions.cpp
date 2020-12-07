@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function PrimalItemArmor_StegoSaddle.PrimalItemArmor_StegoSaddle_C.BlueprintUnequipped
+// ()
+
+void UPrimalItemArmor_StegoSaddle_C::BlueprintUnequipped()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_StegoSaddle.PrimalItemArmor_StegoSaddle_C.BlueprintUnequipped");
+
+	UPrimalItemArmor_StegoSaddle_C_BlueprintUnequipped_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function PrimalItemArmor_StegoSaddle.PrimalItemArmor_StegoSaddle_C.ExecuteUbergraph_PrimalItemArmor_StegoSaddle
 // ()

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void UDinoAttackState_Spindles_MinigunModeActivate_C::OnEndEvent()
 
 
 // Function DinoAttackState_Spindles_MinigunModeActivate.DinoAttackState_Spindles_MinigunModeActivate_C.BPCanAttack
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         attackRangeOffset              (Parm, ZeroConstructor, IsPlainOldData)
@@ -47,7 +47,6 @@ bool UDinoAttackState_Spindles_MinigunModeActivate_C::STATIC_BPCanAttack(float* 
 	params.OtherTarget = OtherTarget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

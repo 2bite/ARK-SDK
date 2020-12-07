@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalGameData_BP.PrimalGameData_BP_C
-// 0x0000 (0x1F58 - 0x1F58)
+// 0x0000 (0x2000 - 0x2000)
 class UPrimalGameData_BP_C : public UBASE_PrimalGameData_BP_C
 {
 public:

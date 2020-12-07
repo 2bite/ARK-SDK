@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -85,9 +85,9 @@ bool AScout_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* N
 // Function Scout_Character_BP.Scout_Character_BP_C.ServerIsFiringItemInInventory
 // ()
 // Parameters:
-// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AScout_Character_BP_C::ServerIsFiringItemInInventory(bool* retVal)
+void AScout_Character_BP_C::ServerIsFiringItemInInventory(bool* Retval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.ServerIsFiringItemInInventory");
 
@@ -99,8 +99,8 @@ void AScout_Character_BP_C::ServerIsFiringItemInInventory(bool* retVal)
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (Retval != nullptr)
+		*Retval = params.Retval;
 }
 
 
@@ -167,18 +167,17 @@ bool AScout_Character_BP_C::BP_InterceptTurnInput(float* AxisValue)
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.Set StatsFromItem
-// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (Net, NetReliable, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<float>                  Stats                          (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AScout_Character_BP_C::Set_StatsFromItem(TArray<float>* Stats)
+void AScout_Character_BP_C::STATIC_Set_StatsFromItem(TArray<float>* Stats)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.Set StatsFromItem");
 
 	AScout_Character_BP_C_Set_StatsFromItem_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -269,12 +268,12 @@ void AScout_Character_BP_C::ClearExpiredDinoAIData()
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.SetIsFleeingForDino
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    Dino                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsFleeing                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AScout_Character_BP_C::STATIC_SetIsFleeingForDino(class APrimalDinoCharacter* Dino, bool IsFleeing)
+void AScout_Character_BP_C::SetIsFleeingForDino(class APrimalDinoCharacter* Dino, bool IsFleeing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.SetIsFleeingForDino");
 
@@ -403,12 +402,12 @@ void AScout_Character_BP_C::IsDashing(bool* Result)
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.BPGetHUDElements
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void AScout_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void AScout_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.BPGetHUDElements");
 
@@ -416,6 +415,7 @@ void AScout_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TA
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -427,7 +427,7 @@ void AScout_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TA
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.ReceiveTick
-// (NetReliable, NetRequest, Static, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -449,9 +449,9 @@ void AScout_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 // Function Scout_Character_BP.Scout_Character_BP_C.ScoutIsFirstPerson
 // ()
 // Parameters:
-// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AScout_Character_BP_C::ScoutIsFirstPerson(bool* retVal)
+void AScout_Character_BP_C::ScoutIsFirstPerson(bool* Retval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.ScoutIsFirstPerson");
 
@@ -463,8 +463,8 @@ void AScout_Character_BP_C::ScoutIsFirstPerson(bool* retVal)
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (Retval != nullptr)
+		*Retval = params.Retval;
 }
 
 
@@ -546,7 +546,7 @@ bool AScout_Character_BP_C::BPHandleOnStopFire()
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.Update Target Impact VFX_Implementation
-// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (Net, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AScout_Character_BP_C::STATIC_Update_Target_Impact_VFX_Implementation()
 {
@@ -555,7 +555,6 @@ void AScout_Character_BP_C::STATIC_Update_Target_Impact_VFX_Implementation()
 	AScout_Character_BP_C_Update_Target_Impact_VFX_Implementation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -811,9 +810,9 @@ struct FVector AScout_Character_BP_C::BPGetFPVViewLocation(class APrimalCharacte
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.PrivateTracker Missed
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AScout_Character_BP_C::PrivateTracker_Missed()
+void AScout_Character_BP_C::STATIC_PrivateTracker_Missed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.PrivateTracker Missed");
 
@@ -828,12 +827,12 @@ void AScout_Character_BP_C::PrivateTracker_Missed()
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.Dash
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
+// (Native, Event, NetResponse, Static, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Impulse                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AScout_Character_BP_C::Dash(const struct FVector& Direction, float Impulse)
+void AScout_Character_BP_C::STATIC_Dash(const struct FVector& Direction, float Impulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.Dash");
 
@@ -946,13 +945,13 @@ void AScout_Character_BP_C::ServerIs_Tracked_Target(class AActor* Target, bool* 
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.Tracker Hit Character
-// (Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Native, NetResponse, NetMulticast, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        HitCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ApplyTracker                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ValidTarget                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AScout_Character_BP_C::STATIC_Tracker_Hit_Character(class APrimalCharacter* HitCharacter, bool ApplyTracker, bool* ValidTarget)
+void AScout_Character_BP_C::Tracker_Hit_Character(class APrimalCharacter* HitCharacter, bool ApplyTracker, bool* ValidTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.Tracker Hit Character");
 
@@ -973,7 +972,7 @@ void AScout_Character_BP_C::STATIC_Tracker_Hit_Character(class APrimalCharacter*
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.BPAdjustDamage
-// (NetRequest, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -996,6 +995,7 @@ float AScout_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamag
 	params.PointHitInfo = PointHitInfo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1023,12 +1023,12 @@ void AScout_Character_BP_C::BP_OnSetDeath()
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.BPHandleControllerInitiatedAttack
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AScout_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
+bool AScout_Character_BP_C::STATIC_BPHandleControllerInitiatedAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.BPHandleControllerInitiatedAttack");
 

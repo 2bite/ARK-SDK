@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjFishingNet.ProjFishingNet_C.Trace For Fish and Add Them
-// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, NetResponse, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AProjFishingNet_C::Trace_For_Fish_and_Add_Them()
 {
@@ -22,7 +22,6 @@ void AProjFishingNet_C::Trace_For_Fish_and_Add_Them()
 	AProjFishingNet_C_Trace_For_Fish_and_Add_Them_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,7 +92,7 @@ void AProjFishingNet_C::ReceiveActorEndOverlap(class AActor** OtherActor)
 
 
 // Function ProjFishingNet.ProjFishingNet_C.ReceiveBeginPlay
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AProjFishingNet_C::STATIC_ReceiveBeginPlay()
 {
@@ -102,7 +101,6 @@ void AProjFishingNet_C::STATIC_ReceiveBeginPlay()
 	AProjFishingNet_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,11 +145,11 @@ void AProjFishingNet_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AAc
 
 
 // Function ProjFishingNet.ProjFishingNet_C.ReceiveTick
-// (NetRequest, Exec, Native, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Native, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjFishingNet_C::ReceiveTick(float* DeltaSeconds)
+void AProjFishingNet_C::STATIC_ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjFishingNet.ProjFishingNet_C.ReceiveTick");
 
@@ -420,14 +418,14 @@ void AProjFishingNet_C::BndEvt__StaticMesh3_K2Node_ComponentBoundEvent_458_Compo
 // Function ProjFishingNet.ProjFishingNet_C.try catch fish
 // ()
 // Parameters:
-// class AActor*                  Fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjFishingNet_C::try_catch_fish(class AActor* Fish)
+void AProjFishingNet_C::try_catch_fish(class AActor* fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjFishingNet.ProjFishingNet_C.try catch fish");
 
 	AProjFishingNet_C_try_catch_fish_Params params;
-	params.Fish = Fish;
+	params.fish = fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -460,14 +458,14 @@ void AProjFishingNet_C::Stop_Projectile_on_Clients(const struct FHitResult& Impa
 // Function ProjFishingNet.ProjFishingNet_C.try add fish to net
 // ()
 // Parameters:
-// class AActor*                  Fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjFishingNet_C::try_add_fish_to_net(class AActor* Fish)
+void AProjFishingNet_C::try_add_fish_to_net(class AActor* fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjFishingNet.ProjFishingNet_C.try add fish to net");
 
 	AProjFishingNet_C_try_add_fish_to_net_Params params;
-	params.Fish = Fish;
+	params.fish = fish;
 
 	auto flags = fn->FunctionFlags;
 

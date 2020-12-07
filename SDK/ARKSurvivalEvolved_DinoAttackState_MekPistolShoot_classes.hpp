@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void BPOnAttackTick(float* DeltaTime);
+	void STATIC_BPOnAttackTick(float* DeltaTime);
 	void BPOnAttackStart(int* AttackIndex);
 	void GetMuzzleInfo(struct FVector* Location, struct FVector* Direction);
 	void ExecuteUbergraph_DinoAttackState_MekPistolShoot(int EntryPoint);

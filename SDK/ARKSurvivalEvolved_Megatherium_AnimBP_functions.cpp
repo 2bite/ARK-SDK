@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Megatherium_AnimBP.Megatherium_AnimBP_C.BlueprintUpdateAnimation
+// ()
+// Parameters:
+// float*                         DeltaTimeX                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMegatherium_AnimBP_C::BlueprintUpdateAnimation(float* DeltaTimeX)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Megatherium_AnimBP.Megatherium_AnimBP_C.BlueprintUpdateAnimation");
+
+	UMegatherium_AnimBP_C_BlueprintUpdateAnimation_Params params;
+	params.DeltaTimeX = DeltaTimeX;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Megatherium_AnimBP.Megatherium_AnimBP_C.ExecuteUbergraph_Megatherium_AnimBP
 // ()

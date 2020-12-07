@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void ABuff_IsTameRiding_C::GetTimeBasedAlpha(float* Alpha)
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.GetBuffDescription
-// (NetReliable, NetRequest, Static, Public, Protected, HasDefaults, DLLImport, Const, NetValidate)
+// (Exec, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -108,7 +108,7 @@ void ABuff_IsTameRiding_C::GetActiveTameState(class APrimalDinoCharacter* MyRidi
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.BPDrawBuffStatusHUD
-// (Exec, Native, Public, Private, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Event, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)

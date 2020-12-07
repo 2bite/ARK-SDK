@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -120,13 +120,13 @@ bool ATekCloningChamber_C::BPOverrideAllowStructureAccess(class AShooterPlayerCo
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BlueprintDrawHUD
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, Const, NetValidate)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCloningChamber_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void ATekCloningChamber_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.BlueprintDrawHUD");
 
@@ -136,6 +136,7 @@ void ATekCloningChamber_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, floa
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,11 +200,11 @@ bool ATekCloningChamber_C::BPPreventStasis()
 
 
 // Function TekCloningChamber.TekCloningChamber_C.StartCloneDino
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    DinoToClone                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCloningChamber_C::StartCloneDino(class APrimalDinoCharacter* DinoToClone)
+void ATekCloningChamber_C::STATIC_StartCloneDino(class APrimalDinoCharacter* DinoToClone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.StartCloneDino");
 
@@ -249,7 +250,7 @@ bool ATekCloningChamber_C::BPServerHandleNetExecCommand(class APlayerController*
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BPClientDoMultiUse
-// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -271,13 +272,13 @@ void ATekCloningChamber_C::BPClientDoMultiUse(class APlayerController** ForPC, i
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BPGetMultiUseEntries
-// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Event, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATekCloningChamber_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATekCloningChamber_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.BPGetMultiUseEntries");
 
@@ -285,7 +286,6 @@ TArray<struct FMultiUseEntry> ATekCloningChamber_C::STATIC_BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

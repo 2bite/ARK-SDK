@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function WeapTekSniper.WeapTekSniper_C.BPShouldDealDamage
+// ()
+// Parameters:
+// class AActor**                 TestActor                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AWeapTekSniper_C::BPShouldDealDamage(class AActor** TestActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapTekSniper.WeapTekSniper_C.BPShouldDealDamage");
+
+	AWeapTekSniper_C_BPShouldDealDamage_Params params;
+	params.TestActor = TestActor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function WeapTekSniper.WeapTekSniper_C.Try Enable XRay
 // ()
@@ -221,7 +244,7 @@ void AWeapTekSniper_C::BPOnScoped()
 
 
 // Function WeapTekSniper.WeapTekSniper_C.BPAppliedPrimalItemToWeapon
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (Native, Event, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AWeapTekSniper_C::BPAppliedPrimalItemToWeapon()
 {
@@ -239,7 +262,7 @@ void AWeapTekSniper_C::BPAppliedPrimalItemToWeapon()
 
 
 // Function WeapTekSniper.WeapTekSniper_C.ReceiveDestroyed
-// (NetReliable, NetResponse, MulticastDelegate, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (Exec, Native, Event, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AWeapTekSniper_C::ReceiveDestroyed()
 {
@@ -248,6 +271,7 @@ void AWeapTekSniper_C::ReceiveDestroyed()
 	AWeapTekSniper_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -658,6 +682,40 @@ void AWeapTekSniper_C::SetScoped(bool Scoped)
 
 	AWeapTekSniper_C_SetScoped_Params params;
 	params.Scoped = Scoped;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeapTekSniper.WeapTekSniper_C.ClearHitPrimalCharacterAlready
+// ()
+
+void AWeapTekSniper_C::ClearHitPrimalCharacterAlready()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapTekSniper.WeapTekSniper_C.ClearHitPrimalCharacterAlready");
+
+	AWeapTekSniper_C_ClearHitPrimalCharacterAlready_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeapTekSniper.WeapTekSniper_C.ClearHitPrimalStructureAlready
+// ()
+
+void AWeapTekSniper_C::ClearHitPrimalStructureAlready()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapTekSniper.WeapTekSniper_C.ClearHitPrimalStructureAlready");
+
+	AWeapTekSniper_C_ClearHitPrimalStructureAlready_Params params;
 
 	auto flags = fn->FunctionFlags;
 

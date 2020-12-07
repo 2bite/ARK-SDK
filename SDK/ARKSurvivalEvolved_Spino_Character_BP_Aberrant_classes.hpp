@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Spino_Character_BP_Aberrant.Spino_Character_BP_Aberrant_C
-// 0x0000 (0x22F3 - 0x22F3)
+// 0x0000 (0x2373 - 0x2373)
 class ASpino_Character_BP_Aberrant_C : public ASpino_Character_BP_C
 {
 public:

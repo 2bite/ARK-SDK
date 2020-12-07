@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ struct APurlovia_Character_BP_C_BPIsHidden_Params
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.UpdateCollisions
 struct APurlovia_Character_BP_C_UpdateCollisions_Params
 {
-	bool                                               buried;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Buried;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanUnburyNormal
@@ -248,11 +248,11 @@ struct APurlovia_Character_BP_C_Has_Conflict_with_AI_Params
 	bool                                               hasConflict;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Purlovia_Character_BP.Purlovia_Character_BP_C.canBury
-struct APurlovia_Character_BP_C_canBury_Params
+// Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanBury
+struct APurlovia_Character_BP_C_CanBury_Params
 {
 	bool                                               forceBury;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               canBury;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               CanBury;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanPlayBuryAnim
@@ -341,7 +341,7 @@ struct APurlovia_Character_BP_C_OnMovementChanged_Params
 struct APurlovia_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

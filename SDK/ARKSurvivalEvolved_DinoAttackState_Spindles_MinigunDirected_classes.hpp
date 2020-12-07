@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,15 +36,15 @@ public:
 	}
 
 
-	class FString STATIC_BPGetDebugInfoString();
+	class FString BPGetDebugInfoString();
 	void GetRandomVectorOnCircle(float MinRadius, float MaxRadius, struct FVector* RandomVector);
-	bool BPShouldEndAttack();
+	bool STATIC_BPShouldEndAttack();
 	void OnEndEvent();
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	bool OnCanUseStateEvent();
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void GetAttackIndex(int* AttackIndex);
-	void STATIC_Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
+	void Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
 	void UpdateAimedActors();
 	void ExecuteUbergraph_DinoAttackState_Spindles_MinigunDirected(int EntryPoint);
 };

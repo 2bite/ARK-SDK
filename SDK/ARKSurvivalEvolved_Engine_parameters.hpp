@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -399,6 +399,11 @@ struct AActor_PlaySoundAtLocation_Params
 	float                                              PitchMultiplier;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.Actor.PerformanceThrottledTick
+struct AActor_PerformanceThrottledTick_Params
+{
+};
+
 // Function Engine.Actor.OnRep_ReplicatedMovement
 struct AActor_OnRep_ReplicatedMovement_Params
 {
@@ -411,6 +416,11 @@ struct AActor_OnRep_Instigator_Params
 
 // Function Engine.Actor.OnRep_AttachmentReplication
 struct AActor_OnRep_AttachmentReplication_Params
+{
+};
+
+// Function Engine.Actor.OnInventoryItemGrind
+struct AActor_OnInventoryItemGrind_Params
 {
 };
 
@@ -687,6 +697,18 @@ struct AActor_IsShooterCharacter_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.Actor.IsPrimalStructureTurret
+struct AActor_IsPrimalStructureTurret_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Actor.IsPrimalStructureItemContainer
+struct AActor_IsPrimalStructureItemContainer_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.Actor.IsPrimalStructure
 struct AActor_IsPrimalStructure_Params
 {
@@ -695,6 +717,12 @@ struct AActor_IsPrimalStructure_Params
 
 // Function Engine.Actor.IsPrimalDino
 struct AActor_IsPrimalDino_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Actor.IsPrimalCharacterOrStructure
+struct AActor_IsPrimalCharacterOrStructure_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -1087,6 +1115,13 @@ struct AActor_BPServerHandleNetExecCommand_Params
 	class APlayerController*                           FromPC;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FBPNetExecParams                            ExecParams;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Actor.BPPreventAttachments
+struct AActor_BPPreventAttachments_Params
+{
+	class UObject*                                     ForItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -1877,7 +1912,7 @@ struct UAnimInstance_AnimNotify_Sound_Params
 // Function Engine.AnimNotify.Received_Notify
 struct UAnimNotify_Received_Notify_Params
 {
-	class USkeletalMeshComponent*                      meshComp;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      MeshComp;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UAnimSequenceBase*                           Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -1891,7 +1926,7 @@ struct UAnimNotify_GetNotifyName_Params
 // Function Engine.AnimNotifyState.Received_NotifyTick
 struct UAnimNotifyState_Received_NotifyTick_Params
 {
-	class USkeletalMeshComponent*                      meshComp;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      MeshComp;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UAnimSequenceBase*                           Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              FrameDeltaTime;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1900,7 +1935,7 @@ struct UAnimNotifyState_Received_NotifyTick_Params
 // Function Engine.AnimNotifyState.Received_NotifyEnd
 struct UAnimNotifyState_Received_NotifyEnd_Params
 {
-	class USkeletalMeshComponent*                      meshComp;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      MeshComp;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UAnimSequenceBase*                           Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -1908,7 +1943,7 @@ struct UAnimNotifyState_Received_NotifyEnd_Params
 // Function Engine.AnimNotifyState.Received_NotifyBegin
 struct UAnimNotifyState_Received_NotifyBegin_Params
 {
-	class USkeletalMeshComponent*                      meshComp;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      MeshComp;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UAnimSequenceBase*                           Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              TotalDuration;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1938,6 +1973,7 @@ struct APlayerController_WasInputKeyJustPressed_Params
 struct APlayerController_ToggleSpeaking_Params
 {
 	bool                                               bSpeaking;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               UseSuperRange;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.PlayerController.SwitchLevel
@@ -7661,7 +7697,7 @@ struct ULightComponent_SetIntensity_Params
 // Function Engine.LightComponent.SetIESTexture
 struct ULightComponent_SetIESTexture_Params
 {
-	class UTextureLightProfile*                        newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UTextureLightProfile*                        NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.LightComponent.SetEnableLightShaftBloom
@@ -7679,19 +7715,19 @@ struct ULightComponent_SetCastShadows_Params
 // Function Engine.LightComponent.SetBloomTint
 struct ULightComponent_SetBloomTint_Params
 {
-	struct FColor                                      newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FColor                                      NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.LightComponent.SetBloomThreshold
 struct ULightComponent_SetBloomThreshold_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.LightComponent.SetBloomScale
 struct ULightComponent_SetBloomScale_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.LightComponent.SetAffectTranslucentLighting
@@ -7709,19 +7745,19 @@ struct ULightComponent_SetAffectDynamicIndirectLighting_Params
 // Function Engine.DirectionalLightComponent.SetShadowDistanceFadeoutFraction
 struct UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.DirectionalLightComponent.SetOcclusionMaskDarkness
 struct UDirectionalLightComponent_SetOcclusionMaskDarkness_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.DirectionalLightComponent.SetLightShaftOverrideDirection
 struct UDirectionalLightComponent_SetLightShaftOverrideDirection_Params
 {
-	struct FVector                                     newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.DirectionalLightComponent.SetEnableLightShaftOcclusion
@@ -7733,31 +7769,31 @@ struct UDirectionalLightComponent_SetEnableLightShaftOcclusion_Params
 // Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceStationaryLight
 struct UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceMovableLight
 struct UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.DirectionalLightComponent.SetDynamicShadowCascades
 struct UDirectionalLightComponent_SetDynamicShadowCascades_Params
 {
-	int                                                newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.DirectionalLightComponent.SetCascadeTransitionFraction
 struct UDirectionalLightComponent_SetCascadeTransitionFraction_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.DirectionalLightComponent.SetCascadeDistributionExponent
 struct UDirectionalLightComponent_SetCascadeDistributionExponent_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.PointLightComponent.SetSourceRadius
@@ -10035,7 +10071,7 @@ struct UKismetMathLibrary_VLerp_Params
 // Function Engine.KismetMathLibrary.VInterpTo_SnapWithinDist
 struct UKismetMathLibrary_VInterpTo_SnapWithinDist_Params
 {
-	struct FVector                                     Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10046,7 +10082,7 @@ struct UKismetMathLibrary_VInterpTo_SnapWithinDist_Params
 // Function Engine.KismetMathLibrary.VInterpTo_SnapPastDist
 struct UKismetMathLibrary_VInterpTo_SnapPastDist_Params
 {
-	struct FVector                                     Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10057,7 +10093,7 @@ struct UKismetMathLibrary_VInterpTo_SnapPastDist_Params
 // Function Engine.KismetMathLibrary.VInterpTo_Constant_SnapWithinDist
 struct UKismetMathLibrary_VInterpTo_Constant_SnapWithinDist_Params
 {
-	struct FVector                                     Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10068,7 +10104,7 @@ struct UKismetMathLibrary_VInterpTo_Constant_SnapWithinDist_Params
 // Function Engine.KismetMathLibrary.VInterpTo_Constant_SnapPastDist
 struct UKismetMathLibrary_VInterpTo_Constant_SnapPastDist_Params
 {
-	struct FVector                                     Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10079,7 +10115,7 @@ struct UKismetMathLibrary_VInterpTo_Constant_SnapPastDist_Params
 // Function Engine.KismetMathLibrary.VInterpTo_Constant
 struct UKismetMathLibrary_VInterpTo_Constant_Params
 {
-	struct FVector                                     Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10089,7 +10125,7 @@ struct UKismetMathLibrary_VInterpTo_Constant_Params
 // Function Engine.KismetMathLibrary.VInterpTo
 struct UKismetMathLibrary_VInterpTo_Params
 {
-	struct FVector                                     Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10148,7 +10184,7 @@ struct UKismetMathLibrary_TLerp_Params
 // Function Engine.KismetMathLibrary.TInterpTo
 struct UKismetMathLibrary_TInterpTo_Params
 {
-	struct UObject_FTransform                          Current;                                                  // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct UObject_FTransform                          current;                                                  // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 	struct UObject_FTransform                          Target;                                                   // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10445,7 +10481,7 @@ struct UKismetMathLibrary_RLerp_Params
 // Function Engine.KismetMathLibrary.RInterpTo_PerAxis
 struct UKismetMathLibrary_RInterpTo_PerAxis_Params
 {
-	struct FRotator                                    Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    InterpSpeedPerAxis;                                       // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10455,7 +10491,7 @@ struct UKismetMathLibrary_RInterpTo_PerAxis_Params
 // Function Engine.KismetMathLibrary.RInterpTo_Constant_PerAxis
 struct UKismetMathLibrary_RInterpTo_Constant_PerAxis_Params
 {
-	struct FRotator                                    Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    InterpSpeedPerAxis;                                       // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10465,7 +10501,7 @@ struct UKismetMathLibrary_RInterpTo_Constant_PerAxis_Params
 // Function Engine.KismetMathLibrary.RInterpTo_Constant
 struct UKismetMathLibrary_RInterpTo_Constant_Params
 {
-	struct FRotator                                    Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10475,7 +10511,7 @@ struct UKismetMathLibrary_RInterpTo_Constant_Params
 // Function Engine.KismetMathLibrary.RInterpTo
 struct UKismetMathLibrary_RInterpTo_Params
 {
-	struct FRotator                                    Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -10647,7 +10683,7 @@ struct UKismetMathLibrary_RadiansToDegrees_Params
 // Function Engine.KismetMathLibrary.QInterpTo
 struct UKismetMathLibrary_QInterpTo_Params
 {
-	struct FRotator                                    Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -11861,7 +11897,7 @@ struct UKismetMathLibrary_FlattenVector_Params
 // Function Engine.KismetMathLibrary.FInterpTo_Constant
 struct UKismetMathLibrary_FInterpTo_Constant_Params
 {
-	float                                              Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -11871,7 +11907,7 @@ struct UKismetMathLibrary_FInterpTo_Constant_Params
 // Function Engine.KismetMathLibrary.FInterpTo
 struct UKismetMathLibrary_FInterpTo_Params
 {
-	float                                              Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
@@ -12444,7 +12480,7 @@ struct UKismetMathLibrary_Clamp_Params
 // Function Engine.KismetMathLibrary.CInterpTo
 struct UKismetMathLibrary_CInterpTo_Params
 {
-	struct FLinearColor                                Current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)

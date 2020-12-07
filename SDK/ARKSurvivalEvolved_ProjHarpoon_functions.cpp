@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,11 +30,11 @@ void AProjHarpoon_C::ReceiveBeginPlay()
 
 
 // Function ProjHarpoon.ProjHarpoon_C.ReceiveTick
-// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjHarpoon_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void AProjHarpoon_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjHarpoon.ProjHarpoon_C.ReceiveTick");
 
@@ -42,6 +42,7 @@ void AProjHarpoon_C::STATIC_ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

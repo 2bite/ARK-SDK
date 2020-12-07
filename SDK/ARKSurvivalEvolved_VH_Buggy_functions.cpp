@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function VH_Buggy.VH_Buggy_C.BPPlayDying
-// (NetReliable, Event, NetResponse, MulticastDelegate, Public, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Protected, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
@@ -30,6 +30,7 @@ void AVH_Buggy_C::BPPlayDying(float* KillingDamage, class APawn** InstigatingPaw
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

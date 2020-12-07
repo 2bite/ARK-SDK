@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.UpdateAttackAnimWeights
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient)
+// (NetReliable, NetRequest, Exec, Native, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::STATIC_UpdateAttackAnimWeights(int AttackIndex)
+void ABigfoot_Character_BP_C::UpdateAttackAnimWeights(int AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.UpdateAttackAnimWeights");
 
@@ -25,6 +25,7 @@ void ABigfoot_Character_BP_C::STATIC_UpdateAttackAnimWeights(int AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,13 +213,13 @@ bool ABigfoot_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BPGetMultiUseEntries
-// (NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient)
+// (NetRequest, Native, Static, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABigfoot_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABigfoot_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BPGetMultiUseEntries");
 
@@ -226,6 +227,7 @@ TArray<struct FMultiUseEntry> ABigfoot_Character_BP_C::BPGetMultiUseEntries(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -310,9 +312,9 @@ void ABigfoot_Character_BP_C::DrawCrosshairIfNeeded()
 // ()
 // Parameters:
 // bool                           overheadThrow                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            startThrowAnim                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            StartThrowAnim                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::Get_Throw_Anim(bool overheadThrow, class UAnimMontage** startThrowAnim)
+void ABigfoot_Character_BP_C::Get_Throw_Anim(bool overheadThrow, class UAnimMontage** StartThrowAnim)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.Get Throw Anim");
 
@@ -325,8 +327,8 @@ void ABigfoot_Character_BP_C::Get_Throw_Anim(bool overheadThrow, class UAnimMont
 
 	fn->FunctionFlags = flags;
 
-	if (startThrowAnim != nullptr)
-		*startThrowAnim = params.startThrowAnim;
+	if (StartThrowAnim != nullptr)
+		*StartThrowAnim = params.StartThrowAnim;
 }
 
 
@@ -356,9 +358,9 @@ void ABigfoot_Character_BP_C::IsStartThrowAnimPlaying(bool* IsPlaying)
 // ()
 // Parameters:
 // bool                           overheadThrow                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            startThrowAnim                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            StartThrowAnim                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::GetStartThrowAnim(bool overheadThrow, class UAnimMontage** startThrowAnim)
+void ABigfoot_Character_BP_C::GetStartThrowAnim(bool overheadThrow, class UAnimMontage** StartThrowAnim)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.GetStartThrowAnim");
 
@@ -371,8 +373,8 @@ void ABigfoot_Character_BP_C::GetStartThrowAnim(bool overheadThrow, class UAnimM
 
 	fn->FunctionFlags = flags;
 
-	if (startThrowAnim != nullptr)
-		*startThrowAnim = params.startThrowAnim;
+	if (StartThrowAnim != nullptr)
+		*StartThrowAnim = params.StartThrowAnim;
 }
 
 
@@ -717,15 +719,16 @@ struct FVector ABigfoot_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch)
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ThrowTrace
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient)
+// (NetReliable, Exec, Native, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABigfoot_Character_BP_C::ThrowTrace()
+void ABigfoot_Character_BP_C::STATIC_ThrowTrace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ThrowTrace");
 
 	ABigfoot_Character_BP_C_ThrowTrace_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -754,7 +757,7 @@ void ABigfoot_Character_BP_C::CarryDino(class APrimalCharacter* dinoToCarry)
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient)
+// (Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -763,7 +766,7 @@ void ABigfoot_Character_BP_C::CarryDino(class APrimalCharacter* dinoToCarry)
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABigfoot_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ABigfoot_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -1043,16 +1046,16 @@ void ABigfoot_Character_BP_C::DelayedGrab()
 // Parameters:
 // struct FVector                 AimLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AimHit                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ThrowInstant                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           throwInstant                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool ThrowInstant)
+void ABigfoot_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool throwInstant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.Server_TraceTargetDir");
 
 	ABigfoot_Character_BP_C_Server_TraceTargetDir_Params params;
 	params.AimLoc = AimLoc;
 	params.AimHit = AimHit;
-	params.ThrowInstant = ThrowInstant;
+	params.throwInstant = throwInstant;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1203,17 +1206,17 @@ void ABigfoot_Character_BP_C::DelayedClearThrowing()
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ABigfoot_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	ABigfoot_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

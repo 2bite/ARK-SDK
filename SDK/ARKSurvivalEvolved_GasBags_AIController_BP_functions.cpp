@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ void AGasBags_AIController_BP_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function GasBags_AIController_BP.GasBags_AIController_BP_C.TickCheckDangerLevels
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintPure)
 
 void AGasBags_AIController_BP_C::STATIC_TickCheckDangerLevels()
 {

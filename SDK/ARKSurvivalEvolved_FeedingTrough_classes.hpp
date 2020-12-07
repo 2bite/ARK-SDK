@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass FeedingTrough.FeedingTrough_C
-// 0x000C (0x0E20 - 0x0E14)
+// 0x000A (0x0E28 - 0x0E1E)
 class AFeedingTrough_C : public AFeedingTroughBaseBP_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0E14(0x0004) MISSED OFFSET
-	class UPrimalInventoryBP_FeedingTrough_C*          PrimalInventoryBP_FeedingTrough_C1;                       // 0x0E18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0E1E(0x0002) MISSED OFFSET
+	class UPrimalInventoryBP_FeedingTrough_C*          PrimalInventoryBP_FeedingTrough_C1;                       // 0x0E20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

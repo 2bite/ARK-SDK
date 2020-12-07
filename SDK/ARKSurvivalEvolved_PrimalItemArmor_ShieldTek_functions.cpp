@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,11 +39,11 @@ void UPrimalItemArmor_ShieldTek_C::BPClientHandleItemNetExecCommand(struct FName
 
 
 // Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.PlayHitShieldEffect
-// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           bLocalOnly                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemArmor_ShieldTek_C::STATIC_PlayHitShieldEffect(bool bLocalOnly)
+void UPrimalItemArmor_ShieldTek_C::PlayHitShieldEffect(bool bLocalOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.PlayHitShieldEffect");
 
@@ -138,7 +138,7 @@ void UPrimalItemArmor_ShieldTek_C::ClientUpdatedWeaponClipAmmo()
 
 
 // Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.HandleShieldDamageBlocking
-// (Native, NetResponse, Public, Delegate, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter**      ForShooterCharacter            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DamageIn                       (Parm, ZeroConstructor, IsPlainOldData)

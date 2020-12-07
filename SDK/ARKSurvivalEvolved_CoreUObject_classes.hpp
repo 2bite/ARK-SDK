@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,6 +73,11 @@ public:
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.Object");
 		return ptr;
+	}
+
+	inline void ProcessEvent(class UFunction* function, void* parms)
+	{
+		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 59)(this, function, parms);
 	}
 
 
@@ -222,7 +227,7 @@ public:
 
 	inline UObject* CreateDefaultObject()
 	{
-		return GetVFunction<UObject*(*)(UClass*)>(this, 37)(this);
+		return GetVFunction<UObject*(*)(UClass*)>(this, 59)(this);
 	}
 
 };

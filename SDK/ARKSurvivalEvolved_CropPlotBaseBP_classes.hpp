@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CropPlotBaseBP.CropPlotBaseBP_C
-// 0x0008 (0x0EB8 - 0x0EB0)
+// 0x0008 (0x0EC0 - 0x0EB8)
 class ACropPlotBaseBP_C : public APrimalStructureItemContainer_CropPlot
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0EB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0EB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

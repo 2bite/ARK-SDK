@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.GetDistanceAndAngleCheckOrigin
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Native, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 emitterActor                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 distanceAngleOrigin            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitterStructure_ChargeLantern_C::GetDistanceAndAngleCheckOrigin(class AActor** emitterActor, struct FVector* distanceAngleOrigin)
+void ABuff_ChargeEmitterStructure_ChargeLantern_C::STATIC_GetDistanceAndAngleCheckOrigin(class AActor** emitterActor, struct FVector* distanceAngleOrigin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.GetDistanceAndAngleCheckOrigin");
 
@@ -212,12 +212,12 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::GetEmitterForwardVector(struc
 
 
 // Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.GetEmitterLineTraceOrigin
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 emitterActor                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 lineTraceOrigin                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitterStructure_ChargeLantern_C::GetEmitterLineTraceOrigin(class AActor** emitterActor, struct FVector* lineTraceOrigin)
+void ABuff_ChargeEmitterStructure_ChargeLantern_C::STATIC_GetEmitterLineTraceOrigin(class AActor** emitterActor, struct FVector* lineTraceOrigin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.GetEmitterLineTraceOrigin");
 
@@ -225,7 +225,6 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::GetEmitterLineTraceOrigin(cla
 	params.emitterActor = emitterActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -342,16 +341,15 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::ChargeVariableEvent(TEnumAsBy
 
 
 // Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.InitializeEmitter
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_ChargeEmitterStructure_ChargeLantern_C::STATIC_InitializeEmitter()
+void ABuff_ChargeEmitterStructure_ChargeLantern_C::InitializeEmitter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.InitializeEmitter");
 
 	ABuff_ChargeEmitterStructure_ChargeLantern_C_InitializeEmitter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

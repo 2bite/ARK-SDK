@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,7 +50,7 @@ public:
 
 
 	class FString GetNotifyName();
-	bool Received_Notify(class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation);
+	bool STATIC_Received_Notify(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation);
 	void ExecuteUbergraph_AnimNotify_PlayParticleEffect(int EntryPoint);
 };
 

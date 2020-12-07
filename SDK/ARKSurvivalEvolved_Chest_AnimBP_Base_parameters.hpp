@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Chest_AnimBP_Base.Chest_AnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_5862
-struct UChest_AnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_5862_Params
+// Function Chest_AnimBP_Base.Chest_AnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_6294
+struct UChest_AnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_6294_Params
 {
 };
 

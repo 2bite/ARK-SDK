@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -97,9 +97,9 @@ void ARaptor_Character_BP_C::PushbackAfterPounceFn()
 // ()
 // Parameters:
 // class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARaptor_Character_BP_C::HasPouncePreventionBuff(class APrimalCharacter* Target, bool* Ret)
+void ARaptor_Character_BP_C::HasPouncePreventionBuff(class APrimalCharacter* Target, bool* ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.HasPouncePreventionBuff");
 
@@ -112,8 +112,8 @@ void ARaptor_Character_BP_C::HasPouncePreventionBuff(class APrimalCharacter* Tar
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 }
 
 
@@ -344,12 +344,12 @@ void ARaptor_Character_BP_C::OnRep_bCanMaul()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintCanRiderAttack
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Exec, Event, NetMulticast, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ARaptor_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackIndex)
+bool ARaptor_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintCanRiderAttack");
 
@@ -384,11 +384,11 @@ void ARaptor_Character_BP_C::BPTimerServer()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.CheckForPounceTarget
-// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Public, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // class APrimalCharacter*        RetTarget                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARaptor_Character_BP_C::STATIC_CheckForPounceTarget(class APrimalCharacter** RetTarget)
+void ARaptor_Character_BP_C::CheckForPounceTarget(class APrimalCharacter** RetTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.CheckForPounceTarget");
 
@@ -449,17 +449,17 @@ void ARaptor_Character_BP_C::ImmobilizeTarget(class APrimalCharacter* Char, bool
 // ()
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
-// class USkeletalMeshComponent** meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ARaptor_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** meshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ARaptor_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
 	ARaptor_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params params;
 	params.CustomEventName = CustomEventName;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.AnimNotifyObject = AnimNotifyObject;
 

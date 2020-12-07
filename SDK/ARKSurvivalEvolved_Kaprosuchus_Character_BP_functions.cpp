@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ bool AKaprosuchus_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC,
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BPGetMultiUseEntries
-// (Native, Event, NetResponse, NetMulticast, Public, Private, NetServer, DLLImport)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -88,7 +88,7 @@ void AKaprosuchus_Character_BP_C::Play_Leap_FX(int MovementMode, bool IsLeapStar
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.EvaluateHeightInWater
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, NetServer, DLLImport)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           NearSurface                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -99,6 +99,7 @@ void AKaprosuchus_Character_BP_C::STATIC_EvaluateHeightInWater(bool* NearSurface
 	AKaprosuchus_Character_BP_C_EvaluateHeightInWater_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,7 +174,7 @@ void AKaprosuchus_Character_BP_C::BPTimerServer()
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BlueprintCanRiderAttack
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, DLLImport)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -197,7 +198,7 @@ bool AKaprosuchus_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackInde
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.CalcLeapImpulse
-// (NetReliable, Exec, MulticastDelegate, Private, NetServer, DLLImport)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 RetImpulse                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -248,7 +249,7 @@ bool AKaprosuchus_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Di
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.ChangeGroundSwimAttackAnims
-// (NetReliable, Event, NetResponse, MulticastDelegate, Private, NetServer, DLLImport)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -85,11 +85,11 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_2658();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_2657();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_2656();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_3616();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_3615();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4992();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4991();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4990();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_5998();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_5997();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE(int EntryPoint);
 };

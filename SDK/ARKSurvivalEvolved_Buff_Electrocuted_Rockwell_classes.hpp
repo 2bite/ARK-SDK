@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Electrocuted_Rockwell.Buff_Electrocuted_Rockwell_C
-// 0x0000 (0x0948 - 0x0948)
+// 0x0000 (0x0968 - 0x0968)
 class ABuff_Electrocuted_Rockwell_C : public ABuff_Electrocuted_C
 {
 public:

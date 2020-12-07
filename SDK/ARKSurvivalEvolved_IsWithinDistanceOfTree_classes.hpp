@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ public:
 	}
 
 
-	void ReceiveTick(class AActor** OwnerActor, float* DeltaSeconds);
+	void STATIC_ReceiveTick(class AActor** OwnerActor, float* DeltaSeconds);
 	void ExecuteUbergraph_IsWithinDistanceOfTree(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sauropod_Character_BP.Sauropod_Character_BP_C
-// 0x0008 (0x2110 - 0x2108)
+// 0x0008 (0x2190 - 0x2188)
 class ASauropod_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Sauropod_C* DinoCharacterStatus_BP_Sauropod_C1;                       // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Sauropod_C* DinoCharacterStatus_BP_Sauropod_C1;                       // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,6 +28,7 @@ public:
 	}
 
 
+	struct FName GetSocketForMeleeTraceForHitBlockers(int* AttackIndex);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Sauropod_Character_BP(int EntryPoint);
 };

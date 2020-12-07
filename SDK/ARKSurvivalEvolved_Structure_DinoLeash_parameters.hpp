@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.UpdateTetherAfterLoad
+struct AStructure_DinoLeash_C_UpdateTetherAfterLoad_Params
+{
+};
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.BPPostLoadedFromSaveGame
+struct AStructure_DinoLeash_C_BPPostLoadedFromSaveGame_Params
+{
+};
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPAdjustDamage
 struct AStructure_DinoLeash_C_BPAdjustDamage_Params

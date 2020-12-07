@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -341,9 +341,9 @@ void ABuff_TekArmor_C::IsWarping_FOV(bool* Result)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff
 // ()
 // Parameters:
-// class ABuff_TekArmor_C*        Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ABuff_TekArmor_C*        ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** Ref)
+void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff");
 
@@ -355,17 +355,17 @@ void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** Ref)
 
 	fn->FunctionFlags = flags;
 
-	if (Ref != nullptr)
-		*Ref = params.Ref;
+	if (ref != nullptr)
+		*ref = params.ref;
 }
 
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer
 // ()
 // Parameters:
-// class APrimalCharacter*        Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** Ref)
+void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer");
 
@@ -377,8 +377,8 @@ void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** Ref)
 
 	fn->FunctionFlags = flags;
 
-	if (Ref != nullptr)
-		*Ref = params.Ref;
+	if (ref != nullptr)
+		*ref = params.ref;
 }
 
 
@@ -449,9 +449,9 @@ void ABuff_TekArmor_C::IsPlayerGrounded(bool* Result)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager
 // ()
 // Parameters:
-// class AShooterPlayerCameraManager* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerCameraManager* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** Ref)
+void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager");
 
@@ -463,8 +463,8 @@ void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCa
 
 	fn->FunctionFlags = flags;
 
-	if (Ref != nullptr)
-		*Ref = params.Ref;
+	if (ref != nullptr)
+		*ref = params.ref;
 }
 
 
@@ -493,9 +493,9 @@ void ABuff_TekArmor_C::UpdatePlayerFOV(float intensityRatio, bool warpIn)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement
 // ()
 // Parameters:
-// class UCharacterMovementComponent* Movement                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UCharacterMovementComponent* movement                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** Movement)
+void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** movement)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement");
 
@@ -507,8 +507,8 @@ void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementCom
 
 	fn->FunctionFlags = flags;
 
-	if (Movement != nullptr)
-		*Movement = params.Movement;
+	if (movement != nullptr)
+		*movement = params.movement;
 }
 
 

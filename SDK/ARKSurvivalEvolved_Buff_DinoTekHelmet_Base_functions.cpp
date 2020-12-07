@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -103,17 +103,22 @@ void ABuff_DinoTekHelmet_Base_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, fl
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsAllowedToFire
-// (NetReliable, Exec, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
+// struct FVector                 AimAtLoc                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ServerSpawnAtLoc               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAllowed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_DinoTekHelmet_Base_C::IsAllowedToFire(bool* bAllowed)
+void ABuff_DinoTekHelmet_Base_C::IsAllowedToFire(const struct FVector& AimAtLoc, const struct FVector& ServerSpawnAtLoc, bool* bAllowed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsAllowedToFire");
 
 	ABuff_DinoTekHelmet_Base_C_IsAllowedToFire_Params params;
+	params.AimAtLoc = AimAtLoc;
+	params.ServerSpawnAtLoc = ServerSpawnAtLoc;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,18 +191,17 @@ void ABuff_DinoTekHelmet_Base_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.LocalDoAttack
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           bDidAttack                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_DinoTekHelmet_Base_C::LocalDoAttack(bool* bDidAttack)
+void ABuff_DinoTekHelmet_Base_C::STATIC_LocalDoAttack(bool* bDidAttack)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.LocalDoAttack");
 
 	ABuff_DinoTekHelmet_Base_C_LocalDoAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -558,7 +558,7 @@ bool ARadioActiveLanternGroundCharge_C::BPTryMultiUse(class APlayerController** 
 
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.BPGetMultiUseEntries
-// (NetRequest, Event, NetResponse, Static, Public, Private, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -572,6 +572,7 @@ TArray<struct FMultiUseEntry> ARadioActiveLanternGroundCharge_C::STATIC_BPGetMul
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1385,14 +1386,14 @@ void ARadioActiveLanternGroundCharge_C::InitialUpdateMaterial(bool StaticMesh)
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.OnChargeFromBatteriesChanged_Multicast
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::OnChargeFromBatteriesChanged_Multicast(float newValue)
+void ARadioActiveLanternGroundCharge_C::OnChargeFromBatteriesChanged_Multicast(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.OnChargeFromBatteriesChanged_Multicast");
 
 	ARadioActiveLanternGroundCharge_C_OnChargeFromBatteriesChanged_Multicast_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 

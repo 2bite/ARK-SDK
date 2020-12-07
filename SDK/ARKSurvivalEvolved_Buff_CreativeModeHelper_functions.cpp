@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.BPCheckPreventInput
+// ()
+// Parameters:
+// TEnumAsByte<EPrimalCharacterInputType>* inputType                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_CreativeModeHelper_C::BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.BPCheckPreventInput");
+
+	ABuff_CreativeModeHelper_C_BPCheckPreventInput_Params params;
+	params.inputType = inputType;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.BPDrawBuffStatusHUD
 // ()
@@ -39,11 +62,11 @@ void ABuff_CreativeModeHelper_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, fl
 
 
 // Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.BuffTickServer
-// (NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_CreativeModeHelper_C::STATIC_BuffTickServer(float* DeltaTime)
+void ABuff_CreativeModeHelper_C::BuffTickServer(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.BuffTickServer");
 
@@ -177,14 +200,14 @@ void ABuff_CreativeModeHelper_C::UserConstructionScript()
 }
 
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Jump_K2Node_InputActionEvent_218
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Jump_K2Node_InputActionEvent_230
 // ()
 
-void ABuff_CreativeModeHelper_C::InpActEvt_Jump_K2Node_InputActionEvent_218()
+void ABuff_CreativeModeHelper_C::InpActEvt_Jump_K2Node_InputActionEvent_230()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Jump_K2Node_InputActionEvent_218");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Jump_K2Node_InputActionEvent_230");
 
-	ABuff_CreativeModeHelper_C_InpActEvt_Jump_K2Node_InputActionEvent_218_Params params;
+	ABuff_CreativeModeHelper_C_InpActEvt_Jump_K2Node_InputActionEvent_230_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -194,14 +217,14 @@ void ABuff_CreativeModeHelper_C::InpActEvt_Jump_K2Node_InputActionEvent_218()
 }
 
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_217
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_229
 // ()
 
-void ABuff_CreativeModeHelper_C::InpActEvt_Run_K2Node_InputActionEvent_217()
+void ABuff_CreativeModeHelper_C::InpActEvt_Run_K2Node_InputActionEvent_229()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_217");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_229");
 
-	ABuff_CreativeModeHelper_C_InpActEvt_Run_K2Node_InputActionEvent_217_Params params;
+	ABuff_CreativeModeHelper_C_InpActEvt_Run_K2Node_InputActionEvent_229_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -211,14 +234,14 @@ void ABuff_CreativeModeHelper_C::InpActEvt_Run_K2Node_InputActionEvent_217()
 }
 
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_216
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_228
 // ()
 
-void ABuff_CreativeModeHelper_C::InpActEvt_Run_K2Node_InputActionEvent_216()
+void ABuff_CreativeModeHelper_C::InpActEvt_Run_K2Node_InputActionEvent_228()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_216");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Run_K2Node_InputActionEvent_228");
 
-	ABuff_CreativeModeHelper_C_InpActEvt_Run_K2Node_InputActionEvent_216_Params params;
+	ABuff_CreativeModeHelper_C_InpActEvt_Run_K2Node_InputActionEvent_228_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -228,14 +251,14 @@ void ABuff_CreativeModeHelper_C::InpActEvt_Run_K2Node_InputActionEvent_216()
 }
 
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Prone_K2Node_InputActionEvent_215
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_227
 // ()
 
-void ABuff_CreativeModeHelper_C::InpActEvt_Prone_K2Node_InputActionEvent_215()
+void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_227()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Prone_K2Node_InputActionEvent_215");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_227");
 
-	ABuff_CreativeModeHelper_C_InpActEvt_Prone_K2Node_InputActionEvent_215_Params params;
+	ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_227_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -245,14 +268,14 @@ void ABuff_CreativeModeHelper_C::InpActEvt_Prone_K2Node_InputActionEvent_215()
 }
 
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_214
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_226
 // ()
 
-void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_214()
+void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_226()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_214");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_226");
 
-	ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_214_Params params;
+	ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_226_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -262,14 +285,14 @@ void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_InputAc
 }
 
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_213
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_225
 // ()
 
-void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_213()
+void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_225()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_213");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_225");
 
-	ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_213_Params params;
+	ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_225_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -279,14 +302,14 @@ void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_InputAc
 }
 
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_212
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_74
 // ()
 
-void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_212()
+void ABuff_CreativeModeHelper_C::InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_74()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_212");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_74");
 
-	ABuff_CreativeModeHelper_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_212_Params params;
+	ABuff_CreativeModeHelper_C_InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_74_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -296,14 +319,48 @@ void ABuff_CreativeModeHelper_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_Inp
 }
 
 
-// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_62
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_73
 // ()
 
-void ABuff_CreativeModeHelper_C::InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_62()
+void ABuff_CreativeModeHelper_C::InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_73()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_62");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_73");
 
-	ABuff_CreativeModeHelper_C_InpActEvt_Ctrl_F1_K2Node_InputKeyEvent_62_Params params;
+	ABuff_CreativeModeHelper_C_InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_73_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_72
+// ()
+
+void ABuff_CreativeModeHelper_C::InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_72()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_72");
+
+	ABuff_CreativeModeHelper_C_InpActEvt_Gamepad_FaceButton_Left_K2Node_InputKeyEvent_72_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_G_K2Node_InputKeyEvent_71
+// ()
+
+void ABuff_CreativeModeHelper_C::InpActEvt_G_K2Node_InputKeyEvent_71()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.InpActEvt_G_K2Node_InputKeyEvent_71");
+
+	ABuff_CreativeModeHelper_C_InpActEvt_G_K2Node_InputKeyEvent_71_Params params;
 
 	auto flags = fn->FunctionFlags;
 

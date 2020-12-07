@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPGetDebugInfoString
-// (Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, Const, NetValidate)
+// (Net, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -75,9 +75,9 @@ void ABuff_TekCruiseMissileVision_C::ReceiveBeginPlay()
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout
 // ()
 // Parameters:
-// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* retVal)
+void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* Retval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout");
 
@@ -89,8 +89,8 @@ void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* retVal)
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (Retval != nullptr)
+		*Retval = params.Retval;
 }
 
 
@@ -185,7 +185,7 @@ void ABuff_TekCruiseMissileVision_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPDrawBuffStatusHUD
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, Const, NetValidate)
+// (NetResponse, Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)

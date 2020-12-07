@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -93,11 +93,11 @@ void AWeapEmptyCryopod_C::ReceiveBeginPlay()
 
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.UpdateContainsFX
-// (NetReliable, NetResponse, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           ForceOff                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapEmptyCryopod_C::UpdateContainsFX(bool ForceOff)
+void AWeapEmptyCryopod_C::STATIC_UpdateContainsFX(bool ForceOff)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapEmptyCryopod.WeapEmptyCryopod_C.UpdateContainsFX");
 
@@ -154,17 +154,18 @@ void AWeapEmptyCryopod_C::CanCapture(class APrimalDinoCharacter* Dino, bool* Cap
 
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.BPTryFireWeapon
-// (NetReliable, Exec, Static, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, Event, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AWeapEmptyCryopod_C::STATIC_BPTryFireWeapon()
+bool AWeapEmptyCryopod_C::BPTryFireWeapon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapEmptyCryopod.WeapEmptyCryopod_C.BPTryFireWeapon");
 
 	AWeapEmptyCryopod_C_BPTryFireWeapon_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPPreventEquipItemType
-// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms)
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EPrimalEquipmentType>* equipmentType                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalInventoryBP_TaxidermyBase_C::STATIC_BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType)
+bool UPrimalInventoryBP_TaxidermyBase_C::BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPPreventEquipItemType");
 

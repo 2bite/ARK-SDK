@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BPClientHandleNetExecCommand
-// (Native, NetResponse, NetMulticast, Private, Protected, NetServer, DLLImport)
+// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APegomastax_Character_BP_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool APegomastax_Character_BP_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BPClientHandleNetExecCommand");
 
@@ -29,7 +29,6 @@ bool APegomastax_Character_BP_C::BPClientHandleNetExecCommand(struct FName* Comm
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,7 +219,7 @@ void APegomastax_Character_BP_C::ClearSecondaryAnims()
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.PostAttackActions
-// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           stoleItem                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -243,9 +242,9 @@ void APegomastax_Character_BP_C::STATIC_PostAttackActions(bool stoleItem)
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.ShouldStopHolding
 // ()
 // Parameters:
-// bool                           ShouldStop                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           shouldStop                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APegomastax_Character_BP_C::ShouldStopHolding(bool* ShouldStop)
+void APegomastax_Character_BP_C::ShouldStopHolding(bool* shouldStop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.ShouldStopHolding");
 
@@ -257,8 +256,8 @@ void APegomastax_Character_BP_C::ShouldStopHolding(bool* ShouldStop)
 
 	fn->FunctionFlags = flags;
 
-	if (ShouldStop != nullptr)
-		*ShouldStop = params.ShouldStop;
+	if (shouldStop != nullptr)
+		*shouldStop = params.shouldStop;
 }
 
 
@@ -543,12 +542,12 @@ void APegomastax_Character_BP_C::Get_NumPegosInGroup(int* maxExtraItems)
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.IsValidItemForTaming
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // class UPrimalItem*             PrimalItem                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APegomastax_Character_BP_C::IsValidItemForTaming(class UPrimalItem* PrimalItem, bool* IsValid)
+void APegomastax_Character_BP_C::STATIC_IsValidItemForTaming(class UPrimalItem* PrimalItem, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.IsValidItemForTaming");
 
@@ -556,6 +555,7 @@ void APegomastax_Character_BP_C::IsValidItemForTaming(class UPrimalItem* PrimalI
 	params.PrimalItem = PrimalItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -668,13 +668,13 @@ bool APegomastax_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport)
+// (NetReliable, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> APegomastax_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> APegomastax_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BPGetMultiUseEntries");
 
@@ -682,7 +682,6 @@ TArray<struct FMultiUseEntry> APegomastax_Character_BP_C::STATIC_BPGetMultiUseEn
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -853,23 +852,24 @@ bool APegomastax_Character_BP_C::BPShouldForceFlee()
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.Do StealItem
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
-// class APrimalCharacter*        characterToStealFrom           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        CharacterToStealFrom           (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimalItem*             itemToSteal                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           consumeItem                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APegomastax_Character_BP_C::STATIC_Do_StealItem(class APrimalCharacter* characterToStealFrom, class UPrimalItem* itemToSteal, bool consumeItem, bool* Success)
+void APegomastax_Character_BP_C::STATIC_Do_StealItem(class APrimalCharacter* CharacterToStealFrom, class UPrimalItem* itemToSteal, bool consumeItem, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.Do StealItem");
 
 	APegomastax_Character_BP_C_Do_StealItem_Params params;
-	params.characterToStealFrom = characterToStealFrom;
+	params.CharacterToStealFrom = CharacterToStealFrom;
 	params.itemToSteal = itemToSteal;
 	params.consumeItem = consumeItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -905,7 +905,7 @@ void APegomastax_Character_BP_C::Steal_from_Character(class APrimalCharacter* Ch
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -914,7 +914,7 @@ void APegomastax_Character_BP_C::Steal_from_Character(class APrimalCharacter* Ch
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APegomastax_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float APegomastax_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -924,7 +924,6 @@ float APegomastax_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attack
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1027,7 +1026,7 @@ float APegomastax_Character_BP_C::BPModifyHarvestingQuantity(float* originalQuan
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BlueprintCanAttack
-// (NetRequest, Exec, Native, Event, NetResponse, Delegate, NetServer, DLLImport)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -1035,7 +1034,7 @@ float APegomastax_Character_BP_C::BPModifyHarvestingQuantity(float* originalQuan
 // class AActor**                 OtherTarget                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APegomastax_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
+bool APegomastax_Character_BP_C::STATIC_BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BlueprintCanAttack");
 
@@ -1046,7 +1045,6 @@ bool APegomastax_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Dis
 	params.OtherTarget = OtherTarget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1096,9 +1094,9 @@ void APegomastax_Character_BP_C::BPUnstasis()
 // float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          preDelay                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Idle                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           hideBag                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           HideBag                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void APegomastax_Character_BP_C::PlayHoldingForTime(float Time, float preDelay, bool Idle, bool hideBag)
+void APegomastax_Character_BP_C::PlayHoldingForTime(float Time, float preDelay, bool Idle, bool HideBag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.PlayHoldingForTime");
 
@@ -1106,7 +1104,7 @@ void APegomastax_Character_BP_C::PlayHoldingForTime(float Time, float preDelay, 
 	params.Time = Time;
 	params.preDelay = preDelay;
 	params.Idle = Idle;
-	params.hideBag = hideBag;
+	params.HideBag = HideBag;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1116,14 +1114,14 @@ void APegomastax_Character_BP_C::PlayHoldingForTime(float Time, float preDelay, 
 }
 
 
-// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.hideBag
+// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.HideBag
 // ()
 
-void APegomastax_Character_BP_C::hideBag()
+void APegomastax_Character_BP_C::HideBag()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.hideBag");
+	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.HideBag");
 
-	APegomastax_Character_BP_C_hideBag_Params params;
+	APegomastax_Character_BP_C_HideBag_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1158,17 +1156,17 @@ void APegomastax_Character_BP_C::StopHoldingAfterFleeing(float Delay)
 // Parameters:
 // bool                           stopIdleHoldingAnim            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           stopRunHoldingAnim             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           hideBag                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           HideBag                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          idleBlendOutTime               (Parm, ZeroConstructor, IsPlainOldData)
 
-void APegomastax_Character_BP_C::StopHoldingImmediate(bool stopIdleHoldingAnim, bool stopRunHoldingAnim, bool hideBag, float idleBlendOutTime)
+void APegomastax_Character_BP_C::StopHoldingImmediate(bool stopIdleHoldingAnim, bool stopRunHoldingAnim, bool HideBag, float idleBlendOutTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.StopHoldingImmediate");
 
 	APegomastax_Character_BP_C_StopHoldingImmediate_Params params;
 	params.stopIdleHoldingAnim = stopIdleHoldingAnim;
 	params.stopRunHoldingAnim = stopRunHoldingAnim;
-	params.hideBag = hideBag;
+	params.HideBag = HideBag;
 	params.idleBlendOutTime = idleBlendOutTime;
 
 	auto flags = fn->FunctionFlags;
@@ -1258,18 +1256,18 @@ void APegomastax_Character_BP_C::FleeAfterTime(float Delay)
 // Parameters:
 // float                          timeBeforeRun                  (Parm, ZeroConstructor, IsPlainOldData)
 // float                          preDelay                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           hideBag                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           HideBag                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          runHoldDuration                (Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   Owner                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void APegomastax_Character_BP_C::PlayCombinedHolding(float timeBeforeRun, float preDelay, bool hideBag, float runHoldDuration, class APawn* Owner)
+void APegomastax_Character_BP_C::PlayCombinedHolding(float timeBeforeRun, float preDelay, bool HideBag, float runHoldDuration, class APawn* Owner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.PlayCombinedHolding");
 
 	APegomastax_Character_BP_C_PlayCombinedHolding_Params params;
 	params.timeBeforeRun = timeBeforeRun;
 	params.preDelay = preDelay;
-	params.hideBag = hideBag;
+	params.HideBag = HideBag;
 	params.runHoldDuration = runHoldDuration;
 	params.Owner = Owner;
 

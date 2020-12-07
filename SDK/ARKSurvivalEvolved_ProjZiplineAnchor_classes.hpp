@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,26 +15,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjZiplineAnchor.ProjZiplineAnchor_C
-// 0x0368 (0x09F0 - 0x0688)
+// 0x0360 (0x09F0 - 0x0690)
 class AProjZiplineAnchor_C : public AProjArrow_C
 {
 public:
-	class USceneComponent*                             CableAttachPoint;                                         // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPrimalCableComponent*                       CableComponent;                                           // 0x0690(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AWeapCrossbow_Zipline_C*                     AttachedWeapon;                                           // 0x0698(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bSecondaryProjectile;                                     // 0x06A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x06A1(0x0007) MISSED OFFSET
-	class AProjZiplineAnchor_C*                        AttachedProjectile;                                       // 0x06A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      AnchorStructureClass;                                     // 0x06B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       WeaponCableAttachSocket;                                  // 0x06B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxZiplineDistance;                                       // 0x06C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bDebugZipline;                                            // 0x06C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x06C5(0x0003) MISSED OFFSET
-	class UClass*                                      AnchorBreakEmitter;                                       // 0x06C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsAttached;                                              // 0x06D0(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Temp_bool_Has_Been_Initd_Variable;                        // 0x06D1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x06D2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xD];                                       // 0x06D3(0x000D) MISSED OFFSET
+	class USceneComponent*                             CableAttachPoint;                                         // 0x0690(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalCableComponent*                       CableComponent;                                           // 0x0698(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class AWeapCrossbow_Zipline_C*                     AttachedWeapon;                                           // 0x06A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bSecondaryProjectile;                                     // 0x06A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x06A9(0x0007) MISSED OFFSET
+	class AProjZiplineAnchor_C*                        AttachedProjectile;                                       // 0x06B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      AnchorStructureClass;                                     // 0x06B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       WeaponCableAttachSocket;                                  // 0x06C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxZiplineDistance;                                       // 0x06C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bDebugZipline;                                            // 0x06CC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x06CD(0x0003) MISSED OFFSET
+	class UClass*                                      AnchorBreakEmitter;                                       // 0x06D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bIsAttached;                                              // 0x06D8(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Temp_bool_Has_Been_Initd_Variable;                        // 0x06D9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x06DA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x5];                                       // 0x06DB(0x0005) MISSED OFFSET
 	struct UObject_FTransform                          CallFunc_MakeTransform_ReturnValue;                       // 0x06E0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	struct UObject_FTransform                          CallFunc_MakeTransform_ReturnValue2;                      // 0x0710(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0740(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -130,9 +130,9 @@ public:
 	}
 
 
-	void CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return);
+	void STATIC_CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return);
 	void HitValidForAttachment(struct FHitResult* Hit, bool* Valid);
-	void STATIC_SpawnBreakEmitter();
+	void SpawnBreakEmitter();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float* DeltaSeconds);

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -98,11 +98,11 @@ void UDinoAttackState_IceJumper_Dash_C::OnTickEvent(float* DeltaSeconds)
 
 
 // Function DinoAttackState_IceJumper_Dash.DinoAttackState_IceJumper_Dash_C.OnBeginEvent
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Delegate, HasDefaults, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimalAIState**         InParentState                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_IceJumper_Dash_C::STATIC_OnBeginEvent(class UPrimalAIState** InParentState)
+void UDinoAttackState_IceJumper_Dash_C::OnBeginEvent(class UPrimalAIState** InParentState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_IceJumper_Dash.DinoAttackState_IceJumper_Dash_C.OnBeginEvent");
 

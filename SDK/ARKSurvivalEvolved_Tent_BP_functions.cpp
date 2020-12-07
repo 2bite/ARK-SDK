@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,53 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Tent_BP.Tent_BP_C.UseFullPickup
+// ()
+// Parameters:
+// class APrimalStructure*        StructToPickUp                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UseFull                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ATent_BP_C::UseFullPickup(class APrimalStructure* StructToPickUp, bool* UseFull)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tent_BP.Tent_BP_C.UseFullPickup");
+
+	ATent_BP_C_UseFullPickup_Params params;
+	params.StructToPickUp = StructToPickUp;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (UseFull != nullptr)
+		*UseFull = params.UseFull;
+}
+
+
+// Function Tent_BP.Tent_BP_C.BPAllowPickupGiveItem
+// ()
+// Parameters:
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ATent_BP_C::BPAllowPickupGiveItem(class APlayerController** ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tent_BP.Tent_BP_C.BPAllowPickupGiveItem");
+
+	ATent_BP_C_BPAllowPickupGiveItem_Params params;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Tent_BP.Tent_BP_C.BPPreventUsingAsFloorForStructure
 // ()

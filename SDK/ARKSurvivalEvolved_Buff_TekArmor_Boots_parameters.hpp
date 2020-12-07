@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,8 +22,8 @@ struct ABuff_TekArmor_Boots_C_OnRep_IsParticleActive_Params
 // Function Buff_TekArmor_Boots.Buff_TekArmor_Boots_C.IsOnSteepSlope
 struct ABuff_TekArmor_Boots_C_IsOnSteepSlope_Params
 {
-	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Boots.Buff_TekArmor_Boots_C.OnRep_NewWalkableZIsActive

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,22 +12,39 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Structure_TekAlarm.Structure_TekAlarm_C.InitSavedTribeLoggingSettings
+// ()
+
+void AStructure_TekAlarm_C::InitSavedTribeLoggingSettings()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.InitSavedTribeLoggingSettings");
+
+	AStructure_TekAlarm_C_InitSavedTribeLoggingSettings_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Structure_TekAlarm.Structure_TekAlarm_C.GetNextRotation
 // ()
 // Parameters:
-// struct FRotator                CurrentRotation                (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                currentRotation                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDecrease                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Roll                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Pitch                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Yaw                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                NextRotation                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TekAlarm_C::GetNextRotation(const struct FRotator& CurrentRotation, bool bDecrease, bool Roll, bool Pitch, bool Yaw, struct FRotator* NextRotation)
+void AStructure_TekAlarm_C::GetNextRotation(const struct FRotator& currentRotation, bool bDecrease, bool Roll, bool Pitch, bool Yaw, struct FRotator* NextRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.GetNextRotation");
 
 	AStructure_TekAlarm_C_GetNextRotation_Params params;
-	params.CurrentRotation = CurrentRotation;
+	params.currentRotation = currentRotation;
 	params.bDecrease = bDecrease;
 	params.Roll = Roll;
 	params.Pitch = Pitch;
@@ -141,15 +158,16 @@ void AStructure_TekAlarm_C::ToggleKeypadLink(class AShooterPlayerController* Opt
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.AlignBoxedToWorldUp
-// (NetReliable, NetRequest, Static, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, HasDefaults, NetValidate)
 
-void AStructure_TekAlarm_C::STATIC_AlignBoxedToWorldUp()
+void AStructure_TekAlarm_C::AlignBoxedToWorldUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.AlignBoxedToWorldUp");
 
 	AStructure_TekAlarm_C_AlignBoxedToWorldUp_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -420,7 +438,7 @@ void AStructure_TekAlarm_C::ReceiveDestroyed()
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.Has Any PINsSet
-// (NetReliable, NetRequest, Native, NetResponse, Static, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Exec, Event, Static, MulticastDelegate, HasDefaults, NetValidate)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -431,7 +449,6 @@ void AStructure_TekAlarm_C::STATIC_Has_Any_PINsSet(bool* Result)
 	AStructure_TekAlarm_C_Has_Any_PINsSet_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,7 +559,7 @@ void AStructure_TekAlarm_C::GetTribeLogNameForType(TEnumAsByte<ETekAlarmTargetTy
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.TryTribeLogging
-// (Net, Event, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // TEnumAsByte<ETekAlarmTargetTypes> Type                           (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -554,6 +571,7 @@ void AStructure_TekAlarm_C::TryTribeLogging(TEnumAsByte<ETekAlarmTargetTypes> Ty
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -586,7 +604,7 @@ void AStructure_TekAlarm_C::GetNextTribeLoggingSetting(int CurrentSetting, int* 
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.GetTribe Logging String
-// (NetResponse, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient)
+// (Net, Native, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class FString                  TypeName                       (Parm, ZeroConstructor)
 // int                            CooldownInSeconds              (Parm, ZeroConstructor, IsPlainOldData)
@@ -601,6 +619,7 @@ void AStructure_TekAlarm_C::GetTribe_Logging_String(const class FString& TypeNam
 	params.CooldownInSeconds = CooldownInSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -612,7 +631,7 @@ void AStructure_TekAlarm_C::GetTribe_Logging_String(const class FString& TypeNam
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.HasPendingPINActivation
-// (NetRequest, Exec, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Event, NetMulticast, MulticastDelegate, HasDefaults, NetValidate)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -634,12 +653,12 @@ void AStructure_TekAlarm_C::HasPendingPINActivation(bool* Result)
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.GetPINDataByType
-// (Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, HasDefaults, NetValidate)
 // Parameters:
 // TEnumAsByte<ETekAlarmTargetTypes> Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTekAlarmPINData        Ret                            (Parm, OutParm)
+// struct FTekAlarmPINData        ret                            (Parm, OutParm)
 
-void AStructure_TekAlarm_C::GetPINDataByType(TEnumAsByte<ETekAlarmTargetTypes> Type, struct FTekAlarmPINData* Ret)
+void AStructure_TekAlarm_C::GetPINDataByType(TEnumAsByte<ETekAlarmTargetTypes> Type, struct FTekAlarmPINData* ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.GetPINDataByType");
 
@@ -647,18 +666,19 @@ void AStructure_TekAlarm_C::GetPINDataByType(TEnumAsByte<ETekAlarmTargetTypes> T
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 }
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.SetPINCodeInPINData
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, HasDefaults, NetValidate)
 // Parameters:
 // int                            pinCode                        (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETekAlarmTargetTypes> Type                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -672,6 +692,7 @@ void AStructure_TekAlarm_C::SetPINCodeInPINData(int pinCode, TEnumAsByte<ETekAla
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -680,7 +701,7 @@ void AStructure_TekAlarm_C::SetPINCodeInPINData(int pinCode, TEnumAsByte<ETekAla
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.GetMultiUseTitleWithDelay
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, HasDefaults, NetValidate)
 // Parameters:
 // float                          DelaySeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Title                          (Parm)
@@ -706,13 +727,13 @@ void AStructure_TekAlarm_C::GetMultiUseTitleWithDelay(float DelaySeconds, const 
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.GetPINDataByPIN
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, HasDefaults, NetValidate)
 // Parameters:
 // int                            PIN                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTekAlarmPINData        Res                            (Parm, OutParm)
 // int                            retIndex                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TekAlarm_C::STATIC_GetPINDataByPIN(int PIN, struct FTekAlarmPINData* Res, int* retIndex)
+void AStructure_TekAlarm_C::GetPINDataByPIN(int PIN, struct FTekAlarmPINData* Res, int* retIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.GetPINDataByPIN");
 
@@ -757,7 +778,7 @@ void AStructure_TekAlarm_C::CalcuateDelay(float CurrentDelay, float* NewDelay)
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.PinCodeFlagsToString
-// (NetReliable, NetRequest, Native, Event, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // int                            PinCodesFlag                   (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  Output                         (Parm, OutParm, ZeroConstructor)
@@ -770,7 +791,6 @@ void AStructure_TekAlarm_C::STATIC_PinCodeFlagsToString(int PinCodesFlag, class 
 	params.PinCodesFlag = PinCodesFlag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -785,11 +805,11 @@ void AStructure_TekAlarm_C::STATIC_PinCodeFlagsToString(int PinCodesFlag, class 
 // ()
 // Parameters:
 // int                            Bit                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Activated                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Deactivated                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TekAlarm_C::Was_Pin_Code_Bit_Triggered(int Bit, bool* Ret, bool* Activated, bool* Deactivated)
+void AStructure_TekAlarm_C::Was_Pin_Code_Bit_Triggered(int Bit, bool* ret, bool* Activated, bool* Deactivated)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.Was Pin Code Bit Triggered");
 
@@ -802,8 +822,8 @@ void AStructure_TekAlarm_C::Was_Pin_Code_Bit_Triggered(int Bit, bool* Ret, bool*
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 	if (Activated != nullptr)
 		*Activated = params.Activated;
 	if (Deactivated != nullptr)
@@ -812,13 +832,13 @@ void AStructure_TekAlarm_C::Was_Pin_Code_Bit_Triggered(int Bit, bool* Ret, bool*
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.IsRelevantPinCode
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, HasDefaults, NetValidate)
 // Parameters:
 // int                            pinCode                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsDeactivation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TekAlarm_C::STATIC_IsRelevantPinCode(int pinCode, bool* Ret, bool* IsDeactivation)
+void AStructure_TekAlarm_C::STATIC_IsRelevantPinCode(int pinCode, bool* ret, bool* IsDeactivation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.IsRelevantPinCode");
 
@@ -826,14 +846,13 @@ void AStructure_TekAlarm_C::STATIC_IsRelevantPinCode(int pinCode, bool* Ret, boo
 	params.pinCode = pinCode;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 	if (IsDeactivation != nullptr)
 		*IsDeactivation = params.IsDeactivation;
 }
@@ -958,15 +977,16 @@ void AStructure_TekAlarm_C::Get_Octree_Data_For_Structure_Detect_Area(float* Rad
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.Update Structures in Area to Goal State
-// (Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Native, Event, NetResponse, Static, Private, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 
-void AStructure_TekAlarm_C::Update_Structures_in_Area_to_Goal_State()
+void AStructure_TekAlarm_C::STATIC_Update_Structures_in_Area_to_Goal_State()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.Update Structures in Area to Goal State");
 
 	AStructure_TekAlarm_C_Update_Structures_in_Area_to_Goal_State_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1026,7 +1046,7 @@ void AStructure_TekAlarm_C::SwitchStructureDetectStyle()
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.IsActorInBoxArea
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Native, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UBoxComponent*           BoxComponent                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -1100,17 +1120,18 @@ void AStructure_TekAlarm_C::Get_Octree_Data_ForTarget_Detect_Area(float* Radius,
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.HasFiltered Target in the Area
-// (NetRequest, Private, Delegate, NetServer, HasOutParms, NetClient)
+// (Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // bool                           TargetLost                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TekAlarm_C::HasFiltered_Target_in_the_Area(bool* TargetLost)
+void AStructure_TekAlarm_C::STATIC_HasFiltered_Target_in_the_Area(bool* TargetLost)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.HasFiltered Target in the Area");
 
 	AStructure_TekAlarm_C_HasFiltered_Target_in_the_Area_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1151,7 +1172,7 @@ bool AStructure_TekAlarm_C::BPClientHandleNetExecCommand(struct FName* CommandNa
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.BPApplyPinCode
-// (NetReliable, NetRequest, Native, Event, NetResponse, Private, Delegate, NetServer, HasOutParms, NetClient)
+// (NetReliable, Exec, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           appledPinCode                  (Parm, ZeroConstructor, IsPlainOldData)
@@ -1170,7 +1191,6 @@ bool AStructure_TekAlarm_C::BPApplyPinCode(class AShooterPlayerController** ForP
 	params.TheCustomIndex = TheCustomIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1313,13 +1333,13 @@ void AStructure_TekAlarm_C::Switch_Target_Detect_Style()
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.BPTryMultiUse
-// (Event, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
+// (NetRequest, Native, Event, NetResponse, Static, Private, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AStructure_TekAlarm_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
+bool AStructure_TekAlarm_C::STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TekAlarm.Structure_TekAlarm_C.BPTryMultiUse");
 
@@ -1328,6 +1348,7 @@ bool AStructure_TekAlarm_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 	params.UseIndex = UseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1338,7 +1359,7 @@ bool AStructure_TekAlarm_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.BPGetMultiUseEntries
-// (Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
+// (NetReliable, Native, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1352,6 +1373,7 @@ TArray<struct FMultiUseEntry> AStructure_TekAlarm_C::BPGetMultiUseEntries(class 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

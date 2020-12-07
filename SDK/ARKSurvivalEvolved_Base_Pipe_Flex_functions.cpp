@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,7 +57,7 @@ void ABase_Pipe_Flex_C::IsAllowedToRefreshConnections(class APlayerController* F
 
 
 // Function Base_Pipe_Flex.Base_Pipe_Flex_C.BPGetMultiUseEntries
-// (NetReliable, Event, Static, NetMulticast, Private, Protected, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -171,11 +171,11 @@ class FString ABase_Pipe_Flex_C::BPOverrideCantBuildReasonString(int* CantBuildR
 
 
 // Function Base_Pipe_Flex.Base_Pipe_Flex_C.AddSplineMeshComponents
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetResponse, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           UsePreviewMaterial             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABase_Pipe_Flex_C::STATIC_AddSplineMeshComponents(bool UsePreviewMaterial)
+void ABase_Pipe_Flex_C::AddSplineMeshComponents(bool UsePreviewMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Base_Pipe_Flex.Base_Pipe_Flex_C.AddSplineMeshComponents");
 
@@ -183,7 +183,6 @@ void ABase_Pipe_Flex_C::STATIC_AddSplineMeshComponents(bool UsePreviewMaterial)
 	params.UsePreviewMaterial = UsePreviewMaterial;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

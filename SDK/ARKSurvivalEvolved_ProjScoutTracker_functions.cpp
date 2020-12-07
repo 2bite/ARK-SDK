@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,9 +30,9 @@ void AProjScoutTracker_C::SpawnImpactVFX()
 
 
 // Function ProjScoutTracker.ProjScoutTracker_C.ScheduleNextTrackerImpactVFXSpawn
-// (NetRequest, Event, Static, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (Event, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AProjScoutTracker_C::STATIC_ScheduleNextTrackerImpactVFXSpawn()
+void AProjScoutTracker_C::ScheduleNextTrackerImpactVFXSpawn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjScoutTracker.ProjScoutTracker_C.ScheduleNextTrackerImpactVFXSpawn");
 

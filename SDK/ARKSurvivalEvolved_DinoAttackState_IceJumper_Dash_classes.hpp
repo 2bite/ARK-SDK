@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ public:
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void OnEndEvent();
 	void OnTickEvent(float* DeltaSeconds);
-	void STATIC_OnBeginEvent(class UPrimalAIState** InParentState);
+	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void IsAIControlled(bool* NewParam);
 	void ExecuteUbergraph_DinoAttackState_IceJumper_Dash(int EntryPoint);
 };

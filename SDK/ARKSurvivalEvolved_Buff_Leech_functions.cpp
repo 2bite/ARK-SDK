@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,7 +106,7 @@ bool ABuff_Leech_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex
 
 
 // Function Buff_Leech.Buff_Leech_C.BPGetMultiUseEntries
-// (NetReliable, Public, Protected, HasDefaults, DLLImport, Const, NetValidate)
+// (NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -133,7 +133,7 @@ TArray<struct FMultiUseEntry> ABuff_Leech_C::BPGetMultiUseEntries(class APlayerC
 
 
 // Function Buff_Leech.Buff_Leech_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Exec, Event, Public, Protected, HasDefaults, DLLImport, Const, NetValidate)
+// (Native, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -145,6 +145,7 @@ void ABuff_Leech_C::BPSetupForInstigator(class AActor** ForInstigator)
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

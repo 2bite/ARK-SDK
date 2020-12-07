@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Nursing.Buff_Nursing_C
-// 0x0004 (0x0934 - 0x0930)
+// 0x0004 (0x0954 - 0x0950)
 class ABuff_Nursing_C : public ABuff_Base_C
 {
 public:
-	float                                              BuffImprintingEffectivenessMultiplier;                    // 0x0930(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BuffImprintingEffectivenessMultiplier;                    // 0x0950(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,19 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.CanSpawnDrones
+struct ABee_Queen_Character_BP_C_CanSpawnDrones_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.On Drone Died
+struct ABee_Queen_Character_BP_C_On_Drone_Died_Params
+{
+	float                                              Damage;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class APawn*                                       InstigatorPawn;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPSetupTamed
 struct ABee_Queen_Character_BP_C_BPSetupTamed_Params

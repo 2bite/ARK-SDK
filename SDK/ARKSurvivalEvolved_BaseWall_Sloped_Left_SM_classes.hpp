@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BaseWall_Sloped_Left_SM.BaseWall_Sloped_Left_SM_C
-// 0x0000 (0x0AB8 - 0x0AB8)
+// 0x0000 (0x0AC0 - 0x0AC0)
 class ABaseWall_Sloped_Left_SM_C : public AWall_Base_Small_SM_C
 {
 public:

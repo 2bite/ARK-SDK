@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemConsumable_Seed_DefensePlant.PrimalItemConsumable_Seed_DefensePlant_C.BPAllowRemoteAddToInventory
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Native, Event, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimalInventoryComponent** invComp                        (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ByPC                           (Parm, ZeroConstructor, IsPlainOldData)

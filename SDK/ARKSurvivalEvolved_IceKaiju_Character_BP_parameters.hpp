@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -393,7 +393,7 @@ struct AIceKaiju_Character_BP_C_UpdateLeapTargetVFXLocation_Params
 	struct FVector                                     WorldLoc;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    WorldRot;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  HitResult;                                                // (Parm)
-	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Calc Leap TargetTamed
@@ -762,7 +762,7 @@ struct AIceKaiju_Character_BP_C_Server_TraceTargetDir_Params
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               LeapInstant;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     MaxDistLeapTraceGroundLoc;                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               FailedtoFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FailedtoFindMaxdistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Multi_TraceTargetDir
@@ -771,7 +771,7 @@ struct AIceKaiju_Character_BP_C_Multi_TraceTargetDir_Params
 	struct FVector                                     AimLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     MaxDistLeapTraceGroundLoc;                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               FailedtoFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FailedtoFindMaxdistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.RequestLeapResponse

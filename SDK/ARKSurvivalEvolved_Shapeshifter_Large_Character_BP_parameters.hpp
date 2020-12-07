@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,7 +60,7 @@ struct AShapeshifter_Large_Character_BP_C_BPDinoPostBeginPlay_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.CanSequentialJump
 struct AShapeshifter_Large_Character_BP_C_CanSequentialJump_Params
 {
-	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.Throttled TickFn
@@ -124,7 +124,7 @@ struct AShapeshifter_Large_Character_BP_C_GetProjectileTypeForRockThrow_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.Get RockThrowAttack Anim Index from Idle Anim
 struct AShapeshifter_Large_Character_BP_C_Get_RockThrowAttack_Anim_Index_from_Idle_Anim_Params
 {
-	int                                                Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GrabRock
@@ -146,7 +146,7 @@ struct AShapeshifter_Large_Character_BP_C_ThrowRock_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.Is Super Uberpounce
 struct AShapeshifter_Large_Character_BP_C_Is_Super_Uberpounce_Params
 {
-	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetUberpounceInterpSpeed
@@ -172,13 +172,13 @@ struct AShapeshifter_Large_Character_BP_C_UpdateIdleAnim_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetUberpounceRangeBase
 struct AShapeshifter_Large_Character_BP_C_GetUberpounceRangeBase_Params
 {
-	float                                              Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetUberpounceMaxRange
 struct AShapeshifter_Large_Character_BP_C_GetUberpounceMaxRange_Params
 {
-	float                                              Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPGetCrosshairAlpha
@@ -387,7 +387,7 @@ struct AShapeshifter_Large_Character_BP_C_BlueprintCanAttack_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.CalculateDamageTakenRequiredForBerzerk
 struct AShapeshifter_Large_Character_BP_C_CalculateDamageTakenRequiredForBerzerk_Params
 {
-	float                                              Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPAdjustDamage
@@ -497,7 +497,7 @@ struct AShapeshifter_Large_Character_BP_C_BPOnDinoCheat_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.IsBerzerk
 struct AShapeshifter_Large_Character_BP_C_IsBerzerk_Params
 {
-	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BP_OnJumpReleased

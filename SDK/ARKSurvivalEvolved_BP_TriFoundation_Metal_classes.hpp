@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TriFoundation_Metal.BP_TriFoundation_Metal_C
-// 0x0000 (0x0ACA - 0x0ACA)
+// 0x0000 (0x0AD2 - 0x0AD2)
 class ABP_TriFoundation_Metal_C : public ABase_Foundation_Tri_C
 {
 public:

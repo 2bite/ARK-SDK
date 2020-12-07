@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjTekGravityGrenade_Repel.ProjTekGravityGrenade_Repel_C
-// 0x0000 (0x09C2 - 0x09C2)
+// 0x0000 (0x09CA - 0x09CA)
 class AProjTekGravityGrenade_Repel_C : public AProjTekGravityGrenade_C
 {
 public:

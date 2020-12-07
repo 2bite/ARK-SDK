@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Insect_Character_Base.Insect_Character_Base_C
-// 0x0000 (0x2108 - 0x2108)
+// 0x0000 (0x2188 - 0x2188)
 class AInsect_Character_Base_C : public ADino_Character_BP_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,8 +48,8 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint_AnimGraphNode_TransitionResult_1996();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint_AnimGraphNode_TransitionResult_1995();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint_AnimGraphNode_TransitionResult_2032();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint_AnimGraphNode_TransitionResult_2031();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_SK_TentEntrance_Skeleton_AnimBlueprint(int EntryPoint);
 };

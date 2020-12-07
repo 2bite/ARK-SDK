@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.safely release carried character
+struct ATekHoverSkiff_Character_BP_C_safely_release_carried_character_Params
+{
+};
+
+// Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Get Closest Beam Location Not Blocked
+struct ATekHoverSkiff_Character_BP_C_Get_Closest_Beam_Location_Not_Blocked_Params
+{
+	struct FVector                                     End;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.ModifySkiffHorizontalInputs
 struct ATekHoverSkiff_Character_BP_C_ModifySkiffHorizontalInputs_Params

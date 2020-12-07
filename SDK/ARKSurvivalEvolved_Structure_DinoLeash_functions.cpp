@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,40 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.UpdateTetherAfterLoad
+// ()
+
+void AStructure_DinoLeash_C::UpdateTetherAfterLoad()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.UpdateTetherAfterLoad");
+
+	AStructure_DinoLeash_C_UpdateTetherAfterLoad_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.BPPostLoadedFromSaveGame
+// ()
+
+void AStructure_DinoLeash_C::BPPostLoadedFromSaveGame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.BPPostLoadedFromSaveGame");
+
+	AStructure_DinoLeash_C_BPPostLoadedFromSaveGame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPAdjustDamage
 // ()
@@ -63,16 +97,15 @@ void AStructure_DinoLeash_C::UpdateVisibility()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.ReceiveBeginPlay
-// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// ()
 
-void AStructure_DinoLeash_C::STATIC_ReceiveBeginPlay()
+void AStructure_DinoLeash_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.ReceiveBeginPlay");
 
 	AStructure_DinoLeash_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,7 +186,7 @@ void AStructure_DinoLeash_C::BPContainerActivated()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BlueprintDrawPreviewHUD
-// (NetReliable, NetRequest, Exec, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -169,6 +202,7 @@ void AStructure_DinoLeash_C::BlueprintDrawPreviewHUD(class AShooterHUD** HUD, fl
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,9 +381,9 @@ void AStructure_DinoLeash_C::Activate(bool Activated)
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.OnRep_Activated
-// (NetRequest, Exec, Static, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// ()
 
-void AStructure_DinoLeash_C::STATIC_OnRep_Activated()
+void AStructure_DinoLeash_C::OnRep_Activated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.OnRep_Activated");
 
@@ -389,7 +423,7 @@ bool AStructure_DinoLeash_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPGetMultiUseEntries
-// (Event, Static, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,25 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPreventAttachments
+struct ABasilisk_Character_BP_C_BPPreventAttachments_Params
+{
+	class UObject**                                    ForItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Basilisk_Character_BP.Basilisk_Character_BP_C.RefreshTamedAttachments
+struct ABasilisk_Character_BP_C_RefreshTamedAttachments_Params
+{
+};
+
+// Function Basilisk_Character_BP.Basilisk_Character_BP_C.AllowPlayMontage
+struct ABasilisk_Character_BP_C_AllowPlayMontage_Params
+{
+	class UAnimMontage**                               AnimMontage;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPIsHidden
 struct ABasilisk_Character_BP_C_BPIsHidden_Params
@@ -371,6 +390,11 @@ struct ABasilisk_Character_BP_C_AnimNotify_Death_Params
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BP_OnJumpPressed
 struct ABasilisk_Character_BP_C_BP_OnJumpPressed_Params
+{
+};
+
+// Function Basilisk_Character_BP.Basilisk_Character_BP_C.Proxy_RefreshAttachments
+struct ABasilisk_Character_BP_C_Proxy_RefreshAttachments_Params
 {
 };
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ bool ABuff_ChainBola_C::BPTryMultiUse(class APlayerController** ForPC, int* UseI
 
 
 // Function Buff_ChainBola.Buff_ChainBola_C.BPGetMultiUseEntries
-// (Exec, Static, Private, Protected, NetServer, HasOutParms, DLLImport, Const, NetValidate)
+// (NetRequest, Native, Static, NetMulticast, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -52,6 +52,7 @@ TArray<struct FMultiUseEntry> ABuff_ChainBola_C::STATIC_BPGetMultiUseEntries(cla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

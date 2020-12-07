@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,20 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Tent_BP.Tent_BP_C.UseFullPickup
+struct ATent_BP_C_UseFullPickup_Params
+{
+	class APrimalStructure*                            StructToPickUp;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               UseFull;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Tent_BP.Tent_BP_C.BPAllowPickupGiveItem
+struct ATent_BP_C_BPAllowPickupGiveItem_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Tent_BP.Tent_BP_C.BPPreventUsingAsFloorForStructure
 struct ATent_BP_C_BPPreventUsingAsFloorForStructure_Params

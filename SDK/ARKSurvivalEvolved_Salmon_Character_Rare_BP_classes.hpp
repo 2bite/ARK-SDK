@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Salmon_Character_Rare_BP.Salmon_Character_Rare_BP_C
-// 0x0008 (0x2118 - 0x2110)
+// 0x0008 (0x2198 - 0x2190)
 class ASalmon_Character_Rare_BP_C : public ASalmon_Character_BP_C
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

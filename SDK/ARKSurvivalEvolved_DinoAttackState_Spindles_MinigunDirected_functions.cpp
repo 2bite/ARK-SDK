@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.BPGetDebugInfoString
-// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UDinoAttackState_Spindles_MinigunDirected_C::STATIC_BPGetDebugInfoString()
+class FString UDinoAttackState_Spindles_MinigunDirected_C::BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.BPGetDebugInfoString");
 
@@ -61,11 +61,11 @@ void UDinoAttackState_Spindles_MinigunDirected_C::GetRandomVectorOnCircle(float 
 
 
 // Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.BPShouldEndAttack
-// (NetResponse, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDinoAttackState_Spindles_MinigunDirected_C::BPShouldEndAttack()
+bool UDinoAttackState_Spindles_MinigunDirected_C::STATIC_BPShouldEndAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.BPShouldEndAttack");
 
@@ -189,14 +189,14 @@ void UDinoAttackState_Spindles_MinigunDirected_C::GetAttackIndex(int* AttackInde
 
 
 // Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.Get Spine Start and End Position
-// (Exec, Event, Static, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Event, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 VFXStart                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 VFXEnd                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_Spindles_MinigunDirected_C::STATIC_Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd)
+void UDinoAttackState_Spindles_MinigunDirected_C::Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.Get Spine Start and End Position");
 

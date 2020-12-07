@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -303,7 +303,7 @@ struct ARockDrake_Character_BP_C_ReceiveHit_Params
 struct ARockDrake_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -433,14 +433,14 @@ struct ARockDrake_Character_BP_C_Replicate_Index_Update_Target_TPV_Camera_Offset
 struct ARockDrake_Character_BP_C_AddRiderToCamoFadeQueue_Params
 {
 	class AShooterCharacter*                           Rider;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               EnterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bInstant;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.ActivateRiderCamoParticles
 struct ARockDrake_Character_BP_C_ActivateRiderCamoParticles_Params
 {
-	bool                                               EnterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class AShooterCharacter*                           specificRider;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -640,7 +640,7 @@ struct ARockDrake_Character_BP_C_Check_For_Prevent_Stop_Climbing_Params
 	TArray<bool>                                       traceHitsArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int*                                               numValidHits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               numTraces;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.BlueprintCanAttack

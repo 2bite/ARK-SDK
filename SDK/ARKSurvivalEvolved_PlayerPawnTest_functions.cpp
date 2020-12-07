@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -325,7 +325,7 @@ void APlayerPawnTest_C::InitHairRestDistance()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetLastTransforms
-// (NetReliable, Native, Event, NetResponse, Static, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 
 void APlayerPawnTest_C::STATIC_SetLastTransforms()
 {
@@ -334,7 +334,6 @@ void APlayerPawnTest_C::STATIC_SetLastTransforms()
 	APlayerPawnTest_C_SetLastTransforms_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -377,15 +376,16 @@ void APlayerPawnTest_C::Setup_Collision_Volumes()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle
-// (NetReliable, NetRequest, NetMulticast, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 
-void APlayerPawnTest_C::SetupNewHairstyle()
+void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle");
 
 	APlayerPawnTest_C_SetupNewHairstyle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -394,7 +394,7 @@ void APlayerPawnTest_C::SetupNewHairstyle()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair
-// (NetRequest, Exec, Native, NetMulticast, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 
 void APlayerPawnTest_C::UpdateHair()
 {
@@ -403,7 +403,6 @@ void APlayerPawnTest_C::UpdateHair()
 	APlayerPawnTest_C_UpdateHair_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

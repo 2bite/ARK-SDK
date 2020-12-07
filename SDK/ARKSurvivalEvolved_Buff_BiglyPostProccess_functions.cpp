@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ void ABuff_BiglyPostProccess_C::Is_Valid_PounceTarget(class APrimalCharacter* Ta
 
 
 // Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.BPGetHUDElements
-// (Native, NetResponse, Static, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -107,9 +107,9 @@ void ABuff_BiglyPostProccess_C::STATIC_BPGetHUDElements(class APlayerController*
 // ()
 // Parameters:
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_BiglyPostProccess_C::IsAnotherDinoAlreadyAttached(class AActor* Target, bool* Ret)
+void ABuff_BiglyPostProccess_C::IsAnotherDinoAlreadyAttached(class AActor* Target, bool* ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.IsAnotherDinoAlreadyAttached");
 
@@ -122,8 +122,8 @@ void ABuff_BiglyPostProccess_C::IsAnotherDinoAlreadyAttached(class AActor* Targe
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 }
 
 
@@ -152,7 +152,7 @@ void ABuff_BiglyPostProccess_C::Can_Ignore_Traced_Actor(class AActor* Actor, boo
 
 
 // Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.BuffTickClient
-// (NetReliable, Native, NetResponse, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

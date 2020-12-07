@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElevatorTrack_Metal.ElevatorTrack_Metal_C
-// 0x0000 (0x0DE0 - 0x0DE0)
+// 0x0000 (0x0DE8 - 0x0DE8)
 class AElevatorTrack_Metal_C : public AElevatorTrack_Base_C
 {
 public:

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,11 +50,11 @@ void ABuff_WhipForTamedDino_C::SetBuffCauser(class AActor** CausedBy)
 
 
 // Function Buff_WhipForTamedDino.Buff_WhipForTamedDino_C.BuffTickServer
-// (Exec, Static, NetMulticast, Public, Private, Delegate, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_WhipForTamedDino_C::STATIC_BuffTickServer(float* DeltaTime)
+void ABuff_WhipForTamedDino_C::BuffTickServer(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_WhipForTamedDino.Buff_WhipForTamedDino_C.BuffTickServer");
 
@@ -62,6 +62,7 @@ void ABuff_WhipForTamedDino_C::STATIC_BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

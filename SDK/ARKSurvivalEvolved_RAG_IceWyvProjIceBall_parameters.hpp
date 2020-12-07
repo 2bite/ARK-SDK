@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function RAG_IceWyvProjIceBall.RAG_IceWyvProjIceBall_C.GetSocketForFinalTraceCheckFromInstigatorToDirectDamageVictim
+struct ARAG_IceWyvProjIceBall_C_GetSocketForFinalTraceCheckFromInstigatorToDirectDamageVictim_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function RAG_IceWyvProjIceBall.RAG_IceWyvProjIceBall_C.UserConstructionScript
 struct ARAG_IceWyvProjIceBall_C_UserConstructionScript_Params

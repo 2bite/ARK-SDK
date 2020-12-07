@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitterWeapon.Buff_ChargeEmitterWeapon_C
-// 0x0034 (0x0B7C - 0x0B48)
+// 0x0034 (0x0B9C - 0x0B68)
 class ABuff_ChargeEmitterWeapon_C : public ABuff_ChargeEmitter_C
 {
 public:
-	struct FVector                                     K2Node_CustomEvent_NewParam;                              // 0x0B48(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FLinearColor                                K2Node_CustomEvent_NewParam1;                             // 0x0B54(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     K2Node_CustomEvent_NewParam2;                             // 0x0B64(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     K2Node_CustomEvent_NewParam12;                            // 0x0B70(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_NewParam;                              // 0x0B68(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                K2Node_CustomEvent_NewParam1;                             // 0x0B74(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_NewParam2;                             // 0x0B84(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_NewParam12;                            // 0x0B90(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32,7 +32,7 @@ public:
 
 
 	void IsWeaponFiring(bool* IsFiring);
-	void STATIC_InitializeEmitter();
+	void InitializeEmitter();
 	void GetEmitterForwardVector(struct FVector* ForwardVector);
 	void CanEmitCharge(bool* canEmit);
 	void UserConstructionScript();

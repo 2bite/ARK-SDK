@@ -1,0 +1,201 @@
+#pragma once
+
+// ARKSurvivalEvolved (318.14) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_Stego_AnimBlueprint_Impaling_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.BlueprintPlayAnimationEvent
+struct UStego_AnimBlueprint_Impaling_C_BlueprintPlayAnimationEvent_Params
+{
+	class UAnimMontage**                               AnimationMontage;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             PlayRate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              playedAnimLength;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3504
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3504_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4424
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4424_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_ModifyBone_690
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_ModifyBone_690_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3503
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3503_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3502
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3502_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3501
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3501_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3500
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3500_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4423
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4423_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4422
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4422_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3499
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3499_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3498
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3498_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4419
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4419_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4418
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4418_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3497
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3497_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3496
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3496_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4417
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4417_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4416
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_SequencePlayer_4416_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3495
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3495_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3494
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3494_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3493
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3493_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_ModifyBone_689
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_ModifyBone_689_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_ApplyAdditive_306
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_ApplyAdditive_306_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3492
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3492_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3491
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_BlendListByBool_3491_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_RotationOffsetBlendSpace_210
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_RotationOffsetBlendSpace_210_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_ApplyAdditive_305
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_ApplyAdditive_305_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1674
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1674_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1673
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1673_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1672
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1672_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1671
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1671_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1670
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1670_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1669
+struct UStego_AnimBlueprint_Impaling_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_AnimGraphNode_TransitionResult_1669_Params
+{
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.BlueprintUpdateAnimation
+struct UStego_AnimBlueprint_Impaling_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Stego_AnimBlueprint_Impaling.Stego_AnimBlueprint_Impaling_C.ExecuteUbergraph_Stego_AnimBlueprint_Impaling
+struct UStego_AnimBlueprint_Impaling_C_ExecuteUbergraph_Stego_AnimBlueprint_Impaling_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

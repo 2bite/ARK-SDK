@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,11 +37,11 @@ void UDinoAttackState_MekSwordSwing_C::ShouldDoDamageTo(class AActor* Actor, boo
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.BPOnAttackEnd
-// (Native, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekSwordSwing_C::BPOnAttackEnd(int* AttackIndex)
+void UDinoAttackState_MekSwordSwing_C::STATIC_BPOnAttackEnd(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.BPOnAttackEnd");
 
@@ -49,7 +49,6 @@ void UDinoAttackState_MekSwordSwing_C::BPOnAttackEnd(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,9 +81,9 @@ void UDinoAttackState_MekSwordSwing_C::BPOnAnimNotifyCustomEvent(struct FName* C
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.DoSwordDamage
-// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void UDinoAttackState_MekSwordSwing_C::DoSwordDamage()
+void UDinoAttackState_MekSwordSwing_C::STATIC_DoSwordDamage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.DoSwordDamage");
 
@@ -99,19 +98,20 @@ void UDinoAttackState_MekSwordSwing_C::DoSwordDamage()
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordCapsule
-// (NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
+// (Native, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct UObject_FTransform      WorldTransform                 (Parm, OutParm, IsPlainOldData)
 // float                          CapsuleRadius                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          CapsuleHalfHeight              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekSwordSwing_C::STATIC_GetSwordCapsule(struct UObject_FTransform* WorldTransform, float* CapsuleRadius, float* CapsuleHalfHeight)
+void UDinoAttackState_MekSwordSwing_C::GetSwordCapsule(struct UObject_FTransform* WorldTransform, float* CapsuleRadius, float* CapsuleHalfHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordCapsule");
 
 	UDinoAttackState_MekSwordSwing_C_GetSwordCapsule_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,19 +127,18 @@ void UDinoAttackState_MekSwordSwing_C::STATIC_GetSwordCapsule(struct UObject_FTr
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordDamagePoint
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Loc                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rot                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekSwordSwing_C::STATIC_GetSwordDamagePoint(struct FVector* Loc, struct FRotator* Rot)
+void UDinoAttackState_MekSwordSwing_C::GetSwordDamagePoint(struct FVector* Loc, struct FRotator* Rot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordDamagePoint");
 
 	UDinoAttackState_MekSwordSwing_C_GetSwordDamagePoint_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

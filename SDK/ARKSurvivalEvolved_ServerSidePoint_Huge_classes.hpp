@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ServerSidePoint_Huge.ServerSidePoint_Huge_C
-// 0x0000 (0x0460 - 0x0460)
+// 0x0000 (0x0468 - 0x0468)
 class AServerSidePoint_Huge_C : public AServerSidePoint_C
 {
 public:

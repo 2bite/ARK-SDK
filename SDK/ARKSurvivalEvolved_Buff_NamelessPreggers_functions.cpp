@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,19 +77,18 @@ void ABuff_NamelessPreggers_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.BPModifyPlayerBoneModifiers
-// (NetReliable, NetRequest, Native, Event, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, Static, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FBoneModifier>   InBoneModifiers                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FBoneModifier>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FBoneModifier> ABuff_NamelessPreggers_C::BPModifyPlayerBoneModifiers(TArray<struct FBoneModifier>* InBoneModifiers)
+TArray<struct FBoneModifier> ABuff_NamelessPreggers_C::STATIC_BPModifyPlayerBoneModifiers(TArray<struct FBoneModifier>* InBoneModifiers)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.BPModifyPlayerBoneModifiers");
 
 	ABuff_NamelessPreggers_C_BPModifyPlayerBoneModifiers_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,12 +102,12 @@ TArray<struct FBoneModifier> ABuff_NamelessPreggers_C::BPModifyPlayerBoneModifie
 
 
 // Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.HandleBuffAnimNotify
-// (Exec, Native, NetResponse, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, NetResponse, Static, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  AnimNotifyName                 (Parm, ZeroConstructor, IsPlainOldData)
 // class FString*                 AnimNotifyStringData           (Parm, ZeroConstructor)
 
-void ABuff_NamelessPreggers_C::HandleBuffAnimNotify(struct FName* AnimNotifyName, class FString* AnimNotifyStringData)
+void ABuff_NamelessPreggers_C::STATIC_HandleBuffAnimNotify(struct FName* AnimNotifyName, class FString* AnimNotifyStringData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.HandleBuffAnimNotify");
 
@@ -117,7 +116,6 @@ void ABuff_NamelessPreggers_C::HandleBuffAnimNotify(struct FName* AnimNotifyName
 	params.AnimNotifyStringData = AnimNotifyStringData;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,16 +141,15 @@ void ABuff_NamelessPreggers_C::UpdateBuffPersistentData()
 
 
 // Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.ReceiveBeginPlay
-// (NetRequest, Exec, Native, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_NamelessPreggers_C::STATIC_ReceiveBeginPlay()
+void ABuff_NamelessPreggers_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.ReceiveBeginPlay");
 
 	ABuff_NamelessPreggers_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -181,14 +178,14 @@ void ABuff_NamelessPreggers_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.BPDrawBuffStatusHUD
-// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Net, NetReliable, NetRequest, Public, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_NamelessPreggers_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_NamelessPreggers_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_NamelessPreggers.Buff_NamelessPreggers_C.BPDrawBuffStatusHUD");
 
@@ -199,7 +196,6 @@ void ABuff_NamelessPreggers_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HU
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -107,9 +107,9 @@ void AWyvern_Character_BP_Fire_Minion_C::BP_OnSetDeath()
 
 
 // Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPTimerServer
-// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Private, Protected, HasDefaults)
+// (NetReliable, NetResponse, MulticastDelegate, Delegate, NetServer, DLLImport, BlueprintPure)
 
-void AWyvern_Character_BP_Fire_Minion_C::STATIC_BPTimerServer()
+void AWyvern_Character_BP_Fire_Minion_C::BPTimerServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPTimerServer");
 
@@ -337,13 +337,13 @@ bool AWyvern_Character_BP_Fire_Minion_C::BPTryMultiUse(class APlayerController**
 
 
 // Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPGetMultiUseEntries
-// (Net, NetReliable, Exec, Native, NetResponse, Private, Protected, HasDefaults)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AWyvern_Character_BP_Fire_Minion_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AWyvern_Character_BP_Fire_Minion_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPGetMultiUseEntries");
 
@@ -351,7 +351,6 @@ TArray<struct FMultiUseEntry> AWyvern_Character_BP_Fire_Minion_C::BPGetMultiUseE
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

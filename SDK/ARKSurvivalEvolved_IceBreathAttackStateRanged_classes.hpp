@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ public:
 	bool BPShouldEndAttack();
 	void OnEndEvent();
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
-	void OnTickEvent(float* DeltaSeconds);
+	void STATIC_OnTickEvent(float* DeltaSeconds);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void ExecuteUbergraph_IceBreathAttackStateRanged(int EntryPoint);
 };

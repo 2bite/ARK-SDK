@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_Bolt.ProjArrow_Bolt_C
-// 0x0008 (0x0688 - 0x0680)
+// 0x0008 (0x0690 - 0x0688)
 class AProjArrow_Bolt_C : public APrimalProjectileArrow
 {
 public:
-	class UAudioComponent*                             Projectile_SFX;                                           // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Projectile_SFX;                                           // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

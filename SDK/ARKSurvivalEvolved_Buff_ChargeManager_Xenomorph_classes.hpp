@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeManager_Xenomorph.Buff_ChargeManager_Xenomorph_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0A20 - 0x0A20)
 class ABuff_ChargeManager_Xenomorph_C : public ABuff_ChargeManager_C
 {
 public:

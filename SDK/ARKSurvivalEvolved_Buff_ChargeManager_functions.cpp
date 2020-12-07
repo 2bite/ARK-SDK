@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -403,7 +403,7 @@ void ABuff_ChargeManager_C::Batteries_Logic_Server(float DeltaTime)
 // Function Buff_ChargeManager.Buff_ChargeManager_C.Take Charge from Batteries
 // ()
 // Parameters:
-// float                          AmountToTake                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          amountToTake                   (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  inventoryOwner                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           addChargeToBuff                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           updateItem                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -411,12 +411,12 @@ void ABuff_ChargeManager_C::Batteries_Logic_Server(float DeltaTime)
 // float                          chargeTaken                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            accessedBatteries              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeManager_C::Take_Charge_from_Batteries(float AmountToTake, class AActor* inventoryOwner, bool addChargeToBuff, bool updateItem, bool multicastCharge, float* chargeTaken, int* accessedBatteries)
+void ABuff_ChargeManager_C::Take_Charge_from_Batteries(float amountToTake, class AActor* inventoryOwner, bool addChargeToBuff, bool updateItem, bool multicastCharge, float* chargeTaken, int* accessedBatteries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeManager.Buff_ChargeManager_C.Take Charge from Batteries");
 
 	ABuff_ChargeManager_C_Take_Charge_from_Batteries_Params params;
-	params.AmountToTake = AmountToTake;
+	params.amountToTake = amountToTake;
 	params.inventoryOwner = inventoryOwner;
 	params.addChargeToBuff = addChargeToBuff;
 	params.updateItem = updateItem;

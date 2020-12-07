@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -220,7 +220,7 @@ void AXenomorph_Character_BP_Male_Tamed_C::ProcessJump()
 
 
 // Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.Jump Trace
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintCallable, Const, NetValidate)
 
 void AXenomorph_Character_BP_Male_Tamed_C::STATIC_Jump_Trace()
 {

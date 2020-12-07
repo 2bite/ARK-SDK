@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass HUDPointsOfInterestContainerWidgetBP.HUDPointsOfInterestContainerWidgetBP_C
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0558 - 0x0558)
 class UHUDPointsOfInterestContainerWidgetBP_C : public UHUDPointsOfInterestContainer
 {
 public:

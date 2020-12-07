@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,7 +55,7 @@ public:
 	void STATIC_CycleKeys(bool* FinishedGame);
 	void EndGame(bool succeeded);
 	void Init(float KeyDisplayDuration, class AWeapFishingRod_C* rod, TArray<struct FKey>* GameKeys);
-	void STATIC_Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void ExecuteUbergraph_ReelingGame(int EntryPoint);
 };
 

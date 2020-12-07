@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MatineeActor1_Blueprint.MatineeActor1_Blueprint_C
-// 0x0000 (0x04E8 - 0x04E8)
+// 0x0000 (0x04F0 - 0x04F0)
 class AMatineeActor1_Blueprint_C : public AMatineeActor
 {
 public:

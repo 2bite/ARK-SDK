@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,11 +33,11 @@ void AExplorerChest_Glitch_C::DrawBasicFloatingHUD(class AHUD** ForHUD)
 
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA
-// (Exec, Native, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintPure, Const)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExplorerChest_Glitch_C::PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
+void AExplorerChest_Glitch_C::STATIC_PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA");
 
@@ -45,7 +45,6 @@ void AExplorerChest_Glitch_C::PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
 	params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

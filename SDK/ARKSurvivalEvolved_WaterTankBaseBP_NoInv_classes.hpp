@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterTankBaseBP_NoInv.WaterTankBaseBP_NoInv_C
-// 0x0008 (0x0EE8 - 0x0EE0)
+// 0x0008 (0x0EF0 - 0x0EE8)
 class AWaterTankBaseBP_NoInv_C : public APrimalStructureItemContainer_CropPlot_VisualItems
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0EE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0EE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

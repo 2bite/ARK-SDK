@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -85,7 +85,7 @@ void AProjPlantSpeciesZFruit_C::IsWearingProtection(class AActor* Actor, bool* I
 
 
 // Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.IsNearbyStructure
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          IndexOffset                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -100,7 +100,6 @@ void AProjPlantSpeciesZFruit_C::STATIC_IsNearbyStructure(int index, float IndexO
 	params.IndexOffset = IndexOffset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,9 +115,9 @@ void AProjPlantSpeciesZFruit_C::STATIC_IsNearbyStructure(int index, float IndexO
 // Parameters:
 // struct FVector                 v1                             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 v2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* retVal)
+void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* Retval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.GetAngleBetween");
 
@@ -132,8 +131,8 @@ void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const 
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (Retval != nullptr)
+		*Retval = params.Retval;
 }
 
 

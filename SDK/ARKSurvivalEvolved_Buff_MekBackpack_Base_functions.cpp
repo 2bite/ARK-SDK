@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,11 +70,11 @@ void ABuff_MekBackpack_Base_C::RestoreBackpackSaveData(const struct FMekBackpack
 
 
 // Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.GetBackpackSaveData
-// (Exec, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Event, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
-void ABuff_MekBackpack_Base_C::STATIC_GetBackpackSaveData(struct FMekBackpackData* Data)
+void ABuff_MekBackpack_Base_C::GetBackpackSaveData(struct FMekBackpackData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.GetBackpackSaveData");
 

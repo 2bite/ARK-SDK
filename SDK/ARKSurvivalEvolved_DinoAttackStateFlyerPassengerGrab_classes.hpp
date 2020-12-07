@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,7 +40,7 @@ public:
 	void OnTickEvent(float* DeltaSeconds);
 	void StartAnimationStateEvent(struct FName* CustomEventName, TEnumAsByte<ENetRole>* Role);
 	void GetAttackSocketLocations(TArray<struct UObject_FTransform>* Locations);
-	void STATIC_Find_Best_Grab_Target(class APrimalCharacter** bestTarget);
+	void Find_Best_Grab_Target(class APrimalCharacter** bestTarget);
 	void Get_Best_Passenger_Candidate(const struct FVector& SocketWorldPos, TArray<class AActor*>* Chars, class AActor** BestChar);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void ExecuteUbergraph_DinoAttackStateFlyerPassengerGrab(int EntryPoint);

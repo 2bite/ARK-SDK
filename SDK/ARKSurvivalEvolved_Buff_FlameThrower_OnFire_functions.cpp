@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ void ABuff_FlameThrower_OnFire_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_FlameThrower_OnFire.Buff_FlameThrower_OnFire_C.BPSetupForInstigator
-// (NetReliable, NetResponse, MulticastDelegate, Public, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Private, HasOutParms, DLLImport, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -45,6 +45,7 @@ void ABuff_FlameThrower_OnFire_C::BPSetupForInstigator(class AActor** ForInstiga
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

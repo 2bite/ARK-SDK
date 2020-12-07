@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -91,7 +91,7 @@ struct ABuff_TekGravityGrenadeForce_C_ForceInstigatorNetUpdate_Params
 // Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.ClientSyncDesiredFallVelocity
 struct ABuff_TekGravityGrenadeForce_C_ClientSyncDesiredFallVelocity_Params
 {
-	struct FVector                                     Vel;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     vel;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.ExecuteUbergraph_Buff_TekGravityGrenadeForce

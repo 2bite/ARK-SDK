@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cage_Wood.Cage_Wood_C
-// 0x0000 (0x0B40 - 0x0B40)
+// 0x0000 (0x0B50 - 0x0B50)
 class ACage_Wood_C : public ACage_Base_C
 {
 public:

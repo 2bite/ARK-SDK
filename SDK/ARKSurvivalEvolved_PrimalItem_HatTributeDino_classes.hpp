@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_HatTributeDino.PrimalItem_HatTributeDino_C
-// 0x0000 (0x09C8 - 0x09C8)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_HatTributeDino_C : public UPrimalItem_BossTributeGeneric_C
 {
 public:

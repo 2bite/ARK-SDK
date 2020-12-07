@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Structure_PressurePlate.Structure_PressurePlate_C
-// 0x0000 (0x1160 - 0x1160)
+// 0x0000 (0x1168 - 0x1168)
 class AStructure_PressurePlate_C : public AStructure_TekAlarm_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitter_LanternPet.Buff_ChargeEmitter_LanternPet_C
-// 0x0011 (0x0B59 - 0x0B48)
+// 0x0011 (0x0B79 - 0x0B68)
 class ABuff_ChargeEmitter_LanternPet_C : public ABuff_ChargeEmitter_C
 {
 public:
-	class UAudioComponent*                             ChargeOffSound;                                           // 0x0B48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioComponent*                             ChargeOnSound;                                            // 0x0B50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               WasMaxChargeLastTick;                                     // 0x0B58(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAudioComponent*                             ChargeOffSound;                                           // 0x0B68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             ChargeOnSound;                                            // 0x0B70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               WasMaxChargeLastTick;                                     // 0x0B78(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_TekClaw_Owner_Blocking.Buff_TekClaw_Owner_Blocking_C.BuffTickServer
+// ()
+// Parameters:
+// float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_TekClaw_Owner_Blocking_C::BuffTickServer(float* DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekClaw_Owner_Blocking.Buff_TekClaw_Owner_Blocking_C.BuffTickServer");
+
+	ABuff_TekClaw_Owner_Blocking_C_BuffTickServer_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_TekClaw_Owner_Blocking.Buff_TekClaw_Owner_Blocking_C.BPSetupForInstigator
 // ()

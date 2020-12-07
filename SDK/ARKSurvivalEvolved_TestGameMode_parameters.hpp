@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,6 +23,17 @@ struct ATestGameMode_C_BPPreSpawnedDino_Params
 // Function TestGameMode.TestGameMode_C.UserConstructionScript
 struct ATestGameMode_C_UserConstructionScript_Params
 {
+};
+
+// Function TestGameMode.TestGameMode_C.ReceiveBeginPlay
+struct ATestGameMode_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function TestGameMode.TestGameMode_C.OnShooterCharacterSpawned_Event
+struct ATestGameMode_C_OnShooterCharacterSpawned_Event_Params
+{
+	class AShooterCharacter*                           TheShooterCharacter;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TestGameMode.TestGameMode_C.ExecuteUbergraph_TestGameMode

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.BPOverrideGetAttackAnimationIndex
+struct ATapejara_Character_BP_C_BPOverrideGetAttackAnimationIndex_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class UAnimMontage*>                        AnimationArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.BPNotifyClearRider
 struct ATapejara_Character_BP_C_BPNotifyClearRider_Params
@@ -122,7 +130,7 @@ struct ATapejara_Character_BP_C_ProcessLatching_Params
 struct ATapejara_Character_BP_C_TryLatch_Params
 {
 	struct FVector                                     Offset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               BackwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.UserConstructionScript
@@ -153,7 +161,7 @@ struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_155_
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.Latch
 struct ATapejara_Character_BP_C_Latch_Params
 {
-	bool                                               BackwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.ReceiveTick
@@ -182,7 +190,7 @@ struct ATapejara_Character_BP_C_UnLatchStartAnimation_Params
 struct ATapejara_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

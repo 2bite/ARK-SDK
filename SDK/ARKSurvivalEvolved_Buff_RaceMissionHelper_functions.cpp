@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void ABuff_RaceMissionHelper_C::Tick_UpdatePowerUps()
 
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.ListenServerUpdateCheckpoints
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient)
+// (NetReliable, Exec, Event, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // TArray<struct FMissionWorldIndicator> MissionDataBuff                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AShooterCharacter*       PC                             (Parm, ZeroConstructor, IsPlainOldData)

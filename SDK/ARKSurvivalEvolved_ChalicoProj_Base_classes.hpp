@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ChalicoProj_Base.ChalicoProj_Base_C
-// 0x0004 (0x065C - 0x0658)
+// 0x0004 (0x0664 - 0x0660)
 class AChalicoProj_Base_C : public AShooterProjectile
 {
 public:
-	float                                              notAChalicoDamage;                                        // 0x0658(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              notAChalicoDamage;                                        // 0x0660(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

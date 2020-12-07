@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Microraptor_Character_BP.Microraptor_Character_BP_C.CheckForTargetOrDino
-// (NetReliable, NetRequest, Native, Event, NetResponse, Delegate, NetServer, DLLImport)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void AMicroraptor_Character_BP_C::CheckForTargetOrDino()
+void AMicroraptor_Character_BP_C::STATIC_CheckForTargetOrDino()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Microraptor_Character_BP.Microraptor_Character_BP_C.CheckForTargetOrDino");
 
@@ -109,11 +109,11 @@ void AMicroraptor_Character_BP_C::Add_Z_Velocity_Toward_Target()
 
 
 // Function Microraptor_Character_BP.Microraptor_Character_BP_C.SwapToCorrectAttackAnim
-// (NetReliable, NetRequest, Event, NetResponse, Static, Delegate, NetServer, DLLImport)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMicroraptor_Character_BP_C::STATIC_SwapToCorrectAttackAnim(int AttackIndex)
+void AMicroraptor_Character_BP_C::SwapToCorrectAttackAnim(int AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Microraptor_Character_BP.Microraptor_Character_BP_C.SwapToCorrectAttackAnim");
 
@@ -204,12 +204,12 @@ void AMicroraptor_Character_BP_C::BPOnSetMountedDino()
 
 
 // Function Microraptor_Character_BP.Microraptor_Character_BP_C.DinoShoulderMountedLaunch
-// (NetReliable, NetRequest, Event, NetMulticast, Delegate, NetServer, DLLImport)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector*                launchDir                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter**      throwingCharacter              (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMicroraptor_Character_BP_C::DinoShoulderMountedLaunch(struct FVector* launchDir, class AShooterCharacter** throwingCharacter)
+void AMicroraptor_Character_BP_C::STATIC_DinoShoulderMountedLaunch(struct FVector* launchDir, class AShooterCharacter** throwingCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Microraptor_Character_BP.Microraptor_Character_BP_C.DinoShoulderMountedLaunch");
 
@@ -304,7 +304,7 @@ void AMicroraptor_Character_BP_C::OnLaunched(struct FVector* LaunchVelocity, boo
 
 
 // Function Microraptor_Character_BP.Microraptor_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Delegate, NetServer, DLLImport)
+// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -313,7 +313,7 @@ void AMicroraptor_Character_BP_C::OnLaunched(struct FVector* LaunchVelocity, boo
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AMicroraptor_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AMicroraptor_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Microraptor_Character_BP.Microraptor_Character_BP_C.BlueprintAdjustOutputDamage");
 

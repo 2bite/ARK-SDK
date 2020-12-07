@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -132,13 +132,13 @@ public:
 	void OnShowExtendedInfoKeyPressed();
 	struct FText Get_RepairValueTextBlock_Text_1();
 	struct FText Get_AltFuelValueTextBlock_Text_1();
-	struct FSlateBrush Get_AltFuelIcon_Brush_1();
+	struct FSlateBrush STATIC_Get_AltFuelIcon_Brush_1();
 	struct FText Get_SkiffModeValueTextBlock_Text_1();
-	struct FText STATIC_Get_AltitudeValueTextBlock_Text_1();
+	struct FText Get_AltitudeValueTextBlock_Text_1();
 	struct FText STATIC_Get_AltitudeLabelTextBlock_Text_1();
 	struct FText STATIC_Get_Debug_Text_0();
 	struct FText STATIC_Get_FuelReserveTextBlock_Text_1();
-	void STATIC_Set_Progress_Bar_Fill_And_Background_Colors(class UProgressBar* ProgressBar, const struct FLinearColor& LinearColor, struct FProgressBarStyle* ProgressBarStyle);
+	void Set_Progress_Bar_Fill_And_Background_Colors(class UProgressBar* ProgressBar, const struct FLinearColor& LinearColor, struct FProgressBarStyle* ProgressBarStyle);
 	struct FText STATIC_Get_CurrentElementValueTextBlock_Text_1();
 	float Get_Tractor_Progress_Bar_Percent_();
 	struct FLinearColor Get_Crosshair_ColorAndOpacity_1();

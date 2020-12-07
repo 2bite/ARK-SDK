@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjTekDinoHelmet_Tapejara.ProjTekDinoHelmet_Tapejara_C
-// 0x0000 (0x0782 - 0x0782)
+// 0x0000 (0x078A - 0x078A)
 class AProjTekDinoHelmet_Tapejara_C : public AProjTekDinoHelmet_C
 {
 public:

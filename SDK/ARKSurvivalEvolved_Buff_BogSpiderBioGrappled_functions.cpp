@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -123,9 +123,9 @@ bool ABuff_BogSpiderBioGrappled_C::BPServerHandleNetExecCommand(class APlayerCon
 
 
 // Function Buff_BogSpiderBioGrappled.Buff_BogSpiderBioGrappled_C.ToggleEnsnareVFX
-// (NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_BogSpiderBioGrappled_C::ToggleEnsnareVFX()
+void ABuff_BogSpiderBioGrappled_C::STATIC_ToggleEnsnareVFX()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BogSpiderBioGrappled.Buff_BogSpiderBioGrappled_C.ToggleEnsnareVFX");
 

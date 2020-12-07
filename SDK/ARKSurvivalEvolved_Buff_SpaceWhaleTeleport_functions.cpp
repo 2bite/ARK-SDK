@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,7 +70,7 @@ void ABuff_SpaceWhaleTeleport_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, Const, NetValidate)
+// (NetRequest, Native, Event, Static, NetMulticast, Public, Protected, NetServer, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -82,6 +82,7 @@ void ABuff_SpaceWhaleTeleport_C::STATIC_BPSetupForInstigator(class AActor** ForI
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,13 +116,13 @@ bool ABuff_SpaceWhaleTeleport_C::BPCustomAllowAddBuff(class APrimalCharacter** f
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPPreventInstigatorMovementMode
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasDefaults)
+// (Net, NetReliable, Exec, Native, Event, Static, Public, NetServer, NetValidate)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_SpaceWhaleTeleport_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
+bool ABuff_SpaceWhaleTeleport_C::STATIC_BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPPreventInstigatorMovementMode");
 
@@ -141,7 +142,7 @@ bool ABuff_SpaceWhaleTeleport_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMo
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPOnOwnerMassTeleportEvent
-// (NetReliable, Exec, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults)
+// (Net, NetReliable, NetRequest, NetResponse, Static, Public, NetServer, NetValidate)
 // Parameters:
 // TEnumAsByte<EMassTeleportState>* EventState                     (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter**       TeleportInitiatedByChar        (Parm, ZeroConstructor, IsPlainOldData)
@@ -182,16 +183,16 @@ void ABuff_SpaceWhaleTeleport_C::UserConstructionScript()
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.MultiHyperdriveEffect
 // ()
 // Parameters:
-// class USceneComponent*         meshComp                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent*         MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_SpaceWhaleTeleport_C::MultiHyperdriveEffect(class USceneComponent* meshComp, const struct FVector& Start, const struct FVector& End)
+void ABuff_SpaceWhaleTeleport_C::MultiHyperdriveEffect(class USceneComponent* MeshComp, const struct FVector& Start, const struct FVector& End)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.MultiHyperdriveEffect");
 
 	ABuff_SpaceWhaleTeleport_C_MultiHyperdriveEffect_Params params;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Start = Start;
 	params.End = End;
 

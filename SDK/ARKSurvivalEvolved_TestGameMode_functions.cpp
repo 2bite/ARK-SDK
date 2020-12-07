@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,6 +40,43 @@ void ATestGameMode_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function TestGameMode.TestGameMode_C.UserConstructionScript");
 
 	ATestGameMode_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TestGameMode.TestGameMode_C.ReceiveBeginPlay
+// ()
+
+void ATestGameMode_C::ReceiveBeginPlay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TestGameMode.TestGameMode_C.ReceiveBeginPlay");
+
+	ATestGameMode_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TestGameMode.TestGameMode_C.OnShooterCharacterSpawned_Event
+// ()
+// Parameters:
+// class AShooterCharacter*       TheShooterCharacter            (Parm, ZeroConstructor, IsPlainOldData)
+
+void ATestGameMode_C::OnShooterCharacterSpawned_Event(class AShooterCharacter* TheShooterCharacter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TestGameMode.TestGameMode_C.OnShooterCharacterSpawned_Event");
+
+	ATestGameMode_C_OnShooterCharacterSpawned_Event_Params params;
+	params.TheShooterCharacter = TheShooterCharacter;
 
 	auto flags = fn->FunctionFlags;
 

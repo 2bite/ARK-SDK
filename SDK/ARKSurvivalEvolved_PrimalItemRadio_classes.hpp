@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemRadio.PrimalItemRadio_C
-// 0x0000 (0x09C0 - 0x09C0)
+// 0x0000 (0x09F0 - 0x09F0)
 class UPrimalItemRadio_C : public UPrimalItem_Radio
 {
 public:

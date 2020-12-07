@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -134,7 +134,7 @@ struct ABuff_ChargeManager_C_Batteries_Logic_Server_Params
 // Function Buff_ChargeManager.Buff_ChargeManager_C.Take Charge from Batteries
 struct ABuff_ChargeManager_C_Take_Charge_from_Batteries_Params
 {
-	float                                              AmountToTake;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              amountToTake;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      inventoryOwner;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               addChargeToBuff;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               updateItem;                                               // (Parm, ZeroConstructor, IsPlainOldData)

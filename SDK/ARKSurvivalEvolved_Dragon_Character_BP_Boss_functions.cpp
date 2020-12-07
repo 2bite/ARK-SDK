@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,7 +54,7 @@ void ADragon_Character_BP_Boss_C::BPSentKilledNotification(class AShooterPlayerC
 
 
 // Function Dragon_Character_BP_Boss.Dragon_Character_BP_Boss_C.Force to WanderOnLand
-// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 
 void ADragon_Character_BP_Boss_C::STATIC_Force_to_WanderOnLand()
 {
@@ -63,6 +63,7 @@ void ADragon_Character_BP_Boss_C::STATIC_Force_to_WanderOnLand()
 	ADragon_Character_BP_Boss_C_Force_to_WanderOnLand_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,16 +72,15 @@ void ADragon_Character_BP_Boss_C::STATIC_Force_to_WanderOnLand()
 
 
 // Function Dragon_Character_BP_Boss.Dragon_Character_BP_Boss_C.ForceToFlying
-// (NetReliable, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetRequest, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintPure)
 
-void ADragon_Character_BP_Boss_C::STATIC_ForceToFlying()
+void ADragon_Character_BP_Boss_C::ForceToFlying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dragon_Character_BP_Boss.Dragon_Character_BP_Boss_C.ForceToFlying");
 
 	ADragon_Character_BP_Boss_C_ForceToFlying_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

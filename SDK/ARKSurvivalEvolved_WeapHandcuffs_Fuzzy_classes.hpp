@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapHandcuffs_Fuzzy.WeapHandcuffs_Fuzzy_C
-// 0x0000 (0x0D50 - 0x0D50)
+// 0x0000 (0x0D58 - 0x0D58)
 class AWeapHandcuffs_Fuzzy_C : public AWeapHandcuffs_C
 {
 public:

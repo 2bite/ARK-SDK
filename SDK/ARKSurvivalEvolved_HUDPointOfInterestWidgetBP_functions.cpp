@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,6 +76,23 @@ void UHUDPointOfInterestWidgetBP_C::Tick(struct FGeometry* MyGeometry, float* In
 	UHUDPointOfInterestWidgetBP_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HUDPointOfInterestWidgetBP.HUDPointOfInterestWidgetBP_C.PlayPulseAnimation
+// ()
+
+void UHUDPointOfInterestWidgetBP_C::PlayPulseAnimation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HUDPointOfInterestWidgetBP.HUDPointOfInterestWidgetBP_C.PlayPulseAnimation");
+
+	UHUDPointOfInterestWidgetBP_C_PlayPulseAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
 

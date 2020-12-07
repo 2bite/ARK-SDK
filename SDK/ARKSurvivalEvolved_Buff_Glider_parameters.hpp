@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -154,7 +154,7 @@ struct ABuff_Glider_C_BuffAdjustDamage_Params
 // Function Buff_Glider.Buff_Glider_C.AreRotatorsNearlyEqual
 struct ABuff_Glider_C_AreRotatorsNearlyEqual_Params
 {
-	struct FRotator                                    RotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    rotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Error;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -200,7 +200,7 @@ struct ABuff_Glider_C_GetGlideSpeedRatio_Pure_Params
 // Function Buff_Glider.Buff_Glider_C.GetDefaultOwningPlayer
 struct ABuff_Glider_C_GetDefaultOwningPlayer_Params
 {
-	class AShooterCharacter*                           Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Glider.Buff_Glider_C.IsPlayerGrounded
@@ -249,7 +249,7 @@ struct ABuff_Glider_C_Reset_Owning_PlayerVariables_Params
 // Function Buff_Glider.Buff_Glider_C.ClampPlayerVelocity
 struct ABuff_Glider_C_ClampPlayerVelocity_Params
 {
-	float                                              MaxVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              maxVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Glider.Buff_Glider_C.NetSetCurrentGliderState

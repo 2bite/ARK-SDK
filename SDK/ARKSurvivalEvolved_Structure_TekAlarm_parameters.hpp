@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,10 +14,15 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Structure_TekAlarm.Structure_TekAlarm_C.InitSavedTribeLoggingSettings
+struct AStructure_TekAlarm_C_InitSavedTribeLoggingSettings_Params
+{
+};
+
 // Function Structure_TekAlarm.Structure_TekAlarm_C.GetNextRotation
 struct AStructure_TekAlarm_C_GetNextRotation_Params
 {
-	struct FRotator                                    CurrentRotation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    currentRotation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bDecrease;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Roll;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Pitch;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
@@ -200,7 +205,7 @@ struct AStructure_TekAlarm_C_HasPendingPINActivation_Params
 struct AStructure_TekAlarm_C_GetPINDataByType_Params
 {
 	TEnumAsByte<ETekAlarmTargetTypes>                  Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTekAlarmPINData                            Ret;                                                      // (Parm, OutParm)
+	struct FTekAlarmPINData                            ret;                                                      // (Parm, OutParm)
 };
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.SetPINCodeInPINData
@@ -244,7 +249,7 @@ struct AStructure_TekAlarm_C_PinCodeFlagsToString_Params
 struct AStructure_TekAlarm_C_Was_Pin_Code_Bit_Triggered_Params
 {
 	int                                                Bit;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               Activated;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               Deactivated;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -253,7 +258,7 @@ struct AStructure_TekAlarm_C_Was_Pin_Code_Bit_Triggered_Params
 struct AStructure_TekAlarm_C_IsRelevantPinCode_Params
 {
 	int                                                pinCode;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsDeactivation;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

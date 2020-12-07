@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dimorph_Character_BP_Aggressive_DragonBoss.Dimorph_Character_BP_Aggressive_DragonBoss_C
-// 0x0000 (0x2118 - 0x2118)
+// 0x0000 (0x2198 - 0x2198)
 class ADimorph_Character_BP_Aggressive_DragonBoss_C : public ADimorph_Character_BP_Aggressive_C
 {
 public:

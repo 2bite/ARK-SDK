@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -244,13 +244,13 @@ bool ABuff_Lamprey_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function Buff_Lamprey.Buff_Lamprey_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, NetResponse, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABuff_Lamprey_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABuff_Lamprey_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lamprey.Buff_Lamprey_C.BPGetMultiUseEntries");
 
@@ -258,7 +258,6 @@ TArray<struct FMultiUseEntry> ABuff_Lamprey_C::STATIC_BPGetMultiUseEntries(class
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -272,11 +271,11 @@ TArray<struct FMultiUseEntry> ABuff_Lamprey_C::STATIC_BPGetMultiUseEntries(class
 
 
 // Function Buff_Lamprey.Buff_Lamprey_C.BPSetupForInstigator
-// (NetReliable, Exec, MulticastDelegate, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Static, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Lamprey_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_Lamprey_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lamprey.Buff_Lamprey_C.BPSetupForInstigator");
 

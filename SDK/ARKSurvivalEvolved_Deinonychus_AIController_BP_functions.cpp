@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.DinoUberpounce
-// (NetReliable, Native, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -24,7 +24,6 @@ void ADeinonychus_AIController_BP_C::STATIC_DinoUberpounce(bool* Success)
 	ADeinonychus_AIController_BP_C_DinoUberpounce_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +35,16 @@ void ADeinonychus_AIController_BP_C::STATIC_DinoUberpounce(bool* Success)
 
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.LocationUberpounce
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport)
+// (NetReliable, NetRequest, Exec, Native, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 
-void ADeinonychus_AIController_BP_C::STATIC_LocationUberpounce()
+void ADeinonychus_AIController_BP_C::LocationUberpounce()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.LocationUberpounce");
 
 	ADeinonychus_AIController_BP_C_LocationUberpounce_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,15 +55,15 @@ void ADeinonychus_AIController_BP_C::STATIC_LocationUberpounce()
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.AllowSurfaceNormalForUberpounce
 // ()
 // Parameters:
-// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& SurfaceNormal, bool* IsValid)
+void ADeinonychus_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& surfaceNormal, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.AllowSurfaceNormalForUberpounce");
 
 	ADeinonychus_AIController_BP_C_AllowSurfaceNormalForUberpounce_Params params;
-	params.SurfaceNormal = SurfaceNormal;
+	params.surfaceNormal = surfaceNormal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -131,7 +131,7 @@ void ADeinonychus_AIController_BP_C::Deinonychus_AttackedWhileLatched()
 
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.OnUberpounceStateChanged
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EUberpounceState>  NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EUberpounceState>  PrevState                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -145,6 +145,7 @@ void ADeinonychus_AIController_BP_C::STATIC_OnUberpounceStateChanged(TEnumAsByte
 	params.PrevState = PrevState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,9 +232,9 @@ void ADeinonychus_AIController_BP_C::GetPrimalTarget(class APrimalCharacter** Ta
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.GetDino
 // ()
 // Parameters:
-// class ADeinonychus_Character_BP_C* Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ADeinonychus_Character_BP_C* ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_AIController_BP_C::GetDino(class ADeinonychus_Character_BP_C** Ret)
+void ADeinonychus_AIController_BP_C::GetDino(class ADeinonychus_Character_BP_C** ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.GetDino");
 
@@ -245,8 +246,8 @@ void ADeinonychus_AIController_BP_C::GetDino(class ADeinonychus_Character_BP_C**
 
 	fn->FunctionFlags = flags;
 
-	if (Ret != nullptr)
-		*Ret = params.Ret;
+	if (ret != nullptr)
+		*ret = params.ret;
 }
 
 

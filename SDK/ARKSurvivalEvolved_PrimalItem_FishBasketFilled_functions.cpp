@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPDrawItemIcon
-// (NetReliable, Native, Event, NetResponse, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Event, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UCanvas**                ItemCanvas                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               ItemCanvasSize                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -30,7 +30,6 @@ void UPrimalItem_FishBasketFilled_C::BPDrawItemIcon(class UCanvas** ItemCanvas, 
 	params.bItemEnabled = bItemEnabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -66,15 +65,16 @@ void UPrimalItem_FishBasketFilled_C::SlottedTick(float* DeltaSeconds)
 
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BlueprintUsed
-// (NetRequest, Exec, Static, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void UPrimalItem_FishBasketFilled_C::STATIC_BlueprintUsed()
+void UPrimalItem_FishBasketFilled_C::BlueprintUsed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BlueprintUsed");
 
 	UPrimalItem_FishBasketFilled_C_BlueprintUsed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,7 +83,7 @@ void UPrimalItem_FishBasketFilled_C::STATIC_BlueprintUsed()
 
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPGetItemDescription
-// (NetReliable, Event, NetResponse, Static, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -100,6 +100,7 @@ class FString UPrimalItem_FishBasketFilled_C::STATIC_BPGetItemDescription(class 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,7 +111,7 @@ class FString UPrimalItem_FishBasketFilled_C::STATIC_BPGetItemDescription(class 
 
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPCanUse
-// (NetReliable, Exec, Event, NetResponse, Static, Protected, Delegate, NetServer, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -123,6 +124,7 @@ bool UPrimalItem_FishBasketFilled_C::STATIC_BPCanUse(bool* bIgnoreCooldown)
 	params.bIgnoreCooldown = bIgnoreCooldown;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

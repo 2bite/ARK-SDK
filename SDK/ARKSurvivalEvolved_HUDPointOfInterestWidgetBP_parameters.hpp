@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,6 +34,11 @@ struct UHUDPointOfInterestWidgetBP_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (Parm, IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HUDPointOfInterestWidgetBP.HUDPointOfInterestWidgetBP_C.PlayPulseAnimation
+struct UHUDPointOfInterestWidgetBP_C_PlayPulseAnimation_Params
+{
 };
 
 // Function HUDPointOfInterestWidgetBP.HUDPointOfInterestWidgetBP_C.ExecuteUbergraph_HUDPointOfInterestWidgetBP

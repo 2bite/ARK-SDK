@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,7 +37,7 @@ void AWoodElevatorTopSwitch_C::AllowedToChangePublicUse(class APlayerController*
 
 
 // Function WoodElevatorTopSwitch.WoodElevatorTopSwitch_C.Make Multi Use Entry
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EPrimalStructureElevatorState> Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Priority                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -138,7 +138,7 @@ bool AWoodElevatorTopSwitch_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function WoodElevatorTopSwitch.WoodElevatorTopSwitch_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -152,7 +152,6 @@ TArray<struct FMultiUseEntry> AWoodElevatorTopSwitch_C::STATIC_BPGetMultiUseEntr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

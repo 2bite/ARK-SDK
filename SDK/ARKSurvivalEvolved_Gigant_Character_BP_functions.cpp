@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,69 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Gigant_Character_BP.Gigant_Character_BP_C.BPNotifyClearRider
+// ()
+// Parameters:
+// class AShooterCharacter**      RiderClearing                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void AGigant_Character_BP_C::BPNotifyClearRider(class AShooterCharacter** RiderClearing)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Gigant_Character_BP.Gigant_Character_BP_C.BPNotifyClearRider");
+
+	AGigant_Character_BP_C_BPNotifyClearRider_Params params;
+	params.RiderClearing = RiderClearing;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Gigant_Character_BP.Gigant_Character_BP_C.BPNotifySetRider
+// ()
+// Parameters:
+// class AShooterCharacter**      RiderSetting                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void AGigant_Character_BP_C::BPNotifySetRider(class AShooterCharacter** RiderSetting)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Gigant_Character_BP.Gigant_Character_BP_C.BPNotifySetRider");
+
+	AGigant_Character_BP_C_BPNotifySetRider_Params params;
+	params.RiderSetting = RiderSetting;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Gigant_Character_BP.Gigant_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+// ()
+// Parameters:
+// int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName AGigant_Character_BP_C::GetSocketForMeleeTraceForHitBlockers(int* AttackIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Gigant_Character_BP.Gigant_Character_BP_C.GetSocketForMeleeTraceForHitBlockers");
+
+	AGigant_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params params;
+	params.AttackIndex = AttackIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Gigant_Character_BP.Gigant_Character_BP_C.UserConstructionScript
 // ()

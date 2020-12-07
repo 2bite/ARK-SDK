@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -127,7 +127,7 @@ void AStorageBox_TekShield_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* C
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPImpactEffect
-// (Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetClient, BlueprintCallable, Const, NetValidate)
+// (Exec, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FHitResult              HitRes                         (Parm, OutParm, ReferenceParm)
 // struct FVector                 ShootDirection                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -140,7 +140,6 @@ bool AStorageBox_TekShield_C::STATIC_BPImpactEffect(struct FHitResult* HitRes, s
 	AStorageBox_TekShield_C_BPImpactEffect_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,7 +155,7 @@ bool AStorageBox_TekShield_C::STATIC_BPImpactEffect(struct FHitResult* HitRes, s
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPHitEffect
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Event, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DamageTaken                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
@@ -167,7 +166,7 @@ bool AStorageBox_TekShield_C::STATIC_BPImpactEffect(struct FHitResult* HitRes, s
 // struct FVector*                DamageLoc                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator*               HitNormal                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStorageBox_TekShield_C::BPHitEffect(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, class UPrimitiveComponent** HitComponent, struct FVector* DamageLoc, struct FRotator* HitNormal, struct FDamageEvent* DamageEvent)
+void AStorageBox_TekShield_C::STATIC_BPHitEffect(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, class UPrimitiveComponent** HitComponent, struct FVector* DamageLoc, struct FRotator* HitNormal, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekShield.StorageBox_TekShield_C.BPHitEffect");
 
@@ -387,7 +386,7 @@ bool AStorageBox_TekShield_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Native, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BaseFuelBurner_GasOnly.BaseFuelBurner_GasOnly_C
-// 0x0000 (0x0DD0 - 0x0DD0)
+// 0x0000 (0x0DD8 - 0x0DD8)
 class ABaseFuelBurner_GasOnly_C : public ABaseFuelBurner_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_MekBackpack_Base.Buff_MekBackpack_Base_C
-// 0x0002 (0x0932 - 0x0930)
+// 0x0002 (0x0952 - 0x0950)
 class ABuff_MekBackpack_Base_C : public APrimalBuff
 {
 public:
-	bool                                               InterceptMekAttacks;                                      // 0x0930(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverrideTurnInPlaceSpeed;                              // 0x0931(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               InterceptMekAttacks;                                      // 0x0950(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               UseOverrideTurnInPlaceSpeed;                              // 0x0951(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32,7 +32,7 @@ public:
 	void OnSyncColorization();
 	void NotifySetRider(class AShooterCharacter* Rider);
 	void RestoreBackpackSaveData(const struct FMekBackpackData& SaveData);
-	void STATIC_GetBackpackSaveData(struct FMekBackpackData* Data);
+	void GetBackpackSaveData(struct FMekBackpackData* Data);
 	void NotifyInventoryChange(class UPrimalItem* Item, bool ItemAdded, bool ItemEquipped);
 	void BPActivated(class AActor** ForInstigator);
 	void SetBackpackMalfunctioned(bool IsBackpackDisabled);

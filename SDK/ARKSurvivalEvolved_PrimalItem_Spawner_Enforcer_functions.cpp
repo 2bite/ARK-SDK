@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_Spawner_Enforcer.PrimalItem_Spawner_Enforcer_C.PreDinoSpawned
-// (Exec, Native, Static, Public, Protected, NetServer, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void UPrimalItem_Spawner_Enforcer_C::STATIC_PreDinoSpawned()
 {

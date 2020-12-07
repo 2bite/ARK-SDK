@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ScoutTracker.Buff_ScoutTracker_C.BPGetDebugInfoString
-// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Delegate, DLLImport, Const, NetValidate)
+// (Net, NetReliable, Native, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ABuff_ScoutTracker_C::BPGetDebugInfoString()
+class FString ABuff_ScoutTracker_C::STATIC_BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutTracker.Buff_ScoutTracker_C.BPGetDebugInfoString");
 
 	ABuff_ScoutTracker_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ public:
 
 
 	void BPInitializeInventory();
-	void TakeWaterFromContainers(float AmountToTake, float* TakenAmount);
+	void TakeWaterFromContainers(float amountToTake, float* TakenAmount);
 	void FillWaterContainers(float WaterAmount, float* WaterAmountLeft);
 	void ExecuteUbergraph_DinoTamedInventoryComponent_Camelsaurus(int EntryPoint);
 };

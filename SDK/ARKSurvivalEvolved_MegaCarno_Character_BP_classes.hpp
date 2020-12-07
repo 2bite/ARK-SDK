@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MegaCarno_Character_BP.MegaCarno_Character_BP_C
-// 0x0008 (0x2118 - 0x2110)
+// 0x0008 (0x2198 - 0x2190)
 class AMegaCarno_Character_BP_C : public ACarno_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_MegaCarno_C* DinoCharacterStatus_BP_MegaCarno_C1;                      // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_MegaCarno_C* DinoCharacterStatus_BP_MegaCarno_C1;                      // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

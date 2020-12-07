@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -5668,14 +5668,14 @@ void USpacer::SetSize(const struct FVector2D& InSize)
 // Function UMG.SpinBox.SetValue
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void USpinBox::SetValue(float newValue)
+void USpinBox::SetValue(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetValue");
 
 	USpinBox_SetValue_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5688,14 +5688,14 @@ void USpinBox::SetValue(float newValue)
 // Function UMG.SpinBox.SetMinValue
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void USpinBox::SetMinValue(float newValue)
+void USpinBox::SetMinValue(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinValue");
 
 	USpinBox_SetMinValue_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5708,14 +5708,14 @@ void USpinBox::SetMinValue(float newValue)
 // Function UMG.SpinBox.SetMinSliderValue
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void USpinBox::SetMinSliderValue(float newValue)
+void USpinBox::SetMinSliderValue(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinSliderValue");
 
 	USpinBox_SetMinSliderValue_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5728,14 +5728,14 @@ void USpinBox::SetMinSliderValue(float newValue)
 // Function UMG.SpinBox.SetMaxValue
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void USpinBox::SetMaxValue(float newValue)
+void USpinBox::SetMaxValue(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxValue");
 
 	USpinBox_SetMaxValue_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5748,14 +5748,14 @@ void USpinBox::SetMaxValue(float newValue)
 // Function UMG.SpinBox.SetMaxSliderValue
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void USpinBox::SetMaxSliderValue(float newValue)
+void USpinBox::SetMaxSliderValue(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxSliderValue");
 
 	USpinBox_SetMaxSliderValue_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 

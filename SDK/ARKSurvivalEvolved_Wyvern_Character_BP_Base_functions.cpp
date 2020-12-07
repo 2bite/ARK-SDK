@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.GetSocketForMeleeTraceForHitBlockers
+// ()
+// Parameters:
+// int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName AWyvern_Character_BP_Base_C::GetSocketForMeleeTraceForHitBlockers(int* AttackIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.GetSocketForMeleeTraceForHitBlockers");
+
+	AWyvern_Character_BP_Base_C_GetSocketForMeleeTraceForHitBlockers_Params params;
+	params.AttackIndex = AttackIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.SetTurretMode
 // ()
@@ -56,7 +79,7 @@ void AWyvern_Character_BP_Base_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.SpawnNestEgg
-// (NetReliable, Static, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintPure, NetValidate)
 
 void AWyvern_Character_BP_Base_C::STATIC_SpawnNestEgg()
 {
@@ -65,6 +88,7 @@ void AWyvern_Character_BP_Base_C::STATIC_SpawnNestEgg()
 	AWyvern_Character_BP_Base_C_SpawnNestEgg_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C
-// 0x0007 (0x0A08 - 0x0A01)
+// 0x0007 (0x0A40 - 0x0A39)
 class UPrimalItemArmor_ShieldTek_C : public UPrimalItemArmor_Base_Tek_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0A01(0x0003) MISSED OFFSET
-	float                                              DurabilityCostPerReflection;                              // 0x0A04(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0A39(0x0003) MISSED OFFSET
+	float                                              DurabilityCostPerReflection;                              // 0x0A3C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,7 +30,7 @@ public:
 
 
 	void BPClientHandleItemNetExecCommand(struct FName* CommandName, class AShooterPlayerController** ForPC, struct FBPNetExecParams* ExecParams);
-	void STATIC_PlayHitShieldEffect(bool bLocalOnly);
+	void PlayHitShieldEffect(bool bLocalOnly);
 	bool BPConsumeProjectileImpact(class AShooterProjectile** theProjectile, struct FHitResult* HitResult);
 	void BPAddedAttachments();
 	void RefreshAmmoMaterial();

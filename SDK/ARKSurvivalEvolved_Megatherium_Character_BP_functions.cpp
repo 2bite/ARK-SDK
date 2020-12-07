@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,13 +109,13 @@ void AMegatherium_Character_BP_C::BPOnAnimPlayedNotify(class UAnimMontage** Anim
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BPGetMultiUseEntries
-// (NetResponse, Static, Public, Private, NetServer, DLLImport)
+// (Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AMegatherium_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AMegatherium_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megatherium_Character_BP.Megatherium_Character_BP_C.BPGetMultiUseEntries");
 
@@ -247,12 +247,12 @@ void AMegatherium_Character_BP_C::BPDoAttack(int* AttackIndex)
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintCanRiderAttack
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, NetServer, DLLImport)
+// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AMegatherium_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
+bool AMegatherium_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintCanRiderAttack");
 
@@ -333,7 +333,7 @@ void AMegatherium_Character_BP_C::OnNewTarget()
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Public, Private, NetServer, DLLImport)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -342,7 +342,7 @@ void AMegatherium_Character_BP_C::OnNewTarget()
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AMegatherium_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AMegatherium_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -352,6 +352,7 @@ float AMegatherium_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex,
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

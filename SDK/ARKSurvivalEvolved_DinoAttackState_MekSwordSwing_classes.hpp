@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,11 +38,11 @@ public:
 
 
 	void ShouldDoDamageTo(class AActor* Actor, bool* AllowDamage);
-	void BPOnAttackEnd(int* AttackIndex);
+	void STATIC_BPOnAttackEnd(int* AttackIndex);
 	void BPOnAnimNotifyCustomEvent(struct FName* CustomEventName, class UAnimSequenceBase** Animation, TEnumAsByte<ENetRole>* Role);
-	void DoSwordDamage();
-	void STATIC_GetSwordCapsule(struct UObject_FTransform* WorldTransform, float* CapsuleRadius, float* CapsuleHalfHeight);
-	void STATIC_GetSwordDamagePoint(struct FVector* Loc, struct FRotator* Rot);
+	void STATIC_DoSwordDamage();
+	void GetSwordCapsule(struct UObject_FTransform* WorldTransform, float* CapsuleRadius, float* CapsuleHalfHeight);
+	void GetSwordDamagePoint(struct FVector* Loc, struct FRotator* Rot);
 	void BPOnAttackStart(int* AttackIndex);
 	void ExecuteUbergraph_DinoAttackState_MekSwordSwing(int EntryPoint);
 };

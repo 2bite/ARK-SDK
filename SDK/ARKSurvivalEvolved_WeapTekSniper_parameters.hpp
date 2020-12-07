@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function WeapTekSniper.WeapTekSniper_C.BPShouldDealDamage
+struct AWeapTekSniper_C_BPShouldDealDamage_Params
+{
+	class AActor**                                     TestActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function WeapTekSniper.WeapTekSniper_C.Try Enable XRay
 struct AWeapTekSniper_C_Try_Enable_XRay_Params
@@ -206,6 +213,16 @@ struct AWeapTekSniper_C_NotOverheated_Params
 struct AWeapTekSniper_C_SetScoped_Params
 {
 	bool                                               Scoped;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function WeapTekSniper.WeapTekSniper_C.ClearHitPrimalCharacterAlready
+struct AWeapTekSniper_C_ClearHitPrimalCharacterAlready_Params
+{
+};
+
+// Function WeapTekSniper.WeapTekSniper_C.ClearHitPrimalStructureAlready
+struct AWeapTekSniper_C_ClearHitPrimalStructureAlready_Params
+{
 };
 
 // Function WeapTekSniper.WeapTekSniper_C.ExecuteUbergraph_WeapTekSniper

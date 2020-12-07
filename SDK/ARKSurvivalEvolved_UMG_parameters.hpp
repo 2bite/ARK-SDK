@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1714,31 +1714,31 @@ struct USpacer_SetSize_Params
 // Function UMG.SpinBox.SetValue
 struct USpinBox_SetValue_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.SpinBox.SetMinValue
 struct USpinBox_SetMinValue_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.SpinBox.SetMinSliderValue
 struct USpinBox_SetMinSliderValue_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.SpinBox.SetMaxValue
 struct USpinBox_SetMaxValue_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.SpinBox.SetMaxSliderValue
 struct USpinBox_SetMaxSliderValue_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UMG.SpinBox.SetForegroundColor

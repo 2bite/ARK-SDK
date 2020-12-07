@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.CheckForGasolineData
-// (Native, Event, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalItem*             DestinationItem                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SupportsDragOn                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemResource_Gasoline_C::CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn)
+void UPrimalItemResource_Gasoline_C::STATIC_CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.CheckForGasolineData");
 
@@ -38,11 +38,11 @@ void UPrimalItemResource_Gasoline_C::CheckForGasolineData(class UPrimalItem* Des
 
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.RefillGasoline
-// (NetResponse, Public, Private, Delegate, HasOutParms, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalItem*             DestinationItem                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemResource_Gasoline_C::RefillGasoline(class UPrimalItem* DestinationItem)
+void UPrimalItemResource_Gasoline_C::STATIC_RefillGasoline(class UPrimalItem* DestinationItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.RefillGasoline");
 

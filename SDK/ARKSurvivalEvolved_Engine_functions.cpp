@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1212,6 +1212,23 @@ void AActor::PlaySoundAtLocation(class USoundCue* InSoundCue, const struct FVect
 }
 
 
+// Function Engine.Actor.PerformanceThrottledTick
+// ()
+
+void AActor::PerformanceThrottledTick()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.PerformanceThrottledTick");
+
+	AActor_PerformanceThrottledTick_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.Actor.OnRep_ReplicatedMovement
 // ()
 
@@ -1254,6 +1271,23 @@ void AActor::OnRep_AttachmentReplication()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.OnRep_AttachmentReplication");
 
 	AActor_OnRep_AttachmentReplication_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Actor.OnInventoryItemGrind
+// ()
+
+void AActor::OnInventoryItemGrind()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.OnInventoryItemGrind");
+
+	AActor_OnInventoryItemGrind_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2082,6 +2116,48 @@ bool AActor::IsShooterCharacter()
 }
 
 
+// Function Engine.Actor.IsPrimalStructureTurret
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AActor::IsPrimalStructureTurret()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.IsPrimalStructureTurret");
+
+	AActor_IsPrimalStructureTurret_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Actor.IsPrimalStructureItemContainer
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AActor::IsPrimalStructureItemContainer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.IsPrimalStructureItemContainer");
+
+	AActor_IsPrimalStructureItemContainer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.Actor.IsPrimalStructure
 // ()
 // Parameters:
@@ -2113,6 +2189,27 @@ bool AActor::IsPrimalDino()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.IsPrimalDino");
 
 	AActor_IsPrimalDino_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Actor.IsPrimalCharacterOrStructure
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AActor::IsPrimalCharacterOrStructure()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.IsPrimalCharacterOrStructure");
+
+	AActor_IsPrimalCharacterOrStructure_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3437,6 +3534,29 @@ bool AActor::BPServerHandleNetExecCommand(class APlayerController* FromPC, const
 	params.FromPC = FromPC;
 	params.CommandName = CommandName;
 	params.ExecParams = ExecParams;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Actor.BPPreventAttachments
+// ()
+// Parameters:
+// class UObject*                 ForItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AActor::BPPreventAttachments(class UObject* ForItem)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.BPPreventAttachments");
+
+	AActor_BPPreventAttachments_Params params;
+	params.ForItem = ForItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5982,16 +6102,16 @@ void UAnimInstance::AnimNotify_Sound(class UAnimNotify* Notify)
 // Function Engine.AnimNotify.Received_Notify
 // ()
 // Parameters:
-// class USkeletalMeshComponent*  meshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* meshComp, class UAnimSequenceBase* Animation)
+bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimNotify.Received_Notify");
 
 	UAnimNotify_Received_Notify_Params params;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
@@ -6028,17 +6148,17 @@ class FString UAnimNotify::GetNotifyName()
 // Function Engine.AnimNotifyState.Received_NotifyTick
 // ()
 // Parameters:
-// class USkeletalMeshComponent*  meshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          FrameDeltaTime                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotifyState::Received_NotifyTick(class USkeletalMeshComponent* meshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
+bool UAnimNotifyState::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimNotifyState.Received_NotifyTick");
 
 	UAnimNotifyState_Received_NotifyTick_Params params;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.FrameDeltaTime = FrameDeltaTime;
 
@@ -6055,16 +6175,16 @@ bool UAnimNotifyState::Received_NotifyTick(class USkeletalMeshComponent* meshCom
 // Function Engine.AnimNotifyState.Received_NotifyEnd
 // ()
 // Parameters:
-// class USkeletalMeshComponent*  meshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotifyState::Received_NotifyEnd(class USkeletalMeshComponent* meshComp, class UAnimSequenceBase* Animation)
+bool UAnimNotifyState::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimNotifyState.Received_NotifyEnd");
 
 	UAnimNotifyState_Received_NotifyEnd_Params params;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
@@ -6080,17 +6200,17 @@ bool UAnimNotifyState::Received_NotifyEnd(class USkeletalMeshComponent* meshComp
 // Function Engine.AnimNotifyState.Received_NotifyBegin
 // ()
 // Parameters:
-// class USkeletalMeshComponent*  meshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USkeletalMeshComponent*  MeshComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          TotalDuration                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAnimNotifyState::Received_NotifyBegin(class USkeletalMeshComponent* meshComp, class UAnimSequenceBase* Animation, float TotalDuration)
+bool UAnimNotifyState::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimNotifyState.Received_NotifyBegin");
 
 	UAnimNotifyState_Received_NotifyBegin_Params params;
-	params.meshComp = meshComp;
+	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 	params.TotalDuration = TotalDuration;
 
@@ -6175,13 +6295,15 @@ bool APlayerController::WasInputKeyJustPressed(const struct FKey& Key)
 // ()
 // Parameters:
 // bool                           bSpeaking                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UseSuperRange                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerController::ToggleSpeaking(bool bSpeaking)
+void APlayerController::ToggleSpeaking(bool bSpeaking, bool UseSuperRange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ToggleSpeaking");
 
 	APlayerController_ToggleSpeaking_Params params;
 	params.bSpeaking = bSpeaking;
+	params.UseSuperRange = UseSuperRange;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24628,14 +24750,14 @@ void ULightComponent::SetIntensity(float NewIntensity)
 // Function Engine.LightComponent.SetIESTexture
 // ()
 // Parameters:
-// class UTextureLightProfile*    newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UTextureLightProfile*    NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULightComponent::SetIESTexture(class UTextureLightProfile* newValue)
+void ULightComponent::SetIESTexture(class UTextureLightProfile* NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.LightComponent.SetIESTexture");
 
 	ULightComponent_SetIESTexture_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24688,14 +24810,14 @@ void ULightComponent::SetCastShadows(bool bNewValue)
 // Function Engine.LightComponent.SetBloomTint
 // ()
 // Parameters:
-// struct FColor                  newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FColor                  NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULightComponent::SetBloomTint(const struct FColor& newValue)
+void ULightComponent::SetBloomTint(const struct FColor& NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.LightComponent.SetBloomTint");
 
 	ULightComponent_SetBloomTint_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24708,14 +24830,14 @@ void ULightComponent::SetBloomTint(const struct FColor& newValue)
 // Function Engine.LightComponent.SetBloomThreshold
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULightComponent::SetBloomThreshold(float newValue)
+void ULightComponent::SetBloomThreshold(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.LightComponent.SetBloomThreshold");
 
 	ULightComponent_SetBloomThreshold_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24728,14 +24850,14 @@ void ULightComponent::SetBloomThreshold(float newValue)
 // Function Engine.LightComponent.SetBloomScale
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULightComponent::SetBloomScale(float newValue)
+void ULightComponent::SetBloomScale(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.LightComponent.SetBloomScale");
 
 	ULightComponent_SetBloomScale_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24788,14 +24910,14 @@ void ULightComponent::SetAffectDynamicIndirectLighting(bool bNewValue)
 // Function Engine.DirectionalLightComponent.SetShadowDistanceFadeoutFraction
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDirectionalLightComponent::SetShadowDistanceFadeoutFraction(float newValue)
+void UDirectionalLightComponent::SetShadowDistanceFadeoutFraction(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetShadowDistanceFadeoutFraction");
 
 	UDirectionalLightComponent_SetShadowDistanceFadeoutFraction_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24808,14 +24930,14 @@ void UDirectionalLightComponent::SetShadowDistanceFadeoutFraction(float newValue
 // Function Engine.DirectionalLightComponent.SetOcclusionMaskDarkness
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDirectionalLightComponent::SetOcclusionMaskDarkness(float newValue)
+void UDirectionalLightComponent::SetOcclusionMaskDarkness(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetOcclusionMaskDarkness");
 
 	UDirectionalLightComponent_SetOcclusionMaskDarkness_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24828,14 +24950,14 @@ void UDirectionalLightComponent::SetOcclusionMaskDarkness(float newValue)
 // Function Engine.DirectionalLightComponent.SetLightShaftOverrideDirection
 // ()
 // Parameters:
-// struct FVector                 newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDirectionalLightComponent::SetLightShaftOverrideDirection(const struct FVector& newValue)
+void UDirectionalLightComponent::SetLightShaftOverrideDirection(const struct FVector& NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetLightShaftOverrideDirection");
 
 	UDirectionalLightComponent_SetLightShaftOverrideDirection_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24868,14 +24990,14 @@ void UDirectionalLightComponent::SetEnableLightShaftOcclusion(bool bNewValue)
 // Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceStationaryLight
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDirectionalLightComponent::SetDynamicShadowDistanceStationaryLight(float newValue)
+void UDirectionalLightComponent::SetDynamicShadowDistanceStationaryLight(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceStationaryLight");
 
 	UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24888,14 +25010,14 @@ void UDirectionalLightComponent::SetDynamicShadowDistanceStationaryLight(float n
 // Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceMovableLight
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDirectionalLightComponent::SetDynamicShadowDistanceMovableLight(float newValue)
+void UDirectionalLightComponent::SetDynamicShadowDistanceMovableLight(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetDynamicShadowDistanceMovableLight");
 
 	UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24908,14 +25030,14 @@ void UDirectionalLightComponent::SetDynamicShadowDistanceMovableLight(float newV
 // Function Engine.DirectionalLightComponent.SetDynamicShadowCascades
 // ()
 // Parameters:
-// int                            newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// int                            NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDirectionalLightComponent::SetDynamicShadowCascades(int newValue)
+void UDirectionalLightComponent::SetDynamicShadowCascades(int NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetDynamicShadowCascades");
 
 	UDirectionalLightComponent_SetDynamicShadowCascades_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24928,14 +25050,14 @@ void UDirectionalLightComponent::SetDynamicShadowCascades(int newValue)
 // Function Engine.DirectionalLightComponent.SetCascadeTransitionFraction
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDirectionalLightComponent::SetCascadeTransitionFraction(float newValue)
+void UDirectionalLightComponent::SetCascadeTransitionFraction(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetCascadeTransitionFraction");
 
 	UDirectionalLightComponent_SetCascadeTransitionFraction_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -24948,14 +25070,14 @@ void UDirectionalLightComponent::SetCascadeTransitionFraction(float newValue)
 // Function Engine.DirectionalLightComponent.SetCascadeDistributionExponent
 // ()
 // Parameters:
-// float                          newValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDirectionalLightComponent::SetCascadeDistributionExponent(float newValue)
+void UDirectionalLightComponent::SetCascadeDistributionExponent(float NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetCascadeDistributionExponent");
 
 	UDirectionalLightComponent_SetCascadeDistributionExponent_Params params;
-	params.newValue = newValue;
+	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -32179,19 +32301,19 @@ struct FVector UKismetMathLibrary::VLerp(const struct FVector& A, const struct F
 // Function Engine.KismetMathLibrary.VInterpTo_SnapWithinDist
 // ()
 // Parameters:
-// struct FVector                 Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SnapWithinDist                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UKismetMathLibrary::VInterpTo_SnapWithinDist(const struct FVector& Current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapWithinDist)
+struct FVector UKismetMathLibrary::VInterpTo_SnapWithinDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapWithinDist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo_SnapWithinDist");
 
 	UKismetMathLibrary_VInterpTo_SnapWithinDist_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -32210,19 +32332,19 @@ struct FVector UKismetMathLibrary::VInterpTo_SnapWithinDist(const struct FVector
 // Function Engine.KismetMathLibrary.VInterpTo_SnapPastDist
 // ()
 // Parameters:
-// struct FVector                 Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SnapPastDist                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UKismetMathLibrary::VInterpTo_SnapPastDist(const struct FVector& Current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapPastDist)
+struct FVector UKismetMathLibrary::VInterpTo_SnapPastDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapPastDist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo_SnapPastDist");
 
 	UKismetMathLibrary_VInterpTo_SnapPastDist_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -32241,19 +32363,19 @@ struct FVector UKismetMathLibrary::VInterpTo_SnapPastDist(const struct FVector& 
 // Function Engine.KismetMathLibrary.VInterpTo_Constant_SnapWithinDist
 // ()
 // Parameters:
-// struct FVector                 Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SnapWithinDist                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UKismetMathLibrary::VInterpTo_Constant_SnapWithinDist(const struct FVector& Current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapWithinDist)
+struct FVector UKismetMathLibrary::VInterpTo_Constant_SnapWithinDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapWithinDist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo_Constant_SnapWithinDist");
 
 	UKismetMathLibrary_VInterpTo_Constant_SnapWithinDist_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -32272,19 +32394,19 @@ struct FVector UKismetMathLibrary::VInterpTo_Constant_SnapWithinDist(const struc
 // Function Engine.KismetMathLibrary.VInterpTo_Constant_SnapPastDist
 // ()
 // Parameters:
-// struct FVector                 Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SnapPastDist                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UKismetMathLibrary::VInterpTo_Constant_SnapPastDist(const struct FVector& Current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapPastDist)
+struct FVector UKismetMathLibrary::VInterpTo_Constant_SnapPastDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapPastDist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo_Constant_SnapPastDist");
 
 	UKismetMathLibrary_VInterpTo_Constant_SnapPastDist_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -32303,18 +32425,18 @@ struct FVector UKismetMathLibrary::VInterpTo_Constant_SnapPastDist(const struct 
 // Function Engine.KismetMathLibrary.VInterpTo_Constant
 // ()
 // Parameters:
-// struct FVector                 Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UKismetMathLibrary::VInterpTo_Constant(const struct FVector& Current, const struct FVector& Target, float DeltaTime, float InterpSpeed)
+struct FVector UKismetMathLibrary::VInterpTo_Constant(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo_Constant");
 
 	UKismetMathLibrary_VInterpTo_Constant_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -32332,18 +32454,18 @@ struct FVector UKismetMathLibrary::VInterpTo_Constant(const struct FVector& Curr
 // Function Engine.KismetMathLibrary.VInterpTo
 // ()
 // Parameters:
-// struct FVector                 Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UKismetMathLibrary::VInterpTo(const struct FVector& Current, const struct FVector& Target, float DeltaTime, float InterpSpeed)
+struct FVector UKismetMathLibrary::VInterpTo(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo");
 
 	UKismetMathLibrary_VInterpTo_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -32513,18 +32635,18 @@ struct UObject_FTransform UKismetMathLibrary::TLerp(const struct UObject_FTransf
 // Function Engine.KismetMathLibrary.TInterpTo
 // ()
 // Parameters:
-// struct UObject_FTransform      Current                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct UObject_FTransform      current                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct UObject_FTransform      Target                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct UObject_FTransform UKismetMathLibrary::TInterpTo(const struct UObject_FTransform& Current, const struct UObject_FTransform& Target, float DeltaTime, float InterpSpeed)
+struct UObject_FTransform UKismetMathLibrary::TInterpTo(const struct UObject_FTransform& current, const struct UObject_FTransform& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.TInterpTo");
 
 	UKismetMathLibrary_TInterpTo_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -33442,18 +33564,18 @@ struct FRotator UKismetMathLibrary::RLerp(const struct FRotator& A, const struct
 // Function Engine.KismetMathLibrary.RInterpTo_PerAxis
 // ()
 // Parameters:
-// struct FRotator                Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                InterpSpeedPerAxis             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FRotator UKismetMathLibrary::RInterpTo_PerAxis(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, const struct FRotator& InterpSpeedPerAxis)
+struct FRotator UKismetMathLibrary::RInterpTo_PerAxis(const struct FRotator& current, const struct FRotator& Target, float DeltaTime, const struct FRotator& InterpSpeedPerAxis)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RInterpTo_PerAxis");
 
 	UKismetMathLibrary_RInterpTo_PerAxis_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeedPerAxis = InterpSpeedPerAxis;
@@ -33471,18 +33593,18 @@ struct FRotator UKismetMathLibrary::RInterpTo_PerAxis(const struct FRotator& Cur
 // Function Engine.KismetMathLibrary.RInterpTo_Constant_PerAxis
 // ()
 // Parameters:
-// struct FRotator                Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                InterpSpeedPerAxis             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FRotator UKismetMathLibrary::RInterpTo_Constant_PerAxis(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, const struct FRotator& InterpSpeedPerAxis)
+struct FRotator UKismetMathLibrary::RInterpTo_Constant_PerAxis(const struct FRotator& current, const struct FRotator& Target, float DeltaTime, const struct FRotator& InterpSpeedPerAxis)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RInterpTo_Constant_PerAxis");
 
 	UKismetMathLibrary_RInterpTo_Constant_PerAxis_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeedPerAxis = InterpSpeedPerAxis;
@@ -33500,18 +33622,18 @@ struct FRotator UKismetMathLibrary::RInterpTo_Constant_PerAxis(const struct FRot
 // Function Engine.KismetMathLibrary.RInterpTo_Constant
 // ()
 // Parameters:
-// struct FRotator                Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FRotator UKismetMathLibrary::RInterpTo_Constant(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed)
+struct FRotator UKismetMathLibrary::RInterpTo_Constant(const struct FRotator& current, const struct FRotator& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RInterpTo_Constant");
 
 	UKismetMathLibrary_RInterpTo_Constant_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -33529,18 +33651,18 @@ struct FRotator UKismetMathLibrary::RInterpTo_Constant(const struct FRotator& Cu
 // Function Engine.KismetMathLibrary.RInterpTo
 // ()
 // Parameters:
-// struct FRotator                Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FRotator UKismetMathLibrary::RInterpTo(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed)
+struct FRotator UKismetMathLibrary::RInterpTo(const struct FRotator& current, const struct FRotator& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RInterpTo");
 
 	UKismetMathLibrary_RInterpTo_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -34075,18 +34197,18 @@ float UKismetMathLibrary::RadiansToDegrees(float A)
 // Function Engine.KismetMathLibrary.QInterpTo
 // ()
 // Parameters:
-// struct FRotator                Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FRotator UKismetMathLibrary::QInterpTo(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed)
+struct FRotator UKismetMathLibrary::QInterpTo(const struct FRotator& current, const struct FRotator& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.QInterpTo");
 
 	UKismetMathLibrary_QInterpTo_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -37917,18 +38039,18 @@ struct FVector UKismetMathLibrary::FlattenVector(const struct FVector& A)
 // Function Engine.KismetMathLibrary.FInterpTo_Constant
 // ()
 // Parameters:
-// float                          Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          current                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UKismetMathLibrary::FInterpTo_Constant(float Current, float Target, float DeltaTime, float InterpSpeed)
+float UKismetMathLibrary::FInterpTo_Constant(float current, float Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.FInterpTo_Constant");
 
 	UKismetMathLibrary_FInterpTo_Constant_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -37946,18 +38068,18 @@ float UKismetMathLibrary::FInterpTo_Constant(float Current, float Target, float 
 // Function Engine.KismetMathLibrary.FInterpTo
 // ()
 // Parameters:
-// float                          Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          current                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UKismetMathLibrary::FInterpTo(float Current, float Target, float DeltaTime, float InterpSpeed)
+float UKismetMathLibrary::FInterpTo(float current, float Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.FInterpTo");
 
 	UKismetMathLibrary_FInterpTo_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
@@ -39749,18 +39871,18 @@ int UKismetMathLibrary::Clamp(int Value, int Min, int Max)
 // Function Engine.KismetMathLibrary.CInterpTo
 // ()
 // Parameters:
-// struct FLinearColor            Current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            current                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FLinearColor UKismetMathLibrary::CInterpTo(const struct FLinearColor& Current, const struct FLinearColor& Target, float DeltaTime, float InterpSpeed)
+struct FLinearColor UKismetMathLibrary::CInterpTo(const struct FLinearColor& current, const struct FLinearColor& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.CInterpTo");
 
 	UKismetMathLibrary_CInterpTo_Params params;
-	params.Current = Current;
+	params.current = current;
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;

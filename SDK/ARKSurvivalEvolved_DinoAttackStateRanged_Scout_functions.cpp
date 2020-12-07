@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,11 +35,11 @@ void UDinoAttackStateRanged_Scout_C::GetScout(class AScout_Character_BP_C** Resu
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnTickEvent
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateRanged_Scout_C::OnTickEvent(float* DeltaSeconds)
+void UDinoAttackStateRanged_Scout_C::STATIC_OnTickEvent(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnTickEvent");
 
@@ -55,16 +55,15 @@ void UDinoAttackStateRanged_Scout_C::OnTickEvent(float* DeltaSeconds)
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnEndEvent
-// (Native, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void UDinoAttackStateRanged_Scout_C::OnEndEvent()
+void UDinoAttackStateRanged_Scout_C::STATIC_OnEndEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnEndEvent");
 
 	UDinoAttackStateRanged_Scout_C_OnEndEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,12 +123,12 @@ void UDinoAttackStateRanged_Scout_C::Tracker_Impact_Pawn_or_Terrain(class AActor
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.CalculateProjectileImpacts
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, Const, NetValidate)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateRanged_Scout_C::STATIC_CalculateProjectileImpacts(const struct FVector& Origin, const struct FVector& Direction)
+void UDinoAttackStateRanged_Scout_C::CalculateProjectileImpacts(const struct FVector& Origin, const struct FVector& Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.CalculateProjectileImpacts");
 

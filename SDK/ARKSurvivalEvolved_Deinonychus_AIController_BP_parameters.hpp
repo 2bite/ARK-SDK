@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ struct ADeinonychus_AIController_BP_C_LocationUberpounce_Params
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.AllowSurfaceNormalForUberpounce
 struct ADeinonychus_AIController_BP_C_AllowSurfaceNormalForUberpounce_Params
 {
-	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsValid;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -80,7 +80,7 @@ struct ADeinonychus_AIController_BP_C_GetPrimalTarget_Params
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.GetDino
 struct ADeinonychus_AIController_BP_C_GetDino_Params
 {
-	class ADeinonychus_Character_BP_C*                 Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ADeinonychus_Character_BP_C*                 ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.UserConstructionScript

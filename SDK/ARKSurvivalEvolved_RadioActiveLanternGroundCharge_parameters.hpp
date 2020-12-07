@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -440,7 +440,7 @@ struct ARadioActiveLanternGroundCharge_C_InitialUpdateMaterial_Params
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.OnChargeFromBatteriesChanged_Multicast
 struct ARadioActiveLanternGroundCharge_C_OnChargeFromBatteriesChanged_Multicast_Params
 {
-	float                                              newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.StartPlacement_Multicast

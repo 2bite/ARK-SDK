@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function StructureTurretTek.StructureTurretTek_C.BPCopyCustomSettingsFromTurret
+struct AStructureTurretTek_C_BPCopyCustomSettingsFromTurret_Params
+{
+	class APrimalStructureTurret**                     FromTurret;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function StructureTurretTek.StructureTurretTek_C.BPCanBeActivated
 struct AStructureTurretTek_C_BPCanBeActivated_Params

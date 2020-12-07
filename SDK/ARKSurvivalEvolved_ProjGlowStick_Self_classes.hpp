@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjGlowStick_Self.ProjGlowStick_Self_C
-// 0x0004 (0x071C - 0x0718)
+// 0x0004 (0x0724 - 0x0720)
 class AProjGlowStick_Self_C : public AProjGlowStick_C
 {
 public:
-	int                                                CallFunc_Array_Add_ReturnValue;                           // 0x0718(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                CallFunc_Array_Add_ReturnValue;                           // 0x0720(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

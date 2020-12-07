@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -4221,12 +4221,13 @@ struct FRigidBodyErrorCorrection
 };
 
 // ScriptStruct Engine.Engine.NetDriverDefinition
-// 0x0018
+// 0x0020
 struct FNetDriverDefinition
 {
 	struct FName                                       DefName;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       DriverClassName;                                          // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       DriverClassNameFallback;                                  // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       DriverClassNameFallback2;                                 // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.GameMode.GameClassShortName
@@ -8076,13 +8077,14 @@ struct FDynamicTextureInstance : public FStreamableTextureInstance
 };
 
 // ScriptStruct Engine.PlayerMuteList
-// 0x0038
+// 0x0088
 struct FPlayerMuteList
 {
 	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
 	bool                                               bHasVoiceHandshakeCompleted;                              // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
 	int                                                VoiceChannelIdx;                                          // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x50];                                      // 0x0038(0x0050) MISSED OFFSET
 };
 
 // ScriptStruct Engine.DynamicCaptureManager.UploadToGpuCommand

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,30 +15,30 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Class AIModule.AIController
-// 0x00D8 (0x0590 - 0x04B8)
+// 0x00D8 (0x0598 - 0x04C0)
 class AAIController : public AController
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x04B8(0x0018) MISSED OFFSET
-	unsigned char                                      bLOSflag : 1;                                             // 0x04D0(0x0001)
-	unsigned char                                      bSkipExtraLOSChecks : 1;                                  // 0x04D0(0x0001)
-	unsigned char                                      bAllowStrafe : 1;                                         // 0x04D0(0x0001)
-	unsigned char                                      bWantsPlayerState : 1;                                    // 0x04D0(0x0001)
-	unsigned char                                      bUse3DGoalRadius : 1;                                     // 0x04D0(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bForceInputAcceptanceRadius : 1;                          // 0x04D0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x04D1(0x0007) MISSED OFFSET
-	class UBrainComponent*                             BrainComponent;                                           // 0x04D8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAIPerceptionComponent*                      PerceptionComponent;                                      // 0x04E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FVector                                     MoveTowardTargetOffset;                                   // 0x04E8(0x000C) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	struct FVector                                     TargetFocalPositionOffset;                                // 0x04F4(0x000C) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              ReachedDestinationThresholdOffset;                        // 0x0500(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MovementGoalHeight;                                       // 0x0504(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    ReceiveMoveCompleted;                                     // 0x0508(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData02[0x70];                                      // 0x0518(0x0070) MISSED OFFSET
-	unsigned char                                      UnknownData03 : 1;                                        // 0x0588(0x0001)
-	unsigned char                                      bLastMoveReachedGoal : 1;                                 // 0x0588(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
-	unsigned char                                      bLastRequestedMoveToLocationWasPlayerCommand : 1;         // 0x0588(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0589(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x04C0(0x0018) MISSED OFFSET
+	unsigned char                                      bLOSflag : 1;                                             // 0x04D8(0x0001)
+	unsigned char                                      bSkipExtraLOSChecks : 1;                                  // 0x04D8(0x0001)
+	unsigned char                                      bAllowStrafe : 1;                                         // 0x04D8(0x0001)
+	unsigned char                                      bWantsPlayerState : 1;                                    // 0x04D8(0x0001)
+	unsigned char                                      bUse3DGoalRadius : 1;                                     // 0x04D8(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bForceInputAcceptanceRadius : 1;                          // 0x04D8(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04D9(0x0007) MISSED OFFSET
+	class UBrainComponent*                             BrainComponent;                                           // 0x04E0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAIPerceptionComponent*                      PerceptionComponent;                                      // 0x04E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FVector                                     MoveTowardTargetOffset;                                   // 0x04F0(0x000C) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	struct FVector                                     TargetFocalPositionOffset;                                // 0x04FC(0x000C) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              ReachedDestinationThresholdOffset;                        // 0x0508(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MovementGoalHeight;                                       // 0x050C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate                    ReceiveMoveCompleted;                                     // 0x0510(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData02[0x70];                                      // 0x0520(0x0070) MISSED OFFSET
+	unsigned char                                      UnknownData03 : 1;                                        // 0x0590(0x0001)
+	unsigned char                                      bLastMoveReachedGoal : 1;                                 // 0x0590(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
+	unsigned char                                      bLastRequestedMoveToLocationWasPlayerCommand : 1;         // 0x0590(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0591(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1966,11 +1966,11 @@ public:
 
 
 // Class AIModule.EQSRenderingComponent
-// 0x0010 (0x0660 - 0x0650)
+// 0x0010 (0x0680 - 0x0670)
 class UEQSRenderingComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0650(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0670(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

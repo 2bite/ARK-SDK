@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Bee_Character_BP.Bee_Character_BP_C.BlueprintPlayDying
+struct ABee_Character_BP_C_BlueprintPlayDying_Params
+{
+	float*                                             KillingDamage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FDamageEvent                                DamageEvent;                                              // (Parm, OutParm, ReferenceParm)
+	class APawn**                                      InstigatingPawn;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Bee_Character_BP.Bee_Character_BP_C.BPCanCryo
 struct ABee_Character_BP_C_BPCanCryo_Params

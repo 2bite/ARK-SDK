@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,7 +40,7 @@ TArray<struct FMultiUseEntry> APortableRope_Ladder_Preplaced_C::BPGetMultiUseEnt
 
 
 // Function PortableRope_Ladder_Preplaced.PortableRope_Ladder_Preplaced_C.BPPlacedStructure
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
+// (Exec, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -52,7 +52,6 @@ void APortableRope_Ladder_Preplaced_C::STATIC_BPPlacedStructure(class APlayerCon
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

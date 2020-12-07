@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Doed_Character_BP.Doed_Character_BP_C.BPChargingModifyInputAcceleration
+// ()
+// Parameters:
+// struct FVector*                inputAcceleration              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector ADoed_Character_BP_C::BPChargingModifyInputAcceleration(struct FVector* inputAcceleration)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Doed_Character_BP.Doed_Character_BP_C.BPChargingModifyInputAcceleration");
+
+	ADoed_Character_BP_C_BPChargingModifyInputAcceleration_Params params;
+	params.inputAcceleration = inputAcceleration;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Doed_Character_BP.Doed_Character_BP_C.BlueprintCanAttack
 // ()

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SimpleBed.SimpleBed_C
-// 0x0000 (0x0F00 - 0x0F00)
+// 0x0000 (0x0F08 - 0x0F08)
 class ASimpleBed_C : public ABedBaseBP_C
 {
 public:

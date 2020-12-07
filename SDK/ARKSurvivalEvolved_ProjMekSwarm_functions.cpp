@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -86,14 +86,14 @@ void AProjMekSwarm_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function ProjMekSwarm.ProjMekSwarm_C.BPGetBoidSpawnLocationAndVelocity
-// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, Const, NetValidate)
+// (NetReliable, Event, Static, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           BoidIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBoid                   BoidData                       (Parm, OutParm, ReferenceParm)
 // struct FVector                 SpawnLocation                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 SpawnVelocity                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjMekSwarm_C::BPGetBoidSpawnLocationAndVelocity(int* BoidIndex, struct FBoid* BoidData, struct FVector* SpawnLocation, struct FVector* SpawnVelocity)
+void AProjMekSwarm_C::STATIC_BPGetBoidSpawnLocationAndVelocity(int* BoidIndex, struct FBoid* BoidData, struct FVector* SpawnLocation, struct FVector* SpawnVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjMekSwarm.ProjMekSwarm_C.BPGetBoidSpawnLocationAndVelocity");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void BPRangedAttack(struct FVector* TargetLocation, struct FVector* TargetVelocity);
+	void STATIC_BPRangedAttack(struct FVector* TargetLocation, struct FVector* TargetVelocity);
 	void ExecuteUbergraph_ChalicoThrowMudState_Friendly(int EntryPoint);
 };
 

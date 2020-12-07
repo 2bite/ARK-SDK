@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WyvProjFireBall.WyvProjFireBall_C
-// 0x0000 (0x0658 - 0x0658)
+// 0x0000 (0x0660 - 0x0660)
 class AWyvProjFireBall_C : public AShooterProjectile
 {
 public:
@@ -27,6 +27,7 @@ public:
 	}
 
 
+	struct FName GetSocketForFinalTraceCheckFromInstigatorToDirectDamageVictim();
 	void UserConstructionScript();
 	void ExecuteUbergraph_WyvProjFireBall(int EntryPoint);
 };

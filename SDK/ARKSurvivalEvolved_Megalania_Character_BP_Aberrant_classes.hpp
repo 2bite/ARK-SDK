@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Megalania_Character_BP_Aberrant.Megalania_Character_BP_Aberrant_C
-// 0x0000 (0x2E88 - 0x2E88)
+// 0x0000 (0x2F08 - 0x2F08)
 class AMegalania_Character_BP_Aberrant_C : public AMegalania_Character_BP_C
 {
 public:

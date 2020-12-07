@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function MissionType_Race.MissionType_Race_C.BPCanRideMissionDino
+struct AMissionType_Race_C_BPCanRideMissionDino_Params
+{
+	class AShooterCharacter**                          Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter**                       Dino;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function MissionType_Race.MissionType_Race_C.OnTeleportedCharInBounds
 struct AMissionType_Race_C_OnTeleportedCharInBounds_Params

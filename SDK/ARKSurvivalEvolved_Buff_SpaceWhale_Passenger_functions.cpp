@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.BuffTickServer
+// ()
+// Parameters:
+// float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_SpaceWhale_Passenger_C::BuffTickServer(float* DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.BuffTickServer");
+
+	ABuff_SpaceWhale_Passenger_C_BuffTickServer_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.ReceiveBeginPlay
 // ()
@@ -231,11 +251,11 @@ void ABuff_SpaceWhale_Passenger_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, 
 
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsAllowedToFire
-// (NetReliable, Exec, Native, NetResponse, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           bAllowed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_SpaceWhale_Passenger_C::IsAllowedToFire(bool* bAllowed)
+void ABuff_SpaceWhale_Passenger_C::STATIC_IsAllowedToFire(bool* bAllowed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsAllowedToFire");
 
@@ -274,11 +294,11 @@ void ABuff_SpaceWhale_Passenger_C::SetTargeting(bool bTargetingEnabled)
 
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.LocalDoAttack
-// (NetReliable, Static, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Exec, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           bDidFire                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_SpaceWhale_Passenger_C::STATIC_LocalDoAttack(bool* bDidFire)
+void ABuff_SpaceWhale_Passenger_C::LocalDoAttack(bool* bDidFire)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.LocalDoAttack");
 

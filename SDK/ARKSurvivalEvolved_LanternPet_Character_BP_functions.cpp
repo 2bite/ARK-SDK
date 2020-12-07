@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -521,13 +521,13 @@ void ALanternPet_Character_BP_C::BPClientDoMultiUse(class APlayerController** Fo
 
 
 // Function LanternPet_Character_BP.LanternPet_Character_BP_C.BPGetMultiUseEntries
-// (Net, NetResponse, Public, Delegate, HasOutParms)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, Protected, Delegate, DLLImport, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ALanternPet_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ALanternPet_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LanternPet_Character_BP.LanternPet_Character_BP_C.BPGetMultiUseEntries");
 

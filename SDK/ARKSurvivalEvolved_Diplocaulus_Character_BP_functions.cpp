@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -166,11 +166,11 @@ void ADiplocaulus_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMov
 
 
 // Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.ChangeLandSwimState
-// (NetRequest, Exec, Event, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            State                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADiplocaulus_Character_BP_C::ChangeLandSwimState(int State)
+void ADiplocaulus_Character_BP_C::STATIC_ChangeLandSwimState(int State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.ChangeLandSwimState");
 
@@ -178,6 +178,7 @@ void ADiplocaulus_Character_BP_C::ChangeLandSwimState(int State)
 	params.State = State;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -211,7 +212,7 @@ bool ADiplocaulus_Character_BP_C::BPPreventRiding(class AShooterCharacter** ByPa
 
 
 // Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, NetResponse, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -225,7 +226,6 @@ TArray<struct FMultiUseEntry> ADiplocaulus_Character_BP_C::BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

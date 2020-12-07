@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+struct ATusoteuthis_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.BPDidClearCarriedCharacter
 struct ATusoteuthis_Character_BP_C_BPDidClearCarriedCharacter_Params
@@ -86,7 +93,7 @@ struct ATusoteuthis_Character_BP_C_BPFedWakingTameEvent_Params
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino
 struct ATusoteuthis_Character_BP_C_GetDefaultDino_Params
 {
-	class ATusoteuthis_Character_BP_C*                 Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ATusoteuthis_Character_BP_C*                 ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.OnRep_UTurnTargetRot
@@ -98,7 +105,7 @@ struct ATusoteuthis_Character_BP_C_OnRep_UTurnTargetRot_Params
 struct ATusoteuthis_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -155,7 +162,7 @@ struct ATusoteuthis_Character_BP_C_TurnAround_Params
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.NetSetIsTurnedAround
 struct ATusoteuthis_Character_BP_C_NetSetIsTurnedAround_Params
 {
-	bool                                               newValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               NewValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               forceSuccess;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -248,8 +255,8 @@ struct ATusoteuthis_Character_BP_C_TurnActorAround__UpdateFunc_Params
 {
 };
 
-// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_204
-struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_204_Params
+// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_218
+struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_218_Params
 {
 };
 

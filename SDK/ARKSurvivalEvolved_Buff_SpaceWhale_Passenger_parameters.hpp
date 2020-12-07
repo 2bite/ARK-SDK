@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.BuffTickServer
+struct ABuff_SpaceWhale_Passenger_C_BuffTickServer_Params
+{
+	float*                                             DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.ReceiveBeginPlay
 struct ABuff_SpaceWhale_Passenger_C_ReceiveBeginPlay_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TreeSapTap_SM.TreeSapTap_SM_C
-// 0x0008 (0x0DD8 - 0x0DD0)
+// 0x0008 (0x0DE0 - 0x0DD8)
 class ATreeSapTap_SM_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UPrimalInventoryBP_TreeSapTap_C*             PrimalInventoryBP_TreeSapTap_C1;                          // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_TreeSapTap_C*             PrimalInventoryBP_TreeSapTap_C1;                          // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

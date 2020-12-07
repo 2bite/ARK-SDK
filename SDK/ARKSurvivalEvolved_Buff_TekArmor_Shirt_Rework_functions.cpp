@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -346,14 +346,14 @@ void ABuff_TekArmor_Shirt_Rework_C::UpdateIsSwimming()
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.ClampPlayerVelocity
 // ()
 // Parameters:
-// float                          MaxVelocity                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          maxVelocity                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Shirt_Rework_C::ClampPlayerVelocity(float MaxVelocity)
+void ABuff_TekArmor_Shirt_Rework_C::ClampPlayerVelocity(float maxVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.ClampPlayerVelocity");
 
 	ABuff_TekArmor_Shirt_Rework_C_ClampPlayerVelocity_Params params;
-	params.MaxVelocity = MaxVelocity;
+	params.maxVelocity = maxVelocity;
 
 	auto flags = fn->FunctionFlags;
 
@@ -494,15 +494,16 @@ void ABuff_TekArmor_Shirt_Rework_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.JetpackBoostClient
-// (NetRequest, Exec, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, Const, NetValidate)
 
-void ABuff_TekArmor_Shirt_Rework_C::JetpackBoostClient()
+void ABuff_TekArmor_Shirt_Rework_C::STATIC_JetpackBoostClient()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.JetpackBoostClient");
 
 	ABuff_TekArmor_Shirt_Rework_C_JetpackBoostClient_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -601,7 +602,7 @@ void ABuff_TekArmor_Shirt_Rework_C::SetCastedArmorPieceRef()
 
 
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.BuffTickClient
-// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WyvernNest.WyvernNest_C
-// 0x000C (0x0AC4 - 0x0AB8)
+// 0x000C (0x0ACC - 0x0AC0)
 class AWyvernNest_C : public AStructureBaseBP_C
 {
 public:
-	class UClass*                                      DroppedItemEggClass;                                      // 0x0AB8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x0AC0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UClass*                                      DroppedItemEggClass;                                      // 0x0AC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x0AC8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

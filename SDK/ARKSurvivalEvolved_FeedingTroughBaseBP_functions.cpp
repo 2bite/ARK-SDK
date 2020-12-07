@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,8 +12,71 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPClientDoMultiUse
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.Check Team and Set Visual Visibility
 // ()
+
+void AFeedingTroughBaseBP_C::Check_Team_and_Set_Visual_Visibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.Check Team and Set Visual Visibility");
+
+	AFeedingTroughBaseBP_C_Check_Team_and_Set_Visual_Visibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPServerHandleNetExecCommand
+// ()
+// Parameters:
+// class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AFeedingTroughBaseBP_C::BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPServerHandleNetExecCommand");
+
+	AFeedingTroughBaseBP_C_BPServerHandleNetExecCommand_Params params;
+	params.FromPC = FromPC;
+	params.CommandName = CommandName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ExecParams != nullptr)
+		*ExecParams = params.ExecParams;
+
+	return params.ReturnValue;
+}
+
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.OnRep_ShowArea
+// ()
+
+void AFeedingTroughBaseBP_C::OnRep_ShowArea()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.OnRep_ShowArea");
+
+	AFeedingTroughBaseBP_C_OnRep_ShowArea_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPClientDoMultiUse
+// (NetReliable, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -35,7 +98,7 @@ void AFeedingTroughBaseBP_C::BPClientDoMultiUse(class APlayerController** ForPC,
 
 
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -104,6 +167,23 @@ void AFeedingTroughBaseBP_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.UserConstructionScript");
 
 	AFeedingTroughBaseBP_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ServerRequest_ToggleShowarea
+// ()
+
+void AFeedingTroughBaseBP_C::ServerRequest_ToggleShowarea()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ServerRequest_ToggleShowarea");
+
+	AFeedingTroughBaseBP_C_ServerRequest_ToggleShowarea_Params params;
 
 	auto flags = fn->FunctionFlags;
 

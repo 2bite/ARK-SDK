@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Paracer_Character_BP.Paracer_Character_BP_C
-// 0x0010 (0x2118 - 0x2108)
+// 0x0010 (0x2198 - 0x2188)
 class AParacer_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UBoxComponent*                               PlatformSaddleBuildArea;                                  // 0x2108(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDinoCharacterStatusComponent_BP_Paracer_C*  DinoCharacterStatus_BP_Paracer_C1;                        // 0x2110(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               PlatformSaddleBuildArea;                                  // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Paracer_C*  DinoCharacterStatus_BP_Paracer_C1;                        // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

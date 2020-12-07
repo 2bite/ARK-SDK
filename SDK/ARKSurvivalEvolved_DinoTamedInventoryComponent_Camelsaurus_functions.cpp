@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,15 +32,15 @@ void UDinoTamedInventoryComponent_Camelsaurus_C::BPInitializeInventory()
 // Function DinoTamedInventoryComponent_Camelsaurus.DinoTamedInventoryComponent_Camelsaurus_C.TakeWaterFromContainers
 // ()
 // Parameters:
-// float                          AmountToTake                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          amountToTake                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          TakenAmount                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoTamedInventoryComponent_Camelsaurus_C::TakeWaterFromContainers(float AmountToTake, float* TakenAmount)
+void UDinoTamedInventoryComponent_Camelsaurus_C::TakeWaterFromContainers(float amountToTake, float* TakenAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoTamedInventoryComponent_Camelsaurus.DinoTamedInventoryComponent_Camelsaurus_C.TakeWaterFromContainers");
 
 	UDinoTamedInventoryComponent_Camelsaurus_C_TakeWaterFromContainers_Params params;
-	params.AmountToTake = AmountToTake;
+	params.amountToTake = amountToTake;
 
 	auto flags = fn->FunctionFlags;
 

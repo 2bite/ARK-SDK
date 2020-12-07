@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+struct ASpaceWhale_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPNotifyToggleHUD
 struct ASpaceWhale_Character_BP_C_BPNotifyToggleHUD_Params
@@ -174,7 +181,7 @@ struct ASpaceWhale_Character_BP_C_ResetMaterials_Params
 struct ASpaceWhale_Character_BP_C_BPAnimNotifyCustomState_Begin_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             TotalDuration;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotifyState**                           AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
@@ -184,7 +191,7 @@ struct ASpaceWhale_Character_BP_C_BPAnimNotifyCustomState_Begin_Params
 struct ASpaceWhale_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -361,14 +368,14 @@ struct ASpaceWhale_Character_BP_C_ModifyCosmicEnergy_Params
 {
 	float                                              Delta;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ForceNetUpdate;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              newValue;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              NewValue;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.GetCosmicEnergy
 struct ASpaceWhale_Character_BP_C_GetCosmicEnergy_Params
 {
 	bool                                               GetSmoothedDisplayValue;                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Current;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              current;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              Max;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

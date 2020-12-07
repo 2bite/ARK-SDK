@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,34 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Bee_Character_BP.Bee_Character_BP_C.BlueprintPlayDying
+// ()
+// Parameters:
+// float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
+// class APawn**                  InstigatingPawn                (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABee_Character_BP_C::BlueprintPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Bee_Character_BP.Bee_Character_BP_C.BlueprintPlayDying");
+
+	ABee_Character_BP_C_BlueprintPlayDying_Params params;
+	params.KillingDamage = KillingDamage;
+	params.InstigatingPawn = InstigatingPawn;
+	params.DamageCauser = DamageCauser;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (DamageEvent != nullptr)
+		*DamageEvent = params.DamageEvent;
+}
+
 
 // Function Bee_Character_BP.Bee_Character_BP_C.BPCanCryo
 // ()

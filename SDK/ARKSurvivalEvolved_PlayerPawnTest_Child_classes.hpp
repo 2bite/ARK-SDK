@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PlayerPawnTest_Child.PlayerPawnTest_Child_C
-// 0x0000 (0x2139 - 0x2139)
+// 0x0000 (0x2239 - 0x2239)
 class APlayerPawnTest_Child_C : public APlayerPawnTest_C
 {
 public:

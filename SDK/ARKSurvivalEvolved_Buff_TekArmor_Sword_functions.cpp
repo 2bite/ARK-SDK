@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -215,7 +215,7 @@ void ABuff_TekArmor_Sword_C::Should_Damage_Actor(class AActor** Victim, bool* Re
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Has Line Of SightToActor
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -228,6 +228,7 @@ void ABuff_TekArmor_Sword_C::Has_Line_Of_SightToActor(class AActor* Actor, bool*
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -371,7 +372,7 @@ void ABuff_TekArmor_Sword_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Update Local Vars by State
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (Native, NetResponse, Static, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<E_TekGlovePunchState> NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -596,12 +597,12 @@ void ABuff_TekArmor_Sword_C::CheckForTargetsWhileRocketPunching(bool* punchNow)
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Set AudioParams and Play
 // ()
 // Parameters:
-// class UAudioComponent*         Audio                          (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UAudioComponent*         audio                          (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           PlaySound                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Sword_C::Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** Audio)
+void ABuff_TekArmor_Sword_C::Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** audio)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Set AudioParams and Play");
 
@@ -616,8 +617,8 @@ void ABuff_TekArmor_Sword_C::Set_AudioParams_and_Play(float Volume, float Pitch,
 
 	fn->FunctionFlags = flags;
 
-	if (Audio != nullptr)
-		*Audio = params.Audio;
+	if (audio != nullptr)
+		*audio = params.audio;
 }
 
 
@@ -690,7 +691,7 @@ void ABuff_TekArmor_Sword_C::DrawBuffFloatingHUD(int* BuffIndex, class AShooterH
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.ScanForRocketFistTargets
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          Range                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           anyHit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -705,6 +706,7 @@ void ABuff_TekArmor_Sword_C::STATIC_ScanForRocketFistTargets(float Range, bool* 
 	params.Range = Range;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -720,7 +722,7 @@ void ABuff_TekArmor_Sword_C::STATIC_ScanForRocketFistTargets(float Range, bool* 
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.AccurateSphereCheck
-// (Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 EndLocation                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -737,7 +739,6 @@ void ABuff_TekArmor_Sword_C::AccurateSphereCheck(const struct FVector& EndLocati
 	params.IgnoreFriendlies = IgnoreFriendlies;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -749,7 +750,7 @@ void ABuff_TekArmor_Sword_C::AccurateSphereCheck(const struct FVector& EndLocati
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Spawn Sound at Fist Location
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class USoundBase*              SoundToSpawn                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VolumeMultiplier               (Parm, ZeroConstructor, IsPlainOldData)
@@ -765,6 +766,7 @@ void ABuff_TekArmor_Sword_C::Spawn_Sound_at_Fist_Location(class USoundBase* Soun
 	params.PitchMultiplier = PitchMultiplier;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -832,7 +834,7 @@ void ABuff_TekArmor_Sword_C::RocketPunchStart()
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Punch
-// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ABuff_TekArmor_Sword_C::Punch()
 {
@@ -841,7 +843,6 @@ void ABuff_TekArmor_Sword_C::Punch()
 	ABuff_TekArmor_Sword_C_Punch_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

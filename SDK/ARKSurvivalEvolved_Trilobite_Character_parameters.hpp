@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Trilobite_Character.Trilobite_Character_C.BP_ForceAllowAddBuff
+struct ATrilobite_Character_C_BP_ForceAllowAddBuff_Params
+{
+	class UClass**                                     BuffClass;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Trilobite_Character.Trilobite_Character_C.UserConstructionScript
 struct ATrilobite_Character_C_UserConstructionScript_Params

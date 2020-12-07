@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,19 +13,20 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ShooterHudBP.ShooterHudBP_C.GetAdditionalExplorerNoteDynamicMaterialParams
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, NetClient, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Native, Event, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FExplorerNoteEntry      ExplorerNote                   (Parm, OutParm, ReferenceParm)
 // TArray<struct FNameScalarPair> ScalarMaterialParams           (Parm, OutParm, ZeroConstructor)
 // TArray<struct FNameColorPair>  ColorMaterialParams            (Parm, OutParm, ZeroConstructor)
 
-void AShooterHudBP_C::STATIC_GetAdditionalExplorerNoteDynamicMaterialParams(struct FExplorerNoteEntry* ExplorerNote, TArray<struct FNameScalarPair>* ScalarMaterialParams, TArray<struct FNameColorPair>* ColorMaterialParams)
+void AShooterHudBP_C::GetAdditionalExplorerNoteDynamicMaterialParams(struct FExplorerNoteEntry* ExplorerNote, TArray<struct FNameScalarPair>* ScalarMaterialParams, TArray<struct FNameColorPair>* ColorMaterialParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterHudBP.ShooterHudBP_C.GetAdditionalExplorerNoteDynamicMaterialParams");
 
 	AShooterHudBP_C_GetAdditionalExplorerNoteDynamicMaterialParams_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

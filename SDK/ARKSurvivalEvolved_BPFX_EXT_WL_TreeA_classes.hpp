@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BPFX_EXT_WL_TreeA.BPFX_EXT_WL_TreeA_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0830 - 0x0830)
 class UBPFX_EXT_WL_TreeA_C : public UParticleSystemComponent
 {
 public:

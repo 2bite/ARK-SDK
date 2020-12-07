@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,9 +50,9 @@ void ATekJumpPad_C::SetLaunchPreviewVisibility(bool IsVisible)
 
 
 // Function TekJumpPad.TekJumpPad_C.TickLaunchPreview
-// (NetRequest, Public, Delegate, HasOutParms, HasDefaults, Const, NetValidate)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ATekJumpPad_C::TickLaunchPreview()
+void ATekJumpPad_C::STATIC_TickLaunchPreview()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekJumpPad.TekJumpPad_C.TickLaunchPreview");
 
@@ -118,13 +118,13 @@ void ATekJumpPad_C::BPRefreshedStructureColors()
 
 
 // Function TekJumpPad.TekJumpPad_C.BlueprintDrawHUD
-// (Net, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, NetMulticast, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekJumpPad_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void ATekJumpPad_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekJumpPad.TekJumpPad_C.BlueprintDrawHUD");
 
@@ -134,6 +134,7 @@ void ATekJumpPad_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* Cent
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,7 +340,7 @@ void ATekJumpPad_C::OnRep_LaunchAreaCapsuleHalfHeight()
 
 
 // Function TekJumpPad.TekJumpPad_C.UpdateLaunchTriggerTransform
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, Const, NetValidate)
+// (Net, NetReliable, Exec, Event, Static, NetMulticast, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FRotator                NewRotation                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          NewCapsuleHalfHeight           (Parm, ZeroConstructor, IsPlainOldData)
@@ -355,7 +356,6 @@ void ATekJumpPad_C::STATIC_UpdateLaunchTriggerTransform(const struct FRotator& N
 	params.NewLaunchForce = NewLaunchForce;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -410,12 +410,12 @@ bool ATekJumpPad_C::BPServerHandleNetExecCommand(class APlayerController** FromP
 
 
 // Function TekJumpPad.TekJumpPad_C.BPClientDoMultiUse
-// (NetReliable, Native, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekJumpPad_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void ATekJumpPad_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekJumpPad.TekJumpPad_C.BPClientDoMultiUse");
 
@@ -424,7 +424,6 @@ void ATekJumpPad_C::BPClientDoMultiUse(class APlayerController** ForPC, int* Cli
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -433,13 +432,13 @@ void ATekJumpPad_C::BPClientDoMultiUse(class APlayerController** ForPC, int* Cli
 
 
 // Function TekJumpPad.TekJumpPad_C.BPGetMultiUseEntries
-// (NetResponse, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATekJumpPad_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATekJumpPad_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekJumpPad.TekJumpPad_C.BPGetMultiUseEntries");
 
@@ -447,6 +446,7 @@ TArray<struct FMultiUseEntry> ATekJumpPad_C::BPGetMultiUseEntries(class APlayerC
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

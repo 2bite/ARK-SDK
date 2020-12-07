@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_UnderwaterEgg_Diplocaulus_Aberrant.PrimalItemConsumable_UnderwaterEgg_Diplocaulus_Aberrant_C
-// 0x0000 (0x09B0 - 0x09B0)
+// 0x0000 (0x09E8 - 0x09E8)
 class UPrimalItemConsumable_UnderwaterEgg_Diplocaulus_Aberrant_C : public UPrimalItemConsumable_UnderwaterEgg_Diplocaulus_C
 {
 public:

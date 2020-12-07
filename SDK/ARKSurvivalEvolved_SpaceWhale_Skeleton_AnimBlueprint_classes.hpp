@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 	}
 
 
-	void GetFlyingBlendspaceCoords(class APrimalDinoCharacter** ForDino, struct FVector2D* BlendspaceCoords);
+	void STATIC_GetFlyingBlendspaceCoords(class APrimalDinoCharacter** ForDino, struct FVector2D* BlendspaceCoords);
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_SpaceWhale_Skeleton_AnimBlueprint(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -108,7 +108,7 @@ struct ABigfoot_Character_BP_C_DrawCrosshairIfNeeded_Params
 struct ABigfoot_Character_BP_C_Get_Throw_Anim_Params
 {
 	bool                                               overheadThrow;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                startThrowAnim;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                StartThrowAnim;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsStartThrowAnimPlaying
@@ -121,7 +121,7 @@ struct ABigfoot_Character_BP_C_IsStartThrowAnimPlaying_Params
 struct ABigfoot_Character_BP_C_GetStartThrowAnim_Params
 {
 	bool                                               overheadThrow;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                startThrowAnim;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                StartThrowAnim;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsGrabbing
@@ -325,7 +325,7 @@ struct ABigfoot_Character_BP_C_Server_TraceTargetDir_Params
 {
 	struct FVector                                     AimLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ThrowInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               throwInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.Multi_TraceTargetDir
@@ -374,7 +374,7 @@ struct ABigfoot_Character_BP_C_DelayedClearThrowing_Params
 struct ABigfoot_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 {
 	struct FName*                                      CustomEventName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent**                     meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent**                     MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimSequenceBase**                          Animation;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };

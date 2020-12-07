@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Sheep_Character_BP.Sheep_Character_BP_C.BPClampMaxHarvestHealth
+struct ASheep_Character_BP_C_BPClampMaxHarvestHealth_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Sheep_Character_BP.Sheep_Character_BP_C.BPTryMultiUse
 struct ASheep_Character_BP_C_BPTryMultiUse_Params

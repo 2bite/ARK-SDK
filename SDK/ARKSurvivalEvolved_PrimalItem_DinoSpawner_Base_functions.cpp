@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,7 +100,7 @@ bool UPrimalItem_DinoSpawner_Base_C::BPCanUse(bool* bIgnoreCooldown)
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.GetDinoColorizationData
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, Const, NetValidate)
+// (NetReliable, Exec, Event, NetMulticast, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           HasAnyColorData                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TArray<unsigned char>          ColorData                      (Parm, OutParm, ZeroConstructor)
@@ -142,7 +142,7 @@ void UPrimalItem_DinoSpawner_Base_C::PreDinoSpawned()
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.CopyDinoStatsFromDino
-// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, Const, NetValidate)
+// (Native, NetResponse, NetMulticast, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimalCharacterStatusComponent* StatusComp                     (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    StatOffsets                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -170,7 +170,7 @@ void UPrimalItem_DinoSpawner_Base_C::CopyDinoStatsFromDino(class UPrimalCharacte
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.GetStatDisplayString
-// (Exec, Native, NetMulticast, Public, Protected, NetServer, DLLImport, Const, NetValidate)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EPrimalCharacterStatusValue> Stat                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -205,7 +205,7 @@ void UPrimalItem_DinoSpawner_Base_C::GetStatDisplayString(TEnumAsByte<EPrimalCha
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.GetDinoStat
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, Const, NetValidate)
+// (Native, Event, Static, NetMulticast, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EPrimalCharacterStatusValue> statType                       (Parm, ZeroConstructor, IsPlainOldData)
 // int                            NumDinoLevels                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -220,6 +220,7 @@ void UPrimalItem_DinoSpawner_Base_C::STATIC_GetDinoStat(TEnumAsByte<EPrimalChara
 	params.statType = statType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,14 +236,14 @@ void UPrimalItem_DinoSpawner_Base_C::STATIC_GetDinoStat(TEnumAsByte<EPrimalChara
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.BPGetItemDescription
-// (NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer, DLLImport, Const, NetValidate)
+// (Exec, Native, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItem_DinoSpawner_Base_C::BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
+class FString UPrimalItem_DinoSpawner_Base_C::STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.BPGetItemDescription");
 

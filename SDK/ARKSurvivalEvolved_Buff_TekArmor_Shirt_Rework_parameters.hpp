@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -113,7 +113,7 @@ struct ABuff_TekArmor_Shirt_Rework_C_UpdateIsSwimming_Params
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.ClampPlayerVelocity
 struct ABuff_TekArmor_Shirt_Rework_C_ClampPlayerVelocity_Params
 {
-	float                                              MaxVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              maxVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.UpdateTekShirtByState

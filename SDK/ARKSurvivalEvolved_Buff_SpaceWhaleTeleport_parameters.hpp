@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,7 +68,7 @@ struct ABuff_SpaceWhaleTeleport_C_UserConstructionScript_Params
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.MultiHyperdriveEffect
 struct ABuff_SpaceWhaleTeleport_C_MultiHyperdriveEffect_Params
 {
-	class USceneComponent*                             meshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             MeshComp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Start;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     End;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -63,7 +63,7 @@ struct ABP_DedicatedStorage_C_BlueprintDrawHUD_Params
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.IsFuel
 struct ABP_DedicatedStorage_C_IsFuel_Params
 {
-	class UPrimalInventoryComponent*                   Inventory;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryComponent*                   inventory;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      ItemClass;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Fuel;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

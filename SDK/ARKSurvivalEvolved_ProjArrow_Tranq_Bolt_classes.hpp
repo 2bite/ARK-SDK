@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_Tranq_Bolt.ProjArrow_Tranq_Bolt_C
-// 0x0000 (0x0688 - 0x0688)
+// 0x0000 (0x0690 - 0x0690)
 class AProjArrow_Tranq_Bolt_C : public AProjArrow_C
 {
 public:

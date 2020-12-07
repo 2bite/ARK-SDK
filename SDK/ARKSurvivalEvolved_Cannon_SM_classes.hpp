@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,33 +15,33 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cannon_SM.Cannon_SM_C
-// 0x0278 (0x1048 - 0x0DD0)
+// 0x0270 (0x1048 - 0x0DD8)
 class ACannon_SM_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UPrimalInventoryBP_Cannon_C*                 PrimalInventoryBP_Cannon_C1;                              // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      CannonMesh;                                               // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AimPitch;                                                 // 0x0DE0(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0DE4(0x0004) MISSED OFFSET
-	double                                             LastFiredTime;                                            // 0x0DE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AimYaw;                                                   // 0x0DF0(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	float                                              MaxAimPitch;                                              // 0x0DF4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxAimYaw;                                                // 0x0DF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bHasAmmo;                                                 // 0x0DFC(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0DFD(0x0003) MISSED OFFSET
-	class AShooterCharacter*                           FireInstigator;                                           // 0x0E00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, IsPlainOldData)
-	class USceneComponent*                             CallFunc_K2_GetRootComponent_ReturnValue;                 // 0x0E08(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UAudioComponent*                             CallFunc_PlaySoundAttached_ReturnValue;                   // 0x0E10(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                Temp_int_Loop_Counter_Variable;                           // 0x0E18(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                Temp_int_Loop_Counter_Variable2;                          // 0x0E1C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x0E20(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                CallFunc_Add_IntInt_ReturnValue2;                         // 0x0E24(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               Temp_bool_True_if_break_was_hit_Variable;                 // 0x0E28(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0E29(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x0E2A(0x0006) MISSED OFFSET
-	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x0E30(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    CallFunc_GetSocketRotation_ReturnValue;                   // 0x0E38(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xC];                                       // 0x0E44(0x000C) MISSED OFFSET
+	class UPrimalInventoryBP_Cannon_C*                 PrimalInventoryBP_Cannon_C1;                              // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      CannonMesh;                                               // 0x0DE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AimPitch;                                                 // 0x0DE8(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0DEC(0x0004) MISSED OFFSET
+	double                                             LastFiredTime;                                            // 0x0DF0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AimYaw;                                                   // 0x0DF8(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	float                                              MaxAimPitch;                                              // 0x0DFC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxAimYaw;                                                // 0x0E00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bHasAmmo;                                                 // 0x0E04(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0E05(0x0003) MISSED OFFSET
+	class AShooterCharacter*                           FireInstigator;                                           // 0x0E08(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, IsPlainOldData)
+	class USceneComponent*                             CallFunc_K2_GetRootComponent_ReturnValue;                 // 0x0E10(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UAudioComponent*                             CallFunc_PlaySoundAttached_ReturnValue;                   // 0x0E18(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                Temp_int_Loop_Counter_Variable;                           // 0x0E20(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                Temp_int_Loop_Counter_Variable2;                          // 0x0E24(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x0E28(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                CallFunc_Add_IntInt_ReturnValue2;                         // 0x0E2C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               Temp_bool_True_if_break_was_hit_Variable;                 // 0x0E30(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0E31(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x0E32(0x0006) MISSED OFFSET
+	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x0E38(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    CallFunc_GetSocketRotation_ReturnValue;                   // 0x0E40(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0E4C(0x0004) MISSED OFFSET
 	struct UObject_FTransform                          CallFunc_GetSocketTransform_ReturnValue;                  // 0x0E50(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_Conv_RotatorToVector_ReturnValue;                // 0x0E80(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x4];                                       // 0x0E8C(0x0004) MISSED OFFSET
@@ -116,7 +116,7 @@ public:
 	}
 
 
-	void IsValidToFire(bool* ValidToFire);
+	void STATIC_IsValidToFire(bool* ValidToFire);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();

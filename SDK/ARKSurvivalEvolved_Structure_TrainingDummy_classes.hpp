@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (301.1) SDK
+// ARKSurvivalEvolved (318.14) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Structure_TrainingDummy.Structure_TrainingDummy_C
-// 0x0005 (0x0ABD - 0x0AB8)
+// 0x0005 (0x0AC5 - 0x0AC0)
 class AStructure_TrainingDummy_C : public AStructureBaseBP_C
 {
 public:
-	float                                              CachedDamage;                                             // 0x0AB8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x0ABC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CachedDamage;                                             // 0x0AC0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x0AC4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +29,7 @@ public:
 	}
 
 
-	void ReportDPS();
+	void STATIC_ReportDPS();
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void UserConstructionScript();
 	void TookDamage();
