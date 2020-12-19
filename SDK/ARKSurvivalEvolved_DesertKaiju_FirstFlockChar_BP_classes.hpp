@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,7 +101,7 @@ public:
 	int                                                CallFunc_RandomInteger_ReturnValue;                       // 0x2470(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x2474(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	int                                                K2Node_CustomEvent_NewShape;                              // 0x2478(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    K2Node_CustomEvent_Rotation;                              // 0x247C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_rotation;                              // 0x247C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FName                                       CallFunc_MakeLiteralName_ReturnValue2;                    // 0x2488(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AController*                                 CallFunc_GetController_ReturnValue2;                      // 0x2490(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class APrimalDinoAIController*                     K2Node_DynamicCast_AsPrimalDinoAIController;              // 0x2498(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -185,7 +185,7 @@ public:
 	void BPTimerServer();
 	void GetFlockGroupMaterial(int Group, class UMaterialInstanceDynamic** Material);
 	void TickFlockGroup(int Shape, float DeltaTime, int groupIndex, TArray<int>* Group, struct FBoidBehavior* Behavior);
-	void GetFlockAvoidanceArea(TArray<struct FAvoidanceArea>* Return);
+	void GetFlockAvoidanceArea(TArray<struct FAvoidanceArea>* _return);
 	void DistanceToKaiju(float* Distance);
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void BPDinoPostBeginPlay();

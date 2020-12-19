@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GiantTurtleHUD.GiantTurtleHUD_C.Get_AbilityTextBlock_Text_1
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -24,7 +24,6 @@ struct FText UGiantTurtleHUD_C::Get_AbilityTextBlock_Text_1()
 	UGiantTurtleHUD_C_Get_AbilityTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

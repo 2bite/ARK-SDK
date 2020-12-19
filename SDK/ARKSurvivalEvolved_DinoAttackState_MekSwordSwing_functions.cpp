@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,11 +37,11 @@ void UDinoAttackState_MekSwordSwing_C::ShouldDoDamageTo(class AActor* Actor, boo
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.BPOnAttackEnd
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekSwordSwing_C::STATIC_BPOnAttackEnd(int* AttackIndex)
+void UDinoAttackState_MekSwordSwing_C::BPOnAttackEnd(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.BPOnAttackEnd");
 
@@ -49,6 +49,7 @@ void UDinoAttackState_MekSwordSwing_C::STATIC_BPOnAttackEnd(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,7 +82,7 @@ void UDinoAttackState_MekSwordSwing_C::BPOnAnimNotifyCustomEvent(struct FName* C
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.DoSwordDamage
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 
 void UDinoAttackState_MekSwordSwing_C::STATIC_DoSwordDamage()
 {
@@ -98,7 +99,7 @@ void UDinoAttackState_MekSwordSwing_C::STATIC_DoSwordDamage()
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordCapsule
-// (Native, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Event, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct UObject_FTransform      WorldTransform                 (Parm, OutParm, IsPlainOldData)
 // float                          CapsuleRadius                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -127,7 +128,7 @@ void UDinoAttackState_MekSwordSwing_C::GetSwordCapsule(struct UObject_FTransform
 
 
 // Function DinoAttackState_MekSwordSwing.DinoAttackState_MekSwordSwing_C.GetSwordDamagePoint
-// (NetRequest, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector                 Loc                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rot                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)

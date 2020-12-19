@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -124,10 +124,10 @@ struct ABigfoot_Character_BP_C_GetStartThrowAnim_Params
 	class UAnimMontage*                                StartThrowAnim;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsGrabbing
-struct ABigfoot_Character_BP_C_IsGrabbing_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.isGrabbing
+struct ABigfoot_Character_BP_C_isGrabbing_Params
 {
-	bool                                               IsGrabbing;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isGrabbing;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.On Throw Released
@@ -306,13 +306,13 @@ struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActi
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ServerRequestGrab
 struct ABigfoot_Character_BP_C_ServerRequestGrab_Params
 {
-	bool                                               buttonHeld;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ButtonHeld;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ServerRequestThrow
 struct ABigfoot_Character_BP_C_ServerRequestThrow_Params
 {
-	bool                                               buttonHeld;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ButtonHeld;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.DelayedGrab

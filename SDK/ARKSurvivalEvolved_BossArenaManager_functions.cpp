@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,7 +47,7 @@ void ABossArenaManager_C::SFXBack_to_Home()
 
 
 // Function BossArenaManager.BossArenaManager_C.IssueReturnWarning
-// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Public, Protected, NetServer, NetClient, BlueprintEvent, Const)
 
 void ABossArenaManager_C::IssueReturnWarning()
 {
@@ -56,7 +56,6 @@ void ABossArenaManager_C::IssueReturnWarning()
 	ABossArenaManager_C_IssueReturnWarning_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,14 +64,14 @@ void ABossArenaManager_C::IssueReturnWarning()
 
 
 // Function BossArenaManager.BossArenaManager_C.BPClientHandleNetExecCommand
-// (NetReliable, NetRequest, Event, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABossArenaManager_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool ABossArenaManager_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.BPClientHandleNetExecCommand");
 
@@ -81,6 +80,7 @@ bool ABossArenaManager_C::BPClientHandleNetExecCommand(struct FName* CommandName
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,7 +162,7 @@ void ABossArenaManager_C::GetAllActorsInBossArena(bool bIncludeUnconscious, bool
 
 
 // Function BossArenaManager.BossArenaManager_C.IssueTimeWarning
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Event, NetResponse, Static, Public, Protected, NetServer, NetClient, BlueprintEvent, Const)
 
 void ABossArenaManager_C::STATIC_IssueTimeWarning()
 {
@@ -171,7 +171,6 @@ void ABossArenaManager_C::STATIC_IssueTimeWarning()
 	ABossArenaManager_C_IssueTimeWarning_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,18 +235,17 @@ void ABossArenaManager_C::DidTeleport(const struct FVector& ReturnPosition, clas
 
 
 // Function BossArenaManager.BossArenaManager_C.IsValidForTeleport
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Event, NetResponse, MulticastDelegate, Private, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class FString                  InvalidReason                  (Parm, OutParm, ZeroConstructor)
 
-void ABossArenaManager_C::STATIC_IsValidForTeleport(class FString* InvalidReason)
+void ABossArenaManager_C::IsValidForTeleport(class FString* InvalidReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.IsValidForTeleport");
 
 	ABossArenaManager_C_IsValidForTeleport_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

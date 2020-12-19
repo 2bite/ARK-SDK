@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -94,7 +94,7 @@ public:
 
 	bool BPCanCryo(class AShooterPlayerController** ForPC);
 	void BPTimerServer();
-	void BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
+	void STATIC_BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
 	void Find_Remaining_Tame_Time(float* TimeLeft);
 	void BPSetupTamed(bool* bWasJustTamed);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);

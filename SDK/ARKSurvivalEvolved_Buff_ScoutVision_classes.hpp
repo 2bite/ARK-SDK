@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -110,15 +110,15 @@ public:
 	}
 
 
-	class FString BPGetDebugInfoString();
+	class FString STATIC_BPGetDebugInfoString();
 	class APrimalCharacter* BPOverrideTalkerCharacter();
 	void ReceiveBeginPlay();
-	void IsLocalScout(bool* Retval);
+	void IsLocalScout(bool* retVal);
 	bool BPIsValidUnStasisCaster();
 	bool BPOverrideIsNetRelevantFor(class APlayerController** RealViewer, class AActor** Viewer, struct FVector* SrcLocation);
 	void Scout_PossessionChange_Pending(class AScout_Character_BP_C* Scout);
 	void BuffTickClient(float* DeltaTime);
-	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	bool AllowPostProcessEffect();
 	void UserConstructionScript();
 	void ReceiveTick(float* DeltaSeconds);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,7 +49,7 @@ struct UFishingNetHelperFunction_C_reel_Params
 // Function FishingNetHelperFunction.FishingNetHelperFunction_C.Update Rope
 struct UFishingNetHelperFunction_C_Update_Rope_Params
 {
-	class AShooterProjectile*                          net_projectile;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterProjectile*                          Net_Projectile;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Rope_Endpoint_Location;                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

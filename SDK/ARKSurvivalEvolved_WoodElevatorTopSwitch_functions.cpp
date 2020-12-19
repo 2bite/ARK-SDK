@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,13 +37,13 @@ void AWoodElevatorTopSwitch_C::AllowedToChangePublicUse(class APlayerController*
 
 
 // Function WoodElevatorTopSwitch.WoodElevatorTopSwitch_C.Make Multi Use Entry
-// (NetReliable, NetRequest, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const)
 // Parameters:
 // TEnumAsByte<EPrimalStructureElevatorState> Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Priority                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FMultiUseEntry          Entry                          (Parm, OutParm)
 
-void AWoodElevatorTopSwitch_C::STATIC_Make_Multi_Use_Entry(TEnumAsByte<EPrimalStructureElevatorState> Direction, int Priority, struct FMultiUseEntry* Entry)
+void AWoodElevatorTopSwitch_C::Make_Multi_Use_Entry(TEnumAsByte<EPrimalStructureElevatorState> Direction, int Priority, struct FMultiUseEntry* Entry)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WoodElevatorTopSwitch.WoodElevatorTopSwitch_C.Make Multi Use Entry");
 
@@ -52,6 +52,7 @@ void AWoodElevatorTopSwitch_C::STATIC_Make_Multi_Use_Entry(TEnumAsByte<EPrimalSt
 	params.Priority = Priority;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +139,7 @@ bool AWoodElevatorTopSwitch_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function WoodElevatorTopSwitch.WoodElevatorTopSwitch_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -152,6 +153,7 @@ TArray<struct FMultiUseEntry> AWoodElevatorTopSwitch_C::STATIC_BPGetMultiUseEntr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

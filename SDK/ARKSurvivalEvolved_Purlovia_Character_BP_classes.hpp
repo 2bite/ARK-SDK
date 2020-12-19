@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 	float                                              buryAttackDownImpulseMultiplier;                          // 0x21BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              buryAttackUpImpulse;                                      // 0x21C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              zJumpImpulseMultiplier;                                   // 0x21C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                buryAttackRange;                                          // 0x21C8(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	int                                                BuryAttackRange;                                          // 0x21C8(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	bool                                               isForcedBury;                                             // 0x21CC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x21CD(0x0003) MISSED OFFSET
 	double                                             lastTimeBuried;                                           // 0x21D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -204,7 +204,7 @@ public:
 
 
 	bool BPIsHidden();
-	void UpdateCollisions(bool Buried);
+	void UpdateCollisions(bool buried);
 	void CanUnburyNormal(bool* Can);
 	void Show_Mound_Out_Particles();
 	void BPTimerNonDedicated();
@@ -212,7 +212,7 @@ public:
 	void Show_Mound_In_Particles();
 	void Show_Bury_MoundIfNeeded();
 	void Hide_Bury_Mound();
-	void STATIC_RotateToTarget();
+	void RotateToTarget();
 	void IsValidTarget(bool DoWeightCheck, class AActor* Target, bool* Valid);
 	float BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void IsBuryAttack(int AttackIndex, bool* IsBuryAttack);
@@ -224,7 +224,7 @@ public:
 	void BPCharacterSleeped();
 	void BPOnAnimPlayedNotify(class UAnimMontage** AnimMontage, float* InPlayRate, struct FName* StartSectionName, bool* bReplicate, bool* bReplicateToOwner, bool* bForceTickPoseAndServerUpdateMesh, bool* bForceTickPoseOnServer);
 	void FinishBuriedJump();
-	void STATIC_CalculateBuryMeshTransform(struct UObject_FTransform* Transform);
+	void CalculateBuryMeshTransform(struct UObject_FTransform* Transform);
 	void BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
 	void Get_Buried_Attack_Up_Impulse(struct FVector* UpImpulse);
 	void Get_Buried_Attack_Down_Impulse(struct FVector* Impulse);
@@ -239,7 +239,7 @@ public:
 	void Can_Unbury(bool* canComeOut);
 	void ShouldComeOut(bool* comeOut);
 	void Has_Conflict_with_AI(bool* hasConflict);
-	void CanBury(bool forceBury, bool* CanBury);
+	void canBury(bool forceBury, bool* canBury);
 	void CanPlayBuryAnim(bool* canPlayBury);
 	void CanJumpAtTarget(bool* FoundTarget);
 	void BPTimerServer();

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ public:
 
 
 	void BPPostLoadedFromSaveGame();
-	void BPPlacedStructure(class APlayerController** ForPC);
+	void STATIC_BPPlacedStructure(class APlayerController** ForPC);
 	void UserConstructionScript();
 	void ExecuteUbergraph_TransGPSCharge(int EntryPoint);
 };

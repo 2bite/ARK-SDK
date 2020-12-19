@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -93,17 +93,18 @@ void AStorageBox_Balloon_C::GetBasedWeight(float* Weight)
 
 
 // Function StorageBox_Balloon.StorageBox_Balloon_C.HasClearance
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Clearance                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AStorageBox_Balloon_C::STATIC_HasClearance(bool* Clearance)
+void AStorageBox_Balloon_C::HasClearance(bool* Clearance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_Balloon.StorageBox_Balloon_C.HasClearance");
 
 	AStorageBox_Balloon_C_HasClearance_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +116,7 @@ void AStorageBox_Balloon_C::STATIC_HasClearance(bool* Clearance)
 
 
 // Function StorageBox_Balloon.StorageBox_Balloon_C.Set Optimal Cruising Altitude
-// (Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (Event, NetResponse, NetMulticast, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 
 void AStorageBox_Balloon_C::Set_Optimal_Cruising_Altitude()
 {
@@ -124,7 +125,6 @@ void AStorageBox_Balloon_C::Set_Optimal_Cruising_Altitude()
 	AStorageBox_Balloon_C_Set_Optimal_Cruising_Altitude_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,16 +236,15 @@ bool AStorageBox_Balloon_C::BPPreventPlacingOnFloorStructure(class APrimalStruct
 
 
 // Function StorageBox_Balloon.StorageBox_Balloon_C.CheckOptimalZDistance
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 
-void AStorageBox_Balloon_C::CheckOptimalZDistance()
+void AStorageBox_Balloon_C::STATIC_CheckOptimalZDistance()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_Balloon.StorageBox_Balloon_C.CheckOptimalZDistance");
 
 	AStorageBox_Balloon_C_CheckOptimalZDistance_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -293,7 +292,7 @@ void AStorageBox_Balloon_C::SetBalloonSpeed()
 
 
 // Function StorageBox_Balloon.StorageBox_Balloon_C.CalcLandingVector
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            coord1                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            coord2                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -333,12 +332,12 @@ void AStorageBox_Balloon_C::OnRep_LocationString()
 
 
 // Function StorageBox_Balloon.StorageBox_Balloon_C.BPClientDoMultiUse
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, Event, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStorageBox_Balloon_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void AStorageBox_Balloon_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_Balloon.StorageBox_Balloon_C.BPClientDoMultiUse");
 
@@ -347,7 +346,6 @@ void AStorageBox_Balloon_C::STATIC_BPClientDoMultiUse(class APlayerController** 
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -450,7 +448,7 @@ bool AStorageBox_Balloon_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function StorageBox_Balloon.StorageBox_Balloon_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

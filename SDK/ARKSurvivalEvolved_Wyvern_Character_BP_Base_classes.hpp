@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -81,7 +81,7 @@ public:
 	struct FName GetSocketForMeleeTraceForHitBlockers(int* AttackIndex);
 	bool SetTurretMode(bool* Enabled);
 	void BPSetupTamed(bool* bWasJustTamed);
-	void STATIC_SpawnNestEgg();
+	void SpawnNestEgg();
 	void BPCharacterUnsleeped();
 	void BSetupDinoTameable();
 	void BPBecomeAdult();

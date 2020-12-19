@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,11 +62,11 @@ void ADaeodon_Character_BP_C::IsAlly(int otherTargetingTeam, bool* isSameTeamOrA
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.TryTrigger Attack
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADaeodon_Character_BP_C::STATIC_TryTrigger_Attack(int AttackIndex)
+void ADaeodon_Character_BP_C::TryTrigger_Attack(int AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Daeodon_Character_BP.Daeodon_Character_BP_C.TryTrigger Attack");
 
@@ -108,7 +108,7 @@ void ADaeodon_Character_BP_C::ReceiveAnyDamage(float* Damage, class UDamageType*
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.SendNetExecCommandToCharacter
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -122,7 +122,6 @@ void ADaeodon_Character_BP_C::STATIC_SendNetExecCommandToCharacter(class AShoote
 	params.CommandName = CommandName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -401,7 +400,7 @@ void ADaeodon_Character_BP_C::Toggle_Passive_Healing()
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Event, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -415,6 +414,7 @@ TArray<struct FMultiUseEntry> ADaeodon_Character_BP_C::BPGetMultiUseEntries(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

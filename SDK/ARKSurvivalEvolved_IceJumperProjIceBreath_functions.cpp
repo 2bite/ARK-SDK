@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,7 +83,7 @@ void AIceJumperProjIceBreath_C::Get_Normalized_Vector_On_Ice_Jumper_Plane_from_L
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.Get Best Impact Location
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (Native, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, Const)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -102,6 +102,7 @@ void AIceJumperProjIceBreath_C::Get_Best_Impact_Location(const struct FVector& S
 	params.Rider = Rider;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -163,7 +164,7 @@ void AIceJumperProjIceBreath_C::ValidateTick(bool* Result)
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.UpdateBeamLength
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void AIceJumperProjIceBreath_C::UpdateBeamLength()
 {
@@ -172,7 +173,6 @@ void AIceJumperProjIceBreath_C::UpdateBeamLength()
 	AIceJumperProjIceBreath_C_UpdateBeamLength_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -181,7 +181,7 @@ void AIceJumperProjIceBreath_C::UpdateBeamLength()
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.GetBeamStartEnd
-// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, Native, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -197,6 +197,7 @@ void AIceJumperProjIceBreath_C::GetBeamStartEnd(const struct FVector& Start, con
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

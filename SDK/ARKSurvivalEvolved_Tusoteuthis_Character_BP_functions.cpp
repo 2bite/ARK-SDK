@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,7 +101,7 @@ bool ATusoteuthis_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC,
 
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Native, Event, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -272,9 +272,9 @@ void ATusoteuthis_Character_BP_C::BPFedWakingTameEvent(class APlayerController**
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino
 // ()
 // Parameters:
-// class ATusoteuthis_Character_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ATusoteuthis_Character_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATusoteuthis_Character_BP_C::GetDefaultDino(class ATusoteuthis_Character_BP_C** ref)
+void ATusoteuthis_Character_BP_C::GetDefaultDino(class ATusoteuthis_Character_BP_C** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino");
 
@@ -286,8 +286,8 @@ void ATusoteuthis_Character_BP_C::GetDefaultDino(class ATusoteuthis_Character_BP
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -423,7 +423,7 @@ void ATusoteuthis_Character_BP_C::CheckForResetTurn()
 
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.BPTimerServer
-// (NetReliable, NetRequest, Exec, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ATusoteuthis_Character_BP_C::BPTimerServer()
 {
@@ -575,7 +575,7 @@ void ATusoteuthis_Character_BP_C::RemoveCarryBuffFromPrey()
 
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.SyphonHealthFromPrey
-// (Native, Event, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ATusoteuthis_Character_BP_C::STATIC_SyphonHealthFromPrey()
 {
@@ -584,7 +584,6 @@ void ATusoteuthis_Character_BP_C::STATIC_SyphonHealthFromPrey()
 	ATusoteuthis_Character_BP_C_SyphonHealthFromPrey_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -593,7 +592,7 @@ void ATusoteuthis_Character_BP_C::STATIC_SyphonHealthFromPrey()
 
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.DropPrey
-// (Exec, Native, Event, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           playDropAnim                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           forceSuccess                   (Parm, ZeroConstructor, IsPlainOldData)

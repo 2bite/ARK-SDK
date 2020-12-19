@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,7 +76,7 @@ void AYutyrannus_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HU
 
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.BPGetMultiUseEntries
-// (Native, Event, Static, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -306,7 +306,7 @@ void AYutyrannus_Character_BP_C::CanAddFearCommonChecks(class APrimalCharacter* 
 
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.ConeCheck
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float                          coneRadius                     (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        OtherCharacter                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -315,7 +315,7 @@ void AYutyrannus_Character_BP_C::CanAddFearCommonChecks(class APrimalCharacter* 
 // struct FVector                 VectorA                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 VectorB                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AYutyrannus_Character_BP_C::ConeCheck(float coneRadius, class APrimalCharacter* OtherCharacter, bool useHeadSocketForReference, bool* isInCone, struct FVector* VectorA, struct FVector* VectorB)
+void AYutyrannus_Character_BP_C::STATIC_ConeCheck(float coneRadius, class APrimalCharacter* OtherCharacter, bool useHeadSocketForReference, bool* isInCone, struct FVector* VectorA, struct FVector* VectorB)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.ConeCheck");
 
@@ -340,7 +340,7 @@ void AYutyrannus_Character_BP_C::ConeCheck(float coneRadius, class APrimalCharac
 
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Public, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -349,7 +349,7 @@ void AYutyrannus_Character_BP_C::ConeCheck(float coneRadius, class APrimalCharac
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AYutyrannus_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AYutyrannus_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -453,7 +453,7 @@ void AYutyrannus_Character_BP_C::GetFearCourageBuffClass(bool isFear, class APri
 
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.BlueprintCanAttack
-// (NetReliable, Event, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, Public, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -502,7 +502,7 @@ void AYutyrannus_Character_BP_C::Add_Fear(class APrimalDinoCharacter* DinoCharac
 
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.FindNearbyDinosForFear
-// (NetRequest, Exec, Static, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Native, NetResponse, Static, Public, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TArray<class APrimalDinoCharacter*> dinosFound                     (Parm, OutParm, ZeroConstructor)
 
@@ -513,6 +513,7 @@ void AYutyrannus_Character_BP_C::STATIC_FindNearbyDinosForFear(TArray<class APri
 	AYutyrannus_Character_BP_C_FindNearbyDinosForFear_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -712,14 +713,14 @@ void AYutyrannus_Character_BP_C::Can_Add_Courage_WildToWild(class APrimalDinoCha
 
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.Try Add Courage
-// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintPure)
+// (Exec, Native, Event, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APrimalDinoCharacter*    PotentialTarget                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           tamedToTamed                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           wildToWild                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           tamedToWild                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void AYutyrannus_Character_BP_C::Try_Add_Courage(class APrimalDinoCharacter* PotentialTarget, bool tamedToTamed, bool wildToWild, bool tamedToWild)
+void AYutyrannus_Character_BP_C::STATIC_Try_Add_Courage(class APrimalDinoCharacter* PotentialTarget, bool tamedToTamed, bool wildToWild, bool tamedToWild)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.Try Add Courage");
 

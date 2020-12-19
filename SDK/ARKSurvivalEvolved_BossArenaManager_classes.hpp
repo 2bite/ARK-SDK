@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -111,7 +111,7 @@ public:
 	void SpawnedBoss();
 	void SFXBack_to_Home();
 	void IssueReturnWarning();
-	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
+	bool STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
 	void KillMinions();
 	void CheckForActivePlayers();
 	void GetAllActorsInBossArena(bool bIncludeUnconscious, bool bIncludeUntamedCreatures, bool bIncludeDead, bool bIgnorePlayers, bool bIgnoreDinos, bool bIgnoreAttached, TArray<class AActor*>* TheActors);
@@ -119,7 +119,7 @@ public:
 	void KillAllOccupants();
 	void TeleportBackToHome();
 	void DidTeleport(const struct FVector& ReturnPosition, class UClass* OverrideBossClass);
-	void STATIC_IsValidForTeleport(class FString* InvalidReason);
+	void IsValidForTeleport(class FString* InvalidReason);
 	void UserConstructionScript();
 	void StartBoss();
 	void ReceiveBeginPlay();

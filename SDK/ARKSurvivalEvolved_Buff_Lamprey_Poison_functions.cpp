@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,7 +67,7 @@ void ABuff_Lamprey_Poison_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Lamprey_Poison.Buff_Lamprey_Poison_C.BPDrawBuffStatusHUD
-// (Exec, Native, NetResponse, Public, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -85,7 +85,6 @@ void ABuff_Lamprey_Poison_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float*
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

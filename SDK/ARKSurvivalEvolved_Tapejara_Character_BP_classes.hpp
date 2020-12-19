@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -270,11 +270,11 @@ public:
 	void OnRep_LatchingSurfaceNormal();
 	void UpdateLatchedDinoCamera();
 	void Controller_Follow_ActorRotation(float DeltaSeconds);
-	void STATIC_ReferenceLatchingObjects();
+	void ReferenceLatchingObjects();
 	void STATIC_LineTrace(class UMeshComponent* Mesh, const struct FName& SocketName, class AActor* Actor, const struct FVector& Offset, bool BackwardLatching, bool* Hit_Somthing, struct FVector* Location, struct FVector* Normal, class AActor** Hit_Actor);
 	void InterruptLatching();
 	void ProcessLatching(float DeltaSeconds);
-	void STATIC_TryLatch(const struct FVector& Offset, bool backwardsLatching);
+	void TryLatch(const struct FVector& Offset, bool backwardsLatching);
 	void UserConstructionScript();
 	void InpActEvt_AltFire_K2Node_InputActionEvent_158();
 	void InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_157();

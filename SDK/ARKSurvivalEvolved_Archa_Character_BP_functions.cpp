@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,11 +82,11 @@ void AArcha_Character_BP_C::OnRep_bPreventGlide()
 
 
 // Function Archa_Character_BP.Archa_Character_BP_C.HandleMountedDinoAction
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (Exec, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class AShooterPlayerController** PC                             (Parm, ZeroConstructor, IsPlainOldData)
 
-void AArcha_Character_BP_C::STATIC_HandleMountedDinoAction(class AShooterPlayerController** PC)
+void AArcha_Character_BP_C::HandleMountedDinoAction(class AShooterPlayerController** PC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Archa_Character_BP.Archa_Character_BP_C.HandleMountedDinoAction");
 
@@ -94,7 +94,6 @@ void AArcha_Character_BP_C::STATIC_HandleMountedDinoAction(class AShooterPlayerC
 	params.PC = PC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

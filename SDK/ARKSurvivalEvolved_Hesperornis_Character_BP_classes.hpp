@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,7 @@ public:
 	class UTimelineComponent*                          DiveTimeLine;                                             // 0x2198(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              TimeCanStayUnderwater;                                    // 0x21A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              DiveImpulseMultiplier;                                    // 0x21A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsRotating;                                               // 0x21A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               isRotating;                                               // 0x21A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsDivingUp;                                               // 0x21A9(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2];                                       // 0x21AA(0x0002) MISSED OFFSET
 	float                                              DepthOfTargetCheck;                                       // 0x21AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -204,7 +204,7 @@ public:
 
 
 	void UpdateSwimOffsetLocal();
-	void TryToLerpToZ();
+	void STATIC_TryToLerpToZ();
 	void Setup_Z_Lerping(float TargetZ);
 	void Init();
 	void BPOnClearMountedDino();
@@ -221,7 +221,7 @@ public:
 	void IsCarriedFishValid(class APrimalCharacter* Player, bool* IsValid, int* index);
 	void Eat_Players_Carried_Food(class APrimalCharacter* Player);
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void TryToLayEgg();
 	void WantsToLayEggs(bool* WantsTo, bool* Regular, bool* Rare);

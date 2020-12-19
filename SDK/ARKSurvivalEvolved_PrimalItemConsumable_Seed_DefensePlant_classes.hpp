@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Seed_DefensePlant.PrimalItemConsumable_Seed_DefensePlant_C
-// 0x0004 (0x09EC - 0x09E8)
+// 0x0004 (0x09F4 - 0x09F0)
 class UPrimalItemConsumable_Seed_DefensePlant_C : public UPrimalItemConsumableSeed_C
 {
 public:
-	int                                                NumTurrets;                                               // 0x09E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                NumTurrets;                                               // 0x09F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	bool BPAllowRemoteAddToInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer);
+	bool STATIC_BPAllowRemoteAddToInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer);
 	bool BPCanAddToInventory(class UPrimalInventoryComponent** toInventory);
 	void ExecuteUbergraph_PrimalItemConsumable_Seed_DefensePlant(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,9 +35,9 @@ public:
 	}
 
 
-	void STATIC_GetClosestTree(class AActor* OwnerActor, bool AllowPrev, int* ItemIndex, class UStaticMeshComponent** treeComp);
+	void GetClosestTree(class AActor* OwnerActor, bool AllowPrev, int* ItemIndex, class UStaticMeshComponent** treeComp);
 	void GetPointOnTreeSurface(class UPrimitiveComponent* treeComp, const struct FVector& origPoint, int ItemIndex, class AActor* OwnerActor, struct FVector* ret);
-	void ReceiveExecute(class AActor** OwnerActor);
+	void STATIC_ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_GetClosestTree(int EntryPoint);
 };
 

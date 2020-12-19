@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,7 +60,7 @@ void ALystro_Character_BP_C::Has_XPBuff(bool* Result)
 
 
 // Function Lystro_Character_BP.Lystro_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Event, NetResponse, Static, Private, HasOutParms, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -74,7 +74,6 @@ TArray<struct FMultiUseEntry> ALystro_Character_BP_C::STATIC_BPGetMultiUseEntrie
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

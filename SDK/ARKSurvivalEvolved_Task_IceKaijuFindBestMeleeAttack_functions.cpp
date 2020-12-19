@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,7 +133,7 @@ bool UTask_IceKaijuFindBestMeleeAttack_C::CanGroundSmash(class AIceKaiju_Charact
 
 
 // Function Task_IceKaijuFindBestMeleeAttack.Task_IceKaijuFindBestMeleeAttack_C.CanUseGroundSmash
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // bool                           IsOnCooldown                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -144,6 +144,7 @@ void UTask_IceKaijuFindBestMeleeAttack_C::STATIC_CanUseGroundSmash(bool* IsOnCoo
 	UTask_IceKaijuFindBestMeleeAttack_C_CanUseGroundSmash_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

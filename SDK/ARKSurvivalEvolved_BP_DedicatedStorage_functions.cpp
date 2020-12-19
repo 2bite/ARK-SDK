@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -386,13 +386,13 @@ bool ABP_DedicatedStorage_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPGetMultiUseEntries
-// (NetRequest, Static, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetRequest, Event, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABP_DedicatedStorage_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABP_DedicatedStorage_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPGetMultiUseEntries");
 

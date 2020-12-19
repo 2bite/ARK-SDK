@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -218,8 +218,8 @@ struct ATropeognathus_Character_BP_C_BPGetCrosshairLocation_Params
 	float                                              OutY;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.consumeItem
-struct ATropeognathus_Character_BP_C_consumeItem_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ConsumeItem
+struct ATropeognathus_Character_BP_C_ConsumeItem_Params
 {
 	class UClass*                                      Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };

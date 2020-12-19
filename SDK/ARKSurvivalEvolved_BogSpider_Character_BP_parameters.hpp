@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ struct ABogSpider_Character_BP_C_StoreClimb_Trace_Socket_Offsets_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetSpiderClimbingTraceTransform
 struct ABogSpider_Character_BP_C_GetSpiderClimbingTraceTransform_Params
 {
-	int                                                TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bWorldSpace;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          TraceTransform;                                           // (Parm, OutParm, IsPlainOldData)
 };
@@ -45,7 +45,7 @@ struct ABogSpider_Character_BP_C_IsClimbingTraceHitResultValid_Params
 	struct FHitResult                                  Hit;                                                      // (Parm, OutParm, ReferenceParm)
 	struct FVector*                                    TraceStart;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector*                                    TraceEnd;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	int*                                               TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               TraceRetryNum;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bResult;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -473,7 +473,7 @@ struct ABogSpider_Character_BP_C_Check_For_Prevent_Stop_Climbing_Params
 	TArray<bool>                                       traceHitsArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int*                                               numValidHits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               numTraces;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetCorrectSurfaceTraceDistance
@@ -1120,7 +1120,7 @@ struct ABogSpider_Character_BP_C_IsWebSprinting_Pure_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetBitmaskAsString
 struct ABogSpider_Character_BP_C_GetBitmaskAsString_Params
 {
-	int                                                bitMask;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Bitmask;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class FString                                      String;                                                   // (Parm, OutParm, ZeroConstructor)
 };
 

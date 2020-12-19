@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -152,7 +152,7 @@ public:
 	double                                             lastStaminaCostTime;                                      // 0x2428(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class FString                                      LowStaminaMessage;                                        // 0x2430(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	float                                              staminaCost_WallJump;                                     // 0x2440(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PounceTraceLength;                                        // 0x2444(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              pounceTraceLength;                                        // 0x2444(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              pounceTraceSize;                                          // 0x2448(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bDidWallJump;                                             // 0x244C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData17[0x3];                                       // 0x244D(0x0003) MISSED OFFSET
@@ -174,9 +174,9 @@ public:
 	bool                                               CallFunc_IsMaulingValidCharacter_result2;                 // 0x24B0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData19[0x7];                                       // 0x24B1(0x0007) MISSED OFFSET
 	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x24B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	TEnumAsByte<E_PredatorClimbingState>               K2Node_CustomEvent_newState;                              // 0x24C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<E_PredatorClimbingState>               K2Node_CustomEvent_NewState;                              // 0x24C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData20[0x3];                                       // 0x24C1(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x24C4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x24C4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AThylacoleo_AIController_BP_C*               CallFunc_Get_Thylaco_Ai_Controller_ref;                   // 0x24C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x24D0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData21[0x3];                                       // 0x24D1(0x0003) MISSED OFFSET
@@ -186,7 +186,7 @@ public:
 	struct FName                                       CallFunc_MakeLiteralName_ReturnValue;                     // 0x24F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class FString                                      CallFunc_Conv_BoolToString_ReturnValue;                   // 0x24F8(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
 	class FString                                      CallFunc_Concat_StrStr_ReturnValue;                       // 0x2508(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x2518(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x2518(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData23[0x4];                                       // 0x251C(0x0004) MISSED OFFSET
 	struct FDinoAttackInfo                             CallFunc_Array_Get_Item;                                  // 0x2520(0x0130) (Transient, DuplicateTransient)
 	float                                              CallFunc_Conv_IntToFloat_ReturnValue;                     // 0x2650(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -267,12 +267,12 @@ public:
 	void BPUnstasis();
 	void STATIC_Check_for_Ai_Attach_to_Tree();
 	void Client_SetClimbingState(TEnumAsByte<E_PredatorClimbingState> NewState);
-	void STATIC_Is_DinoAbove_Ground(float CheckDistance, bool* Result);
+	void Is_DinoAbove_Ground(float CheckDistance, bool* Result);
 	void UpdateJumpingAnim();
 	void SetAI_LatchedToTree(bool newVal);
-	void Get_Thylaco_Ai_Controller(class AThylacoleo_AIController_BP_C** ref);
+	void Get_Thylaco_Ai_Controller(class AThylacoleo_AIController_BP_C** Ref);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void AiDropFromTree();
 	void IsLatched(bool* Result);
 	void IsLatching(bool* Result);
@@ -290,10 +290,10 @@ public:
 	void GetDesiredDirection(struct FVector* Direction);
 	void STATIC_Pounce_Stop(class APrimalCharacter* HitTarget);
 	void CanKeepPouncing(bool* Result);
-	void STATIC_Pounce_Tick();
+	void Pounce_Tick();
 	void Pounce_Start();
 	bool BlueprintCanRiderAttack(int* AttackIndex);
-	void GetDefaultDino(class AThylacoleo_Character_BP_C** ref);
+	void GetDefaultDino(class AThylacoleo_Character_BP_C** Ref);
 	void IsDinoGrounded(bool* Result);
 	void STATIC_CheckForClimbableSurface(const struct FVector& checkDir, float checkDist, bool* Result);
 	void OnRep_CurrentClimbingState();

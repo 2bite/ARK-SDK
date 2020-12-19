@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PlayerControllerBlueprint.PlayerControllerBlueprint_C.CanFit
-// (NetResponse, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VerticalOffset                 (Parm, ZeroConstructor, IsPlainOldData)

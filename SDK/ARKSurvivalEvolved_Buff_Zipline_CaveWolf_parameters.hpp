@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -88,7 +88,7 @@ struct ABuff_Zipline_CaveWolf_C_IsStillColliding_Params
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.CanZiplineFlip
 struct ABuff_Zipline_CaveWolf_C_CanZiplineFlip_Params
 {
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.ResetCamera
@@ -209,7 +209,7 @@ struct ABuff_Zipline_CaveWolf_C_BPCheckPreventInput_Params
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.PlayTurnAnimation
 struct ABuff_Zipline_CaveWolf_C_PlayTurnAnimation_Params
 {
-	class UAnimMontage**                               override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage**                               Override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -224,7 +224,7 @@ struct ABuff_Zipline_CaveWolf_C_RotationNearlyEqual_Params
 	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    rotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ErrorTolerance;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.BPDeactivated

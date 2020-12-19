@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -708,7 +708,7 @@ public:
 	float                                              CallFunc_PlayAnimEx_ReturnValue;                          // 0x3FE4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_CanJumpInternal_ReturnValue;                     // 0x3FE8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue2;                         // 0x3FE9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_CustomEvent_newState;                              // 0x3FEA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_CustomEvent_NewState;                              // 0x3FEA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x3FEB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue2;                        // 0x3FEC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_bLeft;                                 // 0x3FED(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -716,7 +716,7 @@ public:
 	bool                                               CallFunc_BPIsConscious_ReturnValue;                       // 0x3FEF(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue2;                           // 0x3FF0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData100[0x3];                                      // 0x3FF1(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x3FF4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x3FF4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_NotEqual_FloatFloat_ReturnValue;                 // 0x3FF8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue3;                         // 0x3FF9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData101[0x6];                                      // 0x3FFA(0x0006) MISSED OFFSET
@@ -765,7 +765,7 @@ public:
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue2;               // 0x4098(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsOwningClient_ReturnValue3;                     // 0x40A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData106[0x3];                                      // 0x40A1(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x40A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x40A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue8;                           // 0x40A8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData107[0x3];                                      // 0x40A9(0x0003) MISSED OFFSET
 	struct FRotator                                    CallFunc_K2_GetActorRotation_ReturnValue;                 // 0x40AC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -928,9 +928,9 @@ public:
 
 	void OnWallJump(struct FVector* wallJumpVelocity);
 	void OnClimberFinishedAttaching();
-	void StoreClimb_Trace_Socket_Offsets();
-	void STATIC_GetSpiderClimbingTraceTransform(int TraceIndex, bool bWorldSpace, struct UObject_FTransform* TraceTransform);
-	void IsClimbingTraceHitResultValid(bool* bValidHit, struct FVector* TraceStart, struct FVector* TraceEnd, int* TraceIndex, int* TraceRetryNum, struct FHitResult* Hit, bool* bResult);
+	void STATIC_StoreClimb_Trace_Socket_Offsets();
+	void STATIC_GetSpiderClimbingTraceTransform(int traceIndex, bool bWorldSpace, struct UObject_FTransform* TraceTransform);
+	void IsClimbingTraceHitResultValid(bool* bValidHit, struct FVector* TraceStart, struct FVector* TraceEnd, int* traceIndex, int* TraceRetryNum, struct FHitResult* Hit, bool* bResult);
 	void CanClimberOverrideRetriedTraceResult(struct FHitResult* WithHit, bool* bResult);
 	void CanSpiderStopNonDediTick(bool* bResult);
 	void CanClimberStopNonDediTick_NonControlled(bool* Result);
@@ -939,15 +939,15 @@ public:
 	void CanSpiderUseAbilities(bool* bResult);
 	void UpdateSpiderRandomTickDelay();
 	void StopAllSpiderCameraShake(class APrimalCharacter* ForRider);
-	void UpdateNonControlledClimber();
+	void STATIC_UpdateNonControlledClimber();
 	void IsPlayingJumpDetachAnim(bool* bResult);
 	void CanPrimalCharBeUsedForTaming(class APrimalCharacter** Char, bool* bResult);
 	void AddTamingAffinityFromLifeSteal(class AShooterCharacter** ForPlayer);
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	void RefreshSpiderVision();
-	void STATIC_Tick_CacheWebTracePreviewHits(TArray<struct FHitResult>* TraceHits);
+	void Tick_CacheWebTracePreviewHits(TArray<struct FHitResult>* TraceHits);
 	struct FVector CalcAirJumpVelocity(const struct FVector2D& WithInputs, const struct FVector& WithVelocity, struct FRotator* WithControlRot);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void GetSpiderAnimBP(class UBogSpider_AnimBlueprint_C** animBP);
 	void AddChargeJumpVelocity(float WithChargeRatio);
 	void DoChargeJump_Server(double ClientTimestamp);
@@ -957,10 +957,10 @@ public:
 	void SpiderPrintShippingMessage(const class FString& Message);
 	void BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value);
 	struct FHitResult BP_OverrideRiderCameraCollisionSweep(struct FVector* SweepStart, struct FVector* SweepEnd);
-	void AdjustClimbTraceTransform(struct FName* WithSocketName, struct UObject_FTransform* WithTraceTransform, struct UObject_FTransform* climberTransform, struct UObject_FTransform* AdjustedTransform);
+	void STATIC_AdjustClimbTraceTransform(struct FName* WithSocketName, struct UObject_FTransform* WithTraceTransform, struct UObject_FTransform* climberTransform, struct UObject_FTransform* AdjustedTransform);
 	void IsRiderLookDirParallelWithClimbUp(const struct FVector2D& WithinAngleRange, bool* bResult, float* angleDelta);
 	void STATIC_GetSpiderTransformForEnsnare(struct UObject_FTransform* Transform);
-	bool STATIC_BP_OverrideCarriedCharacterTransform(class APrimalCharacter** ForCarriedChar);
+	bool BP_OverrideCarriedCharacterTransform(class APrimalCharacter** ForCarriedChar);
 	void WantsToAirBrake(bool* bResult);
 	void UpdateClimberOverrideFallVelocity();
 	void ModifySpiderFallingVelocity(float DeltaTime, struct FVector* Velocity);
@@ -978,7 +978,7 @@ public:
 	void Tick_UpdateSpiderRunSeeking();
 	void Tick_UpdateSpiderCameraShake();
 	void ClimberCheckForAboveWalkableGround(bool* Result);
-	void STATIC_Get_Correct_Surface_Trace_OffsetTransforms(bool* overrideUseMap, TArray<bool>* newUseMp, TArray<struct UObject_FTransform>* offsetTransforms, TArray<int>* TraceIndeces);
+	void Get_Correct_Surface_Trace_OffsetTransforms(bool* overrideUseMap, TArray<bool>* newUseMp, TArray<struct UObject_FTransform>* offsetTransforms, TArray<int>* TraceIndeces);
 	void DisplaySpiderHudNotification(const class FString& Notification, const struct FLinearColor& Color, const struct FVector2D& DisplayScaleAndTime, class UTexture2D* Icon, class USoundBase* Sound);
 	void Tick_ManageBloodSuckingClientBuff();
 	void UnriddenSpiderTryBioGrappleTarget(bool* bSuccess);
@@ -996,7 +996,7 @@ public:
 	void Init_Climber();
 	void IsNormalClimbable(struct FVector* Normal, bool* isAverageNormal, bool* Result);
 	void Replicate_Index_Update_Server_And_Client_Climber();
-	void Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing);
+	void Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing);
 	void GetCorrectSurfaceTraceDistance(bool* isForRetry, float* traceDist);
 	void InterpolateClimberMesh(class USkeletalMeshComponent** meshToInterpolate);
 	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
@@ -1005,7 +1005,7 @@ public:
 	void CanQuickFireWebs(bool bSingle, bool* bResult);
 	void FireQuickWebs_Single(const struct FVector& WithHitLocation, class APrimalCharacter* WithBioGrappleTarget);
 	void STATIC_DoWebSearch_Both(const struct FRotator& ViewRot, bool* bFoundAny, bool* bFoundOne, struct FVector* FoundHitLoc_A, class AActor** FoundHitActor_A, struct FVector* FoundHitLoc_B, class AActor** FoundHitActor_B);
-	void STATIC_DoWebSearch_Single(const struct FRotator& ViewRot, bool* bFoundHit, struct FVector* FoundHitLoc, class AActor** FoundHitActor);
+	void DoWebSearch_Single(const struct FRotator& ViewRot, bool* bFoundHit, struct FVector* FoundHitLoc, class AActor** FoundHitActor);
 	void SetAirJumpVelocity();
 	void DoAirJump(const struct FVector2D& WithMoveInputs, const struct FVector& WithVelocity, const struct FRotator& WithControlRot);
 	void CanAirJump(bool bForStart, bool* bResult);
@@ -1014,15 +1014,15 @@ public:
 	void BreakWebVisually(bool bBreakLeft);
 	void OnWebTetherImpact(struct FHitResult* WithHit);
 	void IsSpiderBloodHangry(bool* bResult);
-	bool STATIC_InterceptRiderEmoteAnim(class UAnimMontage** EmoteAnim);
+	bool InterceptRiderEmoteAnim(class UAnimMontage** EmoteAnim);
 	void NetSyncInputBitmask(const class FString& TriggeredByInput, bool* bSuccess);
 	void IsBioGrappleOnCooldown(bool* bResult);
 	void BP_OnStartCarried(class APrimalDinoCharacter** aDino);
 	void OnWebShootybangFailed();
 	void AddBioGrappledBuffToChar(class APrimalCharacter* ToChar, class APrimalBuff** AddedBuff);
 	void ReleaseEnsnaredChar();
-	void OnBioGrappledCharBreakWeb(class APrimalCharacter* BreakingChar);
-	void SetEnsnaredCharRef(class APrimalCharacter* NewCharRef);
+	void STATIC_OnBioGrappledCharBreakWeb(class APrimalCharacter* BreakingChar);
+	void STATIC_SetEnsnaredCharRef(class APrimalCharacter* NewCharRef);
 	void SetWebVisibility(bool bNewVisibility);
 	void StopSpiderJump();
 	void DoRealSpiderJump();
@@ -1043,7 +1043,7 @@ public:
 	void OnWebTetherBroken(bool bIsLeft, struct FGrappleTether* BrokenTether);
 	void Tick_ManageSpiderSounds();
 	void RotateDirToTargetWithLimit(const struct FVector& RotateDir, const struct FVector& ToTargetDir, float RotatingLimitDegrees, struct FVector* NewDir);
-	void CheckForInstantHarvestDeadEnsnaredChar(class APrimalCharacter* forChar);
+	void STATIC_CheckForInstantHarvestDeadEnsnaredChar(class APrimalCharacter* forChar);
 	void IsSpiderRotating(bool* bResult);
 	void Net_OnWebTethersCreated(struct FHitResult* TetherHits_Left, struct FHitResult* TetherHits_Right);
 	void CreateWebVisually(bool bIsLeft);
@@ -1097,19 +1097,19 @@ public:
 	void STATIC_WebShootybangBioGrapple(class AActor* TryBioGrappleActor, bool* bSuccess);
 	void BPOnTamedProcessOrder(class APrimalCharacter** FromCharacter, TEnumAsByte<EDinoTamedOrder>* OrderType, bool* bForce, class AActor** enemyTarget, bool* orderNotExecuted);
 	void IsWebSprinting_Pure(bool* Result);
-	void GetBitmaskAsString(int bitMask, class FString* String);
+	void GetBitmaskAsString(int Bitmask, class FString* String);
 	void Tick_InputHeartbeat();
 	void GenerateInputBitMask(const class FString& TriggeredByInput, int* NewBitMask);
 	void ProcessSyncedInputs();
 	void ReceiveDestroyed();
 	void DestroyWebAnchors();
-	void STATIC_SetupCosmeticsForRider();
+	void SetupCosmeticsForRider();
 	void Tick_ManageWebs();
 	void IsGrapplePullJumping(bool* bResult);
 	void SetWantsToWallStick(bool bWantsToStick);
 	void STATIC_Tick_TraceForStickableWall();
 	void GetIgnoreWebHitRadius(float* Radius);
-	void STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void BPGetOverrideCameraInterpSpeed(float* DefaultTPVCameraSpeedInterpolationMultiplier, float* DefaultTPVOffsetInterpSpeed, float* TPVCameraSpeedInterpolationMultiplier, float* TPVOffsetInterpSpeed);
 	void Tick_UpdateForceSkidAnims();
 	void WantsToSwing(bool* bResult);
@@ -1129,7 +1129,7 @@ public:
 	void IsHangingFromWeb(bool* Result);
 	void OnStickToWallHit(struct FHitResult* Hit);
 	void CanStickToWall(bool bNotifyOfInsufficientStamina, bool bIgnorePostJumpCooldown, bool* Result);
-	void ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit);
+	void STATIC_ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void TryManualWebDetach(bool bDetachLeft);
 	void PlaySpiderCameraShake(class UClass* CameraShakeClass, float ShakeScale, float ShakeSpeed, bool bScaleShakeWithVelocity, float ShakeBaseVelocity, bool bAllowReplication, const struct FVector2D& ShakeScaleClamps, const struct FVector2D& ShakeSpeedClamps);
@@ -1147,26 +1147,26 @@ public:
 	void ShouldTallMode(bool* Result);
 	void RiderHasWeaponEquipped(bool* Result);
 	void OnTakeOff();
-	void STATIC_WebTrace(const struct FVector& TraceStart, const struct FVector& TraceEnd, bool confirmTraceHits, float updateAimedCharsRadus, bool bAllowHitPullableChars, bool* foundHit, struct FHitResult* webHit, float* webHitValue);
+	void WebTrace(const struct FVector& TraceStart, const struct FVector& TraceEnd, bool confirmTraceHits, float updateAimedCharsRadus, bool bAllowHitPullableChars, bool* foundHit, struct FHitResult* webHit, float* webHitValue);
 	void STATIC_TraceForBioGrappleTargetInLookDir(bool* Result, struct FHitResult* snarableCharHit);
 	void BPCharacterSleeped();
 	void BP_OnSetDeath();
 	void UpdateRotateToControlRotation();
 	bool CanJumpInternal();
 	void STATIC_ReceiveTick(float* DeltaSeconds);
-	void STATIC_Tick_UpdateSpiderTargetRotation();
+	void Tick_UpdateSpiderTargetRotation();
 	void OnGrappleBuffStateChanged(TEnumAsByte<EGrappleState> NewState);
 	void InterpSpiderMesh(float DeltaTime);
-	void STATIC_SoftSetSpiderWorldLocation(const struct FVector& NewWorldLocation);
+	void SoftSetSpiderWorldLocation(const struct FVector& NewWorldLocation);
 	void SoftSetSpiderWorldRotation(const struct FRotator& newWorldRotation);
 	void BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode);
 	void GetClosestLocationToScreenCenter(const struct FVector& LocationA, const struct FVector& LocationB, const struct FRotator& withViewRot, bool* A);
 	void STATIC_IsValidStickToWallHit(bool bPreventConfirmTraces, struct FHitResult* Hit, bool* bIsValid, struct FVector* ValidStickNormal);
 	bool BP_InterceptMoveForward(float* AxisValue);
 	bool BP_InterceptMoveRight(float* AxisValue);
-	void STATIC_TryStickingToWall(struct FVector* AtLocation, bool* Success);
-	void TryEnsnareChar(class APrimalCharacter* Char, bool* Result);
-	void TickBioGrapple();
+	void TryStickingToWall(struct FVector* AtLocation, bool* Success);
+	void STATIC_TryEnsnareChar(class APrimalCharacter* Char, bool* Result);
+	void STATIC_TickBioGrapple();
 	void BPTimerNonDedicated();
 	void Has_Webs_Attached(int RequireNumWebs, bool* Result);
 	void ReceiveBeginPlay();
@@ -1174,11 +1174,11 @@ public:
 	void CanJumpDetach(bool* Result);
 	void HasEnoughStaminaPure(float requiredStamina, bool* Result);
 	void ReduceSpiderStamina(float Stamina);
-	void DoLifeSteal(class APrimalCharacter* FromChar);
+	void STATIC_DoLifeSteal(class APrimalCharacter* FromChar);
 	void BPTimerServer();
 	void Tick_UpdateSpiderCamera(float DeltaTime);
 	class UClass* GetGrappledBuffClassOverride();
-	void STATIC_UpdateGrappledVars();
+	void UpdateGrappledVars();
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void BPNotifySetRider(class AShooterCharacter** RiderSetting);
 	float BPModifyFOV(float* FOVIn);
@@ -1192,15 +1192,15 @@ public:
 	void AutoSetDesiredGrappleState();
 	void InterceptInputEvent(class FString* InputName);
 	bool BPPreventFallDamage(float* FallDamageAmount, struct FHitResult* HitResult);
-	void DoJumpDetach();
+	void STATIC_DoJumpDetach();
 	void UpdateGrappleBuffRef(bool bAddIfNotFound);
 	void STATIC_DetachBothWebs(bool bIsJumpDetach, bool bPreventAnim, bool* detachedAny);
 	void DetachWeb(bool bLeft);
 	void GetClosestSideToLocation(const struct FVector& ToLoc, bool* bLeft);
 	void CanDoWebTraces(bool bRequireStamina, bool bNotifyOfInsufficientStamina, bool* Result);
-	void Tick_UpdateGrapplePointPreviews(float DeltaTime);
+	void STATIC_Tick_UpdateGrapplePointPreviews(float DeltaTime);
 	void CreateWebGrappleTether(const struct FHitResult& FromHit, bool bLeft, bool bPreventNetSync, int* NewTetherIndex);
-	void SearchInDirForValidGrapplePoint(const struct FRotator& withViewRot, float traceDir, bool bWantsCenter, bool* bFoundAny, struct FHitResult* retHit);
+	void STATIC_SearchInDirForValidGrapplePoint(const struct FRotator& withViewRot, float traceDir, bool bWantsCenter, bool* bFoundAny, struct FHitResult* retHit);
 	void STATIC_TraceForWebHit(const struct FRotator& withViewRot, bool bCenterTrace, bool* bSuccess, struct FHitResult* foundHit, float* foundHitValue);
 	void UserConstructionScript();
 	void BlendSpiderVision__FinishedFunc();

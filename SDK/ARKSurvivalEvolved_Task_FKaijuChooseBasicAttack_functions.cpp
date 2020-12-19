@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,9 +40,9 @@ void UTask_FKaijuChooseBasicAttack_C::CheckIfTargetIsCloseToFoot(bool* FoundFoot
 // Function Task_FKaijuChooseBasicAttack.Task_FKaijuChooseBasicAttack_C.MaybeFootstomp
 // ()
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTask_FKaijuChooseBasicAttack_C::MaybeFootstomp(bool* Return)
+void UTask_FKaijuChooseBasicAttack_C::MaybeFootstomp(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Task_FKaijuChooseBasicAttack.Task_FKaijuChooseBasicAttack_C.MaybeFootstomp");
 
@@ -54,8 +54,8 @@ void UTask_FKaijuChooseBasicAttack_C::MaybeFootstomp(bool* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,8 +49,8 @@ public:
 	void ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit);
 	void OnRep_ItemQuality();
 	void ReceiveBeginPlay();
-	void CheckForItem();
-	void ActivateFX();
+	void STATIC_CheckForItem();
+	void STATIC_ActivateFX();
 	void UserConstructionScript();
 	void ColorShift();
 	void ExecuteUbergraph_DroppedItem_GachaPod(int EntryPoint);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,7 @@ struct AProjZiplineAnchor_C_CheckForInvisibleWall_Params
 {
 	struct FVector                                     Start;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     End;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.HitValidForAttachment

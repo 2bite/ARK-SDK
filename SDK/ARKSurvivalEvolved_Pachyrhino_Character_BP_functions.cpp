@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.BlueprintAdjustOutputDamage
-// (Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
+// (Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -32,6 +32,7 @@ float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attack
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -47,7 +48,7 @@ float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attack
 
 
 // Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.OnDecidedToFlee
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
 
 void APachyrhino_Character_BP_C::STATIC_OnDecidedToFlee()
 {
@@ -56,6 +57,7 @@ void APachyrhino_Character_BP_C::STATIC_OnDecidedToFlee()
 	APachyrhino_Character_BP_C_OnDecidedToFlee_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

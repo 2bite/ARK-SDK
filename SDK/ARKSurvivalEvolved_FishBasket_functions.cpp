@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void AFishBasket_C::ReceiveBeginPlay()
 
 
 // Function FishBasket.FishBasket_C.TrapFish
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (NetRequest, NetResponse, MulticastDelegate, Private, Protected, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    TrapFish                       (Parm, ZeroConstructor, IsPlainOldData)
 // class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -77,13 +77,13 @@ bool AFishBasket_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex
 
 
 // Function FishBasket.FishBasket_C.BPGetMultiUseEntries
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Native, Event, NetResponse, MulticastDelegate, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AFishBasket_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AFishBasket_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FishBasket.FishBasket_C.BPGetMultiUseEntries");
 

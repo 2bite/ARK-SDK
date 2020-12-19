@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,11 +35,11 @@ void UPrimalItemConsumable_GachaPod_C::BPOnItemConsumed(class UPrimalInventoryCo
 
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.RollLoot
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Static, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalInventoryComponent* Inv                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemConsumable_GachaPod_C::RollLoot(class UPrimalInventoryComponent* Inv)
+void UPrimalItemConsumable_GachaPod_C::STATIC_RollLoot(class UPrimalInventoryComponent* Inv)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.RollLoot");
 
@@ -47,6 +47,7 @@ void UPrimalItemConsumable_GachaPod_C::RollLoot(class UPrimalInventoryComponent*
 	params.Inv = Inv;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ void UPrimalItemConsumable_GachaPod_C::RollLoot(class UPrimalInventoryComponent*
 
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.ShowHUDNotification
-// (Net, NetResponse, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetRequest, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  Resource                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -81,11 +82,11 @@ void UPrimalItemConsumable_GachaPod_C::ShowHUDNotification(class UPrimalItem* It
 
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BPPostInitializeItem
-// (Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Event, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UWorld**                 OptionalInitWorld              (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemConsumable_GachaPod_C::STATIC_BPPostInitializeItem(class UWorld** OptionalInitWorld)
+void UPrimalItemConsumable_GachaPod_C::BPPostInitializeItem(class UWorld** OptionalInitWorld)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BPPostInitializeItem");
 

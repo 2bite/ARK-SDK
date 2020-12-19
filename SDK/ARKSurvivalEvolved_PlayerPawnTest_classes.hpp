@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,7 +75,7 @@ public:
 	float                                              MaxDistanceToRestPos;                                     // 0x1F18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              InWater;                                                  // 0x1F1C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              HairWetness;                                              // 0x1F20(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Waterline;                                                // 0x1F24(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              WaterLine;                                                // 0x1F24(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bPosAsPivot;                                              // 0x1F28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bCollideWithNeck;                                         // 0x1F29(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bCollideMiddle;                                           // 0x1F2A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -181,7 +181,7 @@ public:
 	int                                                CallFunc_Array_Length_ReturnValue3;                       // 0x2158(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData26[0x4];                                       // 0x215C(0x0004) MISSED OFFSET
 	class FString                                      K2Node_CustomEvent_Text;                                  // 0x2160(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FLinearColor                                K2Node_CustomEvent_color;                                 // 0x2170(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                K2Node_CustomEvent_Color;                                 // 0x2170(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_LifetimeSeconds;                       // 0x2180(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_DisplayScale;                          // 0x2184(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class USoundCue*                                   K2Node_CustomEvent_SoundToPlay;                           // 0x2188(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -248,7 +248,7 @@ public:
 	void BPNonDedicatedPostAnimUpdate();
 	void Setup_Collision_Volumes();
 	void STATIC_SetupNewHairstyle();
-	void UpdateHair();
+	void STATIC_UpdateHair();
 	void SetHairParams(struct FVector* HairSocketLoc, struct FRotator* HairSocketRot, struct FVector* NeckSocketLoc, struct FRotator* NeckSocketrot);
 	void SimulateHair(float DeltaTime, struct FVector* HairSocketLoc, struct FRotator* HairSocketRot, struct FVector* ChestSocketLoc, struct FRotator* ChestSocketRot);
 	void UserConstructionScript();

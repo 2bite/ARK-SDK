@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,7 +70,7 @@ void ABuff_MekBackpack_Base_C::RestoreBackpackSaveData(const struct FMekBackpack
 
 
 // Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.GetBackpackSaveData
-// (NetReliable, Event, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 

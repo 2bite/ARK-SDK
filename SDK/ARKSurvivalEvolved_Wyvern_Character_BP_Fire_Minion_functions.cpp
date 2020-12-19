@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -107,9 +107,9 @@ void AWyvern_Character_BP_Fire_Minion_C::BP_OnSetDeath()
 
 
 // Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPTimerServer
-// (NetReliable, NetResponse, MulticastDelegate, Delegate, NetServer, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void AWyvern_Character_BP_Fire_Minion_C::BPTimerServer()
+void AWyvern_Character_BP_Fire_Minion_C::STATIC_BPTimerServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPTimerServer");
 
@@ -337,7 +337,7 @@ bool AWyvern_Character_BP_Fire_Minion_C::BPTryMultiUse(class APlayerController**
 
 
 // Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPGetMultiUseEntries
-// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

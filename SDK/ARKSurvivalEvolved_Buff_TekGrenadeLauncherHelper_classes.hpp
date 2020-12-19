@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -115,12 +115,12 @@ public:
 	void ShouldUpdateAmmoCount(class APrimalCharacter* ForShooterChar, bool* bShouldUpdate);
 	void InitWeapon();
 	void AmmoNameToType(const struct FName& AmmoTypeName, class UClass** AmmoType);
-	void GenerateAmmoWheelEntries(TArray<struct FCustomWheelEntry>* AmmoEntries);
-	void GenerateSlotWheelEntries(TArray<struct FCustomWheelEntry>* Entries);
+	void STATIC_GenerateAmmoWheelEntries(TArray<struct FCustomWheelEntry>* AmmoEntries);
+	void STATIC_GenerateSlotWheelEntries(TArray<struct FCustomWheelEntry>* Entries);
 	struct FVector2D CalcAmmoWidgetLocation(int InInt);
 	class FString GetItemShortName(class UClass* FromClass);
 	void GetValidAmmoTypes(TArray<class UClass*>* TypesInInventory);
-	void STATIC_SyncHUDElementSlots();
+	void SyncHUDElementSlots();
 	void ReceiveBeginPlay();
 	void STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	void UserConstructionScript();

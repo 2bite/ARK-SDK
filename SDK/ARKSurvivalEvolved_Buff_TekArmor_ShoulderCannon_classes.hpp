@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -149,7 +149,7 @@ public:
 	void OnRep_Overheated();
 	void OnRep_Activated();
 	void UpdateSound(int ModeIndex);
-	void IsAllowedToFire(bool* Allowed);
+	void STATIC_IsAllowedToFire(bool* Allowed);
 	void UpdateTarget(float DeltaTime);
 	void UpdateWeaponHeat(float A);
 	float ClampPitchByYaw(float Yaw, float Pitch);
@@ -166,16 +166,16 @@ public:
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
-	struct UObject_FTransform STATIC_ApplyAccuracy(struct UObject_FTransform* InTransform);
+	struct UObject_FTransform ApplyAccuracy(struct UObject_FTransform* InTransform);
 	void SpawnProjectile(struct UObject_FTransform* InTransform);
-	void IsElectricalStormActive(bool* Return);
+	void IsElectricalStormActive(bool* _return);
 	void STATIC_Update_Weapon_Firing(float DeltaSeconds);
 	void STATIC_BPSetupForInstigator(class AActor** ForInstigator);
 	struct FVector GetTargetPos();
 	void Update_Weapon_Position(float DeltaSeconds);
 	void UpdateWeaponAim(float DeltaSeconds);
 	void BuffTickServer(float* DeltaTime);
-	void STATIC_BuffTickClient(float* DeltaTime);
+	void BuffTickClient(float* DeltaTime);
 	bool PreventBlockingWithShield();
 	void UserConstructionScript();
 	void ClientSpawnProjectile(const struct UObject_FTransform& SpawnTransform, float NewChargeValue);

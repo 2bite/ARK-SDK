@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsElectricalStormActive
 // ()
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* Return)
+void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsElectricalStormActive");
 
@@ -29,8 +29,8 @@ void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 
@@ -103,13 +103,13 @@ void ABuff_DinoTekHelmet_Base_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, fl
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsAllowedToFire
-// (Native, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, DLLImport, BlueprintCallable, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 AimAtLoc                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ServerSpawnAtLoc               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAllowed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_DinoTekHelmet_Base_C::IsAllowedToFire(const struct FVector& AimAtLoc, const struct FVector& ServerSpawnAtLoc, bool* bAllowed)
+void ABuff_DinoTekHelmet_Base_C::STATIC_IsAllowedToFire(const struct FVector& AimAtLoc, const struct FVector& ServerSpawnAtLoc, bool* bAllowed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsAllowedToFire");
 
@@ -191,11 +191,11 @@ void ABuff_DinoTekHelmet_Base_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.LocalDoAttack
-// (Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, DLLImport, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // bool                           bDidAttack                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_DinoTekHelmet_Base_C::STATIC_LocalDoAttack(bool* bDidAttack)
+void ABuff_DinoTekHelmet_Base_C::LocalDoAttack(bool* bDidAttack)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.LocalDoAttack");
 

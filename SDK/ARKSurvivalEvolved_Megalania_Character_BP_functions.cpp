@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,15 +54,15 @@ void AMegalania_Character_BP_C::GetClimbingIK_BlendspaceAxes_Front(struct FVecto
 // Function Megalania_Character_BP.Megalania_Character_BP_C.GetCustomSurfaceTraceDistance
 // ()
 // Parameters:
-// int*                           TraceIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           traceIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          customDistance                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMegalania_Character_BP_C::GetCustomSurfaceTraceDistance(int* TraceIndex, float* customDistance)
+void AMegalania_Character_BP_C::GetCustomSurfaceTraceDistance(int* traceIndex, float* customDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megalania_Character_BP.Megalania_Character_BP_C.GetCustomSurfaceTraceDistance");
 
 	AMegalania_Character_BP_C_GetCustomSurfaceTraceDistance_Params params;
-	params.TraceIndex = TraceIndex;
+	params.traceIndex = traceIndex;
 
 	auto flags = fn->FunctionFlags;
 
@@ -107,9 +107,9 @@ void AMegalania_Character_BP_C::IsNormalClimbable(struct FVector* Normal, bool* 
 // TArray<bool>                   traceHitsArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int*                           numValidHits                   (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           numTraces                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           AllowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           allowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMegalania_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing)
+void AMegalania_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megalania_Character_BP.Megalania_Character_BP_C.Check For Prevent Stop Climbing");
 
@@ -125,8 +125,8 @@ void AMegalania_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHit
 
 	if (traceHitsArray != nullptr)
 		*traceHitsArray = params.traceHitsArray;
-	if (AllowClimbing != nullptr)
-		*AllowClimbing = params.AllowClimbing;
+	if (allowClimbing != nullptr)
+		*allowClimbing = params.allowClimbing;
 }
 
 

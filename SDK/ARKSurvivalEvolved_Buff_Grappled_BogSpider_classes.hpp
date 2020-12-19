@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -171,7 +171,7 @@ public:
 	float GetMaxTetherLength(struct FGrappleTether* ForTether);
 	float GetIdealSwingHeightAboveFloor();
 	bool CanSyncGrappleTetherLengths();
-	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
+	struct FVector STATIC_BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
 	void STATIC_OnSwingTracePredictedHitFound(const struct FVector& AtHitLocation);
 	void CanUseWebSlingshot(bool* bResult);
 	void ResetOwnerVars();
@@ -205,7 +205,7 @@ public:
 	void IsSpiderTryingToSlingshot(const struct FVector& WithVelocity, struct FGrappleTether* ForTether, bool* bResult);
 	void SimulateTautTetherForces(float* DeltaTime, float* LastGravityZ, struct FVector* WithCharVelocity);
 	float BPGetGravityZScale(float* currentScale);
-	void IsTetherLeftWeb(struct FGrappleTether* Tether, bool* bIsWebTether, bool* bIsLeftWeb);
+	void STATIC_IsTetherLeftWeb(struct FGrappleTether* Tether, bool* bIsWebTether, bool* bIsLeftWeb);
 	void STATIC_WhichWebIsOnRightSideOfView(const struct FRotator& withViewRot, bool* bLeft);
 	bool CanOwnerGrappleSwing();
 	TEnumAsByte<EGrappleState> GetCurrentGrappleState(struct FGrappleTether* ForTether);
@@ -219,7 +219,7 @@ public:
 	void BuffTickServer(float* DeltaTime);
 	void CheckForSwingCollision(const struct FVector& AtProjectedLocation, bool* foundHit, struct FHitResult* swingHit);
 	void BuffTickClient(float* DeltaTime);
-	void Tick_TraceForSwingCollisions();
+	void STATIC_Tick_TraceForSwingCollisions();
 	float GetGrappleTetherPullMaxVelocity(class APrimalCharacter** ForPullingChar, struct FGrappleTether* ForTether);
 	float GetGrappleTetherPullAcceleration(class APrimalCharacter** ForPullingChar, struct FGrappleTether* ForTether);
 	float GetGrappleVelocityDampingRate(class APrimalCharacter** forChar, struct FGrappleTether* ForTether);

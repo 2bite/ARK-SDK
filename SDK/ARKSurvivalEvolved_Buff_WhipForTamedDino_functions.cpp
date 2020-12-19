@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,7 +50,7 @@ void ABuff_WhipForTamedDino_C::SetBuffCauser(class AActor** CausedBy)
 
 
 // Function Buff_WhipForTamedDino.Buff_WhipForTamedDino_C.BuffTickServer
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -139,9 +139,9 @@ void ADino_Character_BP_DivingFlyer_C::Get_Diving_Velocity_Mult_Ratio(float* Res
 // Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.Get Flyer Dive Velocity Max
 // ()
 // Parameters:
-// float                          maxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          MaxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_DivingFlyer_C::Get_Flyer_Dive_Velocity_Max(float* maxVelocity)
+void ADino_Character_BP_DivingFlyer_C::Get_Flyer_Dive_Velocity_Max(float* MaxVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.Get Flyer Dive Velocity Max");
 
@@ -153,8 +153,8 @@ void ADino_Character_BP_DivingFlyer_C::Get_Flyer_Dive_Velocity_Max(float* maxVel
 
 	fn->FunctionFlags = flags;
 
-	if (maxVelocity != nullptr)
-		*maxVelocity = params.maxVelocity;
+	if (MaxVelocity != nullptr)
+		*MaxVelocity = params.MaxVelocity;
 }
 
 
@@ -497,9 +497,9 @@ void ADino_Character_BP_DivingFlyer_C::Get_Flyer_Dive_Velocity_Ratio_Pure(float*
 // Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.Get Flyer Dive Velocity MaxPure
 // ()
 // Parameters:
-// float                          maxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          MaxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_DivingFlyer_C::Get_Flyer_Dive_Velocity_MaxPure(float* maxVelocity)
+void ADino_Character_BP_DivingFlyer_C::Get_Flyer_Dive_Velocity_MaxPure(float* MaxVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.Get Flyer Dive Velocity MaxPure");
 
@@ -511,8 +511,8 @@ void ADino_Character_BP_DivingFlyer_C::Get_Flyer_Dive_Velocity_MaxPure(float* ma
 
 	fn->FunctionFlags = flags;
 
-	if (maxVelocity != nullptr)
-		*maxVelocity = params.maxVelocity;
+	if (MaxVelocity != nullptr)
+		*MaxVelocity = params.MaxVelocity;
 }
 
 

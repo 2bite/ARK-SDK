@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,7 +58,7 @@ public:
 
 
 	bool BPCanCryo(class AShooterPlayerController** ForPC);
-	void STATIC_BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent);
+	void BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent);
 	bool BPAllowMovementSound();
 	void BPUnstasis();
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
@@ -72,7 +72,7 @@ public:
 	void CheckForIdleFuelConsumption();
 	void BPTimerServer();
 	void BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem);
-	void BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
+	void STATIC_BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
 	void UserConstructionScript();
 	void DoPlayKnockAnimation(int KnockDirectionIndex);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -143,16 +143,16 @@ public:
 	bool BPOnStartJump();
 	void STATIC_RidingTick(float* DeltaSeconds);
 	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
-	void STATIC_IsOnOrNearGround(bool* Return_Value);
+	void STATIC_IsOnOrNearGround(bool* return_value);
 	void SetupIceCrashState(bool Enabled, bool ApplyOneShotEncapsulate, float* CalculatedImpactRadius);
-	void GetPredatorVisionStaminaDrainPerSecond(float* Return_Value);
+	void GetPredatorVisionStaminaDrainPerSecond(float* return_value);
 	void StopEncapsulateAnims(bool* StoppedAnim);
 	void DiveBomb();
 	void DoIceBombAttack();
 	void OnDiveCrash(class AActor** HitActor, class USceneComponent** HitComp, struct FHitResult* HitResult);
 	void UpdateDivingTrailParticles(class UParticleSystemComponent* Particles, bool Enabled);
 	void UpdateDivingFX();
-	void GetEncapsulateStaminaDrainPerSecond(float* Return_Value);
+	void GetEncapsulateStaminaDrainPerSecond(float* return_value);
 	void BPOnStaminaDrained();
 	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	bool BPHandleOnStopTargeting();

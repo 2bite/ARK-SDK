@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -99,9 +99,9 @@ bool ABaryonyx_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 // ()
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* Retval)
+void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BaryCanAttack");
 
@@ -114,8 +114,8 @@ void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -169,7 +169,7 @@ void ABaryonyx_Character_BP_C::BPKilledSomethingEvent(class APrimalCharacter** k
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.K2_OnMovementModeChanged
-// (Exec, Native, NetResponse, Static, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
@@ -187,7 +187,6 @@ void ABaryonyx_Character_BP_C::STATIC_K2_OnMovementModeChanged(TEnumAsByte<EMove
 	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,7 +195,7 @@ void ABaryonyx_Character_BP_C::STATIC_K2_OnMovementModeChanged(TEnumAsByte<EMove
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BlueprintAdjustOutputDamage
-// (Native, Event, NetResponse, Static, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -231,13 +230,13 @@ float ABaryonyx_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIn
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BPGetMultiUseEntries
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABaryonyx_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABaryonyx_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BPGetMultiUseEntries");
 
@@ -245,7 +244,6 @@ TArray<struct FMultiUseEntry> ABaryonyx_Character_BP_C::STATIC_BPGetMultiUseEntr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

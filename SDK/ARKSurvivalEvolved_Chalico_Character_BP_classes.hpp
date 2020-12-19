@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ public:
 	bool                                               CallFunc_IsServer_ReturnValue5;                           // 0x226A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue6;                           // 0x226B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayAnimEx_ReturnValue;                          // 0x226C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AActor*                                      K2Node_CustomEvent_target;                                // 0x2270(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AActor*                                      K2Node_CustomEvent_Target;                                // 0x2270(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_DoAttack_ReturnValue;                            // 0x2278(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue7;                           // 0x2279(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Is_FriendlyTarget_in_Range_canUseMud;            // 0x227A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -170,13 +170,13 @@ public:
 	bool BPPreventRiding(class AShooterCharacter** ByPawn, bool* bDontCheckDistance);
 	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	void ShouldStandUp(bool* StandUp);
+	void ShouldStandUp(bool* standUp);
 	void BPTimerServer();
 	void CanSitDown(bool* canSit);
 	void Look_for_Chalicos();
 	void UserConstructionScript();
 	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
-	void StandUp();
+	void standUp();
 	void TrySittingDown();
 	void TryStandingUp();
 	void SetChalicoFocus(class AActor* NewFocus);

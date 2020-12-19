@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,7 +50,7 @@ public:
 	bool                                               targetWasPlayer;                                          // 0x21F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isFinishingDiveUp;                                        // 0x21F9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isMovingUp;                                               // 0x21FA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsRotating;                                               // 0x21FB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               isRotating;                                               // 0x21FB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isWaterDive;                                              // 0x21FC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x3];                                       // 0x21FD(0x0003) MISSED OFFSET
 	float                                              diveDownMaxDurationLand;                                  // 0x2200(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -301,11 +301,11 @@ public:
 	bool                                               CallFunc_Not_PreBool_ReturnValue14;                       // 0x26B0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData44[0x3];                                       // 0x26B1(0x0003) MISSED OFFSET
 	struct FVector                                     K2Node_CustomEvent_beginning2;                            // 0x26B4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     K2Node_CustomEvent_end2;                                  // 0x26C0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_End2;                                  // 0x26C0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_Radius2;                               // 0x26CC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_beginning;                             // 0x26D0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_End;                                   // 0x26DC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Radius;                                // 0x26E8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_radius;                                // 0x26E8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData45[0x4];                                       // 0x26EC(0x0004) MISSED OFFSET
 	TArray<TEnumAsByte<EObjectTypeQuery>>              K2Node_MakeArray_Array;                                   // 0x26F0(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
 	bool                                               CallFunc_IsServer_ReturnValue11;                          // 0x2700(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -325,9 +325,9 @@ public:
 	float                                              CallFunc_BreakRot_Pitch;                                  // 0x27C8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_BreakRot_Yaw;                                    // 0x27CC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_BreakRot_Roll;                                   // 0x27D0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x27D4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x27D4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_ModifyCurrentStatusValue_ReturnValue;            // 0x27D8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x27DC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x27DC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_isFailedLaunch;                        // 0x27E0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData48[0x3];                                       // 0x27E1(0x0003) MISSED OFFSET
 	struct FRotator                                    CallFunc_K2_GetActorRotation_ReturnValue;                 // 0x27E4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -351,7 +351,7 @@ public:
 	}
 
 
-	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
+	bool STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
 	void IsOverweightThreshold_F(bool* NewParam);
 	float BPModifyHarvestingQuantity(float* originalQuantity, class UClass** resourceSelected);
 	void CheckWeightCondition(class APrimalCharacter* Target, bool* shouldntAttack);
@@ -372,7 +372,7 @@ public:
 	void Going_Back_to_Owner_Actions();
 	void DivingActions();
 	void BPSetupTamed(bool* bWasJustTamed);
-	void Improve_HarvestingComponent_for_Dragged_Character(class APrimalCharacter* killedCharacter);
+	void STATIC_Improve_HarvestingComponent_for_Dragged_Character(class APrimalCharacter* killedCharacter);
 	void BPKilledSomethingEvent(class APrimalCharacter** killedTarget);
 	void SetTargetForLaunchedAttack(class APrimalCharacter* NewTarget);
 	void DoLaunchAttack(class APrimalCharacter* launchedTarget);
@@ -395,9 +395,9 @@ public:
 	void GetDiveDownDelay(float* Delay);
 	void BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode);
 	void OnClearCarriedCharacter(bool stopTimerServer, class APrimalCharacter* PreviousCarriedCharacter);
-	void STATIC_Can_Use_Wild_Dive(class APrimalCharacter* Target, bool* canDoAttack);
+	void Can_Use_Wild_Dive(class APrimalCharacter* Target, bool* canDoAttack);
 	void CanUseDiveAttack(class APrimalCharacter* Target, bool* canUseAttack);
-	void ApplyChewDamage(float amount);
+	void STATIC_ApplyChewDamage(float amount);
 	void SetDivingState(int NewState, bool forceSetState);
 	void OnRep_divingStatus();
 	void BPOnSetMountedDino();
@@ -418,7 +418,7 @@ public:
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	bool BPCanDragCharacter(class APrimalCharacter** Character);
-	float BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
+	float STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void BPTimerServer();
 	void BPDidSetCarriedCharacter(class APrimalCharacter** PreviousCarriedCharacter);
 	void Calculate_Dive_Up_Impulse(float immersionDepth, struct FVector* Impulse);
@@ -438,8 +438,8 @@ public:
 	void PreDiveUpActions();
 	void PostDiveUpActions();
 	void SlowlyRotateZTo(const struct FRotator& TargetRotation, float Time, const struct FRotator& initialRotation);
-	void DropCarriedAfterTime(float Time, bool dropDragged, bool dropCarried, bool restoreFollowingVariables);
-	void dropCarried(bool dropDragged, bool dropCarried, bool restoreFollowingVariables);
+	void DropCarriedAfterTime(float Time, bool dropDragged, bool DropCarried, bool restoreFollowingVariables);
+	void DropCarried(bool dropDragged, bool DropCarried, bool restoreFollowingVariables);
 	void SpawnWaterParticles();
 	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void DebugTrajectory_Multicast(const struct FVector& beginning, const struct FVector& End);

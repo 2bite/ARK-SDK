@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function AIStateWanderOnLand.AIStateWanderOnLand_C.FindTargetAreas
 // ()
 // Parameters:
-// bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UAIStateWanderOnLand_C::FindTargetAreas(bool* Found)
+void UAIStateWanderOnLand_C::FindTargetAreas(bool* found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AIStateWanderOnLand.AIStateWanderOnLand_C.FindTargetAreas");
 
@@ -29,8 +29,8 @@ void UAIStateWanderOnLand_C::FindTargetAreas(bool* Found)
 
 	fn->FunctionFlags = flags;
 
-	if (Found != nullptr)
-		*Found = params.Found;
+	if (found != nullptr)
+		*found = params.found;
 }
 
 

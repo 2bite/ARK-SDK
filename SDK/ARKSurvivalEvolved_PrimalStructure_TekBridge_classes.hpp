@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,7 +70,7 @@ public:
 	}
 
 
-	void SetupSnaps();
+	void STATIC_SetupSnaps();
 	void BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent);
 	struct FVector BPOverrideTargetLocation(struct FVector* attackPos);
 	struct FRotator CalculatePlacementRotation(class AController* PC, struct FPlacementData* PlacementData);
@@ -93,16 +93,16 @@ public:
 	void OnRep_Activating();
 	void TryActivate(bool ActivateBridge);
 	void Activate(bool ActivateBridge);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void STATIC_IsBlocked(const struct FVector& Start, const struct FRotator& Rotation, const struct FVector& End, bool CheckLanding, bool* bLocked);
 	void OnRep_Activated();
 	void OnRep_LandingPosition();
 	void PreviewLanding();
-	void TestExtension(const struct FVector& Start, const struct FRotator& Rotation, int Extension, class APrimalStructure* SnapTarget, bool ChoosingRotation, bool* Good, struct FVector* Placement);
+	void STATIC_TestExtension(const struct FVector& Start, const struct FRotator& Rotation, int Extension, class APrimalStructure* SnapTarget, bool ChoosingRotation, bool* Good, struct FVector* Placement);
 	void BPPlacedStructure(class APlayerController** ForPC);
 	void BPBeginPreview();
-	void STATIC_ExtendBridge(const struct FVector& Location);
+	void ExtendBridge(const struct FVector& Location);
 	void UserConstructionScript();
 	void ActivationTick();
 	void PushImpact(const struct FVector& Location);

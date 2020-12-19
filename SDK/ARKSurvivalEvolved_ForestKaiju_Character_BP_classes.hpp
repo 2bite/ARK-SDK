@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -515,7 +515,7 @@ public:
 	bool                                               K2Node_DynamicCast6_CastSuccess;                          // 0x2CC8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData82[0x3];                                       // 0x2CC9(0x0003) MISSED OFFSET
 	struct FVector                                     K2Node_CustomEvent_Start2;                                // 0x2CCC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     K2Node_CustomEvent_end2;                                  // 0x2CD8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_End2;                                  // 0x2CD8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_Color6;                                // 0x2CE4(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_DurationSeconds2;                      // 0x2CF4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_Start;                                 // 0x2CF8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -615,7 +615,7 @@ public:
 	bool                                               CallFunc_EqualEqual_BoolBool_ReturnValue18;               // 0x2EB5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue8;                        // 0x2EB6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue6;                         // 0x2EB7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FLinearColor                                K2Node_CustomEvent_color;                                 // 0x2EB8(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                K2Node_CustomEvent_Color;                                 // 0x2EB8(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_Event_bNewIsRunning;                               // 0x2EC8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_BoolBool_ReturnValue19;               // 0x2EC9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData101[0x2];                                      // 0x2ECA(0x0002) MISSED OFFSET
@@ -908,7 +908,7 @@ public:
 	void OnRep_UseTamedPhysics();
 	class USoundBase* BPOverrideCharacterSound(class USoundBase** SoundIn);
 	void HealNodesAndHealthFromLeashing();
-	struct FHitMarkerSettings STATIC_BPOverrideDamageCauserHitMarker(class AShooterPlayerController** DamageCauserController, bool* bHitFriendlyTarget, float* PreDamageHealth, float* DamageAmount, bool* bIsPointDamage, struct FDamageEvent* DamageEvent, struct FHitResult* PointDamageHitResult);
+	struct FHitMarkerSettings BPOverrideDamageCauserHitMarker(class AShooterPlayerController** DamageCauserController, bool* bHitFriendlyTarget, float* PreDamageHealth, float* DamageAmount, bool* bIsPointDamage, struct FDamageEvent* DamageEvent, struct FHitResult* PointDamageHitResult);
 	void BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value);
 	bool HasCantRootBuff(class APrimalCharacter* Target);
 	void RidingTick(float* DeltaSeconds);
@@ -916,7 +916,7 @@ public:
 	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
 	struct FVector BPGetRiderUnboardLocation(class APrimalCharacter** RidingCharacter);
 	void InterpSpawnInMesh(float Delta);
-	void CanFit(const struct FVector& Location, float VerticalOffset, float Angle, float HorizontalOffset, float Radius, float HalfHeight, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation);
+	void STATIC_CanFit(const struct FVector& Location, float VerticalOffset, float Angle, float HorizontalOffset, float Radius, float HalfHeight, class AActor* IgnoreActor, bool* Can, struct FVector* NewLocation);
 	void LerpDyingMaterials(float Delta);
 	float STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void MaybeShowRootRadiusRing();
@@ -939,24 +939,24 @@ public:
 	void GetMovementMontage(TEnumAsByte<ERootMotionMovementMode>* Mode, class UAnimMontage** Montage);
 	void PlayAIProtectSelfBriefly();
 	void OnRep_CurrentAttackIndexReplicated();
-	void SpawnMaxVinesThisFrame();
-	void SpawnVineInternal(const struct FVector& Start, const struct FVector& End);
+	void STATIC_SpawnMaxVinesThisFrame();
+	void STATIC_SpawnVineInternal(const struct FVector& Start, const struct FVector& End);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void BP_OnSetDeath();
 	void BlinkDamageNodeInterp(float Delta);
-	void STATIC_SpawnPoisonTreeSeeds(float TreeCount);
+	void SpawnPoisonTreeSeeds(float TreeCount);
 	void SetLastPlayerGrabAttackTargetLocation(const struct FVector& Location);
 	void OnRep_FollowControlRotation();
 	void OnRep_GrabAttacking();
 	void TurnOffAttackBBKeys();
 	bool BPCanBeBaseForCharacter(class APawn** Pawn);
 	void IsRightArmGrabAttack(bool* RightArmGrabAttack);
-	void STATIC_CanPlayerGrabAttack(bool* GrabAttack, bool* Hit);
+	void CanPlayerGrabAttack(bool* GrabAttack, bool* Hit);
 	struct FLinearColor BPGetCrosshairColor();
 	void GetGrabAttackVineSocketName(struct FName* Name);
-	void STATIC_SpawnVine(const struct FVector& Start, const struct FVector& End);
+	void SpawnVine(const struct FVector& Start, const struct FVector& End);
 	void Get_GrabAttackVineStartLocation(struct FVector* Location);
 	void InitVars();
 	void VineGrabHit();
@@ -966,8 +966,8 @@ public:
 	void RegrowRightComplete();
 	void RegrowLeftComplete();
 	void RegrowTick(class USkeletalMeshComponent* Appendage, const struct FVector& currentScale, struct FVector* OutScale, bool* Complete);
-	void Regrow(bool LeftArm);
-	void Dismember(class USkeletalMeshComponent* Appendage);
+	void STATIC_Regrow(bool LeftArm);
+	void STATIC_Dismember(class USkeletalMeshComponent* Appendage);
 	void Is_Root_Attacking(bool* IsAttacking);
 	void GetRootAttackChargeLEvel(bool SmoothedValues, float* Value, float* Percent);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
@@ -975,11 +975,11 @@ public:
 	bool PreventLocomotion();
 	void MaybeExposeNode(class AActor* DmgCauser, TEnumAsByte<EDesertKaiju_ControlNodes> Node);
 	void StartTorpid();
-	void STATIC_SpawnPoisonTree(class AActor* SpawnOnEnemy, bool* Success);
+	void SpawnPoisonTree(class AActor* SpawnOnEnemy, bool* Success);
 	void BPTimerServer();
 	bool BPHandleOnStopTargeting();
 	void ShortestAngleDistance(float AngleCurrent, float AngleTarget, float* Difference);
-	void GetClampedLookDir(bool LimitLowerPitch, struct FVector* Return);
+	void GetClampedLookDir(bool LimitLowerPitch, struct FVector* _return);
 	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
 	void STATIC_GrabTrace();
 	int BPAdjustAttackIndex(int* AttackIndex);
@@ -1011,7 +1011,7 @@ public:
 	void ReplicateCameraDataTPVToServer(bool IsFirstPerson, const struct FVector& CameraLocation);
 	void ServerExecuteGrab();
 	void Server_GrabTraceTargetDir(const struct FVector& AimLoc, bool AimHit);
-	void Multi_ExposeNodes(TEnumAsByte<EDesertKaiju_ControlNodes> Node, bool expose);
+	void Multi_ExposeNodes(TEnumAsByte<EDesertKaiju_ControlNodes> Node, bool Expose);
 	void ActivateNode(TEnumAsByte<EDesertKaiju_ControlNodes> Node);
 	void Deactivate_LeftNode();
 	void Deactivate_RightNode();
@@ -1019,7 +1019,7 @@ public:
 	void CtS_StartAttackRoot();
 	void CtS_ExecuteAttackRoot();
 	void AnimNotify_EndRootAttack();
-	void Multi_PreventInput(bool Prevent);
+	void Multi_PreventInput(bool prevent);
 	void ExecuteAttackRoot();
 	void AnimNotify_RootTargets();
 	void AI_StartAttackRoot();

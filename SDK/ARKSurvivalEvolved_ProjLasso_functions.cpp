@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjLasso.ProjLasso_C.ReceiveTick
-// (NetRequest, Native, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjLasso_C::ReceiveTick(float* DeltaSeconds)
+void AProjLasso_C::STATIC_ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjLasso.ProjLasso_C.ReceiveTick");
 

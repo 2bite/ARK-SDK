@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void ABuff_TekClaw_Target_MaxPower_C::ReceiveDestroyed()
 
 
 // Function Buff_TekClaw_Target_MaxPower.Buff_TekClaw_Target_MaxPower_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -42,7 +42,6 @@ void ABuff_TekClaw_Target_MaxPower_C::STATIC_BPSetupForInstigator(class AActor**
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

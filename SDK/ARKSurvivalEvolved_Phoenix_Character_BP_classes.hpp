@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -266,12 +266,12 @@ public:
 	void SetAnimsWeightForAttack(int AttackIndex);
 	void GetMode(bool* Regular, bool* Blaze);
 	void BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void On_StateChanged_Client(bool hasRisen, bool Fast);
 	void Is_In_Water(bool* currentlyOnWater);
 	void STATIC_CanAshStayOnLocation(bool* canAshStay);
-	void STATIC_Calculate_BuryMeshTransform(bool Rise, struct UObject_FTransform* buryMeshTransform);
+	void STATIC_Calculate_BuryMeshTransform(bool rise, struct UObject_FTransform* buryMeshTransform);
 	void GetSuperheatState(bool* isSuperheat);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void UpdateMoundVisibilityAndCollision(bool Visible, bool skipVisibility);
@@ -288,7 +288,7 @@ public:
 	void DissolvePhoenixMesh__UpdateFunc();
 	void OnDied_Event(class APrimalCharacter* DiedCharacter);
 	void ReceiveBeginPlay();
-	void Rise(bool Fast);
+	void rise(bool Fast);
 	void OnRise();
 	void DissolveMound(bool Fast);
 	void FakeDie(bool Fast);

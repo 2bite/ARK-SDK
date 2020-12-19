@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,7 +133,7 @@ bool AMantis_Character_BP_C::BPCanNotifyTeamAggroAI(class APrimalDinoCharacter**
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.Start Leap Attack
-// (NetRequest, Exec, Static, Private, NetClient, BlueprintCallable, BlueprintPure)
+// (Exec, Event, Static, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AMantis_Character_BP_C::STATIC_Start_Leap_Attack()
 {
@@ -150,7 +150,7 @@ void AMantis_Character_BP_C::STATIC_Start_Leap_Attack()
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.CheckLeapAttackEnd
-// (NetReliable, NetResponse, Static, Private, NetClient, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AMantis_Character_BP_C::STATIC_CheckLeapAttackEnd()
 {
@@ -159,6 +159,7 @@ void AMantis_Character_BP_C::STATIC_CheckLeapAttackEnd()
 	AMantis_Character_BP_C_CheckLeapAttackEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -325,7 +326,7 @@ void AMantis_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custom
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, NetResponse, NetMulticast, Private, NetClient, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)

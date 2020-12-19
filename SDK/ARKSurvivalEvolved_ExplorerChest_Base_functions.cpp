@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,11 +34,11 @@ int AExplorerChest_Base_C::BPGetExtraSpecialBlueprintInt()
 
 
 // Function ExplorerChest_Base.ExplorerChest_Base_C.DrawBasicFloatingHUD
-// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, Const)
 // Parameters:
 // class AHUD**                   ForHUD                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExplorerChest_Base_C::STATIC_DrawBasicFloatingHUD(class AHUD** ForHUD)
+void AExplorerChest_Base_C::DrawBasicFloatingHUD(class AHUD** ForHUD)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Base.ExplorerChest_Base_C.DrawBasicFloatingHUD");
 

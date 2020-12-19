@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -105,12 +105,12 @@ public:
 	struct FRotator BPModifyAimOffsetNoTarget(struct FRotator* Aim);
 	void OverrideRandomWanderLocation(struct FVector* originalDestination, struct FVector* inVec);
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
-	void InitializeProduction();
+	void STATIC_InitializeProduction();
 	void InitializeCrystals();
 	void FindWanderTarget();
 	void STATIC_GetDigestionFrequencyMultiplier(float* mult);
-	void GetCrystalQualityMultiplier(float* mult);
-	void Get_Digestion_Amount_Multiplier(float* Multiplier);
+	void STATIC_GetCrystalQualityMultiplier(float* mult);
+	void STATIC_Get_Digestion_Amount_Multiplier(float* Multiplier);
 	struct FVector BPModifyAimOffsetTargetLocation(struct FVector* AimTargetLocation);
 	float BPUnstasisConsumeFood(float* FoodNeeded);
 	float GetEfficiencyFactor();
@@ -124,29 +124,29 @@ public:
 	void ReceiveTick(float* DeltaSeconds);
 	void Play_Start_Digest_Animation();
 	void BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value);
-	void STATIC_DistributeFood(float FoodEaten);
+	void DistributeFood(float FoodEaten);
 	void Look_for_Food_Drops(bool PlayerAttack, bool* FoundSomething);
-	void STATIC_GetItemTamingValue(class UPrimalItem* Object, float* Affinity, bool* IsWanted);
+	void GetItemTamingValue(class UPrimalItem* Object, float* Affinity, bool* IsWanted);
 	void GetItemFoodValue(class UPrimalItem* Object, bool* IsPremium, float* FoodValue);
 	void Stop_Eating();
 	void StartEating();
 	void BPNotifyWildHarvestAttack(int* harvestIndex);
-	void GetItemBaseValue(class UPrimalItem* PrimalItem, float BaseValue, float* Value);
+	void STATIC_GetItemBaseValue(class UPrimalItem* PrimalItem, float BaseValue, float* Value);
 	void ChooseLootSet();
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
-	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	bool STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void WildDigestion();
 	void Play_Digest_Animation();
 	void SetCrystalScale();
 	void DropCrystal();
 	void FinishDigestion();
-	void STATIC_TamedDigestion(bool* AteSomething);
+	void TamedDigestion(bool* AteSomething);
 	void Play_Release_Animation();
 	void DigestionTick(float DeltaSeconds);
 	void TamingTick(float DeltaSeconds);
 	void STATIC_LookForTamingDrops(bool* FoundSomething);
-	void GiveAffinity(float AffinityToGive, class APrimalCharacter** tamer, bool* wasTamed);
+	void GiveAffinity(float affinityToGive, class APrimalCharacter** tamer, bool* wasTamed);
 	void WantsResource(class UPrimalItem** Item, bool* IsWanted, float* Affinity);
 	void BPDoHarvestAttack(int* harvestIndex);
 	float BPModifyHarvestingQuantity(float* originalQuantity, class UClass** resourceSelected);

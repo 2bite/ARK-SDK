@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function ScorchedEarthDayCycle_Interface.ScorchedEarthDayCycle_Interface_C.GetIsElectricalStorm
 // ()
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UScorchedEarthDayCycle_Interface_C::GetIsElectricalStorm(bool* Return)
+void UScorchedEarthDayCycle_Interface_C::GetIsElectricalStorm(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScorchedEarthDayCycle_Interface.ScorchedEarthDayCycle_Interface_C.GetIsElectricalStorm");
 
@@ -29,8 +29,8 @@ void UScorchedEarthDayCycle_Interface_C::GetIsElectricalStorm(bool* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 

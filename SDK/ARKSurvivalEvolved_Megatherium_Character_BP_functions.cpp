@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,7 +109,7 @@ void AMegatherium_Character_BP_C::BPOnAnimPlayedNotify(class UAnimMontage** Anim
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BPGetMultiUseEntries
-// (Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Native, NetResponse, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -123,6 +123,7 @@ TArray<struct FMultiUseEntry> AMegatherium_Character_BP_C::BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -247,7 +248,7 @@ void AMegatherium_Character_BP_C::BPDoAttack(int* AttackIndex)
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintCanRiderAttack
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, NetResponse, Static, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -260,7 +261,6 @@ bool AMegatherium_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackInde
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -333,7 +333,7 @@ void AMegatherium_Character_BP_C::OnNewTarget()
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintAdjustOutputDamage
-// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetMulticast, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -342,7 +342,7 @@ void AMegatherium_Character_BP_C::OnNewTarget()
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AMegatherium_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AMegatherium_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -352,7 +352,6 @@ float AMegatherium_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attac
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -495,14 +494,14 @@ void AMegatherium_Character_BP_C::TrySitDown()
 }
 
 
-// Function Megatherium_Character_BP.Megatherium_Character_BP_C.StandUp
+// Function Megatherium_Character_BP.Megatherium_Character_BP_C.standUp
 // ()
 
-void AMegatherium_Character_BP_C::StandUp()
+void AMegatherium_Character_BP_C::standUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Megatherium_Character_BP.Megatherium_Character_BP_C.StandUp");
+	static auto fn = UObject::FindObject<UFunction>("Function Megatherium_Character_BP.Megatherium_Character_BP_C.standUp");
 
-	AMegatherium_Character_BP_C_StandUp_Params params;
+	AMegatherium_Character_BP_C_standUp_Params params;
 
 	auto flags = fn->FunctionFlags;
 

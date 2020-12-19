@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 	class UStaticMeshComponent*                        BackPack;                                                 // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UAudioComponent*                             LeapLoop;                                                 // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UDinoCharacterStatusComponent_BP_Pegomastax_C* DinoCharacterStatus_BP_Pegomastax_C1;                     // 0x2198(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LeapAttackImpulseForward;                                 // 0x21A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              leapAttackImpulseForward;                                 // 0x21A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              ZLeapMultiplier;                                          // 0x21A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	double                                             lastRoarDecisionTime;                                     // 0x21A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              roarChance;                                               // 0x21B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -48,7 +48,7 @@ public:
 	bool                                               isStealing;                                               // 0x2220(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x7];                                       // 0x2221(0x0007) MISSED OFFSET
 	class APlayerController*                           lastPlayerOrder;                                          // 0x2228(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	int                                                pickPocketingMode;                                        // 0x2230(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	int                                                PickPocketingMode;                                        // 0x2230(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	float                                              fleeWithLootTimeTamed;                                    // 0x2234(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              maxBuffTimeWild;                                          // 0x2238(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                currentNumPegosInGroup;                                   // 0x223C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -80,8 +80,8 @@ public:
 	float                                              K2Node_CustomEvent_idleBlendOutTime;                      // 0x22B8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Can_Play_Holding_Anim_canPlay;                   // 0x22BC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x3];                                       // 0x22BD(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x22C0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x22C4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x22C0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x22C4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_Time;                                  // 0x22C8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_preDelay2;                             // 0x22CC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_idle2;                                 // 0x22D0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -130,16 +130,16 @@ public:
 	}
 
 
-	bool STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
-	void UpdateWaitingState(class APrimalCharacter* TargetCharacter, bool* isInWaitingState);
-	void isInWaitingState(class APrimalCharacter* TargetCharacter, bool* isWaiting);
+	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
+	void UpdateWaitingState(class APrimalCharacter* TargetCharacter, bool* IsInWaitingState);
+	void IsInWaitingState(class APrimalCharacter* TargetCharacter, bool* isWaiting);
 	void WillRunToOwner(class APawn* ownerPawn, bool* willRun);
 	void BPTimerServer();
 	void FindPawnToGoBackTo(class APawn** selectedPawn);
 	void BPOnAnimPlayedNotify(class UAnimMontage** AnimMontage, float* InPlayRate, struct FName* StartSectionName, bool* bReplicate, bool* bReplicateToOwner, bool* bForceTickPoseAndServerUpdateMesh, bool* bForceTickPoseOnServer);
 	void RestoreSecondaryAnims();
 	void ClearSecondaryAnims();
-	void STATIC_PostAttackActions(bool stoleItem);
+	void PostAttackActions(bool stoleItem);
 	void ShouldStopHolding(bool* shouldStop);
 	void Can_Play_Holding_Anim(bool* CanPlay);
 	void BPOnClearMountedDino();
@@ -155,12 +155,12 @@ public:
 	void CanStealItem(class UPrimalItem* Item, bool* canSteal);
 	void GoBackToOwner(class APawn* Pawn);
 	void Get_NumPegosInGroup(int* maxExtraItems);
-	void STATIC_IsValidItemForTaming(class UPrimalItem* PrimalItem, bool* IsValid);
+	void IsValidItemForTaming(class UPrimalItem* PrimalItem, bool* IsValid);
 	void BPInventoryItemUsed(class UObject** InventoryItemObject);
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
 	void BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale, struct FColor* K2Node_Select_ReturnValue);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void AddAffinityFromFood(class UPrimalItem* Item);
 	void StealItemInSlot(int slotNumber, class APrimalCharacter* Character, bool* Success);
 	void Can_StealFromCharacter(class APrimalCharacter* Character, bool* canSteal);
@@ -168,14 +168,14 @@ public:
 	void Stop_FleeingWithLoot();
 	void StartFleeingWithLoot();
 	bool BPShouldForceFlee();
-	void STATIC_Do_StealItem(class APrimalCharacter* CharacterToStealFrom, class UPrimalItem* itemToSteal, bool consumeItem, bool* Success);
+	void Do_StealItem(class APrimalCharacter* CharacterToStealFrom, class UPrimalItem* itemToSteal, bool ConsumeItem, bool* Success);
 	void Steal_from_Character(class APrimalCharacter* Character, bool* succeeded);
-	float BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
+	float STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void CreateWildInventory();
 	void OnJumped();
 	void BPModifyHarvestingWeightsArray(TArray<float>* resourceWeightsIn, TArray<class UPrimalItem*>* resourceItems, TArray<float>* resourceWeightsOut);
 	float BPModifyHarvestingQuantity(float* originalQuantity, class UClass** resourceSelected);
-	bool STATIC_BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
+	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void UserConstructionScript();
 	void BPUnstasis();
 	void PlayHoldingForTime(float Time, float preDelay, bool Idle, bool HideBag);

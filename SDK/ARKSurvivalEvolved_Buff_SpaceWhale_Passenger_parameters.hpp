@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,7 +61,7 @@ struct ABuff_SpaceWhale_Passenger_C_GetFireTransform_Params
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsElectricalStormActive
 struct ABuff_SpaceWhale_Passenger_C_IsElectricalStormActive_Params
 {
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.GetSocketClampDelta

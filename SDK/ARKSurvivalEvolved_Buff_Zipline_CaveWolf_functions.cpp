@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -240,7 +240,7 @@ void ABuff_Zipline_CaveWolf_C::Play_Detach_Animation(float* Duration)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.IsStillColliding
-// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Static, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void ABuff_Zipline_CaveWolf_C::STATIC_IsStillColliding()
 {
@@ -249,7 +249,6 @@ void ABuff_Zipline_CaveWolf_C::STATIC_IsStillColliding()
 	ABuff_Zipline_CaveWolf_C_IsStillColliding_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -258,25 +257,24 @@ void ABuff_Zipline_CaveWolf_C::STATIC_IsStillColliding()
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.CanZiplineFlip
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_CaveWolf_C::STATIC_CanZiplineFlip(bool* Return)
+void ABuff_Zipline_CaveWolf_C::STATIC_CanZiplineFlip(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.CanZiplineFlip");
 
 	ABuff_Zipline_CaveWolf_C_CanZiplineFlip_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 
@@ -320,7 +318,7 @@ void ABuff_Zipline_CaveWolf_C::HandleCollision(struct FHitResult* Hit)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.HitZiplineEndStop
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, NetResponse, NetMulticast, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class UMovementComponent**     MovementComp                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -332,6 +330,7 @@ void ABuff_Zipline_CaveWolf_C::HitZiplineEndStop(class UMovementComponent** Move
 	params.MovementComp = MovementComp;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -481,7 +480,7 @@ void ABuff_Zipline_CaveWolf_C::ProcessMotorInput(float* A)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.JumpImpulse
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector*                Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -493,6 +492,7 @@ void ABuff_Zipline_CaveWolf_C::STATIC_JumpImpulse(struct FVector* Direction)
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -501,7 +501,7 @@ void ABuff_Zipline_CaveWolf_C::STATIC_JumpImpulse(struct FVector* Direction)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.UpdateActorZiplineOffset
-// (NetRequest, Exec, Native, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void ABuff_Zipline_CaveWolf_C::UpdateActorZiplineOffset()
 {
@@ -510,7 +510,6 @@ void ABuff_Zipline_CaveWolf_C::UpdateActorZiplineOffset()
 	ABuff_Zipline_CaveWolf_C_UpdateActorZiplineOffset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -558,7 +557,7 @@ void ABuff_Zipline_CaveWolf_C::SetHurtAnim(bool Hanging, bool Reset)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.AttachToZipline
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector*                StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -570,6 +569,7 @@ void ABuff_Zipline_CaveWolf_C::AttachToZipline(struct FVector* StartLocation)
 	params.StartLocation = StartLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -670,15 +670,15 @@ bool ABuff_Zipline_CaveWolf_C::BPCheckPreventInput(TEnumAsByte<EPrimalCharacterI
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.PlayTurnAnimation
 // ()
 // Parameters:
-// class UAnimMontage**           override                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage**           Override                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_CaveWolf_C::PlayTurnAnimation(class UAnimMontage** override, float* Duration)
+void ABuff_Zipline_CaveWolf_C::PlayTurnAnimation(class UAnimMontage** Override, float* Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.PlayTurnAnimation");
 
 	ABuff_Zipline_CaveWolf_C_PlayTurnAnimation_Params params;
-	params.override = override;
+	params.Override = Override;
 
 	auto flags = fn->FunctionFlags;
 
@@ -714,9 +714,9 @@ void ABuff_Zipline_CaveWolf_C::SetZiplineControlRotation()
 // struct FRotator                rotA                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                rotB                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ErrorTolerance                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_CaveWolf_C::RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* Return)
+void ABuff_Zipline_CaveWolf_C::RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.RotationNearlyEqual");
 
@@ -731,8 +731,8 @@ void ABuff_Zipline_CaveWolf_C::RotationNearlyEqual(const struct FRotator& rotA, 
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 

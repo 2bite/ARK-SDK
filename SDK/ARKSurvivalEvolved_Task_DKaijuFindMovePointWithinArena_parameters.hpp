@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,14 +18,14 @@ namespace sdk
 struct UTask_DKaijuFindMovePointWithinArena_C_Get_Random_PointNoMin_Params
 {
 	struct FVector                                     Origin;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Task_DKaijuFindMovePointWithinArena.Task_DKaijuFindMovePointWithinArena_C.Get Random PointMin
 struct UTask_DKaijuFindMovePointWithinArena_C_Get_Random_PointMin_Params
 {
 	struct FVector                                     Origin;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               DidNotFindLoc;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

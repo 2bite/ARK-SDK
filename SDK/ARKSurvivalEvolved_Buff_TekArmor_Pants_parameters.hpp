@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -201,7 +201,7 @@ struct ABuff_TekArmor_Pants_C_SetChargeStartVariables_Params
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Get Default Player Run Speed Mult
 struct ABuff_TekArmor_Pants_C_Get_Default_Player_Run_Speed_Mult_Params
 {
-	float                                              speedMult;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              SpeedMult;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Tick Update Tek Run
@@ -225,7 +225,7 @@ struct ABuff_TekArmor_Pants_C_BuffTickClient_Params
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.SetPreventEquipWeapons
 struct ABuff_TekArmor_Pants_C_SetPreventEquipWeapons_Params
 {
-	bool                                               Prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.CalculateDeflectingImpulse

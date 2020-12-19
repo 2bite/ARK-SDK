@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,9 +41,9 @@ void AWeaponRadioactiveLanternCharge_C::GetNumBatteries(int* numBatteries)
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeaponRadioactiveLanternCharge_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue)
+void AWeaponRadioactiveLanternCharge_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.Get Charge Variable Interface");
 
@@ -62,8 +62,8 @@ void AWeaponRadioactiveLanternCharge_C::Get_Charge_Variable_Interface(TEnumAsByt
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (iValue != nullptr)
-		*iValue = params.iValue;
+	if (ivalue != nullptr)
+		*ivalue = params.ivalue;
 }
 
 
@@ -307,7 +307,7 @@ void AWeaponRadioactiveLanternCharge_C::BPWaitingForPlacement()
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.CheckIfFireStopped
-// (NetReliable, Exec, Event, NetResponse, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // bool                           NewParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -318,6 +318,7 @@ void AWeaponRadioactiveLanternCharge_C::CheckIfFireStopped(bool* NewParam)
 	AWeaponRadioactiveLanternCharge_C_CheckIfFireStopped_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -436,7 +437,7 @@ void AWeaponRadioactiveLanternCharge_C::OnStopFiring()
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.DestroyBeamForTarget
-// (NetReliable, NetRequest, NetResponse, Static, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, Static, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class APrimalCharacter*        forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -448,6 +449,7 @@ void AWeaponRadioactiveLanternCharge_C::STATIC_DestroyBeamForTarget(class APrima
 	params.forCharacter = forCharacter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -493,7 +495,7 @@ void AWeaponRadioactiveLanternCharge_C::ServerTick()
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.ClientTick
-// (Native, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void AWeaponRadioactiveLanternCharge_C::ClientTick()
 {
@@ -511,7 +513,7 @@ void AWeaponRadioactiveLanternCharge_C::ClientTick()
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.Remove All BeamsClient
-// (Exec, Native, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void AWeaponRadioactiveLanternCharge_C::Remove_All_BeamsClient()
 {
@@ -520,7 +522,6 @@ void AWeaponRadioactiveLanternCharge_C::Remove_All_BeamsClient()
 	AWeaponRadioactiveLanternCharge_C_Remove_All_BeamsClient_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -677,11 +678,11 @@ void AWeaponRadioactiveLanternCharge_C::ConnectBeamToTarget(const struct FSTR_Ch
 
 
 // Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.CreateNewBeam
-// (Native, Static, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class AActor*                  ToActor                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeaponRadioactiveLanternCharge_C::STATIC_CreateNewBeam(class AActor* ToActor)
+void AWeaponRadioactiveLanternCharge_C::CreateNewBeam(class AActor* ToActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.CreateNewBeam");
 
@@ -904,9 +905,9 @@ void AWeaponRadioactiveLanternCharge_C::LightTurnOffTimeline__UpdateFunc()
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeaponRadioactiveLanternCharge_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue)
+void AWeaponRadioactiveLanternCharge_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.Charge Variable Event Interface");
 
@@ -915,7 +916,7 @@ void AWeaponRadioactiveLanternCharge_C::Charge_Variable_Event_Interface(TEnumAsB
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.iValue = iValue;
+	params.ivalue = ivalue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1018,15 +1019,15 @@ void AWeaponRadioactiveLanternCharge_C::ChargeVariableEventDoubleInterface(TEnum
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeaponRadioactiveLanternCharge_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
+void AWeaponRadioactiveLanternCharge_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.ChargeVariableEventIntInterface");
 
 	AWeaponRadioactiveLanternCharge_C_ChargeVariableEventIntInterface_Params params;
 	params.variableType = variableType;
-	params.iValue = iValue;
+	params.ivalue = ivalue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1040,15 +1041,15 @@ void AWeaponRadioactiveLanternCharge_C::ChargeVariableEventIntInterface(TEnumAsB
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeaponRadioactiveLanternCharge_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
+void AWeaponRadioactiveLanternCharge_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.ChargeVariableEventIntMulticastInterface");
 
 	AWeaponRadioactiveLanternCharge_C_ChargeVariableEventIntMulticastInterface_Params params;
 	params.variableType = variableType;
-	params.iValue = iValue;
+	params.ivalue = ivalue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1159,9 +1160,9 @@ void AWeaponRadioactiveLanternCharge_C::CreateChargeManager()
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           triggerEvent                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           multicastEvent                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeaponRadioactiveLanternCharge_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue)
+void AWeaponRadioactiveLanternCharge_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C.Set Charge Variable Interface");
 
@@ -1173,7 +1174,7 @@ void AWeaponRadioactiveLanternCharge_C::Set_Charge_Variable_Interface(TEnumAsByt
 	params.bBValue = bBValue;
 	params.triggerEvent = triggerEvent;
 	params.multicastEvent = multicastEvent;
-	params.iValue = iValue;
+	params.ivalue = ivalue;
 
 	auto flags = fn->FunctionFlags;
 

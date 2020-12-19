@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ struct ACrab_Character_BP_C_BPOnMovementModeChangedNotify_Params
 // Function Crab_Character_BP.Crab_Character_BP_C.Should Stop Jump Rotation
 struct ACrab_Character_BP_C_Should_Stop_Jump_Rotation_Params
 {
-	bool                                               Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack
@@ -503,13 +503,13 @@ struct ACrab_Character_BP_C_AnimNotify_CrabLand_Params
 // Function Crab_Character_BP.Crab_Character_BP_C.ServerRequestRightAttack
 struct ACrab_Character_BP_C_ServerRequestRightAttack_Params
 {
-	bool                                               buttonHeld;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ButtonHeld;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Crab_Character_BP.Crab_Character_BP_C.ServerRequestLeftAttack
 struct ACrab_Character_BP_C_ServerRequestLeftAttack_Params
 {
-	bool                                               buttonHeld;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ButtonHeld;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Crab_Character_BP.Crab_Character_BP_C.DelayedRightAttack

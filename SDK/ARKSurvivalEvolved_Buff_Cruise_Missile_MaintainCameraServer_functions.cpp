@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,11 +42,11 @@ bool ABuff_Cruise_Missile_MaintainCameraServer_C::BPServerHandleNetExecCommand(c
 
 
 // Function Buff_Cruise_Missile_MaintainCameraServer.Buff_Cruise_Missile_MaintainCameraServer_C.BPHandleOnStartFire
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Cruise_Missile_MaintainCameraServer_C::BPHandleOnStartFire(bool* bFromGamepad)
+void ABuff_Cruise_Missile_MaintainCameraServer_C::STATIC_BPHandleOnStartFire(bool* bFromGamepad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Cruise_Missile_MaintainCameraServer.Buff_Cruise_Missile_MaintainCameraServer_C.BPHandleOnStartFire");
 
@@ -54,6 +54,7 @@ void ABuff_Cruise_Missile_MaintainCameraServer_C::BPHandleOnStartFire(bool* bFro
 	params.bFromGamepad = bFromGamepad;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

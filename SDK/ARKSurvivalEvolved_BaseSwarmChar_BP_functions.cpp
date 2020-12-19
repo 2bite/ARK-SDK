@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void ABaseSwarmChar_BP_C::GetFlockTickingInterval(float* OutInterval)
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SwarmLifetimeEnded
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 
 void ABaseSwarmChar_BP_C::STATIC_SwarmLifetimeEnded()
 {
@@ -44,6 +44,7 @@ void ABaseSwarmChar_BP_C::STATIC_SwarmLifetimeEnded()
 	ABaseSwarmChar_BP_C_SwarmLifetimeEnded_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,7 +124,7 @@ void ABaseSwarmChar_BP_C::SpottedTarget()
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CreateBoidSM
-// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (Exec, NetResponse, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -140,7 +141,6 @@ class UStaticMeshComponent* ABaseSwarmChar_BP_C::STATIC_CreateBoidSM(const struc
 	params.Scale = Scale;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,7 +171,7 @@ void ABaseSwarmChar_BP_C::UpdateDeadBoids(float DeltaSeconds)
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BPSetCharacterMeshesMaterialScalarParamValue
-// (Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (Exec, Native, Event, NetResponse, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FName*                  ParamName                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -185,6 +185,7 @@ void ABaseSwarmChar_BP_C::STATIC_BPSetCharacterMeshesMaterialScalarParamValue(st
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,7 +321,7 @@ void ABaseSwarmChar_BP_C::DestroyTarget()
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SetFlockBehavior
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (Exec, Native, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 
 void ABaseSwarmChar_BP_C::SetFlockBehavior()
 {
@@ -329,6 +330,7 @@ void ABaseSwarmChar_BP_C::SetFlockBehavior()
 	ABaseSwarmChar_BP_C_SetFlockBehavior_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,7 +356,7 @@ void ABaseSwarmChar_BP_C::OnRep_FlockShape()
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Get Damage Type Adjuster
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (Event, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class UClass*                  Type                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Multiplier                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -367,7 +369,6 @@ void ABaseSwarmChar_BP_C::Get_Damage_Type_Adjuster(class UClass* Type, float* Mu
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -437,9 +438,9 @@ void ABaseSwarmChar_BP_C::Can_Damage_Victim_in_Radius(class AActor* Victim, bool
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CreateFlock
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 
-void ABaseSwarmChar_BP_C::CreateFlock()
+void ABaseSwarmChar_BP_C::STATIC_CreateFlock()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CreateFlock");
 
@@ -454,11 +455,11 @@ void ABaseSwarmChar_BP_C::CreateFlock()
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.TickFlock
-// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, Event, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABaseSwarmChar_BP_C::TickFlock(float DeltaTime)
+void ABaseSwarmChar_BP_C::STATIC_TickFlock(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.TickFlock");
 
@@ -466,7 +467,6 @@ void ABaseSwarmChar_BP_C::TickFlock(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -536,7 +536,7 @@ float ABaseSwarmChar_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamageE
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Damage Victim in Radius
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -664,7 +664,7 @@ void ABaseSwarmChar_BP_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BlueprintAdjustOutputDamage
-// (MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, Exec, Event, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)

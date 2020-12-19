@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ struct ABuff_ChargeEmitterStructure_PlantSpeciesZ_Base_C_ChargeVariableEvent_Par
 	bool*                                              bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double*                                            dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int*                                               iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeEmitterStructure_PlantSpeciesZ_Base.Buff_ChargeEmitterStructure_PlantSpeciesZ_Base_C.GetLightTargetIntensity

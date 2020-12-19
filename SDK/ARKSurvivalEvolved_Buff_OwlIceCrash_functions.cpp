@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -149,7 +149,7 @@ void ABuff_OwlIceCrash_C::SetupIceCrash(class APrimalCharacter* Character, bool 
 
 
 // Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPSetupForInstigator
-// (Event, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

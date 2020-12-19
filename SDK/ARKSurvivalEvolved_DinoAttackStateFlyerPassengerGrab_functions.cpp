@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,9 +16,9 @@ namespace sdk
 // ()
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateFlyerPassengerGrab_C::Grab_Character(class APrimalCharacter* Character, bool* Return_Value)
+void UDinoAttackStateFlyerPassengerGrab_C::Grab_Character(class APrimalCharacter* Character, bool* return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.Grab Character");
 
@@ -31,8 +31,8 @@ void UDinoAttackStateFlyerPassengerGrab_C::Grab_Character(class APrimalCharacter
 
 	fn->FunctionFlags = flags;
 
-	if (Return_Value != nullptr)
-		*Return_Value = params.Return_Value;
+	if (return_value != nullptr)
+		*return_value = params.return_value;
 }
 
 
@@ -138,7 +138,7 @@ void UDinoAttackStateFlyerPassengerGrab_C::StartAnimationStateEvent(struct FName
 
 
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.GetAttackSocketLocations
-// (Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, HasOutParms, NetClient, Const)
 // Parameters:
 // TArray<struct UObject_FTransform> Locations                      (Parm, OutParm, ZeroConstructor)
 
@@ -161,18 +161,17 @@ void UDinoAttackStateFlyerPassengerGrab_C::GetAttackSocketLocations(TArray<struc
 
 
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.Find Best Grab Target
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, NetMulticast, Public, Private, HasOutParms, NetClient, Const)
 // Parameters:
 // class APrimalCharacter*        bestTarget                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateFlyerPassengerGrab_C::Find_Best_Grab_Target(class APrimalCharacter** bestTarget)
+void UDinoAttackStateFlyerPassengerGrab_C::STATIC_Find_Best_Grab_Target(class APrimalCharacter** bestTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.Find Best Grab Target");
 
 	UDinoAttackStateFlyerPassengerGrab_C_Find_Best_Grab_Target_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

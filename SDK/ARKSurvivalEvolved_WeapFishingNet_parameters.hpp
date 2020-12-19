@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -307,7 +307,7 @@ struct AWeapFishingNet_C_BPCanEquip_Params
 struct AWeapFishingNet_C_Reel_Velocity_Params
 {
 	struct FVector                                     Weapon_Location;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class AProjFishingNet_C*                           net_projectile;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class AProjFishingNet_C*                           Net_Projectile;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 

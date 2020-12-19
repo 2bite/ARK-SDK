@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -99,7 +99,7 @@ void ALampPostOmni_C::BPClientDoMultiUse(class APlayerController** ForPC, int* C
 
 
 // Function LampPostOmni.LampPostOmni_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -113,7 +113,6 @@ TArray<struct FMultiUseEntry> ALampPostOmni_C::STATIC_BPGetMultiUseEntries(class
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

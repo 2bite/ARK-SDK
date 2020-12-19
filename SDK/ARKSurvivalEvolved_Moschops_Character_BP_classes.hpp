@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -103,8 +103,8 @@ public:
 	void Harvest_Multiplier_Level_Up(int UseEntryIndex);
 	class FString MakeUseEntryString(int index);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	void STATIC_Add_Level_Up_Entries(TArray<struct FMultiUseEntry>* FullEntryList);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	void Add_Level_Up_Entries(TArray<struct FMultiUseEntry>* FullEntryList);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void STATIC_UserConstructionScript();
 	void AnimNotify_HarvestEnd();
 	void ReceiveBeginPlay();

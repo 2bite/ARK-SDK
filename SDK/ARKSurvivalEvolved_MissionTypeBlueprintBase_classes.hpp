@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,8 +60,8 @@ public:
 	}
 
 
-	void STATIC_PlaySoundForPlayersOnMission(class USoundBase* Sound);
-	bool STATIC_BPStaticIsPlayerEligibleForMission(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, class APrimalBuff_MissionData** PlayerMissionData, class FString* OutReason);
+	void PlaySoundForPlayersOnMission(class USoundBase* Sound);
+	bool BPStaticIsPlayerEligibleForMission(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, class APrimalBuff_MissionData** PlayerMissionData, class FString* OutReason);
 	void BPGetMetaTagsAsInts(TArray<int>* OutTagIds);
 	void UserConstructionScript();
 	void OnMissionPhaseStarted(struct FName* OldPhase, struct FName* NewPhase);

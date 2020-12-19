@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -686,7 +686,7 @@ public:
 	TEnumAsByte<E_HoverSkiffHoverState>                K2Node_CustomEvent_PreviousState;                         // 0x35E9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue;                   // 0x35EA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchString_CmpSuccess;                           // 0x35EB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	TEnumAsByte<E_HoverSkiffHoverState>                K2Node_CustomEvent_newState;                              // 0x35EC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<E_HoverSkiffHoverState>                K2Node_CustomEvent_NewState;                              // 0x35EC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue14;                          // 0x35ED(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue12;                       // 0x35EE(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_AllowSkiffBeamInputs_bAllow;                     // 0x35EF(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -810,7 +810,7 @@ public:
 	bool BP_ForceAllowAddBuff(class UClass** BuffClass);
 	void BlueprintPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent);
 	void IsCharAttachedToSkiffMesh(class APrimalCharacter* forChar, bool* bResult);
-	bool STATIC_BP_OverrideCarriedCharacterTransform(class APrimalCharacter** ForCarriedChar);
+	bool BP_OverrideCarriedCharacterTransform(class APrimalCharacter** ForCarriedChar);
 	void DestroySkiffHudWidget(bool bDestroyNow);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	void GetBeamCameraCeilingZ(float* CeilingZ);
@@ -826,7 +826,7 @@ public:
 	void DisableLevelUps();
 	void BSetupDinoTameable();
 	void STATIC_Tick_ShowDropDinoIndicator();
-	void STATIC_SetupSkiffThrusters();
+	void SetupSkiffThrusters();
 	void GetSkiffAcceleration(struct FVector* NewParam);
 	void Tick_UpdateSkiffThruster(int DataIntex, struct FStruct_HoverSkiffThrusterData* WithThrusterData);
 	void Tick_UpdateBeamSFX();
@@ -876,7 +876,7 @@ public:
 	void OnSkiffHoverStateChanged(TEnumAsByte<E_HoverSkiffHoverState> NewState, TEnumAsByte<E_HoverSkiffHoverState> PreviousState);
 	void NetSetSkiffHoverState(TEnumAsByte<E_HoverSkiffHoverState> NewState);
 	float BP_GetCustomModifier_MaxSpeed();
-	void TraceForBeamCharBlockers();
+	void STATIC_TraceForBeamCharBlockers();
 	void GetMinHoverHeight(float* MinHeight);
 	void IsSkiffChangingHoverHeight(bool* bResult);
 	void GetBeamCharGrabOffsetZ(float* OffsetZ);
@@ -891,7 +891,7 @@ public:
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
 	float BP_OverrideTerminalVelocity();
 	void STATIC_DoThrusterEngineBurst(class UParticleSystem* OverrideBurstParticle, bool bPreventAutoScaling, class USoundCue* OverrideBurstSound, const struct FVector2D& OverrideVolumeAndPitch, TArray<class UParticleSystemComponent*>* ForThrusterParticles);
-	void STATIC_KillSkiff();
+	void KillSkiff();
 	void OnSkiffCrash(bool bFromImpact);
 	bool BP_PreventMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
 	void Tick_Crashing();
@@ -907,7 +907,7 @@ public:
 	void SetSkiffMovementInputAxisValue(int Axis, float newVal);
 	void OnBeamLocked();
 	void GetBeamEndPointRelative(struct FVector* LaserEndPoint);
-	void GetBeamStartPointRelative(bool bAdjustForCarriedChar, struct FVector* LaserStartPoint);
+	void STATIC_GetBeamStartPointRelative(bool bAdjustForCarriedChar, struct FVector* LaserStartPoint);
 	void OnBeamGrabbedChar(const struct FVector& GrabbedCharLocation);
 	bool BPAllowCarryCharacter(class APrimalCharacter** checkCharacter);
 	void STATIC_BPDidClearCarriedCharacter(class APrimalCharacter** PreviousCarriedCharacter);
@@ -920,7 +920,7 @@ public:
 	bool BPShouldLimitRightDirection();
 	bool BP_AllowWalkableSlopeOverride(class UPrimitiveComponent** ForComponent);
 	void BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode);
-	void STATIC_Tick_ManageThrusterFX();
+	void Tick_ManageThrusterFX();
 	void SetThrustersActive(bool bNewActive);
 	void OnSkiffSetFlight(bool bFly);
 	void BPOnSetFlight(bool* bFly);
@@ -962,14 +962,14 @@ public:
 	void Tick_ManipulateBeam();
 	void Get_BeamEndPoint(struct FVector* LaserEndPoint);
 	void Update_Beam_Particles_End_Point();
-	void Find_BeamTarget(class APrimalCharacter** foundPawn);
+	void STATIC_Find_BeamTarget(class APrimalCharacter** foundPawn);
 	void StopHovering();
 	void SetTimerIntervals(bool Fast);
 	bool BPShouldLimitForwardDirection();
 	struct FVector BPModifyForwardDirectionInput(struct FVector* directionInput);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void Update_Beam_BoneRotation(const struct FVector& NewEndPoint, bool Reset, const struct FRotator& ResetRotation);
-	void STATIC_Get_Beam_Start_Point(bool bAdjustForCarriedChar, struct FVector* LaserStartPoint);
+	void Get_Beam_Start_Point(bool bAdjustForCarriedChar, struct FVector* LaserStartPoint);
 	void OnBeamStartSearching();
 	void CalculateBeamViewTracePoints(bool bUseCurrentBeamLength, struct FVector* ViewStart, struct FVector* ViewEnd);
 	void ClearAllBeamChars(bool bOnlyClearBeamingChar);

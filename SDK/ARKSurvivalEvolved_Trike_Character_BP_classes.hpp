@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -149,12 +149,12 @@ public:
 	void Handle_Ram_Ended(bool* HitSomething);
 	void Calculate_Ram_Duration(float* HoldTime, float* Duration);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
-	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
+	bool STATIC_BPHandleControllerInitiatedAttack(int* AttackIndex);
 	bool BPHandleOnStopTargeting();
 	float BPGetHUDOverrideBuffProgressBarPercent();
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void GetPawnRootComponent(class AActor* Target, class UPrimitiveComponent** AsPrimitiveComponent);
-	float STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
+	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void UserConstructionScript();
 	void DoReflectDamage(class APawn* DamageTarget, float Damage, const struct FName& BoneName);
 	void MulticastReflectDamageEffect(const struct FName& FromBone);

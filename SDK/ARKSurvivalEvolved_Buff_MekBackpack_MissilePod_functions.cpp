@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetBackpackSaveData
-// (NetRequest, Exec, Native, NetResponse, Static, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
@@ -24,7 +24,6 @@ void ABuff_MekBackpack_MissilePod_C::STATIC_GetBackpackSaveData(struct FMekBackp
 	ABuff_MekBackpack_MissilePod_C_GetBackpackSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,7 +120,7 @@ void ABuff_MekBackpack_MissilePod_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.OnRep_MissilePodMalfunctioned
-// (Event, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 
 void ABuff_MekBackpack_MissilePod_C::OnRep_MissilePodMalfunctioned()
 {
@@ -208,7 +207,7 @@ void ABuff_MekBackpack_MissilePod_C::GetCurrentAmmo(int* AmmoQuantity)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetFireDirection
-// (NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Direction                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

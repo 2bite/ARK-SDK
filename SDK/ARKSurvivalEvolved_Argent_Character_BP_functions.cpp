@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,13 +33,13 @@ void AArgent_Character_BP_C::BPDidClearCarriedCharacter(class APrimalCharacter**
 
 
 // Function Argent_Character_BP.Argent_Character_BP_C.Allow Passenger in Slot
-// (Exec, Native, Event, NetResponse, NetMulticast, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Slot                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Allowed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AArgent_Character_BP_C::Allow_Passenger_in_Slot(class APrimalCharacter* Character, int Slot, bool* Allowed)
+void AArgent_Character_BP_C::STATIC_Allow_Passenger_in_Slot(class APrimalCharacter* Character, int Slot, bool* Allowed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Argent_Character_BP.Argent_Character_BP_C.Allow Passenger in Slot");
 
@@ -130,9 +130,9 @@ void AArgent_Character_BP_C::Get_Passenger(int Slot, class APrimalCharacter** Ch
 // ()
 // Parameters:
 // int                            Slot                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AArgent_Character_BP_C::Has_Passenger_In_Slot(int Slot, bool* Return_Value)
+void AArgent_Character_BP_C::Has_Passenger_In_Slot(int Slot, bool* return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Argent_Character_BP.Argent_Character_BP_C.Has Passenger In Slot");
 
@@ -145,8 +145,8 @@ void AArgent_Character_BP_C::Has_Passenger_In_Slot(int Slot, bool* Return_Value)
 
 	fn->FunctionFlags = flags;
 
-	if (Return_Value != nullptr)
-		*Return_Value = params.Return_Value;
+	if (return_value != nullptr)
+		*return_value = params.return_value;
 }
 
 

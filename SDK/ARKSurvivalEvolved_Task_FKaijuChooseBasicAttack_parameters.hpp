@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ struct UTask_FKaijuChooseBasicAttack_C_CheckIfTargetIsCloseToFoot_Params
 // Function Task_FKaijuChooseBasicAttack.Task_FKaijuChooseBasicAttack_C.MaybeFootstomp
 struct UTask_FKaijuChooseBasicAttack_C_MaybeFootstomp_Params
 {
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Task_FKaijuChooseBasicAttack.Task_FKaijuChooseBasicAttack_C.TargetIsFlying

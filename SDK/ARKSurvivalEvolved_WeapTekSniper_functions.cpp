@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -244,7 +244,7 @@ void AWeapTekSniper_C::BPOnScoped()
 
 
 // Function WeapTekSniper.WeapTekSniper_C.BPAppliedPrimalItemToWeapon
-// (Native, Event, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void AWeapTekSniper_C::BPAppliedPrimalItemToWeapon()
 {
@@ -262,7 +262,7 @@ void AWeapTekSniper_C::BPAppliedPrimalItemToWeapon()
 
 
 // Function WeapTekSniper.WeapTekSniper_C.ReceiveDestroyed
-// (Exec, Native, Event, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Event, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void AWeapTekSniper_C::ReceiveDestroyed()
 {
@@ -271,7 +271,6 @@ void AWeapTekSniper_C::ReceiveDestroyed()
 	AWeapTekSniper_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

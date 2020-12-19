@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -138,7 +138,7 @@ public:
 
 
 	void ReceiveBeginPlay();
-	void STATIC_IsValidHairCutTarget(class AActor* PotentialTarget, bool* bIsValid);
+	void IsValidHairCutTarget(class AActor* PotentialTarget, bool* bIsValid);
 	void OpenUI(class AShooterCharacter* TheTarget);
 	void GiveHairLocks(int NumLocks);
 	void STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);

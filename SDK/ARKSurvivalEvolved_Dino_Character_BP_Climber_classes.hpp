@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -503,7 +503,7 @@ public:
 	bool                                               CallFunc_EqualEqual_ByteByte_ReturnValue;                 // 0x2BF4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x2BF5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanOR_ReturnValue;                           // 0x2BF6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      K2Node_CustomEvent_newState;                              // 0x2BF7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      K2Node_CustomEvent_NewState;                              // 0x2BF7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_delay3;                                // 0x2BF8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData51[0x4];                                       // 0x2BFC(0x0004) MISSED OFFSET
 	class ADino_AIController_BP_Climber_C*             CallFunc_Get_Climber_Ai_Controller_ref;                   // 0x2C00(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -533,7 +533,7 @@ public:
 	struct FVector                                     CallFunc_Get_Climber_Capsule_BottomWorldLocation_bottom;  // 0x2C94(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BPFastTrace_ReturnValue;                         // 0x2CA0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData54[0x3];                                       // 0x2CA1(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_duration4;                             // 0x2CA4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_Duration4;                             // 0x2CA4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    K2Node_CustomEvent_desiredRotation;                       // 0x2CA8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue2;                // 0x2CB4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsLoadingSaveGame_ReturnValue;                   // 0x2CC0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -547,12 +547,12 @@ public:
 	struct FVector                                     K2Node_CustomEvent_lineStart;                             // 0x2CF4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_lineEnd;                               // 0x2D00(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_Color3;                                // 0x2D0C(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration3;                             // 0x2D1C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Thickness;                             // 0x2D20(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x2D24(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration3;                             // 0x2D1C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_thickness;                             // 0x2D20(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x2D24(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayAnimEx_ReturnValue;                          // 0x2D28(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    K2Node_CustomEvent_newRotation2;                          // 0x2D2C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x2D38(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x2D38(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_Velocity;                              // 0x2D3C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_SetActorRotation_ReturnValue;                    // 0x2D48(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData57[0x7];                                       // 0x2D49(0x0007) MISSED OFFSET
@@ -571,15 +571,15 @@ public:
 	bool                                               K2Node_CustomEvent_forceSuccess;                          // 0x2D79(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData60[0x2];                                       // 0x2D7A(0x0002) MISSED OFFSET
 	struct FVector                                     K2Node_CustomEvent_center2;                               // 0x2D7C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Radius;                                // 0x2D88(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_radius;                                // 0x2D88(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	int                                                K2Node_CustomEvent_segments;                              // 0x2D8C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_color2;                                // 0x2D90(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration2;                             // 0x2DA0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration2;                             // 0x2DA0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_center;                                // 0x2DA4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_extent;                                // 0x2DB0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FLinearColor                                K2Node_CustomEvent_color;                                 // 0x2DBC(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    K2Node_CustomEvent_Rotation;                              // 0x2DCC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration;                              // 0x2DD8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                K2Node_CustomEvent_Color;                                 // 0x2DBC(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_rotation;                              // 0x2DCC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x2DD8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsClimberClimbingSimple_Pure_result4;            // 0x2DDC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData61[0x3];                                       // 0x2DDD(0x0003) MISSED OFFSET
 	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x2DE0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -631,7 +631,7 @@ public:
 
 
 	void OnClimberFinishedAttaching();
-	void IsClimbingTraceHitResultValid(bool bValidHit, const struct FVector& TraceStart, const struct FVector& TraceEnd, int TraceIndex, int TraceRetryNum, struct FHitResult* Hit, bool* bResult);
+	void IsClimbingTraceHitResultValid(bool bValidHit, const struct FVector& TraceStart, const struct FVector& TraceEnd, int traceIndex, int TraceRetryNum, struct FHitResult* Hit, bool* bResult);
 	void CanClimberOverrideRetriedTraceResult(struct FHitResult* WithHit, bool* bResult);
 	void AdjustClimbTraceTransform(const struct FName& WithSocketName, struct UObject_FTransform* WithTraceTransform, struct UObject_FTransform* climberTransform, struct UObject_FTransform* AdjustedTransform);
 	void Tick_SimulateSeekingBetweenFrames(bool* bFoundSurface);
@@ -705,17 +705,17 @@ public:
 	void GetCorrectClimbingTraceMaxRetryCount(int index, int* Count);
 	void GetCorrectClimbingTraceType_Pure(int index, TEnumAsByte<E_DinoClimber_TraceType>* Type);
 	void GetCorrectClimbingTraceType(int index, TEnumAsByte<E_DinoClimber_TraceType>* Type);
-	void GetCorrectLookLockDot_Pure(int TraceIndex, float* Dot);
-	void GetCorrectLookLockDot(int TraceIndex, float* Dot);
-	void GetCorrectClimbingTraceWeight_Pure(int TraceIndex, bool isForReplace, float* Weight);
-	void GetCorrectClimbingTraceWeight(int TraceIndex, bool isForReplace, float* Weight);
-	void Should_Climber_Use_Climbing_Trace_Hit(int TraceIndex, const struct FVector& HitLocation, const struct FVector& HitNormal, bool* Result);
-	void CanClimberRetryClimbingTrace(int TraceIndex, bool* Result);
-	void ProcessResultsOfClimbingTraces(int numValidTraceHits, bool requireAllTraceHitsValid, int numTraceSockets, const struct UObject_FTransform& currentClimberTransform, bool centerTraceHit, const struct FVector& desiredSurfaceLocation, TArray<int>* traceIndecesArray, TArray<bool>* traceHitsArray, TArray<struct FVector>* traceHitLocationsArray, TArray<struct FVector>* traceNormalsArray, bool* isSurfaceValid, struct FVector* surfaceLocation, struct FVector* surfaceNormal, struct FVector* surfaceLocation_Move, struct FVector* SurfaceNormal_Move);
-	void STATIC_CenterSphereTraceForSurfaceLocation(const struct UObject_FTransform& currTransform, bool* foundSurface, struct FVector* surfaceLocation);
+	void GetCorrectLookLockDot_Pure(int traceIndex, float* dot);
+	void GetCorrectLookLockDot(int traceIndex, float* dot);
+	void GetCorrectClimbingTraceWeight_Pure(int traceIndex, bool isForReplace, float* Weight);
+	void GetCorrectClimbingTraceWeight(int traceIndex, bool isForReplace, float* Weight);
+	void Should_Climber_Use_Climbing_Trace_Hit(int traceIndex, const struct FVector& HitLocation, const struct FVector& HitNormal, bool* Result);
+	void CanClimberRetryClimbingTrace(int traceIndex, bool* Result);
+	void ProcessResultsOfClimbingTraces(int numValidTraceHits, bool requireAllTraceHitsValid, int numTraceSockets, const struct UObject_FTransform& currentClimberTransform, bool centerTraceHit, const struct FVector& desiredSurfaceLocation, TArray<int>* traceIndecesArray, TArray<bool>* traceHitsArray, TArray<struct FVector>* traceHitLocationsArray, TArray<struct FVector>* traceNormalsArray, bool* isSurfaceValid, struct FVector* SurfaceLocation, struct FVector* SurfaceNormal, struct FVector* SurfaceLocation_Move, struct FVector* surfaceNormal_Move);
+	void STATIC_CenterSphereTraceForSurfaceLocation(const struct UObject_FTransform& currTransform, bool* foundSurface, struct FVector* SurfaceLocation);
 	void STATIC_TraceForClimbableSurface(const struct UObject_FTransform& climberTransform, float TraceLength, bool preventTraceRetries, TArray<struct UObject_FTransform>* traceSocketOffsetTransforms, TArray<int>* currSurfaceTraceIndecesArray, bool* foundAnyValidTraceHits, int* numValidTraceHits, TArray<bool>* validTraceHits, TArray<struct FVector>* traceHitLocations, TArray<struct FVector>* traceHitNormals);
 	void ConvertRotatorToLocal_Pure(const struct FRotator& Rotator, struct FRotator* localRotator);
-	void STATIC_ClimbingIK_TraceForNewSurfaceNormals(const class FString& socketGroupSubstring, float* Dot);
+	void STATIC_ClimbingIK_TraceForNewSurfaceNormals(const class FString& socketGroupSubstring, float* dot);
 	void STATIC_ClimbingIK_UpdateMeshHeightOffset();
 	void UpdateClimbingIK();
 	void GetClimberDesiredWallJumpDir(struct FVector* desiredDir);
@@ -733,8 +733,8 @@ public:
 	void AddRiderToFinalCameraRotationArrays(class AShooterCharacter* RiderToAdd);
 	void DetermineNewRiderFinalCameraRotationIndex(class AShooterCharacter* theRider, int* index);
 	void RemoveRiderFromFinalCameraRotationArrays(class AShooterCharacter* RiderToRemove);
-	void GetClimberLookDirDotToClimbingNormal_Pure(float* Dot);
-	void GetClimberLookDirDotToClimbingNormal(float* Dot);
+	void GetClimberLookDirDotToClimbingNormal_Pure(float* dot);
+	void GetClimberLookDirDotToClimbingNormal(float* dot);
 	void GetClimberUpVector_Pure(struct FVector* Up);
 	void GetCurrentRiderFinalCameraRotationArrayIndex(class AShooterCharacter* thisRider, int* index);
 	void Update_Riding_Players_Final_Camera_Rotations(bool StartedClimbing);
@@ -746,7 +746,7 @@ public:
 	void Climber_AI_CanAttachOnSpawn(bool* Result);
 	void GetClimberLookDir(struct FVector* lookDir);
 	void IsPrimalCharacterFriendly(class APrimalCharacter* Character, bool* Result);
-	void Get_Climber_Look_Dir_Dot_to_Normal(const struct FVector& Normal, float* Dot);
+	void Get_Climber_Look_Dir_Dot_to_Normal(const struct FVector& Normal, float* dot);
 	void GetClimberViewLocation_Pure(struct FVector* Location);
 	void GetClimberViewLocation(struct FVector* Location);
 	void CanClimberSeek(bool isForStart, bool* Result);
@@ -759,7 +759,7 @@ public:
 	float BPModifyFOV(float* FOVIn);
 	void HasClimberResetTPVCamera(bool* Result);
 	void Stop_All_Climber_Logic();
-	void GetClimbingSurfaceNormalFromRotation(const struct FRotator& climbingRotation, struct FVector* surfaceNormal);
+	void GetClimbingSurfaceNormalFromRotation(const struct FRotator& climbingRotation, struct FVector* SurfaceNormal);
 	void GetAngleDeltaBetweenVectors(const struct FVector& VectorA, const struct FVector& VectorB, const struct FVector& AroundAxis, float* theta);
 	void Rotate_RotatorForwardVector_to_Target_Constant(const struct FRotator& currentRotator, const struct FVector& targetForward, float RotationRate, struct FRotator* newRotator);
 	void RemoveAxisFromVector(const struct FVector& Vector, const struct FVector& Axis, struct FVector* newVector);
@@ -776,7 +776,7 @@ public:
 	void Input_Run_Released();
 	void Input_Run_Pressed();
 	void ResetShouldDrawCrosshair();
-	void Climber_Check_for_ObstaclesInDir(const struct FVector& checkDir, float checkTrace_Distance, float checkTrace_Padding, TEnumAsByte<ETraceTypeQuery> checkTrace_Channel, bool forceDebug, bool* NoObstacles, struct FHitResult* obstacleHit);
+	void STATIC_Climber_Check_for_ObstaclesInDir(const struct FVector& checkDir, float checkTrace_Distance, float checkTrace_Padding, TEnumAsByte<ETraceTypeQuery> checkTrace_Channel, bool forceDebug, bool* NoObstacles, struct FHitResult* obstacleHit);
 	void DebugClimber_NetDrawDebug_Line(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FLinearColor& Color, float Duration, float Thickness, bool allowDraw, bool forceDebug, bool preventReplication);
 	void Get_Climber_Right_Vector_Pure(struct FVector* Right);
 	void Get_Climber_Forward_Vector_Pure(struct FVector* Forward);
@@ -829,14 +829,14 @@ public:
 	void Climber_OnClientRunReleased();
 	void Climber_OnClientRunPressed();
 	void On_Climbing_Traces_Found_No_Valid_Surface(TArray<bool>* hitMap);
-	void Get_New_Trace_Vectors_For_AroundCornerCheck(const struct FVector& TraceStart, const struct FVector& TraceEnd, int TraceIndex, int retryNum, bool didLastTraceHit, const struct FHitResult& lastTraceHitResult, bool* retryTrace, struct FVector* updatedTraceStart, struct FVector* updatedTraceEnd, bool* overrideTraceHit, struct FVector* newHitLoc, struct FVector* newHitNormal);
-	void GetCustomSurfaceTraceDistance(int TraceIndex, float* customDistance);
+	void Get_New_Trace_Vectors_For_AroundCornerCheck(const struct FVector& TraceStart, const struct FVector& TraceEnd, int traceIndex, int retryNum, bool didLastTraceHit, const struct FHitResult& lastTraceHitResult, bool* retryTrace, struct FVector* updatedTraceStart, struct FVector* updatedTraceEnd, bool* overrideTraceHit, struct FVector* newHitLoc, struct FVector* newHitNormal);
+	void GetCustomSurfaceTraceDistance(int traceIndex, float* customDistance);
 	void ShouldClimber_CenterSphereTraceForSurfaceLocation(bool* Result);
 	void SetNewClimbingRotation(const struct FRotator& NewRotation);
 	void ForceStopClimbingNow();
 	void Can_Climber_Apply_Detach_Impulse(bool* Result);
 	void LerpRotatorToTarget(const struct FRotator& currentRotator, const struct FRotator& targetRotator, float lerpSpeed, struct FRotator* lerpedRotator);
-	void STATIC_Trace_for_Non_Climbable_Surface(const struct FVector& traceDir, bool* Found);
+	void STATIC_Trace_for_Non_Climbable_Surface(const struct FVector& traceDir, bool* found);
 	void STATIC_Get_Surface_Trace_Offset_Array_from_UseTraceMap(TArray<bool>* useMap, TArray<struct UObject_FTransform>* Result, TArray<int>* indexArray);
 	void MakeClimbingRotationFromForwardVector(const struct FVector& newForward, struct FRotator* NewRotation);
 	void GetCurrentClimbingTurnAngleDelta(float* Delta);
@@ -845,18 +845,18 @@ public:
 	void SnapClimberToSurface();
 	void Get_ClimberState_Index(bool getPrevious, unsigned char* index);
 	void CanClimber_Update_Climbing_Rotation(const struct FRotator& NewRotation, bool* Result, struct FRotator* approvedRotation);
-	void CheckForRetrySurfaceTrace(const struct FVector& TraceStart, const struct FVector& TraceEnd, int TraceIndex, int retryNum, bool didLastTraceHit, const struct FHitResult& lastTraceHitResult, bool* retry, struct FVector* retryStart, struct FVector* retryEnd, bool* overrideTraceHit, struct FVector* NewLocation, struct FVector* newNormal);
+	void CheckForRetrySurfaceTrace(const struct FVector& TraceStart, const struct FVector& TraceEnd, int traceIndex, int retryNum, bool didLastTraceHit, const struct FHitResult& lastTraceHitResult, bool* retry, struct FVector* retryStart, struct FVector* retryEnd, bool* overrideTraceHit, struct FVector* NewLocation, struct FVector* newNormal);
 	void GetClimbingTurnDirection(int* turnDir);
 	void Get_Climber_Flipped_Rotation(struct FRotator* flipRotation);
 	void GetClimberFlipAxis(struct FVector* Axis);
 	void GetClimbingMoveDirFromRotation(const struct FRotator& Rotation, struct FVector* moveDir);
-	void Make_Climbing_Rotation_fromSurfaceNormal(const struct FVector& surfaceNormal, struct FRotator* Rotation);
+	void Make_Climbing_Rotation_fromSurfaceNormal(const struct FVector& SurfaceNormal, struct FRotator* Rotation);
 	void Get_Climber_Right_Vector(struct FVector* Right);
 	void Get_Climber_Forward_Vector(struct FVector* Forward);
 	void Get_Climber_Up_Vector(struct FVector* Up);
 	void SetClimberCanIgnoreWater(bool restoreToDefault, bool newVal);
 	void Can_Climber_Currently_Climb_Out_Of_Water(bool* Result);
-	void CheckForClimbOutOfWater(bool* AllowClimbing);
+	void CheckForClimbOutOfWater(bool* allowClimbing);
 	void UpdateControlledClientClimber();
 	void ClimberTick_Server();
 	void ClimberTick_NonDedi();
@@ -887,7 +887,7 @@ public:
 	void StoreClimb_Trace_Socket_Offsets();
 	void Is_Climber_Attaching(bool checkPrevious, bool* Result);
 	void RotateClimber_To_Look_Rotation();
-	void Check_For_Prevent_Stop_Climbing(int numValidHits, int numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing);
+	void Check_For_Prevent_Stop_Climbing(int numValidHits, int numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing);
 	void Update_RiderWithClimberState();
 	void IsClimberInAnyClimberState(bool checkPrevious, bool* Result);
 	void Flip_Attached_Climber();
@@ -895,7 +895,7 @@ public:
 	void Check_for_Attached_Climber_Flip();
 	void Is_Climber_Moving_on_Surface(bool checkPrevious, bool* Result);
 	void Get_Climbing_Forward_Velocity(float* forwardVelocity);
-	void Get_Climbing_Right_Velocity(float* RightVelocity);
+	void Get_Climbing_Right_Velocity(float* rightVelocity);
 	void Detach_Climber_from_Surface();
 	void ServerTick_Detaching();
 	void GetServerTickDeltaTime(float* DeltaTime);
@@ -914,7 +914,7 @@ public:
 	void Replicate_Index_Update_Target_TPV_Camera_Offset();
 	void Replicate_Index_Update_Server_And_Client_Climber();
 	void ReachedTop_Of_Climb();
-	void UpdateClimbingVars(bool validSurfaceFound, const struct FVector& surfaceNormal, const struct FVector& SurfaceNormal_Move, const struct FVector& surfaceLocation, const struct FVector& surfaceLocation_Move, TArray<bool>* hitMap, TArray<int>* traceIndexArray);
+	void UpdateClimbingVars(bool validSurfaceFound, const struct FVector& SurfaceNormal, const struct FVector& surfaceNormal_Move, const struct FVector& SurfaceLocation, const struct FVector& SurfaceLocation_Move, TArray<bool>* hitMap, TArray<int>* traceIndexArray);
 	void IsHitSurfaceClimbable(const struct FHitResult& Hit, bool* Result);
 	void ReplicateClimbing_Index();
 	void UpdateServerClimberByClimbingIndex();
@@ -955,16 +955,16 @@ public:
 	void Client_Set_Climber_State(unsigned char NewState);
 	void STATIC_Can_ClimberContinueClimbing(bool* Result);
 	void Climber_AI_SetAttachedToSurface(bool newVal, bool forceSuccess);
-	void Get_Climber_Ai_Controller(class ADino_AIController_BP_Climber_C** ref);
+	void Get_Climber_Ai_Controller(class ADino_AIController_BP_Climber_C** Ref);
 	void Climber_AI_DetachFromSurface();
 	void Is_Climber_Attached(bool checkPrevious, bool* Result);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void BPNotifySetRider(class AShooterCharacter** RiderSetting);
 	void BPTimerNonDedicated();
 	void Update_Climber_Transforms();
-	void Get_Default_Climber(class ADino_Character_BP_Climber_C** ref);
+	void Get_Default_Climber(class ADino_Character_BP_Climber_C** Ref);
 	void IsClimberGrounded(bool* Result);
-	void STATIC_CalcCurrentClimbableSurface(float TraceDistance, bool preventTraceRetries, bool requireAllTraceHitsAreValid, bool OverrideClimberTransform, const struct UObject_FTransform& NewTransform, bool OverrideTraceUseMap, TArray<bool>* newUseMap, bool* validSurfaceFound, struct FVector* surfaceNormal, struct FVector* SurfaceNormal_Move, struct FVector* surfaceLocation, struct FVector* surfaceLocation_Move, TArray<bool>* hitMap, TArray<int>* traceIndexArray);
+	void STATIC_CalcCurrentClimbableSurface(float TraceDistance, bool preventTraceRetries, bool requireAllTraceHitsAreValid, bool OverrideClimberTransform, const struct UObject_FTransform& NewTransform, bool OverrideTraceUseMap, TArray<bool>* newUseMap, bool* validSurfaceFound, struct FVector* SurfaceNormal, struct FVector* surfaceNormal_Move, struct FVector* SurfaceLocation, struct FVector* SurfaceLocation_Move, TArray<bool>* hitMap, TArray<int>* traceIndexArray);
 	void Net_Set_Climber_State(unsigned char newStateIndex);
 	void BPTimerServer();
 	void UserConstructionScript();
@@ -992,7 +992,7 @@ public:
 	void ClearClimberControlRotationRoll_NextTick();
 	void ReceiveBeginPlay();
 	void LockClimbingMeshRotationInterpSpeedForDuration(float Duration);
-	void Multi_SyncClimberDesiredRotationOnDetach(const struct FRotator& DesiredRotation);
+	void Multi_SyncClimberDesiredRotationOnDetach(const struct FRotator& desiredRotation);
 	void InitClimber_NextTick();
 	void InitClimber_Now();
 	void Multi_OnWallJump(const struct FVector& wallJumpVelocity);

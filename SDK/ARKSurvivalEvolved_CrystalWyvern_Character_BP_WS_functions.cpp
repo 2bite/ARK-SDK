@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CrystalWyvern_Character_BP_WS.CrystalWyvern_Character_BP_WS_C.SpawnWaterOverlapVFX
-// (NetReliable, Event, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  WaterActor                     (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ class FString UAnimNotify_PlayParticleEffect_C::GetNotifyName()
 
 
 // Function AnimNotify_PlayParticleEffect.AnimNotify_PlayParticleEffect_C.Received_Notify
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -49,7 +49,6 @@ bool UAnimNotify_PlayParticleEffect_C::STATIC_Received_Notify(class USkeletalMes
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

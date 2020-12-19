@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -177,7 +177,7 @@ void ABuff_Freeze_C::Initialize()
 
 
 // Function Buff_Freeze.Buff_Freeze_C.CreateMIC
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, DLLImport, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Static, NetMulticast, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 
 void ABuff_Freeze_C::STATIC_CreateMIC()
 {
@@ -186,7 +186,6 @@ void ABuff_Freeze_C::STATIC_CreateMIC()
 	ABuff_Freeze_C_CreateMIC_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -232,12 +231,12 @@ void ABuff_Freeze_C::ApplyFrozenDebuff()
 
 
 // Function Buff_Freeze.Buff_Freeze_C.AddFreeze
-// (Net, NetReliable, Exec, Static, NetMulticast, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // float                          amount                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Freeze_C::STATIC_AddFreeze(float amount, float Time)
+void ABuff_Freeze_C::AddFreeze(float amount, float Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Freeze.Buff_Freeze_C.AddFreeze");
 
@@ -246,6 +245,7 @@ void ABuff_Freeze_C::STATIC_AddFreeze(float amount, float Time)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

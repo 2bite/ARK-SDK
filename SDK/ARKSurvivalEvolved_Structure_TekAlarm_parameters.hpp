@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ struct AStructure_TekAlarm_C_InitSavedTribeLoggingSettings_Params
 // Function Structure_TekAlarm.Structure_TekAlarm_C.GetNextRotation
 struct AStructure_TekAlarm_C_GetNextRotation_Params
 {
-	struct FRotator                                    currentRotation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    CurrentRotation;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bDecrease;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Roll;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Pitch;                                                    // (Parm, ZeroConstructor, IsPlainOldData)

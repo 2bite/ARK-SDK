@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DmgType_Projectile_IceBreath_IceJumper.DmgType_Projectile_IceBreath_IceJumper_C.GetFreezeBuffAmountPerHit
-// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APrimalCharacter**       Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -28,7 +28,6 @@ void UDmgType_Projectile_IceBreath_IceJumper_C::GetFreezeBuffAmountPerHit(class 
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

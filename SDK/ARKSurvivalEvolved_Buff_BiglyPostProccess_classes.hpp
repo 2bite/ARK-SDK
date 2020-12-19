@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,10 +40,10 @@ public:
 	float GetBuffPostprocessIntensity();
 	bool AllowPostProcessEffect();
 	void Is_Valid_PounceTarget(class APrimalCharacter* Target, bool* Result);
-	void STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
+	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	void IsAnotherDinoAlreadyAttached(class AActor* Target, bool* ret);
 	void Can_Ignore_Traced_Actor(class AActor* Actor, bool* CanBeIgnored);
-	void BuffTickClient(float* DeltaTime);
+	void STATIC_BuffTickClient(float* DeltaTime);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_BiglyPostProccess(int EntryPoint);
 };

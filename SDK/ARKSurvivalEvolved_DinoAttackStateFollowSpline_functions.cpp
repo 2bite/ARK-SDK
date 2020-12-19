@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -256,9 +256,9 @@ void UDinoAttackStateFollowSpline_C::UpgradePawnAcceleration(bool Upgrade)
 // Function DinoAttackStateFollowSpline.DinoAttackStateFollowSpline_C.FindDragonSplines
 // ()
 // Parameters:
-// bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateFollowSpline_C::FindDragonSplines(bool* Found)
+void UDinoAttackStateFollowSpline_C::FindDragonSplines(bool* found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateFollowSpline.DinoAttackStateFollowSpline_C.FindDragonSplines");
 
@@ -270,8 +270,8 @@ void UDinoAttackStateFollowSpline_C::FindDragonSplines(bool* Found)
 
 	fn->FunctionFlags = flags;
 
-	if (Found != nullptr)
-		*Found = params.Found;
+	if (found != nullptr)
+		*found = params.found;
 }
 
 

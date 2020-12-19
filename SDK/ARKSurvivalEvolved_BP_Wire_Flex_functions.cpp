@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,13 +62,13 @@ bool ABP_Wire_Flex_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.BPGetMultiUseEntries
-// (NetReliable, Native, Static, Protected, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Event, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABP_Wire_Flex_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABP_Wire_Flex_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wire_Flex.BP_Wire_Flex_C.BPGetMultiUseEntries");
 
@@ -112,11 +112,11 @@ void ABP_Wire_Flex_C::LinkWires(TArray<class APrimalStructure*>* Connections)
 
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.AddSplineMeshComponents
-// (NetReliable, NetRequest, Native, Event, Static, Protected, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // bool                           UsePreviewMaterial             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Wire_Flex_C::STATIC_AddSplineMeshComponents(bool UsePreviewMaterial)
+void ABP_Wire_Flex_C::AddSplineMeshComponents(bool UsePreviewMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wire_Flex.BP_Wire_Flex_C.AddSplineMeshComponents");
 

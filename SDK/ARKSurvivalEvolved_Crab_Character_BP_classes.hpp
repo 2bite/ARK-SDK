@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,8 @@ public:
 	class UAnimMontage*                                ThrowAnim;                                                // 0x21B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              CrabThrowAimLimit;                                        // 0x21B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              ThrowFwdStrengthMax;                                      // 0x21BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              throwUpStrengthMin;                                       // 0x21C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              throwUpStrengthMax;                                       // 0x21C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ThrowUpStrengthMin;                                       // 0x21C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ThrowUpStrengthMax;                                       // 0x21C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bUsePCThrow;                                              // 0x21C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x21C9(0x0003) MISSED OFFSET
 	float                                              throwStaminaCost;                                         // 0x21CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -55,12 +55,12 @@ public:
 	bool                                               bUseGrabIdle;                                             // 0x2240(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x7];                                       // 0x2241(0x0007) MISSED OFFSET
 	double                                             LastClawAttackAttemptTime;                                // 0x2248(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ThrowTraceHit;                                            // 0x2250(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               throwTraceHit;                                            // 0x2250(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x3];                                       // 0x2251(0x0003) MISSED OFFSET
-	struct FVector                                     ThrowTraceLoc;                                            // 0x2254(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     throwTraceLoc;                                            // 0x2254(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class APrimalCharacter*                            PreviousRightGrabbedChar;                                 // 0x2260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class APrimalCharacter*                            PreviousLeftGrabbedChar;                                  // 0x2268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              ThrownCharactersApexTravelTime;                           // 0x2270(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              thrownCharactersApexTravelTime;                           // 0x2270(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              ThrowTowardCenterBias;                                    // 0x2274(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     TPVCameraThrowOffsetMultiplier;                           // 0x2278(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               UsingThrowOffset;                                         // 0x2284(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -212,7 +212,7 @@ public:
 	bool                                               K2Node_Select3_CmpSuccess;                                // 0x25A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               Temp_bool_IsClosed_Variable6;                             // 0x25A1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_ButtonHeld2;                           // 0x25A2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_CustomEvent_ButtonHeld;                            // 0x25A3(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_CustomEvent_buttonHeld;                            // 0x25A3(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	int                                                CallFunc_SelectInt_ReturnValue;                           // 0x25A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	int                                                CallFunc_SelectInt_ReturnValue2;                          // 0x25A8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_CanAttack_ReturnValue2;                          // 0x25AC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -235,7 +235,7 @@ public:
 	bool                                               K2Node_CustomEvent_WasBullet;                             // 0x25D0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData30[0x3];                                       // 0x25D1(0x0003) MISSED OFFSET
 	struct FVector                                     K2Node_CustomEvent_Location;                              // 0x25D4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    K2Node_CustomEvent_Rotation;                              // 0x25E0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_rotation;                              // 0x25E0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData31[0x4];                                       // 0x25EC(0x0004) MISSED OFFSET
 	class UParticleSystem*                             K2Node_Select_ReturnValue4;                               // 0x25F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_Select4_CmpSuccess;                                // 0x25F8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -312,8 +312,8 @@ public:
 	bool BPCanCryo(class AShooterPlayerController** ForPC);
 	struct FName BPGetDragSocketDinoName(class APrimalDinoCharacter** aGrabbedDino);
 	void BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode);
-	void Should_Stop_Jump_Rotation(bool* Return_Value);
-	bool BPShouldCancelDoAttack(int* AttackIndex);
+	void Should_Stop_Jump_Rotation(bool* return_value);
+	bool STATIC_BPShouldCancelDoAttack(int* AttackIndex);
 	float STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void ImpulseTowardTarget(bool IsApex);
 	void Shortest_Angle_Distance(float AngleCurrent, float AngleTarget, float* Difference);
@@ -334,7 +334,7 @@ public:
 	void LaunchAtTracePoint();
 	struct FVector GetClampedLookDir(bool LimitLowerPitch);
 	void STATIC_ThrowTrace();
-	float STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
+	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	bool IsCrabSubmerged();
 	void SlamIfDoubleClicking(int CurrentAttackIndex);
 	void PlayGrabbedIdle(bool IsMoving);
@@ -389,8 +389,8 @@ public:
 	void UpdateAllJumpRotation();
 	void UpdateJumpRotation();
 	void AnimNotify_CrabLand();
-	void ServerRequestRightAttack(bool buttonHeld);
-	void ServerRequestLeftAttack(bool buttonHeld);
+	void ServerRequestRightAttack(bool ButtonHeld);
+	void ServerRequestLeftAttack(bool ButtonHeld);
 	void DelayedRightAttack();
 	void DelayedLeftAttack();
 	void Server_DropRight();

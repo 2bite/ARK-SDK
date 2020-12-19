@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,7 +73,7 @@ public:
 	void UpdateWaterStatus();
 	void LinkPipes(TArray<class APrimalStructure*>* ConnectedPipes);
 	class FString BPOverrideCantBuildReasonString(int* CantBuildReason);
-	void AddSplineMeshComponents(bool UsePreviewMaterial);
+	void STATIC_AddSplineMeshComponents(bool UsePreviewMaterial);
 	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void UserConstructionScript();
 	void UpdateSplineMeshesEvent();

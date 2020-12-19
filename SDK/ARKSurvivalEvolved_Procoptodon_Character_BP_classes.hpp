@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -208,7 +208,7 @@ public:
 	void Prep_Jump();
 	bool ShouldStopJumpRotation();
 	struct FVector GetClampedLookDir(bool LimitLowerPitch);
-	void STATIC_JumpingTrace();
+	void JumpingTrace();
 	void ShortestAngleDistance(float AngleCurrent, float AngleTarget, float* Difference);
 	void BPNotifyCarriedDinoBabyAgeIncrement(class APrimalDinoCharacter** AgingCarriedDino, float* PreviousAge, float* NewAge);
 	struct FVector Find_Leap_Dir();

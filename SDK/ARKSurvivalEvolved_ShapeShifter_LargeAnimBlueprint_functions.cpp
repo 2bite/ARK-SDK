@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void UShapeShifter_LargeAnimBlueprint_C::IsRecentelyLatched(bool* ret)
 
 
 // Function ShapeShifter_LargeAnimBlueprint.ShapeShifter_LargeAnimBlueprint_C.IsFallingFromRecentLatch
-// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

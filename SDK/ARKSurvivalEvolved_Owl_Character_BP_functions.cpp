@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,7 +61,7 @@ bool AOwl_Character_BP_C::BPOnStartJump()
 
 
 // Function Owl_Character_BP.Owl_Character_BP_C.RidingTick
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Static, NetMulticast, Public, Private, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -104,24 +104,25 @@ bool AOwl_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
 
 
 // Function Owl_Character_BP.Owl_Character_BP_C.IsOnOrNearGround
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintEvent, Const)
 // Parameters:
-// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::STATIC_IsOnOrNearGround(bool* Return_Value)
+void AOwl_Character_BP_C::STATIC_IsOnOrNearGround(bool* return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.IsOnOrNearGround");
 
 	AOwl_Character_BP_C_IsOnOrNearGround_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (Return_Value != nullptr)
-		*Return_Value = params.Return_Value;
+	if (return_value != nullptr)
+		*return_value = params.return_value;
 }
 
 
@@ -154,9 +155,9 @@ void AOwl_Character_BP_C::SetupIceCrashState(bool Enabled, bool ApplyOneShotEnca
 // Function Owl_Character_BP.Owl_Character_BP_C.GetPredatorVisionStaminaDrainPerSecond
 // ()
 // Parameters:
-// float                          Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::GetPredatorVisionStaminaDrainPerSecond(float* Return_Value)
+void AOwl_Character_BP_C::GetPredatorVisionStaminaDrainPerSecond(float* return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.GetPredatorVisionStaminaDrainPerSecond");
 
@@ -168,8 +169,8 @@ void AOwl_Character_BP_C::GetPredatorVisionStaminaDrainPerSecond(float* Return_V
 
 	fn->FunctionFlags = flags;
 
-	if (Return_Value != nullptr)
-		*Return_Value = params.Return_Value;
+	if (return_value != nullptr)
+		*return_value = params.return_value;
 }
 
 
@@ -295,9 +296,9 @@ void AOwl_Character_BP_C::UpdateDivingFX()
 // Function Owl_Character_BP.Owl_Character_BP_C.GetEncapsulateStaminaDrainPerSecond
 // ()
 // Parameters:
-// float                          Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::GetEncapsulateStaminaDrainPerSecond(float* Return_Value)
+void AOwl_Character_BP_C::GetEncapsulateStaminaDrainPerSecond(float* return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.GetEncapsulateStaminaDrainPerSecond");
 
@@ -309,8 +310,8 @@ void AOwl_Character_BP_C::GetEncapsulateStaminaDrainPerSecond(float* Return_Valu
 
 	fn->FunctionFlags = flags;
 
-	if (Return_Value != nullptr)
-		*Return_Value = params.Return_Value;
+	if (return_value != nullptr)
+		*return_value = params.return_value;
 }
 
 

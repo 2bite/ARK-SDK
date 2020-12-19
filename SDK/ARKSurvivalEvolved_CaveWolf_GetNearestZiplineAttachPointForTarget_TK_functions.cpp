@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CaveWolf_GetNearestZiplineAttachPointForTarget_TK.CaveWolf_GetNearestZiplineAttachPointForTarget_TK_C.FindAttachLocation
-// (NetRequest, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 GroundLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 AttachLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UCaveWolf_GetNearestZiplineAttachPointForTarget_TK_C::STATIC_FindAttachLocation(struct FVector* GroundLocation, struct FVector* AttachLocation)
+void UCaveWolf_GetNearestZiplineAttachPointForTarget_TK_C::FindAttachLocation(struct FVector* GroundLocation, struct FVector* AttachLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CaveWolf_GetNearestZiplineAttachPointForTarget_TK.CaveWolf_GetNearestZiplineAttachPointForTarget_TK_C.FindAttachLocation");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function TekTeleporter.TekTeleporter_C.DoTeleportBatch
+struct ATekTeleporter_C_DoTeleportBatch_Params
+{
+};
 
 // Function TekTeleporter.TekTeleporter_C.BPServerHandleNetExecCommand
 struct ATekTeleporter_C_BPServerHandleNetExecCommand_Params

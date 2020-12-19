@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,7 +68,7 @@ struct ADirewolf_Character_BP_C_DoSniffAbility_Params
 struct ADirewolf_Character_BP_C_GetHiddenDinos_Params
 {
 	float                                              Radius;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<class AActor*>                              foundDinos;                                               // (Parm, OutParm, ZeroConstructor)
+	TArray<class AActor*>                              FoundDinos;                                               // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function Direwolf_Character_BP.Direwolf_Character_BP_C.GetExplorerChestsInRange

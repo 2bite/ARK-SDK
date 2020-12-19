@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -128,7 +128,7 @@ public:
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0D11(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData13[0x6];                                       // 0x0D12(0x0006) MISSED OFFSET
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x0D18(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	TEnumAsByte<E_TekThrusterState>                    K2Node_CustomEvent_newState;                              // 0x0D20(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<E_TekThrusterState>                    K2Node_CustomEvent_NewState;                              // 0x0D20(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum_CmpSuccess;                             // 0x0D21(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData14[0x6];                                       // 0x0D22(0x0006) MISSED OFFSET
 	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x0D28(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -189,7 +189,7 @@ public:
 	void BPDeactivated(class AActor** ForInstigator);
 	void Reset_Owning_PlayerVariables();
 	void UpdateIsSwimming();
-	void ClampPlayerVelocity(float maxVelocity);
+	void ClampPlayerVelocity(float MaxVelocity);
 	void UpdateTekShirtByState();
 	void OnRep_bIsUnderwater();
 	void RestoreThrusterStateFromCurrentInputs();

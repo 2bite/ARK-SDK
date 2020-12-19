@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -371,7 +371,7 @@ public:
 	bool                                               CallFunc_EqualEqual_VectorVector_ReturnValue;             // 0x3008(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData54[0x3];                                       // 0x3009(0x0003) MISSED OFFSET
 	int                                                CallFunc_Add_IntInt_ReturnValue2;                         // 0x300C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AActor*                                      K2Node_CustomEvent_target;                                // 0x3010(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AActor*                                      K2Node_CustomEvent_Target;                                // 0x3010(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_FlockOne;                              // 0x3018(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData55[0x7];                                       // 0x3019(0x0007) MISSED OFFSET
 	class APawn*                                       K2Node_DynamicCast_AsPawn;                                // 0x3020(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -402,7 +402,7 @@ public:
 	struct FVector                                     K2Node_CustomEvent_LightningLoc;                          // 0x30D8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_UseRelative;                           // 0x30E4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData61[0x3];                                       // 0x30E5(0x0003) MISSED OFFSET
-	struct FRotator                                    K2Node_CustomEvent_Rotation;                              // 0x30E8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_rotation;                              // 0x30E8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_BreakRot_Pitch3;                                 // 0x30F4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_BreakRot_Yaw3;                                   // 0x30F8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_BreakRot_Roll3;                                  // 0x30FC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -438,7 +438,7 @@ public:
 	unsigned char                                      UnknownData69[0x3];                                       // 0x31A9(0x0003) MISSED OFFSET
 	struct FLinearColor                                K2Node_CustomEvent_Color3;                                // 0x31AC(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_color2;                                // 0x31BC(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FLinearColor                                K2Node_CustomEvent_color;                                 // 0x31CC(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                K2Node_CustomEvent_Color;                                 // 0x31CC(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x31DC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData70[0x3];                                       // 0x31DD(0x0003) MISSED OFFSET
 	class USceneComponent*                             K2Node_CustomEvent_Loc2;                                  // 0x31E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -516,7 +516,7 @@ public:
 	TEnumAsByte<EDesertKaiju_ControlNodes>             K2Node_CustomEvent_Component;                             // 0x343C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum4_CmpSuccess;                            // 0x343D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData84[0x2];                                       // 0x343E(0x0002) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x3440(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x3440(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayAnimEx_ReturnValue;                          // 0x3444(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayAnimEx_ReturnValue2;                         // 0x3448(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayAnimEx_ReturnValue3;                         // 0x344C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -565,12 +565,12 @@ public:
 	class FString BPGetDebugInfoString();
 	void BPDinoARKDownloadedBegin();
 	bool BPCanBaseOnCharacter(class APrimalCharacter** BaseCharacter);
-	void ActorIsKaiju(class AActor* Actor, bool* Return);
+	void ActorIsKaiju(class AActor* Actor, bool* _return);
 	void BPDinoARKDownloadedEnd();
 	void OnRep_UseTamedPhysics();
 	struct FHitMarkerSettings BPOverrideDamageCauserHitMarker(class AShooterPlayerController** DamageCauserController, bool* bHitFriendlyTarget, float* PreDamageHealth, float* DamageAmount, bool* bIsPointDamage, struct FDamageEvent* DamageEvent, struct FHitResult* PointDamageHitResult);
 	void InterpSpawnInMICs(float Delta);
-	void PreventLocomotion_1(bool* Prevent);
+	void PreventLocomotion_1(bool* prevent);
 	void MaybeStunDesertKaiju(class UObject* Object);
 	void StunKaiju();
 	struct FVector STATIC_BPGetRiderUnboardLocation(class APrimalCharacter** RidingCharacter);
@@ -582,7 +582,7 @@ public:
 	void STATIC_Get_Kaiju_Transform(struct UObject_FTransform* ActualTransform);
 	void BPSetupTamed(bool* bWasJustTamed);
 	void TickLightningTargetVFX();
-	void UpdateLightningTargetVFXLocation(bool IsVisible, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, const struct FHitResult& HitResult, const struct FVector& surfaceNormal);
+	void UpdateLightningTargetVFXLocation(bool IsVisible, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, const struct FHitResult& HitResult, const struct FVector& SurfaceNormal);
 	void FindClosestSocketName(const struct FVector& CompareLoc, struct FName* ClosestSocket);
 	void BlinkDamageNodeInterp(float Delta);
 	void BP_OnSetDeath();
@@ -594,34 +594,34 @@ public:
 	void STATIC_TamedFlockScan_for_Enemies();
 	void Tamed_Flocks_Distance_to_Kaiju_Check();
 	void WildFlocks_Distance_to_Kaiju_Check();
-	void STATIC_FlockCommandTrace(bool FlockOne);
+	void FlockCommandTrace(bool FlockOne);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	void RecallTamedFlocks();
-	void PreventLightningAoEField(const struct FVector& ExplosionLoc, bool OnKaiju, bool* Prevent);
+	void PreventLightningAoEField(const struct FVector& ExplosionLoc, bool OnKaiju, bool* prevent);
 	struct FVector FindHUDOffset(class USceneComponent* HoldSocket);
 	void DestroyFauxNode(bool LFin);
 	void DamageFauxNode(float Damage, bool LeftNode);
 	void OnRep_RWingNodeHealth();
 	void BPDoAttack(int* AttackIndex);
-	void PreventLocomotion(bool* Prevent);
+	void PreventLocomotion(bool* prevent);
 	void Update_Locomotion(float Delta);
 	void OnRep_RiderControlFlockMode();
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void OnLanded(struct FHitResult* Hit);
 	void BPTimerServer();
-	void SpawnGroundFlock(bool FirstFlock);
+	void STATIC_SpawnGroundFlock(bool FirstFlock);
 	float BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void ShortestAngleDistance(float AngleCurrent, float AngleTarget, float* Difference);
-	void GetLookDir(struct FVector* Return);
-	void STATIC_LightningTrace(bool FireLightning, bool* ValidTarget, struct FVector* HitLoc, bool* HitActor, struct FVector* HitNormal, bool* SuccessFiredLightning);
+	void GetLookDir(struct FVector* _return);
+	void STATIC_LightningTrace(bool FireLightning, bool* ValidTarget, struct FVector* hitLoc, bool* HitActor, struct FVector* HitNormal, bool* SuccessFiredLightning);
 	void BPTimerNonDedicated();
 	bool BPHandleOnStopTargeting();
 	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
 	void BPNotifyClearPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex);
 	bool BPCanTakePassenger(class APrimalCharacter** Character, int* PassengerSeatIndex, bool* bForcePassenger, bool* bAllowFlyersAndWaterDinos);
 	bool BPAllowCarryCharacter(class APrimalCharacter** checkCharacter);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void StartTorpid();
 	void DestroyControlNode(TEnumAsByte<EDesertKaiju_ControlNodes> Node);
@@ -637,7 +637,7 @@ public:
 	void SetVar_DKArenaManager(class AActor* ArenaManager);
 	void ReceiveBeginPlay();
 	void SummonLightning(class AActor* Target, const struct FVector& LightningLoc, bool UseRelative, const struct FRotator& Rotation);
-	void Mutli_ExposeNodes(TEnumAsByte<EDesertKaiju_ControlNodes> Node, bool expose);
+	void Mutli_ExposeNodes(TEnumAsByte<EDesertKaiju_ControlNodes> Node, bool Expose);
 	void Multi_SetNodeColor(int Node, bool Activated, float Alpha, bool DamageNode);
 	void ActivateNode(TEnumAsByte<EDesertKaiju_ControlNodes> ControlNode);
 	void DeactivateNode(TEnumAsByte<EDesertKaiju_ControlNodes> ControlNode);
@@ -648,7 +648,7 @@ public:
 	void Deactivate_RWingNode();
 	void Deactivate_CentralNode();
 	void CtS_SetRiderControlFlockMode(bool Value);
-	void Multi_ExposeFauxNodes(bool LFin, bool expose);
+	void Multi_ExposeFauxNodes(bool LFin, bool Expose);
 	void Multi_SetFauxNodeColor(bool LFin, float Alpha);
 	void BndEvt__Mesh_K2Node_ComponentBoundEvent_192_ComponentHitSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, struct FHitResult* Hit);
 	void Multi_PlayRollingEffects(const struct FRotator& Rotator);
@@ -658,10 +658,10 @@ public:
 	void Server_RecallFlocks();
 	void Server_ForceTamedFlockTarget(class AActor* Target, bool FlockOne);
 	void Server_UpdateRiderLightningStrikeCharges(float Value);
-	void Passenger1DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool UseOverride);
-	void Passenger2DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool UseOverride);
-	void Passenger3DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool UseOverride);
-	void Passenger4DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool UseOverride);
+	void Passenger1DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool useOverride);
+	void Passenger2DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool useOverride);
+	void Passenger3DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool useOverride);
+	void Passenger4DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool useOverride);
 	void Multi_InterpLeftNode(const struct FLinearColor& Color);
 	void Multi_InterpRightNode(const struct FLinearColor& Color);
 	void Multi_CenterRightNode(const struct FLinearColor& Color);

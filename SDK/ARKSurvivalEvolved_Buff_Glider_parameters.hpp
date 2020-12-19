@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -200,7 +200,7 @@ struct ABuff_Glider_C_GetGlideSpeedRatio_Pure_Params
 // Function Buff_Glider.Buff_Glider_C.GetDefaultOwningPlayer
 struct ABuff_Glider_C_GetDefaultOwningPlayer_Params
 {
-	class AShooterCharacter*                           ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Glider.Buff_Glider_C.IsPlayerGrounded
@@ -249,7 +249,7 @@ struct ABuff_Glider_C_Reset_Owning_PlayerVariables_Params
 // Function Buff_Glider.Buff_Glider_C.ClampPlayerVelocity
 struct ABuff_Glider_C_ClampPlayerVelocity_Params
 {
-	float                                              maxVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxVelocity;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Glider.Buff_Glider_C.NetSetCurrentGliderState

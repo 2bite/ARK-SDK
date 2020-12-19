@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ struct ARadioActiveLanternGroundCharge_C_Get_Charge_Variable_Interface_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.BPRefreshedStructureColors
@@ -91,7 +91,7 @@ struct ARadioActiveLanternGroundCharge_C_ConsumeChargeAfterStasis_Params
 struct ARadioActiveLanternGroundCharge_C_GetLightModeForRange_Params
 {
 	float                                              Range;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                lightMode;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                LightMode;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.Update Light Effects
@@ -153,7 +153,7 @@ struct ARadioActiveLanternGroundCharge_C_BPNotifyInventoryItemChange_Params
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.GetLight ModeValues
 struct ARadioActiveLanternGroundCharge_C_GetLight_ModeValues_Params
 {
-	int                                                lightMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                LightMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Intensity;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              Emissiveness;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              Range;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -207,7 +207,7 @@ struct ARadioActiveLanternGroundCharge_C_Charge_Variable_Event_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.Charge Variable Event Trigger Multicast Interface
@@ -240,7 +240,7 @@ struct ARadioActiveLanternGroundCharge_C_Set_Charge_Variable_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               triggerEvent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               multicastEvent;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.CheckForBatteriesAndUpdate_Multicast
@@ -293,13 +293,13 @@ struct ARadioActiveLanternGroundCharge_C_CreateChargeBuff_Multicast_Params
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.OnLightModeChanged_Multicast
 struct ARadioActiveLanternGroundCharge_C_OnLightModeChanged_Multicast_Params
 {
-	int                                                lightMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                LightMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.OnLightModeChanged
 struct ARadioActiveLanternGroundCharge_C_OnLightModeChanged_Params
 {
-	int                                                lightMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                LightMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.ChargeVariableEvent_Boolean
@@ -407,28 +407,28 @@ struct ARadioActiveLanternGroundCharge_C_DeactivateLantern_Multicast_Params
 struct ARadioActiveLanternGroundCharge_C_ChargeVariableEventIntInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.ChargeVariableEventIntMulticastInterface
 struct ARadioActiveLanternGroundCharge_C_ChargeVariableEventIntMulticastInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.ChargeVariableEvent_Int
 struct ARadioActiveLanternGroundCharge_C_ChargeVariableEvent_Int_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.ChargeVariableEvent_Int_Multicast
 struct ARadioActiveLanternGroundCharge_C_ChargeVariableEvent_Int_Multicast_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.InitialUpdateMaterial

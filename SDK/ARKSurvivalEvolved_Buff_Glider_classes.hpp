@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -137,7 +137,7 @@ public:
 	float                                              TimeBeforeCancelGlide;                                    // 0x0BA8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData12[0x4];                                       // 0x0BAC(0x0004) MISSED OFFSET
 	double                                             ClientLastGlideStartTime;                                 // 0x0BB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<E_GliderStates>                        K2Node_CustomEvent_newState;                              // 0x0BB8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<E_GliderStates>                        K2Node_CustomEvent_NewState;                              // 0x0BB8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData13[0x7];                                       // 0x0BB9(0x0007) MISSED OFFSET
 	class AActor*                                      CallFunc_GetOwner_ReturnValue;                            // 0x0BC0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x0BC8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -220,11 +220,11 @@ public:
 	void ServerTick_UpdateGlideVelocity();
 	void UpdateGliderByState_NonDedicated();
 	void UpdateGliderByState_ServerAndClient();
-	void STATIC_UpdateGliderByState_Server();
+	void UpdateGliderByState_Server();
 	void OnRep_GliderState_Current();
 	void IsGliderActive(bool* Result);
 	void GetGlideSpeedRatio_Pure(float* Result);
-	void GetDefaultOwningPlayer(class AShooterCharacter** ref);
+	void GetDefaultOwningPlayer(class AShooterCharacter** Ref);
 	void IsPlayerGrounded(bool* Result);
 	void Can_Use_Glider(bool isToStart, bool* Result);
 	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
@@ -232,7 +232,7 @@ public:
 	void UpdateGliderFX();
 	void BPDeactivated(class AActor** ForInstigator);
 	void Reset_Owning_PlayerVariables();
-	void ClampPlayerVelocity(float maxVelocity);
+	void ClampPlayerVelocity(float MaxVelocity);
 	void NetSetCurrentGliderState(TEnumAsByte<E_GliderStates> NewState);
 	void BuffTickServer(float* DeltaTime);
 	void STATIC_ServerTick_UpdateGlidingRotation();

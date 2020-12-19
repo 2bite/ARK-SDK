@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 	void BuffTickServer(float* DeltaTime);
 	void UpdatePreventInstigatorAttack(class AActor* ForInstigator);
 	void BPSetupForInstigator(class AActor** ForInstigator);
-	void DoStruggle();
+	void STATIC_DoStruggle();
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
 	void UserConstructionScript();
 	void Server_Struggle();

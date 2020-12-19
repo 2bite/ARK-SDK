@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -290,16 +290,15 @@ void ATapejara_Character_BP_C::Controller_Follow_ActorRotation(float DeltaSecond
 
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.ReferenceLatchingObjects
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetResponse, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void ATapejara_Character_BP_C::STATIC_ReferenceLatchingObjects()
+void ATapejara_Character_BP_C::ReferenceLatchingObjects()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.ReferenceLatchingObjects");
 
 	ATapejara_Character_BP_C_ReferenceLatchingObjects_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -308,7 +307,7 @@ void ATapejara_Character_BP_C::STATIC_ReferenceLatchingObjects()
 
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.LineTrace
-// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintPure)
+// (Exec, Native, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UMeshComponent*          Mesh                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -387,12 +386,12 @@ void ATapejara_Character_BP_C::ProcessLatching(float DeltaSeconds)
 
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.TryLatch
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Event, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Offset                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           backwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATapejara_Character_BP_C::STATIC_TryLatch(const struct FVector& Offset, bool backwardsLatching)
+void ATapejara_Character_BP_C::TryLatch(const struct FVector& Offset, bool backwardsLatching)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.TryLatch");
 

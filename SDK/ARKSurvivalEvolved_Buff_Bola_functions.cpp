@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Bola.Buff_Bola_C.BPHandleOnStartFire
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -108,7 +108,7 @@ bool ABuff_Bola_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function Buff_Bola.Buff_Bola_C.BPGetMultiUseEntries
-// (Exec, Native, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Public, Protected, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -122,7 +122,6 @@ TArray<struct FMultiUseEntry> ABuff_Bola_C::BPGetMultiUseEntries(class APlayerCo
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

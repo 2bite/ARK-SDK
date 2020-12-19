@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_Allo_Fertilized_Volcano.PrimalItemConsumable_Egg_Allo_Fertilized_Volcano_C
-// 0x0000 (0x09E8 - 0x09E8)
+// 0x0000 (0x09F0 - 0x09F0)
 class UPrimalItemConsumable_Egg_Allo_Fertilized_Volcano_C : public UPrimalItemConsumable_Egg_Allo_C
 {
 public:

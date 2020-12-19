@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ public:
 
 	bool AllowManualMultiUseActivation(class APlayerController** ForPC);
 	void BPAttachedRootComponent();
-	void STATIC_BuildLadder();
+	void BuildLadder();
 	void UpdateBoxCollitionForRetraction();
 	void UserConstructionScript();
 	void ExecuteUbergraph_PortableRope_Ladder(int EntryPoint);

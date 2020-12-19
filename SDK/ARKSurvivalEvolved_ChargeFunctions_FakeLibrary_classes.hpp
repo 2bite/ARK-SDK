@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ public:
 	void STATIC_Structure_Create_Charge_Manager_Library(class APrimalStructure* Structure, class UClass* managerClass, class APrimalBuff** chargeManager);
 	void Weapon_Create_Charge_Manager_Library(class AShooterWeapon* weapon, class UClass* managerClass, class APrimalBuff** chargeManager);
 	void ChargeVariableEventLibrary(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, class AActor* OwnerActor, class APrimalBuff* managerBuff, bool multicastEvent);
-	void CharacterCreateChargeManagerLibrary(class APrimalCharacter* CharacterOwner, class UClass* managerClass, class APrimalBuff** chargeManager);
+	void STATIC_CharacterCreateChargeManagerLibrary(class APrimalCharacter* CharacterOwner, class UClass* managerClass, class APrimalBuff** chargeManager);
 	void ExecuteUbergraph_ChargeFunctions_FakeLibrary(int EntryPoint);
 };
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackState_EnforcerBlast.DinoAttackState_EnforcerBlast_C.BPOnAttackStart
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void UDinoAttackState_EnforcerBlast_C::BPOnAttackStart(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

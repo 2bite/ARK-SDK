@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -166,7 +166,7 @@ void ADiplocaulus_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMov
 
 
 // Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.ChangeLandSwimState
-// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // int                            State                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -178,7 +178,6 @@ void ADiplocaulus_Character_BP_C::STATIC_ChangeLandSwimState(int State)
 	params.State = State;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,13 +211,13 @@ bool ADiplocaulus_Character_BP_C::BPPreventRiding(class AShooterCharacter** ByPa
 
 
 // Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ADiplocaulus_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ADiplocaulus_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.BPGetMultiUseEntries");
 
@@ -226,6 +225,7 @@ TArray<struct FMultiUseEntry> ADiplocaulus_Character_BP_C::BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

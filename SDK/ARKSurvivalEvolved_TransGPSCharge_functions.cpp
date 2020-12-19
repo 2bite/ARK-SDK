@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,11 +30,11 @@ void ATransGPSCharge_C::BPPostLoadedFromSaveGame()
 
 
 // Function TransGPSCharge.TransGPSCharge_C.BPPlacedStructure
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATransGPSCharge_C::BPPlacedStructure(class APlayerController** ForPC)
+void ATransGPSCharge_C::STATIC_BPPlacedStructure(class APlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TransGPSCharge.TransGPSCharge_C.BPPlacedStructure");
 

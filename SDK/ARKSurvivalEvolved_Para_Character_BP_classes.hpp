@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -115,7 +115,7 @@ public:
 	void CanUseAlertPulse(bool* Result);
 	void ReceiveTick(float* DeltaSeconds);
 	void GetNearbyEnemies(TArray<struct FVector>* Locations);
-	void NotifyPlayerAboutAlert(class AShooterCharacter* Character);
+	void STATIC_NotifyPlayerAboutAlert(class AShooterCharacter* Character);
 	void SetHighFoodConsumption(bool Enabled);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void BPNotifySetRider(class AShooterCharacter** RiderSetting);

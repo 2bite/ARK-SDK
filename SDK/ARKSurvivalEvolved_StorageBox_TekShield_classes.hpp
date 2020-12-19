@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -128,8 +128,8 @@ public:
 	void OnRep_PowerUpCompletionTime();
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
-	bool STATIC_BPImpactEffect(struct FHitResult* HitRes, struct FVector* ShootDirection);
-	void STATIC_BPHitEffect(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, class UPrimitiveComponent** HitComponent, struct FVector* DamageLoc, struct FRotator* HitNormal, struct FDamageEvent* DamageEvent);
+	bool BPImpactEffect(struct FHitResult* HitRes, struct FVector* ShootDirection);
+	void BPHitEffect(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, class UPrimitiveComponent** HitComponent, struct FVector* DamageLoc, struct FRotator* HitNormal, struct FDamageEvent* DamageEvent);
 	bool BPSupressImpactEffects(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, class UPrimitiveComponent** HitComponent, struct FDamageEvent* DamageEvent);
 	void BPRefreshedStructureColors();
 	bool AllowIgnoreCharacterEncroachment(class UPrimitiveComponent** HitComponent, class AActor** EncroachingCharacter);
@@ -138,7 +138,7 @@ public:
 	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed);
 	void GetDesiredRadiusMultiplier(int IncrementAmount, float* OutRadiusMultiplier);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void CheckForExtraIgnorePawnPushers();
 	void BPPostInitializeComponents();
 	void BPPostSetStructureCollisionChannels();

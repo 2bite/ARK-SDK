@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -174,11 +174,11 @@ bool ATherizino_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Dist
 
 
 // Function Therizino_Character_BP.Therizino_Character_BP_C.SetClawAttackAnimByMovement
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int                            Attack_index                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATherizino_Character_BP_C::SetClawAttackAnimByMovement(int Attack_index)
+void ATherizino_Character_BP_C::STATIC_SetClawAttackAnimByMovement(int Attack_index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Therizino_Character_BP.Therizino_Character_BP_C.SetClawAttackAnimByMovement");
 
@@ -284,13 +284,13 @@ void ATherizino_Character_BP_C::BPNotifyLevelUp(int* ExtraCharacterLevel)
 
 
 // Function Therizino_Character_BP.Therizino_Character_BP_C.BPGetMultiUseEntries
-// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATherizino_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATherizino_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Therizino_Character_BP.Therizino_Character_BP_C.BPGetMultiUseEntries");
 
@@ -298,6 +298,7 @@ TArray<struct FMultiUseEntry> ATherizino_Character_BP_C::STATIC_BPGetMultiUseEnt
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -331,7 +332,7 @@ void ATherizino_Character_BP_C::Harvest_Multiplier_Level_Up(int UseEntryIndex)
 
 
 // Function Therizino_Character_BP.Therizino_Character_BP_C.MakeUseEntryString
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -344,7 +345,6 @@ class FString ATherizino_Character_BP_C::STATIC_MakeUseEntryString(int index)
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -380,7 +380,7 @@ bool ATherizino_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Therizino_Character_BP.Therizino_Character_BP_C.AddLevelUpEntries
-// (Native, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FMultiUseEntry>  FullEntryList                  (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -391,7 +391,6 @@ void ATherizino_Character_BP_C::AddLevelUpEntries(TArray<struct FMultiUseEntry>*
 	ATherizino_Character_BP_C_AddLevelUpEntries_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

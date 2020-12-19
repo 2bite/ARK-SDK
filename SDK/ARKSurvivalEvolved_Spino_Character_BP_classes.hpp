@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,7 +61,7 @@ public:
 	TArray<class UAnimMontage*>                        AdditiveAnims_Quad;                                       // 0x2268(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UAnimMontage*>                        AdditiveAnims_Biped;                                      // 0x2278(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	float                                              AIStanceSwitchCooldown;                                   // 0x2288(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x228C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x228C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x2290(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_DoAttack_ReturnValue;                            // 0x2291(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x2292(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -123,7 +123,7 @@ public:
 
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void BPDoAttack(int* AttackIndex);
-	void CanSwitchStances(bool isBiped, bool* CanSwitch);
+	void CanSwitchStances(bool isBiped, bool* canSwitch);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void GetStanceSwitchAnim(class UAnimMontage** AnimMontage);
 	void SS_SetCurrentStance(bool isBiped, bool bUseCooldown);

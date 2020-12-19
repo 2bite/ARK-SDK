@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -123,7 +123,7 @@ bool ABuff_BogSpiderBioGrappled_C::BPServerHandleNetExecCommand(class APlayerCon
 
 
 // Function Buff_BogSpiderBioGrappled.Buff_BogSpiderBioGrappled_C.ToggleEnsnareVFX
-// (Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
 
 void ABuff_BogSpiderBioGrappled_C::STATIC_ToggleEnsnareVFX()
 {

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,9 +83,9 @@ void ACrab_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMo
 // Function Crab_Character_BP.Crab_Character_BP_C.Should Stop Jump Rotation
 // ()
 // Parameters:
-// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ACrab_Character_BP_C::Should_Stop_Jump_Rotation(bool* Return_Value)
+void ACrab_Character_BP_C::Should_Stop_Jump_Rotation(bool* return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.Should Stop Jump Rotation");
 
@@ -97,18 +97,18 @@ void ACrab_Character_BP_C::Should_Stop_Jump_Rotation(bool* Return_Value)
 
 	fn->FunctionFlags = flags;
 
-	if (Return_Value != nullptr)
-		*Return_Value = params.Return_Value;
+	if (return_value != nullptr)
+		*return_value = params.return_value;
 }
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ACrab_Character_BP_C::BPShouldCancelDoAttack(int* AttackIndex)
+bool ACrab_Character_BP_C::STATIC_BPShouldCancelDoAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack");
 
@@ -116,6 +116,7 @@ bool ACrab_Character_BP_C::BPShouldCancelDoAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,7 +127,7 @@ bool ACrab_Character_BP_C::BPShouldCancelDoAttack(int* AttackIndex)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -145,7 +146,6 @@ float ACrab_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex,
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -548,7 +548,7 @@ struct FVector ACrab_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.ThrowTrace
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, NetServer, DLLImport, BlueprintPure)
+// (NetReliable, Event, NetResponse, Static, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
 void ACrab_Character_BP_C::STATIC_ThrowTrace()
 {
@@ -557,7 +557,6 @@ void ACrab_Character_BP_C::STATIC_ThrowTrace()
 	ACrab_Character_BP_C_ThrowTrace_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -566,7 +565,7 @@ void ACrab_Character_BP_C::STATIC_ThrowTrace()
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPAdjustDamage
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, DLLImport, BlueprintPure)
+// (NetResponse, NetMulticast, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -576,7 +575,7 @@ void ACrab_Character_BP_C::STATIC_ThrowTrace()
 // struct FHitResult*             PointHitInfo                   (Parm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ACrab_Character_BP_C::STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
+float ACrab_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.BPAdjustDamage");
 
@@ -589,7 +588,6 @@ float ACrab_Character_BP_C::STATIC_BPAdjustDamage(float* IncomingDamage, struct 
 	params.PointHitInfo = PointHitInfo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -785,7 +783,7 @@ void ACrab_Character_BP_C::Throw_Grabbed_Characters()
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.Retrieve Any Grabbable Character
-// (Exec, Native, MulticastDelegate, Private, NetServer, DLLImport, BlueprintPure)
+// (Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           FoundCharacter                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -796,7 +794,6 @@ void ACrab_Character_BP_C::Retrieve_Any_Grabbable_Character(bool* FoundCharacter
 	ACrab_Character_BP_C_Retrieve_Any_Grabbable_Character_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -967,7 +964,7 @@ void ACrab_Character_BP_C::SharedCanAttack(int AttackIndex, bool* CanAttack)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BlueprintCanAttack
-// (Event, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintPure)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -1638,14 +1635,14 @@ void ACrab_Character_BP_C::AnimNotify_CrabLand()
 // Function Crab_Character_BP.Crab_Character_BP_C.ServerRequestRightAttack
 // ()
 // Parameters:
-// bool                           buttonHeld                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ButtonHeld                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ACrab_Character_BP_C::ServerRequestRightAttack(bool buttonHeld)
+void ACrab_Character_BP_C::ServerRequestRightAttack(bool ButtonHeld)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.ServerRequestRightAttack");
 
 	ACrab_Character_BP_C_ServerRequestRightAttack_Params params;
-	params.buttonHeld = buttonHeld;
+	params.ButtonHeld = ButtonHeld;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1658,14 +1655,14 @@ void ACrab_Character_BP_C::ServerRequestRightAttack(bool buttonHeld)
 // Function Crab_Character_BP.Crab_Character_BP_C.ServerRequestLeftAttack
 // ()
 // Parameters:
-// bool                           buttonHeld                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ButtonHeld                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ACrab_Character_BP_C::ServerRequestLeftAttack(bool buttonHeld)
+void ACrab_Character_BP_C::ServerRequestLeftAttack(bool ButtonHeld)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.ServerRequestLeftAttack");
 
 	ACrab_Character_BP_C_ServerRequestLeftAttack_Params params;
-	params.buttonHeld = buttonHeld;
+	params.ButtonHeld = ButtonHeld;
 
 	auto flags = fn->FunctionFlags;
 

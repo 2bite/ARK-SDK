@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,11 +47,11 @@ public:
 
 
 	void BPDidClearCarriedCharacter(class APrimalCharacter** PreviousCarriedCharacter);
-	void Allow_Passenger_in_Slot(class APrimalCharacter* Character, int Slot, bool* Allowed);
+	void STATIC_Allow_Passenger_in_Slot(class APrimalCharacter* Character, int Slot, bool* Allowed);
 	bool BPAllowCarryCharacter(class APrimalCharacter** checkCharacter);
 	void Remove_Passenger_In_Slot(int Slot);
 	void Get_Passenger(int Slot, class APrimalCharacter** Char);
-	void Has_Passenger_In_Slot(int Slot, bool* Return_Value);
+	void Has_Passenger_In_Slot(int Slot, bool* return_value);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void BPDoAttack(int* AttackIndex);
 	void UpdateCarryAnim();

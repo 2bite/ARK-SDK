@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,11 +30,11 @@ void ABossTeleporter_C::Do_TeleportSound()
 
 
 // Function BossTeleporter.BossTeleporter_C.BuffTickClient
-// (Net, Native, Event, Static, NetMulticast, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABossTeleporter_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABossTeleporter_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossTeleporter.BossTeleporter_C.BuffTickClient");
 

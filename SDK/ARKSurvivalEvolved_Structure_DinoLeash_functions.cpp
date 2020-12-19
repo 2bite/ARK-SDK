@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -186,7 +186,7 @@ void AStructure_DinoLeash_C::BPContainerActivated()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BlueprintDrawPreviewHUD
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Event, Public, Protected, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -202,7 +202,6 @@ void AStructure_DinoLeash_C::BlueprintDrawPreviewHUD(class AShooterHUD** HUD, fl
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -423,7 +422,7 @@ bool AStructure_DinoLeash_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, Static, Public, Protected, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -437,6 +436,7 @@ TArray<struct FMultiUseEntry> AStructure_DinoLeash_C::STATIC_BPGetMultiUseEntrie
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

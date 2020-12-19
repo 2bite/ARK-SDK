@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -265,7 +265,7 @@ public:
 	bool BPCanMountOnCharacter(class APrimalCharacter** Character);
 	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool AllowPlayMontage(class UAnimMontage** AnimMontage);
-	class FString BPOverrideTamingDescriptionLabel(struct FSlateColor* TextColor);
+	class FString STATIC_BPOverrideTamingDescriptionLabel(struct FSlateColor* TextColor);
 	bool BPDisplayTamedMessage();
 	void BlueprintTamedTick();
 	void OnRep_InitialReplicationComplete();
@@ -275,10 +275,10 @@ public:
 	bool BPHandlePoop();
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void CalculateTransformationCountRequiredForTame(int Level, int* Count);
-	void UnTransform(int TransformationCount, class APrimalDinoCharacter* Bigly, class AShooterPlayerController* TamingController);
+	void STATIC_UnTransform(int TransformationCount, class APrimalDinoCharacter* Bigly, class AShooterPlayerController* TamingController);
 	void Calculate_Current_Element_Count_Required_for_Transform(int* cost);
 	bool BPDinoTooltipCustomTorpidityProgressBar(bool* overrideTorpidityProgressBarIfActive, float* progressPercent, class FString* Label);
-	bool STATIC_BPDinoTooltipCustomTamingProgressBar(bool* overrideTamingProgressBarIfActive, float* progressPercent, class FString* Label);
+	bool BPDinoTooltipCustomTamingProgressBar(bool* overrideTamingProgressBarIfActive, float* progressPercent, class FString* Label);
 	void K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode);
 	void TryThrowPoop();
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
@@ -303,9 +303,9 @@ public:
 	void BPOnSetMountedDino();
 	void Transform(class UAnimMontage* TransformAnim);
 	void TryBegFn();
-	void ReceiveTick(float* DeltaSeconds);
+	void STATIC_ReceiveTick(float* DeltaSeconds);
 	void ReceiveBeginPlay();
-	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
+	bool STATIC_BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	void IsPlayerNearby(bool* bNearby);
 	void UserConstructionScript();
 	void AnimNotify_AteElement();

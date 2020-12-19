@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPRemovedAsPassenger
+struct ADeinonychus_Character_BP_C_BPRemovedAsPassenger_Params
+{
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BP_OnEndCarried
+struct ADeinonychus_Character_BP_C_BP_OnEndCarried_Params
+{
+	bool*                                              bFromDino;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bCancelAnyCarryBuffs;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPServerHandleNetExecCommand
 struct ADeinonychus_Character_BP_C_BPServerHandleNetExecCommand_Params
@@ -334,7 +346,7 @@ struct ADeinonychus_Character_BP_C_OnDeinonychusLatchedAttack_Params
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.AllowSurfaceNormalForUberpounce
 struct ADeinonychus_Character_BP_C_AllowSurfaceNormalForUberpounce_Params
 {
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -641,7 +653,7 @@ struct ADeinonychus_Character_BP_C_GetDebugString_Params
 struct ADeinonychus_Character_BP_C_Get_RotationAndLocation_for_UberpounceOnSurface_Params
 {
 	struct FVector                                     Location;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         HitComponent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     DeinonychusLocation;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    RetRotation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -653,7 +665,7 @@ struct ADeinonychus_Character_BP_C_Get_RotationAndLocation_for_UberpounceOnSurfa
 struct ADeinonychus_Character_BP_C_IsValidGeoLocationForUberpounce_Params
 {
 	struct FVector                                     Location;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     DeinonychusLocation;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    DeinonychusRotation;                                      // (Parm, ZeroConstructor, IsPlainOldData)

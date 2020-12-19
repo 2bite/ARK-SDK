@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -93,7 +93,7 @@ struct ATusoteuthis_Character_BP_C_BPFedWakingTameEvent_Params
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino
 struct ATusoteuthis_Character_BP_C_GetDefaultDino_Params
 {
-	class ATusoteuthis_Character_BP_C*                 ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ATusoteuthis_Character_BP_C*                 Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.OnRep_UTurnTargetRot

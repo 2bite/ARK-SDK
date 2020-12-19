@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,7 +45,7 @@ public:
 	bool                                               UseHUDWidget;                                             // 0x0BBD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x2];                                       // 0x0BBE(0x0002) MISSED OFFSET
 	class UClass*                                      HUDWidget;                                                // 0x0BC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UUserWidget*                                 HudWidgetInstance;                                        // 0x0BC8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UUserWidget*                                 HUDWidgetInstance;                                        // 0x0BC8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CloseHudWidgetDelay;                                      // 0x0BD0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x4];                                       // 0x0BD4(0x0004) MISSED OFFSET
 	class UTexture2D*                                  DrumBeatIcon;                                             // 0x0BD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)

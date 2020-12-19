@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -149,7 +149,7 @@ public:
 	struct FVector                                     CallFunc_MakeVector_ReturnValue;                          // 0x1324(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_Location3;                             // 0x1330(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    K2Node_CustomEvent_Rotation3;                             // 0x133C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Radius;                                // 0x1348(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_radius;                                // 0x1348(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_MakeVector_ReturnValue2;                         // 0x134C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAtLocation_ReturnValue;              // 0x1358(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class UAudioComponent*                             CallFunc_PlaySoundAttached_ReturnValue;                   // 0x1360(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -164,7 +164,7 @@ public:
 	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAtLocation_ReturnValue2;             // 0x13B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class UAudioComponent*                             CallFunc_PlaySoundAttached_ReturnValue2;                  // 0x13B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_Location;                              // 0x13C0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    K2Node_CustomEvent_Rotation;                              // 0x13CC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_rotation;                              // 0x13CC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAtLocation_ReturnValue3;             // 0x13D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class UAudioComponent*                             CallFunc_PlaySoundAttached_ReturnValue3;                  // 0x13E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x13E8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.GetScoutStats
-// (Exec, NetResponse, Static, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, Event, Static, Public, Private, NetClient, BlueprintEvent, Const)
 // Parameters:
 // TArray<float>                  Stats                          (Parm, OutParm, ZeroConstructor)
 
@@ -24,6 +24,7 @@ void UPrimalItem_WeaponScoutRemote_C::STATIC_GetScoutStats(TArray<float>* Stats)
 	UPrimalItem_WeaponScoutRemote_C_GetScoutStats_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,7 +84,7 @@ class FString UPrimalItem_WeaponScoutRemote_C::BPGetItemName(class FString* Item
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.SetScoutCharacterStatusValues
-// (NetRequest, Event, NetResponse, Static, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, Public, Private, NetClient, BlueprintEvent, Const)
 // Parameters:
 // TArray<float>                  Stats                          (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -122,7 +123,7 @@ void UPrimalItem_WeaponScoutRemote_C::OnRep_ScoutStats()
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.BPGetItemDescription
-// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -201,18 +202,19 @@ void UPrimalItem_WeaponScoutRemote_C::BlueprintUnequipped()
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.Can FireWeapon
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, Public, NetClient, BlueprintEvent, Const)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EScoutRemoteReturnCode> FailReason                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_WeaponScoutRemote_C::STATIC_Can_FireWeapon(bool* Result, TEnumAsByte<EScoutRemoteReturnCode>* FailReason)
+void UPrimalItem_WeaponScoutRemote_C::Can_FireWeapon(bool* Result, TEnumAsByte<EScoutRemoteReturnCode>* FailReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.Can FireWeapon");
 
 	UPrimalItem_WeaponScoutRemote_C_Can_FireWeapon_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

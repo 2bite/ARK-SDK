@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ struct AOwl_Character_BP_C_BPHandleControllerInitiatedAttack_Params
 // Function Owl_Character_BP.Owl_Character_BP_C.IsOnOrNearGround
 struct AOwl_Character_BP_C_IsOnOrNearGround_Params
 {
-	bool                                               Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Owl_Character_BP.Owl_Character_BP_C.SetupIceCrashState
@@ -58,7 +58,7 @@ struct AOwl_Character_BP_C_SetupIceCrashState_Params
 // Function Owl_Character_BP.Owl_Character_BP_C.GetPredatorVisionStaminaDrainPerSecond
 struct AOwl_Character_BP_C_GetPredatorVisionStaminaDrainPerSecond_Params
 {
-	float                                              Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Owl_Character_BP.Owl_Character_BP_C.StopEncapsulateAnims
@@ -100,7 +100,7 @@ struct AOwl_Character_BP_C_UpdateDivingFX_Params
 // Function Owl_Character_BP.Owl_Character_BP_C.GetEncapsulateStaminaDrainPerSecond
 struct AOwl_Character_BP_C_GetEncapsulateStaminaDrainPerSecond_Params
 {
-	float                                              Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Owl_Character_BP.Owl_Character_BP_C.BPOnStaminaDrained

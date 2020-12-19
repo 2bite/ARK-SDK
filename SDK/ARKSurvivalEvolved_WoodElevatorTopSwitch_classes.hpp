@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,7 +62,7 @@ public:
 
 
 	void AllowedToChangePublicUse(class APlayerController* PC, bool* Allow);
-	void STATIC_Make_Multi_Use_Entry(TEnumAsByte<EPrimalStructureElevatorState> Direction, int Priority, struct FMultiUseEntry* Entry);
+	void Make_Multi_Use_Entry(TEnumAsByte<EPrimalStructureElevatorState> Direction, int Priority, struct FMultiUseEntry* Entry);
 	void Get_Elevator_Platform(class AWoodElevatorPlatform_Base_C** Elevator);
 	void Move_Elevator(class APrimalStructureElevatorPlatform* Elevator, class APlayerController* PC, TEnumAsByte<EPrimalStructureElevatorState> Direction, bool* Success);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);

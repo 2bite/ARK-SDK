@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,7 +40,7 @@ public:
 	void Modify_Charge(bool* SetValue, float* amount, bool* multicast, bool* triggerEvent, bool* multicastEvent, float* chargeAdded);
 	void EmitterUpdateChargeOnTimer(float* DeltaTime);
 	void ShouldEnableTimers(bool* tickServer, bool* TickClient);
-	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue);
+	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue);
 	void InitializeEmitter();
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_ChargeEmitterStructure_ChargeLantern(int EntryPoint);

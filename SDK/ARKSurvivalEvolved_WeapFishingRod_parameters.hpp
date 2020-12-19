@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ struct AWeapFishingRod_C_PlayFishAttackAnimation_Params
 struct AWeapFishingRod_C_IsPointInWater_Params
 {
 	struct FVector                                     Point;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.HandleReleasingFish
@@ -145,7 +145,7 @@ struct AWeapFishingRod_C_StartSecondaryActionEvent_Params
 struct AWeapFishingRod_C_CanSnareFish_Params
 {
 	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               canSnare;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               CanSnare;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.GenerateRandomKeys

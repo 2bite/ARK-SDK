@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,14 +84,14 @@ public:
 	float BPModifyHarvestingQuantity(float* originalQuantity, class UClass** resourceSelected);
 	void BPKilledSomethingEvent(class APrimalCharacter** killedTarget);
 	void OnNewTarget();
-	float STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
+	float BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void IsInsect(class APrimalDinoCharacter* Character, bool* NewParam);
 	void UserConstructionScript();
 	void SitDown(bool PlayAnim);
 	void TryStandUp();
 	void TrySitDown();
-	void StandUp();
+	void standUp();
 	void QuickSitDown();
 	void ReceiveBeginPlay();
 	void BPUnstasis();

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -325,7 +325,7 @@ void ABuff_TekArmor_Pants_C::NetSetRunningSpeedModifier(float newModifier)
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.RunDamageActor
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, Const, NetValidate)
+// (Exec, Event, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class AActor*                  HitActor                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DidRebound                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -651,9 +651,9 @@ void ABuff_TekArmor_Pants_C::SetChargeStartVariables()
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Get Default Player Run Speed Mult
 // ()
 // Parameters:
-// float                          speedMult                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          SpeedMult                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::Get_Default_Player_Run_Speed_Mult(float* speedMult)
+void ABuff_TekArmor_Pants_C::Get_Default_Player_Run_Speed_Mult(float* SpeedMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Get Default Player Run Speed Mult");
 
@@ -665,8 +665,8 @@ void ABuff_TekArmor_Pants_C::Get_Default_Player_Run_Speed_Mult(float* speedMult)
 
 	fn->FunctionFlags = flags;
 
-	if (speedMult != nullptr)
-		*speedMult = params.speedMult;
+	if (SpeedMult != nullptr)
+		*SpeedMult = params.SpeedMult;
 }
 
 
@@ -711,11 +711,11 @@ void ABuff_TekArmor_Pants_C::RedirectPlayerVelocity(const struct FVector& newFor
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.BuffTickClient
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::BuffTickClient(float* DeltaTime)
+void ABuff_TekArmor_Pants_C::STATIC_BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.BuffTickClient");
 
@@ -734,14 +734,14 @@ void ABuff_TekArmor_Pants_C::BuffTickClient(float* DeltaTime)
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.SetPreventEquipWeapons
 // ()
 // Parameters:
-// bool                           Prevent                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           prevent                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::SetPreventEquipWeapons(bool Prevent)
+void ABuff_TekArmor_Pants_C::SetPreventEquipWeapons(bool prevent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.SetPreventEquipWeapons");
 
 	ABuff_TekArmor_Pants_C_SetPreventEquipWeapons_Params params;
-	params.Prevent = Prevent;
+	params.prevent = prevent;
 
 	auto flags = fn->FunctionFlags;
 
@@ -814,7 +814,7 @@ void ABuff_TekArmor_Pants_C::ClearHitActors()
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace and Damage ForwardPawns
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 
 void ABuff_TekArmor_Pants_C::STATIC_Trace_and_Damage_ForwardPawns()
 {
@@ -823,7 +823,6 @@ void ABuff_TekArmor_Pants_C::STATIC_Trace_and_Damage_ForwardPawns()
 	ABuff_TekArmor_Pants_C_Trace_and_Damage_ForwardPawns_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -858,15 +857,16 @@ void ABuff_TekArmor_Pants_C::GetModifiedForward(float forwardScale, const struct
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace And Damage Forward StationaryActors
-// (NetReliable, NetRequest, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 
-void ABuff_TekArmor_Pants_C::Trace_And_Damage_Forward_StationaryActors()
+void ABuff_TekArmor_Pants_C::STATIC_Trace_And_Damage_Forward_StationaryActors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace And Damage Forward StationaryActors");
 
 	ABuff_TekArmor_Pants_C_Trace_And_Damage_Forward_StationaryActors_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

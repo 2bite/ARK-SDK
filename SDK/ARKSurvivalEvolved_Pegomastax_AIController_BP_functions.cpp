@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace sdk
 // Function Pegomastax_AIController_BP.Pegomastax_AIController_BP_C.UpdateAttackDestinationOffset
 // ()
 // Parameters:
-// bool                           isInWaitingState               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsInWaitingState               (Parm, ZeroConstructor, IsPlainOldData)
 
-void APegomastax_AIController_BP_C::UpdateAttackDestinationOffset(bool isInWaitingState)
+void APegomastax_AIController_BP_C::UpdateAttackDestinationOffset(bool IsInWaitingState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_AIController_BP.Pegomastax_AIController_BP_C.UpdateAttackDestinationOffset");
 
 	APegomastax_AIController_BP_C_UpdateAttackDestinationOffset_Params params;
-	params.isInWaitingState = isInWaitingState;
+	params.IsInWaitingState = IsInWaitingState;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,9 +84,9 @@ public:
 
 	void IsAllowedToRefreshConnections(class APlayerController* ForPC, bool* Allowed);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void LinkWires(TArray<class APrimalStructure*>* Connections);
-	void STATIC_AddSplineMeshComponents(bool UsePreviewMaterial);
+	void AddSplineMeshComponents(bool UsePreviewMaterial);
 	class FString BPOverrideCantBuildReasonString(int* CantBuildReason);
 	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void UserConstructionScript();

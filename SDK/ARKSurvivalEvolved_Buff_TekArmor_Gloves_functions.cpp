@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -145,7 +145,7 @@ void ABuff_TekArmor_Gloves_C::Should_Damage_Actor(class AActor** Victim, bool* R
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Has Line Of SightToActor
-// (NetReliable, NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, NetResponse, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -158,6 +158,7 @@ void ABuff_TekArmor_Gloves_C::Has_Line_Of_SightToActor(class AActor* Actor, bool
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -301,7 +302,7 @@ void ABuff_TekArmor_Gloves_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Update Local Vars by State
-// (NetRequest, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<E_TekGlovePunchState> NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -525,12 +526,12 @@ void ABuff_TekArmor_Gloves_C::CheckForTargetsWhileRocketPunching(bool* punchNow)
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Set AudioParams and Play
 // ()
 // Parameters:
-// class UAudioComponent*         audio                          (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UAudioComponent*         Audio                          (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           PlaySound                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Gloves_C::Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** audio)
+void ABuff_TekArmor_Gloves_C::Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** Audio)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Set AudioParams and Play");
 
@@ -545,8 +546,8 @@ void ABuff_TekArmor_Gloves_C::Set_AudioParams_and_Play(float Volume, float Pitch
 
 	fn->FunctionFlags = flags;
 
-	if (audio != nullptr)
-		*audio = params.audio;
+	if (Audio != nullptr)
+		*Audio = params.Audio;
 }
 
 
@@ -619,7 +620,7 @@ void ABuff_TekArmor_Gloves_C::DrawBuffFloatingHUD(int* BuffIndex, class AShooter
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.ScanForRocketFistTargets
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // float                          Range                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           anyHit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -634,7 +635,6 @@ void ABuff_TekArmor_Gloves_C::STATIC_ScanForRocketFistTargets(float Range, bool*
 	params.Range = Range;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -650,7 +650,7 @@ void ABuff_TekArmor_Gloves_C::STATIC_ScanForRocketFistTargets(float Range, bool*
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.AccurateSphereCheck
-// (NetReliable, Native, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 EndLocation                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -679,7 +679,7 @@ void ABuff_TekArmor_Gloves_C::AccurateSphereCheck(const struct FVector& EndLocat
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Spawn Sound at Fist Location
-// (NetReliable, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class USoundBase*              SoundToSpawn                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VolumeMultiplier               (Parm, ZeroConstructor, IsPlainOldData)
@@ -762,7 +762,7 @@ void ABuff_TekArmor_Gloves_C::RocketPunchStart()
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Punch
-// (NetReliable, Exec, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 
 void ABuff_TekArmor_Gloves_C::Punch()
 {
@@ -771,6 +771,7 @@ void ABuff_TekArmor_Gloves_C::Punch()
 	ABuff_TekArmor_Gloves_C_Punch_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

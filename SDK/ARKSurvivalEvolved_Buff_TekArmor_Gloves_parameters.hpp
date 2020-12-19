@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -165,7 +165,7 @@ struct ABuff_TekArmor_Gloves_C_CheckForTargetsWhileRocketPunching_Params
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Set AudioParams and Play
 struct ABuff_TekArmor_Gloves_C_Set_AudioParams_and_Play_Params
 {
-	class UAudioComponent*                             audio;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	class UAudioComponent*                             Audio;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	float                                              Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Pitch;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               PlaySound;                                                // (Parm, ZeroConstructor, IsPlainOldData)

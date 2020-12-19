@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Client_GiantTurtleRaftState.Buff_Client_GiantTurtleRaftState_C.BuffTickClient
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

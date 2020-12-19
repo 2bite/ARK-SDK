@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss
-// (Exec, Event, NetResponse, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // int*                           DifficultyIndex                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName*                  BossName                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -29,6 +29,7 @@ void UPrimalPlayerDataBP_Base_C::STATIC_BPForceDefeatedBoss(int* DifficultyIndex
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

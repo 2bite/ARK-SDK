@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -170,7 +170,7 @@ public:
 	bool                                               BelowTargetAnchor;                                        // 0x1BD6(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ZiplineJumping;                                           // 0x1BD7(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bHangingOnZipline;                                        // 0x1BD8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsUsingZipLine;                                          // 0x1BD9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bIsUsingZipline;                                          // 0x1BD9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x2];                                       // 0x1BDA(0x0002) MISSED OFFSET
 	struct FVector                                     CallFunc_Add_VectorVector_ReturnValue;                    // 0x1BDC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x1BE8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)

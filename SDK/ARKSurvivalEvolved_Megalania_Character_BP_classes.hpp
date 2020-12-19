@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,9 +42,9 @@ public:
 
 	void ClimbingIK_SetNewBlendspaceAxes();
 	void GetClimbingIK_BlendspaceAxes_Front(struct FVector2D* axes);
-	void GetCustomSurfaceTraceDistance(int* TraceIndex, float* customDistance);
+	void GetCustomSurfaceTraceDistance(int* traceIndex, float* customDistance);
 	void IsNormalClimbable(struct FVector* Normal, bool* isAverageNormal, bool* Result);
-	void Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing);
+	void Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void UserConstructionScript();

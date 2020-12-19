@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C
-// 0x0004 (0x09F4 - 0x09F0)
+// 0x0004 (0x09FC - 0x09F8)
 class UPrimalItemArmor_TropeSaddle_C : public UPrimalItemArmor_SaddleGeneric_C
 {
 public:
-	int                                                TooltipDisplayQualityOffset;                              // 0x09F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                TooltipDisplayQualityOffset;                              // 0x09F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,6 +28,7 @@ public:
 	}
 
 
+	bool BPAllowRemoteRemoveFromInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer);
 	class FString STATIC_GetInventoryIconDisplayText();
 	void ExecuteUbergraph_PrimalItemArmor_TropeSaddle(int EntryPoint);
 };

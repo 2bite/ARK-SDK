@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoBlueprintBase_RootTransform_FlyStrafing.DinoBlueprintBase_RootTransform_FlyStrafing_C.GetFlyingBlendspaceCoords
-// (NetReliable, Exec, Static, Public, Protected, Delegate, HasDefaults, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APrimalDinoCharacter*    ForDino                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               BlendspaceCoords               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoBlueprintBase_RootTransform_FlyStrafing_C::STATIC_GetFlyingBlendspaceCoords(class APrimalDinoCharacter* ForDino, struct FVector2D* BlendspaceCoords)
+void UDinoBlueprintBase_RootTransform_FlyStrafing_C::GetFlyingBlendspaceCoords(class APrimalDinoCharacter* ForDino, struct FVector2D* BlendspaceCoords)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoBlueprintBase_RootTransform_FlyStrafing.DinoBlueprintBase_RootTransform_FlyStrafing_C.GetFlyingBlendspaceCoords");
 
@@ -26,6 +26,7 @@ void UDinoBlueprintBase_RootTransform_FlyStrafing_C::STATIC_GetFlyingBlendspaceC
 	params.ForDino = ForDino;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

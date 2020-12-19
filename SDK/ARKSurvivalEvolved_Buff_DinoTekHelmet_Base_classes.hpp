@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -156,15 +156,15 @@ public:
 	}
 
 
-	void IsElectricalStormActive(bool* Return);
+	void IsElectricalStormActive(bool* _return);
 	void GetSocketClampDelta(float* OutSocketClampDelta);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
-	void IsAllowedToFire(const struct FVector& AimAtLoc, const struct FVector& ServerSpawnAtLoc, bool* bAllowed);
+	void STATIC_IsAllowedToFire(const struct FVector& AimAtLoc, const struct FVector& ServerSpawnAtLoc, bool* bAllowed);
 	bool HideBuffFromHUD();
 	void SetTargeting(bool bTargetingEnabled);
 	void BuffTickClient(float* DeltaTime);
-	void STATIC_LocalDoAttack(bool* bDidAttack);
+	void LocalDoAttack(bool* bDidAttack);
 	void PlayItemAnim(class UAnimMontage* PlayAnim);
 	void GetTekSaddleItem(class UPrimalItem** TekSaddleItem);
 	void UserConstructionScript();

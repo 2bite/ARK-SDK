@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 	void BPDeactivated(class AActor** ForInstigator);
 	void BPActivated(class AActor** ForInstigator);
 	void BuffTickServer(float* DeltaTime);
-	struct FStatusValueModifierDescription GetBuffDescription();
+	struct FStatusValueModifierDescription STATIC_GetBuffDescription();
 	void GetOwnerMek(bool* IsValid, bool* IsFriendly, class AMek_Character_BP_C** Mek);
 	bool IsOwnerMek();
 	bool HideBuffFromHUD();

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -162,8 +162,8 @@ struct AMegatherium_Character_BP_C_TrySitDown_Params
 {
 };
 
-// Function Megatherium_Character_BP.Megatherium_Character_BP_C.StandUp
-struct AMegatherium_Character_BP_C_StandUp_Params
+// Function Megatherium_Character_BP.Megatherium_Character_BP_C.standUp
+struct AMegatherium_Character_BP_C_standUp_Params
 {
 };
 

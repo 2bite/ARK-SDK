@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -232,16 +232,15 @@ void AHyaenodon_Character_BP_C::OnSaddleUnequipped()
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnSaddleEquipped
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
-void AHyaenodon_Character_BP_C::STATIC_OnSaddleEquipped()
+void AHyaenodon_Character_BP_C::OnSaddleEquipped()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnSaddleEquipped");
 
 	AHyaenodon_Character_BP_C_OnSaddleEquipped_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -715,13 +714,13 @@ void AHyaenodon_Character_BP_C::IsInTamingFriendlyState(bool* tamingCanOccur, bo
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AHyaenodon_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AHyaenodon_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.BPGetMultiUseEntries");
 
@@ -729,6 +728,7 @@ TArray<struct FMultiUseEntry> AHyaenodon_Character_BP_C::STATIC_BPGetMultiUseEnt
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -767,11 +767,11 @@ bool AHyaenodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnEatFood
-// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimalItem*             foodItem                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AHyaenodon_Character_BP_C::OnEatFood(class UPrimalItem* foodItem)
+void AHyaenodon_Character_BP_C::STATIC_OnEatFood(class UPrimalItem* foodItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnEatFood");
 
@@ -779,6 +779,7 @@ void AHyaenodon_Character_BP_C::OnEatFood(class UPrimalItem* foodItem)
 	params.foodItem = foodItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1028,14 +1029,14 @@ void AHyaenodon_Character_BP_C::TrySitDown()
 }
 
 
-// Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.StandUp
+// Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.standUp
 // ()
 
-void AHyaenodon_Character_BP_C::StandUp()
+void AHyaenodon_Character_BP_C::standUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.StandUp");
+	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.standUp");
 
-	AHyaenodon_Character_BP_C_StandUp_Params params;
+	AHyaenodon_Character_BP_C_standUp_Params params;
 
 	auto flags = fn->FunctionFlags;
 

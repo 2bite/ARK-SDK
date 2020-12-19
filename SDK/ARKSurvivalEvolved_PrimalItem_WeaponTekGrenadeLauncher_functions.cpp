@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_WeaponTekGrenadeLauncher.PrimalItem_WeaponTekGrenadeLauncher_C.BPGetItemDescription
-// (Native, NetResponse, Static, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)

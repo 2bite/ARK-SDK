@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void UPrimalItemSkin_MiniHLNA_C::hide_skin()
 
 
 // Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.BPGetItemDescription
-// (Net, NetReliable, NetRequest, Event, NetResponse, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -47,6 +47,7 @@ class FString UPrimalItemSkin_MiniHLNA_C::BPGetItemDescription(class FString* In
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,7 +49,7 @@ public:
 
 
 	void ReceiveTick(float* DeltaSeconds);
-	void SpawnOilFire(const struct FVector& OverrideOriginLocation);
+	void STATIC_SpawnOilFire(const struct FVector& OverrideOriginLocation);
 	void UserConstructionScript();
 	void OnTakeAnyDamage_Event(float Damage, class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser);
 	void ReceiveBeginPlay();

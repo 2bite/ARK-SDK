@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPGetDebugInfoString
-// (Net, NetRequest, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, Native, NetResponse, Static, NetMulticast, Public, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ABuff_ScoutVision_C::BPGetDebugInfoString()
+class FString ABuff_ScoutVision_C::STATIC_BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutVision.Buff_ScoutVision_C.BPGetDebugInfoString");
 
 	ABuff_ScoutVision_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,9 +75,9 @@ void ABuff_ScoutVision_C::ReceiveBeginPlay()
 // Function Buff_ScoutVision.Buff_ScoutVision_C.IsLocalScout
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ScoutVision_C::IsLocalScout(bool* Retval)
+void ABuff_ScoutVision_C::IsLocalScout(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutVision.Buff_ScoutVision_C.IsLocalScout");
 
@@ -88,8 +89,8 @@ void ABuff_ScoutVision_C::IsLocalScout(bool* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -184,14 +185,14 @@ void ABuff_ScoutVision_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPDrawBuffStatusHUD
-// (NetReliable, Native, Event, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ScoutVision_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_ScoutVision_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutVision.Buff_ScoutVision_C.BPDrawBuffStatusHUD");
 

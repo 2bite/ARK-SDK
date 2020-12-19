@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,7 +71,7 @@ public:
 	void IsValidHitLocationForAttachment(struct FHitResult* Hit, bool* IsValidHit);
 	bool BPWeaponCanFire();
 	void Get_ZipProjectile_Default_Object(class AProjZiplineAnchor_C** AsProjArrow_Zipline_Bolt_C);
-	void Update_Preview_Cable();
+	void STATIC_Update_Preview_Cable();
 	void ReceiveTick(float* DeltaSeconds);
 	void ReceiveDestroyed();
 	void UserConstructionScript();

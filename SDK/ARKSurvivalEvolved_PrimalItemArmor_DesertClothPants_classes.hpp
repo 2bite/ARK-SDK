@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_DesertClothPants.PrimalItemArmor_DesertClothPants_C
-// 0x0000 (0x0A10 - 0x0A10)
+// 0x0000 (0x0A18 - 0x0A18)
 class UPrimalItemArmor_DesertClothPants_C : public UPrimalItemArmor_BasePants_C
 {
 public:

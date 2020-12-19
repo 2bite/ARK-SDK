@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_Spawner_Enforcer.PrimalItem_Spawner_Enforcer_C
-// 0x0020 (0x0C00 - 0x0BE0)
+// 0x0020 (0x0C08 - 0x0BE8)
 class UPrimalItem_Spawner_Enforcer_C : public UPrimalItem_DinoSpawner_Base_C
 {
 public:
-	class FString                                      FoodStatLabel;                                            // 0x0BE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class FString                                      MeleeDamageStatLabel;                                     // 0x0BF0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                      FoodStatLabel;                                            // 0x0BE8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class FString                                      MeleeDamageStatLabel;                                     // 0x0BF8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

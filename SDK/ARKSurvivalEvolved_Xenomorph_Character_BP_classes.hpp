@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -354,7 +354,7 @@ public:
 
 
 	void GetNumBatteries(int* numBatteries);
-	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue);
+	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue);
 	bool BPPreventAttachments(class UObject** ForItem);
 	void RefreshTamedAttachments();
 	bool AllowPlayMontage(class UAnimMontage** AnimMontage);
@@ -381,11 +381,11 @@ public:
 	void CancelImpregnateGrab();
 	void IncreaseTameAffinity(float AffinityToAdd, class AShooterCharacter* PlayerChar);
 	void BPOnTamedProcessOrder(class APrimalCharacter** FromCharacter, TEnumAsByte<EDinoTamedOrder>* OrderType, bool* bForce, class AActor** enemyTarget, bool* orderNotExecuted);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode);
 	void BPDoAttack(int* AttackIndex);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
-	void STATIC_Can_Dive(bool* Return);
+	void STATIC_Can_Dive(bool* _return);
 	bool Tamed_Has_Valid_Enemy();
 	void AcidDamageEvent(const struct FVector& OriginLoc, const struct FVector& SprayDir);
 	void DiveSetup();
@@ -412,11 +412,11 @@ public:
 	void Charge_Variable_Event_Boolean_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue);
 	void ChargeVariableEventFloatInterface(TEnumAsByte<E_ChargeVariableNames> variableType, float fValue);
 	void ChargeVariableEventDoubleInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
-	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
-	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
+	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
+	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
 	void ReceiveBeginPlay();
-	void StartAcidSpray(const struct FVector& HitLoc, const struct FVector& HitDir, const struct FName& HitBone);
-	void Server_StartAcidSpray(const struct FVector& HitLoc, const struct FVector& HitDir, const struct FName& HitBone);
+	void StartAcidSpray(const struct FVector& hitLoc, const struct FVector& HitDir, const struct FName& HitBone);
+	void Server_StartAcidSpray(const struct FVector& hitLoc, const struct FVector& HitDir, const struct FName& HitBone);
 	void Server_TryDive(bool NewUnderground);
 	void AnimNotify_StartBury();
 	void AnimNotify_EndBury();
@@ -447,8 +447,8 @@ public:
 	void ChargeVariableEvent_Boolean_Multicast(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue);
 	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue);
 	void Charge_Variable_Event_Trigger_Multicast_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iVariable);
-	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue);
-	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue);
+	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue);
+	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue);
 	void PlayGroundParticleVFX(bool orientToGround, class UParticleSystem* ParticleSystem, const struct FVector& OffsetFromRoot);
 	void ExecuteUbergraph_Xenomorph_Character_BP(int EntryPoint);
 };

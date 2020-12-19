@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -114,14 +114,14 @@ public:
 	void BPDeactivated(class AActor** ForInstigator);
 	void ResetTargetFOV();
 	void IsWarping_FOV(bool* Result);
-	void Get_DefaultTekBuff(class ABuff_TekArmor_C** ref);
-	void GetDefaultPlayer(class APrimalCharacter** ref);
-	void Client_Consume_Element_After_Time(float DeltaTime, int ElementCost);
+	void Get_DefaultTekBuff(class ABuff_TekArmor_C** Ref);
+	void GetDefaultPlayer(class APrimalCharacter** Ref);
+	void Client_Consume_Element_After_Time(float DeltaTime, int elementCost);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void IsPlayerGrounded(bool* Result);
-	void Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** ref);
+	void Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** Ref);
 	void UpdatePlayerFOV(float intensityRatio, bool warpIn);
-	void Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** movement);
+	void Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** Movement);
 	void Get_Ref_Owning_PlayerController(class AShooterPlayerController** Controller);
 	void GetRef_OwningPlayer(class AShooterCharacter** Player);
 	void AreAnyTekAbilitiesActive(bool* Result);

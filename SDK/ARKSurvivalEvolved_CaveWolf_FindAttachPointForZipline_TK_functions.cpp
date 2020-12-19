@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CaveWolf_FindAttachPointForZipline_TK.CaveWolf_FindAttachPointForZipline_TK_C.ReceiveExecute
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, NetMulticast, Public, NetServer, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UCaveWolf_FindAttachPointForZipline_TK_C::ReceiveExecute(class AActor** Own
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

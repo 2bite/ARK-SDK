@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,8 +75,8 @@ public:
 	float                                              sleepingWaterSubmergedDepthThreshold;                     // 0x2288(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bForcePreventNocturnalLogic;                              // 0x228C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x3];                                       // 0x228D(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x2290(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x2294(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x2290(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x2294(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AActor*                                      K2Node_ComponentBoundEvent_OtherActor;                    // 0x2298(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class UPrimitiveComponent*                         K2Node_ComponentBoundEvent_OtherComp;                     // 0x22A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_ComponentBoundEvent_NormalImpulse;                 // 0x22A8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)

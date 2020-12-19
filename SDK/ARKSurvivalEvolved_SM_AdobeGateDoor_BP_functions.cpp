@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SM_AdobeGateDoor_BP.SM_AdobeGateDoor_BP_C.UserConstructionScript
-// (NetRequest, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
 
 void ASM_AdobeGateDoor_BP_C::STATIC_UserConstructionScript()
 {
@@ -22,6 +22,7 @@ void ASM_AdobeGateDoor_BP_C::STATIC_UserConstructionScript()
 	ASM_AdobeGateDoor_BP_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

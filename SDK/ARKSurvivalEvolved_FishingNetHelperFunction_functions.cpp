@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -119,15 +119,15 @@ void UFishingNetHelperFunction_C::reel(class UObject* Fisher)
 // Function FishingNetHelperFunction.FishingNetHelperFunction_C.Update Rope
 // ()
 // Parameters:
-// class AShooterProjectile*      net_projectile                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterProjectile*      Net_Projectile                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Rope_Endpoint_Location         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UFishingNetHelperFunction_C::Update_Rope(class AShooterProjectile* net_projectile, const struct FVector& Rope_Endpoint_Location)
+void UFishingNetHelperFunction_C::Update_Rope(class AShooterProjectile* Net_Projectile, const struct FVector& Rope_Endpoint_Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FishingNetHelperFunction.FishingNetHelperFunction_C.Update Rope");
 
 	UFishingNetHelperFunction_C_Update_Rope_Params params;
-	params.net_projectile = net_projectile;
+	params.Net_Projectile = Net_Projectile;
 	params.Rope_Endpoint_Location = Rope_Endpoint_Location;
 
 	auto flags = fn->FunctionFlags;

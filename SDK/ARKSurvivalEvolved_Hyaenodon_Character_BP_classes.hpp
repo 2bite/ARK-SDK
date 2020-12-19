@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,7 +47,7 @@ public:
 	float                                              PackPowerExp;                                             // 0x22A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ThresholdToFleeFromADangerousDino;                        // 0x22A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              attackFoodWaterThreshold;                                 // 0x22AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AttackStaminaThreshold;                                   // 0x22B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              attackStaminaThreshold;                                   // 0x22B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               DontLoseTargetUntilFleeEnd;                               // 0x22B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x22B5(0x0003) MISSED OFFSET
 	float                                              pettingCooldown;                                          // 0x22B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -100,7 +100,7 @@ public:
 	class APrimalDinoCharacter*                        K2Node_DynamicCast_AsPrimalDinoCharacter;                 // 0x2380(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast3_CastSuccess;                          // 0x2388(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData14[0x3];                                       // 0x2389(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x238C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x238C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Greater_FloatFloat_ReturnValue;                  // 0x2390(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData15[0x3];                                       // 0x2391(0x0003) MISSED OFFSET
 	int                                                Temp_int_Loop_Counter_Variable;                           // 0x2394(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -169,7 +169,7 @@ public:
 	void OnJumped();
 	bool BPShouldCancelDoAttack(int* AttackIndex);
 	void OnSaddleUnequipped();
-	void STATIC_OnSaddleEquipped();
+	void OnSaddleEquipped();
 	void Reset_Taming(bool ForceReset);
 	void AttemptToFleeFromActor(class AActor* ActorToCheck, bool IsCurrentTargetDangerous, bool* DidFlee);
 	void IsActorLowOnResources(class AActor* ActorToCheck, bool* IsLow);
@@ -190,9 +190,9 @@ public:
 	void OnWildPet(class APlayerController* petterPC);
 	bool BPShouldForceFlee();
 	void IsInTamingFriendlyState(bool* tamingCanOccur, bool* leaderIsNearby);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	void OnEatFood(class UPrimalItem* foodItem);
+	void STATIC_OnEatFood(class UPrimalItem* foodItem);
 	void BPTamedConsumeFoodItem(class UPrimalItem** foodItem);
 	void BPUntamedConsumeFoodItem(class UPrimalItem** foodItem);
 	void UserConstructionScript();
@@ -206,7 +206,7 @@ public:
 	void SitDown(bool PlayAnim);
 	void TryStandUp();
 	void TrySitDown();
-	void StandUp();
+	void standUp();
 	void QuickSitDown();
 	void ExecuteUbergraph_Hyaenodon_Character_BP(int EntryPoint);
 };

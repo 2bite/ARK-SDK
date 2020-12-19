@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPreventAttachments
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintPure)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UObject**                ForItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABasilisk_Character_BP_C::BPPreventAttachments(class UObject** ForItem)
+bool ABasilisk_Character_BP_C::STATIC_BPPreventAttachments(class UObject** ForItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPreventAttachments");
 
@@ -26,7 +26,6 @@ bool ABasilisk_Character_BP_C::BPPreventAttachments(class UObject** ForItem)
 	params.ForItem = ForItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,16 +97,15 @@ bool ABasilisk_Character_BP_C::BPIsHidden()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPostLoadedFromSaveGame
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintPure)
+// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void ABasilisk_Character_BP_C::BPPostLoadedFromSaveGame()
+void ABasilisk_Character_BP_C::STATIC_BPPostLoadedFromSaveGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPostLoadedFromSaveGame");
 
 	ABasilisk_Character_BP_C_BPPostLoadedFromSaveGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,16 +202,15 @@ void ABasilisk_Character_BP_C::BPNotifyInventoryItemChange(bool* bIsItemAdd, cla
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.UpdatedTracedMoundTransform
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintPure)
+// (MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void ABasilisk_Character_BP_C::STATIC_UpdatedTracedMoundTransform()
+void ABasilisk_Character_BP_C::UpdatedTracedMoundTransform()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.UpdatedTracedMoundTransform");
 
 	ABasilisk_Character_BP_C_UpdatedTracedMoundTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,12 +219,12 @@ void ABasilisk_Character_BP_C::STATIC_UpdatedTracedMoundTransform()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.GetBuriedMoundTransform
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Native, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float                          HeightAlpha                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct UObject_FTransform ABasilisk_Character_BP_C::STATIC_GetBuriedMoundTransform(float HeightAlpha)
+struct UObject_FTransform ABasilisk_Character_BP_C::GetBuriedMoundTransform(float HeightAlpha)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.GetBuriedMoundTransform");
 
@@ -416,7 +413,7 @@ void ABasilisk_Character_BP_C::PlayUndergroundEffectPulse()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.TraceForInvalidGround
-// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, NetServer, DLLImport, BlueprintPure)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
 void ABasilisk_Character_BP_C::STATIC_TraceForInvalidGround()
 {
@@ -425,6 +422,7 @@ void ABasilisk_Character_BP_C::STATIC_TraceForInvalidGround()
 	ABasilisk_Character_BP_C_TraceForInvalidGround_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -661,13 +659,13 @@ bool ABasilisk_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Dista
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABasilisk_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABasilisk_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPGetMultiUseEntries");
 
@@ -675,7 +673,6 @@ TArray<struct FMultiUseEntry> ABasilisk_Character_BP_C::BPGetMultiUseEntries(cla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -714,12 +711,12 @@ bool ABasilisk_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.TimeSinceLastAttackForIndex
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintPure)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABasilisk_Character_BP_C::TimeSinceLastAttackForIndex(int index)
+float ABasilisk_Character_BP_C::STATIC_TimeSinceLastAttackForIndex(int index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.TimeSinceLastAttackForIndex");
 
@@ -727,7 +724,6 @@ float ABasilisk_Character_BP_C::TimeSinceLastAttackForIndex(int index)
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -963,7 +959,7 @@ void ABasilisk_Character_BP_C::DiveIdle()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.CanDive
-// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           DiveInCheck                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -976,7 +972,6 @@ bool ABasilisk_Character_BP_C::STATIC_CanDive(bool DiveInCheck)
 	params.DiveInCheck = DiveInCheck;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

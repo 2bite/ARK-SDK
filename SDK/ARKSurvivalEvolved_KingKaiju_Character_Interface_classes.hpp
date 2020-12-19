@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,8 @@ public:
 	}
 
 
-	void GetVar_DifficultyIndex(int* Return);
-	void GetVar_InHordeMode(bool* Return);
+	void GetVar_DifficultyIndex(int* _return);
+	void GetVar_InHordeMode(bool* _return);
 	void GetKingKaijuCharStatusComponent(class UPrimalCharacterStatusComponent** Component);
 	void SetVar_PlayersLostHordeMode(bool Value);
 	void SetVar_FinishCurrentHordeMode(bool Value);

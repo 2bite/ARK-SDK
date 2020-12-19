@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -86,7 +86,7 @@ void AProjMekSwarm_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function ProjMekSwarm.ProjMekSwarm_C.BPGetBoidSpawnLocationAndVelocity
-// (NetReliable, Event, Static, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Static, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // int*                           BoidIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBoid                   BoidData                       (Parm, OutParm, ReferenceParm)

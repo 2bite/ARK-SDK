@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,11 +33,11 @@ public:
 	struct FVector                                     ziplineJumpOffDirection;                                  // 0x2254(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ZiplineResetMeshInterpSpeed;                              // 0x2260(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ZiplineMaxDistanceTargeted;                               // 0x2264(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AZipline_Anchor_C*                           currentTargetedZipline;                                   // 0x2268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AZipline_Anchor_C*                           CurrentTargetedZipline;                                   // 0x2268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     ziplineNewTargetLocation;                                 // 0x2270(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     CurrentTargetedZiplineLocation;                           // 0x227C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class AZipline_Anchor_C*                           ziplineNewTargetAnchor;                                   // 0x2288(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              ziplineTargetLocationXOffset;                             // 0x2290(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ZiplineTargetLocationXOffset;                             // 0x2290(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               KeepHanging;                                              // 0x2294(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               WasAttachedToZipline;                                     // 0x2295(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2];                                       // 0x2296(0x0002) MISSED OFFSET
@@ -60,7 +60,7 @@ public:
 	float                                              AdditionalZiplineStartEndOffset;                          // 0x22C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              dropFromBelowInterpSpeed;                                 // 0x22C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              AttachedCharacterMeshInterpRotationResetTolerance;        // 0x22CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     ZiplineJumpOffImpulseAI;                                  // 0x22D0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     ziplineJumpOffImpulseAI;                                  // 0x22D0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               EnableWildAIClawAttackDropFromZipline;                    // 0x22DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x3];                                       // 0x22DD(0x0003) MISSED OFFSET
 	float                                              AIJumpAttackMinZDelta;                                    // 0x22E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -69,7 +69,7 @@ public:
 	struct FVector                                     CurrentOrderedMoveToLoc;                                  // 0x22EC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bProcessMoveToOrder;                                      // 0x22F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x3];                                       // 0x22F9(0x0003) MISSED OFFSET
-	struct FVector                                     ZiplineJumpOffDirectionAI;                                // 0x22FC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     ziplineJumpOffDirectionAI;                                // 0x22FC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ZiplineJumpUseTeleport;                                   // 0x2308(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               Temp_bool_Has_Been_Initd_Variable;                        // 0x2309(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x230A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -116,7 +116,7 @@ public:
 	bool                                               CallFunc_HasAuthority_ReturnValue5;                       // 0x23B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData13[0x7];                                       // 0x23B9(0x0007) MISSED OFFSET
 	class AZipline_Anchor_C*                           CallFunc_GetTargetedZipline_targetedZipline;              // 0x23C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_GetTargetedZipline_Location;                     // 0x23C8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_GetTargetedZipline_location;                     // 0x23C8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData14[0x4];                                       // 0x23D4(0x0004) MISSED OFFSET
 	class AZipline_Anchor_C*                           K2Node_CustomEvent_ZiplineAnchor2;                        // 0x23D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_Location2;                             // 0x23E0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -227,10 +227,10 @@ public:
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void GetClosestLocationToPointFromArray(const struct FVector& Point, TArray<struct FVector>* LocationsToTest, struct FVector* ClosestLocation, int* ArrayIndex);
 	void UpdateTPVViewOffset();
-	void Set_Server_Timer_Tick_Every_Frame(bool tickEveryFrame);
+	void Set_Server_Timer_Tick_Every_Frame(bool TickEveryFrame);
 	void BPTimerServer();
 	void GetTargetMeshRelativeTransform_Pure(struct UObject_FTransform* Result);
-	void SetNonDediTimer_TickEveryFrame(bool tickEveryFrame);
+	void SetNonDediTimer_TickEveryFrame(bool TickEveryFrame);
 	void STATIC_GetTargetMeshRelativeTransform(struct UObject_FTransform* Result);
 	void DebugDrawRotationAxes(const struct FVector& Origin, const struct FRotator& Rotation, float lineLength, float lineDuration, float LineThickness);
 	void STATIC_SoftSetCaveWolfTransform(const struct UObject_FTransform& NewTransform);
@@ -244,10 +244,10 @@ public:
 	void STATIC_GetTargetedZipline(class AZipline_Anchor_C** targetedZipline, struct FVector* Location);
 	void BPNotifySetRider(class AShooterCharacter** RiderSetting);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
-	void IsRotation_Nearly_Equal(const struct FRotator& A, const struct FRotator& B, float Tolerance, bool* Return);
+	void IsRotation_Nearly_Equal(const struct FRotator& A, const struct FRotator& B, float Tolerance, bool* _return);
 	bool IsVectorNearlyEqual(const struct FVector& inVec, const struct FVector& InVec2, float Tolerance);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
-	void STATIC_TryAttachingToZipline(class AZipline_Anchor_C* overrideAnchor, const struct FVector& OverrideStartLocation, float OverrideFindLocationDistance, const struct FVector& OverrideFindLocationDirection, bool DontUseLineOfSightCheck, bool* Success);
+	void STATIC_TryAttachingToZipline(class AZipline_Anchor_C* overrideAnchor, const struct FVector& overrideStartLocation, float overrideFindLocationDistance, const struct FVector& OverrideFindLocationDirection, bool DontUseLineOfSightCheck, bool* Success);
 	float BPModifyHarvestingQuantity(float* originalQuantity, class UClass** resourceSelected);
 	void UserConstructionScript();
 	void TryAttachToZipline_RunOnServer();

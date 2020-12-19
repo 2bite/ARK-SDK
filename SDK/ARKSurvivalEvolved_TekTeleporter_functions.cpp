@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function TekTeleporter.TekTeleporter_C.DoTeleportBatch
+// (NetReliable, NetRequest, Event, NetMulticast, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+
+void ATekTeleporter_C::DoTeleportBatch()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TekTeleporter.TekTeleporter_C.DoTeleportBatch");
+
+	ATekTeleporter_C_DoTeleportBatch_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function TekTeleporter.TekTeleporter_C.BPServerHandleNetExecCommand
 // ()
@@ -139,12 +156,12 @@ class UClass* ATekTeleporter_C::GetBedFilterClass()
 
 
 // Function TekTeleporter.TekTeleporter_C.BPClientDoMultiUse
-// (NetReliable, NetRequest, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekTeleporter_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void ATekTeleporter_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekTeleporter.TekTeleporter_C.BPClientDoMultiUse");
 
@@ -153,6 +170,7 @@ void ATekTeleporter_C::BPClientDoMultiUse(class APlayerController** ForPC, int* 
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,7 +226,7 @@ void ATekTeleporter_C::GetElementCostToTeleport(int* ElementCostToTeleport)
 
 
 // Function TekTeleporter.TekTeleporter_C.GetCharactersForTeleport
-// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Public, Private, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TArray<class APrimalCharacter*> OutChars                       (Parm, OutParm, ZeroConstructor)
 // TArray<struct UObject_FTransform> OutTransforms                  (Parm, OutParm, ZeroConstructor)
@@ -220,6 +238,7 @@ void ATekTeleporter_C::GetCharactersForTeleport(TArray<class APrimalCharacter*>*
 	ATekTeleporter_C_GetCharactersForTeleport_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,11 +252,11 @@ void ATekTeleporter_C::GetCharactersForTeleport(TArray<class APrimalCharacter*>*
 
 
 // Function TekTeleporter.TekTeleporter_C.DoTeleport
-// (NetRequest, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, NetResponse, Public, Private, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class ATekTeleporter_C*        ToTeleporter                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekTeleporter_C::STATIC_DoTeleport(class ATekTeleporter_C* ToTeleporter)
+void ATekTeleporter_C::DoTeleport(class ATekTeleporter_C* ToTeleporter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekTeleporter.TekTeleporter_C.DoTeleport");
 
@@ -245,6 +264,7 @@ void ATekTeleporter_C::STATIC_DoTeleport(class ATekTeleporter_C* ToTeleporter)
 	params.ToTeleporter = ToTeleporter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -278,7 +298,7 @@ bool ATekTeleporter_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIn
 
 
 // Function TekTeleporter.TekTeleporter_C.BPGetMultiUseEntries
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Native, Static, Public, Private, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

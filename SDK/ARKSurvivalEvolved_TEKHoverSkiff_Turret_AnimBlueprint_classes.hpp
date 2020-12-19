@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ public:
 	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_34DAAED742ADAAC6AC728E897A0F79EA;// 0x0618(0x0030)
 	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_3DBE63764A4B5CD5EC9FB2BFDD801199;// 0x0648(0x0060)
 	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_375481184993B95BA561739BD4993EE4;// 0x06A8(0x0030)
-	struct FRotator                                    AimPitchRot;                                              // 0x06D8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    aimPitchRot;                                              // 0x06D8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FRotator                                    aimYawRot;                                                // 0x06E4(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FRotator                                    finalRot;                                                 // 0x06F0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PitchRangeMin;                                            // 0x06FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)

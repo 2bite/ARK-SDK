@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -104,7 +104,7 @@ public:
 	float                                              FlockCooldown;                                            // 0x2570(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x4];                                       // 0x2574(0x0004) MISSED OFFSET
 	double                                             LastTimeToggleFlock;                                      // 0x2578(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Testfloat;                                                // 0x2580(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TestFloat;                                                // 0x2580(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     CurrentDisappearingLocationOffset;                        // 0x2584(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CurrentDisapperaingMultiplier;                            // 0x2590(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     FlockFlyingOffset;                                        // 0x2594(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -133,7 +133,7 @@ public:
 	bool                                               UseWidgetHUD;                                             // 0x262D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x2];                                       // 0x262E(0x0002) MISSED OFFSET
 	class UClass*                                      HudWidgetClass;                                           // 0x2630(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UUserWidget*                                 HudWidgetInstance;                                        // 0x2638(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UUserWidget*                                 HUDWidgetInstance;                                        // 0x2638(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CloseHudWidgetDelay;                                      // 0x2640(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bAllowMating;                                             // 0x2644(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x3];                                       // 0x2645(0x0003) MISSED OFFSET
@@ -246,20 +246,20 @@ public:
 	void CheckCave();
 	void TurnOffFlock();
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
-	void Setup_Flock();
+	void STATIC_Setup_Flock();
 	void CheckTurtleTargetForFollowers();
 	void STATIC_TickTaming(float DeltaSeconds);
 	void CheckFullyInWater();
-	void STATIC_TickBirdsFlock(float DeltaSeconds);
+	void TickBirdsFlock(float DeltaSeconds);
 	void PushBackPawnNotInWater(class APrimalCharacter* Pawn);
-	void TickBubbleCooldown(float DeltaSeconds);
+	void STATIC_TickBubbleCooldown(float DeltaSeconds);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	void UpdateBreath_Rotation();
 	void Tick_Breathing(float DeltSeconds);
 	float BPGetCrosshairAlpha();
 	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
 	bool BPHandleOnStopTargeting();
-	void STATIC_GetPlayersOnSeats();
+	void GetPlayersOnSeats();
 	void K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void SpawnBubble();
@@ -272,7 +272,7 @@ public:
 	void UpdateFlowerAndMushroom(float DeltaSecond);
 	void UpdateCropStructs(float DeltaSeconds);
 	void AddOxygenBuff();
-	void BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem);
+	void STATIC_BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem);
 	void GetMovementMontage(TEnumAsByte<ERootMotionMovementMode> Mode, class UAnimMontage** Montage);
 	struct FVector BPGetRiderUnboardLocation(class APrimalCharacter** RidingCharacter);
 	void UserConstructionScript();

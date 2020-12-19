@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,16 +30,15 @@ void AGriffin_Character_BP_C::UpdateDivingFX()
 
 
 // Function Griffin_Character_BP.Griffin_Character_BP_C.OnDiveSwipe
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
+// (Exec, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
-void AGriffin_Character_BP_C::STATIC_OnDiveSwipe()
+void AGriffin_Character_BP_C::OnDiveSwipe()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Griffin_Character_BP.Griffin_Character_BP_C.OnDiveSwipe");
 
 	AGriffin_Character_BP_C_OnDiveSwipe_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,15 +170,16 @@ void AGriffin_Character_BP_C::Update_Diving_Effects()
 
 
 // Function Griffin_Character_BP.Griffin_Character_BP_C.CheckGroundForWingFlap
-// (NetReliable, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetRequest, Native, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
-void AGriffin_Character_BP_C::CheckGroundForWingFlap()
+void AGriffin_Character_BP_C::STATIC_CheckGroundForWingFlap()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Griffin_Character_BP.Griffin_Character_BP_C.CheckGroundForWingFlap");
 
 	AGriffin_Character_BP_C_CheckGroundForWingFlap_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

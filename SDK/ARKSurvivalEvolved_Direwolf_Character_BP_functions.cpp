@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,15 +33,16 @@ void ADirewolf_Character_BP_C::RidingTick(float* DeltaSeconds)
 
 
 // Function Direwolf_Character_BP.Direwolf_Character_BP_C.AddHowlCooldownBuff
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
+// (Native, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
-void ADirewolf_Character_BP_C::STATIC_AddHowlCooldownBuff()
+void ADirewolf_Character_BP_C::AddHowlCooldownBuff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Direwolf_Character_BP.Direwolf_Character_BP_C.AddHowlCooldownBuff");
 
 	ADirewolf_Character_BP_C_AddHowlCooldownBuff_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,9 +177,9 @@ void ADirewolf_Character_BP_C::DoSniffAbility()
 // ()
 // Parameters:
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          foundDinos                     (Parm, OutParm, ZeroConstructor)
+// TArray<class AActor*>          FoundDinos                     (Parm, OutParm, ZeroConstructor)
 
-void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*>* foundDinos)
+void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*>* FoundDinos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Direwolf_Character_BP.Direwolf_Character_BP_C.GetHiddenDinos");
 
@@ -191,8 +192,8 @@ void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*
 
 	fn->FunctionFlags = flags;
 
-	if (foundDinos != nullptr)
-		*foundDinos = params.foundDinos;
+	if (FoundDinos != nullptr)
+		*FoundDinos = params.FoundDinos;
 }
 
 

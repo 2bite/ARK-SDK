@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C
-// 0x0004 (0x09EC - 0x09E8)
+// 0x0004 (0x09F4 - 0x09F0)
 class UPrimalItem_WeaponTorch_C : public UPrimalItemWeaponGenericAmmoless_C
 {
 public:
-	float                                              DurabilityLossPerSecond;                                  // 0x09E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DurabilityLossPerSecond;                                  // 0x09F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

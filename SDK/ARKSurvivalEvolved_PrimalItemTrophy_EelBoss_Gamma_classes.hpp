@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophy_EelBoss_Gamma.PrimalItemTrophy_EelBoss_Gamma_C
-// 0x0000 (0x09E8 - 0x09E8)
+// 0x0000 (0x09F0 - 0x09F0)
 class UPrimalItemTrophy_EelBoss_Gamma_C : public UPrimalItemTrophy_EelBoss_C
 {
 public:

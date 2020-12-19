@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.PlaySoundForPlayersOnMission
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, NetValidate)
+// (NetReliable, Exec, Event, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class USoundBase*              Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMissionTypeBlueprintBase_C::STATIC_PlaySoundForPlayersOnMission(class USoundBase* Sound)
+void AMissionTypeBlueprintBase_C::PlaySoundForPlayersOnMission(class USoundBase* Sound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.PlaySoundForPlayersOnMission");
 
@@ -25,7 +25,6 @@ void AMissionTypeBlueprintBase_C::STATIC_PlaySoundForPlayersOnMission(class USou
 	params.Sound = Sound;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +33,7 @@ void AMissionTypeBlueprintBase_C::STATIC_PlaySoundForPlayersOnMission(class USou
 
 
 // Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.BPStaticIsPlayerEligibleForMission
-// (Native, Static, NetMulticast, Public, NetServer, HasOutParms, NetValidate)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class APlayerController**      Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter**      PlayerPawn                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -42,7 +41,7 @@ void AMissionTypeBlueprintBase_C::STATIC_PlaySoundForPlayersOnMission(class USou
 // class FString                  OutReason                      (Parm, OutParm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AMissionTypeBlueprintBase_C::STATIC_BPStaticIsPlayerEligibleForMission(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, class APrimalBuff_MissionData** PlayerMissionData, class FString* OutReason)
+bool AMissionTypeBlueprintBase_C::BPStaticIsPlayerEligibleForMission(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, class APrimalBuff_MissionData** PlayerMissionData, class FString* OutReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.BPStaticIsPlayerEligibleForMission");
 
@@ -52,7 +51,6 @@ bool AMissionTypeBlueprintBase_C::STATIC_BPStaticIsPlayerEligibleForMission(clas
 	params.PlayerMissionData = PlayerMissionData;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

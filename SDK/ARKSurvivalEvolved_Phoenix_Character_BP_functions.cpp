@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -221,7 +221,7 @@ bool APhoenix_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.SetAnimsWeightForAttack
-// (Exec, Event, NetMulticast, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -292,13 +292,13 @@ void APhoenix_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, 
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> APhoenix_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> APhoenix_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.BPGetMultiUseEntries");
 
@@ -388,7 +388,7 @@ void APhoenix_Character_BP_C::Is_In_Water(bool* currentlyOnWater)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.CanAshStayOnLocation
-// (NetRequest, Exec, Event, Static, NetMulticast, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           canAshStay                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -410,20 +410,19 @@ void APhoenix_Character_BP_C::STATIC_CanAshStayOnLocation(bool* canAshStay)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Calculate BuryMeshTransform
-// (Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// bool                           Rise                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           rise                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      buryMeshTransform              (Parm, OutParm, IsPlainOldData)
 
-void APhoenix_Character_BP_C::STATIC_Calculate_BuryMeshTransform(bool Rise, struct UObject_FTransform* buryMeshTransform)
+void APhoenix_Character_BP_C::STATIC_Calculate_BuryMeshTransform(bool rise, struct UObject_FTransform* buryMeshTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Calculate BuryMeshTransform");
 
 	APhoenix_Character_BP_C_Calculate_BuryMeshTransform_Params params;
-	params.Rise = Rise;
+	params.rise = rise;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -757,16 +756,16 @@ void APhoenix_Character_BP_C::ReceiveBeginPlay()
 }
 
 
-// Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise
+// Function Phoenix_Character_BP.Phoenix_Character_BP_C.rise
 // ()
 // Parameters:
 // bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void APhoenix_Character_BP_C::Rise(bool Fast)
+void APhoenix_Character_BP_C::rise(bool Fast)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise");
+	static auto fn = UObject::FindObject<UFunction>("Function Phoenix_Character_BP.Phoenix_Character_BP_C.rise");
 
-	APhoenix_Character_BP_C_Rise_Params params;
+	APhoenix_Character_BP_C_rise_Params params;
 	params.Fast = Fast;
 
 	auto flags = fn->FunctionFlags;

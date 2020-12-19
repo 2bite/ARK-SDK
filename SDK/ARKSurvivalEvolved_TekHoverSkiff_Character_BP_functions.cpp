@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void ATekHoverSkiff_Character_BP_C::safely_release_carried_character()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Get Closest Beam Location Not Blocked
-// (Native, Event, NetMulticast, Private, NetServer, HasOutParms, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -154,7 +154,7 @@ void ATekHoverSkiff_Character_BP_C::GetHoverSlopeDeltaRatio(bool bAdjustWithMax,
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.DoHoverSlopeCheck
-// (NetRequest, Exec, Native, Static, NetMulticast, Private, NetServer, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 
 void ATekHoverSkiff_Character_BP_C::STATIC_DoHoverSlopeCheck()
 {
@@ -163,7 +163,6 @@ void ATekHoverSkiff_Character_BP_C::STATIC_DoHoverSlopeCheck()
 	ATekHoverSkiff_Character_BP_C_DoHoverSlopeCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -369,7 +368,7 @@ void ATekHoverSkiff_Character_BP_C::CalculateTotalAlternateFuel(float* TotalAltF
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.GetRepairModeHudMessage
-// (Net, NetRequest, Exec, NetResponse, Static, Public, NetServer, HasOutParms, NetValidate)
+// (NetReliable, Exec, Static, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class FString                  Message                        (Parm, OutParm, ZeroConstructor)
 // struct FLinearColor            Color                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -609,7 +608,7 @@ void ATekHoverSkiff_Character_BP_C::Get_Repair_Mode_Hud_Message_PURE(class FStri
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BlueprintDrawFloatingHUD
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, NetServer, HasOutParms, NetValidate)
+// (Net, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -636,7 +635,7 @@ void ATekHoverSkiff_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD**
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, Native, NetResponse, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -650,6 +649,7 @@ TArray<struct FMultiUseEntry> ATekHoverSkiff_Character_BP_C::BPGetMultiUseEntrie
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -755,12 +755,12 @@ void ATekHoverSkiff_Character_BP_C::IsCharAttachedToSkiffMesh(class APrimalChara
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BP_OverrideCarriedCharacterTransform
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class APrimalCharacter**       ForCarriedChar                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATekHoverSkiff_Character_BP_C::STATIC_BP_OverrideCarriedCharacterTransform(class APrimalCharacter** ForCarriedChar)
+bool ATekHoverSkiff_Character_BP_C::BP_OverrideCarriedCharacterTransform(class APrimalCharacter** ForCarriedChar)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BP_OverrideCarriedCharacterTransform");
 
@@ -1083,7 +1083,7 @@ void ATekHoverSkiff_Character_BP_C::BSetupDinoTameable()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Tick_ShowDropDinoIndicator
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (NetRequest, Event, NetResponse, Static, Public, HasOutParms, HasDefaults, BlueprintEvent)
 
 void ATekHoverSkiff_Character_BP_C::STATIC_Tick_ShowDropDinoIndicator()
 {
@@ -1092,7 +1092,6 @@ void ATekHoverSkiff_Character_BP_C::STATIC_Tick_ShowDropDinoIndicator()
 	ATekHoverSkiff_Character_BP_C_Tick_ShowDropDinoIndicator_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1101,9 +1100,9 @@ void ATekHoverSkiff_Character_BP_C::STATIC_Tick_ShowDropDinoIndicator()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.SetupSkiffThrusters
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, HasOutParms, HasDefaults, BlueprintEvent)
 
-void ATekHoverSkiff_Character_BP_C::STATIC_SetupSkiffThrusters()
+void ATekHoverSkiff_Character_BP_C::SetupSkiffThrusters()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.SetupSkiffThrusters");
 
@@ -1140,7 +1139,7 @@ void ATekHoverSkiff_Character_BP_C::GetSkiffAcceleration(struct FVector* NewPara
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Tick_UpdateSkiffThruster
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (Event, NetResponse, NetMulticast, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // struct FStruct_HoverSkiffThrusterData WithThrusterData               (Parm, OutParm, ReferenceParm)
 // int                            DataIntex                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -1153,7 +1152,6 @@ void ATekHoverSkiff_Character_BP_C::Tick_UpdateSkiffThruster(int DataIntex, stru
 	params.DataIntex = DataIntex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1860,7 +1858,7 @@ void ATekHoverSkiff_Character_BP_C::ActivateSkiffBeamVfxByState(TEnumAsByte<E_Ho
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Tick_ManageBeamFX
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (Native, Event, NetResponse, Static, NetMulticast, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // bool                           bForceClearAll                 (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1872,6 +1870,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_Tick_ManageBeamFX(bool bForceClearAll
 	params.bForceClearAll = bForceClearAll;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1943,7 +1942,7 @@ void ATekHoverSkiff_Character_BP_C::ReceiveDestroyed()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Tick_ManageHoverGroundFX
-// (NetReliable, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 
 void ATekHoverSkiff_Character_BP_C::Tick_ManageHoverGroundFX()
 {
@@ -2153,16 +2152,15 @@ float ATekHoverSkiff_Character_BP_C::BP_GetCustomModifier_MaxSpeed()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.TraceForBeamCharBlockers
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, Static, NetMulticast, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 
-void ATekHoverSkiff_Character_BP_C::TraceForBeamCharBlockers()
+void ATekHoverSkiff_Character_BP_C::STATIC_TraceForBeamCharBlockers()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.TraceForBeamCharBlockers");
 
 	ATekHoverSkiff_Character_BP_C_TraceForBeamCharBlockers_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2237,7 +2235,7 @@ void ATekHoverSkiff_Character_BP_C::GetBeamCharGrabOffsetZ(float* OffsetZ)
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.OnBeamStartedGrabbingChar
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 
 void ATekHoverSkiff_Character_BP_C::STATIC_OnBeamStartedGrabbingChar()
 {
@@ -2246,7 +2244,6 @@ void ATekHoverSkiff_Character_BP_C::STATIC_OnBeamStartedGrabbingChar()
 	ATekHoverSkiff_Character_BP_C_OnBeamStartedGrabbingChar_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2432,7 +2429,7 @@ float ATekHoverSkiff_Character_BP_C::BP_OverrideTerminalVelocity()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.DoThrusterEngineBurst
-// (NetReliable, NetRequest, Event, Static, Protected, Delegate, HasOutParms, NetValidate)
+// (Native, NetResponse, Static, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // TArray<class UParticleSystemComponent*> ForThrusterParticles           (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UParticleSystem*         OverrideBurstParticle          (Parm, ZeroConstructor, IsPlainOldData)
@@ -2451,6 +2448,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_DoThrusterEngineBurst(class UParticle
 	params.OverrideVolumeAndPitch = OverrideVolumeAndPitch;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2462,15 +2460,16 @@ void ATekHoverSkiff_Character_BP_C::STATIC_DoThrusterEngineBurst(class UParticle
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.KillSkiff
-// (NetReliable, Exec, Event, NetResponse, Static, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, Native, NetMulticast, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 
-void ATekHoverSkiff_Character_BP_C::STATIC_KillSkiff()
+void ATekHoverSkiff_Character_BP_C::KillSkiff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.KillSkiff");
 
 	ATekHoverSkiff_Character_BP_C_KillSkiff_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2479,7 +2478,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_KillSkiff()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.OnSkiffCrash
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, NetValidate)
+// (Exec, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // bool                           bFromImpact                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2491,7 +2490,6 @@ void ATekHoverSkiff_Character_BP_C::OnSkiffCrash(bool bFromImpact)
 	params.bFromImpact = bFromImpact;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2759,7 +2757,7 @@ void ATekHoverSkiff_Character_BP_C::OnBeamLocked()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.GetBeamEndPointRelative
-// (NetRequest, Exec, NetResponse, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // struct FVector                 LaserEndPoint                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -2770,6 +2768,7 @@ void ATekHoverSkiff_Character_BP_C::GetBeamEndPointRelative(struct FVector* Lase
 	ATekHoverSkiff_Character_BP_C_GetBeamEndPointRelative_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2781,12 +2780,12 @@ void ATekHoverSkiff_Character_BP_C::GetBeamEndPointRelative(struct FVector* Lase
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.GetBeamStartPointRelative
-// (NetReliable, NetRequest, Native, NetResponse, Protected, Delegate, HasOutParms, NetValidate)
+// (Static, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // bool                           bAdjustForCarriedChar          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 LaserStartPoint                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekHoverSkiff_Character_BP_C::GetBeamStartPointRelative(bool bAdjustForCarriedChar, struct FVector* LaserStartPoint)
+void ATekHoverSkiff_Character_BP_C::STATIC_GetBeamStartPointRelative(bool bAdjustForCarriedChar, struct FVector* LaserStartPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.GetBeamStartPointRelative");
 
@@ -2794,7 +2793,6 @@ void ATekHoverSkiff_Character_BP_C::GetBeamStartPointRelative(bool bAdjustForCar
 	params.bAdjustForCarriedChar = bAdjustForCarriedChar;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2849,7 +2847,7 @@ bool ATekHoverSkiff_Character_BP_C::BPAllowCarryCharacter(class APrimalCharacter
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPDidClearCarriedCharacter
-// (NetReliable, NetRequest, Exec, Native, Static, Protected, Delegate, HasOutParms, NetValidate)
+// (NetRequest, Native, Static, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // class APrimalCharacter**       PreviousCarriedCharacter       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2870,7 +2868,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_BPDidClearCarriedCharacter(class APri
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPDidSetCarriedCharacter
-// (NetReliable, Exec, Static, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // class APrimalCharacter**       PreviousCarriedCharacter       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2882,6 +2880,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_BPDidSetCarriedCharacter(class APrima
 	params.PreviousCarriedCharacter = PreviousCarriedCharacter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3071,9 +3070,9 @@ void ATekHoverSkiff_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EM
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Tick_ManageThrusterFX
-// (NetRequest, Event, NetResponse, Static, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Exec, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 
-void ATekHoverSkiff_Character_BP_C::STATIC_Tick_ManageThrusterFX()
+void ATekHoverSkiff_Character_BP_C::Tick_ManageThrusterFX()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Tick_ManageThrusterFX");
 
@@ -3088,7 +3087,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_Tick_ManageThrusterFX()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.SetThrustersActive
-// (NetRequest, NetMulticast, Protected, Delegate, HasOutParms, NetValidate)
+// (Native, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // bool                           bNewActive                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3100,6 +3099,7 @@ void ATekHoverSkiff_Character_BP_C::SetThrustersActive(bool bNewActive)
 	params.bNewActive = bNewActive;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3184,7 +3184,7 @@ void ATekHoverSkiff_Character_BP_C::ReceiveHit(class UPrimitiveComponent** MyCom
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.DoSkiffHoverTraces
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // bool                           bForceTraces                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3369,7 +3369,7 @@ void ATekHoverSkiff_Character_BP_C::NetSetSkiffBeamState(TEnumAsByte<E_HoverSkif
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPOverrideCameraViewTarget
-// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // struct FName*                  CurrentCameraMode              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                DesiredCameraLocation          (Parm, ZeroConstructor, IsPlainOldData)
@@ -3393,6 +3393,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_BPOverrideCameraViewTarget(struct FNa
 	params.DesiredFOV = DesiredFOV;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3508,7 +3509,7 @@ float ATekHoverSkiff_Character_BP_C::BP_GetCustomModifier_RotationRate()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPOverrideFlyingVelocity
-// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetValidate)
+// (NetRequest, Native, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // struct FVector                 InitialVelocity                (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 Gravity                        (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -3523,6 +3524,7 @@ struct FVector ATekHoverSkiff_Character_BP_C::BPOverrideFlyingVelocity(float* De
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3782,7 +3784,7 @@ void ATekHoverSkiff_Character_BP_C::GetBeamEndPoint_External(struct FVector* Bea
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Update Beam Visuals
-// (NetReliable, Event, MulticastDelegate, Public, Private, HasOutParms, NetValidate)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 
 void ATekHoverSkiff_Character_BP_C::Update_Beam_Visuals()
 {
@@ -3918,7 +3920,7 @@ void ATekHoverSkiff_Character_BP_C::SetForceSkiffDescend(bool Enable)
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.SetBeamCharLocation
-// (Native, Event, Static, MulticastDelegate, Public, Private, HasOutParms, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bRelativeSpace                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -3943,7 +3945,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_SetBeamCharLocation(const struct FVec
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.TraceForBeamEndPoint
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FVector                 NewBeamEnd                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bHitObstacle                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -3986,7 +3988,7 @@ void ATekHoverSkiff_Character_BP_C::Tick_ManipulateBeam()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Get BeamEndPoint
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FVector                 LaserEndPoint                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -4025,17 +4027,18 @@ void ATekHoverSkiff_Character_BP_C::Update_Beam_Particles_End_Point()
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Find BeamTarget
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class APrimalCharacter*        foundPawn                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekHoverSkiff_Character_BP_C::Find_BeamTarget(class APrimalCharacter** foundPawn)
+void ATekHoverSkiff_Character_BP_C::STATIC_Find_BeamTarget(class APrimalCharacter** foundPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Find BeamTarget");
 
 	ATekHoverSkiff_Character_BP_C_Find_BeamTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4174,12 +4177,12 @@ void ATekHoverSkiff_Character_BP_C::Update_Beam_BoneRotation(const struct FVecto
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Get Beam Start Point
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetValidate)
+// (Native, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // bool                           bAdjustForCarriedChar          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 LaserStartPoint                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekHoverSkiff_Character_BP_C::STATIC_Get_Beam_Start_Point(bool bAdjustForCarriedChar, struct FVector* LaserStartPoint)
+void ATekHoverSkiff_Character_BP_C::Get_Beam_Start_Point(bool bAdjustForCarriedChar, struct FVector* LaserStartPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Get Beam Start Point");
 
@@ -4187,6 +4190,7 @@ void ATekHoverSkiff_Character_BP_C::STATIC_Get_Beam_Start_Point(bool bAdjustForC
 	params.bAdjustForCarriedChar = bAdjustForCarriedChar;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4262,7 +4266,7 @@ void ATekHoverSkiff_Character_BP_C::ClearAllBeamChars(bool bOnlyClearBeamingChar
 
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.CanBeamGrabCharacter
-// (NetReliable, Native, NetResponse, Private, HasOutParms, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class APrimalCharacter*        forChar                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bPreventTraces                 (Parm, ZeroConstructor, IsPlainOldData)

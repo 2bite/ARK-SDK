@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,8 +38,8 @@ public:
 	}
 
 
-	void Get_Random_PointNoMin(const struct FVector& Origin, struct FVector* Return);
-	void Get_Random_PointMin(const struct FVector& Origin, struct FVector* Return, bool* DidNotFindLoc);
+	void Get_Random_PointNoMin(const struct FVector& Origin, struct FVector* _return);
+	void Get_Random_PointMin(const struct FVector& Origin, struct FVector* _return, bool* DidNotFindLoc);
 	void ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_Task_DKaijuFindMovePointWithinArena(int EntryPoint);
 };

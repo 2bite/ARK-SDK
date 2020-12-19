@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -137,7 +137,7 @@ struct AXenomorph_Character_BP_Male_C_BPBecomeAdult_Params
 // Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.Can Dive
 struct AXenomorph_Character_BP_Male_C_Can_Dive_Params
 {
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.UserConstructionScript

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -121,7 +121,7 @@ public:
 	double                                             TimeOfStartSliding;                                       // 0x23B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     StartingSlideVelocity;                                    // 0x23B8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinSlideSpeed;                                            // 0x23C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AffinityToGive;                                           // 0x23C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              affinityToGive;                                           // 0x23C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               FoundATamingResource;                                     // 0x23CC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x3];                                       // 0x23CD(0x0003) MISSED OFFSET
 	float                                              RadiusToLookForTamingItems;                               // 0x23D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -314,14 +314,14 @@ public:
 	void BPNotifyDroppedItemPickedUp(class ADroppedItem** itemPickedUp, class APrimalCharacter** PickedUpBy);
 	void CanDamageActor(class AActor* Target, bool* TargetCanBeDamage);
 	void Handle_Hit_Pawns(float DeltaTime, TArray<struct FHitResult>* HitTargets);
-	void HandleHitStatic(float DeltaTime, TArray<struct FHitResult>* HitTargets);
+	void STATIC_HandleHitStatic(float DeltaTime, TArray<struct FHitResult>* HitTargets);
 	void HandleChargingCollisions();
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void BPNotifyClearPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex);
 	void NotifyPassengersIsCharging(bool IsCharging);
 	void CanUseGemAttack(bool* CanUseGemAttack);
-	void GetChargeValueScaled(float CurrentValue, float MinValue, float MaxValue, float velocityAlpha, float* scaledValue);
-	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void GetChargeValueScaled(float CurrentValue, float MinValue, float MaxValue, float VelocityAlpha, float* scaledValue);
+	void STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void OnJumped();
 	bool CanJumpInternal();
 	void DebugFunction();

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,13 +106,13 @@ bool ABuff_Leech_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex
 
 
 // Function Buff_Leech.Buff_Leech_C.BPGetMultiUseEntries
-// (NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABuff_Leech_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABuff_Leech_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Leech.Buff_Leech_C.BPGetMultiUseEntries");
 
@@ -120,6 +120,7 @@ TArray<struct FMultiUseEntry> ABuff_Leech_C::BPGetMultiUseEntries(class APlayerC
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,7 +134,7 @@ TArray<struct FMultiUseEntry> ABuff_Leech_C::BPGetMultiUseEntries(class APlayerC
 
 
 // Function Buff_Leech.Buff_Leech_C.BPSetupForInstigator
-// (Native, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

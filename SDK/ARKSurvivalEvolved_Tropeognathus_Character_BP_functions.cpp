@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -320,19 +320,18 @@ void ATropeognathus_Character_BP_C::GetTamingBuff(bool* IsValid, class APrimalBu
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPOverrideTamingDescriptionLabel
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FSlateColor             TextColor                      (Parm, OutParm, ReferenceParm)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ATropeognathus_Character_BP_C::STATIC_BPOverrideTamingDescriptionLabel(struct FSlateColor* TextColor)
+class FString ATropeognathus_Character_BP_C::BPOverrideTamingDescriptionLabel(struct FSlateColor* TextColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPOverrideTamingDescriptionLabel");
 
 	ATropeognathus_Character_BP_C_BPOverrideTamingDescriptionLabel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -522,7 +521,7 @@ struct FName ATropeognathus_Character_BP_C::BPGetRiderSocket()
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.IsJumpHeld
-// (NetReliable, Exec, Native, NetResponse, Static, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Net, NetReliable, Exec, Static, MulticastDelegate, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -533,7 +532,6 @@ bool ATropeognathus_Character_BP_C::STATIC_IsJumpHeld()
 	ATropeognathus_Character_BP_C_IsJumpHeld_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -699,16 +697,16 @@ void ATropeognathus_Character_BP_C::BPGetCrosshairLocation(float* CanvasClipX, f
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.consumeItem
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ConsumeItem
 // ()
 // Parameters:
 // class UClass*                  Item                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATropeognathus_Character_BP_C::consumeItem(class UClass* Item)
+void ATropeognathus_Character_BP_C::ConsumeItem(class UClass* Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.consumeItem");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ConsumeItem");
 
-	ATropeognathus_Character_BP_C_consumeItem_Params params;
+	ATropeognathus_Character_BP_C_ConsumeItem_Params params;
 	params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
@@ -766,7 +764,7 @@ bool ATropeognathus_Character_BP_C::BPOnStopJump()
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Fire Flak Cannon
-// (Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Dir                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -1361,9 +1359,9 @@ struct FVector ATropeognathus_Character_BP_C::GetWindGustEpicenter()
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.DoWing GustAOE
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATropeognathus_Character_BP_C::STATIC_DoWing_GustAOE()
+void ATropeognathus_Character_BP_C::DoWing_GustAOE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.DoWing GustAOE");
 
@@ -2180,7 +2178,7 @@ void ATropeognathus_Character_BP_C::Controller_Follow_ActorRotation(float DeltaS
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ReferenceLatchingObjects
-// (NetReliable, Native, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ATropeognathus_Character_BP_C::ReferenceLatchingObjects()
 {
@@ -2198,7 +2196,7 @@ void ATropeognathus_Character_BP_C::ReferenceLatchingObjects()
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.LineTrace
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UMeshComponent*          Mesh                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -2276,12 +2274,12 @@ void ATropeognathus_Character_BP_C::ProcessLatching(float DeltaSeconds)
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.TryLatch
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Offset                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           backwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATropeognathus_Character_BP_C::STATIC_TryLatch(const struct FVector& Offset, bool backwardsLatching)
+void ATropeognathus_Character_BP_C::TryLatch(const struct FVector& Offset, bool backwardsLatching)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.TryLatch");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ struct ALanternPet_Character_BP_C_Get_Charge_Variable_Interface_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LanternPet_Character_BP.LanternPet_Character_BP_C.UpdateMaxCharge
@@ -286,14 +286,14 @@ struct ALanternPet_Character_BP_C_ChargeVariableEventDoubleInterface_Params
 struct ALanternPet_Character_BP_C_ChargeVariableEventIntInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LanternPet_Character_BP.LanternPet_Character_BP_C.ChargeVariableEventIntMulticastInterface
 struct ALanternPet_Character_BP_C_ChargeVariableEventIntMulticastInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LanternPet_Character_BP.LanternPet_Character_BP_C.NetUpdateCharge
@@ -331,7 +331,7 @@ struct ALanternPet_Character_BP_C_Set_Charge_Variable_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               triggerEvent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               multicastEvent;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LanternPet_Character_BP.LanternPet_Character_BP_C.Charge Variable Event Interface
@@ -341,7 +341,7 @@ struct ALanternPet_Character_BP_C_Charge_Variable_Event_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LanternPet_Character_BP.LanternPet_Character_BP_C.Charge Variable Event Trigger Multicast Interface

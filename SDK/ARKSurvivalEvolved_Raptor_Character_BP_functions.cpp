@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -344,7 +344,7 @@ void ARaptor_Character_BP_C::OnRep_bCanMaul()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintCanRiderAttack
-// (Exec, Event, NetMulticast, HasDefaults, DLLImport, BlueprintPure)
+// (Native, Event, NetResponse, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -357,6 +357,7 @@ bool ARaptor_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -384,7 +385,7 @@ void ARaptor_Character_BP_C::BPTimerServer()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.CheckForPounceTarget
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Public, HasDefaults, DLLImport, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APrimalCharacter*        RetTarget                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

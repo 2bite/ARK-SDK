@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -148,8 +148,8 @@ public:
 	void Kill_Boids_Based_On_Health();
 	void OnTargetChanged();
 	void Can_Damage_Victim_in_Radius(class AActor* Victim, bool* CanDamage);
-	void CreateFlock();
-	void TickFlock(float DeltaTime);
+	void STATIC_CreateFlock();
+	void STATIC_TickFlock(float DeltaTime);
 	void ArrayContainsParentDamageType(TArray<class UClass*>* DamageTypes, class UClass** DamageType, bool* Result);
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void STATIC_Damage_Victim_in_Radius(class AActor* Victim);

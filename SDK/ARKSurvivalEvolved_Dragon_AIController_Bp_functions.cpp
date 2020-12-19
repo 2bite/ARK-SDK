@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,9 +52,9 @@ void ADragon_AIController_Bp_C::ReceiveTick(float* DeltaSeconds)
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.ShouldStayOnLand
 // ()
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADragon_AIController_Bp_C::ShouldStayOnLand(bool* Return)
+void ADragon_AIController_Bp_C::ShouldStayOnLand(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.ShouldStayOnLand");
 
@@ -66,17 +66,17 @@ void ADragon_AIController_Bp_C::ShouldStayOnLand(bool* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.IsUsingSpline
 // ()
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADragon_AIController_Bp_C::IsUsingSpline(bool* Return)
+void ADragon_AIController_Bp_C::IsUsingSpline(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.IsUsingSpline");
 
@@ -88,18 +88,18 @@ void ADragon_AIController_Bp_C::IsUsingSpline(bool* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.CalculateAndSetWonderingAIStateEvent
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (Event, Public, Private, HasOutParms, NetClient, Const)
 // Parameters:
 // bool*                          StateChanged                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ADragon_AIController_Bp_C::STATIC_CalculateAndSetWonderingAIStateEvent(bool* StateChanged)
+bool ADragon_AIController_Bp_C::CalculateAndSetWonderingAIStateEvent(bool* StateChanged)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.CalculateAndSetWonderingAIStateEvent");
 
@@ -107,7 +107,6 @@ bool ADragon_AIController_Bp_C::STATIC_CalculateAndSetWonderingAIStateEvent(bool
 	params.StateChanged = StateChanged;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

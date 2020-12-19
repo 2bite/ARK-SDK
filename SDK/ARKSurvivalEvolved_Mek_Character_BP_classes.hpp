@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -240,7 +240,7 @@ public:
 	float                                              K2Node_CustomEvent_VertOffset;                            // 0x2DC4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_Color3;                                // 0x2DC8(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_Length;                                // 0x2DD8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_duration4;                             // 0x2DDC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_Duration4;                             // 0x2DDC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x2DE0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData28[0x3];                                       // 0x2DE1(0x0003) MISSED OFFSET
 	float                                              CallFunc_Multiply_FloatFloat_ReturnValue2;                // 0x2DE4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -273,15 +273,15 @@ public:
 	struct FVector                                     K2Node_CustomEvent_Start;                                 // 0x2EB0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_End;                                   // 0x2EBC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_color2;                                // 0x2EC8(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration3;                             // 0x2ED8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration3;                             // 0x2ED8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_Thickness2;                            // 0x2EDC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum4_CmpSuccess;                            // 0x2EE0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData33[0x7];                                       // 0x2EE1(0x0007) MISSED OFFSET
 	struct FHitResult                                  K2Node_CustomEvent_Hit2;                                  // 0x2EE8(0x0088) (Transient, DuplicateTransient)
 	struct FLinearColor                                K2Node_CustomEvent_NoHitColor;                            // 0x2F70(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_CollisionColor;                        // 0x2F80(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration2;                             // 0x2F90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Thickness;                             // 0x2F94(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration2;                             // 0x2F90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_thickness;                             // 0x2F94(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_HitSize;                               // 0x2F98(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_TraceStart2;                           // 0x2F9C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_TraceEnd2;                             // 0x2FA8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -399,8 +399,8 @@ public:
 	bool                                               K2Node_SwitchEnum9_CmpSuccess;                            // 0x3260(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData54[0x7];                                       // 0x3261(0x0007) MISSED OFFSET
 	class FString                                      K2Node_CustomEvent_Message;                               // 0x3268(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	float                                              K2Node_CustomEvent_Duration;                              // 0x3278(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FLinearColor                                K2Node_CustomEvent_color;                                 // 0x327C(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x3278(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                K2Node_CustomEvent_Color;                                 // 0x327C(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_ModifyHeatLevel_NewHeatLevel;                    // 0x328C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FColor                                      CallFunc_Conv_LinearColorToColor_ReturnValue;             // 0x3290(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData55[0x4];                                       // 0x3294(0x0004) MISSED OFFSET
@@ -490,7 +490,7 @@ public:
 	bool BPCanBaseOnCharacter(class APrimalCharacter** BaseCharacter);
 	void SyncBackpackColorization();
 	bool BPOverrideMoveToOrder(struct FVector* MoveToLocation, class AShooterCharacter** OrderingPlayer);
-	void Get_Transform_Key_Name(struct FText* KeyName);
+	void STATIC_Get_Transform_Key_Name(struct FText* KeyName);
 	void BPPostLoadedFromSaveGame();
 	void BPPreSerializeSaveGame();
 	struct FVector BPAdjustImpulseFromDamage(struct FVector* DesiredImpulse, float* DamageTaken, struct FDamageEvent* TheDamageEvent, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
@@ -508,7 +508,7 @@ public:
 	void ClientIsMegaMekTransformationAllowed(bool* Allowed, bool* KingKaijuNearby, int* FriendlyMeksNearby);
 	void MegaMekTransformation();
 	void AllowedToAutoRepair(bool* Allowed, float* CooldownTimeRemaining);
-	void STATIC_BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
+	void BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void GetTurnInPlaceSpeed(float DefaultSpeed, float* newSpeed);
@@ -549,7 +549,7 @@ public:
 	void BP_OnJumpPressed();
 	float BPGetGravityZScale();
 	bool BPPreventFallDamage(float* FallDamageAmount, struct FHitResult* HitResult);
-	void STATIC_RidingTick(float* DeltaSeconds);
+	void RidingTick(float* DeltaSeconds);
 	struct FVector STATIC_BPGetRiderUnboardLocation(class APrimalCharacter** RidingCharacter);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void UserConstructionScript();

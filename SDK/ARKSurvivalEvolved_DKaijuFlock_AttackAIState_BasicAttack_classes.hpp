@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,7 +41,7 @@ public:
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void BPOnAttackStart(int* AttackIndex);
 	bool BPShouldEndAttack();
-	void STATIC_OnTickEvent(float* DeltaSeconds);
+	void OnTickEvent(float* DeltaSeconds);
 	void ExecuteUbergraph_DKaijuFlock_AttackAIState_BasicAttack(int EntryPoint);
 };
 

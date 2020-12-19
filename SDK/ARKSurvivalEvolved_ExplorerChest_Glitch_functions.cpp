@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ void AExplorerChest_Glitch_C::DrawBasicFloatingHUD(class AHUD** ForHUD)
 
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, NetValidate)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.UpdateFX
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void ABuff_Zipline_Motorized_C::UpdateFX()
 {
@@ -22,7 +22,6 @@ void ABuff_Zipline_Motorized_C::UpdateFX()
 	ABuff_Zipline_Motorized_C_UpdateFX_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,15 +75,16 @@ void ABuff_Zipline_Motorized_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.Try Refill Gas
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
-void ABuff_Zipline_Motorized_C::STATIC_Try_Refill_Gas()
+void ABuff_Zipline_Motorized_C::Try_Refill_Gas()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.Try Refill Gas");
 
 	ABuff_Zipline_Motorized_C_Try_Refill_Gas_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,7 +93,7 @@ void ABuff_Zipline_Motorized_C::STATIC_Try_Refill_Gas()
 
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.BPDrawBuffStatusHUD
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -111,6 +111,7 @@ void ABuff_Zipline_Motorized_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** H
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

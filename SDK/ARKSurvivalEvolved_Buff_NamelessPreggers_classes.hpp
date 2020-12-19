@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -98,9 +98,9 @@ public:
 	TArray<struct FBoneModifier> STATIC_BPModifyPlayerBoneModifiers(TArray<struct FBoneModifier>* InBoneModifiers);
 	void STATIC_HandleBuffAnimNotify(struct FName* AnimNotifyName, class FString* AnimNotifyStringData);
 	void UpdateBuffPersistentData();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void BuffTickClient(float* DeltaTime);
-	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void BuffTickServer(float* DeltaTime);
 	void UserConstructionScript();
 	void Multi_SetupBaby();

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,7 +83,7 @@ public:
 	}
 
 
-	void STATIC_Sruggle();
+	void Sruggle();
 	void Validate();
 	void SetIsHostileBuff(bool NewSetting);
 	struct FStatusValueModifierDescription STATIC_GetBuffDescription();

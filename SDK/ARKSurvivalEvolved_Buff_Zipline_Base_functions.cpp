@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -137,7 +137,7 @@ void ABuff_Zipline_Base_C::Deactivate_Local_Client(class AActor* Pawn)
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.IsStillColliding
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void ABuff_Zipline_Base_C::STATIC_IsStillColliding()
 {
@@ -146,7 +146,6 @@ void ABuff_Zipline_Base_C::STATIC_IsStillColliding()
 	ABuff_Zipline_Base_C_IsStillColliding_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -410,15 +409,15 @@ void ABuff_Zipline_Base_C::SetZiplineControlRotation()
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.PlayTurnAnimation
 // ()
 // Parameters:
-// class UAnimMontage*            override                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Override                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_Base_C::PlayTurnAnimation(class UAnimMontage* override, float* Duration)
+void ABuff_Zipline_Base_C::PlayTurnAnimation(class UAnimMontage* Override, float* Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.PlayTurnAnimation");
 
 	ABuff_Zipline_Base_C_PlayTurnAnimation_Params params;
-	params.override = override;
+	params.Override = Override;
 
 	auto flags = fn->FunctionFlags;
 
@@ -653,7 +652,7 @@ void ABuff_Zipline_Base_C::ResetMeshPosition()
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.JumpImpulse
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Static, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -665,6 +664,7 @@ void ABuff_Zipline_Base_C::STATIC_JumpImpulse(const struct FVector& Direction)
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -724,9 +724,9 @@ void ABuff_Zipline_Base_C::GetZiplineStartAndEndPoint(bool NoOffset, struct FVec
 // Parameters:
 // float                          Accleration                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Length                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          maxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          MaxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_Base_C::CalculateZiplineMaxVelocity(float Accleration, float Length, float* maxVelocity)
+void ABuff_Zipline_Base_C::CalculateZiplineMaxVelocity(float Accleration, float Length, float* MaxVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.CalculateZiplineMaxVelocity");
 
@@ -740,8 +740,8 @@ void ABuff_Zipline_Base_C::CalculateZiplineMaxVelocity(float Accleration, float 
 
 	fn->FunctionFlags = flags;
 
-	if (maxVelocity != nullptr)
-		*maxVelocity = params.maxVelocity;
+	if (MaxVelocity != nullptr)
+		*MaxVelocity = params.MaxVelocity;
 }
 
 
@@ -1030,11 +1030,11 @@ void ABuff_Zipline_Base_C::GetAttachOffset(struct FVector* AttachOffset)
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.BPSetupForInstigator
-// (NetRequest, Exec, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Protected, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_Base_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_Zipline_Base_C::BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.BPSetupForInstigator");
 
@@ -1042,6 +1042,7 @@ void ABuff_Zipline_Base_C::STATIC_BPSetupForInstigator(class AActor** ForInstiga
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1100,7 +1101,7 @@ struct FVector ABuff_Zipline_Base_C::BPOverrideCharacterNewFallVelocity(float* D
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.AttachToZipline
-// (Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, NetResponse, Static, Protected, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1112,6 +1113,7 @@ void ABuff_Zipline_Base_C::STATIC_AttachToZipline(const struct FVector& StartLoc
 	params.StartLocation = StartLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1183,15 +1185,16 @@ void ABuff_Zipline_Base_C::StartMoveAlongZipline(const struct FVector& StartLoca
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Protected, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABuff_Zipline_Base_C::UserConstructionScript()
+void ABuff_Zipline_Base_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.UserConstructionScript");
 
 	ABuff_Zipline_Base_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

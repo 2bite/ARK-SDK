@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -156,7 +156,7 @@ public:
 	void Process_Launch();
 	void ProcessJump();
 	void STATIC_Jump_Trace();
-	void ShouldStopJumpRotation(bool* Return_Value);
+	void ShouldStopJumpRotation(bool* return_value);
 	void ShortestAngleDistance(float AngleCurrent, float AngleTarget, float* Difference);
 	struct FVector GetClampedLookDir(bool LimitLowerPitch);
 	void UserConstructionScript();

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ public:
 
 
 	void Do_TeleportSound();
-	void STATIC_BuffTickClient(float* DeltaTime);
+	void BuffTickClient(float* DeltaTime);
 	void DoTeleport();
 	void UserConstructionScript();
 	void NetDoTeleport();

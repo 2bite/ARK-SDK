@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48351,6 +48351,26 @@ void APrimalCharacter::BPSetCharacterMeshesMaterialScalarParamValue(const struct
 }
 
 
+// Function ShooterGame.PrimalCharacter.BPRemovedAsPassenger
+// ()
+// Parameters:
+// class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalCharacter::BPRemovedAsPassenger(class APrimalCharacter* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.BPRemovedAsPassenger");
+
+	APrimalCharacter_BPRemovedAsPassenger_Params params;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalCharacter.BPRemoveCharacterSnapshot
 // ()
 // Parameters:
@@ -74984,6 +75004,26 @@ void UShooterCheatManager::SetDebugMeleeAttacks(bool bDebugMelee, float DrawDura
 }
 
 
+// Function ShooterGame.ShooterCheatManager.SetDay
+// ()
+// Parameters:
+// int                            day                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::SetDay(int day)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.SetDay");
+
+	UShooterCheatManager_SetDay_Params params;
+	params.day = day;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.SetChatLogMaxAgeInDays
 // ()
 // Parameters:
@@ -88117,6 +88157,28 @@ void UVictoryCore::VisualLog_AxisAlignedBox(class AActor* Actor, const class FSt
 	params.BoxMax = BoxMax;
 	params.BoxColor = BoxColor;
 	params.bAlsoPrintMessage = bAlsoPrintMessage;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.VictoryCore.ViewTrailer
+// ()
+// Parameters:
+// bool                           bAnimatedSeriesTrailer         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bARK2Trailer                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UVictoryCore::ViewTrailer(bool bAnimatedSeriesTrailer, bool bARK2Trailer)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.ViewTrailer");
+
+	UVictoryCore_ViewTrailer_Params params;
+	params.bAnimatedSeriesTrailer = bAnimatedSeriesTrailer;
+	params.bARK2Trailer = bARK2Trailer;
 
 	auto flags = fn->FunctionFlags;
 

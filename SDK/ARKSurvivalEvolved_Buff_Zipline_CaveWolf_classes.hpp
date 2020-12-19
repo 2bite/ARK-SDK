@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,7 +68,7 @@ public:
 	float                                              CallFunc_PlayAnimEx_ReturnValue2;                         // 0x0D48(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               Temp_bool_IsClosed_Variable3;                             // 0x0D4C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x3];                                       // 0x0D4D(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x0D50(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x0D50(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayTurnAnimation_Duration;                      // 0x0D54(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_Add_FloatFloat_ReturnValue;                      // 0x0D58(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0D5C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -131,7 +131,7 @@ public:
 	void GetAttachOffset(struct FVector* AttachOffset);
 	void Play_Detach_Animation(float* Duration);
 	void STATIC_IsStillColliding();
-	void STATIC_CanZiplineFlip(bool* Return);
+	void STATIC_CanZiplineFlip(bool* _return);
 	void ResetCamera();
 	void HandleCollision(struct FHitResult* Hit);
 	void HitZiplineEndStop(class UMovementComponent** MovementComp);
@@ -151,9 +151,9 @@ public:
 	void UpdateFPVCameraAndMeshPosition();
 	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
-	void PlayTurnAnimation(class UAnimMontage** override, float* Duration);
+	void PlayTurnAnimation(class UAnimMontage** Override, float* Duration);
 	void SetZiplineControlRotation();
-	void RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* Return);
+	void RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* _return);
 	void BPDeactivated(class AActor** ForInstigator);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void ResetMeshPosition();

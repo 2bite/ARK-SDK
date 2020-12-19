@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,7 @@ class ASpindles_Character_BP_C : public ADino_Character_BP_C
 public:
 	class UAudioComponent*                             MinigunFireSoundComponent;                                // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UDinoCharacterStatusComponent_BP_Spindles_C* DinoCharacterStatus_BP_Spindles_C1;                       // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsMinigunFiring;                                          // 0x2198(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsMiniGunFiring;                                          // 0x2198(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsMinigunMode;                                            // 0x2199(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x219A(0x0002) MISSED OFFSET
 	float                                              MinigunModeRotationSpeed;                                 // 0x219C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -389,10 +389,10 @@ public:
 	void UpdateMiniGunState();
 	void BPTimerServer();
 	void GetClampedCameraLocation(struct FVector* OutLoc);
-	class FString BPGetDebugInfoString();
+	class FString STATIC_BPGetDebugInfoString();
 	void SpawnMinigunFX(const struct FVector& Start, const struct FVector& End);
 	bool BPHandlePoop();
-	class UAnimMontage* STATIC_BPOverrideHurtAnim(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, bool* bIsPointDamage, struct FVector* PointDamageLocation, struct FVector* PointDamageHitNormal, struct FDamageEvent* DamageEvent);
+	class UAnimMontage* BPOverrideHurtAnim(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, bool* bIsPointDamage, struct FVector* PointDamageLocation, struct FVector* PointDamageHitNormal, struct FDamageEvent* DamageEvent);
 	void STATIC_UpdateCachedActivateMinigunModeWeightCheck();
 	float BlueprintGetAttackWeight(int* AttackIndex, float* inputWeight, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void GetMinigunModeTPVOffset(struct FVector* TPVOffset);

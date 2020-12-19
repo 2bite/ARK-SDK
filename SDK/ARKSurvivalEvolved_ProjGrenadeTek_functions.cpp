@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjGrenadeTek.ProjGrenadeTek_C.BPProjectileBounced
-// (NetRequest, Exec, Event, NetResponse, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FHitResult              ImpactResult                   (Parm, OutParm, ReferenceParm)
 // struct FVector                 ImpactVelocity                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -25,6 +25,7 @@ void AProjGrenadeTek_C::BPProjectileBounced(struct FHitResult* ImpactResult, str
 	AProjGrenadeTek_C_BPProjectileBounced_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

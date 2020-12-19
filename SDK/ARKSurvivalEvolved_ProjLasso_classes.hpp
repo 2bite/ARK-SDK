@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ public:
 	}
 
 
-	void ReceiveTick(float* DeltaSeconds);
+	void STATIC_ReceiveTick(float* DeltaSeconds);
 	void ReceiveBeginPlay();
 	void BPInitializedVelocity(float* CustomSpeed, struct FVector* InVelocity);
 	void UserConstructionScript();

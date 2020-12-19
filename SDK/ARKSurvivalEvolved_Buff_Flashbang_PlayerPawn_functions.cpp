@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -96,7 +96,7 @@ void ABuff_Flashbang_PlayerPawn_C::ShouldStartFading(bool* ShouldFade)
 
 
 // Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.IsNearbyStructure
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, Const)
 // Parameters:
 // int                            CheckIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          IndexOffset                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -111,6 +111,7 @@ void ABuff_Flashbang_PlayerPawn_C::STATIC_IsNearbyStructure(int CheckIndex, floa
 	params.IndexOffset = IndexOffset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -182,9 +183,9 @@ void ABuff_Flashbang_PlayerPawn_C::CalculateWeightedIntensityAverage(float Expos
 // Parameters:
 // class AActor*                  Actor1                         (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor2                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* Retval)
+void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.Get Normalized Distance");
 
@@ -198,8 +199,8 @@ void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1,
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 

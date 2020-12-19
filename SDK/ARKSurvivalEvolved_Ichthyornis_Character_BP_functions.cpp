@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPClientHandleNetExecCommand
-// (Net, Exec, Native, Event, NetMulticast, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AIchthyornis_Character_BP_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool AIchthyornis_Character_BP_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPClientHandleNetExecCommand");
 
@@ -29,7 +29,6 @@ bool AIchthyornis_Character_BP_C::BPClientHandleNetExecCommand(struct FName* Com
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +64,7 @@ void AIchthyornis_Character_BP_C::IsOverweightThreshold_F(bool* NewParam)
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPModifyHarvestingQuantity
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float*                         originalQuantity               (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass**                 resourceSelected               (Parm, ZeroConstructor, IsPlainOldData)
@@ -80,6 +79,7 @@ float AIchthyornis_Character_BP_C::BPModifyHarvestingQuantity(float* originalQua
 	params.resourceSelected = resourceSelected;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -438,11 +438,11 @@ void AIchthyornis_Character_BP_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Improve HarvestingComponent for Dragged Character
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (Native, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APrimalCharacter*        killedCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIchthyornis_Character_BP_C::Improve_HarvestingComponent_for_Dragged_Character(class APrimalCharacter* killedCharacter)
+void AIchthyornis_Character_BP_C::STATIC_Improve_HarvestingComponent_for_Dragged_Character(class APrimalCharacter* killedCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Improve HarvestingComponent for Dragged Character");
 
@@ -808,7 +808,7 @@ void AIchthyornis_Character_BP_C::CanUseBiteAttack(class APrimalCharacter* Targe
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.OnLaunched
-// (NetRequest, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector*                LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -824,6 +824,7 @@ void AIchthyornis_Character_BP_C::STATIC_OnLaunched(struct FVector* LaunchVeloci
 	params.bZOverride = bZOverride;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -915,12 +916,12 @@ void AIchthyornis_Character_BP_C::OnClearCarriedCharacter(bool stopTimerServer, 
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Can Use Wild Dive
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetRequest, Event, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           canDoAttack                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIchthyornis_Character_BP_C::STATIC_Can_Use_Wild_Dive(class APrimalCharacter* Target, bool* canDoAttack)
+void AIchthyornis_Character_BP_C::Can_Use_Wild_Dive(class APrimalCharacter* Target, bool* canDoAttack)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Can Use Wild Dive");
 
@@ -928,7 +929,6 @@ void AIchthyornis_Character_BP_C::STATIC_Can_Use_Wild_Dive(class APrimalCharacte
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -964,11 +964,11 @@ void AIchthyornis_Character_BP_C::CanUseDiveAttack(class APrimalCharacter* Targe
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.ApplyChewDamage
-// (Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (Native, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          amount                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIchthyornis_Character_BP_C::ApplyChewDamage(float amount)
+void AIchthyornis_Character_BP_C::STATIC_ApplyChewDamage(float amount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.ApplyChewDamage");
 
@@ -976,6 +976,7 @@ void AIchthyornis_Character_BP_C::ApplyChewDamage(float amount)
 	params.amount = amount;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1112,7 +1113,7 @@ void AIchthyornis_Character_BP_C::CanUseGrabAttack(class APrimalCharacter* Prima
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Remove Weapon
-// (NetRequest, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetRequest, Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APrimalCharacter*        Owner                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1125,6 +1126,7 @@ void AIchthyornis_Character_BP_C::Remove_Weapon(class APrimalCharacter* Owner, b
 	params.Owner = Owner;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1186,7 +1188,7 @@ void AIchthyornis_Character_BP_C::CanStealItem(class UPrimalItem* Item, bool isF
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DoStealItem
-// (Exec, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APrimalCharacter*        CharacterToStealFrom           (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimalItem*             itemToSteal                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -1201,6 +1203,7 @@ void AIchthyornis_Character_BP_C::DoStealItem(class APrimalCharacter* CharacterT
 	params.itemToSteal = itemToSteal;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1367,7 +1370,7 @@ void AIchthyornis_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** H
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPGetMultiUseEntries
-// (MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1442,7 +1445,7 @@ bool AIchthyornis_Character_BP_C::BPCanDragCharacter(class APrimalCharacter** Ch
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -1451,7 +1454,7 @@ bool AIchthyornis_Character_BP_C::BPCanDragCharacter(class APrimalCharacter** Ch
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AIchthyornis_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AIchthyornis_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -1461,7 +1464,6 @@ float AIchthyornis_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex,
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1628,7 +1630,7 @@ void AIchthyornis_Character_BP_C::Can_UseRegularDive(class APrimalCharacter* Tar
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPDoAttack
-// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1640,6 +1642,7 @@ void AIchthyornis_Character_BP_C::BPDoAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1858,17 +1861,17 @@ void AIchthyornis_Character_BP_C::SlowlyRotateZTo(const struct FRotator& TargetR
 // Parameters:
 // float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dropDragged                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           dropCarried                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           DropCarried                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           restoreFollowingVariables      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIchthyornis_Character_BP_C::DropCarriedAfterTime(float Time, bool dropDragged, bool dropCarried, bool restoreFollowingVariables)
+void AIchthyornis_Character_BP_C::DropCarriedAfterTime(float Time, bool dropDragged, bool DropCarried, bool restoreFollowingVariables)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DropCarriedAfterTime");
 
 	AIchthyornis_Character_BP_C_DropCarriedAfterTime_Params params;
 	params.Time = Time;
 	params.dropDragged = dropDragged;
-	params.dropCarried = dropCarried;
+	params.DropCarried = DropCarried;
 	params.restoreFollowingVariables = restoreFollowingVariables;
 
 	auto flags = fn->FunctionFlags;
@@ -1879,20 +1882,20 @@ void AIchthyornis_Character_BP_C::DropCarriedAfterTime(float Time, bool dropDrag
 }
 
 
-// Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.dropCarried
+// Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DropCarried
 // ()
 // Parameters:
 // bool                           dropDragged                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           dropCarried                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           DropCarried                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           restoreFollowingVariables      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIchthyornis_Character_BP_C::dropCarried(bool dropDragged, bool dropCarried, bool restoreFollowingVariables)
+void AIchthyornis_Character_BP_C::DropCarried(bool dropDragged, bool DropCarried, bool restoreFollowingVariables)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.dropCarried");
+	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DropCarried");
 
-	AIchthyornis_Character_BP_C_dropCarried_Params params;
+	AIchthyornis_Character_BP_C_DropCarried_Params params;
 	params.dropDragged = dropDragged;
-	params.dropCarried = dropCarried;
+	params.DropCarried = DropCarried;
 	params.restoreFollowingVariables = restoreFollowingVariables;
 
 	auto flags = fn->FunctionFlags;

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.GetBuffDetails
-// (NetReliable, Exec, Event, NetMulticast, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class FString>          BuffInfo                       (Parm, OutParm, ZeroConstructor)
 
-void AWeapAdminBlinkRifle_C::GetBuffDetails(class APrimalCharacter* Character, TArray<class FString>* BuffInfo)
+void AWeapAdminBlinkRifle_C::STATIC_GetBuffDetails(class APrimalCharacter* Character, TArray<class FString>* BuffInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.GetBuffDetails");
 
@@ -26,6 +26,7 @@ void AWeapAdminBlinkRifle_C::GetBuffDetails(class APrimalCharacter* Character, T
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,7 +112,7 @@ void AWeapAdminBlinkRifle_C::GetActorScreenLocation(class AActor* TargetActor, s
 
 
 // Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.InspectTrace
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FVector2D               Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -127,6 +128,7 @@ bool AWeapAdminBlinkRifle_C::STATIC_InspectTrace(const struct FVector2D& Start, 
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,11 +164,11 @@ void AWeapAdminBlinkRifle_C::HasAdminPermission(bool* IsAdmin)
 
 
 // Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.Tick_Destroy
-// (NetReliable, Event, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapAdminBlinkRifle_C::Tick_Destroy(float DeltaTime)
+void AWeapAdminBlinkRifle_C::STATIC_Tick_Destroy(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.Tick_Destroy");
 
@@ -182,11 +184,11 @@ void AWeapAdminBlinkRifle_C::Tick_Destroy(float DeltaTime)
 
 
 // Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.Tick_Inspect
-// (NetReliable, Exec, NetResponse, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapAdminBlinkRifle_C::Tick_Inspect(float DeltaTime)
+void AWeapAdminBlinkRifle_C::STATIC_Tick_Inspect(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.Tick_Inspect");
 
@@ -194,6 +196,7 @@ void AWeapAdminBlinkRifle_C::Tick_Inspect(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,7 +205,7 @@ void AWeapAdminBlinkRifle_C::Tick_Inspect(float DeltaTime)
 
 
 // Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.Tick_Blink
-// (NetRequest, Native, Event, NetResponse, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -280,9 +283,9 @@ void AWeapAdminBlinkRifle_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.BPFiredWeapon
-// (NetReliable, NetRequest, Event, Static, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void AWeapAdminBlinkRifle_C::STATIC_BPFiredWeapon()
+void AWeapAdminBlinkRifle_C::BPFiredWeapon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.BPFiredWeapon");
 
@@ -318,11 +321,11 @@ bool AWeapAdminBlinkRifle_C::BPAllowNativeFireWeapon()
 
 
 // Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.BPDrawHud
-// (NetRequest, Native, NetMulticast, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapAdminBlinkRifle_C::BPDrawHud(class AShooterHUD** HUD)
+void AWeapAdminBlinkRifle_C::STATIC_BPDrawHud(class AShooterHUD** HUD)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapAdminBlinkRifle.WeapAdminBlinkRifle_C.BPDrawHud");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,7 @@ namespace sdk
 class UDinoAttackState_Spindles_MinigunBase_C : public UDinoAttackState_Spindles_Base_C
 {
 public:
-	bool                                               IsMinigunFiring;                                          // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsMiniGunFiring;                                          // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x00B1(0x0003) MISSED OFFSET
 	float                                              MinigunRange;                                             // 0x00B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinigunFireRadiusMax;                                     // 0x00B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -74,7 +74,7 @@ public:
 
 	void IsDebugMode(bool* ret);
 	void GetDamageForSpine(class APrimalCharacter* Target, float* Damage);
-	void STATIC_FireSpine();
+	void FireSpine();
 	void Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
 	void GetAttackIndex(int* AttackIndex);
 	bool BPShouldEndAttack();

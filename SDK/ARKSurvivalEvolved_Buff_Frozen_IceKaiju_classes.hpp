@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,7 +133,7 @@ public:
 	void BuffPostAdjustDamage(float* Damage, class AController** EventInstigator, class AActor** DamageCauser, class UClass** TheDamgeType, struct FHitResult* HitInfo);
 	void ReceivePointDamage(float* Damage, class UDamageType** DamageType, struct FVector* HitLocation, struct FVector* HitNormal, class UPrimitiveComponent** HitComponent, struct FName* BoneName, struct FVector* ShotFromDirection, class AController** InstigatedBy, class AActor** DamageCauser);
 	void BuffTickClient(float* DeltaTime);
-	void STATIC_BuffTickServer(float* DeltaTime);
+	void BuffTickServer(float* DeltaTime);
 	void FreezeCharacter(class APrimalCharacter* InputPin, bool Freeze);
 	bool BPPreventCharacterStatusValueModifiers(class APrimalCharacter** ForInstigator);
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);

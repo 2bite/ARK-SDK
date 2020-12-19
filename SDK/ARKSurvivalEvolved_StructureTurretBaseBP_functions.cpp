@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -122,7 +122,7 @@ int AStructureTurretBaseBP_C::BPIsAllowedToBuildEx(int* CurrentAllowedReason, cl
 
 
 // Function StructureTurretBaseBP.StructureTurretBaseBP_C.BlueprintDrawHUD
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
+// (Net, Exec, NetResponse, NetMulticast, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -138,7 +138,6 @@ void AStructureTurretBaseBP_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* 
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

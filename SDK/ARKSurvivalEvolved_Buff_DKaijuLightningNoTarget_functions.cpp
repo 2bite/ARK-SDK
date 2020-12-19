@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void ABuff_DKaijuLightningNoTarget_C::OnRep_guy()
 
 
 // Function Buff_DKaijuLightningNoTarget.Buff_DKaijuLightningNoTarget_C.BPDeactivated
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -42,7 +42,6 @@ void ABuff_DKaijuLightningNoTarget_C::BPDeactivated(class AActor** ForInstigator
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -112,21 +112,21 @@ public:
 	}
 
 
-	void GetBuffDetails(class APrimalCharacter* Character, TArray<class FString>* BuffInfo);
+	void STATIC_GetBuffDetails(class APrimalCharacter* Character, TArray<class FString>* BuffInfo);
 	void GetInspectText(class AActor* Actor, class UObject* Component, TArray<class FString>* Desc);
 	void GetActorDescriptiveName(class AActor* Actor, class FString* Desc);
 	void GetActorScreenLocation(class AActor* TargetActor, struct FVector2D* ScreenLoc);
 	bool STATIC_InspectTrace(const struct FVector2D& Start, float End, struct FHitResult* OutHit);
 	void HasAdminPermission(bool* IsAdmin);
-	void Tick_Destroy(float DeltaTime);
-	void Tick_Inspect(float DeltaTime);
+	void STATIC_Tick_Destroy(float DeltaTime);
+	void STATIC_Tick_Inspect(float DeltaTime);
 	void Tick_Blink(float DeltaTime);
 	void ReceiveBeginPlay();
 	void BPOnStartTargeting(bool* bFromGamepadLeft);
 	void ReceiveTick(float* DeltaSeconds);
-	void STATIC_BPFiredWeapon();
+	void BPFiredWeapon();
 	bool BPAllowNativeFireWeapon();
-	void BPDrawHud(class AShooterHUD** HUD);
+	void STATIC_BPDrawHud(class AShooterHUD** HUD);
 	void UserConstructionScript();
 	void ServerRequestBlinkToTarget(const struct FVector& Location, bool IsAirTarget);
 	void ServerRequestSetMode(int Mode);

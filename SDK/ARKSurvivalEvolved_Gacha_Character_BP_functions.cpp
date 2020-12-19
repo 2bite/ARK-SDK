@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,7 +101,7 @@ bool AGacha_Character_BP_C::HasFriendlyTarget()
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GetCrystalDropTransform
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // struct FRotator                Rotation                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -113,6 +113,7 @@ struct FVector AGacha_Character_BP_C::GetCrystalDropTransform(struct FRotator* R
 	AGacha_Character_BP_C_GetCrystalDropTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,16 +226,15 @@ void AGacha_Character_BP_C::ReceiveAnyDamage(float* Damage, class UDamageType** 
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.InitializeProduction
-// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void AGacha_Character_BP_C::InitializeProduction()
+void AGacha_Character_BP_C::STATIC_InitializeProduction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.InitializeProduction");
 
 	AGacha_Character_BP_C_InitializeProduction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -277,7 +277,7 @@ void AGacha_Character_BP_C::FindWanderTarget()
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GetDigestionFrequencyMultiplier
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float                          mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -300,11 +300,11 @@ void AGacha_Character_BP_C::STATIC_GetDigestionFrequencyMultiplier(float* mult)
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GetCrystalQualityMultiplier
-// (Exec, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float                          mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AGacha_Character_BP_C::GetCrystalQualityMultiplier(float* mult)
+void AGacha_Character_BP_C::STATIC_GetCrystalQualityMultiplier(float* mult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.GetCrystalQualityMultiplier");
 
@@ -322,11 +322,11 @@ void AGacha_Character_BP_C::GetCrystalQualityMultiplier(float* mult)
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.Get Digestion Amount Multiplier
-// (Exec, Native, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float                          Multiplier                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AGacha_Character_BP_C::Get_Digestion_Amount_Multiplier(float* Multiplier)
+void AGacha_Character_BP_C::STATIC_Get_Digestion_Amount_Multiplier(float* Multiplier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.Get Digestion Amount Multiplier");
 
@@ -611,11 +611,11 @@ void AGacha_Character_BP_C::BPOnDinoCheat(struct FName* CheatName, bool* bSetVal
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.DistributeFood
-// (NetRequest, Native, Event, Static, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float                          FoodEaten                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AGacha_Character_BP_C::STATIC_DistributeFood(float FoodEaten)
+void AGacha_Character_BP_C::DistributeFood(float FoodEaten)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.DistributeFood");
 
@@ -656,13 +656,13 @@ void AGacha_Character_BP_C::Look_for_Food_Drops(bool PlayerAttack, bool* FoundSo
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GetItemTamingValue
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
+// (Exec, Native, Event, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             Object                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Affinity                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsWanted                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AGacha_Character_BP_C::STATIC_GetItemTamingValue(class UPrimalItem* Object, float* Affinity, bool* IsWanted)
+void AGacha_Character_BP_C::GetItemTamingValue(class UPrimalItem* Object, float* Affinity, bool* IsWanted)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.GetItemTamingValue");
 
@@ -670,6 +670,7 @@ void AGacha_Character_BP_C::STATIC_GetItemTamingValue(class UPrimalItem* Object,
 	params.Object = Object;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -683,7 +684,7 @@ void AGacha_Character_BP_C::STATIC_GetItemTamingValue(class UPrimalItem* Object,
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GetItemFoodValue
-// (NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             Object                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsPremium                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -764,13 +765,13 @@ void AGacha_Character_BP_C::BPNotifyWildHarvestAttack(int* harvestIndex)
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GetItemBaseValue
-// (Exec, Native, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             PrimalItem                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          BaseValue                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AGacha_Character_BP_C::GetItemBaseValue(class UPrimalItem* PrimalItem, float BaseValue, float* Value)
+void AGacha_Character_BP_C::STATIC_GetItemBaseValue(class UPrimalItem* PrimalItem, float BaseValue, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.GetItemBaseValue");
 
@@ -779,7 +780,6 @@ void AGacha_Character_BP_C::GetItemBaseValue(class UPrimalItem* PrimalItem, floa
 	params.BaseValue = BaseValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -830,13 +830,13 @@ void AGacha_Character_BP_C::BPClientDoMultiUse(class APlayerController** ForPC, 
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.BPTryMultiUse
-// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AGacha_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
+bool AGacha_Character_BP_C::STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.BPTryMultiUse");
 
@@ -856,13 +856,13 @@ bool AGacha_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
+// (NetRequest, Native, Event, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AGacha_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AGacha_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.BPGetMultiUseEntries");
 
@@ -870,6 +870,7 @@ TArray<struct FMultiUseEntry> AGacha_Character_BP_C::BPGetMultiUseEntries(class 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -934,7 +935,7 @@ void AGacha_Character_BP_C::SetCrystalScale()
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.DropCrystal
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
+// (Net, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
 void AGacha_Character_BP_C::DropCrystal()
 {
@@ -943,7 +944,6 @@ void AGacha_Character_BP_C::DropCrystal()
 	AGacha_Character_BP_C_DropCrystal_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -969,17 +969,18 @@ void AGacha_Character_BP_C::FinishDigestion()
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.TamedDigestion
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           AteSomething                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AGacha_Character_BP_C::STATIC_TamedDigestion(bool* AteSomething)
+void AGacha_Character_BP_C::TamedDigestion(bool* AteSomething)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.TamedDigestion");
 
 	AGacha_Character_BP_C_TamedDigestion_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1048,7 +1049,7 @@ void AGacha_Character_BP_C::TamingTick(float DeltaSeconds)
 
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.LookForTamingDrops
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintPure)
+// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           FoundSomething                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1059,7 +1060,6 @@ void AGacha_Character_BP_C::STATIC_LookForTamingDrops(bool* FoundSomething)
 	AGacha_Character_BP_C_LookForTamingDrops_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1074,15 +1074,15 @@ void AGacha_Character_BP_C::STATIC_LookForTamingDrops(bool* FoundSomething)
 // ()
 // Parameters:
 // class APrimalCharacter*        tamer                          (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          AffinityToGive                 (Parm, ZeroConstructor, IsPlainOldData)
+// float                          affinityToGive                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           wasTamed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AGacha_Character_BP_C::GiveAffinity(float AffinityToGive, class APrimalCharacter** tamer, bool* wasTamed)
+void AGacha_Character_BP_C::GiveAffinity(float affinityToGive, class APrimalCharacter** tamer, bool* wasTamed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gacha_Character_BP.Gacha_Character_BP_C.GiveAffinity");
 
 	AGacha_Character_BP_C_GiveAffinity_Params params;
-	params.AffinityToGive = AffinityToGive;
+	params.affinityToGive = affinityToGive;
 
 	auto flags = fn->FunctionFlags;
 

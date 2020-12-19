@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPGetDebugInfoString
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -104,7 +104,7 @@ void ABuff_SpindlesMinigunHit_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* End
 
 
 // Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPPreventflight
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (Net, Event, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -115,7 +115,6 @@ bool ABuff_SpindlesMinigunHit_C::STATIC_BPPreventflight()
 	ABuff_SpindlesMinigunHit_C_BPPreventflight_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

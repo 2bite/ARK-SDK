@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,7 +109,7 @@ bool ABuff_BubbleHazard_C::BPServerHandleNetExecCommand(class APlayerController*
 
 
 // Function Buff_BubbleHazard.Buff_BubbleHazard_C.BPHandleOnStartFire
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 

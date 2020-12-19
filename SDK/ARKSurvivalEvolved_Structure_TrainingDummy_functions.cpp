@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Structure_TrainingDummy.Structure_TrainingDummy_C.ReportDPS
-// (Net, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Event, Static, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
 
 void AStructure_TrainingDummy_C::STATIC_ReportDPS()
 {

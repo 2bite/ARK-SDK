@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,7 +133,7 @@ struct ABuff_Zipline_Base_C_SetZiplineControlRotation_Params
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.PlayTurnAnimation
 struct ABuff_Zipline_Base_C_PlayTurnAnimation_Params
 {
-	class UAnimMontage*                                override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                Override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -229,7 +229,7 @@ struct ABuff_Zipline_Base_C_CalculateZiplineMaxVelocity_Params
 {
 	float                                              Accleration;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Length;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              maxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.CalculateZiplineAcceleration

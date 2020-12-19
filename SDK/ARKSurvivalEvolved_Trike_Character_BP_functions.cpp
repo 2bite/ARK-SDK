@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -249,12 +249,12 @@ bool ATrike_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Trike_Character_BP.Trike_Character_BP_C.BPHandleControllerInitiatedAttack
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATrike_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
+bool ATrike_Character_BP_C::STATIC_BPHandleControllerInitiatedAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Trike_Character_BP.Trike_Character_BP_C.BPHandleControllerInitiatedAttack");
 
@@ -262,6 +262,7 @@ bool ATrike_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -367,7 +368,7 @@ void ATrike_Character_BP_C::GetPawnRootComponent(class AActor* Target, class UPr
 
 
 // Function Trike_Character_BP.Trike_Character_BP_C.BPAdjustDamage
-// (NetReliable, Native, NetResponse, Static, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -377,7 +378,7 @@ void ATrike_Character_BP_C::GetPawnRootComponent(class AActor* Target, class UPr
 // struct FHitResult*             PointHitInfo                   (Parm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ATrike_Character_BP_C::STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
+float ATrike_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Trike_Character_BP.Trike_Character_BP_C.BPAdjustDamage");
 

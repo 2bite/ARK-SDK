@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -266,7 +266,7 @@ void AWeapFishingNet_C::FishStruggle()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.spawn vfx at location where cable intersects with water
-// (NetReliable, Native, Event, Static, MulticastDelegate, Protected, Delegate)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, Const)
 
 void AWeapFishingNet_C::STATIC_spawn_vfx_at_location_where_cable_intersects_with_water()
 {
@@ -607,7 +607,7 @@ void AWeapFishingNet_C::Kill_all_fish_in_net()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.Send Caught Fish Message to Player
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, Exec, Static, Public, Protected, Delegate, NetServer, NetClient, Const)
 
 void AWeapFishingNet_C::STATIC_Send_Caught_Fish_Message_to_Player()
 {
@@ -678,7 +678,7 @@ void AWeapFishingNet_C::Cancel_Cast_Destroy_Cable_Components()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.cancel cast destroy net projectile
-// (NetReliable, MulticastDelegate, Protected, Delegate)
+// (NetReliable, Exec, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, Const)
 
 void AWeapFishingNet_C::cancel_cast_destroy_net_projectile()
 {
@@ -967,16 +967,16 @@ bool AWeapFishingNet_C::BPCanEquip(class AShooterCharacter** ByCharacter)
 // ()
 // Parameters:
 // struct FVector                 Weapon_Location                (Parm, ZeroConstructor, IsPlainOldData)
-// class AProjFishingNet_C*       net_projectile                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AProjFishingNet_C*       Net_Projectile                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector AWeapFishingNet_C::Reel_Velocity(const struct FVector& Weapon_Location, class AProjFishingNet_C* net_projectile)
+struct FVector AWeapFishingNet_C::Reel_Velocity(const struct FVector& Weapon_Location, class AProjFishingNet_C* Net_Projectile)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Reel Velocity");
 
 	AWeapFishingNet_C_Reel_Velocity_Params params;
 	params.Weapon_Location = Weapon_Location;
-	params.net_projectile = net_projectile;
+	params.Net_Projectile = Net_Projectile;
 
 	auto flags = fn->FunctionFlags;
 
@@ -989,14 +989,14 @@ struct FVector AWeapFishingNet_C::Reel_Velocity(const struct FVector& Weapon_Loc
 
 
 // Function WeapFishingNet.WeapFishingNet_C.BPAnimNotifyCustomEvent
-// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate)
+// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AWeapFishingNet_C::STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.BPAnimNotifyCustomEvent");
 
@@ -1007,7 +1007,6 @@ void AWeapFishingNet_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, c
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1097,7 +1096,7 @@ void AWeapFishingNet_C::On_Fish_Released(class APrimalDinoCharacter* fish)
 
 
 // Function WeapFishingNet.WeapFishingNet_C.release fish
-// (NetReliable, Exec, Native, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UObject*                 fish                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           pulled_completely_up           (Parm, ZeroConstructor, IsPlainOldData)
@@ -1111,7 +1110,6 @@ void AWeapFishingNet_C::release_fish(class UObject* fish, bool pulled_completely
 	params.pulled_completely_up = pulled_completely_up;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ struct AScout_Character_BP_C_BP_PreventMovementMode_Params
 // Function Scout_Character_BP.Scout_Character_BP_C.ServerIsFiringItemInInventory
 struct AScout_Character_BP_C_ServerIsFiringItemInInventory_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Scout_Character_BP.Scout_Character_BP_C.ServerIsUsingTrackerBeam
@@ -144,7 +144,7 @@ struct AScout_Character_BP_C_ReceiveTick_Params
 // Function Scout_Character_BP.Scout_Character_BP_C.ScoutIsFirstPerson
 struct AScout_Character_BP_C_ScoutIsFirstPerson_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Scout_Character_BP.Scout_Character_BP_C.InitBeamVFX

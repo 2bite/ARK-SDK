@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.DinoUberpounce
-// (NetRequest, Native, Event, NetResponse, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, Event, Static, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Large_AIController_BP_C::DinoUberpounce(bool* Success)
+void AShapeshifter_Large_AIController_BP_C::STATIC_DinoUberpounce(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.DinoUberpounce");
 
@@ -36,7 +36,7 @@ void AShapeshifter_Large_AIController_BP_C::DinoUberpounce(bool* Success)
 
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.LocationUberpounce
-// (NetReliable, Native, Event, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
 
 void AShapeshifter_Large_AIController_BP_C::STATIC_LocationUberpounce()
 {
@@ -56,15 +56,15 @@ void AShapeshifter_Large_AIController_BP_C::STATIC_LocationUberpounce()
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.AllowSurfaceNormalForUberpounce
 // ()
 // Parameters:
-// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Large_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& surfaceNormal, bool* IsValid)
+void AShapeshifter_Large_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& SurfaceNormal, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.AllowSurfaceNormalForUberpounce");
 
 	AShapeshifter_Large_AIController_BP_C_AllowSurfaceNormalForUberpounce_Params params;
-	params.surfaceNormal = surfaceNormal;
+	params.SurfaceNormal = SurfaceNormal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -132,12 +132,12 @@ void AShapeshifter_Large_AIController_BP_C::Deinonychus_AttackedWhileLatched()
 
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.OnUberpounceStateChanged
-// (Net, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EUberpounceState>  NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EUberpounceState>  PrevState                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Large_AIController_BP_C::STATIC_OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState)
+void AShapeshifter_Large_AIController_BP_C::OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.OnUberpounceStateChanged");
 

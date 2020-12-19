@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,7 +60,7 @@ public:
 
 
 	void OnRep_IsParticleActive();
-	void IsOnSteepSlope(bool* ret, struct FVector* surfaceNormal);
+	void IsOnSteepSlope(bool* ret, struct FVector* SurfaceNormal);
 	void OnRep_NewWalkableZIsActive();
 	void BuffTickServer(float* DeltaTime);
 	void BPDeactivated(class AActor** ForInstigator);

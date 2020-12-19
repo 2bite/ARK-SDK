@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 // Function AIStateWanderOnLand.AIStateWanderOnLand_C.FindTargetAreas
 struct UAIStateWanderOnLand_C_FindTargetAreas_Params
 {
-	bool                                               Found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AIStateWanderOnLand.AIStateWanderOnLand_C.OnCanUseStateEvent

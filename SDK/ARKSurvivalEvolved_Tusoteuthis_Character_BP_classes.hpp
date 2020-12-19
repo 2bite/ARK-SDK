@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -193,7 +193,7 @@ public:
 	void DoesPreyEscape(bool* Result);
 	void CanGrab(bool* Result);
 	void BPFedWakingTameEvent(class APlayerController** ForPC);
-	void GetDefaultDino(class ATusoteuthis_Character_BP_C** ref);
+	void GetDefaultDino(class ATusoteuthis_Character_BP_C** Ref);
 	void OnRep_UTurnTargetRot();
 	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void CheckForIsCrushingPrey();

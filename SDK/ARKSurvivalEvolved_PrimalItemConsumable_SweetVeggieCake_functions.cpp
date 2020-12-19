@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ bool UPrimalItemConsumable_SweetVeggieCake_C::BPCanUse(bool* bIgnoreCooldown)
 
 
 // Function PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C.BPPreUseItem
-// (NetReliable, Native, Event, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
 
 void UPrimalItemConsumable_SweetVeggieCake_C::BPPreUseItem()
 {

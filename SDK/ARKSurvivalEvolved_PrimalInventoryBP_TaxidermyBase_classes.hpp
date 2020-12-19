@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	bool BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType);
+	bool STATIC_BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType);
 	void ExecuteUbergraph_PrimalInventoryBP_TaxidermyBase(int EntryPoint);
 };
 

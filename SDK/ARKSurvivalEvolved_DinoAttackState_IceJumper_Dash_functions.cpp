@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -98,7 +98,7 @@ void UDinoAttackState_IceJumper_Dash_C::OnTickEvent(float* DeltaSeconds)
 
 
 // Function DinoAttackState_IceJumper_Dash.DinoAttackState_IceJumper_Dash_C.OnBeginEvent
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class UPrimalAIState**         InParentState                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,6 +110,7 @@ void UDinoAttackState_IceJumper_Dash_C::OnBeginEvent(class UPrimalAIState** InPa
 	params.InParentState = InParentState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

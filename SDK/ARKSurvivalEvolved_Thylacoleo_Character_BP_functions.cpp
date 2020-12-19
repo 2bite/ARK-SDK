@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -513,7 +513,7 @@ bool AThylacoleo_Character_BP_C::BPShouldForceFlee()
 
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.CheckForPounceOnTarget
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Exec, Event, NetMulticast, MulticastDelegate, Private, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           shouldPounce                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -682,7 +682,7 @@ void AThylacoleo_Character_BP_C::BPUnstasis()
 
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Check for Ai Attach to Tree
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AThylacoleo_Character_BP_C::STATIC_Check_for_Ai_Attach_to_Tree()
 {
@@ -719,12 +719,12 @@ void AThylacoleo_Character_BP_C::Client_SetClimbingState(TEnumAsByte<E_PredatorC
 
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Is DinoAbove Ground
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // float                          CheckDistance                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AThylacoleo_Character_BP_C::STATIC_Is_DinoAbove_Ground(float CheckDistance, bool* Result)
+void AThylacoleo_Character_BP_C::Is_DinoAbove_Ground(float CheckDistance, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Is DinoAbove Ground");
 
@@ -782,9 +782,9 @@ void AThylacoleo_Character_BP_C::SetAI_LatchedToTree(bool newVal)
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Get Thylaco Ai Controller
 // ()
 // Parameters:
-// class AThylacoleo_AIController_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AThylacoleo_AIController_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AThylacoleo_Character_BP_C::Get_Thylaco_Ai_Controller(class AThylacoleo_AIController_BP_C** ref)
+void AThylacoleo_Character_BP_C::Get_Thylaco_Ai_Controller(class AThylacoleo_AIController_BP_C** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Get Thylaco Ai Controller");
 
@@ -796,8 +796,8 @@ void AThylacoleo_Character_BP_C::Get_Thylaco_Ai_Controller(class AThylacoleo_AIC
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -827,13 +827,13 @@ bool AThylacoleo_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Exec, Native, Static, MulticastDelegate, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AThylacoleo_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AThylacoleo_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.BPGetMultiUseEntries");
 
@@ -1158,7 +1158,7 @@ void AThylacoleo_Character_BP_C::GetDesiredDirection(struct FVector* Direction)
 
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Pounce_Stop
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        HitTarget                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1170,6 +1170,7 @@ void AThylacoleo_Character_BP_C::STATIC_Pounce_Stop(class APrimalCharacter* HitT
 	params.HitTarget = HitTarget;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1200,16 +1201,15 @@ void AThylacoleo_Character_BP_C::CanKeepPouncing(bool* Result)
 
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Pounce_Tick
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
 
-void AThylacoleo_Character_BP_C::STATIC_Pounce_Tick()
+void AThylacoleo_Character_BP_C::Pounce_Tick()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Pounce_Tick");
 
 	AThylacoleo_Character_BP_C_Pounce_Tick_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1260,9 +1260,9 @@ bool AThylacoleo_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.GetDefaultDino
 // ()
 // Parameters:
-// class AThylacoleo_Character_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AThylacoleo_Character_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AThylacoleo_Character_BP_C::GetDefaultDino(class AThylacoleo_Character_BP_C** ref)
+void AThylacoleo_Character_BP_C::GetDefaultDino(class AThylacoleo_Character_BP_C** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.GetDefaultDino");
 
@@ -1274,8 +1274,8 @@ void AThylacoleo_Character_BP_C::GetDefaultDino(class AThylacoleo_Character_BP_C
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -1302,7 +1302,7 @@ void AThylacoleo_Character_BP_C::IsDinoGrounded(bool* Result)
 
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.CheckForClimbableSurface
-// (NetReliable, NetRequest, Exec, Native, Event, Static, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 checkDir                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          checkDist                      (Parm, ZeroConstructor, IsPlainOldData)

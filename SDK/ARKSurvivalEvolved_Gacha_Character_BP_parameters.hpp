@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -327,7 +327,7 @@ struct AGacha_Character_BP_C_LookForTamingDrops_Params
 struct AGacha_Character_BP_C_GiveAffinity_Params
 {
 	class APrimalCharacter*                            tamer;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	float                                              AffinityToGive;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              affinityToGive;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               wasTamed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -116,7 +116,7 @@ struct AChalico_Character_BP_C_BPTryMultiUse_Params
 // Function Chalico_Character_BP.Chalico_Character_BP_C.ShouldStandUp
 struct AChalico_Character_BP_C_ShouldStandUp_Params
 {
-	bool                                               StandUp;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               standUp;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.BPTimerServer
@@ -149,8 +149,8 @@ struct AChalico_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 	class UAnimNotify**                                AnimNotifyObject;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Chalico_Character_BP.Chalico_Character_BP_C.StandUp
-struct AChalico_Character_BP_C_StandUp_Params
+// Function Chalico_Character_BP.Chalico_Character_BP_C.standUp
+struct AChalico_Character_BP_C_standUp_Params
 {
 };
 

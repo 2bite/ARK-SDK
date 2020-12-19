@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -159,7 +159,7 @@ public:
 	void ReceiveActorEndOverlap(class AActor** OtherActor);
 	void STATIC_ReceiveBeginPlay();
 	void ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit);
-	void STATIC_ReceiveTick(float* DeltaSeconds);
+	void ReceiveTick(float* DeltaSeconds);
 	void ReceiveActorBeginOverlap(class AActor** OtherActor);
 	void UserConstructionScript();
 	void Timeline_0__FinishedFunc();

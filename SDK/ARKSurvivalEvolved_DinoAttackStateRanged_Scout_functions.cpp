@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void UDinoAttackStateRanged_Scout_C::GetScout(class AScout_Character_BP_C** Resu
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnTickEvent
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -55,7 +55,7 @@ void UDinoAttackStateRanged_Scout_C::STATIC_OnTickEvent(float* DeltaSeconds)
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnEndEvent
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintEvent, Const)
 
 void UDinoAttackStateRanged_Scout_C::STATIC_OnEndEvent()
 {
@@ -64,6 +64,7 @@ void UDinoAttackStateRanged_Scout_C::STATIC_OnEndEvent()
 	UDinoAttackStateRanged_Scout_C_OnEndEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,7 +124,7 @@ void UDinoAttackStateRanged_Scout_C::Tracker_Impact_Pawn_or_Terrain(class AActor
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.CalculateProjectileImpacts
-// (NetRequest, Native, Event, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Public, Private, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)

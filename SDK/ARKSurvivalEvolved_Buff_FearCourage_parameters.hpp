@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ struct ABuff_FearCourage_C_Process_Courage_Value_Params
 {
 	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class APrimalCharacter*                            forCharacter;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanSwitch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               canSwitch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               useClientIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              finalValue;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -35,7 +35,7 @@ struct ABuff_FearCourage_C_ProcessFearValue_Params
 {
 	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class APrimalCharacter*                            forCharacter;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanSwitch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               canSwitch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               useClientIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              finalValue;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -76,7 +76,7 @@ struct ABuff_FearCourage_C_IsAtMax_f_Params
 	class APrimalCharacter*                            Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               useClientIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Courage;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               Fear;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               fear;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_FearCourage.Buff_FearCourage_C.GetTeamColorForParticles

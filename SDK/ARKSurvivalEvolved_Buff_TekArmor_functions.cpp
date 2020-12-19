@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -341,9 +341,9 @@ void ABuff_TekArmor_C::IsWarping_FOV(bool* Result)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff
 // ()
 // Parameters:
-// class ABuff_TekArmor_C*        ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ABuff_TekArmor_C*        Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** ref)
+void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff");
 
@@ -355,17 +355,17 @@ void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** ref)
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer
 // ()
 // Parameters:
-// class APrimalCharacter*        ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
+void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer");
 
@@ -377,8 +377,8 @@ void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -386,15 +386,15 @@ void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
 // ()
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ElementCost                    (Parm, ZeroConstructor, IsPlainOldData)
+// int                            elementCost                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Client_Consume_Element_After_Time(float DeltaTime, int ElementCost)
+void ABuff_TekArmor_C::Client_Consume_Element_After_Time(float DeltaTime, int elementCost)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Client_Consume Element After Time");
 
 	ABuff_TekArmor_C_Client_Consume_Element_After_Time_Params params;
 	params.DeltaTime = DeltaTime;
-	params.ElementCost = ElementCost;
+	params.elementCost = elementCost;
 
 	auto flags = fn->FunctionFlags;
 
@@ -449,9 +449,9 @@ void ABuff_TekArmor_C::IsPlayerGrounded(bool* Result)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager
 // ()
 // Parameters:
-// class AShooterPlayerCameraManager* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerCameraManager* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** ref)
+void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager");
 
@@ -463,8 +463,8 @@ void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCa
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -493,9 +493,9 @@ void ABuff_TekArmor_C::UpdatePlayerFOV(float intensityRatio, bool warpIn)
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement
 // ()
 // Parameters:
-// class UCharacterMovementComponent* movement                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UCharacterMovementComponent* Movement                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** movement)
+void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** Movement)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement");
 
@@ -507,8 +507,8 @@ void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementCom
 
 	fn->FunctionFlags = flags;
 
-	if (movement != nullptr)
-		*movement = params.movement;
+	if (Movement != nullptr)
+		*Movement = params.Movement;
 }
 
 

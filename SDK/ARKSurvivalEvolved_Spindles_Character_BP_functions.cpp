@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void ASpindles_Character_BP_C::BPTimerNonDedicated()
 
 
 // Function Spindles_Character_BP.Spindles_Character_BP_C.UpdateMiniGunState
-// (NetRequest, Exec, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetRequest, Native, NetResponse, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
 void ASpindles_Character_BP_C::UpdateMiniGunState()
 {
@@ -39,6 +39,7 @@ void ASpindles_Character_BP_C::UpdateMiniGunState()
 	ASpindles_Character_BP_C_UpdateMiniGunState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,11 +87,11 @@ void ASpindles_Character_BP_C::GetClampedCameraLocation(struct FVector* OutLoc)
 
 
 // Function Spindles_Character_BP.Spindles_Character_BP_C.BPGetDebugInfoString
-// (NetRequest, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (Exec, Native, Event, NetResponse, Static, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ASpindles_Character_BP_C::BPGetDebugInfoString()
+class FString ASpindles_Character_BP_C::STATIC_BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.BPGetDebugInfoString");
 
@@ -151,7 +152,7 @@ bool ASpindles_Character_BP_C::BPHandlePoop()
 
 
 // Function Spindles_Character_BP.Spindles_Character_BP_C.BPOverrideHurtAnim
-// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetRequest, NetMulticast, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DamageTaken                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
@@ -163,7 +164,7 @@ bool ASpindles_Character_BP_C::BPHandlePoop()
 // struct FVector*                PointDamageHitNormal           (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAnimMontage* ASpindles_Character_BP_C::STATIC_BPOverrideHurtAnim(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, bool* bIsPointDamage, struct FVector* PointDamageLocation, struct FVector* PointDamageHitNormal, struct FDamageEvent* DamageEvent)
+class UAnimMontage* ASpindles_Character_BP_C::BPOverrideHurtAnim(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, bool* bIsPointDamage, struct FVector* PointDamageLocation, struct FVector* PointDamageHitNormal, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Spindles_Character_BP.Spindles_Character_BP_C.BPOverrideHurtAnim");
 
@@ -177,7 +178,6 @@ class UAnimMontage* ASpindles_Character_BP_C::STATIC_BPOverrideHurtAnim(float* D
 	params.PointDamageHitNormal = PointDamageHitNormal;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,7 +191,7 @@ class UAnimMontage* ASpindles_Character_BP_C::STATIC_BPOverrideHurtAnim(float* D
 
 
 // Function Spindles_Character_BP.Spindles_Character_BP_C.UpdateCachedActivateMinigunModeWeightCheck
-// (Native, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
 void ASpindles_Character_BP_C::STATIC_UpdateCachedActivateMinigunModeWeightCheck()
 {

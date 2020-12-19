@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,10 +42,10 @@ public:
 
 
 	void GetTimeBasedAlpha(float* Alpha);
-	struct FStatusValueModifierDescription STATIC_GetBuffDescription();
+	struct FStatusValueModifierDescription GetBuffDescription();
 	void DrawActiveStateText(int ActiveState, class AShooterHUD* HUD, float XPos, float YPos, float Scale);
 	void GetActiveTameState(class APrimalDinoCharacter* MyRidingDino, int* IsInState);
-	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void BuffTickServer(float* DeltaTime);
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
 	void UserConstructionScript();

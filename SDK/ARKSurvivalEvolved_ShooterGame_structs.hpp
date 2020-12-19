@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1243,15 +1243,17 @@ struct FStatusValueModifierDescription
 };
 
 // ScriptStruct ShooterGame.PrimalGameData.AppIDItem
-// 0x0040
+// 0x0048
 struct FAppIDItem
 {
 	class FString                                      AchievementID;                                            // 0x0000(0x0010) (Edit, ZeroConstructor)
 	int                                                AppID;                                                    // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                PlayerBadgeGroup;                                         // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class FString>                              PlayerIDStrings;                                          // 0x0018(0x0010) (Edit, ZeroConstructor)
-	class UClass*                                      ItemClass;                                                // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              ItemClasses;                                              // 0x0030(0x0010) (Edit, ZeroConstructor)
+	bool                                               bForceNewDefaultCosmetic;                                 // 0x0018(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
+	TArray<class FString>                              PlayerIDStrings;                                          // 0x0020(0x0010) (Edit, ZeroConstructor)
+	class UClass*                                      ItemClass;                                                // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              ItemClasses;                                              // 0x0038(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct ShooterGame.PrimalGameData.ColorDefinition
@@ -2371,7 +2373,7 @@ struct FDinoOrderGroup
 };
 
 // ScriptStruct ShooterGame.PrimalPlayerData.PrimalPersistentCharacterStatsStruct
-// 0x02B0
+// 0x02C0
 struct FPrimalPersistentCharacterStatsStruct
 {
 	uint16_t                                           CharacterStatusComponent_ExtraCharacterLevel;             // 0x0000(0x0002) (ZeroConstructor, IsPlainOldData)
@@ -2397,6 +2399,7 @@ struct FPrimalPersistentCharacterStatsStruct
 	unsigned char                                      FacialHairIndex;                                          // 0x02AC(0x0001) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	unsigned char                                      HeadHairIndex;                                            // 0x02AD(0x0001) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	unsigned char                                      UnknownData04[0x2];                                       // 0x02AE(0x0002) MISSED OFFSET
+	TArray<class UClass*>                              ForcedUnlockDefaultCosmetics;                             // 0x02B0(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 };
 
 // ScriptStruct ShooterGame.LeaderboardRow
@@ -2426,7 +2429,7 @@ struct FLatestMissionScore
 };
 
 // ScriptStruct ShooterGame.PrimalPlayerData.PrimalPlayerDataStruct
-// 0x0430
+// 0x0440
 struct FPrimalPlayerDataStruct
 {
 	uint64_t                                           PlayerDataID;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
@@ -2440,21 +2443,21 @@ struct FPrimalPlayerDataStruct
 	struct FPrimalPlayerCharacterConfigStruct          MyPlayerCharacterConfig;                                  // 0x0040(0x00D8)
 	int                                                LastPinCodeUsed;                                          // 0x0118(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
-	struct FPrimalPersistentCharacterStatsStruct       MyPersistentCharacterStats;                               // 0x0120(0x02B0)
-	int                                                NumPersonalDinos;                                         // 0x03D0(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                TribeId;                                                  // 0x03D4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<int>                                        AppIDSet;                                                 // 0x03D8(0x0010) (ZeroConstructor)
-	int                                                PlayerDataVersion;                                        // 0x03E8(0x0004) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x03EC(0x0004) MISSED OFFSET
-	double                                             NextAllowedRespawnTime;                                   // 0x03F0(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	double                                             LastTimeDiedToEnemyTeam;                                  // 0x03F8(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	double                                             LoginTime;                                                // 0x0400(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	double                                             LastLoginTime;                                            // 0x0408(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	float                                              AllowedRespawnInterval;                                   // 0x0410(0x0004) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	float                                              NumOfDeaths;                                              // 0x0414(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SpawnDayNumber;                                           // 0x0418(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              SpawnDayTime;                                             // 0x041C(0x0004) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FLatestMissionScore>                 LatestMissionScores;                                      // 0x0420(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	struct FPrimalPersistentCharacterStatsStruct       MyPersistentCharacterStats;                               // 0x0120(0x02C0)
+	int                                                NumPersonalDinos;                                         // 0x03E0(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                TribeId;                                                  // 0x03E4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        AppIDSet;                                                 // 0x03E8(0x0010) (ZeroConstructor)
+	int                                                PlayerDataVersion;                                        // 0x03F8(0x0004) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x03FC(0x0004) MISSED OFFSET
+	double                                             NextAllowedRespawnTime;                                   // 0x0400(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	double                                             LastTimeDiedToEnemyTeam;                                  // 0x0408(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	double                                             LoginTime;                                                // 0x0410(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	double                                             LastLoginTime;                                            // 0x0418(0x0008) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	float                                              AllowedRespawnInterval;                                   // 0x0420(0x0004) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	float                                              NumOfDeaths;                                              // 0x0424(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SpawnDayNumber;                                           // 0x0428(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              SpawnDayTime;                                             // 0x042C(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FLatestMissionScore>                 LatestMissionScores;                                      // 0x0430(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 };
 
 // ScriptStruct ShooterGame.PrimalPlayerData.EngramsSetSoftReferenceMapping

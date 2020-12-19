@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,19 +12,49 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Buff_StegoBackplate.Buff_StegoBackplate_C.BPAdjustStatusValueModification
+// ()
+// Parameters:
+// class UPrimalCharacterStatusComponent** ForComponent                   (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InAmount                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 DamageTypeClass                (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bManualModification            (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ABuff_StegoBackplate_C::BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_StegoBackplate.Buff_StegoBackplate_C.BPAdjustStatusValueModification");
+
+	ABuff_StegoBackplate_C_BPAdjustStatusValueModification_Params params;
+	params.ForComponent = ForComponent;
+	params.ValueType = ValueType;
+	params.InAmount = InAmount;
+	params.DamageTypeClass = DamageTypeClass;
+	params.bManualModification = bManualModification;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Buff_StegoBackplate.Buff_StegoBackplate_C.GetBuffDescription
-// (Exec, Native, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetRequest, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_StegoBackplate_C::GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_StegoBackplate_C::STATIC_GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_StegoBackplate.Buff_StegoBackplate_C.GetBuffDescription");
 
 	ABuff_StegoBackplate_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +65,11 @@ struct FStatusValueModifierDescription ABuff_StegoBackplate_C::GetBuffDescriptio
 
 
 // Function Buff_StegoBackplate.Buff_StegoBackplate_C.Set Backplate Mode
-// (NetReliable, Exec, Event, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_StegoBackplate_C::Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode)
+void ABuff_StegoBackplate_C::STATIC_Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_StegoBackplate.Buff_StegoBackplate_C.Set Backplate Mode");
 
@@ -47,6 +77,7 @@ void ABuff_StegoBackplate_C::Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode
 	params.StegoBackplateMode = StegoBackplateMode;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

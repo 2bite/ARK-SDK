@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,7 +75,7 @@ public:
 	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void STATIC_OnRep_bIsOpen();
+	void OnRep_bIsOpen();
 	void BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber);
 	void BPSeatedPlayer(class AShooterCharacter** SeatedChar, int* AtSeatNumber);
 	void UserConstructionScript();

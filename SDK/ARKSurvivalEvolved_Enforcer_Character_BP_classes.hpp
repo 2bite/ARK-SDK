@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -221,11 +221,11 @@ public:
 	struct FVector                                     K2Node_CustomEvent_Direction2;                            // 0x3534(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_ArrowSize2;                            // 0x3540(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_color2;                                // 0x3544(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration2;                             // 0x3554(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration2;                             // 0x3554(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_Direction;                             // 0x3558(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_ArrowSize;                             // 0x3564(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FLinearColor                                K2Node_CustomEvent_color;                                 // 0x3568(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration;                              // 0x3578(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                K2Node_CustomEvent_Color;                                 // 0x3568(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x3578(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_Multiply_VectorFloat_ReturnValue2;               // 0x357C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_NegateVector_ReturnValue2;                       // 0x3588(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_Add_VectorVector_ReturnValue2;                   // 0x3594(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -429,21 +429,21 @@ public:
 	bool BP_PreventMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
 	bool HasEnoughStaminaToBlink();
 	void SweepTestBlinkClimbPoint(const struct FVector& Location, const struct FVector& Normal, const struct FRotator& TargetRot, float DebugDrawTime, bool* IsValid);
-	void IsSurfaceNormalClimbable(const struct FVector& surfaceNormal, bool* ShouldClimb);
-	void GetCustomSurfaceTraceDistance(int* TraceIndex, float* customDistance);
+	void IsSurfaceNormalClimbable(const struct FVector& SurfaceNormal, bool* ShouldClimb);
+	void GetCustomSurfaceTraceDistance(int* traceIndex, float* customDistance);
 	void IsNormalClimbable(struct FVector* Normal, bool* isAverageNormal, bool* Result);
 	void ClimbingIK_SetNewBlendspaceAxes();
 	void GetClimbingIK_BlendspaceAxes_Front(struct FVector2D* axes);
 	float BPGetHUDOverrideBuffProgressBarPercent();
 	void GetDesiredMoveDirection(struct FVector* Direction);
-	void BlinkCooldownToString(double LastUsedTime, float Cooldown, const class FString& ReadyString, class FString* Return_Value);
+	void STATIC_BlinkCooldownToString(double LastUsedTime, float Cooldown, const class FString& ReadyString, class FString* return_value);
 	TArray<struct FBlueprintVisualLogEntry> BPGrabDebugSnapshot();
 	void IsBlinkOnCooldownNonPure(bool* OnCooldown);
 	void BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value);
 	void Get_CurrentClimbingVelocityMax(float* Velocity);
 	void UseBlinkCooldown(bool TestOnly, bool* Success);
 	void IsBlinkOnCooldown(bool* OnCooldown, int* FirstAvailableCooldown);
-	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
+	void STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void Get_Blink_Ramp_Delay_Status(bool* InDelay, float* Time, float* Alpha);
 	void Get_Controller_Latency(float* Ping);
@@ -451,15 +451,15 @@ public:
 	float BPModifyFOV(float* FOVIn);
 	void K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode);
 	void GetClimbingMoveDirFromRotation(struct FRotator* Rotation, struct FVector* moveDir);
-	void Can_Receive_Climbing_Input_Strafe(bool* Return_Value);
+	void STATIC_Can_Receive_Climbing_Input_Strafe(bool* return_value);
 	void ReceiveBeginPlay();
 	void IsBlinkInProgress(bool* InBlinkDelay, bool* IsBlinking);
-	void Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing);
+	void Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing);
 	void GetCurrentCameraLoc(struct FVector* Loc);
 	void BPOverrideCameraViewTarget(struct FName* CurrentCameraMode, struct FVector* DesiredCameraLocation, struct FRotator* DesiredCameraRotation, float* DesiredFOV, bool* bOverrideCameraLocation, struct FVector* CameraLocation, bool* bOverrideCameraRotation, struct FRotator* CameraRotation, bool* bOverrideCameraFOV, float* CameraFOV);
 	void ClientSetBlinkStatus(bool BlinkInProgress);
 	void CalcBlinkTarget(const struct FProjectileArc& Arc, bool ForVFX, float DebugDrawDuration, bool* FoundValidTarget, bool* IsAirTarget, bool* IsClimbTarget, struct FVector* Location, struct FRotator* Rotation, struct FVector* TargetNormal, float* ArcTime, struct FHitResult* HitResult);
-	void Update_Blink_Target_VFX_Location(bool IsVisible, bool IsInvalid, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, const struct FHitResult& HitResult, const struct FVector& surfaceNormal);
+	void Update_Blink_Target_VFX_Location(bool IsVisible, bool IsInvalid, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, const struct FHitResult& HitResult, const struct FVector& SurfaceNormal);
 	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
 	bool BPHandleOnStopTargeting();
 	void Get_Vertical_View_Angle(float* Angle);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ struct UEnforcer_AnimBlueprint_C_IsDinoRunning_Params
 struct UEnforcer_AnimBlueprint_C_GetStrafeBlendspacePlayRate_Params
 {
 	float*                                             forwardVelocity;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	float*                                             RightVelocity;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             rightVelocity;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector2D*                                  BlendspaceInputs;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              BlendspacePlayRate;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

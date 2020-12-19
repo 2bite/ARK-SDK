@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 	class UParticleSystem*                             Ref_WingFlapParticle_Water;                               // 0x2350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UParticleSystem*                             Ref_WingFlapParticle_Ground;                              // 0x2358(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UMaterialInterface*                          CallFunc_Array_Get_Item;                                  // 0x2360(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x2368(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x2368(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x4];                                       // 0x236C(0x0004) MISSED OFFSET
 	class UMaterialInstanceDynamic*                    K2Node_DynamicCast_AsMaterialInstanceDynamic;             // 0x2370(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x2378(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -60,14 +60,14 @@ public:
 
 
 	void UpdateDivingFX();
-	void STATIC_OnDiveSwipe();
+	void OnDiveSwipe();
 	void Update_WindMaterial();
 	void Update_Trail_Particle_System(class UParticleSystemComponent* ParticleSystem, bool Active);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void UpdateDivingParticleSystem(class UParticleSystemComponent* ParticleSystem, bool Active);
 	void Update_Diving_Audio(bool Active, bool LocallyCarried);
 	void Update_Diving_Effects();
-	void CheckGroundForWingFlap();
+	void STATIC_CheckGroundForWingFlap();
 	void UserConstructionScript();
 	void AnimNotify_WingFlap();
 	void ReceiveBeginPlay();

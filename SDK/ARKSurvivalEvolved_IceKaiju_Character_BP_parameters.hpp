@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -298,7 +298,7 @@ struct AIceKaiju_Character_BP_C_CreateNodeDynamicMATs_Params
 struct AIceKaiju_Character_BP_C_Get_Launch_DirectionForWildLeap_Params
 {
 	class AActor*                                      CalcActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPHandleOnStopFire
@@ -325,7 +325,7 @@ struct AIceKaiju_Character_BP_C_AngryAOEDmg_Params
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.ShouldStopJumpRotation
 struct AIceKaiju_Character_BP_C_ShouldStopJumpRotation_Params
 {
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LaunchLiquidBomb
@@ -347,7 +347,7 @@ struct AIceKaiju_Character_BP_C_FinishLeapTamed_Params
 struct AIceKaiju_Character_BP_C_GetLaunchDirection_Params
 {
 	class AActor*                                      CalcActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LaunchAtTracePoint
@@ -367,7 +367,7 @@ struct AIceKaiju_Character_BP_C_ShortestAngleDistance_Params
 struct AIceKaiju_Character_BP_C_GetClampedLookDir_Params
 {
 	bool                                               LimitLowerPitch;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.LeapingTrace
@@ -393,7 +393,7 @@ struct AIceKaiju_Character_BP_C_UpdateLeapTargetVFXLocation_Params
 	struct FVector                                     WorldLoc;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    WorldRot;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  HitResult;                                                // (Parm)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Calc Leap TargetTamed

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -163,9 +163,9 @@ void ABuff_SpaceWhale_Passenger_C::GetFireTransform(struct FVector* Location, st
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsElectricalStormActive
 // ()
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_SpaceWhale_Passenger_C::IsElectricalStormActive(bool* Return)
+void ABuff_SpaceWhale_Passenger_C::IsElectricalStormActive(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsElectricalStormActive");
 
@@ -177,8 +177,8 @@ void ABuff_SpaceWhale_Passenger_C::IsElectricalStormActive(bool* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 
@@ -251,18 +251,17 @@ void ABuff_SpaceWhale_Passenger_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, 
 
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsAllowedToFire
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Event, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           bAllowed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_SpaceWhale_Passenger_C::STATIC_IsAllowedToFire(bool* bAllowed)
+void ABuff_SpaceWhale_Passenger_C::IsAllowedToFire(bool* bAllowed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsAllowedToFire");
 
 	ABuff_SpaceWhale_Passenger_C_IsAllowedToFire_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -294,7 +293,7 @@ void ABuff_SpaceWhale_Passenger_C::SetTargeting(bool bTargetingEnabled)
 
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.LocalDoAttack
-// (Exec, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (Native, NetResponse, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           bDidFire                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -305,6 +304,7 @@ void ABuff_SpaceWhale_Passenger_C::LocalDoAttack(bool* bDidFire)
 	ABuff_SpaceWhale_Passenger_C_LocalDoAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

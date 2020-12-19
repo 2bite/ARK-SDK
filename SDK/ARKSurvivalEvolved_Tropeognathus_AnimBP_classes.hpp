@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -402,7 +402,7 @@ public:
 	}
 
 
-	void STATIC_GetFlyingBlendspaceCoords(class APrimalDinoCharacter* ForDino, struct FVector2D* BlendspaceCoords);
+	void GetFlyingBlendspaceCoords(class APrimalDinoCharacter* ForDino, struct FVector2D* BlendspaceCoords);
 	void BlueprintPlayAnimationEvent(class UAnimMontage** AnimationMontage, float* PlayRate, float* playedAnimLength);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_Tropeognathus_AnimBP_AnimGraphNode_BlendListByBool_5490();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_Tropeognathus_AnimBP_AnimGraphNode_SequencePlayer_6521();

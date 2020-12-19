@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,10 +76,10 @@ public:
 	bool                                               CallFunc_IsServer_ReturnValue3;                           // 0x0F6C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData11[0x3];                                       // 0x0F6D(0x0003) MISSED OFFSET
 	float                                              CallFunc_Multiply_FloatFloat_ReturnValue;                 // 0x0F70(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x0F74(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x0F74(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x0F78(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData12[0x3];                                       // 0x0F79(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Duration;                              // 0x0F7C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x0F7C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FWeaponAnim                                 K2Node_MakeStruct_WeaponAnim;                             // 0x0F80(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayWeaponAnimationEx_ReturnValue;               // 0x0F90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
@@ -91,7 +91,7 @@ public:
 
 
 	void BPHandleMeleeAttack();
-	void STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void BPLostController();
 	void ReceiveTick(float* DeltaSeconds);
 	void IsColorized(const struct FLinearColor& currColor, bool* Result);

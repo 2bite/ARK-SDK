@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -95,7 +95,7 @@ public:
 	void Get_Extra_Charge_Consumed_Multiplier_for_Receiver(class ABuff_ChargeManager_C* Receiver, float* retMultiplier);
 	void GetDistanceAndAngleCheckOrigin(class AActor* emitterActor, struct FVector* distanceAngleOrigin);
 	void TakeChargeConsumedByReceivers(float chargeToTake);
-	void GetChargeVariableExternalEmitter(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue);
+	void GetChargeVariableExternalEmitter(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue);
 	void ShouldProcessChargeConsumedByReceivers(bool* shouldProcess);
 	void OnChargeConsumedByReceiversChanged(float newCharge);
 	void WillReceiverAffectChargeConsumption(class ABuff_ChargeManager_C* Receiver, bool* canProcess);
@@ -113,7 +113,7 @@ public:
 	void OnChargeHarvested(float amountHarvested);
 	void InitializeManager(class AActor** Owner);
 	void OnEmitterIsActiveChanged();
-	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue);
+	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue);
 	void OnEmitterRangeChanged();
 	void Is_EmitterAvailableForHarvesting(bool* available);
 	void GetEmitterForwardVector(struct FVector* ForwardVector);

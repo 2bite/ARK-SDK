@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -307,17 +307,17 @@ public:
 	}
 
 
-	bool BPPreventAttachments(class UObject** ForItem);
+	bool STATIC_BPPreventAttachments(class UObject** ForItem);
 	void RefreshTamedAttachments();
 	bool AllowPlayMontage(class UAnimMontage** AnimMontage);
 	bool BPIsHidden();
-	void BPPostLoadedFromSaveGame();
+	void STATIC_BPPostLoadedFromSaveGame();
 	bool SetTurretMode(bool* Enabled);
 	bool BPPreventFirstPerson();
 	void SetSaddleHidden(bool NewHidden);
 	void BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem);
-	void STATIC_UpdatedTracedMoundTransform();
-	struct UObject_FTransform STATIC_GetBuriedMoundTransform(float HeightAlpha);
+	void UpdatedTracedMoundTransform();
+	struct UObject_FTransform GetBuriedMoundTransform(float HeightAlpha);
 	void Check_Unburied_State_and_Add_Hungry_Ineffectiveness(class FString* State);
 	void AddTameIneffectiveness(float IneffectivenessValue);
 	void SetTailMoundVisibility(bool bNewVisibility);
@@ -337,9 +337,9 @@ public:
 	bool SharedCanAttack(int AttackIndex);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	float TimeSinceLastAttackForIndex(int index);
+	float STATIC_TimeSinceLastAttackForIndex(int index);
 	void ShouldUnbury(bool* Result);
 	void ShouldBury(bool* Result);
 	void BPTimerServer();

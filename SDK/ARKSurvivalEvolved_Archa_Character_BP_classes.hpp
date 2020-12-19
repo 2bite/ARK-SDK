@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,7 +43,7 @@ public:
 	float DoOverrideMountedAirControl(float* AirControlIn);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	void OnRep_bPreventGlide();
-	void STATIC_HandleMountedDinoAction(class AShooterPlayerController** PC);
+	void HandleMountedDinoAction(class AShooterPlayerController** PC);
 	void BPCharacterSleeped();
 	void GiveSap();
 	bool BPOnAttachmentReplication();

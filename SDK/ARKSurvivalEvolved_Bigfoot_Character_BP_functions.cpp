@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.UpdateAttackAnimWeights
-// (NetReliable, NetRequest, Exec, Native, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void ABigfoot_Character_BP_C::UpdateAttackAnimWeights(int AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,7 +212,7 @@ bool ABigfoot_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Native, Static, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, Static, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -378,16 +377,16 @@ void ABigfoot_Character_BP_C::GetStartThrowAnim(bool overheadThrow, class UAnimM
 }
 
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsGrabbing
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.isGrabbing
 // ()
 // Parameters:
-// bool                           IsGrabbing                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           isGrabbing                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::IsGrabbing(bool* IsGrabbing)
+void ABigfoot_Character_BP_C::isGrabbing(bool* isGrabbing)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsGrabbing");
+	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.isGrabbing");
 
-	ABigfoot_Character_BP_C_IsGrabbing_Params params;
+	ABigfoot_Character_BP_C_isGrabbing_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -395,8 +394,8 @@ void ABigfoot_Character_BP_C::IsGrabbing(bool* IsGrabbing)
 
 	fn->FunctionFlags = flags;
 
-	if (IsGrabbing != nullptr)
-		*IsGrabbing = params.IsGrabbing;
+	if (isGrabbing != nullptr)
+		*isGrabbing = params.isGrabbing;
 }
 
 
@@ -719,7 +718,7 @@ struct FVector ABigfoot_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch)
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ThrowTrace
-// (NetReliable, Exec, Native, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
 void ABigfoot_Character_BP_C::STATIC_ThrowTrace()
 {
@@ -728,7 +727,6 @@ void ABigfoot_Character_BP_C::STATIC_ThrowTrace()
 	ABigfoot_Character_BP_C_ThrowTrace_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -757,7 +755,7 @@ void ABigfoot_Character_BP_C::CarryDino(class APrimalCharacter* dinoToCarry)
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BlueprintAdjustOutputDamage
-// (Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -987,14 +985,14 @@ void ABigfoot_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActio
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ServerRequestGrab
 // ()
 // Parameters:
-// bool                           buttonHeld                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ButtonHeld                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::ServerRequestGrab(bool buttonHeld)
+void ABigfoot_Character_BP_C::ServerRequestGrab(bool ButtonHeld)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ServerRequestGrab");
 
 	ABigfoot_Character_BP_C_ServerRequestGrab_Params params;
-	params.buttonHeld = buttonHeld;
+	params.ButtonHeld = ButtonHeld;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1007,14 +1005,14 @@ void ABigfoot_Character_BP_C::ServerRequestGrab(bool buttonHeld)
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ServerRequestThrow
 // ()
 // Parameters:
-// bool                           buttonHeld                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ButtonHeld                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::ServerRequestThrow(bool buttonHeld)
+void ABigfoot_Character_BP_C::ServerRequestThrow(bool ButtonHeld)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ServerRequestThrow");
 
 	ABigfoot_Character_BP_C_ServerRequestThrow_Params params;
-	params.buttonHeld = buttonHeld;
+	params.ButtonHeld = ButtonHeld;
 
 	auto flags = fn->FunctionFlags;
 

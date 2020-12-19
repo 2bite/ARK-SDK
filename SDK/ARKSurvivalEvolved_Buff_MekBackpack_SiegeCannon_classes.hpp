@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -80,7 +80,7 @@ public:
 	TEnumAsByte<ENetworkModeResult>                    CallFunc_IsRunningOnServer_OutNetworkMode2;               // 0x0D88(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum2_CmpSuccess;                            // 0x0D89(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	TEnumAsByte<ENetworkModeResult>                    CallFunc_IsRunningOnServer_OutNetworkMode3;               // 0x0D8A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_CustomEvent_isActive;                              // 0x0D8B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_CustomEvent_IsActive;                              // 0x0D8B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum3_CmpSuccess;                            // 0x0D8C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData11[0x3];                                       // 0x0D8D(0x0003) MISSED OFFSET
 	float                                              CallFunc_SelectFloat_ReturnValue;                         // 0x0D90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -217,7 +217,7 @@ public:
 
 
 	struct FVector BPAdjustImpulseFromDamage(struct FVector* DesiredImpulse, float* DamageTaken, struct FDamageEvent* TheDamageEvent, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
-	void STATIC_BuffTickServer(float* DeltaTime);
+	void BuffTickServer(float* DeltaTime);
 	bool BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
 	float BuffAdjustDamage(float* Damage, class AController** EventInstigator, class AActor** DamageCauser, class UClass** TheDamgeType, struct FHitResult* HitInfo);
 	void NotifySetRider(class AShooterCharacter** Rider);

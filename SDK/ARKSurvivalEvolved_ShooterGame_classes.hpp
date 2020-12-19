@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -660,7 +660,7 @@ public:
 
 
 // Class ShooterGame.PrimalItem
-// 0x09C0 (0x09E8 - 0x0028)
+// 0x09C8 (0x09F0 - 0x0028)
 class UPrimalItem : public UObject
 {
 public:
@@ -849,287 +849,290 @@ public:
 	unsigned char                                      bDeferWeaponBeginPlayToAssociatedItemSetTime : 1;         // 0x0067(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bIsSPlusItem : 1;                                         // 0x0067(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bPreventRemovingClipAmmo : 1;                             // 0x0067(0x0001) (Edit, DisableEditOnInstance)
-	float                                              DinoAutoHealingThresholdPercent;                          // 0x0068(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DinoAutoHealingUseTimeInterval;                           // 0x006C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                ArkTributeVersion;                                        // 0x0070(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
-	TArray<class UClass*>                              EquipRequiresExplicitOwnerClasses;                        // 0x0078(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FName>                               EquipRequiresExplicitOwnerTags;                           // 0x0088(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UClass*                                      BuffToGiveOwnerWhenEquipped;                              // 0x0098(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class FString                                      BuffToGiveOwnerWhenEquipped_BlueprintPath;                // 0x00A0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x00B0(0x0004) MISSED OFFSET
-	uint32_t                                           ExpirationTimeUTC;                                        // 0x00B4(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                BlueprintAllowMaxCraftings;                               // 0x00B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
-	class FString                                      AbstractItemCraftingDescription;                          // 0x00C0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              ItemSkinUseOnItemClasses;                                 // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              ItemSkinPreventOnItemClasses;                             // 0x00E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class USoundBase*                                  ItemBrokenSound;                                          // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USoundCue*                                   UseItemSound;                                             // 0x00F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USoundBase*                                  EquipSound;                                               // 0x0100(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USoundBase*                                  UnEquipSound;                                             // 0x0108(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USoundBase*                                  UsedOnOtherItemSound;                                     // 0x0110(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USoundBase*                                  RemovedFromOtherItemSound;                                // 0x0118(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RandomChanceToBeBlueprint;                                // 0x0120(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x0124(0x0004) MISSED OFFSET
-	TArray<struct FActorClassAttachmentInfo>           ActorClassAttachmentInfos;                                // 0x0128(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData07[0x18];                                      // 0x0138(0x0018) MISSED OFFSET
-	TArray<struct FItemAttachmentInfo>                 ItemSkinAddItemAttachments;                               // 0x0150(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TEnumAsByte<EPrimalItemType>                       MyItemType;                                               // 0x0160(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EPrimalConsumableType>                 MyConsumableType;                                         // 0x0161(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EPrimalEquipmentType>                  MyEquipmentType;                                          // 0x0162(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x1];                                       // 0x0163(0x0001) MISSED OFFSET
-	int                                                ExtraItemCategoryFlags;                                   // 0x0164(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ItemIconScale;                                            // 0x0168(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     BlockingShieldFPVTranslation;                             // 0x016C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    BlockingShieldFPVRotation;                                // 0x0178(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShieldBlockDamagePercentage;                              // 0x0184(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShieldDamageToDurabilityRatio;                            // 0x0188(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x4];                                       // 0x018C(0x0004) MISSED OFFSET
-	class UAnimMontage*                                PlayAnimationOnUse;                                       // 0x0190(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bHideDuringEquipAnimation;                                // 0x0198(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x7];                                       // 0x0199(0x0007) MISSED OFFSET
-	class UAnimMontage*                                ShowAnimationMale;                                        // 0x01A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimMontage*                                ShowAnimationFemale;                                      // 0x01A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimMontage*                                HideAnimationMale;                                        // 0x01B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimMontage*                                HideAnimationFemale;                                      // 0x01B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CraftingMinLevelRequirement;                              // 0x01C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CraftingCooldownInterval;                                 // 0x01C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      CraftingActorToSpawn;                                     // 0x01C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture2D*                                  BlueprintBackgroundOverrideTexture;                       // 0x01D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class FString                                      CraftItemButtonStringOverride;                            // 0x01D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UClass*                                      UseSpawnActorClass;                                       // 0x01E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     UseSpawnActorLocOffset;                                   // 0x01F0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                SlotIndex;                                                // 0x01FC(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	struct FItemNetID                                  ItemId;                                                   // 0x0200(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	int                                                ItemCustomData;                                           // 0x0208(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x4];                                       // 0x020C(0x0004) MISSED OFFSET
-	class UClass*                                      ItemCustomClass;                                          // 0x0210(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	int                                                ItemSkinTemplateIndex;                                    // 0x0218(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x4];                                       // 0x021C(0x0004) MISSED OFFSET
-	class UClass*                                      ItemSkinTemplate;                                         // 0x0220(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	float                                              ItemRating;                                               // 0x0228(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	uint16_t                                           CraftQueue;                                               // 0x022C(0x0002) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x2];                                       // 0x022E(0x0002) MISSED OFFSET
-	float                                              CraftingSkill;                                            // 0x0230(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x4];                                       // 0x0234(0x0004) MISSED OFFSET
-	class FString                                      CustomItemName;                                           // 0x0238(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
-	class FString                                      CustomItemDescription;                                    // 0x0248(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
-	TArray<struct FColor>                              CustomColors;                                             // 0x0258(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
-	TArray<struct FCraftingResourceRequirement>        CustomResourceRequirements;                               // 0x0268(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
-	double                                             NextCraftCompletionTime;                                  // 0x0278(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	TWeakObjectPtr<class UPrimalInventoryComponent>    OwnerInventory;                                           // 0x0280(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, SaveGame, IsPlainOldData)
-	unsigned char                                      ItemQualityIndex;                                         // 0x0288(0x0001) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x7];                                       // 0x0289(0x0007) MISSED OFFSET
-	class UClass*                                      SupportDragOntoItemClass;                                 // 0x0290(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UClass*>                              SupportDragOntoItemClasses;                               // 0x0298(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              SkinWeaponTemplates;                                      // 0x02A8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              SupportAmmoItemForWeaponSkin;                             // 0x02B8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                              SkinWeaponTemplatesForAmmo;                               // 0x02C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UClass*                                      AmmoSupportDragOntoWeaponItemWeaponTemplate;              // 0x02D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UClass*>                              AmmoSupportDragOntoWeaponItemWeaponTemplates;             // 0x02E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FUseItemAddCharacterStatusValue>     UseItemAddCharacterStatusValues;                          // 0x02F0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              Ingredient_WeightIncreasePerQuantity;                     // 0x0300(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Ingredient_FoodIncreasePerQuantity;                       // 0x0304(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Ingredient_HealthIncreasePerQuantity;                     // 0x0308(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Ingredient_WaterIncreasePerQuantity;                      // 0x030C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Ingredient_StaminaIncreasePerQuantity;                    // 0x0310(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x4];                                       // 0x0314(0x0004) MISSED OFFSET
-	class FString                                      DescriptiveNameBase;                                      // 0x0318(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      ItemDescription;                                          // 0x0328(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      DurabilityStringShort;                                    // 0x0338(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      DurabilityString;                                         // 0x0348(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      CustomRepairText;                                         // 0x0358(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              DroppedItemLifeSpanOverride;                              // 0x0368(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData17[0x4];                                       // 0x036C(0x0004) MISSED OFFSET
-	class UStaticMesh*                                 DroppedMeshOverride;                                      // 0x0370(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UMaterialInterface*                          DroppedMeshMaterialOverride;                              // 0x0378(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     DroppedMeshOverrideScale3D;                               // 0x0380(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x4];                                       // 0x038C(0x0004) MISSED OFFSET
-	class UClass*                                      SpoilingItem;                                             // 0x0390(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UClass*>                              UseRequiresOwnerActorClasses;                             // 0x0398(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UClass*                                      PreservingItemClass;                                      // 0x03A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PreservingItemSpoilingTimeMultiplier;                     // 0x03B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SpoilingTime;                                             // 0x03B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CraftingConsumesDurability;                               // 0x03B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RepairResourceRequirementMultiplier;                      // 0x03BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BaseItemWeight;                                           // 0x03C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DurabilityIncreaseMultiplier;                             // 0x03C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              NewItemDurabilityOverride;                                // 0x03C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DurabilityDecreaseMultiplier;                             // 0x03CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              UseDecreaseDurability;                                    // 0x03D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AutoDurabilityDecreaseInterval;                           // 0x03D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AutoDecreaseMinDurability;                                // 0x03D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AutoDecreaseDurabilityAmountPerInterval;                  // 0x03DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              UseDecreaseDurabilityMin;                                 // 0x03E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              UseMinDurabilityRequirement;                              // 0x03E4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ResourceRarity;                                           // 0x03E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BlueprintTimeToCraft;                                     // 0x03EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinBlueprintTimeToCraft;                                  // 0x03F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BlueprintWeight;                                          // 0x03F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinimumUseInterval;                                       // 0x03F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              TimeForFullRepair;                                        // 0x03FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BaseCraftingXP;                                           // 0x0400(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BaseRepairingXP;                                          // 0x0404(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FCraftingResourceRequirement>        BaseCraftingResourceRequirements;                         // 0x0408(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FCraftingResourceRequirement>        OverrideRepairingRequirements;                            // 0x0418(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FItemStatInfo                               ItemStatInfos[0x8];                                       // 0x0428(0x0024) (Edit, DisableEditOnInstance)
-	uint16_t                                           ItemStatValues[0x8];                                      // 0x0548(0x0002) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	uint32_t                                           WeaponClipAmmo;                                           // 0x0558(0x0004) (BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
-	float                                              WeaponFrequency;                                          // 0x055C(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
-	double                                             LastTimeToShowInfo;                                       // 0x0560(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      ItemVersion;                                              // 0x0568(0x0001) (ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData19[0x3];                                       // 0x0569(0x0003) MISSED OFFSET
-	float                                              ItemDurability;                                           // 0x056C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              MinItemDurability;                                        // 0x0570(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SavedDurability;                                          // 0x0574(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	class UClass*                                      WeaponTemplate;                                           // 0x0578(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture2D*                                  BrokenIcon;                                               // 0x0580(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture2D*                                  ItemIcon;                                                 // 0x0588(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture2D*                                  AlternateItemIconBelowDurability;                         // 0x0590(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AlternateItemIconBelowDurabilityValue;                    // 0x0598(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DurabilityNotifyThresholdValue;                           // 0x059C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UMaterialInterface*                          ItemIconMaterialParent;                                   // 0x05A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int16_t                                            ItemColorID[0x6];                                         // 0x05A8(0x0002) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	int16_t                                            PreSkinItemColorID[0x6];                                  // 0x05B4(0x0002) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	unsigned char                                      bUseItemColor[0x6];                                       // 0x05C0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData20[0x2];                                       // 0x05C6(0x0002) MISSED OFFSET
-	class UClass*                                      RandomColorSet;                                           // 0x05C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    ItemIconMaterial;                                         // 0x05D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    HUDIconMaterial;                                          // 0x05D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	int                                                ItemQuantity;                                             // 0x05E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	int                                                MaxItemQuantity;                                          // 0x05E4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<uint64_t>                                   SteamItemUserIDs;                                         // 0x05E8(0x0010) (ZeroConstructor)
-	class UClass*                                      StructureToBuild;                                         // 0x05F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      GiveItemWhenUsed;                                         // 0x0600(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UClass*>                              CraftingRequiresInventoryComponent;                       // 0x0608(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UClass*                                      DroppedItemTemplateOverride;                              // 0x0618(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      DroppedItemTemplateForSecondryAction;                     // 0x0620(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      BuffToGiveOwnerCharacter;                                 // 0x0628(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    PreviewCameraRotation;                                    // 0x0630(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     PreviewCameraPivotOffset;                                 // 0x063C(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PreviewCameraDistanceScaleFactor;                         // 0x0648(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PreviewCameraDefaultZoomMultiplier;                       // 0x064C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PreviewCameraMaxZoomMultiplier;                           // 0x0650(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData21[0x44];                                      // 0x0654(0x0044) MISSED OFFSET
-	double                                             CreationTime;                                             // 0x0698(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
-	double                                             LastAutoDurabilityDecreaseTime;                           // 0x06A0(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
-	double                                             LastUseTime;                                              // 0x06A8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData22[0x8];                                       // 0x06B0(0x0008) MISSED OFFSET
-	int                                                MaxCustomItemDescriptionLength;                           // 0x06B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                TempSlotIndex;                                            // 0x06BC(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
-	TWeakObjectPtr<class AShooterWeapon>               AssociatedWeapon;                                         // 0x06C0(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
-	class UPrimalItem*                                 MyItemSkin;                                               // 0x06C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UPrimalItem*                                 SkinnedOntoItem;                                          // 0x06D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TWeakObjectPtr<class AShooterCharacter>            LastOwnerPlayer;                                          // 0x06D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FCropItemPhaseData>                  CropPhasesData;                                           // 0x06E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              CropGrowingFertilizerConsumptionRate;                     // 0x06F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CropMaxFruitFertilizerConsumptionRate;                    // 0x06F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CropGrowingWaterConsumptionRate;                          // 0x06F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CropMaxFruitWaterConsumptionRate;                         // 0x06FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CropMaxFruits;                                            // 0x0700(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CropNoFertilizerOrWaterCacheReductionRate;                // 0x0704(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              FertilizerEffectivenessMultiplier;                        // 0x0708(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EggAlertDinosAggroAmount;                                 // 0x070C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EggAlertDinosAggroRadius;                                 // 0x0710(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData23[0x4];                                       // 0x0714(0x0004) MISSED OFFSET
-	TArray<struct FName>                               EggAlertDinosAggroTags;                                   // 0x0718(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	float                                              EggAlertDinosForcedAggroTime;                             // 0x0728(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EggMaximumDistanceFromOriginalDropToAlertDinos;           // 0x072C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      BrokenGiveItemClass;                                      // 0x0730(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ClearColorDurabilityThreshold;                            // 0x0738(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData24[0x4];                                       // 0x073C(0x0004) MISSED OFFSET
-	class UClass*                                      ItemClassToUseAsInitialCustomData;                        // 0x0740(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     OriginalItemDropLocation;                                 // 0x0748(0x000C) (BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
-	struct FLinearColor                                DurabilityBarColorForeground;                             // 0x0754(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                DurabilityBarColorBackground;                             // 0x0764(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData25[0x4];                                       // 0x0774(0x0004) MISSED OFFSET
-	class UClass*                                      OverrideCooldownTimeItemClass;                            // 0x0778(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinDurabilityForCraftingResource;                         // 0x0780(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ResourceRequirementIncreaseRatingPower;                   // 0x0784(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ResourceRequirementRatingScale;                           // 0x0788(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ResourceRequirementRatingIncreasePercentage;              // 0x078C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	double                                             NextSpoilingTime;                                         // 0x0790(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	double                                             LastSpoilingTime;                                         // 0x0798(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	TArray<class FString>                              DefaultFolderPaths;                                       // 0x07A0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      ItemRatingString;                                         // 0x07B0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FName                                       DefaultWeaponMeshName;                                    // 0x07C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData26[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
-	class UClass*                                      EngramRequirementItemClassOverride;                       // 0x07D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData27[0x10];                                      // 0x07D8(0x0010) MISSED OFFSET
-	class USoundBase*                                  ExtraThrowItemSound;                                      // 0x07E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     SpawnOnWaterEncroachmentBoxExtent;                        // 0x07F0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData28[0x4];                                       // 0x07FC(0x0004) MISSED OFFSET
-	TArray<class UClass*>                              OnlyUsableOnSpecificClasses;                              // 0x0800(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FSaddlePassengerSeatDefinition>      SaddlePassengerSeats;                                     // 0x0810(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FName                                       SaddleOverrideRiderSocketName;                            // 0x0820(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      EggDinoClassToSpawn;                                      // 0x0828(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      EggNumberOfLevelUpPointsApplied[0xC];                     // 0x0830(0x0001) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	float                                              EggTamedIneffectivenessModifier;                          // 0x083C(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	unsigned char                                      EggColorSetIndices[0x6];                                  // 0x0840(0x0001) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData29[0x2];                                       // 0x0846(0x0002) MISSED OFFSET
-	float                                              EggLoseDurabilityPerSecond;                               // 0x0848(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ExtraEggLoseDurabilityPerSecondMultiplier;                // 0x084C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EggMinTemperature;                                        // 0x0850(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EggMaxTemperature;                                        // 0x0854(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EggDroppedInvalidTempLoseItemRatingSpeed;                 // 0x0858(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData30[0x4];                                       // 0x085C(0x0004) MISSED OFFSET
-	class USoundBase*                                  ShieldHitSound;                                           // 0x0860(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RecipeCraftingSkillScale;                                 // 0x0868(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CustomItemID;                                             // 0x086C(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	float                                              AddDinoTargetingRange;                                    // 0x0870(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DamageTorpidityArmorRating;                               // 0x0874(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              IndirectTorpidityArmorRating;                             // 0x0878(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData31[0x4];                                       // 0x087C(0x0004) MISSED OFFSET
-	class UClass*                                      UseParticleEffect;                                        // 0x0880(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       UseParticleEffectSocketName;                              // 0x0888(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              UseGiveDinoTameAffinityPercent;                           // 0x0890(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData32[0x4];                                       // 0x0894(0x0004) MISSED OFFSET
-	TArray<class UClass*>                              CraftingAdditionalItemsToGive;                            // 0x0898(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	int                                                LastValidItemVersion;                                     // 0x08A8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              GlobalTameAffinityMultiplier;                             // 0x08AC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CraftingGiveItemCount;                                    // 0x08B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CraftingGivesItemQuantityOverride;                        // 0x08B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USoundBase*                                  UseItemOnItemSound;                                       // 0x08B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       UseUnlocksEmoteName;                                      // 0x08C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData33[0x8];                                       // 0x08C8(0x0008) MISSED OFFSET
-	TArray<struct FDinoAncestorsEntry>                 EggDinoAncestors;                                         // 0x08D0(0x0010) (ZeroConstructor, Transient, SaveGame)
-	TArray<struct FDinoAncestorsEntry>                 EggDinoAncestorsMale;                                     // 0x08E0(0x0010) (ZeroConstructor, Transient, SaveGame)
-	int                                                EggRandomMutationsFemale;                                 // 0x08F0(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	int                                                EggRandomMutationsMale;                                   // 0x08F4(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	TArray<class UClass*>                              EquippingRequiresEngrams;                                 // 0x08F8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FCustomItemData>                     CustomItemDatas;                                          // 0x0908(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
-	class FString                                      OverrideUseString;                                        // 0x0918(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UClass*                                      SendToClientClassOverride;                                // 0x0928(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class FString                                      CrafterCharacterName;                                     // 0x0930(0x0010) (ZeroConstructor, Transient, SaveGame)
-	class FString                                      CrafterTribeName;                                         // 0x0940(0x0010) (ZeroConstructor, Transient, SaveGame)
-	float                                              CraftedSkillBonus;                                        // 0x0950(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
-	float                                              CraftingSkillQualityMultiplierMin;                        // 0x0954(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CraftingSkillQualityMultiplierMax;                        // 0x0958(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              SinglePlayerCraftingSpeedMultiplier;                      // 0x095C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                NoLevelEngramSortingPriority;                             // 0x0960(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CustomFlags;                                              // 0x0964(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       CustomTag;                                                // 0x0968(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EquippedReduceDurabilityInterval;                         // 0x0970(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData34[0x4];                                       // 0x0974(0x0004) MISSED OFFSET
-	double                                             LastEquippedReduceDurabilityTime;                         // 0x0978(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EquippedReduceDurabilityPerInterval;                      // 0x0980(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ItemStatClampsMultiplier;                                 // 0x0984(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
-	float                                              MaxDurabiltiyOverride;                                    // 0x0988(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData35[0x14];                                      // 0x098C(0x0014) MISSED OFFSET
-	float                                              NextRepairPercentage;                                     // 0x09A0(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData36[0x4];                                       // 0x09A4(0x0004) MISSED OFFSET
-	class UStaticMesh*                                 NetDroppedMeshOverride;                                   // 0x09A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UMaterialInterface*                          NetDroppedMeshMaterialOverride;                           // 0x09B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     NetDroppedMeshOverrideScale3D;                            // 0x09B8(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      bNonBlockingShield : 1;                                   // 0x09C4(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bNetInfoFromClient : 1;                                   // 0x09C4(0x0001) (SaveGame)
-	unsigned char                                      UnknownData37[0x3];                                       // 0x09C5(0x0003) MISSED OFFSET
-	class USkeletalMesh*                               DyePreviewMeshOverrideSK;                                 // 0x09C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UStaticMesh*                                 DyePreviewMeshOverrideSM;                                 // 0x09D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UTexture2D*                                  AccessoryActivatedIconOverride;                           // 0x09D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bUseBlueprintAnimNotifications;                           // 0x09E0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData38[0x7];                                       // 0x09E1(0x0007) MISSED OFFSET
+	class USkeletalMesh*                               CostumeDinoSaddleOverrideMesh;                            // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DinoAutoHealingThresholdPercent;                          // 0x0070(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DinoAutoHealingUseTimeInterval;                           // 0x0074(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                ArkTributeVersion;                                        // 0x0078(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              EquipRequiresExplicitOwnerClasses;                        // 0x0080(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               EquipRequiresExplicitOwnerTags;                           // 0x0090(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      BuffToGiveOwnerWhenEquipped;                              // 0x00A0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class FString                                      BuffToGiveOwnerWhenEquipped_BlueprintPath;                // 0x00A8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x00B8(0x0004) MISSED OFFSET
+	uint32_t                                           ExpirationTimeUTC;                                        // 0x00BC(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                BlueprintAllowMaxCraftings;                               // 0x00C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
+	class FString                                      AbstractItemCraftingDescription;                          // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ItemSkinUseOnItemClasses;                                 // 0x00D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ItemSkinPreventOnItemClasses;                             // 0x00E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class USoundBase*                                  ItemBrokenSound;                                          // 0x00F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundCue*                                   UseItemSound;                                             // 0x0100(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundBase*                                  EquipSound;                                               // 0x0108(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundBase*                                  UnEquipSound;                                             // 0x0110(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundBase*                                  UsedOnOtherItemSound;                                     // 0x0118(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundBase*                                  RemovedFromOtherItemSound;                                // 0x0120(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RandomChanceToBeBlueprint;                                // 0x0128(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4];                                       // 0x012C(0x0004) MISSED OFFSET
+	TArray<struct FActorClassAttachmentInfo>           ActorClassAttachmentInfos;                                // 0x0130(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char                                      UnknownData07[0x18];                                      // 0x0140(0x0018) MISSED OFFSET
+	TArray<struct FItemAttachmentInfo>                 ItemSkinAddItemAttachments;                               // 0x0158(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TEnumAsByte<EPrimalItemType>                       MyItemType;                                               // 0x0168(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EPrimalConsumableType>                 MyConsumableType;                                         // 0x0169(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EPrimalEquipmentType>                  MyEquipmentType;                                          // 0x016A(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x1];                                       // 0x016B(0x0001) MISSED OFFSET
+	int                                                ExtraItemCategoryFlags;                                   // 0x016C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ItemIconScale;                                            // 0x0170(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     BlockingShieldFPVTranslation;                             // 0x0174(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    BlockingShieldFPVRotation;                                // 0x0180(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShieldBlockDamagePercentage;                              // 0x018C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShieldDamageToDurabilityRatio;                            // 0x0190(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x4];                                       // 0x0194(0x0004) MISSED OFFSET
+	class UAnimMontage*                                PlayAnimationOnUse;                                       // 0x0198(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bHideDuringEquipAnimation;                                // 0x01A0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x7];                                       // 0x01A1(0x0007) MISSED OFFSET
+	class UAnimMontage*                                ShowAnimationMale;                                        // 0x01A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimMontage*                                ShowAnimationFemale;                                      // 0x01B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimMontage*                                HideAnimationMale;                                        // 0x01B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimMontage*                                HideAnimationFemale;                                      // 0x01C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CraftingMinLevelRequirement;                              // 0x01C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CraftingCooldownInterval;                                 // 0x01CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      CraftingActorToSpawn;                                     // 0x01D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture2D*                                  BlueprintBackgroundOverrideTexture;                       // 0x01D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class FString                                      CraftItemButtonStringOverride;                            // 0x01E0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      UseSpawnActorClass;                                       // 0x01F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     UseSpawnActorLocOffset;                                   // 0x01F8(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                SlotIndex;                                                // 0x0204(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	struct FItemNetID                                  ItemId;                                                   // 0x0208(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	int                                                ItemCustomData;                                           // 0x0210(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x4];                                       // 0x0214(0x0004) MISSED OFFSET
+	class UClass*                                      ItemCustomClass;                                          // 0x0218(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	int                                                ItemSkinTemplateIndex;                                    // 0x0220(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x4];                                       // 0x0224(0x0004) MISSED OFFSET
+	class UClass*                                      ItemSkinTemplate;                                         // 0x0228(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	float                                              ItemRating;                                               // 0x0230(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	uint16_t                                           CraftQueue;                                               // 0x0234(0x0002) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x2];                                       // 0x0236(0x0002) MISSED OFFSET
+	float                                              CraftingSkill;                                            // 0x0238(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x4];                                       // 0x023C(0x0004) MISSED OFFSET
+	class FString                                      CustomItemName;                                           // 0x0240(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
+	class FString                                      CustomItemDescription;                                    // 0x0250(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
+	TArray<struct FColor>                              CustomColors;                                             // 0x0260(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
+	TArray<struct FCraftingResourceRequirement>        CustomResourceRequirements;                               // 0x0270(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
+	double                                             NextCraftCompletionTime;                                  // 0x0280(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	TWeakObjectPtr<class UPrimalInventoryComponent>    OwnerInventory;                                           // 0x0288(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, SaveGame, IsPlainOldData)
+	unsigned char                                      ItemQualityIndex;                                         // 0x0290(0x0001) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x7];                                       // 0x0291(0x0007) MISSED OFFSET
+	class UClass*                                      SupportDragOntoItemClass;                                 // 0x0298(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              SupportDragOntoItemClasses;                               // 0x02A0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              SkinWeaponTemplates;                                      // 0x02B0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              SupportAmmoItemForWeaponSkin;                             // 0x02C0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              SkinWeaponTemplatesForAmmo;                               // 0x02D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      AmmoSupportDragOntoWeaponItemWeaponTemplate;              // 0x02E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              AmmoSupportDragOntoWeaponItemWeaponTemplates;             // 0x02E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FUseItemAddCharacterStatusValue>     UseItemAddCharacterStatusValues;                          // 0x02F8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              Ingredient_WeightIncreasePerQuantity;                     // 0x0308(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Ingredient_FoodIncreasePerQuantity;                       // 0x030C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Ingredient_HealthIncreasePerQuantity;                     // 0x0310(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Ingredient_WaterIncreasePerQuantity;                      // 0x0314(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Ingredient_StaminaIncreasePerQuantity;                    // 0x0318(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x4];                                       // 0x031C(0x0004) MISSED OFFSET
+	class FString                                      DescriptiveNameBase;                                      // 0x0320(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      ItemDescription;                                          // 0x0330(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      DurabilityStringShort;                                    // 0x0340(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      DurabilityString;                                         // 0x0350(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      CustomRepairText;                                         // 0x0360(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              DroppedItemLifeSpanOverride;                              // 0x0370(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData17[0x4];                                       // 0x0374(0x0004) MISSED OFFSET
+	class UStaticMesh*                                 DroppedMeshOverride;                                      // 0x0378(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UMaterialInterface*                          DroppedMeshMaterialOverride;                              // 0x0380(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     DroppedMeshOverrideScale3D;                               // 0x0388(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData18[0x4];                                       // 0x0394(0x0004) MISSED OFFSET
+	class UClass*                                      SpoilingItem;                                             // 0x0398(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              UseRequiresOwnerActorClasses;                             // 0x03A0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      PreservingItemClass;                                      // 0x03B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PreservingItemSpoilingTimeMultiplier;                     // 0x03B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SpoilingTime;                                             // 0x03BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CraftingConsumesDurability;                               // 0x03C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RepairResourceRequirementMultiplier;                      // 0x03C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BaseItemWeight;                                           // 0x03C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DurabilityIncreaseMultiplier;                             // 0x03CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              NewItemDurabilityOverride;                                // 0x03D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DurabilityDecreaseMultiplier;                             // 0x03D4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              UseDecreaseDurability;                                    // 0x03D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AutoDurabilityDecreaseInterval;                           // 0x03DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AutoDecreaseMinDurability;                                // 0x03E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AutoDecreaseDurabilityAmountPerInterval;                  // 0x03E4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              UseDecreaseDurabilityMin;                                 // 0x03E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              UseMinDurabilityRequirement;                              // 0x03EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ResourceRarity;                                           // 0x03F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BlueprintTimeToCraft;                                     // 0x03F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinBlueprintTimeToCraft;                                  // 0x03F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BlueprintWeight;                                          // 0x03FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinimumUseInterval;                                       // 0x0400(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TimeForFullRepair;                                        // 0x0404(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BaseCraftingXP;                                           // 0x0408(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BaseRepairingXP;                                          // 0x040C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FCraftingResourceRequirement>        BaseCraftingResourceRequirements;                         // 0x0410(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FCraftingResourceRequirement>        OverrideRepairingRequirements;                            // 0x0420(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FItemStatInfo                               ItemStatInfos[0x8];                                       // 0x0430(0x0024) (Edit, DisableEditOnInstance)
+	uint16_t                                           ItemStatValues[0x8];                                      // 0x0550(0x0002) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	uint32_t                                           WeaponClipAmmo;                                           // 0x0560(0x0004) (BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+	float                                              WeaponFrequency;                                          // 0x0564(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
+	double                                             LastTimeToShowInfo;                                       // 0x0568(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      ItemVersion;                                              // 0x0570(0x0001) (ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData19[0x3];                                       // 0x0571(0x0003) MISSED OFFSET
+	float                                              ItemDurability;                                           // 0x0574(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              MinItemDurability;                                        // 0x0578(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SavedDurability;                                          // 0x057C(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	class UClass*                                      WeaponTemplate;                                           // 0x0580(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture2D*                                  BrokenIcon;                                               // 0x0588(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture2D*                                  ItemIcon;                                                 // 0x0590(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture2D*                                  AlternateItemIconBelowDurability;                         // 0x0598(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AlternateItemIconBelowDurabilityValue;                    // 0x05A0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DurabilityNotifyThresholdValue;                           // 0x05A4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UMaterialInterface*                          ItemIconMaterialParent;                                   // 0x05A8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int16_t                                            ItemColorID[0x6];                                         // 0x05B0(0x0002) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	int16_t                                            PreSkinItemColorID[0x6];                                  // 0x05BC(0x0002) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	unsigned char                                      bUseItemColor[0x6];                                       // 0x05C8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData20[0x2];                                       // 0x05CE(0x0002) MISSED OFFSET
+	class UClass*                                      RandomColorSet;                                           // 0x05D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    ItemIconMaterial;                                         // 0x05D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    HUDIconMaterial;                                          // 0x05E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	int                                                ItemQuantity;                                             // 0x05E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	int                                                MaxItemQuantity;                                          // 0x05EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<uint64_t>                                   SteamItemUserIDs;                                         // 0x05F0(0x0010) (ZeroConstructor)
+	class UClass*                                      StructureToBuild;                                         // 0x0600(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      GiveItemWhenUsed;                                         // 0x0608(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              CraftingRequiresInventoryComponent;                       // 0x0610(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      DroppedItemTemplateOverride;                              // 0x0620(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      DroppedItemTemplateForSecondryAction;                     // 0x0628(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      BuffToGiveOwnerCharacter;                                 // 0x0630(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    PreviewCameraRotation;                                    // 0x0638(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     PreviewCameraPivotOffset;                                 // 0x0644(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PreviewCameraDistanceScaleFactor;                         // 0x0650(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PreviewCameraDefaultZoomMultiplier;                       // 0x0654(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PreviewCameraMaxZoomMultiplier;                           // 0x0658(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData21[0x44];                                      // 0x065C(0x0044) MISSED OFFSET
+	double                                             CreationTime;                                             // 0x06A0(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	double                                             LastAutoDurabilityDecreaseTime;                           // 0x06A8(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	double                                             LastUseTime;                                              // 0x06B0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData22[0x8];                                       // 0x06B8(0x0008) MISSED OFFSET
+	int                                                MaxCustomItemDescriptionLength;                           // 0x06C0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                TempSlotIndex;                                            // 0x06C4(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
+	TWeakObjectPtr<class AShooterWeapon>               AssociatedWeapon;                                         // 0x06C8(0x0008) (ZeroConstructor, SaveGame, IsPlainOldData)
+	class UPrimalItem*                                 MyItemSkin;                                               // 0x06D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UPrimalItem*                                 SkinnedOntoItem;                                          // 0x06D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TWeakObjectPtr<class AShooterCharacter>            LastOwnerPlayer;                                          // 0x06E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FCropItemPhaseData>                  CropPhasesData;                                           // 0x06E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              CropGrowingFertilizerConsumptionRate;                     // 0x06F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CropMaxFruitFertilizerConsumptionRate;                    // 0x06FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CropGrowingWaterConsumptionRate;                          // 0x0700(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CropMaxFruitWaterConsumptionRate;                         // 0x0704(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CropMaxFruits;                                            // 0x0708(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CropNoFertilizerOrWaterCacheReductionRate;                // 0x070C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              FertilizerEffectivenessMultiplier;                        // 0x0710(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EggAlertDinosAggroAmount;                                 // 0x0714(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EggAlertDinosAggroRadius;                                 // 0x0718(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData23[0x4];                                       // 0x071C(0x0004) MISSED OFFSET
+	TArray<struct FName>                               EggAlertDinosAggroTags;                                   // 0x0720(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	float                                              EggAlertDinosForcedAggroTime;                             // 0x0730(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EggMaximumDistanceFromOriginalDropToAlertDinos;           // 0x0734(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      BrokenGiveItemClass;                                      // 0x0738(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ClearColorDurabilityThreshold;                            // 0x0740(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData24[0x4];                                       // 0x0744(0x0004) MISSED OFFSET
+	class UClass*                                      ItemClassToUseAsInitialCustomData;                        // 0x0748(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     OriginalItemDropLocation;                                 // 0x0750(0x000C) (BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+	struct FLinearColor                                DurabilityBarColorForeground;                             // 0x075C(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                DurabilityBarColorBackground;                             // 0x076C(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData25[0x4];                                       // 0x077C(0x0004) MISSED OFFSET
+	class UClass*                                      OverrideCooldownTimeItemClass;                            // 0x0780(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinDurabilityForCraftingResource;                         // 0x0788(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ResourceRequirementIncreaseRatingPower;                   // 0x078C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ResourceRequirementRatingScale;                           // 0x0790(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ResourceRequirementRatingIncreasePercentage;              // 0x0794(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	double                                             NextSpoilingTime;                                         // 0x0798(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	double                                             LastSpoilingTime;                                         // 0x07A0(0x0008) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	TArray<class FString>                              DefaultFolderPaths;                                       // 0x07A8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      ItemRatingString;                                         // 0x07B8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       DefaultWeaponMeshName;                                    // 0x07C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData26[0x8];                                       // 0x07D0(0x0008) MISSED OFFSET
+	class UClass*                                      EngramRequirementItemClassOverride;                       // 0x07D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData27[0x10];                                      // 0x07E0(0x0010) MISSED OFFSET
+	class USoundBase*                                  ExtraThrowItemSound;                                      // 0x07F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     SpawnOnWaterEncroachmentBoxExtent;                        // 0x07F8(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData28[0x4];                                       // 0x0804(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              OnlyUsableOnSpecificClasses;                              // 0x0808(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FSaddlePassengerSeatDefinition>      SaddlePassengerSeats;                                     // 0x0818(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       SaddleOverrideRiderSocketName;                            // 0x0828(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      EggDinoClassToSpawn;                                      // 0x0830(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      EggNumberOfLevelUpPointsApplied[0xC];                     // 0x0838(0x0001) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	float                                              EggTamedIneffectivenessModifier;                          // 0x0844(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	unsigned char                                      EggColorSetIndices[0x6];                                  // 0x0848(0x0001) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	unsigned char                                      UnknownData29[0x2];                                       // 0x084E(0x0002) MISSED OFFSET
+	float                                              EggLoseDurabilityPerSecond;                               // 0x0850(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ExtraEggLoseDurabilityPerSecondMultiplier;                // 0x0854(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EggMinTemperature;                                        // 0x0858(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EggMaxTemperature;                                        // 0x085C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EggDroppedInvalidTempLoseItemRatingSpeed;                 // 0x0860(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData30[0x4];                                       // 0x0864(0x0004) MISSED OFFSET
+	class USoundBase*                                  ShieldHitSound;                                           // 0x0868(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RecipeCraftingSkillScale;                                 // 0x0870(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CustomItemID;                                             // 0x0874(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	float                                              AddDinoTargetingRange;                                    // 0x0878(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DamageTorpidityArmorRating;                               // 0x087C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              IndirectTorpidityArmorRating;                             // 0x0880(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData31[0x4];                                       // 0x0884(0x0004) MISSED OFFSET
+	class UClass*                                      UseParticleEffect;                                        // 0x0888(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       UseParticleEffectSocketName;                              // 0x0890(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              UseGiveDinoTameAffinityPercent;                           // 0x0898(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData32[0x4];                                       // 0x089C(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              CraftingAdditionalItemsToGive;                            // 0x08A0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	int                                                LastValidItemVersion;                                     // 0x08B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              GlobalTameAffinityMultiplier;                             // 0x08B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CraftingGiveItemCount;                                    // 0x08B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CraftingGivesItemQuantityOverride;                        // 0x08BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundBase*                                  UseItemOnItemSound;                                       // 0x08C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       UseUnlocksEmoteName;                                      // 0x08C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData33[0x8];                                       // 0x08D0(0x0008) MISSED OFFSET
+	TArray<struct FDinoAncestorsEntry>                 EggDinoAncestors;                                         // 0x08D8(0x0010) (ZeroConstructor, Transient, SaveGame)
+	TArray<struct FDinoAncestorsEntry>                 EggDinoAncestorsMale;                                     // 0x08E8(0x0010) (ZeroConstructor, Transient, SaveGame)
+	int                                                EggRandomMutationsFemale;                                 // 0x08F8(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	int                                                EggRandomMutationsMale;                                   // 0x08FC(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	TArray<class UClass*>                              EquippingRequiresEngrams;                                 // 0x0900(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FCustomItemData>                     CustomItemDatas;                                          // 0x0910(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, SaveGame)
+	class FString                                      OverrideUseString;                                        // 0x0920(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      SendToClientClassOverride;                                // 0x0930(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class FString                                      CrafterCharacterName;                                     // 0x0938(0x0010) (ZeroConstructor, Transient, SaveGame)
+	class FString                                      CrafterTribeName;                                         // 0x0948(0x0010) (ZeroConstructor, Transient, SaveGame)
+	float                                              CraftedSkillBonus;                                        // 0x0958(0x0004) (ZeroConstructor, Transient, SaveGame, IsPlainOldData)
+	float                                              CraftingSkillQualityMultiplierMin;                        // 0x095C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CraftingSkillQualityMultiplierMax;                        // 0x0960(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SinglePlayerCraftingSpeedMultiplier;                      // 0x0964(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                NoLevelEngramSortingPriority;                             // 0x0968(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CustomFlags;                                              // 0x096C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       CustomTag;                                                // 0x0970(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EquippedReduceDurabilityInterval;                         // 0x0978(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData34[0x4];                                       // 0x097C(0x0004) MISSED OFFSET
+	double                                             LastEquippedReduceDurabilityTime;                         // 0x0980(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EquippedReduceDurabilityPerInterval;                      // 0x0988(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ItemStatClampsMultiplier;                                 // 0x098C(0x0004) (ZeroConstructor, SaveGame, IsPlainOldData)
+	float                                              MaxDurabiltiyOverride;                                    // 0x0990(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData35[0x14];                                      // 0x0994(0x0014) MISSED OFFSET
+	float                                              NextRepairPercentage;                                     // 0x09A8(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData36[0x4];                                       // 0x09AC(0x0004) MISSED OFFSET
+	class UStaticMesh*                                 NetDroppedMeshOverride;                                   // 0x09B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UMaterialInterface*                          NetDroppedMeshMaterialOverride;                           // 0x09B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     NetDroppedMeshOverrideScale3D;                            // 0x09C0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      bNonBlockingShield : 1;                                   // 0x09CC(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bNetInfoFromClient : 1;                                   // 0x09CC(0x0001) (SaveGame)
+	unsigned char                                      UnknownData37 : 1;                                        // 0x09CC(0x0001)
+	unsigned char                                      bForceAllowSkinColorization : 1;                          // 0x09CC(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData38[0x3];                                       // 0x09CD(0x0003) MISSED OFFSET
+	class USkeletalMesh*                               DyePreviewMeshOverrideSK;                                 // 0x09D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UStaticMesh*                                 DyePreviewMeshOverrideSM;                                 // 0x09D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UTexture2D*                                  AccessoryActivatedIconOverride;                           // 0x09E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bUseBlueprintAnimNotifications;                           // 0x09E8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData39[0x7];                                       // 0x09E9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2419,14 +2422,14 @@ public:
 
 
 // Class ShooterGame.PrimalPlayerData
-// 0x04A8 (0x04D0 - 0x0028)
+// 0x04B8 (0x04E0 - 0x0028)
 class UPrimalPlayerData : public UObject
 {
 public:
-	struct FPrimalPlayerDataStruct                     MyData;                                                   // 0x0028(0x0430) (BlueprintVisible, BlueprintReadOnly)
-	TArray<class UPrimalBuffPersistentData*>           MyPersistentBuffDatas;                                    // 0x0458(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0468(0x0058) MISSED OFFSET
-	TArray<struct FBossEngramsSoftReferenceMapping>    BossEngramReferenceMap;                                   // 0x04C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPrimalPlayerDataStruct                     MyData;                                                   // 0x0028(0x0440) (BlueprintVisible, BlueprintReadOnly)
+	TArray<class UPrimalBuffPersistentData*>           MyPersistentBuffDatas;                                    // 0x0468(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0478(0x0058) MISSED OFFSET
+	TArray<struct FBossEngramsSoftReferenceMapping>    BossEngramReferenceMap;                                   // 0x04D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -2450,36 +2453,36 @@ public:
 
 
 // Class ShooterGame.ShooterPlayerState
-// 0x0A00 (0x0EF0 - 0x04F0)
+// 0x0A10 (0x0F00 - 0x04F0)
 class AShooterPlayerState : public APlayerState
 {
 public:
 	unsigned char                                      UnknownData00[0x30];                                      // 0x04F0(0x0030) MISSED OFFSET
 	class UPrimalPlayerData*                           MyPlayerData;                                             // 0x0520(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FPrimalPlayerDataStruct                     MyPlayerDataStruct;                                       // 0x0528(0x0430) (Net, Transient)
-	class UClass*                                      DefaultItemSlotClasses[0xA];                              // 0x0958(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      DefaultItemSlotEngrams[0xA];                              // 0x09A8(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x09B2(0x0006) MISSED OFFSET
-	struct FTribeData                                  MyTribeData;                                              // 0x09B8(0x0138) (Net, Transient)
-	struct FTribeData                                  LastTribeInviteData;                                      // 0x0AF0(0x0138) (Transient)
-	unsigned char                                      UnknownData02[0x38];                                      // 0x0C28(0x0038) MISSED OFFSET
-	int                                                TotalEngramPoints;                                        // 0x0C60(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	int                                                FreeEngramPoints;                                         // 0x0C64(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              EngramItemBlueprints;                                     // 0x0C68(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData03[0x50];                                      // 0x0C78(0x0050) MISSED OFFSET
-	double                                             NextAllowedRespawnTime;                                   // 0x0CC8(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	double                                             LastFlexPipeRefreshConnectionsNetworkTime;                // 0x0CD0(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              AllowedRespawnInterval;                                   // 0x0CD8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x0CDC(0x0004) MISSED OFFSET
-	double                                             LastTimeDiedToEnemyTeam;                                  // 0x0CE0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	int                                                CurrentlySelectedDinoOrderGroup;                          // 0x0CE8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x0CEC(0x0004) MISSED OFFSET
-	struct FDinoOrderGroup                             DinoOrderGroups[0xA];                                     // 0x0CF0(0x0030) (Transient)
-	double                                             GenesisAbilityErrorLastTime;                              // 0x0ED0(0x0008) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	double                                             NextAllowTurretCopySettingsTime;                          // 0x0ED8(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x8];                                       // 0x0EE0(0x0008) MISSED OFFSET
-	unsigned char                                      bQuitter : 1;                                             // 0x0EE8(0x0001)
-	unsigned char                                      UnknownData07[0x7];                                       // 0x0EE9(0x0007) MISSED OFFSET
+	struct FPrimalPlayerDataStruct                     MyPlayerDataStruct;                                       // 0x0528(0x0440) (Net, Transient)
+	class UClass*                                      DefaultItemSlotClasses[0xA];                              // 0x0968(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      DefaultItemSlotEngrams[0xA];                              // 0x09B8(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x09C2(0x0006) MISSED OFFSET
+	struct FTribeData                                  MyTribeData;                                              // 0x09C8(0x0138) (Net, Transient)
+	struct FTribeData                                  LastTribeInviteData;                                      // 0x0B00(0x0138) (Transient)
+	unsigned char                                      UnknownData02[0x38];                                      // 0x0C38(0x0038) MISSED OFFSET
+	int                                                TotalEngramPoints;                                        // 0x0C70(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	int                                                FreeEngramPoints;                                         // 0x0C74(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              EngramItemBlueprints;                                     // 0x0C78(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData03[0x50];                                      // 0x0C88(0x0050) MISSED OFFSET
+	double                                             NextAllowedRespawnTime;                                   // 0x0CD8(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	double                                             LastFlexPipeRefreshConnectionsNetworkTime;                // 0x0CE0(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              AllowedRespawnInterval;                                   // 0x0CE8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x0CEC(0x0004) MISSED OFFSET
+	double                                             LastTimeDiedToEnemyTeam;                                  // 0x0CF0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	int                                                CurrentlySelectedDinoOrderGroup;                          // 0x0CF8(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x0CFC(0x0004) MISSED OFFSET
+	struct FDinoOrderGroup                             DinoOrderGroups[0xA];                                     // 0x0D00(0x0030) (Transient)
+	double                                             GenesisAbilityErrorLastTime;                              // 0x0EE0(0x0008) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	double                                             NextAllowTurretCopySettingsTime;                          // 0x0EE8(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x8];                                       // 0x0EF0(0x0008) MISSED OFFSET
+	unsigned char                                      bQuitter : 1;                                             // 0x0EF8(0x0001)
+	unsigned char                                      UnknownData07[0x7];                                       // 0x0EF9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8621,7 +8624,8 @@ public:
 	unsigned char                                      bUseBPOnLethalDamage : 1;                                 // 0x08D0(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bUseBPAdjustTorpidityDamage : 1;                          // 0x08D0(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bUseBPForceCameraStyle : 1;                               // 0x08D0(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData24[0x7];                                       // 0x08D1(0x0007) MISSED OFFSET
+	unsigned char                                      bUseBPRemovedAsPassenger : 1;                             // 0x08D1(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData24[0x6];                                       // 0x08D2(0x0006) MISSED OFFSET
 	TArray<class UClass*>                              ImmobilizationTrapsToIgnore;                              // 0x08D8(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      UnknownData25[0x8];                                       // 0x08E8(0x0008) MISSED OFFSET
 	TWeakObjectPtr<class APrimalDinoCharacter>         CarryingDino;                                             // 0x08F0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
@@ -9104,6 +9108,7 @@ public:
 	bool BPShouldLimitRightDirection();
 	bool BPShouldLimitForwardDirection();
 	void BPSetCharacterMeshesMaterialScalarParamValue(const struct FName& ParamName, float Value);
+	void BPRemovedAsPassenger(class APrimalCharacter* Character);
 	void BPRemoveCharacterSnapshot(class UPrimalItem* Item, class AActor* From);
 	bool BPPreventStasis();
 	bool BPPreventInputType(TEnumAsByte<EPrimalCharacterInputType> inputType);
@@ -12091,7 +12096,7 @@ public:
 
 
 // Class ShooterGame.PrimalItem_CruiseMissile
-// 0x0000 (0x09E8 - 0x09E8)
+// 0x0000 (0x09F0 - 0x09F0)
 class UPrimalItem_CruiseMissile : public UPrimalItem
 {
 public:
@@ -12106,13 +12111,13 @@ public:
 
 
 // Class ShooterGame.PrimalItem_Dye
-// 0x0020 (0x0A08 - 0x09E8)
+// 0x0020 (0x0A10 - 0x09F0)
 class UPrimalItem_Dye : public UPrimalItem
 {
 public:
-	struct FLinearColor                                DyeColor;                                                 // 0x09E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      DyeUISceneTemplate;                                       // 0x09F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0A00(0x0008) MISSED OFFSET
+	struct FLinearColor                                DyeColor;                                                 // 0x09F0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      DyeUISceneTemplate;                                       // 0x0A00(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0A08(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -12124,11 +12129,11 @@ public:
 
 
 // Class ShooterGame.PrimalItem_Radio
-// 0x0008 (0x09F0 - 0x09E8)
+// 0x0008 (0x09F8 - 0x09F0)
 class UPrimalItem_Radio : public UPrimalItem
 {
 public:
-	class USoundBase*                                  SetFrequencySound;                                        // 0x09E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundBase*                                  SetFrequencySound;                                        // 0x09F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -16477,6 +16482,7 @@ public:
 	void SetFacialHairPercent(float thePercent);
 	void SetDifficultyValue(float NewTime);
 	void SetDebugMeleeAttacks(bool bDebugMelee, float DrawDuration);
+	void SetDay(int day);
 	void SetChatLogMaxAgeInDays(int NumDays);
 	void SetBabyAge(float AgeValue);
 	void SetActiveMissionDebugFlags(int DebugFlags);
@@ -16878,7 +16884,7 @@ public:
 
 
 // Class ShooterGame.ShooterGameMode
-// 0x29F0 (0x2F48 - 0x0558)
+// 0x2A10 (0x2F68 - 0x0558)
 class AShooterGameMode : public AGameMode
 {
 public:
@@ -17226,6 +17232,8 @@ public:
 	struct FScriptMulticastDelegate                    OnSerializeForSaveFile;                                   // 0x2F30(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	float                                              HexagonRewardMultiplier;                                  // 0x2F40(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData58[0x4];                                       // 0x2F44(0x0004) MISSED OFFSET
+	TArray<struct FClassNameReplacement>               DynamicNPCReplacements;                                   // 0x2F48(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FClassNameReplacement>               CollectiveNPCReplacements;                                // 0x2F58(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -17316,7 +17324,7 @@ public:
 
 
 // Class ShooterGame.CustomGameMode
-// 0x0000 (0x2F48 - 0x2F48)
+// 0x0000 (0x2F68 - 0x2F68)
 class ACustomGameMode : public AShooterGameMode
 {
 public:
@@ -17867,7 +17875,9 @@ public:
 	bool                                               bUseOldThirdPersonCameraOffset;                           // 0x0232(0x0001) (ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bLowQualityAnimations;                                    // 0x0233(0x0001) (ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bShowedGenesisDLCBackground;                              // 0x0234(0x0001) (BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x0235(0x0003) MISSED OFFSET
+	bool                                               bViewedAnimatedSeriesTrailer;                             // 0x0235(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	bool                                               bViewedARK2Trailer;                                       // 0x0236(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x1];                                       // 0x0237(0x0001) MISSED OFFSET
 	float                                              TemporaryMusicStingerReductionMultiplier;                 // 0x0238(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x4];                                       // 0x023C(0x0004) MISSED OFFSET
 
@@ -18947,6 +18957,7 @@ public:
 	void VisualLog_LineSegment(class AActor* Actor, const class FString& Message, bool bIsError, const struct FVector& Start, const struct FVector& End, const struct FLinearColor& LineColor, float Thickness, bool bAlsoPrintMessage);
 	void VisualLog_Histogram(class AActor* Actor, const struct FVector2D& DataSample, const struct FName& GraphName, const struct FName& DataName);
 	void VisualLog_AxisAlignedBox(class AActor* Actor, const class FString& Message, bool bIsError, const struct FVector& BoxMin, const struct FVector& BoxMax, const struct FLinearColor& BoxColor, bool bAlsoPrintMessage);
+	void ViewTrailer(bool bAnimatedSeriesTrailer, bool bARK2Trailer);
 	struct FVector ViewDirectionAngleOffset(const struct FVector& ViewDirection, const struct FVector& RightVector, float AngleOffsetDegrees, float MaxAngleDegreesBeforeInterpToUp);
 	float VectorDistance(const struct FVector& A, const struct FVector& B);
 	void UseCooldown(class UObject* WorldContextObject, double* CooldownClock);

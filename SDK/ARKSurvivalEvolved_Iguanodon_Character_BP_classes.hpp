@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,7 +71,7 @@ public:
 	float                                              Biped_JumpStaminaCost;                                    // 0x22B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               CallFunc_DoAttack_ReturnValue;                            // 0x22B4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x3];                                       // 0x22B5(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x22B8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x22B8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_Multiply_FloatFloat_ReturnValue;                 // 0x22BC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x22C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x22C1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -99,7 +99,7 @@ public:
 	void UpdateStance();
 	void UpdateHasFruitInInventory();
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void ConvertFruitToSeeds();
 	void BPNotifySetRider(class AShooterCharacter** RiderSetting);
 	void Net_SetCurrentStance(bool isBiped);
@@ -108,7 +108,7 @@ public:
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void ClientSetBipedState(bool isBiped);
-	void GetDefaultDino(class AIguanodon_Character_BP_C** ref);
+	void GetDefaultDino(class AIguanodon_Character_BP_C** Ref);
 	void UserConstructionScript();
 	void Server_SetWantsToSwitchStance();
 	void SwitchStanceAfterDelay(float Delay);

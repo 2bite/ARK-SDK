@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -143,7 +143,7 @@ public:
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x29F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_Normal_ReturnValue;                              // 0x2A00(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_Direction;                             // 0x2A0C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration;                              // 0x2A18(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x2A18(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    CallFunc_MakeRotFromX_ReturnValue;                        // 0x2A1C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_VSize_ReturnValue;                               // 0x2A28(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Greater_FloatFloat_ReturnValue;                  // 0x2A2C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -153,7 +153,7 @@ public:
 	bool                                               K2Node_CustomEvent_Attached;                              // 0x2A3C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData18[0x3];                                       // 0x2A3D(0x0003) MISSED OFFSET
 	struct FVector                                     K2Node_CustomEvent_Location;                              // 0x2A40(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    K2Node_CustomEvent_Rotation;                              // 0x2A4C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_rotation;                              // 0x2A4C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_ByteByte_ReturnValue;                 // 0x2A58(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData19[0x7];                                       // 0x2A59(0x0007) MISSED OFFSET
 	class UShooterCharacterMovement*                   K2Node_DynamicCast_AsShooterCharacterMovement;            // 0x2A60(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -347,12 +347,12 @@ public:
 	bool AllowedToInflate();
 	void TrySubtractStamina(float amount, bool FailIfNotEnough, bool* Success, float* RemainingStamina);
 	float GetCurrentExhaleStaminaCost();
-	void STATIC_RawDamageToInflationDamage(float RawDamageAmount, bool IsFallDamage, float* HealthDamage, float* InflationDamage);
+	void RawDamageToInflationDamage(float RawDamageAmount, bool IsFallDamage, float* HealthDamage, float* InflationDamage);
 	void GetFloatingVFX(const struct FName& SocketName, class UParticleSystemComponent** Comp);
-	void NonDediTickFloatingVFX(float DeltaTime);
+	void STATIC_NonDediTickFloatingVFX(float DeltaTime);
 	void OnRep_IsFloating();
 	void ServerTickRandomImpulses(bool* IsActive, struct FVector* Impulse);
-	TArray<struct FBlueprintVisualLogEntry> STATIC_BPGrabDebugSnapshot();
+	TArray<struct FBlueprintVisualLogEntry> BPGrabDebugSnapshot();
 	void BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value);
 	void BPCheckJumpInput(bool* bUseCustomErrorMessage, class FString* ErrorMessageToDisplay);
 	bool CanJumpInternal();
@@ -374,14 +374,14 @@ public:
 	void ExhaleAttackFinish();
 	void Get_Current_Aim_Direction(float VerticalAngleOffset, struct FVector* AimDirection);
 	void DoExhaleAttack(const struct FVector& Direction);
-	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
+	bool STATIC_BPHandleControllerInitiatedAttack(int* AttackIndex);
 	bool BPHandleOnStopTargeting();
 	void StopInflating();
 	void StartInflating();
 	void OnRep_IsInflating();
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
-	float STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
+	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void Get_Inflation(bool SmoothedValues, float* Value, float* Percent);
 	void ReceiveTick(float* DeltaSeconds);
 	void UserConstructionScript();

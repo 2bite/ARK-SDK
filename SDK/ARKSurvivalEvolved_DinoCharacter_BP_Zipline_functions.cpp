@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -219,7 +219,7 @@ void ADinoCharacter_BP_Zipline_C::BPTimerServer()
 
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.SoftSetTransform
-// (NetRequest, Exec, NetResponse, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct UObject_FTransform      NewTransform                   (Parm, IsPlainOldData)
 
@@ -231,6 +231,7 @@ void ADinoCharacter_BP_Zipline_C::SoftSetTransform(const struct UObject_FTransfo
 	params.NewTransform = NewTransform;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,7 +257,7 @@ void ADinoCharacter_BP_Zipline_C::UpdateTPViewOffset()
 
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.GetTargetMeshRelativeTransformPure
-// (NetReliable, NetRequest, Event, NetResponse, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, NetResponse, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct UObject_FTransform      Result                         (Parm, OutParm, IsPlainOldData)
 
@@ -267,6 +268,7 @@ void ADinoCharacter_BP_Zipline_C::GetTargetMeshRelativeTransformPure(struct UObj
 	ADinoCharacter_BP_Zipline_C_GetTargetMeshRelativeTransformPure_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -278,7 +280,7 @@ void ADinoCharacter_BP_Zipline_C::GetTargetMeshRelativeTransformPure(struct UObj
 
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.InterpMeshRelativeTransform
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Event, NetResponse, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -290,7 +292,6 @@ void ADinoCharacter_BP_Zipline_C::InterpMeshRelativeTransform(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +300,7 @@ void ADinoCharacter_BP_Zipline_C::InterpMeshRelativeTransform(float DeltaTime)
 
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.GetTargetedZipline
-// (Event, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, NetMulticast, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class AZipline_Anchor_C*       targetedZipline                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -343,14 +344,14 @@ void ADinoCharacter_BP_Zipline_C::ZiplineNonDediLogic()
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.SetNonDediTimerTickEveryFrame
 // ()
 // Parameters:
-// bool                           tickEveryFrame                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           TickEveryFrame                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADinoCharacter_BP_Zipline_C::SetNonDediTimerTickEveryFrame(bool tickEveryFrame)
+void ADinoCharacter_BP_Zipline_C::SetNonDediTimerTickEveryFrame(bool TickEveryFrame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.SetNonDediTimerTickEveryFrame");
 
 	ADinoCharacter_BP_Zipline_C_SetNonDediTimerTickEveryFrame_Params params;
-	params.tickEveryFrame = tickEveryFrame;
+	params.TickEveryFrame = TickEveryFrame;
 
 	auto flags = fn->FunctionFlags;
 
@@ -393,14 +394,14 @@ void ADinoCharacter_BP_Zipline_C::GetClosestLocationToPointFromArray(const struc
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.SetServerTimerTickEveryFrame
 // ()
 // Parameters:
-// bool                           tickEveryFrame                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           TickEveryFrame                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADinoCharacter_BP_Zipline_C::SetServerTimerTickEveryFrame(bool tickEveryFrame)
+void ADinoCharacter_BP_Zipline_C::SetServerTimerTickEveryFrame(bool TickEveryFrame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.SetServerTimerTickEveryFrame");
 
 	ADinoCharacter_BP_Zipline_C_SetServerTimerTickEveryFrame_Params params;
-	params.tickEveryFrame = tickEveryFrame;
+	params.TickEveryFrame = TickEveryFrame;
 
 	auto flags = fn->FunctionFlags;
 
@@ -431,7 +432,7 @@ void ADinoCharacter_BP_Zipline_C::CreateZiplineBuffAndStartRiding(class AZipline
 
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.IsTargetZiplineBlocked
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, Event, Static, NetMulticast, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // class AZipline_Anchor_C*       Anchor                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -448,6 +449,7 @@ void ADinoCharacter_BP_Zipline_C::STATIC_IsTargetZiplineBlocked(const struct FVe
 	params.Anchor = Anchor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -491,26 +493,25 @@ void ADinoCharacter_BP_Zipline_C::GetClosestPointOnLine(const struct FVector& A,
 
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.TryAttachingToZipline
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class AZipline_Anchor_C*       overrideAnchor                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OverrideStartLocation          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OverrideFindLocationDistance   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 overrideStartLocation          (Parm, ZeroConstructor, IsPlainOldData)
+// float                          overrideFindLocationDistance   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 OverrideFindLocationDirection  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADinoCharacter_BP_Zipline_C::STATIC_TryAttachingToZipline(class AZipline_Anchor_C* overrideAnchor, const struct FVector& OverrideStartLocation, float OverrideFindLocationDistance, const struct FVector& OverrideFindLocationDirection, bool* Success)
+void ADinoCharacter_BP_Zipline_C::STATIC_TryAttachingToZipline(class AZipline_Anchor_C* overrideAnchor, const struct FVector& overrideStartLocation, float overrideFindLocationDistance, const struct FVector& OverrideFindLocationDirection, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.TryAttachingToZipline");
 
 	ADinoCharacter_BP_Zipline_C_TryAttachingToZipline_Params params;
 	params.overrideAnchor = overrideAnchor;
-	params.OverrideStartLocation = OverrideStartLocation;
-	params.OverrideFindLocationDistance = OverrideFindLocationDistance;
+	params.overrideStartLocation = overrideStartLocation;
+	params.overrideFindLocationDistance = overrideFindLocationDistance;
 	params.OverrideFindLocationDirection = OverrideFindLocationDirection;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

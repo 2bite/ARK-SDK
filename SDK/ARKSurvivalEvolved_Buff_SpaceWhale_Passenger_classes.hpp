@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -119,11 +119,11 @@ public:
 	void BuffTickClient(float* DeltaTime);
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
 	void GetFireTransform(struct FVector* Location, struct FVector* Heading, bool* FireLeft);
-	void IsElectricalStormActive(bool* Return);
+	void IsElectricalStormActive(bool* _return);
 	void GetSocketClampDelta(float* OutSocketClampDelta);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
-	void STATIC_IsAllowedToFire(bool* bAllowed);
+	void IsAllowedToFire(bool* bAllowed);
 	void SetTargeting(bool bTargetingEnabled);
 	void LocalDoAttack(bool* bDidFire);
 	void GetTekSaddleItem(class UPrimalItem** TekSaddleItem);

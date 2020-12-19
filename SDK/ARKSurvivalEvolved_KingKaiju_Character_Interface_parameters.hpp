@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,13 +17,13 @@ namespace sdk
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_DifficultyIndex
 struct UKingKaiju_Character_Interface_C_GetVar_DifficultyIndex_Params
 {
-	int                                                Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_InHordeMode
 struct UKingKaiju_Character_Interface_C_GetVar_InHordeMode_Params
 {
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetKingKaijuCharStatusComponent

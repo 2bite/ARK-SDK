@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,7 +68,7 @@ void AStructureTurretPlant_C::Turret_Check_Hard_Limit()
 
 
 // Function StructureTurretPlant.StructureTurretPlant_C.BlueprintDrawHUD
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Public, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -84,7 +84,6 @@ void AStructureTurretPlant_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* C
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

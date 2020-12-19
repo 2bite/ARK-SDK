@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15184,6 +15184,12 @@ struct APrimalCharacter_BPSetCharacterMeshesMaterialScalarParamValue_Params
 	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ShooterGame.PrimalCharacter.BPRemovedAsPassenger
+struct APrimalCharacter_BPRemovedAsPassenger_Params
+{
+	class APrimalCharacter*                            Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ShooterGame.PrimalCharacter.BPRemoveCharacterSnapshot
 struct APrimalCharacter_BPRemoveCharacterSnapshot_Params
 {
@@ -23371,6 +23377,12 @@ struct UShooterCheatManager_SetDebugMeleeAttacks_Params
 	float                                              DrawDuration;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function ShooterGame.ShooterCheatManager.SetDay
+struct UShooterCheatManager_SetDay_Params
+{
+	int                                                day;                                                      // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ShooterGame.ShooterCheatManager.SetChatLogMaxAgeInDays
 struct UShooterCheatManager_SetChatLogMaxAgeInDays_Params
 {
@@ -27499,6 +27511,13 @@ struct UVictoryCore_VisualLog_AxisAlignedBox_Params
 	struct FVector                                     BoxMax;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                BoxColor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bAlsoPrintMessage;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ShooterGame.VictoryCore.ViewTrailer
+struct UVictoryCore_ViewTrailer_Params
+{
+	bool                                               bAnimatedSeriesTrailer;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bARK2Trailer;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ShooterGame.VictoryCore.ViewDirectionAngleOffset

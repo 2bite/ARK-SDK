@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -96,7 +96,7 @@ public:
 	void BuffTickClient(float* DeltaTime);
 	void STATIC_BPSetupForInstigator(class AActor** ForInstigator);
 	bool BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser);
-	bool STATIC_BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
+	bool BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
 	void STATIC_BPOnOwnerMassTeleportEvent(TEnumAsByte<EMassTeleportState>* EventState, class APrimalCharacter** TeleportInitiatedByChar);
 	void UserConstructionScript();
 	void MultiHyperdriveEffect(class USceneComponent* MeshComp, const struct FVector& Start, const struct FVector& End);

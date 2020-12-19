@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ bool ABat_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Distance, 
 
 
 // Function Bat_Character_BP.Bat_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void AProjHarpoon_C::ReceiveBeginPlay()
 
 
 // Function ProjHarpoon.ProjHarpoon_C.ReceiveTick
-// (NetRequest, Native, NetResponse, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 

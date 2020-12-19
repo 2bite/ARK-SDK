@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,7 +90,7 @@ struct UDinoAttackStateFollowSpline_C_UpgradePawnAcceleration_Params
 // Function DinoAttackStateFollowSpline.DinoAttackStateFollowSpline_C.FindDragonSplines
 struct UDinoAttackStateFollowSpline_C_FindDragonSplines_Params
 {
-	bool                                               Found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DinoAttackStateFollowSpline.DinoAttackStateFollowSpline_C.ExecuteUbergraph_DinoAttackStateFollowSpline

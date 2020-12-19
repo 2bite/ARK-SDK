@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Mushroom_Auric.PrimalItemConsumable_Mushroom_Auric_C
-// 0x002C (0x0A14 - 0x09E8)
+// 0x002C (0x0A1C - 0x09F0)
 class UPrimalItemConsumable_Mushroom_Auric_C : public UPrimalItemConsumable_Berry_Base_C
 {
 public:
-	TArray<class UClass*>                              BuffTimeReductionClasses;                                 // 0x09E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              BuffTimeReductionDuration;                                // 0x09F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x09FC(0x0004) MISSED OFFSET
-	TArray<class UClass*>                              ImmunityBuffClasses;                                      // 0x0A00(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              ImmunityBuffTimeExtension;                                // 0x0A10(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              BuffTimeReductionClasses;                                 // 0x09F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              BuffTimeReductionDuration;                                // 0x0A00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0A04(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              ImmunityBuffClasses;                                      // 0x0A08(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              ImmunityBuffTimeExtension;                                // 0x0A18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

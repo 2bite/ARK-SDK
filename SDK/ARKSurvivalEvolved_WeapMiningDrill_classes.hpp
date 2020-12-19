@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,7 +73,7 @@ public:
 	struct FVector CalculateTargetPosition();
 	void BPStartEquippedNotify();
 	int BPWeaponDealDamage(int* DamageAmount, class UClass** DamageType, float* Impulse, struct FHitResult* Impact, struct FVector* ShootDir);
-	void BPPreFireEvent(struct FVector* Origin, struct FVector* ShootDir);
+	void STATIC_BPPreFireEvent(struct FVector* Origin, struct FVector* ShootDir);
 	bool BPWeaponCanFire();
 	void OnRep_Overheated();
 	void UpdateWeaponHeat(float DeltaSeconds);

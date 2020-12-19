@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Task_FKaijuChestNodeDestroyed.Task_FKaijuChestNodeDestroyed_C.Wipe Out All Poison Trees And Wyverns
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Private, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void UTask_FKaijuChestNodeDestroyed_C::STATIC_Wipe_Out_All_Poison_Trees_And_Wyverns()
+void UTask_FKaijuChestNodeDestroyed_C::Wipe_Out_All_Poison_Trees_And_Wyverns()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Task_FKaijuChestNodeDestroyed.Task_FKaijuChestNodeDestroyed_C.Wipe Out All Poison Trees And Wyverns");
 

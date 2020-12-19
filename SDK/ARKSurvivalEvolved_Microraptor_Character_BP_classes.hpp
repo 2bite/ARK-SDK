@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -136,7 +136,7 @@ public:
 	}
 
 
-	void STATIC_CheckForTargetOrDino();
+	void CheckForTargetOrDino();
 	bool BPShouldForceFlee();
 	void ReturnToPlayer();
 	bool BlueprintCanRiderAttack(int* AttackIndex);

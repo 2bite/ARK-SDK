@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,7 +55,7 @@ public:
 	void SetupOffspringMeshAndSettings(bool OffspringMode);
 	void InitializeDive();
 	void BPBecomeAdult();
-	void Can_Dive(bool* Return);
+	void Can_Dive(bool* _return);
 	void UserConstructionScript();
 	void DelayedUnbury(float DelayTime);
 	void BornDiveOut();

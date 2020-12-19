@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,15 +59,16 @@ void UDinoAttackState_Spindles_MinigunBase_C::GetDamageForSpine(class APrimalCha
 
 
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.FireSpine
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (Native, Event, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void UDinoAttackState_Spindles_MinigunBase_C::STATIC_FireSpine()
+void UDinoAttackState_Spindles_MinigunBase_C::FireSpine()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.FireSpine");
 
 	UDinoAttackState_Spindles_MinigunBase_C_FireSpine_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,7 +130,7 @@ void UDinoAttackState_Spindles_MinigunBase_C::GetAttackIndex(int* AttackIndex)
 
 
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.BPShouldEndAttack
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (Net, NetReliable, Native, Event, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -140,6 +141,7 @@ bool UDinoAttackState_Spindles_MinigunBase_C::BPShouldEndAttack()
 	UDinoAttackState_Spindles_MinigunBase_C_BPShouldEndAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

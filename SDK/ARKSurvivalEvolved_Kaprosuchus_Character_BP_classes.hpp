@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -117,16 +117,16 @@ public:
 
 
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void Play_Leap_FX(int MovementMode, bool IsLeapStart);
 	void STATIC_EvaluateHeightInWater(bool* NearSurface);
 	bool BPShouldLimitForwardDirection();
 	struct FVector BPModifyForwardDirectionInput(struct FVector* directionInput);
 	void BPTimerServer();
-	bool STATIC_BlueprintCanRiderAttack(int* AttackIndex);
+	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void CalcLeapImpulse(struct FVector* RetImpulse);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
-	void ChangeGroundSwimAttackAnims(int NewState);
+	void STATIC_ChangeGroundSwimAttackAnims(int NewState);
 	void BPTimerNonDedicated();
 	void BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode);
 	void SetLeapRotation();

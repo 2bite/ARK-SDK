@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -114,11 +114,11 @@ void ABuff_InsideMekShield_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_InsideMekShield.Buff_InsideMekShield_C.GetBuffDescription
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_InsideMekShield_C::GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_InsideMekShield_C::STATIC_GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_InsideMekShield.Buff_InsideMekShield_C.GetBuffDescription");
 

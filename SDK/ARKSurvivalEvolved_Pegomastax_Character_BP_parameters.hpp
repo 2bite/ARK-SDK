@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,11 +27,11 @@ struct APegomastax_Character_BP_C_BPClientHandleNetExecCommand_Params
 struct APegomastax_Character_BP_C_UpdateWaitingState_Params
 {
 	class APrimalCharacter*                            TargetCharacter;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               isInWaitingState;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInWaitingState;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.isInWaitingState
-struct APegomastax_Character_BP_C_isInWaitingState_Params
+// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.IsInWaitingState
+struct APegomastax_Character_BP_C_IsInWaitingState_Params
 {
 	class APrimalCharacter*                            TargetCharacter;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isWaiting;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -272,7 +272,7 @@ struct APegomastax_Character_BP_C_Do_StealItem_Params
 {
 	class APrimalCharacter*                            CharacterToStealFrom;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimalItem*                                 itemToSteal;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               consumeItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ConsumeItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

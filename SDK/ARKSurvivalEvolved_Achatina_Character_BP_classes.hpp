@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,7 @@ namespace sdk
 class AAchatina_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UParticleSystemComponent*                    trail;                                                    // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    Trail;                                                    // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UDinoCharacterStatusComponent_BP_Achatina_C* DinoCharacterStatus_BP_Achatina_C1;                       // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      AchaSleepingDinoSettings;                                 // 0x2198(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x21A0(0x0014) (ZeroConstructor, Transient, DuplicateTransient)

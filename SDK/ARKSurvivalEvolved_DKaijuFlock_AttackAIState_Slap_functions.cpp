@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,7 +74,7 @@ bool UDKaijuFlock_AttackAIState_Slap_C::BPShouldEndAttack()
 
 
 // Function DKaijuFlock_AttackAIState_Slap.DKaijuFlock_AttackAIState_Slap_C.OnTickEvent
-// (NetReliable, NetRequest, Native, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -86,7 +86,6 @@ void UDKaijuFlock_AttackAIState_Slap_C::OnTickEvent(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

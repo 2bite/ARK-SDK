@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,12 +51,12 @@ public:
 	struct FVector                                     TPVCameraThrowOffset;                                     // 0x222C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ThrowAimLimit;                                            // 0x2238(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TraceLength;                                              // 0x223C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ThrowTraceHit;                                            // 0x2240(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               throwTraceHit;                                            // 0x2240(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x3];                                       // 0x2241(0x0003) MISSED OFFSET
-	struct FVector                                     ThrowTraceLoc;                                            // 0x2244(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ThrownCharactersApexTravelTime;                           // 0x2250(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              throwUpStrengthMax;                                       // 0x2254(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              throwUpStrengthMin;                                       // 0x2258(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     throwTraceLoc;                                            // 0x2244(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              thrownCharactersApexTravelTime;                           // 0x2250(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ThrowUpStrengthMax;                                       // 0x2254(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ThrowUpStrengthMin;                                       // 0x2258(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ThrowFwdStrengthMax;                                      // 0x225C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UParticleSystemComponent*                    TrumpetVFX;                                               // 0x2260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               TrunkHasWater;                                            // 0x2268(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
@@ -115,11 +115,11 @@ public:
 	void RefillWaterStat(class UPrimalCharacterStatusComponent* StatusComp);
 	bool BPCanTakePassenger(class APrimalCharacter** Character, int* PassengerSeatIndex, bool* bForcePassenger, bool* bAllowFlyersAndWaterDinos);
 	void ThrottledTick();
-	float STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
+	float BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void ShortestAngleDifference(float AngleCurrent, float AngleTarget, float* Difference);
 	void GetClampedLookDir(bool LimitLowerPitch, struct FVector* Dir);
 	void ThrowTrace();
-	struct FVector GetThrowVelocity(class APrimalCharacter* ThrownCharacter);
+	struct FVector STATIC_GetThrowVelocity(class APrimalCharacter* ThrownCharacter);
 	void BPTimerServer();
 	bool canThrow();
 	void BPTimerNonDedicated();
@@ -136,13 +136,13 @@ public:
 	bool IsBetterGrabTarget(class AActor* NewTarget);
 	struct FVector GetGrabLocation();
 	void RetrieveAnyGrabbableCharacter(bool* FoundCharacter);
-	int BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray);
+	int STATIC_BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray);
 	bool BPOnStartJump();
 	void OnPassengerWeaponChanged(class AShooterWeapon* newWeapon);
 	void BPNotifyAddPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex);
 	void BPNotifyClearPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex);
 	void AllowTrumpetDebuff(class APrimalCharacter* Target, bool* Result);
-	void STATIC_DoTrumpetAttack();
+	void DoTrumpetAttack();
 	void BPDoAttack(int* AttackIndex);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	bool BlueprintCanRiderAttack(int* AttackIndex);

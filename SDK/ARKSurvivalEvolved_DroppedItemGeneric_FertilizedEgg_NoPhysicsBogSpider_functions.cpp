@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider.DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetRequest, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
 
 void ADroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C::STATIC_ReceiveBeginPlay()
 {

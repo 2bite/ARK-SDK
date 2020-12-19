@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -224,7 +224,7 @@ public:
 	void Client_SetTekPunchState(TEnumAsByte<E_TekGlovePunchState> NewState);
 	float GetTimeToRocketPunchTarget(const struct FVector& TargetLocation);
 	void CheckForTargetsWhileRocketPunching(bool* punchNow);
-	void Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** audio);
+	void Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** Audio);
 	void OnRep_CurrentPunchState();
 	struct FVector GetRelativeCenterOfMass(class APrimalCharacter* Character);
 	void DrawBuffFloatingHUD(int* BuffIndex, class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);

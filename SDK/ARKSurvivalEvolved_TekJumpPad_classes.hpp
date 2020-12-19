@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,7 +62,7 @@ public:
 	struct UObject_FTransform                          DefaultPadTransform;                                      // 0x0EB0(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 	struct FRotator                                    testRot;                                                  // 0x0EE0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     TestVector;                                               // 0x0EEC(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Testfloat;                                                // 0x0EF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TestFloat;                                                // 0x0EF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsActivated;                                              // 0x0EFC(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	bool                                               IsSizeBig;                                                // 0x0EFD(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x2];                                       // 0x0EFE(0x0002) MISSED OFFSET
@@ -252,7 +252,7 @@ public:
 
 	void OnRep_ShowIndicator();
 	void SetLaunchPreviewVisibility(bool IsVisible);
-	void STATIC_TickLaunchPreview();
+	void TickLaunchPreview();
 	void BPContainerDeactivated();
 	void BPContainerActivated();
 	void BPRefreshedStructureColors();
@@ -268,11 +268,11 @@ public:
 	void LaunchForceToAlpha(float LaunchForce, float* Alpha);
 	void OnRep_CurrentLaunchForce();
 	void OnRep_LaunchAreaCapsuleHalfHeight();
-	void STATIC_UpdateLaunchTriggerTransform(const struct FRotator& NewRotation, float NewCapsuleHalfHeight, float NewLaunchForce);
+	void UpdateLaunchTriggerTransform(const struct FRotator& NewRotation, float NewCapsuleHalfHeight, float NewLaunchForce);
 	void OnRep_LaunchRotation();
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void LaunchCharacter(class APrimalCharacter* Character, float VelocityMultiplier);
 	void GetVelocityMultiplierForCharacter(class APrimalCharacter* Char, bool* AllowedToLaunch, float* VelocityMultiplier);
 	int BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);

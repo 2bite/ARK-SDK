@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,9 +28,9 @@ public:
 	unsigned char                                      UnknownData01[0x3];                                       // 0x27D9(0x0003) MISSED OFFSET
 	float                                              TraceLength;                                              // 0x27DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ThrowAimLimit;                                            // 0x27E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ThrowTraceHit;                                            // 0x27E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               throwTraceHit;                                            // 0x27E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x27E5(0x0003) MISSED OFFSET
-	struct FVector                                     ThrowTraceLoc;                                            // 0x27E8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     throwTraceLoc;                                            // 0x27E8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               throwInstant;                                             // 0x27F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x27F5(0x0003) MISSED OFFSET
 	class UAnimMontage*                                startSideThrowAnim;                                       // 0x27F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -40,9 +40,9 @@ public:
 	struct FVector                                     TPVCameraThrowOffsetMultiplier;                           // 0x280C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              throwStaminaCost;                                         // 0x2818(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ThrowFwdStrengthMax;                                      // 0x281C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ThrownCharactersApexTravelTime;                           // 0x2820(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              throwUpStrengthMax;                                       // 0x2824(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              throwUpStrengthMin;                                       // 0x2828(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              thrownCharactersApexTravelTime;                           // 0x2820(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ThrowUpStrengthMax;                                       // 0x2824(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ThrowUpStrengthMin;                                       // 0x2828(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x4];                                       // 0x282C(0x0004) MISSED OFFSET
 	class APrimalCharacter*                            lastGrabbedCharacter;                                     // 0x2830(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isOverheadThrowing;                                       // 0x2838(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -61,7 +61,7 @@ public:
 	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x2868(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x2870(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_ButtonHeld2;                           // 0x2871(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_CustomEvent_ButtonHeld;                            // 0x2872(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_CustomEvent_buttonHeld;                            // 0x2872(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x1];                                       // 0x2873(0x0001) MISSED OFFSET
 	int                                                CallFunc_SelectInt_ReturnValue;                           // 0x2874(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	int                                                CallFunc_SelectInt_ReturnValue2;                          // 0x2878(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -162,7 +162,7 @@ public:
 	void Get_Throw_Anim(bool overheadThrow, class UAnimMontage** StartThrowAnim);
 	void IsStartThrowAnimPlaying(bool* IsPlaying);
 	void GetStartThrowAnim(bool overheadThrow, class UAnimMontage** StartThrowAnim);
-	void IsGrabbing(bool* IsGrabbing);
+	void isGrabbing(bool* isGrabbing);
 	void On_Throw_Released(bool releasedOverhead);
 	void On_Throw_Pressed(bool overheadThrow);
 	void IsThrowing(bool* RetValue);
@@ -192,8 +192,8 @@ public:
 	void InpActEvt_Prone_K2Node_InputActionEvent_200();
 	void InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_199();
 	void InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_198();
-	void ServerRequestGrab(bool buttonHeld);
-	void ServerRequestThrow(bool buttonHeld);
+	void ServerRequestGrab(bool ButtonHeld);
+	void ServerRequestThrow(bool ButtonHeld);
 	void DelayedGrab();
 	void Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool throwInstant);
 	void Multi_TraceTargetDir(const struct FVector& AimLoc, bool AimHit);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemDye_Purple.PrimalItemDye_Purple_C
-// 0x0000 (0x0A08 - 0x0A08)
+// 0x0000 (0x0A10 - 0x0A10)
 class UPrimalItemDye_Purple_C : public UPrimalItemDyeGeneric_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,7 +72,7 @@ public:
 	float                                              CurrentEyeMouthOpacity;                                   // 0x0D78(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              EyeMouthOpacityInterpSpeed;                               // 0x0D7C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              InitialPointLightIntensity;                               // 0x0D80(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              maxLightIntensity;                                        // 0x0D84(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxLightIntensity;                                        // 0x0D84(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              minLightIntensity;                                        // 0x0D88(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x4];                                       // 0x0D8C(0x0004) MISSED OFFSET
 	double                                             LastTimePlayedSound;                                      // 0x0D90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -301,9 +301,9 @@ public:
 	void Is_Talking_Public(bool* Result);
 	void IsTalking(bool* Result);
 	void PlaySound(class USoundBase* Sound);
-	void PlayEmote(int EmoteIndex);
+	void STATIC_PlayEmote(int EmoteIndex);
 	void CheckEmotes(class AShooterCharacter* Character);
-	void UpdateInterpolation(class ACharacter* Character);
+	void STATIC_UpdateInterpolation(class ACharacter* Character);
 	void AddedAsPrimalItemAttachment();
 	void StopFacingPlayer();
 	void BPOnComponentTick(float* DeltaTime);

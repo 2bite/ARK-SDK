@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -186,7 +186,7 @@ public:
 	float                                              ForceMeshRelevantRadius;                                  // 0x2E08(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               UseWidgetHUD;                                             // 0x2E0C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData19[0x3];                                       // 0x2E0D(0x0003) MISSED OFFSET
-	class UUserWidget*                                 HudWidgetInstance;                                        // 0x2E10(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UUserWidget*                                 HUDWidgetInstance;                                        // 0x2E10(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UClass*                                      HudWidgetClass;                                           // 0x2E18(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CloseHudWidgetDelay;                                      // 0x2E20(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                Temp_int_Loop_Counter_Variable;                           // 0x2E24(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -493,15 +493,15 @@ public:
 	bool BPHandleOnStopFire();
 	void ShouldPlayBlinkEffect(bool* ShouldPlay);
 	void SetSaddleVisibility(bool bNewVisibility);
-	void ResetMaterials();
-	void STATIC_BPAnimNotifyCustomState_Begin(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration, class UAnimNotifyState** AnimNotifyObject);
+	void STATIC_ResetMaterials();
+	void BPAnimNotifyCustomState_Begin(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration, class UAnimNotifyState** AnimNotifyObject);
 	void STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void ForceFleeTeleport();
 	struct FRotator GetDesiredRotation();
 	void UpdateSpeedEffects();
 	void STATIC_UpdateTurretRotation(float DeltaTime, int SeatIndex);
 	bool IsLocalControllerTagged(TArray<class APrimalCharacter*>* Array);
-	void UpdateBlinkEffect();
+	void STATIC_UpdateBlinkEffect();
 	void CompleteTeleport(bool Success);
 	float ChargeTimeLeft();
 	bool CheckTeleportAngle(const struct FVector& A);
@@ -527,7 +527,7 @@ public:
 	void GetMaxCosmicEnergy(float* MaxEnergy);
 	void BPOnMassTeleportEvent(TEnumAsByte<EMassTeleportState>* EventState, class APrimalCharacter** TeleportInitiatedByChar);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
-	void STATIC_HyperdriveTargetingTrace(const struct FVector& TraceStartLoc, const struct FVector& TraceStartDir, const struct FVector& WhaleStartLoc, float DebugDrawDuration, bool* foundValidLocation, struct FVector* Location);
+	void HyperdriveTargetingTrace(const struct FVector& TraceStartLoc, const struct FVector& TraceStartDir, const struct FVector& WhaleStartLoc, float DebugDrawDuration, bool* foundValidLocation, struct FVector* Location);
 	void UpdateHyperdriveTargetingMode(bool Enabled);
 	void BPOverrideCameraViewTarget(struct FName* CurrentCameraMode, struct FVector* DesiredCameraLocation, struct FRotator* DesiredCameraRotation, float* DesiredFOV, bool* bOverrideCameraLocation, struct FVector* CameraLocation, bool* bOverrideCameraRotation, struct FRotator* CameraRotation, bool* bOverrideCameraFOV, float* CameraFOV);
 	void STATIC_ReceiveTick(float* DeltaSeconds);
@@ -535,7 +535,7 @@ public:
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	int BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray);
-	void BPNotifyClearPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex);
+	void STATIC_BPNotifyClearPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex);
 	void BPNotifyAddPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex);
 	void STATIC_UserConstructionScript();
 	void ServerRequestStartHyperspaceJump(const struct FVector& WorldLocation);

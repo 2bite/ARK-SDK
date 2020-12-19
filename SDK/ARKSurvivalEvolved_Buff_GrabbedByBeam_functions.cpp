@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,9 +82,9 @@ float ABuff_GrabbedByBeam_C::GetOwnerDragWeight()
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.GetMaxProgress
 // ()
 // Parameters:
-// float                          maxProgress                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          MaxProgress                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_GrabbedByBeam_C::GetMaxProgress(float* maxProgress)
+void ABuff_GrabbedByBeam_C::GetMaxProgress(float* MaxProgress)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.GetMaxProgress");
 
@@ -96,8 +96,8 @@ void ABuff_GrabbedByBeam_C::GetMaxProgress(float* maxProgress)
 
 	fn->FunctionFlags = flags;
 
-	if (maxProgress != nullptr)
-		*maxProgress = params.maxProgress;
+	if (MaxProgress != nullptr)
+		*MaxProgress = params.MaxProgress;
 }
 
 
@@ -173,7 +173,7 @@ void ABuff_GrabbedByBeam_C::InitializeBuff(float MaxBeamLength)
 
 
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.BuffTickServer
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -185,6 +185,7 @@ void ABuff_GrabbedByBeam_C::BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ public:
 	void Caught_Fish(class UObject* Projectile_Owner, class APrimalDinoCharacter* fish);
 	void Pass_Projectile_Reference(class UObject* Projectile_Owner, class AShooterProjectile* Projectile);
 	void reel(class UObject* Fisher);
-	void Update_Rope(class AShooterProjectile* net_projectile, const struct FVector& Rope_Endpoint_Location);
+	void Update_Rope(class AShooterProjectile* Net_Projectile, const struct FVector& Rope_Endpoint_Location);
 	void Notify_Net_Collided_With_Water(class UObject* Projectile_Owner, const struct FVector& Water_Collide_Location, const struct FRotator& Projectile_Rotation);
 	void ExecuteUbergraph_FishingNetHelperFunction(int EntryPoint);
 };

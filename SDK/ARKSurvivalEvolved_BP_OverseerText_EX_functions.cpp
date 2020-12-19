@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BP_OverseerText_EX.BP_OverseerText_EX_C.ConstructionProcess
-// (Exec, Native, NetResponse, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetResponse, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void ABP_OverseerText_EX_C::ConstructionProcess()
 {
@@ -22,7 +22,6 @@ void ABP_OverseerText_EX_C::ConstructionProcess()
 	ABP_OverseerText_EX_C_ConstructionProcess_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

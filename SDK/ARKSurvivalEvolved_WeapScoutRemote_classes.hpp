@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,7 +83,7 @@ public:
 	bool                                               K2Node_DynamicCast5_CastSuccess;                          // 0x0F80(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x3];                                       // 0x0F81(0x0003) MISSED OFFSET
 	float                                              CallFunc_PlayAnimEx_ReturnValue4;                         // 0x0F84(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterCharacter*                           K2Node_CustomEvent_target;                                // 0x0F88(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterCharacter*                           K2Node_CustomEvent_Target;                                // 0x0F88(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayWeaponAnimationEx_ReturnValue;               // 0x0F90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x4];                                       // 0x0F94(0x0004) MISSED OFFSET
 	class AShooterPlayerState*                         K2Node_DynamicCast_AsShooterPlayerState;                  // 0x0F98(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -114,9 +114,9 @@ public:
 	}
 
 
-	class FString BPGetDebugInfoString();
+	class FString STATIC_BPGetDebugInfoString();
 	bool AllowTargeting();
-	struct FText BPGetTargetingTooltipInfoLabel();
+	struct FText STATIC_BPGetTargetingTooltipInfoLabel();
 	float BPGetProjectileSpeed();
 	void OnRep_GogglesMode();
 	void OnRep_FiredScout();

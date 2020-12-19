@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -105,7 +105,7 @@ public:
 	void STATIC_IsNearbyStructure(int CheckIndex, float IndexOffset, bool* StructureInBetween);
 	void CalculateIntensityAverage(float Exposure, float Distance, float ViewingAngle, float* Average);
 	void CalculateWeightedIntensityAverage(float Exposure, float Distance, float ViewingAngle, float* Average);
-	void Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* Retval);
+	void Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* retVal);
 	void Get_NormalizedViewing_Angle(const struct FVector& v1, const struct FVector& v2, float* RetValue);
 	void GetNormalizedExposure(float* Value);
 	void UserConstructionScript();

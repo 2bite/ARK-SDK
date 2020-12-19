@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,7 +51,7 @@ int ABuff_RiderFlyingWindWoosh_Trope_C::GetBuffType()
 
 
 // Function Buff_RiderFlyingWindWoosh_Trope.Buff_RiderFlyingWindWoosh_Trope_C.GetBuffDescription
-// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -72,7 +72,7 @@ struct FStatusValueModifierDescription ABuff_RiderFlyingWindWoosh_Trope_C::STATI
 
 
 // Function Buff_RiderFlyingWindWoosh_Trope.Buff_RiderFlyingWindWoosh_Trope_C.BPGetHUDElements
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)

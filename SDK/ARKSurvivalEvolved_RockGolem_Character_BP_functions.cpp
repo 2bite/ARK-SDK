@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -289,13 +289,13 @@ bool ARockGolem_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function RockGolem_Character_BP.RockGolem_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Native, NetResponse, Static, Public, Private, Protected, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ARockGolem_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ARockGolem_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockGolem_Character_BP.RockGolem_Character_BP_C.BPGetMultiUseEntries");
 
@@ -303,7 +303,6 @@ TArray<struct FMultiUseEntry> ARockGolem_Character_BP_C::STATIC_BPGetMultiUseEnt
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

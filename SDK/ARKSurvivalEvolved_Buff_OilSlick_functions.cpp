@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,11 +33,11 @@ void ABuff_OilSlick_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Buff_OilSlick.Buff_OilSlick_C.SpawnOilFire
-// (NetReliable, Exec, Native, Public, Private, HasOutParms, DLLImport, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 OverrideOriginLocation         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_OilSlick_C::SpawnOilFire(const struct FVector& OverrideOriginLocation)
+void ABuff_OilSlick_C::STATIC_SpawnOilFire(const struct FVector& OverrideOriginLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_OilSlick.Buff_OilSlick_C.SpawnOilFire");
 

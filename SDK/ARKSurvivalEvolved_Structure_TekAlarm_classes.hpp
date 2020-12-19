@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -143,7 +143,7 @@ public:
 	struct FVector                                     K2Node_CustomEvent_NewParam;                              // 0x10AC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_NewParam1;                             // 0x10B8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_extent;                                // 0x10BC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Radius;                                // 0x10C8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_radius;                                // 0x10C8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_MakeVector_ReturnValue2;                         // 0x10CC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_Delta8;                                // 0x10D8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_Add_FloatFloat_ReturnValue4;                     // 0x10DC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -207,13 +207,13 @@ public:
 
 
 	void InitSavedTribeLoggingSettings();
-	void GetNextRotation(const struct FRotator& currentRotation, bool bDecrease, bool Roll, bool Pitch, bool Yaw, struct FRotator* NextRotation);
+	void GetNextRotation(const struct FRotator& CurrentRotation, bool bDecrease, bool Roll, bool Pitch, bool Yaw, struct FRotator* NextRotation);
 	void OnRep_CurrentStructureDetectBoxRotation();
 	void OnRep_CurrentTargetDetectBoxRotation();
 	void UpdateAutoDeactivation();
 	void GetTargetTypesToChange(TArray<TEnumAsByte<ETekAlarmTargetTypes>>* ActiveTypes, TArray<bool>* ShouldActivate);
 	void ToggleKeypadLink(class AShooterPlayerController* OptionalShooterPC);
-	void AlignBoxedToWorldUp();
+	void STATIC_AlignBoxedToWorldUp();
 	void OnRep_CurrentStructureDetectBoxExtent();
 	void OnRep_CurrentTargetDetectBoxExtent();
 	void Is_Target_Detect_Box(bool* bIsBox);
@@ -240,7 +240,7 @@ public:
 	void GetPINDataByType(TEnumAsByte<ETekAlarmTargetTypes> Type, struct FTekAlarmPINData* ret);
 	void SetPINCodeInPINData(int pinCode, TEnumAsByte<ETekAlarmTargetTypes> Type);
 	void GetMultiUseTitleWithDelay(float DelaySeconds, const struct FText& Title, class FString* Output);
-	void GetPINDataByPIN(int PIN, struct FTekAlarmPINData* Res, int* retIndex);
+	void STATIC_GetPINDataByPIN(int PIN, struct FTekAlarmPINData* Res, int* retIndex);
 	void CalcuateDelay(float CurrentDelay, float* NewDelay);
 	void STATIC_PinCodeFlagsToString(int PinCodesFlag, class FString* Output);
 	void Was_Pin_Code_Bit_Triggered(int Bit, bool* ret, bool* Activated, bool* Deactivated);
@@ -250,14 +250,14 @@ public:
 	void BPContainerActivated();
 	void SetActivateStateToStructure(class APrimalStructure* PrimalStructure, bool toggle, bool NewActivateState, bool Force);
 	void Get_Octree_Data_For_Structure_Detect_Area(float* Radius, struct FVector* Location);
-	void STATIC_Update_Structures_in_Area_to_Goal_State();
+	void Update_Structures_in_Area_to_Goal_State();
 	void Update_Structure_Detect_Sphere();
 	void UpdateStructureDetectBox();
 	void SwitchStructureDetectStyle();
 	void STATIC_IsActorInBoxArea(class AActor* Actor, class UBoxComponent* BoxComponent, bool* Value);
 	void GetOctreeCheckType(TEnumAsByte<EServerOctreeGroup>* Value);
 	void Get_Octree_Data_ForTarget_Detect_Area(float* Radius, struct FVector* Location);
-	void STATIC_HasFiltered_Target_in_the_Area(bool* TargetLost);
+	void HasFiltered_Target_in_the_Area(bool* TargetLost);
 	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
 	bool BPApplyPinCode(class AShooterPlayerController** ForPC, int* appledPinCode, bool* bIsSetting, int* TheCustomIndex);
 	void Get_Detect_Area_Adjust_Speed(float* AdjustSpeed);
@@ -267,7 +267,7 @@ public:
 	void UpdateTargetDetectBox();
 	void BPPlacedStructure(class APlayerController** ForPC);
 	void Switch_Target_Detect_Style();
-	bool STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
+	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void MulticastTargetDetectStyleChange();

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_DeinonychusSaddle.PrimalItemArmor_DeinonychusSaddle_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x09F8 - 0x09F8)
 class UPrimalItemArmor_DeinonychusSaddle_C : public UPrimalItemArmor_SaddleGeneric_C
 {
 public:

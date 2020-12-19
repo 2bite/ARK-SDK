@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,19 +62,18 @@ void UAttackStateRanged_Fireball_Cherufe_C::StartAnimationStateEvent(struct FNam
 
 
 // Function AttackStateRanged_Fireball_Cherufe.AttackStateRanged_Fireball_Cherufe_C.BPRangedAttack
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 TargetLocation                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 TargetVelocity                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UAttackStateRanged_Fireball_Cherufe_C::BPRangedAttack(struct FVector* TargetLocation, struct FVector* TargetVelocity)
+void UAttackStateRanged_Fireball_Cherufe_C::STATIC_BPRangedAttack(struct FVector* TargetLocation, struct FVector* TargetVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AttackStateRanged_Fireball_Cherufe.AttackStateRanged_Fireball_Cherufe_C.BPRangedAttack");
 
 	UAttackStateRanged_Fireball_Cherufe_C_BPRangedAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

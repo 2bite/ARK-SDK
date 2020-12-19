@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -346,14 +346,14 @@ void ABuff_TekArmor_Shirt_Rework_C::UpdateIsSwimming()
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.ClampPlayerVelocity
 // ()
 // Parameters:
-// float                          maxVelocity                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          MaxVelocity                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Shirt_Rework_C::ClampPlayerVelocity(float maxVelocity)
+void ABuff_TekArmor_Shirt_Rework_C::ClampPlayerVelocity(float MaxVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.ClampPlayerVelocity");
 
 	ABuff_TekArmor_Shirt_Rework_C_ClampPlayerVelocity_Params params;
-	params.maxVelocity = maxVelocity;
+	params.MaxVelocity = MaxVelocity;
 
 	auto flags = fn->FunctionFlags;
 
@@ -494,7 +494,7 @@ void ABuff_TekArmor_Shirt_Rework_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.JetpackBoostClient
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, Const, NetValidate)
+// (Exec, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 
 void ABuff_TekArmor_Shirt_Rework_C::STATIC_JetpackBoostClient()
 {
@@ -503,7 +503,6 @@ void ABuff_TekArmor_Shirt_Rework_C::STATIC_JetpackBoostClient()
 	ABuff_TekArmor_Shirt_Rework_C_JetpackBoostClient_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -602,7 +601,7 @@ void ABuff_TekArmor_Shirt_Rework_C::SetCastedArmorPieceRef()
 
 
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.BuffTickClient
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

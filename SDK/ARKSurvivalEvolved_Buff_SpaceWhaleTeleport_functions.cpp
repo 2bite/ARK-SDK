@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,7 +70,7 @@ void ABuff_SpaceWhaleTeleport_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPSetupForInstigator
-// (NetRequest, Native, Event, Static, NetMulticast, Public, Protected, NetServer, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -116,13 +116,13 @@ bool ABuff_SpaceWhaleTeleport_C::BPCustomAllowAddBuff(class APrimalCharacter** f
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPPreventInstigatorMovementMode
-// (Net, NetReliable, Exec, Native, Event, Static, Public, NetServer, NetValidate)
+// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_SpaceWhaleTeleport_C::STATIC_BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
+bool ABuff_SpaceWhaleTeleport_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPPreventInstigatorMovementMode");
 
@@ -142,7 +142,7 @@ bool ABuff_SpaceWhaleTeleport_C::STATIC_BPPreventInstigatorMovementMode(TEnumAsB
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPOnOwnerMassTeleportEvent
-// (Net, NetReliable, NetRequest, NetResponse, Static, Public, NetServer, NetValidate)
+// (Net, NetRequest, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // TEnumAsByte<EMassTeleportState>* EventState                     (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter**       TeleportInitiatedByChar        (Parm, ZeroConstructor, IsPlainOldData)

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,12 +54,12 @@ public:
 	void PublicIsValidVineTarget(class APrimalCharacter* Target, class APrimalCharacter* ForestKaiju, bool* Valid);
 	void IsValidVineTarget(class APrimalCharacter* Target, class APrimalCharacter* ForestKaiju, bool* ValidTarget);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
-	void VineRetracted(TArray<struct FVineTargetData>* Targets);
+	void STATIC_VineRetracted(TArray<struct FVineTargetData>* Targets);
 	void OnEndEvent();
 	void Debug_Draw_Sphere(const struct FVector& Center, float Radius, const struct FLinearColor& Color);
-	void AnimNotifyGrabAttackSmash();
+	void STATIC_AnimNotifyGrabAttackSmash();
 	void DebugDrawLine(const struct FVector& Start, const struct FVector& End, const struct FLinearColor& Color);
-	void STATIC_SpawnVines();
+	void SpawnVines();
 	bool BPShouldEndAttack();
 	void OnTickEvent(float* DeltaSeconds);
 	void FailsafeMissingVineRetracts();

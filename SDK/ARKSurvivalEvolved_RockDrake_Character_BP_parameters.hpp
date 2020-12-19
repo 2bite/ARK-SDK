@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -640,7 +640,7 @@ struct ARockDrake_Character_BP_C_Check_For_Prevent_Stop_Climbing_Params
 	TArray<bool>                                       traceHitsArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int*                                               numValidHits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               numTraces;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.BlueprintCanAttack

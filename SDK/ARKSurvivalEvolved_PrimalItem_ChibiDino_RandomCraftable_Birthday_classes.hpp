@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_ChibiDino_RandomCraftable_Birthday.PrimalItem_ChibiDino_RandomCraftable_Birthday_C
-// 0x0000 (0x09F8 - 0x09F8)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_ChibiDino_RandomCraftable_Birthday_C : public UPrimalItem_ChibiDino_RandomCraftable_C
 {
 public:

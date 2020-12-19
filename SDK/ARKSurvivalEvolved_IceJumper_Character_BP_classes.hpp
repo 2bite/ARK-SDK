@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -584,7 +584,7 @@ public:
 	struct FVector                                     CallFunc_VInterpTo_Constant_ReturnValue;                  // 0x2FC4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class FString                                      CallFunc_Conv_VectorToString_ReturnValue;                 // 0x2FD0(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
 	struct FVector                                     K2Node_CustomEvent_Velocity2;                             // 0x2FE0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    K2Node_CustomEvent_Rotation;                              // 0x2FEC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_rotation;                              // 0x2FEC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_SetActorRotation_ReturnValue4;                   // 0x2FF8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData88[0x7];                                       // 0x2FF9(0x0007) MISSED OFFSET
 	class APlayerController*                           CallFunc_GetPlayerController_ReturnValue3;                // 0x3000(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -701,7 +701,7 @@ public:
 	struct FVector                                     CallFunc_Add_VectorVector_ReturnValue3;                   // 0x3270(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_SelectVector_ReturnValue;                        // 0x327C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	double                                             CallFunc_GetNetworkTimeInSeconds_ReturnValue8;            // 0x3288(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AActor*                                      K2Node_CustomEvent_target;                                // 0x3290(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AActor*                                      K2Node_CustomEvent_Target;                                // 0x3290(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    CallFunc_K2_GetActorRotation_ReturnValue8;                // 0x3298(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue6;                // 0x32A4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_DoubleDouble_ReturnValue7;            // 0x32B0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -883,9 +883,9 @@ public:
 	void STATIC_Queue_Random_Boredom(bool IncludePossibleInstantBoredom);
 	void SetIsBored(bool IsBored);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPUnstasis();
-	class FString BPGetDebugInfoString();
+	class FString STATIC_BPGetDebugInfoString();
 	void BPTriggerStasisEvent();
 	float BPModifyFOV(float* FOVIn);
 	float BPModifyFOVInterpSpeed(float* FOVInterpSpeedIn);
@@ -910,13 +910,13 @@ public:
 	void InAirStateIsResultOfJump(bool* Result);
 	void K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode);
 	void IsOutOfStamina(bool* OutOfStamina);
-	void GetIceBreathRange(float* Range);
+	void STATIC_GetIceBreathRange(float* Range);
 	void GetForwardDashDamage(class APrimalCharacter* Target, float* Damage);
-	void STATIC_GetThawSpeed(class AActor* Target, float* FrozenThawAmountPerRate);
+	void GetThawSpeed(class AActor* Target, float* FrozenThawAmountPerRate);
 	void IsLowStamina(bool* Result);
 	int BPAdjustAttackIndex(int* AttackIndex);
 	void OnRep_PreviousAbilityReplicated();
-	bool STATIC_BP_InterceptMoveForward(float* AxisValue);
+	bool BP_InterceptMoveForward(float* AxisValue);
 	void Is_DecendingRapidly(bool* Result);
 	void ActivateWingTrails(bool Deactivate, bool RightWing);
 	void ReceiveTick(float* DeltaSeconds);
@@ -933,9 +933,9 @@ public:
 	void OnRep_TargetYaw();
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
-	void DeductStamina(float Stamina, bool* Success);
+	void STATIC_DeductStamina(float Stamina, bool* Success);
 	void SetIceBreathProjectile(class AIceJumperProjIceBreath_C* Projectile);
-	void STATIC_UpdateDashCollider(float Radius, float damageMult, bool* HitTarget);
+	void UpdateDashCollider(float Radius, float damageMult, bool* HitTarget);
 	void GetStartTimeForMovementAbility(TEnumAsByte<EIceJumperAbilities_Enum> Ability, double* StartTime);
 	struct FLinearColor STATIC_BPGetCrosshairColor();
 	bool BPHandleOnStopTargeting();
@@ -977,7 +977,7 @@ public:
 	void ClientSetPitch(float Pitch);
 	void ServerSetIsCrosshairOverGround(bool IsCrosshairOverGround);
 	void ClientMovementAbilityInterrupted();
-	void ClientDamagedTarget(const struct FVector& HitLoc);
+	void ClientDamagedTarget(const struct FVector& hitLoc);
 	void DeactivateLeftDamageFX();
 	void DeactivateRightDamageFX();
 	void SERVER_EndIceBreathAttack();

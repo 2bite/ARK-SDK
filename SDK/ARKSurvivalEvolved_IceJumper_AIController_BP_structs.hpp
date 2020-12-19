@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -10,9 +10,9 @@
 #include "ARKSurvivalEvolved_Dino_AIController_BP_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
-#include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 #include "ARKSurvivalEvolved_IceJumperAbilities_Enum_classes.hpp"
 #include "ARKSurvivalEvolved_IceJumperShortDashTypes_Enum_classes.hpp"
+#include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 
 namespace sdk
 {

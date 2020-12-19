@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.CraftItem
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, Event, NetResponse, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ItemToCraftIndex               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoTamedInventoryComponent_Beetle_C::STATIC_CraftItem(int ItemToCraftIndex)
+void UDinoTamedInventoryComponent_Beetle_C::CraftItem(int ItemToCraftIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.CraftItem");
 
@@ -25,6 +25,7 @@ void UDinoTamedInventoryComponent_Beetle_C::STATIC_CraftItem(int ItemToCraftInde
 	params.ItemToCraftIndex = ItemToCraftIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -135,7 +136,7 @@ void UDinoTamedInventoryComponent_Beetle_C::UnsetAll()
 
 
 // Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.HasEnoughResources
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            IndexClassToCheck              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           hasEnough                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -149,7 +150,6 @@ void UDinoTamedInventoryComponent_Beetle_C::STATIC_HasEnoughResources(int IndexC
 	params.IndexClassToCheck = IndexClassToCheck;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

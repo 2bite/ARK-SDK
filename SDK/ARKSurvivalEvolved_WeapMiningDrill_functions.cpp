@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,7 +106,7 @@ void AWeapMiningDrill_C::BPSpawnHarvestEffects(TArray<struct FVector>* Impacts)
 
 
 // Function WeapMiningDrill.WeapMiningDrill_C.CalculateTargetPosition
-// (Native, Event, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -179,12 +179,12 @@ int AWeapMiningDrill_C::BPWeaponDealDamage(int* DamageAmount, class UClass** Dam
 
 
 // Function WeapMiningDrill.WeapMiningDrill_C.BPPreFireEvent
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector*                Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                ShootDir                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapMiningDrill_C::BPPreFireEvent(struct FVector* Origin, struct FVector* ShootDir)
+void AWeapMiningDrill_C::STATIC_BPPreFireEvent(struct FVector* Origin, struct FVector* ShootDir)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapMiningDrill.WeapMiningDrill_C.BPPreFireEvent");
 
@@ -193,6 +193,7 @@ void AWeapMiningDrill_C::BPPreFireEvent(struct FVector* Origin, struct FVector* 
 	params.ShootDir = ShootDir;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

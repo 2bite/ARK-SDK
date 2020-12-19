@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -88,7 +88,7 @@ bool ATitanosaur_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.BPSetupTamed
-// (Event, Static, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Private, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool*                          bWasJustTamed                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -100,6 +100,7 @@ void ATitanosaur_Character_BP_C::STATIC_BPSetupTamed(bool* bWasJustTamed)
 	params.bWasJustTamed = bWasJustTamed;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +133,7 @@ void ATitanosaur_Character_BP_C::CheckTorporDistanceTravel(float torporIn, bool*
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.IsHeadObstructed
-// (Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Native, NetResponse, Static, MulticastDelegate, Private, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           OutVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

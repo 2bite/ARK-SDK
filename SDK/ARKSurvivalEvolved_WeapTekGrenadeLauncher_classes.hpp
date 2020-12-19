@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -228,7 +228,7 @@ public:
 	void GetSlotDifference(int A, int B, int* Difference);
 	void GetCurrentSlotAdvancement(int* CurrentSlot, float* Remainder);
 	void FinishedFullReload();
-	void CanReloadLauncher(bool* bCanReload);
+	void STATIC_CanReloadLauncher(bool* bCanReload);
 	struct FRotator BPOverrideRootRotationOffset(struct FRotator* InRootRotation);
 	bool BPCanEquip(class AShooterCharacter** ByCharacter);
 	void BPOnSpawnedProjectile(class AShooterProjectile** Projectile);
@@ -238,7 +238,7 @@ public:
 	void ModifyHeatLevel(float Delta);
 	void GetReloadAnim(int FromSlot, struct FWeaponAnim* Anim);
 	void SetProjectileArcVisibility(bool IsVisible);
-	void STATIC_UpdateProjectileArc(float DeltaTime);
+	void UpdateProjectileArc(float DeltaTime);
 	struct FVector BPGetTPVCameraOffset();
 	struct FVector BPOverrideAimDirection(struct FVector* DesiredAimDirection);
 	void STATIC_UpdateSlotMeshes();
@@ -246,17 +246,17 @@ public:
 	void ReceiveTick(float* DeltaSeconds);
 	void GetSlotInfo(int SlotIdx, bool* GotValidSlotData, class UClass** AmmoType, double* LastFiredNetworkTime, bool* AmmoLoaded);
 	void SaveAmmoToItem();
-	void STATIC_LoadAmmoFromItem(bool* Success);
-	void STATIC_SetProjectileSlotType(int SlotIdx, class UClass* ItemType, bool* Success);
+	void LoadAmmoFromItem(bool* Success);
+	void SetProjectileSlotType(int SlotIdx, class UClass* ItemType, bool* Success);
 	void GetProjectileTypeFromItem(class UClass* ItemType, bool* IsValid, class UClass** ProjectileType);
 	void StartSecondaryActionEvent();
 	void BP_OnReloadNotify();
 	void ModifyAmmoQuantityInInventory(class UClass* AmmoType, int Delta, bool AddAmmo, bool* Success);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void GetAmmoCountOfType(class UClass* AmmoType, int* AvailableAmmo);
-	void GetNextAvailableSlot(bool* SlotIsValid, int* SlotIdx, float* TimeToAdvance);
-	bool BPWeaponCanFire();
-	void ReloadProjectiles(int* NumReloadedSlots);
+	void STATIC_GetNextAvailableSlot(bool* SlotIsValid, int* SlotIdx, float* TimeToAdvance);
+	bool STATIC_BPWeaponCanFire();
+	void STATIC_ReloadProjectiles(int* NumReloadedSlots);
 	void BPFiredWeapon();
 	void BPSelectProjectileToFire(class UClass** ProjectileClassOverride, class USoundCue** FireSoundOverride, bool* bSpawnOnClient, float* OverrideMaxSpeed);
 	void StartUnequipEvent();

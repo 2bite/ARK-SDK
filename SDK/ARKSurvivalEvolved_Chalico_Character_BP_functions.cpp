@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -284,7 +284,7 @@ bool AChalico_Character_BP_C::BPPreventRiding(class AShooterCharacter** ByPawn, 
 
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -298,6 +298,7 @@ TArray<struct FMultiUseEntry> AChalico_Character_BP_C::STATIC_BPGetMultiUseEntri
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -338,9 +339,9 @@ bool AChalico_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 // Function Chalico_Character_BP.Chalico_Character_BP_C.ShouldStandUp
 // ()
 // Parameters:
-// bool                           StandUp                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           standUp                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AChalico_Character_BP_C::ShouldStandUp(bool* StandUp)
+void AChalico_Character_BP_C::ShouldStandUp(bool* standUp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Chalico_Character_BP.Chalico_Character_BP_C.ShouldStandUp");
 
@@ -352,8 +353,8 @@ void AChalico_Character_BP_C::ShouldStandUp(bool* StandUp)
 
 	fn->FunctionFlags = flags;
 
-	if (StandUp != nullptr)
-		*StandUp = params.StandUp;
+	if (standUp != nullptr)
+		*standUp = params.standUp;
 }
 
 
@@ -397,7 +398,7 @@ void AChalico_Character_BP_C::CanSitDown(bool* canSit)
 
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.Look for Chalicos
-// (NetReliable, Exec, Native, Event, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Event, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 
 void AChalico_Character_BP_C::Look_for_Chalicos()
 {
@@ -406,7 +407,6 @@ void AChalico_Character_BP_C::Look_for_Chalicos()
 	AChalico_Character_BP_C_Look_for_Chalicos_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -457,14 +457,14 @@ void AChalico_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custo
 }
 
 
-// Function Chalico_Character_BP.Chalico_Character_BP_C.StandUp
+// Function Chalico_Character_BP.Chalico_Character_BP_C.standUp
 // ()
 
-void AChalico_Character_BP_C::StandUp()
+void AChalico_Character_BP_C::standUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Chalico_Character_BP.Chalico_Character_BP_C.StandUp");
+	static auto fn = UObject::FindObject<UFunction>("Function Chalico_Character_BP.Chalico_Character_BP_C.standUp");
 
-	AChalico_Character_BP_C_StandUp_Params params;
+	AChalico_Character_BP_C_standUp_Params params;
 
 	auto flags = fn->FunctionFlags;
 

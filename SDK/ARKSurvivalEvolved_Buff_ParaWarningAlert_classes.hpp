@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ public:
 
 
 	void Add_Enemy_Indicators(TArray<struct FVector>* Enemies);
-	void STATIC_BPActivated(class AActor** ForInstigator);
+	void BPActivated(class AActor** ForInstigator);
 	void UserConstructionScript();
 	void ClientAddEnemyIndicators(TArray<struct FVector>* Locations);
 	void ExecuteUbergraph_Buff_ParaWarningAlert(int EntryPoint);

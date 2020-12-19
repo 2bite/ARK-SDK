@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_ChibiDino_Rex.PrimalItemSkin_ChibiDino_Rex_C
-// 0x0000 (0x0A01 - 0x0A01)
+// 0x0000 (0x0A09 - 0x0A09)
 class UPrimalItemSkin_ChibiDino_Rex_C : public UPrimalItemSkin_ChibiDino_Base_C
 {
 public:

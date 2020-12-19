@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -114,7 +114,7 @@ public:
 	void GetCloseTraceLocation(struct FVector* TraceLocation);
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void IsValidDoorOpener(class APrimalCharacter* DoorOpener, bool* IsValid);
 	void DoAutoCloseCheck();
 	void BPPostSetStructureCollisionChannels();

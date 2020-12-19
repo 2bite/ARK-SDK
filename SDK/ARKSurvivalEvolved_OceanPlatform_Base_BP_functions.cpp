@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -89,7 +89,7 @@ void AOceanPlatform_Base_BP_C::UpdateLadderHeight()
 
 
 // Function OceanPlatform_Base_BP.OceanPlatform_Base_BP_C.BuildLadders
-// (NetReliable, Exec, Static, Public, Delegate, NetServer, HasOutParms, NetValidate)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           UpdateHeight                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -103,6 +103,7 @@ void AOceanPlatform_Base_BP_C::STATIC_BuildLadders(class APlayerController* Play
 	params.UpdateHeight = UpdateHeight;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

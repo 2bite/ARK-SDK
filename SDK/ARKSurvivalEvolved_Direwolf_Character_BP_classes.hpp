@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,14 +62,14 @@ public:
 
 
 	void RidingTick(float* DeltaSeconds);
-	void STATIC_AddHowlCooldownBuff();
+	void AddHowlCooldownBuff();
 	void PackRoar();
 	void BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
 	void GatherPack();
 	void BPDoAttack(int* AttackIndex);
 	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void DoSniffAbility();
-	void GetHiddenDinos(float Radius, TArray<class AActor*>* foundDinos);
+	void GetHiddenDinos(float Radius, TArray<class AActor*>* FoundDinos);
 	void GetExplorerChestsInRange(float Radius, TArray<class AActor*>* FoundExplorerChests);
 	void UpdateSniffedTargets();
 	void BPDrawToRiderHUD(class AShooterHUD** HUD);

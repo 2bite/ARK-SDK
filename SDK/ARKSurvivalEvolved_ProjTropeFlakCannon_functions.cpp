@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void AProjTropeFlakCannon_C::ReceiveBeginPlay()
 
 
 // Function ProjTropeFlakCannon.ProjTropeFlakCannon_C.ReceiveTick
-// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 

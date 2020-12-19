@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -325,7 +325,7 @@ void APlayerPawnTest_C::InitHairRestDistance()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetLastTransforms
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 
 void APlayerPawnTest_C::STATIC_SetLastTransforms()
 {
@@ -376,7 +376,7 @@ void APlayerPawnTest_C::Setup_Collision_Volumes()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 
 void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
 {
@@ -385,7 +385,6 @@ void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
 	APlayerPawnTest_C_SetupNewHairstyle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -394,15 +393,16 @@ void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair
-// (NetRequest, Exec, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 
-void APlayerPawnTest_C::UpdateHair()
+void APlayerPawnTest_C::STATIC_UpdateHair()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair");
 
 	APlayerPawnTest_C_UpdateHair_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,7 +78,7 @@ public:
 
 	struct FVector BPGetHealthBarColor();
 	void BPSentKilledNotification(class AShooterPlayerController** ToPC);
-	void STATIC_Force_to_WanderOnLand();
+	void Force_to_WanderOnLand();
 	void ForceToFlying();
 	bool BlueprintOverrideWantsToRun(bool* bInputWantsToRun);
 	void UserConstructionScript();

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,25 +57,24 @@ void ABuff_Zipline_DinoBase_C::GetDistanceToAnchor(bool GetLower, float* Distanc
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CanZiplineFlip
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Event, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::CanZiplineFlip(bool* Return)
+void ABuff_Zipline_DinoBase_C::CanZiplineFlip(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CanZiplineFlip");
 
 	ABuff_Zipline_DinoBase_C_CanZiplineFlip_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 
@@ -139,9 +138,9 @@ void ABuff_Zipline_DinoBase_C::SetZiplineRunningSpeedAndAcceleration()
 // struct FRotator                rotA                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                rotB                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ErrorTolerance                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* Return)
+void ABuff_Zipline_DinoBase_C::RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.RotationNearlyEqual");
 
@@ -156,8 +155,8 @@ void ABuff_Zipline_DinoBase_C::RotationNearlyEqual(const struct FRotator& rotA, 
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 
@@ -342,7 +341,7 @@ void ABuff_Zipline_DinoBase_C::Deactivate_Local_Client(class AActor* Pawn)
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.IsStillColliding
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, NetMulticast, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void ABuff_Zipline_DinoBase_C::IsStillColliding()
 {
@@ -351,7 +350,6 @@ void ABuff_Zipline_DinoBase_C::IsStillColliding()
 	ABuff_Zipline_DinoBase_C_IsStillColliding_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -382,7 +380,7 @@ void ABuff_Zipline_DinoBase_C::HandleCollision(struct FHitResult* Hit)
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.HitZiplineEndStop
-// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Static, NetMulticast, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class UMovementComponent*      MovementComp                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -394,7 +392,6 @@ void ABuff_Zipline_DinoBase_C::STATIC_HitZiplineEndStop(class UMovementComponent
 	params.MovementComp = MovementComp;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -616,15 +613,15 @@ void ABuff_Zipline_DinoBase_C::SetZiplineControlRotation()
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.PlayTurnAnimation
 // ()
 // Parameters:
-// class UAnimMontage*            override                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Override                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::PlayTurnAnimation(class UAnimMontage* override, float* Duration)
+void ABuff_Zipline_DinoBase_C::PlayTurnAnimation(class UAnimMontage* Override, float* Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.PlayTurnAnimation");
 
 	ABuff_Zipline_DinoBase_C_PlayTurnAnimation_Params params;
-	params.override = override;
+	params.Override = Override;
 
 	auto flags = fn->FunctionFlags;
 
@@ -859,7 +856,7 @@ void ABuff_Zipline_DinoBase_C::ResetMeshPosition()
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.JumpImpulse
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -871,7 +868,6 @@ void ABuff_Zipline_DinoBase_C::JumpImpulse(const struct FVector& Direction)
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -931,9 +927,9 @@ void ABuff_Zipline_DinoBase_C::GetZiplineStartAndEndPoint(bool NoOffset, struct 
 // Parameters:
 // float                          Accleration                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Length                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          maxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          MaxVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_DinoBase_C::CalculateZiplineMaxVelocity(float Accleration, float Length, float* maxVelocity)
+void ABuff_Zipline_DinoBase_C::CalculateZiplineMaxVelocity(float Accleration, float Length, float* MaxVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CalculateZiplineMaxVelocity");
 
@@ -947,8 +943,8 @@ void ABuff_Zipline_DinoBase_C::CalculateZiplineMaxVelocity(float Accleration, fl
 
 	fn->FunctionFlags = flags;
 
-	if (maxVelocity != nullptr)
-		*maxVelocity = params.maxVelocity;
+	if (MaxVelocity != nullptr)
+		*MaxVelocity = params.MaxVelocity;
 }
 
 
@@ -1237,7 +1233,7 @@ void ABuff_Zipline_DinoBase_C::GetAttachOffset(struct FVector* AttachOffset)
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.BPSetupForInstigator
-// (NetReliable, Event, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1249,6 +1245,7 @@ void ABuff_Zipline_DinoBase_C::BPSetupForInstigator(class AActor** ForInstigator
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1307,7 +1304,7 @@ struct FVector ABuff_Zipline_DinoBase_C::BPOverrideCharacterNewFallVelocity(floa
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.AttachToZipline
-// (Exec, Native, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Static, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector                 StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1319,7 +1316,6 @@ void ABuff_Zipline_DinoBase_C::STATIC_AttachToZipline(const struct FVector& Star
 	params.StartLocation = StartLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1391,7 +1387,7 @@ void ABuff_Zipline_DinoBase_C::StartMoveAlongZipline(const struct FVector& Start
 
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.UserConstructionScript
-// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void ABuff_Zipline_DinoBase_C::STATIC_UserConstructionScript()
 {
@@ -1400,7 +1396,6 @@ void ABuff_Zipline_DinoBase_C::STATIC_UserConstructionScript()
 	ABuff_Zipline_DinoBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

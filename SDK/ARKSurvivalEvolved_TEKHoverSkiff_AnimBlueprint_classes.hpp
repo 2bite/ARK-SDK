@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -258,7 +258,7 @@ public:
 	void UpdateLandedRootRotationOffset(float DeltaTime, bool bForceTraces);
 	void ProcessHoverIK(const struct FRotator& NewTargetOffset_Rotation, float DeltaTime, bool bReset);
 	void STATIC_ComposeMeshTransformOffsets();
-	void STATIC_HoverIK(bool bOverrideStartTransform, const struct UObject_FTransform& NewStartTransform, bool* bResetting, struct FRotator* NewTargetRotOffset, struct FVector* NewTargetLocOffset, struct FVector* NewPlaneNormal);
+	void HoverIK(bool bOverrideStartTransform, const struct UObject_FTransform& NewStartTransform, bool* bResetting, struct FRotator* NewTargetRotOffset, struct FVector* NewTargetLocOffset, struct FVector* NewPlaneNormal);
 	void UpdateCarriedDinoWeightRatio(float DeltaTime);
 	void CalculateMeshRotationOffset(float DeltaTime);
 	void BlueprintPlayAnimationEvent(class UAnimMontage** AnimationMontage, float* PlayRate, float* playedAnimLength);

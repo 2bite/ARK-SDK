@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,11 +100,11 @@ void UPrimalItemSkin_ChibiDino_Base_C::Get_XPRequired_for_PreviousLevel(float* X
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.BPGetCustomInventoryWidgetText
-// (Net, NetRequest, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItemSkin_ChibiDino_Base_C::BPGetCustomInventoryWidgetText()
+class FString UPrimalItemSkin_ChibiDino_Base_C::STATIC_BPGetCustomInventoryWidgetText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.BPGetCustomInventoryWidgetText");
 
@@ -191,11 +191,11 @@ void UPrimalItemSkin_ChibiDino_Base_C::BPClientHandleItemNetExecCommand(struct F
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.RefreshLevelData
-// (Exec, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetReliable, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class APrimalCharacter*        forChar                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemSkin_ChibiDino_Base_C::RefreshLevelData(class APrimalCharacter* forChar)
+void UPrimalItemSkin_ChibiDino_Base_C::STATIC_RefreshLevelData(class APrimalCharacter* forChar)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.RefreshLevelData");
 
@@ -203,6 +203,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::RefreshLevelData(class APrimalCharacter* 
 	params.forChar = forChar;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -211,7 +212,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::RefreshLevelData(class APrimalCharacter* 
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.AddXP
-// (NetRequest, Native, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetReliable, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          XPAmount                       (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        forChar                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -225,7 +226,6 @@ void UPrimalItemSkin_ChibiDino_Base_C::STATIC_AddXP(float XPAmount, class APrima
 	params.forChar = forChar;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -258,7 +258,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::BPEquippedItemOnXPEarning(class APrimalCh
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.BPInitFromItemNetInfo
-// (NetRequest, Event, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
 
 void UPrimalItemSkin_ChibiDino_Base_C::STATIC_BPInitFromItemNetInfo()
 {
@@ -267,6 +267,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::STATIC_BPInitFromItemNetInfo()
 	UPrimalItemSkin_ChibiDino_Base_C_BPInitFromItemNetInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,7 +276,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::STATIC_BPInitFromItemNetInfo()
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.BPGetItemDescription
-// (Net, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Private, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)

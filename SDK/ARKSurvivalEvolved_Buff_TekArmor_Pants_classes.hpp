@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -164,17 +164,17 @@ public:
 	void GetPlayerMaxTekRunVelocity_Pure(float* MaxSpeed);
 	void StoreCurrentVelocityLength();
 	void SetChargeStartVariables();
-	void Get_Default_Player_Run_Speed_Mult(float* speedMult);
+	void Get_Default_Player_Run_Speed_Mult(float* SpeedMult);
 	void Tick_Update_Tek_Run(float DeltaSeconds);
 	void RedirectPlayerVelocity(const struct FVector& newForward);
-	void BuffTickClient(float* DeltaTime);
-	void SetPreventEquipWeapons(bool Prevent);
+	void STATIC_BuffTickClient(float* DeltaTime);
+	void SetPreventEquipWeapons(bool prevent);
 	struct FVector CalculateDeflectingImpulse(class AActor* TargetCharacter, float Impulse);
 	void SetPlayerRunSpeed(float newSpeed);
 	void ClearHitActors();
 	void STATIC_Trace_and_Damage_ForwardPawns();
 	void GetModifiedForward(float forwardScale, const struct FVector& AdditionalOffset, struct FVector* newForward);
-	void Trace_And_Damage_Forward_StationaryActors();
+	void STATIC_Trace_And_Damage_Forward_StationaryActors();
 	void CalculateForwardRelativeToSpeed(float DeltaSeconds);
 	void CanUseTekAbility(bool* bNotifyIfOutOfElement, bool* bResult);
 	void SetCastedArmorPieceRef();

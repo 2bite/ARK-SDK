@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,13 +56,13 @@ struct FName ARex_Character_BP_C::GetSocketForMeleeTraceForHitBlockers(int* Atta
 
 
 // Function Rex_Character_BP.Rex_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ARex_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ARex_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Rex_Character_BP.Rex_Character_BP_C.BPGetMultiUseEntries");
 
@@ -70,6 +70,7 @@ TArray<struct FMultiUseEntry> ARex_Character_BP_C::STATIC_BPGetMultiUseEntries(c
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,7 +84,7 @@ TArray<struct FMultiUseEntry> ARex_Character_BP_C::STATIC_BPGetMultiUseEntries(c
 
 
 // Function Rex_Character_BP.Rex_Character_BP_C.BPTryMultiUse
-// (NetReliable, NetRequest, Exec, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -98,6 +99,7 @@ bool ARex_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* Us
 	params.UseIndex = UseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -152,9 +154,9 @@ void ARex_Character_BP_C::AllowRoarStun(class APrimalCharacter* primalChar, bool
 
 
 // Function Rex_Character_BP.Rex_Character_BP_C.Roar
-// (NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void ARex_Character_BP_C::Roar()
+void ARex_Character_BP_C::STATIC_Roar()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Rex_Character_BP.Rex_Character_BP_C.Roar");
 

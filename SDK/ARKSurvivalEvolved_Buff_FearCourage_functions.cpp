@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_FearCourage.Buff_FearCourage_C.GetBuffType
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -39,18 +39,18 @@ int ABuff_FearCourage_C::GetBuffType()
 // Parameters:
 // float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CanSwitch                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           canSwitch                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           useClientIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // float                          finalValue                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FearCourage_C::Process_Courage_Value(float Value, class APrimalCharacter* forCharacter, bool CanSwitch, bool useClientIndex, float* finalValue)
+void ABuff_FearCourage_C::Process_Courage_Value(float Value, class APrimalCharacter* forCharacter, bool canSwitch, bool useClientIndex, float* finalValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.Process Courage Value");
 
 	ABuff_FearCourage_C_Process_Courage_Value_Params params;
 	params.Value = Value;
 	params.forCharacter = forCharacter;
-	params.CanSwitch = CanSwitch;
+	params.canSwitch = canSwitch;
 	params.useClientIndex = useClientIndex;
 
 	auto flags = fn->FunctionFlags;
@@ -69,18 +69,18 @@ void ABuff_FearCourage_C::Process_Courage_Value(float Value, class APrimalCharac
 // Parameters:
 // float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CanSwitch                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           canSwitch                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           useClientIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // float                          finalValue                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FearCourage_C::ProcessFearValue(float Value, class APrimalCharacter* forCharacter, bool CanSwitch, bool useClientIndex, float* finalValue)
+void ABuff_FearCourage_C::ProcessFearValue(float Value, class APrimalCharacter* forCharacter, bool canSwitch, bool useClientIndex, float* finalValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.ProcessFearValue");
 
 	ABuff_FearCourage_C_ProcessFearValue_Params params;
 	params.Value = Value;
 	params.forCharacter = forCharacter;
-	params.CanSwitch = CanSwitch;
+	params.canSwitch = canSwitch;
 	params.useClientIndex = useClientIndex;
 
 	auto flags = fn->FunctionFlags;
@@ -138,7 +138,7 @@ void ABuff_FearCourage_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XP
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.GetBuffDescription
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -149,7 +149,6 @@ struct FStatusValueModifierDescription ABuff_FearCourage_C::STATIC_GetBuffDescri
 	ABuff_FearCourage_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,9 +192,9 @@ void ABuff_FearCourage_C::Add_Fear_Or_CourageClient(float amountToAdd, bool isFe
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           useClientIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Courage                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           Fear                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           fear                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FearCourage_C::IsAtMax_f(class APrimalCharacter* Character, bool useClientIndex, bool* Courage, bool* Fear)
+void ABuff_FearCourage_C::IsAtMax_f(class APrimalCharacter* Character, bool useClientIndex, bool* Courage, bool* fear)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_FearCourage.Buff_FearCourage_C.IsAtMax_f");
 
@@ -211,8 +210,8 @@ void ABuff_FearCourage_C::IsAtMax_f(class APrimalCharacter* Character, bool useC
 
 	if (Courage != nullptr)
 		*Courage = params.Courage;
-	if (Fear != nullptr)
-		*Fear = params.Fear;
+	if (fear != nullptr)
+		*fear = params.fear;
 }
 
 
@@ -330,7 +329,7 @@ void ABuff_FearCourage_C::UpdateFleePoint()
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.Send HUDMessage to Rider From Server
-// (NetReliable, Exec, Native, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetRequest, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, Const)
 // Parameters:
 // class FString                  messageID                      (Parm, ZeroConstructor)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -344,7 +343,6 @@ void ABuff_FearCourage_C::Send_HUDMessage_to_Rider_From_Server(const class FStri
 	params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -636,7 +634,7 @@ void ABuff_FearCourage_C::SendHUDMessageToRider(const struct FStatusValueModifie
 
 
 // Function Buff_FearCourage.Buff_FearCourage_C.TerrorActions
-// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, Const)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

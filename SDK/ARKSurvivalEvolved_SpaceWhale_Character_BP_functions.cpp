@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -209,7 +209,7 @@ void ASpaceWhale_Character_BP_C::CalculateUpshiftCameraOffset(float* Offset)
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPAdjustDamage
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -232,6 +232,7 @@ float ASpaceWhale_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct F
 	params.PointHitInfo = PointHitInfo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -443,7 +444,7 @@ void ASpaceWhale_Character_BP_C::UpdateHyperdriveTarget()
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.UpdateBombing
-// (Native, MulticastDelegate, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 
 void ASpaceWhale_Character_BP_C::UpdateBombing()
 {
@@ -461,7 +462,7 @@ void ASpaceWhale_Character_BP_C::UpdateBombing()
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.DropBomb
-// (NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 
 void ASpaceWhale_Character_BP_C::DropBomb()
 {
@@ -541,16 +542,15 @@ void ASpaceWhale_Character_BP_C::SetSaddleVisibility(bool bNewVisibility)
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.ResetMaterials
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, NetValidate)
+// (Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 
-void ASpaceWhale_Character_BP_C::ResetMaterials()
+void ASpaceWhale_Character_BP_C::STATIC_ResetMaterials()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.ResetMaterials");
 
 	ASpaceWhale_Character_BP_C_ResetMaterials_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -559,7 +559,7 @@ void ASpaceWhale_Character_BP_C::ResetMaterials()
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPAnimNotifyCustomState_Begin
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Delegate, NetServer, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -567,7 +567,7 @@ void ASpaceWhale_Character_BP_C::ResetMaterials()
 // float*                         TotalDuration                  (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotifyState**       AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceWhale_Character_BP_C::STATIC_BPAnimNotifyCustomState_Begin(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration, class UAnimNotifyState** AnimNotifyObject)
+void ASpaceWhale_Character_BP_C::BPAnimNotifyCustomState_Begin(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration, class UAnimNotifyState** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPAnimNotifyCustomState_Begin");
 
@@ -588,7 +588,7 @@ void ASpaceWhale_Character_BP_C::STATIC_BPAnimNotifyCustomState_Begin(struct FNa
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (Event, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -669,7 +669,7 @@ void ASpaceWhale_Character_BP_C::UpdateSpeedEffects()
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.UpdateTurretRotation
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, NetValidate)
+// (Net, NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            SeatIndex                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -716,16 +716,15 @@ bool ASpaceWhale_Character_BP_C::IsLocalControllerTagged(TArray<class APrimalCha
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.UpdateBlinkEffect
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 
-void ASpaceWhale_Character_BP_C::UpdateBlinkEffect()
+void ASpaceWhale_Character_BP_C::STATIC_UpdateBlinkEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.UpdateBlinkEffect");
 
 	ASpaceWhale_Character_BP_C_UpdateBlinkEffect_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -820,7 +819,7 @@ void ASpaceWhale_Character_BP_C::FireForTurretForPlayer(class AShooterCharacter*
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.GetFireTransformForPlayer
-// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class AShooterCharacter*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 FirePosition                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -835,6 +834,7 @@ void ASpaceWhale_Character_BP_C::STATIC_GetFireTransformForPlayer(class AShooter
 	params.Player = Player;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1298,7 +1298,7 @@ void ASpaceWhale_Character_BP_C::BPGetHUDElements(class APlayerController** ForP
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.HyperdriveTargetingTrace
-// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetValidate)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FVector                 TraceStartLoc                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 TraceStartDir                  (Parm, ZeroConstructor, IsPlainOldData)
@@ -1307,7 +1307,7 @@ void ASpaceWhale_Character_BP_C::BPGetHUDElements(class APlayerController** ForP
 // bool                           foundValidLocation             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceWhale_Character_BP_C::STATIC_HyperdriveTargetingTrace(const struct FVector& TraceStartLoc, const struct FVector& TraceStartDir, const struct FVector& WhaleStartLoc, float DebugDrawDuration, bool* foundValidLocation, struct FVector* Location)
+void ASpaceWhale_Character_BP_C::HyperdriveTargetingTrace(const struct FVector& TraceStartLoc, const struct FVector& TraceStartDir, const struct FVector& WhaleStartLoc, float DebugDrawDuration, bool* foundValidLocation, struct FVector* Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.HyperdriveTargetingTrace");
 
@@ -1351,7 +1351,7 @@ void ASpaceWhale_Character_BP_C::UpdateHyperdriveTargetingMode(bool Enabled)
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPOverrideCameraViewTarget
-// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetValidate)
+// (Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FName*                  CurrentCameraMode              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                DesiredCameraLocation          (Parm, ZeroConstructor, IsPlainOldData)
@@ -1375,6 +1375,7 @@ void ASpaceWhale_Character_BP_C::BPOverrideCameraViewTarget(struct FName* Curren
 	params.DesiredFOV = DesiredFOV;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1396,7 +1397,7 @@ void ASpaceWhale_Character_BP_C::BPOverrideCameraViewTarget(struct FName* Curren
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.ReceiveTick
-// (NetRequest, Event, NetResponse, Static, Delegate, NetServer, NetValidate)
+// (NetReliable, Event, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1491,7 +1492,7 @@ bool ASpaceWhale_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Dis
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPOverrideGetAttackAnimationIndex
-// (Exec, NetResponse, Public, Protected, NetServer, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UAnimMontage*>    AnimationArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1505,6 +1506,7 @@ int ASpaceWhale_Character_BP_C::BPOverrideGetAttackAnimationIndex(int* AttackInd
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1518,12 +1520,12 @@ int ASpaceWhale_Character_BP_C::BPOverrideGetAttackAnimationIndex(int* AttackInd
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPNotifyClearPassenger
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Protected, NetServer, NetValidate)
+// (Exec, Native, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class APrimalCharacter**       PassengerChar                  (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           SeatIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceWhale_Character_BP_C::BPNotifyClearPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex)
+void ASpaceWhale_Character_BP_C::STATIC_BPNotifyClearPassenger(class APrimalCharacter** PassengerChar, int* SeatIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPNotifyClearPassenger");
 
@@ -1532,6 +1534,7 @@ void ASpaceWhale_Character_BP_C::BPNotifyClearPassenger(class APrimalCharacter**
 	params.SeatIndex = SeatIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1562,7 +1565,7 @@ void ASpaceWhale_Character_BP_C::BPNotifyAddPassenger(class APrimalCharacter** P
 
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.UserConstructionScript
-// (Exec, Event, Static, Public, Protected, NetServer, NetValidate)
+// (NetReliable, Native, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport)
 
 void ASpaceWhale_Character_BP_C::STATIC_UserConstructionScript()
 {
@@ -1571,6 +1574,7 @@ void ASpaceWhale_Character_BP_C::STATIC_UserConstructionScript()
 	ASpaceWhale_Character_BP_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

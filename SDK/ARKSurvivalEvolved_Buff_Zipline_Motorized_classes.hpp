@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,7 +72,7 @@ public:
 	void UpdateFX();
 	struct FVector BPOverrideWeaponBob(struct FVector* InWeaponBob);
 	void BuffTickClient(float* DeltaTime);
-	void STATIC_Try_Refill_Gas();
+	void Try_Refill_Gas();
 	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void GetMotorAndParentItem(class UObject* Actor, class UPrimalItem** ParentItem, class UPrimalItem** MyItemSkin);
 	void TickMoveAlongZipline();

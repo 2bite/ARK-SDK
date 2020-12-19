@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -120,7 +120,7 @@ public:
 	class UClass*                                      immuneToFearBuff;                                         // 0x0D48(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               CallFunc_NotEqual_FloatFloat_ReturnValue;                 // 0x0D50(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData18[0x3];                                       // 0x0D51(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Duration;                              // 0x0D54(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x0D54(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_FMax_ReturnValue;                                // 0x0D58(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData19[0x4];                                       // 0x0D5C(0x0004) MISSED OFFSET
 	class APrimalDinoCharacter*                        K2Node_DynamicCast_AsPrimalDinoCharacter;                 // 0x0D60(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -131,7 +131,7 @@ public:
 	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x0D71(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData21[0x6];                                       // 0x0D72(0x0006) MISSED OFFSET
 	class APrimalDinoCharacter*                        K2Node_CustomEvent_instigator;                            // 0x0D78(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x0D80(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x0D80(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0D84(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x0D85(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData22[0x2];                                       // 0x0D86(0x0002) MISSED OFFSET
@@ -147,7 +147,7 @@ public:
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x0DB8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsTimeSince_ReturnValue;                         // 0x0DC0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData25[0x3];                                       // 0x0DC1(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x0DC4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x0DC4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x0DC8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x0DD0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_NotEqual_ClassClass_ReturnValue;                 // 0x0DD1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -192,13 +192,13 @@ public:
 
 
 	int GetBuffType();
-	void Process_Courage_Value(float Value, class APrimalCharacter* forCharacter, bool CanSwitch, bool useClientIndex, float* finalValue);
-	void ProcessFearValue(float Value, class APrimalCharacter* forCharacter, bool CanSwitch, bool useClientIndex, float* finalValue);
+	void Process_Courage_Value(float Value, class APrimalCharacter* forCharacter, bool canSwitch, bool useClientIndex, float* finalValue);
+	void ProcessFearValue(float Value, class APrimalCharacter* forCharacter, bool canSwitch, bool useClientIndex, float* finalValue);
 	void Max_Courage_ActionsClient();
 	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	struct FStatusValueModifierDescription STATIC_GetBuffDescription();
 	void Add_Fear_Or_CourageClient(float amountToAdd, bool isFear, class APrimalCharacter* fearCauser, bool switchFromFearToCourageIfNeeded, bool isFromRoar);
-	void IsAtMax_f(class APrimalCharacter* Character, bool useClientIndex, bool* Courage, bool* Fear);
+	void IsAtMax_f(class APrimalCharacter* Character, bool useClientIndex, bool* Courage, bool* fear);
 	void GetTeamColorForParticles(struct FVector* finalColor);
 	void SetMultiplier(TEnumAsByte<EPrimalCharacterStatusValue> statusValue, int index, bool isFear);
 	void isSameTeamOrAlly(int secondTargetingTeam, int firstTargetingTeamOverride, bool* isAllyOrSameTeam);

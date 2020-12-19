@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,7 +73,7 @@ public:
 	bool                                               CallFunc_Greater_IntInt_ReturnValue3;                     // 0x0BF5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0BF6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_CanUseTekAbility_bResult;                        // 0x0BF7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                K2Node_CustomEvent_newState;                              // 0x0BF8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                K2Node_CustomEvent_NewState;                              // 0x0BF8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue2;                  // 0x0BFC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData11[0x3];                                       // 0x0BFD(0x0003) MISSED OFFSET
 	int                                                CallFunc_Subtract_IntInt_ReturnValue;                     // 0x0C00(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)

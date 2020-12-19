@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,7 +53,7 @@ struct ABuff_Rooted_ForestKaiju_C_UserConstructionScript_Params
 // Function Buff_Rooted_ForestKaiju.Buff_Rooted_ForestKaiju_C.Multi_PreventMovementInput
 struct ABuff_Rooted_ForestKaiju_C_Multi_PreventMovementInput_Params
 {
-	bool                                               Prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Rooted_ForestKaiju.Buff_Rooted_ForestKaiju_C.Multi_SetScale

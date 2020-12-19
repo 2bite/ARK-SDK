@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void AProjScoutTracker_C::SpawnImpactVFX()
 
 
 // Function ProjScoutTracker.ProjScoutTracker_C.ScheduleNextTrackerImpactVFXSpawn
-// (Event, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Public, Private, NetClient, BlueprintEvent, Const)
 
 void AProjScoutTracker_C::ScheduleNextTrackerImpactVFXSpawn()
 {

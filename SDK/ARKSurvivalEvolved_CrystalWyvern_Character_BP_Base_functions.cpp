@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -127,7 +127,7 @@ void ACrystalWyvern_Character_BP_Base_C::DelayClearIsTamingFlyingHigh()
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SetIsTamingFlyingHigh
-// (NetReliable, NetRequest, Exec, Event, Static, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, Static, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsTamingFlyingHigh             (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -139,6 +139,7 @@ void ACrystalWyvern_Character_BP_Base_C::STATIC_SetIsTamingFlyingHigh(bool IsTam
 	params.IsTamingFlyingHigh = IsTamingFlyingHigh;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,7 +170,7 @@ void ACrystalWyvern_Character_BP_Base_C::BPRemoveCharacterSnapshot(class UPrimal
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPApplyCharacterSnapshot
-// (NetRequest, Event, NetMulticast, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
+// (Native, NetResponse, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimalItem**            Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 To                             (Parm, ZeroConstructor, IsPlainOldData)
@@ -189,6 +190,7 @@ void ACrystalWyvern_Character_BP_Base_C::BPApplyCharacterSnapshot(class UPrimalI
 	params.Pose = Pose;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -360,13 +362,13 @@ bool ACrystalWyvern_Character_BP_Base_C::BPTryMultiUse(class APlayerController**
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ACrystalWyvern_Character_BP_Base_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ACrystalWyvern_Character_BP_Base_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPGetMultiUseEntries");
 
@@ -374,7 +376,6 @@ TArray<struct FMultiUseEntry> ACrystalWyvern_Character_BP_Base_C::STATIC_BPGetMu
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -518,16 +519,15 @@ void ACrystalWyvern_Character_BP_Base_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SpawnNestEgg
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintPure)
+// (Exec, Static, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
-void ACrystalWyvern_Character_BP_Base_C::SpawnNestEgg()
+void ACrystalWyvern_Character_BP_Base_C::STATIC_SpawnNestEgg()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SpawnNestEgg");
 
 	ACrystalWyvern_Character_BP_Base_C_SpawnNestEgg_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

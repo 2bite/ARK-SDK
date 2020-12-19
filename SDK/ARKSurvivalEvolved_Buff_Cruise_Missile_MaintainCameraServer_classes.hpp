@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ public:
 
 
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void BPHandleOnStartFire(bool* bFromGamepad);
+	void STATIC_BPHandleOnStartFire(bool* bFromGamepad);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_Cruise_Missile_MaintainCameraServer(int EntryPoint);
 };

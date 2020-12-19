@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -675,11 +675,11 @@ public:
 	bool BPCanCryo(class AShooterPlayerController** ForPC);
 	void BPOnRefreshColorization(TArray<struct FLinearColor>* Colors);
 	bool BP_PreventMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
-	void ServerIsFiringItemInInventory(bool* Retval);
+	void ServerIsFiringItemInInventory(bool* retVal);
 	void ServerIsUsingTrackerBeam(bool* Result);
 	void OnCheckMek();
 	bool BP_InterceptTurnInput(float* AxisValue);
-	void STATIC_Set_StatsFromItem(TArray<float>* Stats);
+	void Set_StatsFromItem(TArray<float>* Stats);
 	void SetupScoutDisconnect(float DelayTimeSeconds);
 	void DestroyScout();
 	struct FVector BPModifyAimOffsetTargetLocation(struct FVector* AimTargetLocation);
@@ -690,9 +690,9 @@ public:
 	bool BPShouldCancelDoAttack(int* AttackIndex);
 	void OnRep_LowStamina();
 	void IsDashing(bool* Result);
-	void STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
+	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	void STATIC_ReceiveTick(float* DeltaSeconds);
-	void ScoutIsFirstPerson(bool* Retval);
+	void ScoutIsFirstPerson(bool* retVal);
 	void InitBeamVFX();
 	void EndBeam_VFX();
 	void SetBeamValidTarget(bool Value, class AActor* Actor);

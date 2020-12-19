@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -147,8 +147,8 @@ public:
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void IsOfFollowerClass(class UClass* classToCheck, bool* hasFollowerClass);
 	void CanAddFearCommonChecks(class APrimalCharacter* OtherCharacter, bool* canAddFear);
-	void ConeCheck(float coneRadius, class APrimalCharacter* OtherCharacter, bool useHeadSocketForReference, bool* isInCone, struct FVector* VectorA, struct FVector* VectorB);
-	float STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
+	void STATIC_ConeCheck(float coneRadius, class APrimalCharacter* OtherCharacter, bool useHeadSocketForReference, bool* isInCone, struct FVector* VectorA, struct FVector* VectorB);
+	float BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void IsFromSameTeamOrAlliedTribe(int otherTargetingTeam, bool* isAllyOrSameTeam);
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
 	void GetFearCourageBuffClass(bool isFear, class APrimalDinoCharacter* DinoCharacter, class UClass** BuffClass, bool* isTrustBuff);
@@ -163,7 +163,7 @@ public:
 	void Can_AddFollowerWhileTamed(class APrimalDinoCharacter* Dino, bool* canBeFollower);
 	void Try_Add_Follower_WhileTamed(class APrimalDinoCharacter* follower);
 	void Can_Add_Courage_WildToWild(class APrimalDinoCharacter* DinoCharacter, bool* canAddConfidenceToDino);
-	void Try_Add_Courage(class APrimalDinoCharacter* PotentialTarget, bool tamedToTamed, bool wildToWild, bool tamedToWild);
+	void STATIC_Try_Add_Courage(class APrimalDinoCharacter* PotentialTarget, bool tamedToTamed, bool wildToWild, bool tamedToWild);
 	void Can_Add_Courage_TamedToTamed(class APrimalDinoCharacter* DinoCharacter, bool* canAddConfidenceToDino);
 	void TamedAdd_CourageTo_Nearby_Dinos();
 	void TamedYuty_Can_Add_Fear(class APrimalDinoCharacter* DinoCharacter, bool* canScare);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -695,7 +695,7 @@ public:
 	}
 
 
-	struct FVector STATIC_validate_proper_impact_location();
+	struct FVector validate_proper_impact_location();
 	bool has_missile_exceeded_allowed_distance();
 	void Finished_Arming();
 	void manual_explode();
@@ -705,7 +705,7 @@ public:
 	void Is_Missile_Locally_Controlled(bool* Local);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	void STATIC_BP_OnJumpPressed();
-	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
+	float STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void ReceiveActorBeginOverlap(class AActor** OtherActor);
 	bool BPCanBeBaseForCharacter(class APawn** Pawn);
 	void BPGetOverrideCameraInterpSpeed(float* DefaultTPVCameraSpeedInterpolationMultiplier, float* DefaultTPVOffsetInterpSpeed, float* TPVCameraSpeedInterpolationMultiplier, float* TPVOffsetInterpSpeed);
@@ -713,11 +713,11 @@ public:
 	bool BPModifyDesiredRotation(struct FRotator* InDesiredRotation, struct FRotator* OutDesiredRotation);
 	bool BP_InterceptMoveRight(float* AxisValue);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
-	void STATIC_Damage_Actors_By_Explosion_Radius(class AActor* Actor, float Override_Damage, class UClass* Damage_Type, bool really_damage);
+	void Damage_Actors_By_Explosion_Radius(class AActor* Actor, float Override_Damage, class UClass* Damage_Type, bool really_damage);
 	bool BP_InterceptMoveForward(float* AxisValue);
 	bool BPCanCryo(class AShooterPlayerController** ForPC);
 	bool BP_PreventMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
-	void ServerIsFiringItemInInventory(bool* Retval);
+	void ServerIsFiringItemInInventory(bool* retVal);
 	bool BP_InterceptTurnInput(float* AxisValue);
 	void SetupScoutDisconnect(float DelayTimeSeconds);
 	void DestroyScout();
@@ -729,7 +729,7 @@ public:
 	void IsDashing(bool* Result);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	void STATIC_ReceiveTick(float* DeltaSeconds);
-	void ScoutIsFirstPerson(bool* Retval);
+	void ScoutIsFirstPerson(bool* retVal);
 	void SetTargetImpactMaterial(float ImpactDistance);
 	bool BPPreventStasis();
 	bool BPHandleUseButtonPress(class AShooterPlayerController** RiderController);
@@ -740,7 +740,7 @@ public:
 	void Update_Scout_Vision();
 	bool BPOverrideFPVViewLocation(class APrimalCharacter** viewingCharacter);
 	struct FVector BPGetFPVViewLocation(class APrimalCharacter** viewingCharacter);
-	void Dash(const struct FVector& Direction, float Impulse);
+	void STATIC_Dash(const struct FVector& Direction, float Impulse);
 	float BP_GetCustomModifier_RotationRate();
 	float BP_GetCustomModifier_MaxSpeed();
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
@@ -753,7 +753,7 @@ public:
 	void StopPossessingPlayerMovement();
 	void ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit);
 	void ReplicateInputVector(const struct FVector& InputVector);
-	void on_hit_something(class AActor* other_actor, const struct FVector& hit_normal);
+	void on_hit_something(class AActor* other_actor, const struct FVector& Hit_Normal);
 	void ReleasePossessingSurvivorAndDestroy();
 	void RechargeShield();
 	void ClientScoutDamaged(const struct FHitResult& HitResult);
@@ -795,7 +795,7 @@ public:
 	void ClientCheckClearExpiredDinoData();
 	void set_falling();
 	void warn_time_almost_up();
-	void Explode(const struct FVector& hit_normal);
+	void Explode(const struct FVector& Hit_Normal);
 	void ExecuteUbergraph_TekCruiseMissile_Character_BP(int EntryPoint);
 };
 

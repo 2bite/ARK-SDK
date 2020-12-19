@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,7 +54,7 @@ struct ADino_Character_BP_DivingFlyer_C_Get_Diving_Velocity_Mult_Ratio_Params
 // Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.Get Flyer Dive Velocity Max
 struct ADino_Character_BP_DivingFlyer_C_Get_Flyer_Dive_Velocity_Max_Params
 {
-	float                                              maxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.Get Flyer Dive Velocity Ratio
@@ -155,7 +155,7 @@ struct ADino_Character_BP_DivingFlyer_C_Get_Flyer_Dive_Velocity_Ratio_Pure_Param
 // Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.Get Flyer Dive Velocity MaxPure
 struct ADino_Character_BP_DivingFlyer_C_Get_Flyer_Dive_Velocity_MaxPure_Params
 {
-	float                                              maxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.CanFlyerDive

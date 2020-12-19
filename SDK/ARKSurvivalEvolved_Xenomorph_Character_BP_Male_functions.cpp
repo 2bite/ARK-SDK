@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -160,7 +160,7 @@ bool AXenomorph_Character_BP_Male_C::BPAllowClaiming(class AShooterPlayerControl
 
 
 // Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.BPGetMultiUseEntries
-// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, DLLImport, BlueprintPure, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -174,6 +174,7 @@ TArray<struct FMultiUseEntry> AXenomorph_Character_BP_Male_C::STATIC_BPGetMultiU
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -409,9 +410,9 @@ void AXenomorph_Character_BP_Male_C::BPBecomeAdult()
 // Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.Can Dive
 // ()
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_Male_C::Can_Dive(bool* Return)
+void AXenomorph_Character_BP_Male_C::Can_Dive(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C.Can Dive");
 
@@ -423,8 +424,8 @@ void AXenomorph_Character_BP_Male_C::Can_Dive(bool* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 

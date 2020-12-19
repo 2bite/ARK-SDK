@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ struct ADino_Character_BP_Ramming_C_GetStructureDamageScaled_Params
 	float                                              CurrentValue;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MinValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MaxValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              velocityAlpha;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              VelocityAlpha;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ScaledDamage;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

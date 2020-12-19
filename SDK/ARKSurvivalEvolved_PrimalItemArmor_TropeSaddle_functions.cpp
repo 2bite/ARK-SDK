@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,8 +12,35 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C.BPAllowRemoteRemoveFromInventory
+// ()
+// Parameters:
+// class UPrimalInventoryComponent** invComp                        (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerController** ByPC                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bRequestedByPlayer             (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPrimalItemArmor_TropeSaddle_C::BPAllowRemoteRemoveFromInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C.BPAllowRemoteRemoveFromInventory");
+
+	UPrimalItemArmor_TropeSaddle_C_BPAllowRemoteRemoveFromInventory_Params params;
+	params.invComp = invComp;
+	params.ByPC = ByPC;
+	params.bRequestedByPlayer = bRequestedByPlayer;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C.GetInventoryIconDisplayText
-// (Net, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, BlueprintPure, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 

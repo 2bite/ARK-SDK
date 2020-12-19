@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -138,7 +138,7 @@ struct APhoenix_Character_BP_C_CanAshStayOnLocation_Params
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Calculate BuryMeshTransform
 struct APhoenix_Character_BP_C_Calculate_BuryMeshTransform_Params
 {
-	bool                                               Rise;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               rise;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          buryMeshTransform;                                        // (Parm, OutParm, IsPlainOldData)
 };
 
@@ -242,8 +242,8 @@ struct APhoenix_Character_BP_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function Phoenix_Character_BP.Phoenix_Character_BP_C.Rise
-struct APhoenix_Character_BP_C_Rise_Params
+// Function Phoenix_Character_BP.Phoenix_Character_BP_C.rise
+struct APhoenix_Character_BP_C_rise_Params
 {
 	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -91,7 +91,7 @@ struct ACaveWolf_Character_BP_C_UpdateTPVViewOffset_Params
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.Set Server Timer Tick Every Frame
 struct ACaveWolf_Character_BP_C_Set_Server_Timer_Tick_Every_Frame_Params
 {
-	bool                                               tickEveryFrame;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               TickEveryFrame;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.BPTimerServer
@@ -108,7 +108,7 @@ struct ACaveWolf_Character_BP_C_GetTargetMeshRelativeTransform_Pure_Params
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.SetNonDediTimer_TickEveryFrame
 struct ACaveWolf_Character_BP_C_SetNonDediTimer_TickEveryFrame_Params
 {
-	bool                                               tickEveryFrame;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               TickEveryFrame;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.GetTargetMeshRelativeTransform
@@ -208,7 +208,7 @@ struct ACaveWolf_Character_BP_C_IsRotation_Nearly_Equal_Params
 	struct FRotator                                    A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Tolerance;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.IsVectorNearlyEqual
@@ -231,8 +231,8 @@ struct ACaveWolf_Character_BP_C_BlueprintCanRiderAttack_Params
 struct ACaveWolf_Character_BP_C_TryAttachingToZipline_Params
 {
 	class AZipline_Anchor_C*                           overrideAnchor;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     OverrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              OverrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     overrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              overrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     OverrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               DontUseLineOfSightCheck;                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

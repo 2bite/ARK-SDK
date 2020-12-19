@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -323,8 +323,8 @@ struct AHyaenodon_Character_BP_C_TrySitDown_Params
 {
 };
 
-// Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.StandUp
-struct AHyaenodon_Character_BP_C_StandUp_Params
+// Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.standUp
+struct AHyaenodon_Character_BP_C_standUp_Params
 {
 };
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Tropeognathus_AnimBP.Tropeognathus_AnimBP_C.GetFlyingBlendspaceCoords
-// (NetResponse, Static, Protected, DLLImport, BlueprintPure)
+// (Exec, NetMulticast, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    ForDino                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               BlendspaceCoords               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTropeognathus_AnimBP_C::STATIC_GetFlyingBlendspaceCoords(class APrimalDinoCharacter* ForDino, struct FVector2D* BlendspaceCoords)
+void UTropeognathus_AnimBP_C::GetFlyingBlendspaceCoords(class APrimalDinoCharacter* ForDino, struct FVector2D* BlendspaceCoords)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_AnimBP.Tropeognathus_AnimBP_C.GetFlyingBlendspaceCoords");
 

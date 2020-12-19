@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -63,7 +63,7 @@ public:
 	unsigned char                                      UnknownData06[0x2];                                       // 0x0EBE(0x0002) MISSED OFFSET
 	float                                              maxCameraShakeWhileTargeting;                             // 0x0EC0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                maxTargetsForCameraShake;                                 // 0x0EC4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              maxLightIntensity;                                        // 0x0EC8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxLightIntensity;                                        // 0x0EC8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FLinearColor                                ChargeColor;                                              // 0x0ECC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isFlickering;                                             // 0x0EDC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x3];                                       // 0x0EDD(0x0003) MISSED OFFSET
@@ -276,7 +276,7 @@ public:
 
 
 	void GetNumBatteries(int* numBatteries);
-	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue);
+	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue);
 	void RemoveAllBeamsServer();
 	void IsFreeBeamForActor(class AActor* forActor, bool* isFreeBeam);
 	void BPPrefireAction();
@@ -308,7 +308,7 @@ public:
 	void Update_Impact_Particles(const struct FSTR_ChargeBeamInfo& beamInfo, int index);
 	void SetEndPoints(class UParticleSystemComponent* beam, const struct FVector& EndPoint1, const struct FVector& endPoint2, const struct FVector& endPoint3);
 	void ConnectBeamToTarget(const struct FSTR_ChargeBeamInfo& beamInfo, int index);
-	void STATIC_CreateNewBeam(class AActor* ToActor);
+	void CreateNewBeam(class AActor* ToActor);
 	void ShouldRemoveBeamForTarget(class APrimalCharacter* Character, bool* shouldRemove);
 	void RemoveBeamTarget_Server(class AActor* BeamTarget);
 	void UpdateCharge(bool ShouldActivate);
@@ -320,19 +320,19 @@ public:
 	void LightFlickerTimeline__UpdateFunc();
 	void LightTurnOffTimeline__FinishedFunc();
 	void LightTurnOffTimeline__UpdateFunc();
-	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue);
+	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue);
 	void Charge_Variable_Event_Trigger_Multicast_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iVariable);
 	void Interface_Check_for_Batteries_and_Update_Multicast();
 	void Charge_Variable_Event_Double_MulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
 	void ChargeVariableEventDoubleInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
-	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
-	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
+	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
+	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
 	void ReceiveBeginPlay();
 	void OnNewActorAffected_Multicast(class AActor* actorAffected);
 	void DestroyBeamForTarget_Multicast(class APrimalCharacter* Character);
 	void PlayLanternCameraShake();
 	void CreateChargeManager();
-	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue);
+	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue);
 	void FiringBeamLogic();
 	void OnStartFiring();
 	void ChargeVariableEvent_Boolean(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue);

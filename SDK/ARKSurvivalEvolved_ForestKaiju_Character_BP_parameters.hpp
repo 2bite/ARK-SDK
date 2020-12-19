@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -559,7 +559,7 @@ struct AForestKaiju_Character_BP_C_ShortestAngleDistance_Params
 struct AForestKaiju_Character_BP_C_GetClampedLookDir_Params
 {
 	bool                                               LimitLowerPitch;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPHandleControllerInitiatedAttack
@@ -757,7 +757,7 @@ struct AForestKaiju_Character_BP_C_Server_GrabTraceTargetDir_Params
 struct AForestKaiju_Character_BP_C_Multi_ExposeNodes_Params
 {
 	TEnumAsByte<EDesertKaiju_ControlNodes>             Node;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               expose;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Expose;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.ActivateNode
@@ -799,7 +799,7 @@ struct AForestKaiju_Character_BP_C_AnimNotify_EndRootAttack_Params
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Multi_PreventInput
 struct AForestKaiju_Character_BP_C_Multi_PreventInput_Params
 {
-	bool                                               Prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.ExecuteAttackRoot

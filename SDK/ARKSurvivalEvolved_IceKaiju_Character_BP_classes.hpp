@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -332,7 +332,7 @@ public:
 	bool                                               CallFunc_EqualEqual_BoolBool_ReturnValue5;                // 0x2979(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_BoolBool_ReturnValue6;                // 0x297A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_Hide4;                                 // 0x297B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x297C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x297C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_RightLeg2;                             // 0x2980(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_Hide3;                                 // 0x2981(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_RightLeg;                              // 0x2982(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -362,7 +362,7 @@ public:
 	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue2;                // 0x2A04(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_Hide2;                                 // 0x2A10(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData50[0x3];                                       // 0x2A11(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x2A14(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x2A14(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_Subtract_VectorVector_ReturnValue;               // 0x2A18(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    CallFunc_Conv_VectorToRotator_ReturnValue;                // 0x2A24(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_BreakRot_Pitch2;                                 // 0x2A30(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -522,7 +522,7 @@ public:
 	class AController*                                 CallFunc_GetController_ReturnValue2;                      // 0x2F48(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FName                                       CallFunc_MakeLiteralName_ReturnValue2;                    // 0x2F50(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class UBlackboardComponent*                        CallFunc_GetBlackboard_ReturnValue2;                      // 0x2F58(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class APrimalCharacter*                            K2Node_CustomEvent_target;                                // 0x2F60(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APrimalCharacter*                            K2Node_CustomEvent_Target;                                // 0x2F60(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class APrimalBuff*                                 CallFunc_GetBuff_ReturnValue;                             // 0x2F68(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class APrimalBuff*                                 CallFunc_StaticAddBuff_ReturnValue;                       // 0x2F70(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class ABuff_Freeze_C*                              K2Node_DynamicCast_AsBuff_Freeze_C;                       // 0x2F78(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -625,8 +625,8 @@ public:
 	class FString                                      CallFunc_Concat_StrStr_ReturnValue5;                      // 0x3248(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
 	struct FVector                                     K2Node_CustomEvent_Loc2;                                  // 0x3258(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FLinearColor                                K2Node_CustomEvent_LineColor;                             // 0x3264(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration;                              // 0x3274(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Radius;                                // 0x3278(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x3274(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_radius;                                // 0x3278(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               Temp_bool_IsClosed_Variable;                              // 0x327C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData98[0x3];                                       // 0x327D(0x0003) MISSED OFFSET
 	struct FVector                                     CallFunc_GetActorForwardVector_ReturnValue;               // 0x3280(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -636,7 +636,7 @@ public:
 	float                                              CallFunc_BreakVector_Z2;                                  // 0x32A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_Multiply_FloatFloat_ReturnValue3;                // 0x32A8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_Multiply_FloatFloat_ReturnValue4;                // 0x32AC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FLinearColor                                K2Node_CustomEvent_color;                                 // 0x32B0(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                K2Node_CustomEvent_Color;                                 // 0x32B0(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue6;                           // 0x32C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x32C1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData99[0x2];                                       // 0x32C2(0x0002) MISSED OFFSET
@@ -858,30 +858,30 @@ public:
 	void STATIC_SimulateFur(float DeltaTime, TArray<struct UObject_FTransform>* InSocketTransforms, TArray<struct UObject_FTransform>* InLastSubstepSocketTransforms);
 	void STATIC_SetFurParams(TArray<struct UObject_FTransform>* InSocketTransforms);
 	void CreateNodeDynamicMATs();
-	void Get_Launch_DirectionForWildLeap(class AActor* CalcActor, struct FVector* Return);
+	void Get_Launch_DirectionForWildLeap(class AActor* CalcActor, struct FVector* _return);
 	bool BPHandleOnStopFire();
 	void BP_OnSetDeath();
 	void STATIC_TraceForLeapCollisionDamage();
 	void STATIC_AngryAOEDmg();
-	void ShouldStopJumpRotation(bool* Return);
-	void LaunchLiquidBomb();
+	void ShouldStopJumpRotation(bool* _return);
+	void STATIC_LaunchLiquidBomb();
 	void LiquidBombTrace();
 	void FinishLeapTamed();
-	void GetLaunchDirection(class AActor* CalcActor, struct FVector* Return);
+	void GetLaunchDirection(class AActor* CalcActor, struct FVector* _return);
 	void LaunchAtTracePoint();
 	void ShortestAngleDistance(float AngleCurrent, float AngleTarget, float* Difference);
-	void GetClampedLookDir(bool LimitLowerPitch, struct FVector* Return);
+	void GetClampedLookDir(bool LimitLowerPitch, struct FVector* _return);
 	void STATIC_LeapingTrace();
 	void ExecuteTamedLEap();
 	bool BPHandleOnStopTargeting();
-	void UpdateLeapTargetVFXLocation(bool IsVisible, const struct FVector& WorldLoc, const struct FRotator& WorldRot, const struct FHitResult& HitResult, const struct FVector& surfaceNormal);
+	void UpdateLeapTargetVFXLocation(bool IsVisible, const struct FVector& WorldLoc, const struct FRotator& WorldRot, const struct FHitResult& HitResult, const struct FVector& SurfaceNormal);
 	void Calc_Leap_TargetTamed(const struct FProjectileArc& Arc, float DebugDrawDuration, bool* FoundValidTarget, bool* IsAirTarget, struct FVector* Location, struct FRotator* Rotation, struct FVector* TargetNormal, float* ArcTime, struct FHitResult* HitResult);
 	void GetVerticalViewAngle(float* Angle);
 	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
 	bool MoveBlocked();
 	void BSetupDinoTameable();
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void CreateIceSpearTargetArray(TArray<class AActor*>* NewParam, TArray<class AActor*>* NewParam1);
 	void SetImmuneToDamage(bool Immune);
@@ -898,7 +898,7 @@ public:
 	void DamageRightShoulderNode(float Damage);
 	void DamageRightLegNode(float Damage);
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
-	float BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
+	float STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse);
 	void ClearLeapTarget();
 	bool BPShouldLimitForwardDirection();
 	void BPTimerNonDedicated();

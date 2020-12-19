@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -316,13 +316,13 @@ bool AStorageBox_TekGenerator_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.BPGetMultiUseEntries
-// (MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStorageBox_TekGenerator_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStorageBox_TekGenerator_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.BPGetMultiUseEntries");
 

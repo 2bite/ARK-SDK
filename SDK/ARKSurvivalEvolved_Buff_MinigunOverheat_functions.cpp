@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,14 +70,14 @@ void ABuff_MinigunOverheat_C::ReceiveBeginPlay()
 
 
 // Function Buff_MinigunOverheat.Buff_MinigunOverheat_C.BPDrawBuffStatusHUD
-// (NetReliable, Exec, Event, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MinigunOverheat_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_MinigunOverheat_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MinigunOverheat.Buff_MinigunOverheat_C.BPDrawBuffStatusHUD");
 

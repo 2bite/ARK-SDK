@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void ABuff_ChargeEmitterWeapon_C::IsWeaponFiring(bool* IsFiring)
 
 
 // Function Buff_ChargeEmitterWeapon.Buff_ChargeEmitterWeapon_C.InitializeEmitter
-// (NetRequest, Exec, Native, Event, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, Const)
 
 void ABuff_ChargeEmitterWeapon_C::InitializeEmitter()
 {
@@ -44,7 +44,6 @@ void ABuff_ChargeEmitterWeapon_C::InitializeEmitter()
 	ABuff_ChargeEmitterWeapon_C_InitializeEmitter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

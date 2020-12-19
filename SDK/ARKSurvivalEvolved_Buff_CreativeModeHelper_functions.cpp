@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,7 +62,7 @@ void ABuff_CreativeModeHelper_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, fl
 
 
 // Function Buff_CreativeModeHelper.Buff_CreativeModeHelper_C.BuffTickServer
-// (NetReliable, NetRequest, Event, NetResponse, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -74,6 +74,7 @@ void ABuff_CreativeModeHelper_C::BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

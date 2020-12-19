@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ struct AIceJumper_AIController_BP_C_BPUpdateBestTarget_Params
 struct AIceJumper_AIController_BP_C_DoLOS_Params
 {
 	struct FVector                                     ViewLocationOffset;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Update LOSChecks

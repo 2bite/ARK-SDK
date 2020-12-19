@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,8 +36,8 @@ public:
 
 	void CalculateDoTDamage(float TimeSinceLastDoT, float* Damage);
 	void BuffTickServer(float* DeltaTime);
-	void Do_Damage_Over_TimeFn(double LastDotTime);
-	float BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification);
+	void STATIC_Do_Damage_Over_TimeFn(double LastDotTime);
+	float STATIC_BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification);
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason);
 	void UserConstructionScript();

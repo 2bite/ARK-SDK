@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.validate proper impact location
-// (Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ATekCruiseMissile_Character_BP_C::STATIC_validate_proper_impact_location()
+struct FVector ATekCruiseMissile_Character_BP_C::validate_proper_impact_location()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.validate proper impact location");
 
@@ -202,7 +202,7 @@ bool ATekCruiseMissile_Character_BP_C::BPServerHandleNetExecCommand(class APlaye
 
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BP_OnJumpPressed
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Event, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 
 void ATekCruiseMissile_Character_BP_C::STATIC_BP_OnJumpPressed()
 {
@@ -211,7 +211,6 @@ void ATekCruiseMissile_Character_BP_C::STATIC_BP_OnJumpPressed()
 	ATekCruiseMissile_Character_BP_C_BP_OnJumpPressed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,7 +219,7 @@ void ATekCruiseMissile_Character_BP_C::STATIC_BP_OnJumpPressed()
 
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BPAdjustDamage
-// (Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -230,7 +229,7 @@ void ATekCruiseMissile_Character_BP_C::STATIC_BP_OnJumpPressed()
 // struct FHitResult*             PointHitInfo                   (Parm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ATekCruiseMissile_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
+float ATekCruiseMissile_Character_BP_C::STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BPAdjustDamage");
 
@@ -393,7 +392,7 @@ bool ATekCruiseMissile_Character_BP_C::BP_InterceptMoveRight(float* AxisValue)
 
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -421,14 +420,14 @@ TArray<struct FMultiUseEntry> ATekCruiseMissile_Character_BP_C::BPGetMultiUseEnt
 
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.Damage Actors By Explosion Radius
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Event, NetResponse, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Override_Damage                (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  Damage_Type                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           really_damage                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCruiseMissile_Character_BP_C::STATIC_Damage_Actors_By_Explosion_Radius(class AActor* Actor, float Override_Damage, class UClass* Damage_Type, bool really_damage)
+void ATekCruiseMissile_Character_BP_C::Damage_Actors_By_Explosion_Radius(class AActor* Actor, float Override_Damage, class UClass* Damage_Type, bool really_damage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.Damage Actors By Explosion Radius");
 
@@ -439,7 +438,6 @@ void ATekCruiseMissile_Character_BP_C::STATIC_Damage_Actors_By_Explosion_Radius(
 	params.really_damage = really_damage;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -521,9 +519,9 @@ bool ATekCruiseMissile_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovem
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ServerIsFiringItemInInventory
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekCruiseMissile_Character_BP_C::ServerIsFiringItemInInventory(bool* Retval)
+void ATekCruiseMissile_Character_BP_C::ServerIsFiringItemInInventory(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ServerIsFiringItemInInventory");
 
@@ -535,8 +533,8 @@ void ATekCruiseMissile_Character_BP_C::ServerIsFiringItemInInventory(bool* Retva
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -761,7 +759,7 @@ void ATekCruiseMissile_Character_BP_C::BPGetHUDElements(class APlayerController*
 
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ReceiveTick
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Static, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -783,9 +781,9 @@ void ATekCruiseMissile_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ScoutIsFirstPerson
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekCruiseMissile_Character_BP_C::ScoutIsFirstPerson(bool* Retval)
+void ATekCruiseMissile_Character_BP_C::ScoutIsFirstPerson(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ScoutIsFirstPerson");
 
@@ -797,8 +795,8 @@ void ATekCruiseMissile_Character_BP_C::ScoutIsFirstPerson(bool* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -1016,12 +1014,12 @@ struct FVector ATekCruiseMissile_Character_BP_C::BPGetFPVViewLocation(class APri
 
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.Dash
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Impulse                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCruiseMissile_Character_BP_C::Dash(const struct FVector& Direction, float Impulse)
+void ATekCruiseMissile_Character_BP_C::STATIC_Dash(const struct FVector& Direction, float Impulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.Dash");
 
@@ -1302,15 +1300,15 @@ void ATekCruiseMissile_Character_BP_C::ReplicateInputVector(const struct FVector
 // ()
 // Parameters:
 // class AActor*                  other_actor                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 hit_normal                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Hit_Normal                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCruiseMissile_Character_BP_C::on_hit_something(class AActor* other_actor, const struct FVector& hit_normal)
+void ATekCruiseMissile_Character_BP_C::on_hit_something(class AActor* other_actor, const struct FVector& Hit_Normal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.on hit something");
 
 	ATekCruiseMissile_Character_BP_C_on_hit_something_Params params;
 	params.other_actor = other_actor;
-	params.hit_normal = hit_normal;
+	params.Hit_Normal = Hit_Normal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2029,14 +2027,14 @@ void ATekCruiseMissile_Character_BP_C::warn_time_almost_up()
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.Explode
 // ()
 // Parameters:
-// struct FVector                 hit_normal                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Hit_Normal                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCruiseMissile_Character_BP_C::Explode(const struct FVector& hit_normal)
+void ATekCruiseMissile_Character_BP_C::Explode(const struct FVector& Hit_Normal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.Explode");
 
 	ATekCruiseMissile_Character_BP_C_Explode_Params params;
-	params.hit_normal = hit_normal;
+	params.Hit_Normal = Hit_Normal;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,9 +79,9 @@ void AWyvern_Character_BP_Base_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.SpawnNestEgg
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
 
-void AWyvern_Character_BP_Base_C::STATIC_SpawnNestEgg()
+void AWyvern_Character_BP_Base_C::SpawnNestEgg()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.SpawnNestEgg");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,7 +109,7 @@ struct ABuff_ChargeEmitterStructure_ChargeLantern_C_ChargeVariableEvent_Params
 	bool*                                              bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double*                                            dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int*                                               iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.InitializeEmitter

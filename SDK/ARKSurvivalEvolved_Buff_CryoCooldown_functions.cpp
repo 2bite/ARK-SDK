@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,14 +67,14 @@ void ABuff_CryoCooldown_C::ReceiveBeginPlay()
 
 
 // Function Buff_CryoCooldown.Buff_CryoCooldown_C.BPDrawBuffStatusHUD
-// (Net, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_CryoCooldown_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_CryoCooldown_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CryoCooldown.Buff_CryoCooldown_C.BPDrawBuffStatusHUD");
 

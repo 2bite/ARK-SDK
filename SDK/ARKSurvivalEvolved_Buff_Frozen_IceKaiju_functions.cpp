@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -267,11 +267,11 @@ void ABuff_Frozen_IceKaiju_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BuffTickServer
-// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Frozen_IceKaiju_C::STATIC_BuffTickServer(float* DeltaTime)
+void ABuff_Frozen_IceKaiju_C::BuffTickServer(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BuffTickServer");
 

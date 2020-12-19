@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -92,7 +92,7 @@ void ABuff_FrozenEffect_Base_C::ReceiveDestroyed()
 
 
 // Function Buff_FrozenEffect_Base.Buff_FrozenEffect_Base_C.BPSetupForInstigator
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -104,7 +104,6 @@ void ABuff_FrozenEffect_Base_C::STATIC_BPSetupForInstigator(class AActor** ForIn
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

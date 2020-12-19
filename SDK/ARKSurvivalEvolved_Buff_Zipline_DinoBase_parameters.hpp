@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ struct ABuff_Zipline_DinoBase_C_GetDistanceToAnchor_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CanZiplineFlip
 struct ABuff_Zipline_DinoBase_C_CanZiplineFlip_Params
 {
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.ResetZiplineSpeedAndAcceleration
@@ -55,7 +55,7 @@ struct ABuff_Zipline_DinoBase_C_RotationNearlyEqual_Params
 	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    rotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ErrorTolerance;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.ReceiveBeginPlay
@@ -194,7 +194,7 @@ struct ABuff_Zipline_DinoBase_C_SetZiplineControlRotation_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.PlayTurnAnimation
 struct ABuff_Zipline_DinoBase_C_PlayTurnAnimation_Params
 {
-	class UAnimMontage*                                override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                Override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -290,7 +290,7 @@ struct ABuff_Zipline_DinoBase_C_CalculateZiplineMaxVelocity_Params
 {
 	float                                              Accleration;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Length;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              maxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxVelocity;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CalculateZiplineAcceleration

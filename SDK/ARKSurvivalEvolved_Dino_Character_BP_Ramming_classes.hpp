@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -64,7 +64,7 @@ public:
 	struct FRotator                                    CallFunc_K2_GetActorRotation_ReturnValue;                 // 0x2288(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_Conv_RotatorToVector_ReturnValue;                // 0x2294(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_Multiply_VectorVector_ReturnValue;               // 0x22A0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Duration;                              // 0x22AC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x22AC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x22B0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue2;                           // 0x22B1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_CustomEvent_HitSomething4;                         // 0x22B2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -167,7 +167,7 @@ public:
 
 	void STATIC_ToString(const class FString& CallerName, class FString* DebugText);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
-	void GetStructureDamageScaled(float CurrentValue, float MinValue, float MaxValue, float velocityAlpha, float* ScaledDamage);
+	void GetStructureDamageScaled(float CurrentValue, float MinValue, float MaxValue, float VelocityAlpha, float* ScaledDamage);
 	void GetRammingSpeedMax(float* MaxSpeed);
 	void CanTickStartedRam(bool* Tick);
 	void DrainStatusValue(TEnumAsByte<EPrimalCharacterStatusValue> Type, float amount, bool* HasRemainingValue);

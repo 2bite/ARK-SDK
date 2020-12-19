@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ public:
 	float                                              FishWeightQuantityQualityPower;                           // 0x0F94(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ExtraLootQualityMultiplier;                               // 0x0F98(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              GlobalFinalQualityMultiplier;                             // 0x0F9C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AShooterProjectile*                          net_projectile;                                           // 0x0FA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AShooterProjectile*                          Net_Projectile;                                           // 0x0FA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	double                                             Last_Time_Canceled;                                       // 0x0FA8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Durability_Cost_On_Cancel_Cast;                           // 0x0FB0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              distance_to_player_before_fully_capturing_fish;           // 0x0FB4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -510,8 +510,8 @@ public:
 	void Get_Initial_Fish_Location_Offset(class AActor* fish, struct FVector* Offset);
 	bool BPRemainEquipped();
 	bool BPCanEquip(class AShooterCharacter** ByCharacter);
-	struct FVector Reel_Velocity(const struct FVector& Weapon_Location, class AProjFishingNet_C* net_projectile);
-	void BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	struct FVector Reel_Velocity(const struct FVector& Weapon_Location, class AProjFishingNet_C* Net_Projectile);
+	void STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void Give_Fish_Loot(class UClass* Class, class APrimalDinoCharacter* Outer, float Amount_Multiplier);
 	void Generate_Fish_Meat(class APrimalDinoCharacter* fish);
 	void Check_For_Fish_Collision();

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_HyperdriveValueTextBlock_Text_1
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -24,6 +24,7 @@ struct FText USpaceWhaleHUD_C::STATIC_Get_HyperdriveValueTextBlock_Text_1()
 	USpaceWhaleHUD_C_Get_HyperdriveValueTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ struct FText USpaceWhaleHUD_C::STATIC_Get_HyperdriveValueTextBlock_Text_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Set Progress Bar Foreground Color
-// (NetReliable, NetRequest, Native, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintPure)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UObject*                 ProgressBarObject              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            LinearColor                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -78,17 +79,18 @@ float USpaceWhaleHUD_C::Get_CosmicPowerBelowProgressBar_Percent_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_CosmicPowerValueTextBlock_Text_1
-// (NetReliable, Exec, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText USpaceWhaleHUD_C::Get_CosmicPowerValueTextBlock_Text_1()
+struct FText USpaceWhaleHUD_C::STATIC_Get_CosmicPowerValueTextBlock_Text_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_CosmicPowerValueTextBlock_Text_1");
 
 	USpaceWhaleHUD_C_Get_CosmicPowerValueTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,18 +143,17 @@ float USpaceWhaleHUD_C::Get_HyperdriveProgressBar_Percent_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get BombsHintText 0
-// (Net, NetRequest, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText USpaceWhaleHUD_C::Get_BombsHintText_0()
+struct FText USpaceWhaleHUD_C::STATIC_Get_BombsHintText_0()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get BombsHintText 0");
 
 	USpaceWhaleHUD_C_Get_BombsHintText_0_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

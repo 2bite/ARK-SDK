@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetDebugInfoString
-// (Exec, Event, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetRequest, Native, Event, NetResponse, Static, Public, Protected, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString AWeapScoutRemote_C::BPGetDebugInfoString()
+class FString AWeapScoutRemote_C::STATIC_BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScoutRemote.WeapScoutRemote_C.BPGetDebugInfoString");
 
 	AWeapScoutRemote_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,17 +56,18 @@ bool AWeapScoutRemote_C::AllowTargeting()
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetTargetingTooltipInfoLabel
-// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText AWeapScoutRemote_C::BPGetTargetingTooltipInfoLabel()
+struct FText AWeapScoutRemote_C::STATIC_BPGetTargetingTooltipInfoLabel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScoutRemote.WeapScoutRemote_C.BPGetTargetingTooltipInfoLabel");
 
 	AWeapScoutRemote_C_BPGetTargetingTooltipInfoLabel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -292,7 +294,7 @@ void AWeapScoutRemote_C::BPOnStopTargeting(bool* bFromGamepadLeft)
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.ReceiveTick
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, NetMulticast, Public, Protected, NetClient, BlueprintEvent, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -304,7 +306,6 @@ void AWeapScoutRemote_C::ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -546,7 +547,7 @@ void AWeapScoutRemote_C::Scout_Launched(class AScout_Character_BP_C* Scout)
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetActorForTargetingTooltip
-// (NetReliable, Native, Event, NetResponse, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -568,7 +569,7 @@ class AActor* AWeapScoutRemote_C::BPGetActorForTargetingTooltip()
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPWeaponCanFire
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Event, NetMulticast, Public, Protected, NetClient, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -579,7 +580,6 @@ bool AWeapScoutRemote_C::BPWeaponCanFire()
 	AWeapScoutRemote_C_BPWeaponCanFire_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -389,9 +389,9 @@ public:
 	class AShooterCharacter*                           K2Node_CustomEvent_theRider;                              // 0x3640(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x3648(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue4;                        // 0x3649(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_CustomEvent_isActive;                              // 0x364A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_CustomEvent_IsActive;                              // 0x364A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData57[0x1];                                       // 0x364B(0x0001) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x364C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x364C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Is_ClimberClimbing_result;                       // 0x3650(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      CallFunc_GetRockDrakeStateOverrideIndex_index;            // 0x3651(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue5;                        // 0x3652(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -409,7 +409,7 @@ public:
 	bool                                               CallFunc_Greater_IntInt_ReturnValue3;                     // 0x3664(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData58[0x3];                                       // 0x3665(0x0003) MISSED OFFSET
 	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x3668(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay;                                 // 0x366C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay;                                 // 0x366C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x3670(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue10;                       // 0x3678(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData59[0x7];                                       // 0x3679(0x0007) MISSED OFFSET
@@ -550,7 +550,7 @@ public:
 	void ReceiveDestroyed();
 	void CanClimberStopNonDediTick_Controlled(bool* Result);
 	void OnJumped();
-	void STATIC_Climber_AI_ClimbingCanAttack(int* AttackIndex, bool* Result);
+	void Climber_AI_ClimbingCanAttack(int* AttackIndex, bool* Result);
 	bool BPOnStartJump();
 	void Climber_AI_CheckForAttackWhileClimbing();
 	bool BPHandleRightShoulderButton();
@@ -646,7 +646,7 @@ public:
 	void NetSetUseCamo(bool newUse);
 	void IsNormalClimbable(struct FVector* Normal, bool* isAverageNormal, bool* Result);
 	void Get_Correct_Surface_Trace_OffsetTransforms(bool* overrideUseMap, TArray<bool>* newUseMp, TArray<struct UObject_FTransform>* offsetTransforms, TArray<int>* TraceIndeces);
-	void Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing);
+	void Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	void UserConstructionScript();

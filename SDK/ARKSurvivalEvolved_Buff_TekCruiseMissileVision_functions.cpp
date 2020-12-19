@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPGetDebugInfoString
-// (Net, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, Exec, Native, NetResponse, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ABuff_TekCruiseMissileVision_C::STATIC_BPGetDebugInfoString()
+class FString ABuff_TekCruiseMissileVision_C::BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPGetDebugInfoString");
 
@@ -75,9 +75,9 @@ void ABuff_TekCruiseMissileVision_C::ReceiveBeginPlay()
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* Retval)
+void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout");
 
@@ -89,8 +89,8 @@ void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -185,7 +185,7 @@ void ABuff_TekCruiseMissileVision_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPDrawBuffStatusHUD
-// (NetResponse, Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, Exec, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)

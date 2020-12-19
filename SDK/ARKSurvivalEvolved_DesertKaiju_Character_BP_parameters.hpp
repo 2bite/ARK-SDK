@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,7 +59,7 @@ struct ADesertKaiju_Character_BP_C_BPCanBaseOnCharacter_Params
 struct ADesertKaiju_Character_BP_C_ActorIsKaiju_Params
 {
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BPDinoARKDownloadedEnd
@@ -94,7 +94,7 @@ struct ADesertKaiju_Character_BP_C_InterpSpawnInMICs_Params
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.PreventLocomotion_1
 struct ADesertKaiju_Character_BP_C_PreventLocomotion_1_Params
 {
-	bool                                               Prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.MaybeStunDesertKaiju
@@ -172,7 +172,7 @@ struct ADesertKaiju_Character_BP_C_UpdateLightningTargetVFXLocation_Params
 	struct FVector                                     WorldLocation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    WorldRotation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  HitResult;                                                // (Parm)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.FindClosestSocketName
@@ -275,7 +275,7 @@ struct ADesertKaiju_Character_BP_C_PreventLightningAoEField_Params
 {
 	struct FVector                                     ExplosionLoc;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               OnKaiju;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.FindHUDOffset
@@ -312,7 +312,7 @@ struct ADesertKaiju_Character_BP_C_BPDoAttack_Params
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.PreventLocomotion
 struct ADesertKaiju_Character_BP_C_PreventLocomotion_Params
 {
-	bool                                               Prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Update Locomotion
@@ -382,7 +382,7 @@ struct ADesertKaiju_Character_BP_C_ShortestAngleDistance_Params
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.GetLookDir
 struct ADesertKaiju_Character_BP_C_GetLookDir_Params
 {
-	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.LightningTrace
@@ -390,7 +390,7 @@ struct ADesertKaiju_Character_BP_C_LightningTrace_Params
 {
 	bool                                               FireLightning;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ValidTarget;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     HitLoc;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     hitLoc;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               HitActor;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     HitNormal;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               SuccessFiredLightning;                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -550,7 +550,7 @@ struct ADesertKaiju_Character_BP_C_SummonLightning_Params
 struct ADesertKaiju_Character_BP_C_Mutli_ExposeNodes_Params
 {
 	TEnumAsByte<EDesertKaiju_ControlNodes>             Node;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               expose;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Expose;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Multi_SetNodeColor
@@ -620,7 +620,7 @@ struct ADesertKaiju_Character_BP_C_CtS_SetRiderControlFlockMode_Params
 struct ADesertKaiju_Character_BP_C_Multi_ExposeFauxNodes_Params
 {
 	bool                                               LFin;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               expose;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Expose;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Multi_SetFauxNodeColor
@@ -682,28 +682,28 @@ struct ADesertKaiju_Character_BP_C_Server_UpdateRiderLightningStrikeCharges_Para
 struct ADesertKaiju_Character_BP_C_Passenger1DelayedSetInterpSpeed_Params
 {
 	class APrimalCharacter*                            Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               useOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger2DelayedSetInterpSpeed
 struct ADesertKaiju_Character_BP_C_Passenger2DelayedSetInterpSpeed_Params
 {
 	class APrimalCharacter*                            Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               useOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger3DelayedSetInterpSpeed
 struct ADesertKaiju_Character_BP_C_Passenger3DelayedSetInterpSpeed_Params
 {
 	class APrimalCharacter*                            Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               useOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger4DelayedSetInterpSpeed
 struct ADesertKaiju_Character_BP_C_Passenger4DelayedSetInterpSpeed_Params
 {
 	class APrimalCharacter*                            Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               useOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Multi_InterpLeftNode

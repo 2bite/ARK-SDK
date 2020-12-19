@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -208,8 +208,8 @@ public:
 	bool ShieldActive();
 	bool HasShield();
 	void GetRelatedTekArmorRef(class UPrimalItemArmor_Base_Tek_C** tekArmorRef);
-	void Can_Decrease_Element_Ammo(int AmountToDecrease, bool IsForChargedState, bool* CanDecrease);
-	void TryDecreaseElementAmmo(int AmountToDecrease, bool IsForChargedState);
+	void Can_Decrease_Element_Ammo(int AmountToDecrease, bool isForChargedState, bool* CanDecrease);
+	void TryDecreaseElementAmmo(int AmountToDecrease, bool isForChargedState);
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
 	void CanPhysicallyTekPunch(bool* Result);
 	void Should_Damage_Actor(class AActor** Victim, bool* Result);
@@ -231,7 +231,7 @@ public:
 	void Client_SetTekPunchState(TEnumAsByte<E_TekGlovePunchState> NewState);
 	float GetTimeToRocketPunchTarget(const struct FVector& TargetLocation);
 	void CheckForTargetsWhileRocketPunching(bool* punchNow);
-	void Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** audio);
+	void Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** Audio);
 	void OnRep_CurrentPunchState();
 	struct FVector GetRelativeCenterOfMass(class APrimalCharacter* Character);
 	void DrawBuffFloatingHUD(int* BuffIndex, class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ public:
 
 
 	void IsDinoRunning(class ADino_Character_BP_Climber_C** Dino, bool* Running);
-	void GetStrafeBlendspacePlayRate(float* forwardVelocity, float* RightVelocity, struct FVector2D* BlendspaceInputs, float* BlendspacePlayRate);
+	void GetStrafeBlendspacePlayRate(float* forwardVelocity, float* rightVelocity, struct FVector2D* BlendspaceInputs, float* BlendspacePlayRate);
 	void ShouldPlayClimbRunAnim(bool* PlayClimbRun);
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void BlueprintInitializeAnimation();

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -132,7 +132,7 @@ void ALeedsichthys_Character_BP_C::GetHarvestingIndex(int* index)
 
 
 // Function Leedsichthys_Character_BP.Leedsichthys_Character_BP_C.BPGetMultiUseEntries
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Public, Private, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -146,7 +146,6 @@ TArray<struct FMultiUseEntry> ALeedsichthys_Character_BP_C::BPGetMultiUseEntries
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

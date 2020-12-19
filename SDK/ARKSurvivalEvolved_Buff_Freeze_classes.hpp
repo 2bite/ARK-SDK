@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -107,7 +107,7 @@ public:
 	void STATIC_CreateMIC();
 	void BuffTickServer(float* DeltaTime);
 	void ApplyFrozenDebuff();
-	void STATIC_AddFreeze(float amount, float Time);
+	void AddFreeze(float amount, float Time);
 	void CheckDeactivateCondition();
 	void BPActivated(class AActor** ForInstigator);
 	void BPDeactivated(class AActor** ForInstigator);

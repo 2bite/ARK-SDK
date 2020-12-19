@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,7 +45,7 @@ public:
 	float                                              NotifyNeighborCherufeOfEggRange;                          // 0x2230(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TamedKnockedOutTorpRecoveryRateMultiplier;                // 0x2234(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bSpawnNestEgg;                                            // 0x2238(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Retval;                                                   // 0x2239(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               retVal;                                                   // 0x2239(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsProjectileTargeting;                                    // 0x223A(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x1];                                       // 0x223B(0x0001) MISSED OFFSET
 	float                                              ProjectileTargetVertAngleOffset;                          // 0x223C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -105,7 +105,7 @@ public:
 	TArray<struct FName>                               VentHeatProjectileSocketNames;                            // 0x2470(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	int                                                SpawningBatchIndex;                                       // 0x2480(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PushBackRadius;                                           // 0x2484(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Testfloat;                                                // 0x2488(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TestFloat;                                                // 0x2488(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CurrentChargeAmountForClient;                             // 0x248C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CurrentVentVFXKillZPercentage;                            // 0x2490(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TargetVentVFXKillZPercentage;                             // 0x2494(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -305,7 +305,7 @@ public:
 	void UpdateAllowMating();
 	void UpdateForgeCharging();
 	float BP_GetCustomModifier_MaxSpeed();
-	void STATIC_UpdateTargetingAndAiming(float DeltaTime);
+	void UpdateTargetingAndAiming(float DeltaTime);
 	void BPTimerNonDedicated();
 	void BPTimerServer();
 	bool BP_InterceptMoveForward(float* AxisValue);
@@ -314,7 +314,7 @@ public:
 	void BPOverrideCameraViewTarget(struct FName* CurrentCameraMode, struct FVector* DesiredCameraLocation, struct FRotator* DesiredCameraRotation, float* DesiredFOV, bool* bOverrideCameraLocation, struct FVector* CameraLocation, bool* bOverrideCameraRotation, struct FRotator* CameraRotation, bool* bOverrideCameraFOV, float* CameraFOV);
 	void Update_Targeting_Location_Particle(bool IsVisialbe, const struct FVector& Location);
 	void CheckRaining(bool* ThisCharacterIsOpenToSkyAndItIsRaining);
-	void STATIC_SpawnNestEgg();
+	void SpawnNestEgg();
 	void BPNotifySetRider(class AShooterCharacter** RiderSetting);
 	void BPNotifyClearRider(class AShooterCharacter** RiderClearing);
 	void ToggleInOutWaterVFX(bool InWater);
@@ -323,7 +323,7 @@ public:
 	void UpdateVFX(float DeltaTime);
 	void PushBackPawns();
 	void OnRep_IsProjectileTargeting();
-	void STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void SpawnVentProjectiles();
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	float GetVentForgeStaminaCost();
@@ -337,7 +337,7 @@ public:
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void ProjectileTrySubtractFood(bool* Success);
-	void STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
+	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	bool BPHandleOnStopTargeting();
 	bool BPHandleControllerInitiatedAttack(int* AttackIndex);
 	void BPDoAttack(int* AttackIndex);

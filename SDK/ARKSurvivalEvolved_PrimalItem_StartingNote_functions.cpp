@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,7 +68,7 @@ class UTexture2D* UPrimalItem_StartingNote_C::BPGetItemIcon(class AShooterPlayer
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.IsLocalImplant
-// (Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class AShooterPlayerController* ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsLocal                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -117,7 +117,7 @@ class FString UPrimalItem_StartingNote_C::BPGetItemName(class FString* ItemNameI
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.Get Survival Quotient String
-// (NetReliable, Native, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
 // Parameters:
 // TArray<float>                  SurvData                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class FString                  OutString                      (Parm, OutParm, ZeroConstructor)
@@ -143,7 +143,7 @@ void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<float>* Sur
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemDescription
-// (Net, NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -160,6 +160,7 @@ class FString UPrimalItem_StartingNote_C::BPGetItemDescription(class FString* In
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,7 +171,7 @@ class FString UPrimalItem_StartingNote_C::BPGetItemDescription(class FString* In
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPPreInitializeItem
-// (Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class UWorld**                 OptionalInitWorld              (Parm, ZeroConstructor, IsPlainOldData)
 

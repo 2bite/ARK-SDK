@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct ASpino_Character_BP_C_BPDoAttack_Params
 struct ASpino_Character_BP_C_CanSwitchStances_Params
 {
 	bool                                               isBiped;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanSwitch;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               canSwitch;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Spino_Character_BP.Spino_Character_BP_C.BlueprintCanRiderAttack

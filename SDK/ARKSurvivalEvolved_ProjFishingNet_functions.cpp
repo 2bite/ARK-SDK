@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjFishingNet.ProjFishingNet_C.Trace For Fish and Add Them
-// (NetReliable, Exec, NetResponse, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, NetClient, Const)
 
 void AProjFishingNet_C::Trace_For_Fish_and_Add_Them()
 {
@@ -22,6 +22,7 @@ void AProjFishingNet_C::Trace_For_Fish_and_Add_Them()
 	AProjFishingNet_C_Trace_For_Fish_and_Add_Them_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +93,7 @@ void AProjFishingNet_C::ReceiveActorEndOverlap(class AActor** OtherActor)
 
 
 // Function ProjFishingNet.ProjFishingNet_C.ReceiveBeginPlay
-// (NetRequest, Exec, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, NetClient, Const)
 
 void AProjFishingNet_C::STATIC_ReceiveBeginPlay()
 {
@@ -101,6 +102,7 @@ void AProjFishingNet_C::STATIC_ReceiveBeginPlay()
 	AProjFishingNet_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,11 +147,11 @@ void AProjFishingNet_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AAc
 
 
 // Function ProjFishingNet.ProjFishingNet_C.ReceiveTick
-// (Native, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Public, Private, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjFishingNet_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void AProjFishingNet_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjFishingNet.ProjFishingNet_C.ReceiveTick");
 

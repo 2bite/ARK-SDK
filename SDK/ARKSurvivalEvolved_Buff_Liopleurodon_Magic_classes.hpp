@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,8 +44,8 @@ public:
 
 
 	void BPResetBuffStart();
-	void STATIC_BuffTickClient(float* DeltaTime);
-	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void BuffTickClient(float* DeltaTime);
+	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void UserConstructionScript();
 	void SpawnCrateBuffedParticle(class APrimalStructureItemContainer_SupplyCrate* TargetCrate);
 	void HideTimer(bool ShouldHide);

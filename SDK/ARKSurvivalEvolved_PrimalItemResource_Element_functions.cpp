@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ void UPrimalItemResource_Element_C::BPServerHandleItemNetExecCommand(class AShoo
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.FindShapeshifter
-// (Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APrimalDinoCharacter*    Shapeshifter                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           RetMounted                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -51,7 +51,6 @@ void UPrimalItemResource_Element_C::FindShapeshifter(class APrimalDinoCharacter*
 	UPrimalItemResource_Element_C_FindShapeshifter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +64,7 @@ void UPrimalItemResource_Element_C::FindShapeshifter(class APrimalDinoCharacter*
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPPreUseItem
-// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 
 void UPrimalItemResource_Element_C::STATIC_BPPreUseItem()
 {
@@ -82,12 +81,12 @@ void UPrimalItemResource_Element_C::STATIC_BPPreUseItem()
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPCanUse
-// (Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalItemResource_Element_C::BPCanUse(bool* bIgnoreCooldown)
+bool UPrimalItemResource_Element_C::STATIC_BPCanUse(bool* bIgnoreCooldown)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPCanUse");
 

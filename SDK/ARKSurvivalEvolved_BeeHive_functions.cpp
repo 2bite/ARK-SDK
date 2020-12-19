@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BeeHive.BeeHive_C.BlueprintDrawHUD
-// (Net, Exec, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Net, Exec, Native, Event, Static, MulticastDelegate, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABeeHive_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void ABeeHive_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BeeHive.BeeHive_C.BlueprintDrawHUD");
 
@@ -29,6 +29,7 @@ void ABeeHive_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -189,7 +190,7 @@ bool ABeeHive_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function BeeHive.BeeHive_C.BPGetMultiUseEntries
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Net, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -203,7 +204,6 @@ TArray<struct FMultiUseEntry> ABeeHive_C::BPGetMultiUseEntries(class APlayerCont
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

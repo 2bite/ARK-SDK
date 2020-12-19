@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_DifficultyIndex
 // ()
 // Parameters:
-// int                            Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UKingKaiju_Character_Interface_C::GetVar_DifficultyIndex(int* Return)
+void UKingKaiju_Character_Interface_C::GetVar_DifficultyIndex(int* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_DifficultyIndex");
 
@@ -29,17 +29,17 @@ void UKingKaiju_Character_Interface_C::GetVar_DifficultyIndex(int* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_InHordeMode
 // ()
 // Parameters:
-// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UKingKaiju_Character_Interface_C::GetVar_InHordeMode(bool* Return)
+void UKingKaiju_Character_Interface_C::GetVar_InHordeMode(bool* _return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_InHordeMode");
 
@@ -51,8 +51,8 @@ void UKingKaiju_Character_Interface_C::GetVar_InHordeMode(bool* Return)
 
 	fn->FunctionFlags = flags;
 
-	if (Return != nullptr)
-		*Return = params.Return;
+	if (_return != nullptr)
+		*_return = params._return;
 }
 
 

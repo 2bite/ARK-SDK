@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -575,15 +575,15 @@ struct AIchthyornis_Character_BP_C_DropCarriedAfterTime_Params
 {
 	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               dropDragged;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               dropCarried;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               DropCarried;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               restoreFollowingVariables;                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.dropCarried
-struct AIchthyornis_Character_BP_C_dropCarried_Params
+// Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DropCarried
+struct AIchthyornis_Character_BP_C_DropCarried_Params
 {
 	bool                                               dropDragged;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               dropCarried;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               DropCarried;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               restoreFollowingVariables;                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

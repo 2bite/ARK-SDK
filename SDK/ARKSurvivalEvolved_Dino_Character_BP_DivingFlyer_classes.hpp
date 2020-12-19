@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -130,7 +130,7 @@ public:
 	void ReduceDiverStamina(float cost);
 	void BP_OnStartLandingNotify();
 	void Get_Diving_Velocity_Mult_Ratio(float* Result);
-	void Get_Flyer_Dive_Velocity_Max(float* maxVelocity);
+	void Get_Flyer_Dive_Velocity_Max(float* MaxVelocity);
 	void Get_Flyer_Dive_Velocity_Ratio(float* Ratio);
 	void Has_Diving_Momentum(bool* Result);
 	void UpdateDivingFX();
@@ -147,7 +147,7 @@ public:
 	void Has_Diving_Momentum_Pure(bool* Result);
 	void BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode);
 	void Get_Flyer_Dive_Velocity_Ratio_Pure(float* Ratio);
-	void Get_Flyer_Dive_Velocity_MaxPure(float* maxVelocity);
+	void Get_Flyer_Dive_Velocity_MaxPure(float* MaxVelocity);
 	void CanFlyerDive(bool* Result);
 	void AllowDiving(bool* Result);
 	void Diving_Tick(float DeltaSeconds);

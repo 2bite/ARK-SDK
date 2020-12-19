@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemConsumable_Seed_DefensePlant.PrimalItemConsumable_Seed_DefensePlant_C.BPAllowRemoteAddToInventory
-// (Native, Event, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UPrimalInventoryComponent** invComp                        (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ByPC                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bRequestedByPlayer             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalItemConsumable_Seed_DefensePlant_C::BPAllowRemoteAddToInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer)
+bool UPrimalItemConsumable_Seed_DefensePlant_C::STATIC_BPAllowRemoteAddToInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_Seed_DefensePlant.PrimalItemConsumable_Seed_DefensePlant_C.BPAllowRemoteAddToInventory");
 

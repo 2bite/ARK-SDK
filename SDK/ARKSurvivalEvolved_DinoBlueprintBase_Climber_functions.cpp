@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,17 +40,17 @@ void UDinoBlueprintBase_Climber_C::IsDinoRunning(class ADino_Character_BP_Climbe
 // ()
 // Parameters:
 // float                          forwardVelocity                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RightVelocity                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          rightVelocity                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               BlendspaceInputs               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          BlendspacePlayRate             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoBlueprintBase_Climber_C::GetStrafeBlendspacePlayRate(float forwardVelocity, float RightVelocity, const struct FVector2D& BlendspaceInputs, float* BlendspacePlayRate)
+void UDinoBlueprintBase_Climber_C::GetStrafeBlendspacePlayRate(float forwardVelocity, float rightVelocity, const struct FVector2D& BlendspaceInputs, float* BlendspacePlayRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoBlueprintBase_Climber.DinoBlueprintBase_Climber_C.GetStrafeBlendspacePlayRate");
 
 	UDinoBlueprintBase_Climber_C_GetStrafeBlendspacePlayRate_Params params;
 	params.forwardVelocity = forwardVelocity;
-	params.RightVelocity = RightVelocity;
+	params.rightVelocity = rightVelocity;
 	params.BlendspaceInputs = BlendspaceInputs;
 
 	auto flags = fn->FunctionFlags;

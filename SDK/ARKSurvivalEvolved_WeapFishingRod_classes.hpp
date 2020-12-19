@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,7 +48,7 @@ public:
 	bool                                               AllowCableDraw;                                           // 0x0E28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x0E29(0x0003) MISSED OFFSET
 	float                                              SnareStartTime;                                           // 0x0E2C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               canSnare;                                                 // 0x0E30(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CanSnare;                                                 // 0x0E30(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x3];                                       // 0x0E31(0x0003) MISSED OFFSET
 	float                                              BaitMinSnareTime;                                         // 0x0E34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FFishSnareData>                      FishSnareTimes;                                           // 0x0E38(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -181,7 +181,7 @@ public:
 	void Get_Reeled_Fish_Target_Location(struct FVector* TargetLocation);
 	void UpdateBaitMeshLocation();
 	void PlayFishAttackAnimation();
-	void IsPointInWater(const struct FVector& Point, bool* Return);
+	void IsPointInWater(const struct FVector& Point, bool* _return);
 	void HandleReleasingFish();
 	void OnInstigatorPlayDyingEvent();
 	void StartUnequipEvent();
@@ -189,20 +189,20 @@ public:
 	void UpdateToBeSnaredFish();
 	void Finish_SnaringFish();
 	void OnRGKeySuccess();
-	void TugFishingCable(int remainingMoves);
+	void STATIC_TugFishingCable(int remainingMoves);
 	void GetReelingGameDuration(class APrimalDinoCharacter* ReeledFish, float* Duration);
 	void OnStartPlayAnimation();
 	void StartSecondaryActionEvent();
-	void CanSnareFish(class APrimalDinoCharacter* fish, bool* canSnare);
+	void CanSnareFish(class APrimalDinoCharacter* fish, bool* CanSnare);
 	void GenerateRandomKeys(int NumSets, int NumSetKeys, TArray<struct FKey>* Keys);
 	void FishSnared(class APrimalDinoCharacter* fish);
-	void STATIC_UpdateSurroundingPrey();
-	void GetCableEndPoint(float DeltaTime, struct FVector* EndPoint);
+	void UpdateSurroundingPrey();
+	void STATIC_GetCableEndPoint(float DeltaTime, struct FVector* EndPoint);
 	void StartFishing(const struct FVector& BaitTargetLocation, const struct FVector& BaitWaterSurfaceLocation);
 	void OnFishReleased(class APrimalDinoCharacter* fish);
 	void OnFishSnared(class APrimalDinoCharacter* fish);
 	void ReleaseReeledFish();
-	void CaughtFish(class APrimalDinoCharacter* CaughtFish);
+	void STATIC_CaughtFish(class APrimalDinoCharacter* CaughtFish);
 	void ReelingGameFinished(bool bSuccess);
 	void StartReelingGame(class APrimalDinoCharacter* ReeledFish);
 	void End_Fishing(bool releaseFish);

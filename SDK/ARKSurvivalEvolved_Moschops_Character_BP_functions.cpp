@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -269,7 +269,7 @@ float AMoschops_Character_BP_C::BPModifyHarvestingQuantity(float* originalQuanti
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.BPModifyHarvestingWeightsArray
-// (NetReliable, Native, NetResponse, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TArray<float>                  resourceWeightsIn              (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<class UPrimalItem*>     resourceItems                  (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -318,7 +318,7 @@ void AMoschops_Character_BP_C::Harvest_Multiplier_Level_Up(int UseEntryIndex)
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.MakeUseEntryString
-// (NetReliable, Exec, Event, NetResponse, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -331,6 +331,7 @@ class FString AMoschops_Character_BP_C::MakeUseEntryString(int index)
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -366,17 +367,18 @@ bool AMoschops_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.Add Level Up Entries
-// (NetRequest, Exec, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TArray<struct FMultiUseEntry>  FullEntryList                  (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AMoschops_Character_BP_C::STATIC_Add_Level_Up_Entries(TArray<struct FMultiUseEntry>* FullEntryList)
+void AMoschops_Character_BP_C::Add_Level_Up_Entries(TArray<struct FMultiUseEntry>* FullEntryList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Moschops_Character_BP.Moschops_Character_BP_C.Add Level Up Entries");
 
 	AMoschops_Character_BP_C_Add_Level_Up_Entries_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -388,13 +390,13 @@ void AMoschops_Character_BP_C::STATIC_Add_Level_Up_Entries(TArray<struct FMultiU
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.BPGetMultiUseEntries
-// (Net, Native, NetMulticast, Public, Private, Delegate, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AMoschops_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AMoschops_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Moschops_Character_BP.Moschops_Character_BP_C.BPGetMultiUseEntries");
 
@@ -416,7 +418,7 @@ TArray<struct FMultiUseEntry> AMoschops_Character_BP_C::BPGetMultiUseEntries(cla
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.UserConstructionScript
-// (Exec, Native, Event, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 
 void AMoschops_Character_BP_C::STATIC_UserConstructionScript()
 {

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Cannon_SM.Cannon_SM_C.IsValidToFire
-// (NetRequest, Native, Event, Static, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Static, NetMulticast, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ValidToFire                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -24,7 +24,6 @@ void ACannon_SM_C::STATIC_IsValidToFire(bool* ValidToFire)
 	ACannon_SM_C_IsValidToFire_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +60,7 @@ bool ACannon_SM_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function Cannon_SM.Cannon_SM_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -75,6 +74,7 @@ TArray<struct FMultiUseEntry> ACannon_SM_C::STATIC_BPGetMultiUseEntries(class AP
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

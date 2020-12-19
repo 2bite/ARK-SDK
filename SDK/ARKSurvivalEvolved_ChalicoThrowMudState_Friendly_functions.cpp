@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ChalicoThrowMudState_Friendly.ChalicoThrowMudState_Friendly_C.BPRangedAttack
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintPure, Const, NetValidate)
+// (Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 TargetLocation                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 TargetVelocity                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -25,7 +25,6 @@ void UChalicoThrowMudState_Friendly_C::STATIC_BPRangedAttack(struct FVector* Tar
 	UChalicoThrowMudState_Friendly_C_BPRangedAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

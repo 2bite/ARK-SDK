@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Cruise_Missile_MaintainCameraClient.Buff_Cruise_Missile_MaintainCameraClient_C.BPHandleOnStartFire
-// (Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Cruise_Missile_MaintainCameraClient_C::BPHandleOnStartFire(bool* bFromGamepad)
+void ABuff_Cruise_Missile_MaintainCameraClient_C::STATIC_BPHandleOnStartFire(bool* bFromGamepad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Cruise_Missile_MaintainCameraClient.Buff_Cruise_Missile_MaintainCameraClient_C.BPHandleOnStartFire");
 
@@ -55,7 +55,7 @@ bool ABuff_Cruise_Missile_MaintainCameraClient_C::BPPreventFirstPerson()
 
 
 // Function Buff_Cruise_Missile_MaintainCameraClient.Buff_Cruise_Missile_MaintainCameraClient_C.BPOverrideCameraViewTarget
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct FName*                  CurrentCameraMode              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                DesiredCameraLocation          (Parm, ZeroConstructor, IsPlainOldData)
@@ -68,7 +68,7 @@ bool ABuff_Cruise_Missile_MaintainCameraClient_C::BPPreventFirstPerson()
 // bool                           bOverrideCameraFOV             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          CameraFOV                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Cruise_Missile_MaintainCameraClient_C::BPOverrideCameraViewTarget(struct FName* CurrentCameraMode, struct FVector* DesiredCameraLocation, struct FRotator* DesiredCameraRotation, float* DesiredFOV, bool* bOverrideCameraLocation, struct FVector* CameraLocation, bool* bOverrideCameraRotation, struct FRotator* CameraRotation, bool* bOverrideCameraFOV, float* CameraFOV)
+void ABuff_Cruise_Missile_MaintainCameraClient_C::STATIC_BPOverrideCameraViewTarget(struct FName* CurrentCameraMode, struct FVector* DesiredCameraLocation, struct FRotator* DesiredCameraRotation, float* DesiredFOV, bool* bOverrideCameraLocation, struct FVector* CameraLocation, bool* bOverrideCameraRotation, struct FRotator* CameraRotation, bool* bOverrideCameraFOV, float* CameraFOV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Cruise_Missile_MaintainCameraClient.Buff_Cruise_Missile_MaintainCameraClient_C.BPOverrideCameraViewTarget");
 
@@ -79,7 +79,6 @@ void ABuff_Cruise_Missile_MaintainCameraClient_C::BPOverrideCameraViewTarget(str
 	params.DesiredFOV = DesiredFOV;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

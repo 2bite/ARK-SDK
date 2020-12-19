@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.BPAllowCrafting
-// (Exec, Native, Event, NetResponse, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -26,7 +26,6 @@ class FString UPrimalItem_Spawner_HoverSkiff_C::BPAllowCrafting(class AShooterPl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,12 +36,12 @@ class FString UPrimalItem_Spawner_HoverSkiff_C::BPAllowCrafting(class AShooterPl
 
 
 // Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.GetValidSpawnTransform
-// (Event, Static, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
 // Parameters:
 // struct UObject_FTransform      SpawnTransform                 (Parm, OutParm, IsPlainOldData)
 // bool                           SpawnValid                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_Spawner_HoverSkiff_C::STATIC_GetValidSpawnTransform(struct UObject_FTransform* SpawnTransform, bool* SpawnValid)
+void UPrimalItem_Spawner_HoverSkiff_C::GetValidSpawnTransform(struct UObject_FTransform* SpawnTransform, bool* SpawnValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.GetValidSpawnTransform");
 

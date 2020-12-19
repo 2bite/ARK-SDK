@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -408,7 +408,7 @@ public:
 	double                                             CallFunc_GetNetworkTimeInSeconds_ReturnValue3;            // 0x2BA8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_DoubleDouble_ReturnValue4;            // 0x2BB0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData52[0x7];                                       // 0x2BB1(0x0007) MISSED OFFSET
-	class APrimalCharacter*                            K2Node_CustomEvent_target;                                // 0x2BB8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APrimalCharacter*                            K2Node_CustomEvent_Target;                                // 0x2BB8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_GetActorForwardVector_ReturnValue;               // 0x2BC0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue2;                // 0x2BCC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     CallFunc_Multiply_VectorFloat_ReturnValue3;               // 0x2BD8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -559,7 +559,7 @@ public:
 	void UpdateTaming();
 	bool BPShowTamingPanel(bool* currentVisibility);
 	void GetTamingBuff(bool* IsValid, class APrimalBuff** Buff);
-	class FString STATIC_BPOverrideTamingDescriptionLabel(struct FSlateColor* TextColor);
+	class FString BPOverrideTamingDescriptionLabel(struct FSlateColor* TextColor);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	struct FRotator Get_Replicated_Control_Rotation_Public();
@@ -575,7 +575,7 @@ public:
 	float BPGetCrosshairAlpha();
 	bool IsFlakCannonOnCooldown();
 	void BPGetCrosshairLocation(float* CanvasClipX, float* CanvasClipY, float* OutX, float* OutY);
-	void consumeItem(class UClass* Item);
+	void ConsumeItem(class UClass* Item);
 	bool HasAmmo(int* Quantity);
 	bool BPOnStopJump();
 	void STATIC_Fire_Flak_Cannon(const struct FVector& Dir, const struct FVector& Loc);
@@ -607,7 +607,7 @@ public:
 	void UpdateRotationRate();
 	void UpdateAllyAOE();
 	struct FVector GetWindGustEpicenter();
-	void STATIC_DoWing_GustAOE();
+	void DoWing_GustAOE();
 	void Is_Diving_Public(bool* ret, double* TimeDiveStart);
 	void BPNotifySetRider(class AShooterCharacter** RiderSetting);
 	void UpdateTPVOffset();
@@ -650,7 +650,7 @@ public:
 	void STATIC_LineTrace(class UMeshComponent* Mesh, const struct FName& SocketName, class AActor* Actor, const struct FVector& Offset, bool BackwardLatching, bool* Hit_Somthing, struct FVector* Location, struct FVector* Normal, class AActor** Hit_Actor);
 	void InterruptLatching();
 	void ProcessLatching(float DeltaSeconds);
-	void STATIC_TryLatch(const struct FVector& Offset, bool backwardsLatching);
+	void TryLatch(const struct FVector& Offset, bool backwardsLatching);
 	void UserConstructionScript();
 	void InpActEvt_AltFire_K2Node_InputActionEvent_216();
 	void InpActEvt_BrakeDino_K2Node_InputActionEvent_215();

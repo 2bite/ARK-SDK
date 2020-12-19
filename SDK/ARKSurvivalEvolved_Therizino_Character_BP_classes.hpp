@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,12 +69,12 @@ public:
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	void BPDoHarvestAttack(int* harvestIndex);
 	bool BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
-	void SetClawAttackAnimByMovement(int Attack_index);
+	void STATIC_SetClawAttackAnimByMovement(int Attack_index);
 	bool BlueprintCanRiderAttack(int* AttackIndex);
 	float BPModifyHarvestingQuantity(float* originalQuantity, class UClass** resourceSelected);
 	void GetCurrentHarvestLevel(int* Current_Level);
 	void BPNotifyLevelUp(int* ExtraCharacterLevel);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void Harvest_Multiplier_Level_Up(int UseEntryIndex);
 	class FString STATIC_MakeUseEntryString(int index);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);

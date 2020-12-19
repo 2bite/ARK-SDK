@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -89,7 +89,7 @@ public:
 
 
 	void CheckIfTargetIsCloseToFoot(bool* FoundFootAttack, bool* RightFoot);
-	void MaybeFootstomp(bool* Return);
+	void MaybeFootstomp(bool* _return);
 	void TargetIsFlying(bool* IsFlying);
 	void CanUseFootstompBoth(bool* CanAttack);
 	void ReceiveExecute(class AActor** OwnerActor);

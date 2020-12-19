@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,7 +75,7 @@ void AStorageBox_IndustrialGrinder_C::BPPreGetMultiUseEntries(class APlayerContr
 
 
 // Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.HasCraftingRequirementsGreaterThanOne
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UPrimalItem*             InItem                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           TRUE                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -88,7 +88,6 @@ void AStorageBox_IndustrialGrinder_C::STATIC_HasCraftingRequirementsGreaterThanO
 	params.InItem = InItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -148,7 +147,7 @@ void AStorageBox_IndustrialGrinder_C::IsValidGrindingItem(class UPrimalItem* Ite
 
 
 // Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.GrindItem
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, NetMulticast, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UPrimalItem*             ItemToGrind                    (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController* ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -166,7 +165,6 @@ void AStorageBox_IndustrialGrinder_C::GrindItem(class UPrimalItem* ItemToGrind, 
 	params.MuteSound = MuteSound;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,12 +202,12 @@ bool AStorageBox_IndustrialGrinder_C::BPServerHandleNetExecCommand(class APlayer
 
 
 // Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.BPClientDoMultiUse
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStorageBox_IndustrialGrinder_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void AStorageBox_IndustrialGrinder_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.BPClientDoMultiUse");
 
@@ -218,6 +216,7 @@ void AStorageBox_IndustrialGrinder_C::STATIC_BPClientDoMultiUse(class APlayerCon
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,13 +225,13 @@ void AStorageBox_IndustrialGrinder_C::STATIC_BPClientDoMultiUse(class APlayerCon
 
 
 // Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStorageBox_IndustrialGrinder_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStorageBox_IndustrialGrinder_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_IndustrialGrinder.StorageBox_IndustrialGrinder_C.BPGetMultiUseEntries");
 
@@ -240,6 +239,7 @@ TArray<struct FMultiUseEntry> AStorageBox_IndustrialGrinder_C::STATIC_BPGetMulti
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

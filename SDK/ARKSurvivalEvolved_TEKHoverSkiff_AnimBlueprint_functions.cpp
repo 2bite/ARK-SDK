@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ void UTEKHoverSkiff_AnimBlueprint_C::ProcessHoverIK(const struct FRotator& NewTa
 
 
 // Function TEKHoverSkiff_AnimBlueprint.TEKHoverSkiff_AnimBlueprint_C.ComposeMeshTransformOffsets
-// (NetRequest, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 
 void UTEKHoverSkiff_AnimBlueprint_C::STATIC_ComposeMeshTransformOffsets()
 {
@@ -96,7 +96,7 @@ void UTEKHoverSkiff_AnimBlueprint_C::STATIC_ComposeMeshTransformOffsets()
 
 
 // Function TEKHoverSkiff_AnimBlueprint.TEKHoverSkiff_AnimBlueprint_C.HoverIK
-// (Native, Event, NetResponse, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // bool                           bOverrideStartTransform        (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      NewStartTransform              (Parm, IsPlainOldData)
@@ -105,7 +105,7 @@ void UTEKHoverSkiff_AnimBlueprint_C::STATIC_ComposeMeshTransformOffsets()
 // struct FVector                 NewTargetLocOffset             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewPlaneNormal                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTEKHoverSkiff_AnimBlueprint_C::STATIC_HoverIK(bool bOverrideStartTransform, const struct UObject_FTransform& NewStartTransform, bool* bResetting, struct FRotator* NewTargetRotOffset, struct FVector* NewTargetLocOffset, struct FVector* NewPlaneNormal)
+void UTEKHoverSkiff_AnimBlueprint_C::HoverIK(bool bOverrideStartTransform, const struct UObject_FTransform& NewStartTransform, bool* bResetting, struct FRotator* NewTargetRotOffset, struct FVector* NewTargetLocOffset, struct FVector* NewPlaneNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TEKHoverSkiff_AnimBlueprint.TEKHoverSkiff_AnimBlueprint_C.HoverIK");
 

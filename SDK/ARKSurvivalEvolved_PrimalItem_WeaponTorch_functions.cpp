@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.ApplyingSkinOntoItem
-// (Native, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (Exec, Native, Event, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UPrimalItem**            ToOwnerItem                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsFirstTime                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -36,7 +36,7 @@ void UPrimalItem_WeaponTorch_C::ApplyingSkinOntoItem(class UPrimalItem** ToOwner
 
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.RemovedSkinFromItem
-// (Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UPrimalItem**            FromOwnerItem                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsFirstTime                   (Parm, ZeroConstructor, IsPlainOldData)

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,7 +61,7 @@ struct ADesertKaiju_FirstFlockChar_BP_C_TickFlockGroup_Params
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.GetFlockAvoidanceArea
 struct ADesertKaiju_FirstFlockChar_BP_C_GetFlockAvoidanceArea_Params
 {
-	TArray<struct FAvoidanceArea>                      Return;                                                   // (Parm, OutParm, ZeroConstructor)
+	TArray<struct FAvoidanceArea>                      _return;                                                  // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.DistanceToKaiju

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,17 +35,18 @@ void ABuff_IsTameRiding_C::GetTimeBasedAlpha(float* Alpha)
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.GetBuffDescription
-// (Exec, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_IsTameRiding_C::STATIC_GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_IsTameRiding_C::GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.GetBuffDescription");
 
 	ABuff_IsTameRiding_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,14 +109,14 @@ void ABuff_IsTameRiding_C::GetActiveTameState(class APrimalDinoCharacter* MyRidi
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.BPDrawBuffStatusHUD
-// (NetReliable, Native, Event, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_IsTameRiding_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_IsTameRiding_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.BPDrawBuffStatusHUD");
 

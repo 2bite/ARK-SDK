@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,11 +46,11 @@ public:
 	}
 
 
-	void STATIC_HandleKeyPress(const struct FKey& Key, bool* retReply);
-	struct FEventReply STATIC_OnControllerButtonReleased(struct FGeometry* MyGeometry, struct FControllerEvent* ControllerEvent);
-	struct FEventReply STATIC_OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
+	void HandleKeyPress(const struct FKey& Key, bool* retReply);
+	struct FEventReply OnControllerButtonReleased(struct FGeometry* MyGeometry, struct FControllerEvent* ControllerEvent);
+	struct FEventReply OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
 	void CycleToNextKey();
-	void STATIC_UpdateRemainingTime();
+	void UpdateRemainingTime();
 	struct FEventReply STATIC_OnKeyUp(struct FGeometry* MyGeometry, struct FKeyboardEvent* InKeyboardEvent);
 	void STATIC_CycleKeys(bool* FinishedGame);
 	void EndGame(bool succeeded);

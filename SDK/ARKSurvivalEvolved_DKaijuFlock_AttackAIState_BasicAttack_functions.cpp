@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnBeginEvent
-// (Exec, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class UPrimalAIState**         InParentState                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void UDKaijuFlock_AttackAIState_BasicAttack_C::OnBeginEvent(class UPrimalAIState
 	params.InParentState = InParentState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +75,11 @@ bool UDKaijuFlock_AttackAIState_BasicAttack_C::BPShouldEndAttack()
 
 
 // Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnTickEvent
-// (NetReliable, Native, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDKaijuFlock_AttackAIState_BasicAttack_C::STATIC_OnTickEvent(float* DeltaSeconds)
+void UDKaijuFlock_AttackAIState_BasicAttack_C::OnTickEvent(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DKaijuFlock_AttackAIState_BasicAttack.DKaijuFlock_AttackAIState_BasicAttack_C.OnTickEvent");
 

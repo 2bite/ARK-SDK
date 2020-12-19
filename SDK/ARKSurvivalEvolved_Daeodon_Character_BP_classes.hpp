@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -81,7 +81,7 @@ public:
 
 	float BPModifyHarvestDamage(class UPrimalHarvestingComponent** harvestComponent, float* inDamage);
 	void IsAlly(int otherTargetingTeam, bool* isSameTeamOrAlly);
-	void STATIC_TryTrigger_Attack(int AttackIndex);
+	void TryTrigger_Attack(int AttackIndex);
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
 	void STATIC_SendNetExecCommandToCharacter(class AShooterCharacter* Character, const struct FName& CommandName);
 	void ShowHUDNotification(const struct FStatusValueModifierDescription& notificationDescription, class APlayerController* PlayerController);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (318.14) SDK
+// ARKSurvivalEvolved (320.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,7 +46,7 @@ public:
 	void TurretCheckHardLimit();
 	void BPPostLoadedFromSaveGame();
 	int BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);
-	void STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
+	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	bool BPCanBeActivatedByPlayer(class AShooterPlayerController** PC);
 	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed);
 	bool BPTurretPreventsTargeting(class APrimalCharacter** PotentialTarget);
