@@ -173,9 +173,9 @@ public:
 	void BndEvt__StaticMesh2_K2Node_ComponentBoundEvent_313_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, struct FHitResult* SweepResult);
 	void scale_net_on_toss();
 	void BndEvt__StaticMesh3_K2Node_ComponentBoundEvent_458_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, struct FHitResult* SweepResult);
-	void try_catch_fish(class AActor* fish);
+	void try_catch_fish(class AActor* Fish);
 	void Stop_Projectile_on_Clients(const struct FHitResult& Impact);
-	void try_add_fish_to_net(class AActor* fish);
+	void try_add_fish_to_net(class AActor* Fish);
 	void Launch_a_little_faster_initially();
 	void initial_fish_trace();
 	void ExecuteUbergraph_ProjFishingNet(int EntryPoint);

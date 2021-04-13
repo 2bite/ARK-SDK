@@ -101,7 +101,7 @@ bool ATusoteuthis_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC,
 
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -115,7 +115,6 @@ TArray<struct FMultiUseEntry> ATusoteuthis_Character_BP_C::BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -272,9 +271,9 @@ void ATusoteuthis_Character_BP_C::BPFedWakingTameEvent(class APlayerController**
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino
 // ()
 // Parameters:
-// class ATusoteuthis_Character_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ATusoteuthis_Character_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATusoteuthis_Character_BP_C::GetDefaultDino(class ATusoteuthis_Character_BP_C** Ref)
+void ATusoteuthis_Character_BP_C::GetDefaultDino(class ATusoteuthis_Character_BP_C** ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino");
 
@@ -286,8 +285,8 @@ void ATusoteuthis_Character_BP_C::GetDefaultDino(class ATusoteuthis_Character_BP
 
 	fn->FunctionFlags = flags;
 
-	if (Ref != nullptr)
-		*Ref = params.Ref;
+	if (ref != nullptr)
+		*ref = params.ref;
 }
 
 
@@ -423,15 +422,16 @@ void ATusoteuthis_Character_BP_C::CheckForResetTurn()
 
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.BPTimerServer
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient)
 
-void ATusoteuthis_Character_BP_C::BPTimerServer()
+void ATusoteuthis_Character_BP_C::STATIC_BPTimerServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.BPTimerServer");
 
 	ATusoteuthis_Character_BP_C_BPTimerServer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -575,15 +575,16 @@ void ATusoteuthis_Character_BP_C::RemoveCarryBuffFromPrey()
 
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.SyphonHealthFromPrey
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient)
 
-void ATusoteuthis_Character_BP_C::STATIC_SyphonHealthFromPrey()
+void ATusoteuthis_Character_BP_C::SyphonHealthFromPrey()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.SyphonHealthFromPrey");
 
 	ATusoteuthis_Character_BP_C_SyphonHealthFromPrey_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -592,7 +593,7 @@ void ATusoteuthis_Character_BP_C::STATIC_SyphonHealthFromPrey()
 
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.DropPrey
-// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // bool                           playDropAnim                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           forceSuccess                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -606,7 +607,6 @@ void ATusoteuthis_Character_BP_C::STATIC_DropPrey(bool playDropAnim, bool forceS
 	params.forceSuccess = forceSuccess;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -816,14 +816,14 @@ void ATusoteuthis_Character_BP_C::TurnActorAround__UpdateFunc()
 }
 
 
-// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_218
+// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_214
 // ()
 
-void ATusoteuthis_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_218()
+void ATusoteuthis_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_214()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_218");
+	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_214");
 
-	ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_218_Params params;
+	ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_214_Params params;
 
 	auto flags = fn->FunctionFlags;
 

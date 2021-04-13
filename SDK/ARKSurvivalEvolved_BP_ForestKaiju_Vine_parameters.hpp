@@ -21,7 +21,7 @@ struct ABP_ForestKaiju_Vine_C_VineCollisionCheck_Params
 	struct FVector                                     End;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	class ACharacter*                                  ActorToIgnore;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class ACharacter*                                  OtherActorToIgnore;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.OnRep_EndVineLocation

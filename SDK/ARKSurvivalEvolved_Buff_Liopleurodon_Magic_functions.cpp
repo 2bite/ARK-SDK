@@ -30,11 +30,11 @@ void ABuff_Liopleurodon_Magic_C::BPResetBuffStart()
 
 
 // Function Buff_Liopleurodon_Magic.Buff_Liopleurodon_Magic_C.BuffTickClient
-// (NetReliable, Native, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, NetClient, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Liopleurodon_Magic_C::BuffTickClient(float* DeltaTime)
+void ABuff_Liopleurodon_Magic_C::STATIC_BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Liopleurodon_Magic.Buff_Liopleurodon_Magic_C.BuffTickClient");
 
@@ -42,7 +42,6 @@ void ABuff_Liopleurodon_Magic_C::BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +50,7 @@ void ABuff_Liopleurodon_Magic_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Liopleurodon_Magic.Buff_Liopleurodon_Magic_C.BPDrawBuffStatusHUD
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, Const)
+// (NetResponse, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -69,7 +68,6 @@ void ABuff_Liopleurodon_Magic_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** 
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

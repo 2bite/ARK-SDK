@@ -58,7 +58,7 @@ struct AIchthyornis_Character_BP_C_RemoveDragWeightIfNeeded_Params
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.CancelAttack
 struct AIchthyornis_Character_BP_C_CancelAttack_Params
 {
-	bool                                               GoBackToOwner;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               goBackToOwner;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.GetTamedOrderFromAggressionState

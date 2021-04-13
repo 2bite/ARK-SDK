@@ -327,7 +327,7 @@ struct AGacha_Character_BP_C_LookForTamingDrops_Params
 struct AGacha_Character_BP_C_GiveAffinity_Params
 {
 	class APrimalCharacter*                            tamer;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	float                                              affinityToGive;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              AffinityToGive;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               wasTamed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

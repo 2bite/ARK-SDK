@@ -32,7 +32,7 @@ public:
 
 
 	void IsWeaponFiring(bool* IsFiring);
-	void InitializeEmitter();
+	void STATIC_InitializeEmitter();
 	void GetEmitterForwardVector(struct FVector* ForwardVector);
 	void CanEmitCharge(bool* canEmit);
 	void UserConstructionScript();

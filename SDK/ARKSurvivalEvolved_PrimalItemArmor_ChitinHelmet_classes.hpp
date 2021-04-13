@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_ChitinHelmet.PrimalItemArmor_ChitinHelmet_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemArmor_ChitinHelmet_C : public UPrimalItemArmor_BaseHelmet_C
 {
 public:

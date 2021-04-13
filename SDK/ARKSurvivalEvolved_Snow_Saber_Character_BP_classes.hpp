@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Snow_Saber_Character_BP.Snow_Saber_Character_BP_C
-// 0x0000 (0x21B0 - 0x21B0)
+// 0x0000 (0x21C0 - 0x21C0)
 class ASnow_Saber_Character_BP_C : public ASaber_Character_BP_C
 {
 public:

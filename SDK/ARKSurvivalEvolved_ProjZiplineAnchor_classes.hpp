@@ -130,7 +130,7 @@ public:
 	}
 
 
-	void CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* _return);
+	void STATIC_CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return);
 	void HitValidForAttachment(struct FHitResult* Hit, bool* Valid);
 	void SpawnBreakEmitter();
 	void UserConstructionScript();

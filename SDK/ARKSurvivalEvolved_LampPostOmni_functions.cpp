@@ -99,13 +99,13 @@ void ALampPostOmni_C::BPClientDoMultiUse(class APlayerController** ForPC, int* C
 
 
 // Function LampPostOmni.LampPostOmni_C.BPGetMultiUseEntries
-// (NetRequest, Exec, NetResponse, Static, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ALampPostOmni_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ALampPostOmni_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LampPostOmni.LampPostOmni_C.BPGetMultiUseEntries");
 

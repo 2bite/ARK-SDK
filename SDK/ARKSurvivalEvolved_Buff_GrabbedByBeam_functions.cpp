@@ -82,9 +82,9 @@ float ABuff_GrabbedByBeam_C::GetOwnerDragWeight()
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.GetMaxProgress
 // ()
 // Parameters:
-// float                          MaxProgress                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          maxProgress                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_GrabbedByBeam_C::GetMaxProgress(float* MaxProgress)
+void ABuff_GrabbedByBeam_C::GetMaxProgress(float* maxProgress)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.GetMaxProgress");
 
@@ -96,8 +96,8 @@ void ABuff_GrabbedByBeam_C::GetMaxProgress(float* MaxProgress)
 
 	fn->FunctionFlags = flags;
 
-	if (MaxProgress != nullptr)
-		*MaxProgress = params.MaxProgress;
+	if (maxProgress != nullptr)
+		*maxProgress = params.maxProgress;
 }
 
 
@@ -173,7 +173,7 @@ void ABuff_GrabbedByBeam_C::InitializeBuff(float MaxBeamLength)
 
 
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.BuffTickServer
-// (NetReliable, NetRequest, Native, NetResponse, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -185,7 +185,6 @@ void ABuff_GrabbedByBeam_C::BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

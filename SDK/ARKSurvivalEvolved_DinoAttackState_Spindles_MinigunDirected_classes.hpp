@@ -36,7 +36,7 @@ public:
 	}
 
 
-	class FString BPGetDebugInfoString();
+	class FString STATIC_BPGetDebugInfoString();
 	void GetRandomVectorOnCircle(float MinRadius, float MaxRadius, struct FVector* RandomVector);
 	bool BPShouldEndAttack();
 	void OnEndEvent();
@@ -44,7 +44,7 @@ public:
 	bool OnCanUseStateEvent();
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void GetAttackIndex(int* AttackIndex);
-	void Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
+	void STATIC_Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
 	void UpdateAimedActors();
 	void ExecuteUbergraph_DinoAttackState_Spindles_MinigunDirected(int EntryPoint);
 };

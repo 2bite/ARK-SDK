@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_TekRoof.PrimalItemStructure_TekRoof_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_TekRoof_C : public UPrimalItemStructure_BaseRoof_C
 {
 public:

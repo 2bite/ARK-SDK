@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Diplodocus_Character_BP_Aberrant.Diplodocus_Character_BP_Aberrant_C
-// 0x0000 (0x2190 - 0x2190)
+// 0x0000 (0x21A0 - 0x21A0)
 class ADiplodocus_Character_BP_Aberrant_C : public ADiplodocus_Character_BP_C
 {
 public:

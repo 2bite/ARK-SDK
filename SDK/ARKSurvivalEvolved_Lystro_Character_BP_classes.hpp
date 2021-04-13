@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lystro_Character_BP.Lystro_Character_BP_C
-// 0x0018 (0x21A0 - 0x2188)
+// 0x0018 (0x21B0 - 0x2198)
 class ALystro_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Lystro_C*   DinoCharacterStatus_BP_Lystro_C1;                         // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UAnimMontage*>                        PetAnims;                                                 // 0x2190(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UDinoCharacterStatusComponent_BP_Lystro_C*   DinoCharacterStatus_BP_Lystro_C1;                         // 0x2198(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UAnimMontage*>                        PetAnims;                                                 // 0x21A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -31,7 +31,7 @@ public:
 
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void Has_XPBuff(bool* Result);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Lystro_Character_BP(int EntryPoint);
 };

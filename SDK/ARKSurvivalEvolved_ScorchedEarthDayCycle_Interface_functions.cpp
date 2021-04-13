@@ -15,9 +15,9 @@ namespace sdk
 // Function ScorchedEarthDayCycle_Interface.ScorchedEarthDayCycle_Interface_C.GetIsElectricalStorm
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UScorchedEarthDayCycle_Interface_C::GetIsElectricalStorm(bool* _return)
+void UScorchedEarthDayCycle_Interface_C::GetIsElectricalStorm(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScorchedEarthDayCycle_Interface.ScorchedEarthDayCycle_Interface_C.GetIsElectricalStorm");
 
@@ -29,8 +29,8 @@ void UScorchedEarthDayCycle_Interface_C::GetIsElectricalStorm(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_ChemBench.PrimalItemStructure_ChemBench_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_ChemBench_C : public UPrimalItemStructureGeneric_C
 {
 public:

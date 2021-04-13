@@ -40,7 +40,7 @@ TArray<struct FMultiUseEntry> APortableRope_Ladder_Preplaced_C::BPGetMultiUseEnt
 
 
 // Function PortableRope_Ladder_Preplaced.PortableRope_Ladder_Preplaced_C.BPPlacedStructure
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, Const)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 

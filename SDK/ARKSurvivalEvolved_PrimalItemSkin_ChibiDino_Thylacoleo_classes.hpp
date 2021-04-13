@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_ChibiDino_Thylacoleo.PrimalItemSkin_ChibiDino_Thylacoleo_C
-// 0x0000 (0x0A09 - 0x0A09)
+// 0x0000 (0x0A19 - 0x0A19)
 class UPrimalItemSkin_ChibiDino_Thylacoleo_C : public UPrimalItemSkin_ChibiDino_Base_C
 {
 public:

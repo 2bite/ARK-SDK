@@ -65,7 +65,7 @@ public:
 	void BPActivated(class AActor** ForInstigator);
 	void OnRep_IceShieldCurrentHealth();
 	float BuffAdjustDamage(float* Damage, class AController** EventInstigator, class AActor** DamageCauser, class UClass** TheDamgeType, struct FHitResult* HitInfo);
-	void STATIC_ApplyDamageToIceShield(float Damage, bool IsRemoteDamage);
+	void ApplyDamageToIceShield(float Damage, bool IsRemoteDamage);
 	bool Is_Riding_or_Carried_Player(class AActor* Actor);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void FreezeCharacter(class APrimalCharacter* Character, bool Freeze);

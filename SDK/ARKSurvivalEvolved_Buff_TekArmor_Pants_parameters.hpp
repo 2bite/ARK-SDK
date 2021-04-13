@@ -288,13 +288,13 @@ struct ABuff_TekArmor_Pants_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_79
-struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_79_Params
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_77
+struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_77_Params
 {
 };
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_78
-struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_78_Params
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_76
+struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_76_Params
 {
 };
 

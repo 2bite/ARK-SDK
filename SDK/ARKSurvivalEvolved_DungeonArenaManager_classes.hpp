@@ -91,7 +91,7 @@ public:
 
 
 	void GetNumEntitiesInCave(int* NumPlayers, int* NumDinos);
-	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
+	bool STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
 	void ActivateArena(int DifficultyIndex);
 	void IssueTimeWarning();
 	void KillAllOccupants();

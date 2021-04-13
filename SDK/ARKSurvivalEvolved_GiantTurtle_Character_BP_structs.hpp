@@ -7,12 +7,12 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 #include "ARKSurvivalEvolved_Dino_Character_BP_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
-#include "ARKSurvivalEvolved_GiantTurtle_Crop_Struct_classes.hpp"
+#include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 #include "ARKSurvivalEvolved_RootMotionMovementMode_classes.hpp"
+#include "ARKSurvivalEvolved_GiantTurtle_Crop_Struct_classes.hpp"
 
 namespace sdk
 {

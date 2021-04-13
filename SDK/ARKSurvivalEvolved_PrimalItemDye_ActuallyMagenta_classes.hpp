@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemDye_ActuallyMagenta.PrimalItemDye_ActuallyMagenta_C
-// 0x0000 (0x0A10 - 0x0A10)
+// 0x0000 (0x0A20 - 0x0A20)
 class UPrimalItemDye_ActuallyMagenta_C : public UPrimalItemDyeGeneric_C
 {
 public:

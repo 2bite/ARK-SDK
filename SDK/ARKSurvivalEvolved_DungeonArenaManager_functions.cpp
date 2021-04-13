@@ -38,14 +38,14 @@ void ADungeonArenaManager_C::GetNumEntitiesInCave(int* NumPlayers, int* NumDinos
 
 
 // Function DungeonArenaManager.DungeonArenaManager_C.BPClientHandleNetExecCommand
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Protected, HasOutParms, DLLImport, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ADungeonArenaManager_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool ADungeonArenaManager_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DungeonArenaManager.DungeonArenaManager_C.BPClientHandleNetExecCommand");
 
@@ -54,7 +54,6 @@ bool ADungeonArenaManager_C::BPClientHandleNetExecCommand(struct FName* CommandN
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,7 +87,7 @@ void ADungeonArenaManager_C::ActivateArena(int DifficultyIndex)
 
 
 // Function DungeonArenaManager.DungeonArenaManager_C.IssueTimeWarning
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Delegate, NetClient, DLLImport)
+// (NetRequest, Exec, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
 
 void ADungeonArenaManager_C::IssueTimeWarning()
 {
@@ -97,7 +96,6 @@ void ADungeonArenaManager_C::IssueTimeWarning()
 	ADungeonArenaManager_C_IssueTimeWarning_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

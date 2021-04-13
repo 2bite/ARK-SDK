@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ChalicoThrowRockState.ChalicoThrowRockState_C.BPRangedAttack
-// (Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 TargetLocation                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 TargetVelocity                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UChalicoThrowRockState_C::STATIC_BPRangedAttack(struct FVector* TargetLocation, struct FVector* TargetVelocity)
+void UChalicoThrowRockState_C::BPRangedAttack(struct FVector* TargetLocation, struct FVector* TargetVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ChalicoThrowRockState.ChalicoThrowRockState_C.BPRangedAttack");
 

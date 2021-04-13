@@ -13,18 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_HyperdriveValueTextBlock_Text_1
-// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText USpaceWhaleHUD_C::STATIC_Get_HyperdriveValueTextBlock_Text_1()
+struct FText USpaceWhaleHUD_C::Get_HyperdriveValueTextBlock_Text_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_HyperdriveValueTextBlock_Text_1");
 
 	USpaceWhaleHUD_C_Get_HyperdriveValueTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,12 +34,12 @@ struct FText USpaceWhaleHUD_C::STATIC_Get_HyperdriveValueTextBlock_Text_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Set Progress Bar Foreground Color
-// (Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, NetValidate)
+// (Static, NetMulticast, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // class UObject*                 ProgressBarObject              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            LinearColor                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void USpaceWhaleHUD_C::Set_Progress_Bar_Foreground_Color(class UObject* ProgressBarObject, const struct FLinearColor& LinearColor)
+void USpaceWhaleHUD_C::STATIC_Set_Progress_Bar_Foreground_Color(class UObject* ProgressBarObject, const struct FLinearColor& LinearColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.Set Progress Bar Foreground Color");
 
@@ -49,7 +48,6 @@ void USpaceWhaleHUD_C::Set_Progress_Bar_Foreground_Color(class UObject* Progress
 	params.LinearColor = LinearColor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,18 +77,17 @@ float USpaceWhaleHUD_C::Get_CosmicPowerBelowProgressBar_Percent_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_CosmicPowerValueTextBlock_Text_1
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText USpaceWhaleHUD_C::STATIC_Get_CosmicPowerValueTextBlock_Text_1()
+struct FText USpaceWhaleHUD_C::Get_CosmicPowerValueTextBlock_Text_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_CosmicPowerValueTextBlock_Text_1");
 
 	USpaceWhaleHUD_C_Get_CosmicPowerValueTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,11 +140,11 @@ float USpaceWhaleHUD_C::Get_HyperdriveProgressBar_Percent_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get BombsHintText 0
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText USpaceWhaleHUD_C::STATIC_Get_BombsHintText_0()
+struct FText USpaceWhaleHUD_C::Get_BombsHintText_0()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get BombsHintText 0");
 

@@ -156,7 +156,7 @@ public:
 	}
 
 
-	void IsElectricalStormActive(bool* _return);
+	void IsElectricalStormActive(bool* Return);
 	void GetSocketClampDelta(float* OutSocketClampDelta);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);

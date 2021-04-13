@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophy_EelBoss.PrimalItemTrophy_EelBoss_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemTrophy_EelBoss_C : public UPrimalItemTrophyGenericWall_C
 {
 public:

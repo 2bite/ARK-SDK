@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Megalosaurus_Character_BP_Aberrant.Megalosaurus_Character_BP_Aberrant_C
-// 0x0000 (0x25E3 - 0x25E3)
+// 0x0000 (0x25F3 - 0x25F3)
 class AMegalosaurus_Character_BP_Aberrant_C : public AMegalosaurus_Character_BP_C
 {
 public:

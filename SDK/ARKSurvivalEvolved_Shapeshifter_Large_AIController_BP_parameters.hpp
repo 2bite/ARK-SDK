@@ -28,7 +28,7 @@ struct AShapeshifter_Large_AIController_BP_C_LocationUberpounce_Params
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.AllowSurfaceNormalForUberpounce
 struct AShapeshifter_Large_AIController_BP_C_AllowSurfaceNormalForUberpounce_Params
 {
-	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsValid;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -80,7 +80,7 @@ struct AShapeshifter_Large_AIController_BP_C_GetPrimalTarget_Params
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.GetDino
 struct AShapeshifter_Large_AIController_BP_C_GetDino_Params
 {
-	class ADeinonychus_Character_BP_C*                 ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ADeinonychus_Character_BP_C*                 Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.UserConstructionScript

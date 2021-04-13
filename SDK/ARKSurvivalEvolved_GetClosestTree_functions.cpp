@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GetClosestTree.GetClosestTree_C.GetClosestTree
-// (NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, Const)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate)
 // Parameters:
 // class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AllowPrev                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UStaticMeshComponent*    treeComp                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UGetClosestTree_C::GetClosestTree(class AActor* OwnerActor, bool AllowPrev, int* ItemIndex, class UStaticMeshComponent** treeComp)
+void UGetClosestTree_C::STATIC_GetClosestTree(class AActor* OwnerActor, bool AllowPrev, int* ItemIndex, class UStaticMeshComponent** treeComp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GetClosestTree.GetClosestTree_C.GetClosestTree");
 
@@ -29,6 +29,7 @@ void UGetClosestTree_C::GetClosestTree(class AActor* OwnerActor, bool AllowPrev,
 	params.AllowPrev = AllowPrev;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,15 +43,15 @@ void UGetClosestTree_C::GetClosestTree(class AActor* OwnerActor, bool AllowPrev,
 
 
 // Function GetClosestTree.GetClosestTree_C.GetPointOnTreeSurface
-// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, Const)
+// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate)
 // Parameters:
 // class UPrimitiveComponent*     treeComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 origPoint                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UGetClosestTree_C::GetPointOnTreeSurface(class UPrimitiveComponent* treeComp, const struct FVector& origPoint, int ItemIndex, class AActor* OwnerActor, struct FVector* ret)
+void UGetClosestTree_C::GetPointOnTreeSurface(class UPrimitiveComponent* treeComp, const struct FVector& origPoint, int ItemIndex, class AActor* OwnerActor, struct FVector* Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GetClosestTree.GetClosestTree_C.GetPointOnTreeSurface");
 
@@ -61,18 +62,19 @@ void UGetClosestTree_C::GetPointOnTreeSurface(class UPrimitiveComponent* treeCom
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (ret != nullptr)
-		*ret = params.ret;
+	if (Ret != nullptr)
+		*Ret = params.Ret;
 }
 
 
 // Function GetClosestTree.GetClosestTree_C.ReceiveExecute
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, Const)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,6 +86,7 @@ void UGetClosestTree_C::STATIC_ReceiveExecute(class AActor** OwnerActor)
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

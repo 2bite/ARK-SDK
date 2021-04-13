@@ -14,6 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+struct AMegalosaurus_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits
 struct AMegalosaurus_Character_BP_C_UpdateSeverTimerLimits_Params
 {

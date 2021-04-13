@@ -99,9 +99,9 @@ bool ABaryonyx_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 // ()
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* retVal)
+void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* RetVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BaryCanAttack");
 
@@ -114,8 +114,8 @@ void ABaryonyx_Character_BP_C::BaryCanAttack(int AttackIndex, bool* retVal)
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (RetVal != nullptr)
+		*RetVal = params.RetVal;
 }
 
 
@@ -169,14 +169,14 @@ void ABaryonyx_Character_BP_C::BPKilledSomethingEvent(class APrimalCharacter** k
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.K2_OnMovementModeChanged
-// (NetReliable, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
+// (Event, MulticastDelegate, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PrevCustomMode                 (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABaryonyx_Character_BP_C::STATIC_K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
+void ABaryonyx_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovementMode>* PrevMovementMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* PrevCustomMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.K2_OnMovementModeChanged");
 
@@ -195,7 +195,7 @@ void ABaryonyx_Character_BP_C::STATIC_K2_OnMovementModeChanged(TEnumAsByte<EMove
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -204,7 +204,7 @@ void ABaryonyx_Character_BP_C::STATIC_K2_OnMovementModeChanged(TEnumAsByte<EMove
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABaryonyx_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ABaryonyx_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -230,7 +230,7 @@ float ABaryonyx_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIn
 
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Net, NetReliable, Exec, Native, Public, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -244,6 +244,7 @@ TArray<struct FMultiUseEntry> ABaryonyx_Character_BP_C::BPGetMultiUseEntries(cla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

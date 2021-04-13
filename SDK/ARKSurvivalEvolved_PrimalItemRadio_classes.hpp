@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemRadio.PrimalItemRadio_C
-// 0x0000 (0x09F8 - 0x09F8)
+// 0x0000 (0x0A08 - 0x0A08)
 class UPrimalItemRadio_C : public UPrimalItem_Radio
 {
 public:

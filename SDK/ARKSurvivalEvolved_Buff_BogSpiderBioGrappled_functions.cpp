@@ -123,9 +123,9 @@ bool ABuff_BogSpiderBioGrappled_C::BPServerHandleNetExecCommand(class APlayerCon
 
 
 // Function Buff_BogSpiderBioGrappled.Buff_BogSpiderBioGrappled_C.ToggleEnsnareVFX
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, Public, Protected, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 
-void ABuff_BogSpiderBioGrappled_C::STATIC_ToggleEnsnareVFX()
+void ABuff_BogSpiderBioGrappled_C::ToggleEnsnareVFX()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BogSpiderBioGrappled.Buff_BogSpiderBioGrappled_C.ToggleEnsnareVFX");
 

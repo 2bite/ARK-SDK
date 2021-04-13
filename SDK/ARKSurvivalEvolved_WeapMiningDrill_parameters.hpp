@@ -30,8 +30,8 @@ struct AWeapMiningDrill_C_ReceiveDestroyed_Params
 {
 };
 
-// Function WeapMiningDrill.WeapMiningDrill_C.CreateDynamicMATS
-struct AWeapMiningDrill_C_CreateDynamicMATS_Params
+// Function WeapMiningDrill.WeapMiningDrill_C.CreateDynamicMats
+struct AWeapMiningDrill_C_CreateDynamicMats_Params
 {
 };
 

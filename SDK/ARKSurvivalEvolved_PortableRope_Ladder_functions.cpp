@@ -53,7 +53,7 @@ void APortableRope_Ladder_C::BPAttachedRootComponent()
 
 
 // Function PortableRope_Ladder.PortableRope_Ladder_C.BuildLadder
-// (Exec, Event, NetMulticast, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void APortableRope_Ladder_C::BuildLadder()
 {

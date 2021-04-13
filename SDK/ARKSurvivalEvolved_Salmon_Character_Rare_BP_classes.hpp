@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Salmon_Character_Rare_BP.Salmon_Character_Rare_BP_C
-// 0x0008 (0x2198 - 0x2190)
+// 0x0008 (0x21A8 - 0x21A0)
 class ASalmon_Character_Rare_BP_C : public ASalmon_Character_BP_C
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem1;                                          // 0x21A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

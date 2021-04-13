@@ -39,11 +39,11 @@ void UPrimalItemArmor_ShieldTek_C::BPClientHandleItemNetExecCommand(struct FName
 
 
 // Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.PlayHitShieldEffect
-// (Event, NetResponse, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           bLocalOnly                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemArmor_ShieldTek_C::PlayHitShieldEffect(bool bLocalOnly)
+void UPrimalItemArmor_ShieldTek_C::STATIC_PlayHitShieldEffect(bool bLocalOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.PlayHitShieldEffect");
 
@@ -51,6 +51,7 @@ void UPrimalItemArmor_ShieldTek_C::PlayHitShieldEffect(bool bLocalOnly)
 	params.bLocalOnly = bLocalOnly;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +138,7 @@ void UPrimalItemArmor_ShieldTek_C::ClientUpdatedWeaponClipAmmo()
 
 
 // Function PrimalItemArmor_ShieldTek.PrimalItemArmor_ShieldTek_C.HandleShieldDamageBlocking
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter**      ForShooterCharacter            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DamageIn                       (Parm, ZeroConstructor, IsPlainOldData)

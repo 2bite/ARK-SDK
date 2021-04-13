@@ -647,7 +647,7 @@ public:
 	void BndEvt__Cave02_Encompassing_PostProcess_K2Node_ActorBoundEvent_67_PostprocessVolumeEnteredSignature__DelegateSignature(class APlayerController* Controller, bool bIsPrimaryPlayer);
 	void BndEvt__Cave02_Encompassing_PostProcess_K2Node_ActorBoundEvent_92_PostprocessVolumeLeftSignature__DelegateSignature(class APlayerController* Controller, bool bIsPrimaryPlayer);
 	void MakeItRain();
-	void fogitup();
+	void FogItUp();
 	void katyperry();
 	void noweather();
 	void doweather();
@@ -795,7 +795,7 @@ public:
 	void BndEvt__CaveEastPostprocessVolume_2_K2Node_ActorBoundEvent_1494_PostprocessVolumeEnteredSignature__DelegateSignature(class APlayerController* Controller, bool bIsPrimaryPlayer);
 	void BndEvt__CaveEastPostprocessVolume_2_K2Node_ActorBoundEvent_1654_PostprocessVolumeLeftSignature__DelegateSignature(class APlayerController* Controller, bool bIsPrimaryPlayer);
 	void coldfront();
-	void heatwave();
+	void HeatWave();
 	void BndEvt__PostProcessVolume60_K2Node_ActorBoundEvent_834_PostprocessVolumeLeftSignature__DelegateSignature(class APlayerController* Controller, bool bIsPrimaryPlayer);
 	void timberlake();
 	void stoprain();

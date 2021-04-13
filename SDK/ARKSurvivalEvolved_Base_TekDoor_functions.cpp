@@ -99,7 +99,7 @@ bool ABase_TekDoor_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function Base_TekDoor.Base_TekDoor_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, NetMulticast, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -113,6 +113,7 @@ TArray<struct FMultiUseEntry> ABase_TekDoor_C::BPGetMultiUseEntries(class APlaye
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

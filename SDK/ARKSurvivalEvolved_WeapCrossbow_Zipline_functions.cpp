@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.ZiplineObstructionTrace
-// (NetRequest, Exec, Native, Static, MulticastDelegate, HasOutParms, DLLImport, BlueprintPure, Const)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Hit                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -123,9 +123,9 @@ void AWeapCrossbow_Zipline_C::Get_ZipProjectile_Default_Object(class AProjZiplin
 
 
 // Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.Update Preview Cable
-// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, HasOutParms, DLLImport, BlueprintPure, Const)
+// (Exec, Native, NetResponse, Public, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 
-void AWeapCrossbow_Zipline_C::STATIC_Update_Preview_Cable()
+void AWeapCrossbow_Zipline_C::Update_Preview_Cable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.Update Preview Cable");
 

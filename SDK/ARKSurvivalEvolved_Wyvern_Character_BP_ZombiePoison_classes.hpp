@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wyvern_Character_BP_ZombiePoison.Wyvern_Character_BP_ZombiePoison_C
-// 0x0000 (0x237E - 0x237E)
+// 0x0000 (0x238E - 0x238E)
 class AWyvern_Character_BP_ZombiePoison_C : public AWyvern_Character_BP_ZombieBase_C
 {
 public:

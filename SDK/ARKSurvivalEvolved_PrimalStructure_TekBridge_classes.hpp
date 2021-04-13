@@ -71,18 +71,18 @@ public:
 
 
 	void STATIC_SetupSnaps();
-	void BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent);
+	void STATIC_BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent);
 	struct FVector BPOverrideTargetLocation(struct FVector* attackPos);
 	struct FRotator CalculatePlacementRotation(class AController* PC, struct FPlacementData* PlacementData);
-	struct FRotator BPOverridePlacementRotation(struct FVector* ViewPos, struct FRotator* ViewRot);
-	int STATIC_BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);
+	struct FRotator STATIC_BPOverridePlacementRotation(struct FVector* ViewPos, struct FRotator* ViewRot);
+	int BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);
 	void TestForEnemyStructures(const struct FVector& Location, class APlayerController* Placer, bool* TooClose);
 	bool BPPreventUsingAsFloorForStructure(class APrimalStructure** StructureToPlaceOnMe, struct FPlacementData* theOutPlacementData);
 	bool BPConsumeUsePinCode(class AActor** FromKeypadActor, class APlayerController** ForPC, int* appledPinCode, bool* bIsActivating);
 	bool BPCanBeActivated();
 	void BPContainerDeactivated();
 	void BPContainerActivated();
-	void DeactivationComplete();
+	void STATIC_DeactivationComplete();
 	void ClientMaterialUpdate();
 	void ClientCompleteActivation();
 	void ReceiveBeginPlay();
@@ -91,15 +91,15 @@ public:
 	bool BPOverrideSnappedFromTransform(class APrimalStructure** ParentStructure, int* ParentSnapFromIndex, struct FName* ParentSnapFromName, struct FVector* UnsnappedPlacementPos, struct FRotator* UnsnappedPlacementRot, struct FVector* SnappedPlacementPos, struct FRotator* SnappedPlacementRot, int* SnapToIndex, struct FName* SnapToName, struct FVector* OutLocation, struct FRotator* OutRotation, int* bForceInvalidateSnap);
 	void PushBlockers(class APrimalCharacter* BlockingCharacter, const struct FVector& StartPos);
 	void OnRep_Activating();
-	void TryActivate(bool ActivateBridge);
+	void STATIC_TryActivate(bool ActivateBridge);
 	void Activate(bool ActivateBridge);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	void STATIC_IsBlocked(const struct FVector& Start, const struct FRotator& Rotation, const struct FVector& End, bool CheckLanding, bool* bLocked);
+	void IsBlocked(const struct FVector& Start, const struct FRotator& Rotation, const struct FVector& End, bool CheckLanding, bool* bLocked);
 	void OnRep_Activated();
 	void OnRep_LandingPosition();
 	void PreviewLanding();
-	void STATIC_TestExtension(const struct FVector& Start, const struct FRotator& Rotation, int Extension, class APrimalStructure* SnapTarget, bool ChoosingRotation, bool* Good, struct FVector* Placement);
+	void TestExtension(const struct FVector& Start, const struct FRotator& Rotation, int Extension, class APrimalStructure* SnapTarget, bool ChoosingRotation, bool* Good, struct FVector* Placement);
 	void BPPlacedStructure(class APlayerController** ForPC);
 	void BPBeginPreview();
 	void ExtendBridge(const struct FVector& Location);

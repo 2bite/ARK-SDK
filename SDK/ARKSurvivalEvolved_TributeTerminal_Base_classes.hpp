@@ -27,6 +27,8 @@ public:
 	}
 
 
+	void BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser);
+	void BPPostLoadedFromSaveGame();
 	void UserConstructionScript();
 	void ExecuteUbergraph_TributeTerminal_Base(int EntryPoint);
 };

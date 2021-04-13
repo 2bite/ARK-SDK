@@ -39,7 +39,7 @@ void UPrimalItemResource_Element_C::BPServerHandleItemNetExecCommand(class AShoo
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.FindShapeshifter
-// (NetReliable, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Native, NetResponse, NetMulticast, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    Shapeshifter                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           RetMounted                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -51,6 +51,7 @@ void UPrimalItemResource_Element_C::FindShapeshifter(class APrimalDinoCharacter*
 	UPrimalItemResource_Element_C_FindShapeshifter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,7 +65,7 @@ void UPrimalItemResource_Element_C::FindShapeshifter(class APrimalDinoCharacter*
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPPreUseItem
-// (NetReliable, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, NetResponse, Static, NetMulticast, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void UPrimalItemResource_Element_C::STATIC_BPPreUseItem()
 {
@@ -81,7 +82,7 @@ void UPrimalItemResource_Element_C::STATIC_BPPreUseItem()
 
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPCanUse
-// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Native, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -94,6 +95,7 @@ bool UPrimalItemResource_Element_C::STATIC_BPCanUse(bool* bIgnoreCooldown)
 	params.bIgnoreCooldown = bIgnoreCooldown;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

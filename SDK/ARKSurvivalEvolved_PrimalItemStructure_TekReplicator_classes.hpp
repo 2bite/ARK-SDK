@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_TekReplicator.PrimalItemStructure_TekReplicator_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_TekReplicator_C : public UPrimalItemStructureGeneric_C
 {
 public:

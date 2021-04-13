@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ocean_Dolphin_Character_BP.Ocean_Dolphin_Character_BP_C
-// 0x0000 (0x2190 - 0x2190)
+// 0x0000 (0x21A0 - 0x21A0)
 class AOcean_Dolphin_Character_BP_C : public ADolphin_Character_BP_C
 {
 public:

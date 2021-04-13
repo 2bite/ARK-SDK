@@ -31,7 +31,7 @@ public:
 	void UpdateBuffPersistentData();
 	void ReceiveBeginPlay();
 	void BuffTickClient(float* DeltaTime);
-	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void BuffTickServer(float* DeltaTime);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_Lamprey_Poison(int EntryPoint);

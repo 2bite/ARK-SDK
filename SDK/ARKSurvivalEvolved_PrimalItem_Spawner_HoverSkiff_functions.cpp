@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.BPAllowCrafting
-// (NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItem_Spawner_HoverSkiff_C::BPAllowCrafting(class AShooterPlayerController** ForPC)
+class FString UPrimalItem_Spawner_HoverSkiff_C::STATIC_BPAllowCrafting(class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.BPAllowCrafting");
 
@@ -26,6 +26,7 @@ class FString UPrimalItem_Spawner_HoverSkiff_C::BPAllowCrafting(class AShooterPl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,18 +37,19 @@ class FString UPrimalItem_Spawner_HoverSkiff_C::BPAllowCrafting(class AShooterPl
 
 
 // Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.GetValidSpawnTransform
-// (Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct UObject_FTransform      SpawnTransform                 (Parm, OutParm, IsPlainOldData)
 // bool                           SpawnValid                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_Spawner_HoverSkiff_C::GetValidSpawnTransform(struct UObject_FTransform* SpawnTransform, bool* SpawnValid)
+void UPrimalItem_Spawner_HoverSkiff_C::STATIC_GetValidSpawnTransform(struct UObject_FTransform* SpawnTransform, bool* SpawnValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.GetValidSpawnTransform");
 
 	UPrimalItem_Spawner_HoverSkiff_C_GetValidSpawnTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

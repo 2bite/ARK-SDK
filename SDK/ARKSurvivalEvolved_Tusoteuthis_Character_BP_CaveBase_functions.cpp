@@ -38,7 +38,7 @@ bool ATusoteuthis_Character_BP_CaveBase_C::BPTryMultiUse(class APlayerController
 
 
 // Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.BPGetMultiUseEntries
-// (Exec, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, Static, Protected, Delegate, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -52,6 +52,7 @@ TArray<struct FMultiUseEntry> ATusoteuthis_Character_BP_CaveBase_C::STATIC_BPGet
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,9 +209,9 @@ void ATusoteuthis_Character_BP_CaveBase_C::BPFedWakingTameEvent(class APlayerCon
 // Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.GetDefaultDino
 // ()
 // Parameters:
-// class ATusoteuthis_Character_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ATusoteuthis_Character_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATusoteuthis_Character_BP_CaveBase_C::GetDefaultDino(class ATusoteuthis_Character_BP_C** Ref)
+void ATusoteuthis_Character_BP_CaveBase_C::GetDefaultDino(class ATusoteuthis_Character_BP_C** ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.GetDefaultDino");
 
@@ -222,8 +223,8 @@ void ATusoteuthis_Character_BP_CaveBase_C::GetDefaultDino(class ATusoteuthis_Cha
 
 	fn->FunctionFlags = flags;
 
-	if (Ref != nullptr)
-		*Ref = params.Ref;
+	if (ref != nullptr)
+		*ref = params.ref;
 }
 
 
@@ -359,16 +360,15 @@ void ATusoteuthis_Character_BP_CaveBase_C::CheckForResetTurn()
 
 
 // Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.BPTimerServer
-// (Native, Static, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Private, Protected, HasDefaults, DLLImport)
 
-void ATusoteuthis_Character_BP_CaveBase_C::STATIC_BPTimerServer()
+void ATusoteuthis_Character_BP_CaveBase_C::BPTimerServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.BPTimerServer");
 
 	ATusoteuthis_Character_BP_CaveBase_C_BPTimerServer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -512,9 +512,9 @@ void ATusoteuthis_Character_BP_CaveBase_C::RemoveCarryBuffFromPrey()
 
 
 // Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.SyphonHealthFromPrey
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATusoteuthis_Character_BP_CaveBase_C::STATIC_SyphonHealthFromPrey()
+void ATusoteuthis_Character_BP_CaveBase_C::SyphonHealthFromPrey()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.SyphonHealthFromPrey");
 
@@ -752,14 +752,14 @@ void ATusoteuthis_Character_BP_CaveBase_C::TurnActorAround__UpdateFunc()
 }
 
 
-// Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.InpActEvt_Jump_K2Node_InputActionEvent_232
+// Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.InpActEvt_Jump_K2Node_InputActionEvent_228
 // ()
 
-void ATusoteuthis_Character_BP_CaveBase_C::InpActEvt_Jump_K2Node_InputActionEvent_232()
+void ATusoteuthis_Character_BP_CaveBase_C::InpActEvt_Jump_K2Node_InputActionEvent_228()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.InpActEvt_Jump_K2Node_InputActionEvent_232");
+	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.InpActEvt_Jump_K2Node_InputActionEvent_228");
 
-	ATusoteuthis_Character_BP_CaveBase_C_InpActEvt_Jump_K2Node_InputActionEvent_232_Params params;
+	ATusoteuthis_Character_BP_CaveBase_C_InpActEvt_Jump_K2Node_InputActionEvent_228_Params params;
 
 	auto flags = fn->FunctionFlags;
 

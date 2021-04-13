@@ -62,7 +62,7 @@ void UAttackStateRanged_Fireball_Cherufe_C::StartAnimationStateEvent(struct FNam
 
 
 // Function AttackStateRanged_Fireball_Cherufe.AttackStateRanged_Fireball_Cherufe_C.BPRangedAttack
-// (NetReliable, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Exec, NetResponse, Static, Private, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 TargetLocation                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 TargetVelocity                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)

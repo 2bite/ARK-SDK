@@ -13,15 +13,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Microraptor_Character_BP.Microraptor_Character_BP_C.CheckForTargetOrDino
-// (NetRequest, Exec, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetReliable, Native, NetResponse, Static, Private, HasDefaults, NetClient)
 
-void AMicroraptor_Character_BP_C::CheckForTargetOrDino()
+void AMicroraptor_Character_BP_C::STATIC_CheckForTargetOrDino()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Microraptor_Character_BP.Microraptor_Character_BP_C.CheckForTargetOrDino");
 
 	AMicroraptor_Character_BP_C_CheckForTargetOrDino_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,7 +109,7 @@ void AMicroraptor_Character_BP_C::Add_Z_Velocity_Toward_Target()
 
 
 // Function Microraptor_Character_BP.Microraptor_Character_BP_C.SwapToCorrectAttackAnim
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, Private, HasDefaults, NetClient)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -120,7 +121,6 @@ void AMicroraptor_Character_BP_C::SwapToCorrectAttackAnim(int AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,7 +204,7 @@ void AMicroraptor_Character_BP_C::BPOnSetMountedDino()
 
 
 // Function Microraptor_Character_BP.Microraptor_Character_BP_C.DinoShoulderMountedLaunch
-// (NetRequest, Exec, Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetReliable, Static, NetMulticast, Private, HasDefaults, NetClient)
 // Parameters:
 // struct FVector*                launchDir                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter**      throwingCharacter              (Parm, ZeroConstructor, IsPlainOldData)
@@ -218,7 +218,6 @@ void AMicroraptor_Character_BP_C::STATIC_DinoShoulderMountedLaunch(struct FVecto
 	params.throwingCharacter = throwingCharacter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -305,7 +304,7 @@ void AMicroraptor_Character_BP_C::OnLaunched(struct FVector* LaunchVelocity, boo
 
 
 // Function Microraptor_Character_BP.Microraptor_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetReliable, Exec, Native, MulticastDelegate, HasDefaults, NetClient)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)

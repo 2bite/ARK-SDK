@@ -28,7 +28,7 @@ struct AMegalania_Character_BP_C_GetClimbingIK_BlendspaceAxes_Front_Params
 // Function Megalania_Character_BP.Megalania_Character_BP_C.GetCustomSurfaceTraceDistance
 struct AMegalania_Character_BP_C_GetCustomSurfaceTraceDistance_Params
 {
-	int*                                               traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              customDistance;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_TekBoots.PrimalItemArmor_TekBoots_C
-// 0x0000 (0x0A41 - 0x0A41)
+// 0x0000 (0x0A51 - 0x0A51)
 class UPrimalItemArmor_TekBoots_C : public UPrimalItemArmor_Base_Tek_C
 {
 public:

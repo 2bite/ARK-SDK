@@ -144,7 +144,7 @@ struct AMoleRat_Character_BP_C_GetChargeValueScaled_Params
 	float                                              CurrentValue;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MinValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MaxValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              VelocityAlpha;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              velocityAlpha;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              scaledValue;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

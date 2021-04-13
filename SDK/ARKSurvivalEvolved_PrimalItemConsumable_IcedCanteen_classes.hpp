@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_IcedCanteen.PrimalItemConsumable_IcedCanteen_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_IcedCanteen_C : public UPrimalItemConsumable_CanteenCraftable_C
 {
 public:

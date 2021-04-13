@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Seed_DefensePlant.PrimalItemConsumable_Seed_DefensePlant_C
-// 0x0004 (0x09F4 - 0x09F0)
+// 0x0004 (0x0A04 - 0x0A00)
 class UPrimalItemConsumable_Seed_DefensePlant_C : public UPrimalItemConsumableSeed_C
 {
 public:
-	int                                                NumTurrets;                                               // 0x09F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                NumTurrets;                                               // 0x0A00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	bool STATIC_BPAllowRemoteAddToInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer);
+	bool BPAllowRemoteAddToInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer);
 	bool BPCanAddToInventory(class UPrimalInventoryComponent** toInventory);
 	void ExecuteUbergraph_PrimalItemConsumable_Seed_DefensePlant(int EntryPoint);
 };

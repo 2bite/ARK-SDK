@@ -79,12 +79,12 @@ void ABuff_BiglyPostProccess_C::Is_Valid_PounceTarget(class APrimalCharacter* Ta
 
 
 // Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.BPGetHUDElements
-// (NetReliable, NetResponse, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_BiglyPostProccess_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABuff_BiglyPostProccess_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.BPGetHUDElements");
 
@@ -106,9 +106,9 @@ void ABuff_BiglyPostProccess_C::BPGetHUDElements(class APlayerController** ForPC
 // ()
 // Parameters:
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_BiglyPostProccess_C::IsAnotherDinoAlreadyAttached(class AActor* Target, bool* ret)
+void ABuff_BiglyPostProccess_C::IsAnotherDinoAlreadyAttached(class AActor* Target, bool* Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.IsAnotherDinoAlreadyAttached");
 
@@ -121,8 +121,8 @@ void ABuff_BiglyPostProccess_C::IsAnotherDinoAlreadyAttached(class AActor* Targe
 
 	fn->FunctionFlags = flags;
 
-	if (ret != nullptr)
-		*ret = params.ret;
+	if (Ret != nullptr)
+		*Ret = params.Ret;
 }
 
 
@@ -151,11 +151,11 @@ void ABuff_BiglyPostProccess_C::Can_Ignore_Traced_Actor(class AActor* Actor, boo
 
 
 // Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.BuffTickClient
-// (NetRequest, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_BiglyPostProccess_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_BiglyPostProccess_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.BuffTickClient");
 

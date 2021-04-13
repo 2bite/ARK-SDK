@@ -42,7 +42,7 @@ struct ARaptor_Character_BP_C_PushbackAfterPounceFn_Params
 struct ARaptor_Character_BP_C_HasPouncePreventionBuff_Params
 {
 	class APrimalCharacter*                            Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.Add Dodge Buff to PounceTarget

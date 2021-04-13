@@ -50,7 +50,7 @@ void ABuff_MekBackpack_Shield_C::PlayShieldSound(int SoundIndex)
 
 
 // Function Buff_MekBackpack_Shield.Buff_MekBackpack_Shield_C.GetBackpackSaveData
-// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
@@ -61,6 +61,7 @@ void ABuff_MekBackpack_Shield_C::STATIC_GetBackpackSaveData(struct FMekBackpackD
 	ABuff_MekBackpack_Shield_C_GetBackpackSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

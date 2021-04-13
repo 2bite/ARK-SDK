@@ -89,7 +89,7 @@ void AOceanPlatform_Base_BP_C::UpdateLadderHeight()
 
 
 // Function OceanPlatform_Base_BP.OceanPlatform_Base_BP_C.BuildLadders
-// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           UpdateHeight                   (Parm, ZeroConstructor, IsPlainOldData)

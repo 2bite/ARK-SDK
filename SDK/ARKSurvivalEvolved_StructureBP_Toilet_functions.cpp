@@ -38,7 +38,7 @@ bool AStructureBP_Toilet_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function StructureBP_Toilet.StructureBP_Toilet_C.BPGetMultiUseEntries
-// (NetRequest, Native, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

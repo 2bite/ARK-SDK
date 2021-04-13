@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BeeHive_PlayerOwned.BeeHive_PlayerOwned_C
-// 0x00A4 (0x0F58 - 0x0EB4)
+// 0x00A2 (0x0F58 - 0x0EB6)
 class ABeeHive_PlayerOwned_C : public ABeeHive_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0EB4(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0EB6(0x0002) MISSED OFFSET
 	class UPrimalInventoryBP_BeeHive_C*                PrimalInventoryBP_BeeHive_C1;                             // 0x0EB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UStaticMeshComponent*                        ReferenceMesh;                                            // 0x0EC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FARKDinoData                                BeeData;                                                  // 0x0EC8(0x0040) (Edit, BlueprintVisible, DisableEditOnInstance, SaveGame)
@@ -45,7 +45,7 @@ public:
 
 
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	void BPGetInfoFromConsumedItemForPlacedStructure(class UPrimalItem** ItemToConsumed);
+	void STATIC_BPGetInfoFromConsumedItemForPlacedStructure(class UPrimalItem** ItemToConsumed);
 	void BPUpdateItemVisuals();
 	void BPUnstasis();
 	void UserConstructionScript();

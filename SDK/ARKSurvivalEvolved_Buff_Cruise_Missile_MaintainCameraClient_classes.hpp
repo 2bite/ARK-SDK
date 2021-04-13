@@ -35,7 +35,7 @@ public:
 	}
 
 
-	void STATIC_BPHandleOnStartFire(bool* bFromGamepad);
+	void BPHandleOnStartFire(bool* bFromGamepad);
 	bool BPPreventFirstPerson();
 	void STATIC_BPOverrideCameraViewTarget(struct FName* CurrentCameraMode, struct FVector* DesiredCameraLocation, struct FRotator* DesiredCameraRotation, float* DesiredFOV, bool* bOverrideCameraLocation, struct FVector* CameraLocation, bool* bOverrideCameraRotation, struct FRotator* CameraRotation, bool* bOverrideCameraFOV, float* CameraFOV);
 	void UserConstructionScript();

@@ -14,6 +14,14 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.GetContainedDinoClass
+struct UPrimalItem_WeaponEmptyCryopod_C_GetContainedDinoClass_Params
+{
+	class UClass*                                      ResolvedClass;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               HasData;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FCustomItemData                             RawCustomItemData;                                        // (Parm, OutParm)
+};
+
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPPreventUpload
 struct UPrimalItem_WeaponEmptyCryopod_C_BPPreventUpload_Params
 {

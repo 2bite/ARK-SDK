@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_HazardSuitPants.PrimalItemArmor_HazardSuitPants_C
-// 0x0008 (0x0A20 - 0x0A18)
+// 0x0008 (0x0A30 - 0x0A28)
 class UPrimalItemArmor_HazardSuitPants_C : public UPrimalItemArmor_BasePants_C
 {
 public:
-	class UClass*                                      BuffWhileEquipped;                                        // 0x0A18(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      BuffWhileEquipped;                                        // 0x0A28(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

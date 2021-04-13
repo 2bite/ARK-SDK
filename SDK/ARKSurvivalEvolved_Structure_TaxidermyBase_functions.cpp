@@ -89,7 +89,7 @@ bool AStructure_TaxidermyBase_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Static, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -134,7 +134,7 @@ void AStructure_TaxidermyBase_C::RemoveSnapshot()
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ApplySnapshot
-// (Native, Event, Static, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalItem*             Snapshot                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -146,7 +146,6 @@ void AStructure_TaxidermyBase_C::STATIC_ApplySnapshot(class UPrimalItem* Snapsho
 	params.Snapshot = Snapshot;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

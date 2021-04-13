@@ -33,7 +33,7 @@ void AExplorerChest_Glitch_C::DrawBasicFloatingHUD(class AHUD** ForHUD)
 
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA
-// (NetReliable, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 

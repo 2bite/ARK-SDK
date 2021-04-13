@@ -28,7 +28,7 @@ public:
 
 
 	void OnEndEvent();
-	bool STATIC_BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
+	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void ExecuteUbergraph_DinoAttackState_Spindles_MinigunModeActivate(int EntryPoint);
 };

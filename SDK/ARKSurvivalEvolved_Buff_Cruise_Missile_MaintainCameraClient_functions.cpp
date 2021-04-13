@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Cruise_Missile_MaintainCameraClient.Buff_Cruise_Missile_MaintainCameraClient_C.BPHandleOnStartFire
-// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Cruise_Missile_MaintainCameraClient_C::STATIC_BPHandleOnStartFire(bool* bFromGamepad)
+void ABuff_Cruise_Missile_MaintainCameraClient_C::BPHandleOnStartFire(bool* bFromGamepad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Cruise_Missile_MaintainCameraClient.Buff_Cruise_Missile_MaintainCameraClient_C.BPHandleOnStartFire");
 
@@ -55,7 +55,7 @@ bool ABuff_Cruise_Missile_MaintainCameraClient_C::BPPreventFirstPerson()
 
 
 // Function Buff_Cruise_Missile_MaintainCameraClient.Buff_Cruise_Missile_MaintainCameraClient_C.BPOverrideCameraViewTarget
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, Static, Public, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FName*                  CurrentCameraMode              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                DesiredCameraLocation          (Parm, ZeroConstructor, IsPlainOldData)

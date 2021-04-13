@@ -14,6 +14,18 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function TributeTerminal_Base.TributeTerminal_Base_C.BPOnDemolish
+struct ATributeTerminal_Base_C_BPOnDemolish_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function TributeTerminal_Base.TributeTerminal_Base_C.BPPostLoadedFromSaveGame
+struct ATributeTerminal_Base_C_BPPostLoadedFromSaveGame_Params
+{
+};
+
 // Function TributeTerminal_Base.TributeTerminal_Base_C.UserConstructionScript
 struct ATributeTerminal_Base_C_UserConstructionScript_Params
 {

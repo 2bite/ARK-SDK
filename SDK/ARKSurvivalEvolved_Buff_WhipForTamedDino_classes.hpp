@@ -42,7 +42,7 @@ public:
 
 	void BPResetBuffStart();
 	void SetBuffCauser(class AActor** CausedBy);
-	void BuffTickServer(float* DeltaTime);
+	void STATIC_BuffTickServer(float* DeltaTime);
 	void PlayStartledAnim();
 	void BPActivated(class AActor** ForInstigator);
 	bool BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser);

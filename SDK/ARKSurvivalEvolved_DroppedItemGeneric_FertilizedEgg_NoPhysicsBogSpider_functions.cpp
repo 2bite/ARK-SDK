@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider.DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C.ReceiveBeginPlay
-// (NetRequest, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void ADroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C::STATIC_ReceiveBeginPlay()
 {
@@ -22,6 +22,7 @@ void ADroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C::STATIC_ReceiveBegin
 	ADroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

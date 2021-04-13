@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void STATIC_BPRangedAttack(struct FVector* TargetLocation, struct FVector* TargetVelocity);
+	void BPRangedAttack(struct FVector* TargetLocation, struct FVector* TargetVelocity);
 	void ExecuteUbergraph_ChalicoThrowMudState_Friendly(int EntryPoint);
 };
 

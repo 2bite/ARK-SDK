@@ -62,11 +62,11 @@ void ADaeodon_Character_BP_C::IsAlly(int otherTargetingTeam, bool* isSameTeamOrA
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.TryTrigger Attack
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADaeodon_Character_BP_C::TryTrigger_Attack(int AttackIndex)
+void ADaeodon_Character_BP_C::STATIC_TryTrigger_Attack(int AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Daeodon_Character_BP.Daeodon_Character_BP_C.TryTrigger Attack");
 
@@ -108,7 +108,7 @@ void ADaeodon_Character_BP_C::ReceiveAnyDamage(float* Damage, class UDamageType*
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.SendNetExecCommandToCharacter
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -400,7 +400,7 @@ void ADaeodon_Character_BP_C::Toggle_Passive_Healing()
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

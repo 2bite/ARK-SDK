@@ -43,7 +43,7 @@ public:
 	float                                              K2Node_CustomEvent_EffectRadius;                          // 0x09D8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_InitialLaunchDuration;                 // 0x09DC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	double                                             K2Node_CustomEvent_ExplodeNetworkTime;                    // 0x09E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     K2Node_CustomEvent_newVelocity;                           // 0x09E8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_NewVelocity;                           // 0x09E8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x09F4(0x0004) MISSED OFFSET
 	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x09F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0A00(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -73,7 +73,7 @@ public:
 	void ClientUpdateVelocity(const struct FVector& NewVelocity);
 	void StopGravityEffect();
 	void ForceInstigatorNetUpdate();
-	void ClientSyncDesiredFallVelocity(const struct FVector& vel);
+	void ClientSyncDesiredFallVelocity(const struct FVector& Vel);
 	void ExecuteUbergraph_Buff_TekGravityGrenadeForce(int EntryPoint);
 };
 

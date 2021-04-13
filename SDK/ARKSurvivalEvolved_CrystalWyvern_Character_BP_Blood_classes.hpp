@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CrystalWyvern_Character_BP_Blood.CrystalWyvern_Character_BP_Blood_C
-// 0x0000 (0x2470 - 0x2470)
+// 0x0000 (0x2480 - 0x2480)
 class ACrystalWyvern_Character_BP_Blood_C : public ACrystalWyvern_Character_BP_Base_C
 {
 public:

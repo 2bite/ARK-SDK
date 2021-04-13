@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_RecipeNote_Jerky.PrimalItem_RecipeNote_Jerky_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_RecipeNote_Jerky_C : public UPrimalItem_RecipeNote_Base_C
 {
 public:

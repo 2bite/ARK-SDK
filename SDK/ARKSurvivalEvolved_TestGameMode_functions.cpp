@@ -86,6 +86,26 @@ void ATestGameMode_C::OnShooterCharacterSpawned_Event(class AShooterCharacter* T
 }
 
 
+// Function TestGameMode.TestGameMode_C.ReceiveTick
+// ()
+// Parameters:
+// float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ATestGameMode_C::ReceiveTick(float* DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TestGameMode.TestGameMode_C.ReceiveTick");
+
+	ATestGameMode_C_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TestGameMode.TestGameMode_C.ExecuteUbergraph_TestGameMode
 // ()
 // Parameters:

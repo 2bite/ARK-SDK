@@ -7,12 +7,12 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
+#include "ARKSurvivalEvolved_SlateCore_classes.hpp"
 #include "ARKSurvivalEvolved_Dino_Character_BP_classes.hpp"
-#include "ARKSurvivalEvolved_UberpounceData_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
-#include "ARKSurvivalEvolved_SlateCore_classes.hpp"
+#include "ARKSurvivalEvolved_UberpounceData_classes.hpp"
+#include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 #include "ARKSurvivalEvolved_Shapeshifter_Large_PounceData_classes.hpp"
 
 namespace sdk

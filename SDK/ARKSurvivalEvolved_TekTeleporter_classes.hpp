@@ -64,17 +64,17 @@ public:
 	}
 
 
-	void DoTeleportBatch();
+	void STATIC_DoTeleportBatch();
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	bool BPPreventSpawnForPlayer(class AShooterPlayerController** PC, bool* bCheckCooldownTime, class APrimalStructure** FromStructure);
-	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed);
+	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed, bool* bForInventoryOnly);
 	void GetTeleportEffectScale(class APrimalCharacter* forCharacter, float* OutScale);
 	class UClass* GetBedFilterClass();
-	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	bool BPHandleBedFastTravel(class AShooterPlayerController** ForPC, class APrimalStructure** ToBed);
 	void GetElementCostToTeleport(int* ElementCostToTeleport);
 	void GetCharactersForTeleport(TArray<class APrimalCharacter*>* OutChars, TArray<struct UObject_FTransform>* OutTransforms);
-	void DoTeleport(class ATekTeleporter_C* ToTeleporter);
+	void STATIC_DoTeleport(class ATekTeleporter_C* ToTeleporter);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();

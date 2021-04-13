@@ -66,7 +66,7 @@ public:
 
 	void IsPlayerControllerValid(class APlayerController* thePC, bool* bValid);
 	void DropAllInventoryOnGround();
-	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed);
+	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed, bool* bForInventoryOnly);
 	void GetResourceStackSize(int* StackSize);
 	void BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser);
 	void FillInventory();

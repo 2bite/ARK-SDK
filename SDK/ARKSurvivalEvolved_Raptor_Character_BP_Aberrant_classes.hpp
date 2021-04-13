@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Raptor_Character_BP_Aberrant.Raptor_Character_BP_Aberrant_C
-// 0x0000 (0x2549 - 0x2549)
+// 0x0000 (0x2559 - 0x2559)
 class ARaptor_Character_BP_Aberrant_C : public ARaptor_Character_BP_C
 {
 public:

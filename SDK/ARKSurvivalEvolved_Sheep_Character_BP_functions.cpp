@@ -59,7 +59,7 @@ bool ASheep_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Sheep_Character_BP.Sheep_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Private, NetServer, HasDefaults, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

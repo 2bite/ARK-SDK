@@ -44,7 +44,7 @@ public:
 
 
 	void BPResetBuffStart();
-	void BuffTickClient(float* DeltaTime);
+	void STATIC_BuffTickClient(float* DeltaTime);
 	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void UserConstructionScript();
 	void SpawnCrateBuffedParticle(class APrimalStructureItemContainer_SupplyCrate* TargetCrate);

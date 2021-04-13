@@ -96,11 +96,11 @@ public:
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void BPDeactivated(class AActor** ForInstigator);
 	TArray<struct FBoneModifier> STATIC_BPModifyPlayerBoneModifiers(TArray<struct FBoneModifier>* InBoneModifiers);
-	void STATIC_HandleBuffAnimNotify(struct FName* AnimNotifyName, class FString* AnimNotifyStringData);
+	void HandleBuffAnimNotify(struct FName* AnimNotifyName, class FString* AnimNotifyStringData);
 	void UpdateBuffPersistentData();
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void BuffTickClient(float* DeltaTime);
-	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void BuffTickServer(float* DeltaTime);
 	void UserConstructionScript();
 	void Multi_SetupBaby();

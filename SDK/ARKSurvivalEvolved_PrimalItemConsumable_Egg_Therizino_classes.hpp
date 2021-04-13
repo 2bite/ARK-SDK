@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_Therizino.PrimalItemConsumable_Egg_Therizino_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_Egg_Therizino_C : public UPrimalItemConsumable_Egg_XtraLarge_C
 {
 public:

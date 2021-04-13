@@ -60,7 +60,7 @@ struct AShapeshifter_Large_Character_BP_C_BPDinoPostBeginPlay_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.CanSequentialJump
 struct AShapeshifter_Large_Character_BP_C_CanSequentialJump_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.Throttled TickFn
@@ -124,7 +124,7 @@ struct AShapeshifter_Large_Character_BP_C_GetProjectileTypeForRockThrow_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.Get RockThrowAttack Anim Index from Idle Anim
 struct AShapeshifter_Large_Character_BP_C_Get_RockThrowAttack_Anim_Index_from_Idle_Anim_Params
 {
-	int                                                ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GrabRock
@@ -146,7 +146,7 @@ struct AShapeshifter_Large_Character_BP_C_ThrowRock_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.Is Super Uberpounce
 struct AShapeshifter_Large_Character_BP_C_Is_Super_Uberpounce_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetUberpounceInterpSpeed
@@ -172,13 +172,13 @@ struct AShapeshifter_Large_Character_BP_C_UpdateIdleAnim_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetUberpounceRangeBase
 struct AShapeshifter_Large_Character_BP_C_GetUberpounceRangeBase_Params
 {
-	float                                              ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetUberpounceMaxRange
 struct AShapeshifter_Large_Character_BP_C_GetUberpounceMaxRange_Params
 {
-	float                                              ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPGetCrosshairAlpha
@@ -387,7 +387,7 @@ struct AShapeshifter_Large_Character_BP_C_BlueprintCanAttack_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.CalculateDamageTakenRequiredForBerzerk
 struct AShapeshifter_Large_Character_BP_C_CalculateDamageTakenRequiredForBerzerk_Params
 {
-	float                                              ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPAdjustDamage
@@ -497,7 +497,7 @@ struct AShapeshifter_Large_Character_BP_C_BPOnDinoCheat_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.IsBerzerk
 struct AShapeshifter_Large_Character_BP_C_IsBerzerk_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BP_OnJumpReleased
@@ -674,33 +674,33 @@ struct AShapeshifter_Large_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_192
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_192_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_188
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_188_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_191
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_191_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_187
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_187_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_190
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_190_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_186
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_186_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_189
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_189_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_188
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_188_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_60
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_60_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_56
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_56_Params
 {
 };
 

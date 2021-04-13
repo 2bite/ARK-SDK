@@ -72,12 +72,12 @@ public:
 	}
 
 
-	void IsDebugMode(bool* ret);
+	void IsDebugMode(bool* Ret);
 	void GetDamageForSpine(class APrimalCharacter* Target, float* Damage);
 	void FireSpine();
 	void Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
 	void GetAttackIndex(int* AttackIndex);
-	bool BPShouldEndAttack();
+	bool STATIC_BPShouldEndAttack();
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void OnEndEvent();
 	void OnBeginEvent(class UPrimalAIState** InParentState);

@@ -159,8 +159,8 @@ struct APegomastax_Character_BP_C_CanStealItem_Params
 	bool                                               canSteal;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.GoBackToOwner
-struct APegomastax_Character_BP_C_GoBackToOwner_Params
+// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.goBackToOwner
+struct APegomastax_Character_BP_C_goBackToOwner_Params
 {
 	class APawn*                                       Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -272,7 +272,7 @@ struct APegomastax_Character_BP_C_Do_StealItem_Params
 {
 	class APrimalCharacter*                            CharacterToStealFrom;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimalItem*                                 itemToSteal;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ConsumeItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               consumeItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -346,11 +346,11 @@ struct APegomastax_Character_BP_C_PlayHoldingForTime_Params
 	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              preDelay;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Idle;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               HideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               hideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.HideBag
-struct APegomastax_Character_BP_C_HideBag_Params
+// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.hideBag
+struct APegomastax_Character_BP_C_hideBag_Params
 {
 };
 
@@ -365,7 +365,7 @@ struct APegomastax_Character_BP_C_StopHoldingImmediate_Params
 {
 	bool                                               stopIdleHoldingAnim;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               stopRunHoldingAnim;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               HideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               hideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              idleBlendOutTime;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -396,7 +396,7 @@ struct APegomastax_Character_BP_C_PlayCombinedHolding_Params
 {
 	float                                              timeBeforeRun;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              preDelay;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               HideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               hideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              runHoldDuration;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	class APawn*                                       Owner;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };

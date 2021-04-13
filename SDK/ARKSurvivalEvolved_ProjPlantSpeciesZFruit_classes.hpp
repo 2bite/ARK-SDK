@@ -129,8 +129,8 @@ public:
 	void IsActorValidForPVEorIsPVP(class AActor* HitCharacter, bool* IsValid);
 	void IsShielded(class AActor* Actor, bool* IsShielded);
 	void IsWearingProtection(class AActor* Actor, bool* IsWearingProtection);
-	void STATIC_IsNearbyStructure(int index, float IndexOffset, bool* StructureInBetween);
-	void GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* retVal);
+	void IsNearbyStructure(int index, float IndexOffset, bool* StructureInBetween);
+	void GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* RetVal);
 	void UserConstructionScript();
 	void OnExplode(struct FHitResult* Result);
 	void BPProjectileBounced(struct FHitResult* ImpactResult, struct FVector* ImpactVelocity);

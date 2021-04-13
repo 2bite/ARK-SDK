@@ -17,7 +17,7 @@ namespace sdk
 // Function PrimalItemArmor_SaddleGeneric_Tek.PrimalItemArmor_SaddleGeneric_Tek_C.IGet Max Ammo
 struct UPrimalItemArmor_SaddleGeneric_Tek_C_IGet_Max_Ammo_Params
 {
-	int                                                retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PrimalItemArmor_SaddleGeneric_Tek.PrimalItemArmor_SaddleGeneric_Tek_C.CanElementDecrease

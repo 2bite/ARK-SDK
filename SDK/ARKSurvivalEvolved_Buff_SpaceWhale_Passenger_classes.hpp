@@ -119,13 +119,13 @@ public:
 	void BuffTickClient(float* DeltaTime);
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
 	void GetFireTransform(struct FVector* Location, struct FVector* Heading, bool* FireLeft);
-	void IsElectricalStormActive(bool* _return);
+	void IsElectricalStormActive(bool* Return);
 	void GetSocketClampDelta(float* OutSocketClampDelta);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void IsAllowedToFire(bool* bAllowed);
 	void SetTargeting(bool bTargetingEnabled);
-	void LocalDoAttack(bool* bDidFire);
+	void STATIC_LocalDoAttack(bool* bDidFire);
 	void GetTekSaddleItem(class UPrimalItem** TekSaddleItem);
 	void UserConstructionScript();
 	void ServerDoAttack(const struct FVector& AimAtLoc, const struct FVector& ServerSpawnAtLoc, bool FireLeft);

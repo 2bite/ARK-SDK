@@ -13,15 +13,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ScoutReturnToThrower_Actor.ScoutReturnToThrower_Actor_C.OnRep_Colors
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetClient, BlueprintEvent, Const)
+// (Native, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AScoutReturnToThrower_Actor_C::STATIC_OnRep_Colors()
+void AScoutReturnToThrower_Actor_C::OnRep_Colors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScoutReturnToThrower_Actor.ScoutReturnToThrower_Actor_C.OnRep_Colors");
 
 	AScoutReturnToThrower_Actor_C_OnRep_Colors_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

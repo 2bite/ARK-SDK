@@ -55,7 +55,7 @@ public:
 	class FString                                      GlyphTextOffset;                                          // 0x05F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	struct FVector                                     TextLocation;                                             // 0x0600(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     TextOffset;                                               // 0x060C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               OffsetLeft;                                               // 0x0618(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               offsetLeft;                                               // 0x0618(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x0619(0x0003) MISSED OFFSET
 	int                                                AscensionTestingLevel;                                    // 0x061C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                ReadableTextColor;                                        // 0x0620(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -142,14 +142,14 @@ public:
 	}
 
 
-	void ConstructionProcess();
+	void STATIC_ConstructionProcess();
 	void InitializeGlyphs(TArray<class FString>* FormattedText);
 	void SplitEveryOtherLine(const class FString& Line, class FString* StartingText, class FString* OffsetText);
 	void Convert_To_Base(int Num, int Base, class FString* converted);
 	void FormatReadableText(int MaxCharPerLine, TArray<class FString>* OriginalText, TArray<class FString>* FormattedText);
 	void Setup(int WordsPerRow, TArray<class FString>* OriginalText);
 	void RenderOriginalText(class UTextRenderComponent* TextRender, const struct FLinearColor& Color, int TranslationLevel, TArray<class FString>* Text);
-	void RenderGlyph(const class FString& GlyphRepresentation, const struct FLinearColor& Color, class UTextRenderComponent* TextRender, bool OffsetLeft, bool Offset);
+	void RenderGlyph(const class FString& GlyphRepresentation, const struct FLinearColor& Color, class UTextRenderComponent* TextRender, bool offsetLeft, bool Offset);
 	void Translation(const class FString& Text, class FString* GlyphTranslation);
 	void UserConstructionScript();
 	void DisplayTranslation__FinishedFunc();

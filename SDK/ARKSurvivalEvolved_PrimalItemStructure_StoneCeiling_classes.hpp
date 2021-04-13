@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_StoneCeiling.PrimalItemStructure_StoneCeiling_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_StoneCeiling_C : public UPrimalItemStructure_BaseCeiling_C
 {
 public:

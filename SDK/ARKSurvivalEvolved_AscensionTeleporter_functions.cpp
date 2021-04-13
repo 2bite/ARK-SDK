@@ -47,7 +47,7 @@ void AAscensionTeleporter_C::DoAscend()
 
 
 // Function AscensionTeleporter.AscensionTeleporter_C.BuffTickClient
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, Const)
+// (Net, NetRequest, Exec, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

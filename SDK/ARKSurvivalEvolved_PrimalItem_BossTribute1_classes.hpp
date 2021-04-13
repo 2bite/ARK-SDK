@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_BossTribute1.PrimalItem_BossTribute1_C
-// 0x0000 (0x0A08 - 0x0A08)
+// 0x0000 (0x0A18 - 0x0A18)
 class UPrimalItem_BossTribute1_C : public UPrimalItem_BossTributeGeneric_C
 {
 public:

@@ -38,7 +38,7 @@ struct ACrab_Character_BP_C_BPOnMovementModeChangedNotify_Params
 // Function Crab_Character_BP.Crab_Character_BP_C.Should Stop Jump Rotation
 struct ACrab_Character_BP_C_Should_Stop_Jump_Rotation_Params
 {
-	bool                                               return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack
@@ -332,23 +332,23 @@ struct ACrab_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_146
-struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_146_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_142
+struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_142_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_145
-struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_145_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_141
+struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_141_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_144
-struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_144_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_140
+struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_140_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_143
-struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_143_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_139
+struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_139_Params
 {
 };
 
@@ -449,7 +449,7 @@ struct ACrab_Character_BP_C_Server_TraceTargetDir_Params
 	struct FVector                                     AimLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               JumpInstant;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               throwInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ThrowInstant;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Crab_Character_BP.Crab_Character_BP_C.StartThrowIdle

@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void STATIC_BuffTickClient(float* DeltaTime);
+	void BuffTickClient(float* DeltaTime);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_Client_GiantTurtleRaftState(int EntryPoint);
 };

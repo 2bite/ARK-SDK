@@ -27,7 +27,7 @@ struct AXenomorph_Character_BP_C_Get_Charge_Variable_Interface_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPPreventAttachments
@@ -221,7 +221,7 @@ struct AXenomorph_Character_BP_C_BlueprintCanRiderAttack_Params
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Can Dive
 struct AXenomorph_Character_BP_C_Can_Dive_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Tamed Has Valid Enemy
@@ -325,23 +325,23 @@ struct AXenomorph_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_71
-struct AXenomorph_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_71_Params
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_69
+struct AXenomorph_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_69_Params
 {
 };
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Reload_K2Node_InputActionEvent_70
-struct AXenomorph_Character_BP_C_InpActEvt_Reload_K2Node_InputActionEvent_70_Params
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Reload_K2Node_InputActionEvent_68
+struct AXenomorph_Character_BP_C_InpActEvt_Reload_K2Node_InputActionEvent_68_Params
 {
 };
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_69
-struct AXenomorph_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_69_Params
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_67
+struct AXenomorph_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_67_Params
 {
 };
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_68
-struct AXenomorph_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_68_Params
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_66
+struct AXenomorph_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_66_Params
 {
 };
 
@@ -396,14 +396,14 @@ struct AXenomorph_Character_BP_C_ChargeVariableEventDoubleInterface_Params
 struct AXenomorph_Character_BP_C_ChargeVariableEventIntInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.ChargeVariableEventIntMulticastInterface
 struct AXenomorph_Character_BP_C_ChargeVariableEventIntMulticastInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.ReceiveBeginPlay
@@ -606,7 +606,7 @@ struct AXenomorph_Character_BP_C_Charge_Variable_Event_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Set Charge Variable Interface
@@ -619,7 +619,7 @@ struct AXenomorph_Character_BP_C_Set_Charge_Variable_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               triggerEvent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               multicastEvent;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.PlayGroundParticleVFX

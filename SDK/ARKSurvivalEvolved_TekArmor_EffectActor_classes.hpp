@@ -29,7 +29,7 @@ public:
 	bool                                               bSoundOn;                                                 // 0x04A0(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bParticlesOn;                                             // 0x04A1(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x04A2(0x0002) MISSED OFFSET
-	struct FVector                                     particleScale;                                            // 0x04A4(0x000C) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     ParticleScale;                                            // 0x04A4(0x000C) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     CallFunc_K2_GetComponentScale_ReturnValue;                // 0x04B0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x04BC(0x0004) MISSED OFFSET
 	class UParticleSystem*                             K2Node_CustomEvent_particle2;                             // 0x04C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -46,7 +46,7 @@ public:
 	class UParticleSystem*                             K2Node_CustomEvent_particle;                              // 0x04F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_particleScale;                         // 0x0500(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x4];                                       // 0x050C(0x0004) MISSED OFFSET
-	class USoundBase*                                  K2Node_CustomEvent_sound;                                 // 0x0510(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class USoundBase*                                  K2Node_CustomEvent_Sound;                                 // 0x0510(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsValid_ReturnValue4;                            // 0x0518(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_NotEqual_VectorVector_ReturnValue2;              // 0x0519(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsValid_ReturnValue5;                            // 0x051A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -70,9 +70,9 @@ public:
 	void SetSoundActive(bool Active, float StartTime);
 	void Set_ParticleActive(bool Active);
 	void UserConstructionScript();
-	void InitTekEffect(class UParticleSystem* particle, const struct FVector& particleScale, class USoundBase* Sound, class APrimalCharacter* Player);
+	void InitTekEffect(class UParticleSystem* particle, const struct FVector& ParticleScale, class USoundBase* Sound, class APrimalCharacter* Player);
 	void PlayerDied(class APrimalCharacter* DiedCharacter);
-	void SetTekFX(class UParticleSystem* particle, const struct FVector& particleScale, class USoundBase* Sound);
+	void SetTekFX(class UParticleSystem* particle, const struct FVector& ParticleScale, class USoundBase* Sound);
 	void Replicate_SetSoundState(bool Active);
 	void Replicate_SetParticleState(bool Active);
 	void ExecuteUbergraph_TekArmor_EffectActor(int EntryPoint);

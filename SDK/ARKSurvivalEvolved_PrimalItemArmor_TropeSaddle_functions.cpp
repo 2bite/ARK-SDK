@@ -12,46 +12,18 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C.BPAllowRemoteRemoveFromInventory
-// ()
-// Parameters:
-// class UPrimalInventoryComponent** invComp                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AShooterPlayerController** ByPC                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool*                          bRequestedByPlayer             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UPrimalItemArmor_TropeSaddle_C::BPAllowRemoteRemoveFromInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C.BPAllowRemoteRemoveFromInventory");
-
-	UPrimalItemArmor_TropeSaddle_C_BPAllowRemoteRemoveFromInventory_Params params;
-	params.invComp = invComp;
-	params.ByPC = ByPC;
-	params.bRequestedByPlayer = bRequestedByPlayer;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C.GetInventoryIconDisplayText
-// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItemArmor_TropeSaddle_C::STATIC_GetInventoryIconDisplayText()
+class FString UPrimalItemArmor_TropeSaddle_C::GetInventoryIconDisplayText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C.GetInventoryIconDisplayText");
 
 	UPrimalItemArmor_TropeSaddle_C_GetInventoryIconDisplayText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

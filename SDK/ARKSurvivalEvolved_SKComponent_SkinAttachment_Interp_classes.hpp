@@ -124,161 +124,161 @@ public:
 	class FString                                      Simple_Sound_Cue_Loading;                                 // 0x0EE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class USoundCue*                                   Simple_Loaded_Sound_Cue;                                  // 0x0EF0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class AActor*                                      CallFunc_GetOwner_ReturnValue;                            // 0x0EF8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AActor*                                      CallFunc_GetOwner_ReturnValue2;                           // 0x0F00(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x0F08(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x7];                                       // 0x0F09(0x0007) MISSED OFFSET
-	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x0F10(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x0F18(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x7];                                       // 0x0F19(0x0007) MISSED OFFSET
-	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x0F20(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0F28(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsWatchingExplorerNote_ReturnValue;              // 0x0F29(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x6];                                       // 0x0F2A(0x0006) MISSED OFFSET
-	class APrimalBuff*                                 CallFunc_GetBuff_ReturnValue;                             // 0x0F30(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class ABuff_MiniHLNA_C*                            K2Node_DynamicCast_AsBuff_MiniHLNA_C;                     // 0x0F38(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x0F40(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0F41(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsAlive_ReturnValue;                             // 0x0F42(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x0F43(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x0F44(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue2;                        // 0x0F45(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsTimeSince_ReturnValue;                         // 0x0F46(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue2;                         // 0x0F47(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AActor*                                      CallFunc_GetOwner_ReturnValue3;                           // 0x0F48(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter2;                   // 0x0F50(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast3_CastSuccess;                          // 0x0F58(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_PlayerIsLookingAtHLNA_Result;                    // 0x0F59(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsTalking_Result;                                // 0x0F5A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x1];                                       // 0x0F5B(0x0001) MISSED OFFSET
-	float                                              CallFunc_SelectFloat_ReturnValue;                         // 0x0F5C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsActive_ReturnValue;                            // 0x0F60(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue3;                            // 0x0F61(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData17[0x2];                                       // 0x0F62(0x0002) MISSED OFFSET
-	float                                              CallFunc_GetWorldDeltaSeconds_ReturnValue;                // 0x0F64(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue3;                         // 0x0F68(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x3];                                       // 0x0F69(0x0003) MISSED OFFSET
-	float                                              CallFunc_SelectFloat_ReturnValue2;                        // 0x0F6C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_FInterpTo_ReturnValue;                           // 0x0F70(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_Event_DeltaTime;                                   // 0x0F74(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_K2_IsTimerActive_ReturnValue;                    // 0x0F78(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData19[0x3];                                       // 0x0F79(0x0003) MISSED OFFSET
-	int                                                K2Node_CustomEvent_index;                                 // 0x0F7C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue4;                         // 0x0F80(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData20[0x7];                                       // 0x0F81(0x0007) MISSED OFFSET
-	class AActor*                                      CallFunc_GetOwner_ReturnValue4;                           // 0x0F88(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter3;                   // 0x0F90(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast4_CastSuccess;                          // 0x0F98(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData21[0x7];                                       // 0x0F99(0x0007) MISSED OFFSET
-	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x0FA0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_NotEqual_BoolBool_ReturnValue;                   // 0x0FA8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData22[0x7];                                       // 0x0FA9(0x0007) MISSED OFFSET
-	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x0FB0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast5_CastSuccess;                          // 0x0FB8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData23[0x7];                                       // 0x0FB9(0x0007) MISSED OFFSET
-	struct FExplorerNoteEntry                          CallFunc_GetExplorerNoteEntry_ReturnValue;                // 0x0FC0(0x0098) (Transient, DuplicateTransient)
-	class UGameInstance*                               CallFunc_GetGameInstance_ReturnValue;                     // 0x1058(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UShooterGameInstance*                        K2Node_DynamicCast_AsShooterGameInstance;                 // 0x1060(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast6_CastSuccess;                          // 0x1068(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData24[0x7];                                       // 0x1069(0x0007) MISSED OFFSET
-	struct FLocalizedSoundCueEntry                     CallFunc_GetLocaleSpecificAudio_OutLocalizedAudio;        // 0x1070(0x0020) (Transient, DuplicateTransient)
-	bool                                               CallFunc_GetLocaleSpecificAudio_ReturnValue;              // 0x1090(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData25[0x7];                                       // 0x1091(0x0007) MISSED OFFSET
-	class FString                                      K2Node_CustomEvent_AssetPath;                             // 0x1098(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	class UObject*                                     K2Node_CustomEvent_LoadedAsset;                           // 0x10A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class USoundCue*                                   K2Node_DynamicCast_AsSoundCue;                            // 0x10B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast7_CastSuccess;                          // 0x10B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData26[0x7];                                       // 0x10B9(0x0007) MISSED OFFSET
-	class USoundCue*                                   K2Node_DynamicCast_AsSoundCue2;                           // 0x10C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast8_CastSuccess;                          // 0x10C8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData27[0x7];                                       // 0x10C9(0x0007) MISSED OFFSET
-	class UTexture2D*                                  K2Node_DynamicCast_AsTexture2D;                           // 0x10D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast9_CastSuccess;                          // 0x10D8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue;                   // 0x10D9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData28[0x6];                                       // 0x10DA(0x0006) MISSED OFFSET
-	class UGameInstance*                               CallFunc_GetGameInstance_ReturnValue2;                    // 0x10E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UShooterGameInstance*                        K2Node_DynamicCast_AsShooterGameInstance2;                // 0x10E8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast10_CastSuccess;                         // 0x10F0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue2;                  // 0x10F1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData29[0x6];                                       // 0x10F2(0x0006) MISSED OFFSET
-	class UPrimalItem*                                 CallFunc_GetAssociatedItem_Result;                        // 0x10F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class APrimalBuff*                                 CallFunc_StaticAddBuff_ReturnValue;                       // 0x1100(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	double                                             CallFunc_GetNetworkTimeInSeconds_ReturnValue;             // 0x1108(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue4;                            // 0x1110(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue5;                            // 0x1111(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData30[0x2];                                       // 0x1112(0x0002) MISSED OFFSET
-	struct FName                                       K2Node_CustomEvent_MaterialFName;                         // 0x1114(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData31[0x4];                                       // 0x111C(0x0004) MISSED OFFSET
-	class UMaterialInstanceDynamic*                    K2Node_CustomEvent_LoadedMaterial;                        // 0x1120(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterPlayerController*                    K2Node_CustomEvent_Controller;                            // 0x1128(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class APawn*                                       CallFunc_K2_GetPawn_ReturnValue;                          // 0x1130(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterHUD*                                 CallFunc_GetShooterHUD_ReturnValue;                       // 0x1138(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_ObjectObject_ReturnValue;             // 0x1140(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData32[0x7];                                       // 0x1141(0x0007) MISSED OFFSET
-	class UUI_Subtitles*                               CallFunc_GetSubtitlesWidget_ReturnValue;                  // 0x1148(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x1150(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FName                                       CallFunc_GetObjectFName_ReturnValue;                      // 0x1158(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Conv_DoubleToFloat_ReturnValue;                  // 0x1160(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_NameName_ReturnValue;                 // 0x1164(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData33[0x3];                                       // 0x1165(0x0003) MISSED OFFSET
-	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x1168(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
-	float                                              CallFunc_GetDuration_ReturnValue;                         // 0x1178(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData34[0x4];                                       // 0x117C(0x0004) MISSED OFFSET
-	class UPrimalItem*                                 CallFunc_GetAssociatedItem_Result2;                       // 0x1180(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                Temp_int_Variable;                                        // 0x1188(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate2;                    // 0x118C(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
-	int                                                CallFunc_GetItemColorID_ReturnValue;                      // 0x119C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_SwitchInteger_CmpSuccess;                          // 0x11A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData35[0x3];                                       // 0x11A1(0x0003) MISSED OFFSET
-	struct FLinearColor                                CallFunc_StaticGetColorForItemColorID_ReturnValue;        // 0x11A4(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData36[0x4];                                       // 0x11B4(0x0004) MISSED OFFSET
-	struct FText                                       CallFunc_Conv_IntToText_ReturnValue;                      // 0x11B8(0x0028) (Transient, DuplicateTransient)
-	struct FText                                       CallFunc_Conv_IntToText_ReturnValue2;                     // 0x11E0(0x0028) (Transient, DuplicateTransient)
-	struct FFormatTextArgument                         K2Node_MakeStruct_FormatTextArgument;                     // 0x1208(0x0050) (Transient, DuplicateTransient)
-	struct FFormatTextArgument                         K2Node_MakeStruct_FormatTextArgument2;                    // 0x1258(0x0050) (Transient, DuplicateTransient)
-	TArray<struct FFormatTextArgument>                 K2Node_MakeArray_Array;                                   // 0x12A8(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	TArray<struct FFormatTextArgument>                 K2Node_MakeArray_Array2;                                  // 0x12B8(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FText                                       CallFunc_Format_ReturnValue;                              // 0x12C8(0x0028) (Transient, DuplicateTransient)
-	struct FText                                       CallFunc_Format_ReturnValue2;                             // 0x12F0(0x0028) (Transient, DuplicateTransient)
-	class FString                                      CallFunc_Conv_TextToString_ReturnValue;                   // 0x1318(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	class FString                                      CallFunc_Conv_TextToString_ReturnValue2;                  // 0x1328(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FName                                       CallFunc_Conv_StringToName_ReturnValue;                   // 0x1338(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FName                                       CallFunc_Conv_StringToName_ReturnValue2;                  // 0x1340(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FText                                       CallFunc_Conv_IntToText_ReturnValue3;                     // 0x1348(0x0028) (Transient, DuplicateTransient)
-	struct FFormatTextArgument                         K2Node_MakeStruct_FormatTextArgument3;                    // 0x1370(0x0050) (Transient, DuplicateTransient)
-	bool                                               CallFunc_LessEqual_IntInt_ReturnValue;                    // 0x13C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData37[0x7];                                       // 0x13C1(0x0007) MISSED OFFSET
-	TArray<struct FFormatTextArgument>                 K2Node_MakeArray_Array3;                                  // 0x13C8(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FText                                       CallFunc_Format_ReturnValue3;                             // 0x13D8(0x0028) (Transient, DuplicateTransient)
-	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x1400(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData38[0x4];                                       // 0x1404(0x0004) MISSED OFFSET
-	class FString                                      CallFunc_Conv_TextToString_ReturnValue3;                  // 0x1408(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FName                                       CallFunc_Conv_StringToName_ReturnValue3;                  // 0x1418(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UAudioComponent*                             CallFunc_PlaySoundAttached_ReturnValue;                   // 0x1420(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue6;                            // 0x1428(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Greater_IntInt_ReturnValue;                      // 0x1429(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData39[0x6];                                       // 0x142A(0x0006) MISSED OFFSET
-	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAttached_ReturnValue;                // 0x1430(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue7;                            // 0x1438(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData40[0x3];                                       // 0x1439(0x0003) MISSED OFFSET
-	struct FLinearColor                                CallFunc_StaticGetColorForItemColorID_ReturnValue2;       // 0x143C(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData41[0x4];                                       // 0x144C(0x0004) MISSED OFFSET
-	class UGameInstance*                               CallFunc_GetGameInstance_ReturnValue3;                    // 0x1450(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UShooterGameInstance*                        K2Node_DynamicCast_AsShooterGameInstance3;                // 0x1458(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast11_CastSuccess;                         // 0x1460(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue3;                  // 0x1461(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData42[0x6];                                       // 0x1462(0x0006) MISSED OFFSET
-	class UGameInstance*                               CallFunc_GetGameInstance_ReturnValue4;                    // 0x1468(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue8;                            // 0x1470(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x0F00(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x7];                                       // 0x0F01(0x0007) MISSED OFFSET
+	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x0F08(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x0F10(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x7];                                       // 0x0F11(0x0007) MISSED OFFSET
+	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x0F18(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0F20(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsWatchingExplorerNote_ReturnValue;              // 0x0F21(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x6];                                       // 0x0F22(0x0006) MISSED OFFSET
+	class APrimalBuff*                                 CallFunc_GetBuff_ReturnValue;                             // 0x0F28(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class ABuff_MiniHLNA_C*                            K2Node_DynamicCast_AsBuff_MiniHLNA_C;                     // 0x0F30(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x0F38(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0F39(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsAlive_ReturnValue;                             // 0x0F3A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x0F3B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x0F3C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue2;                        // 0x0F3D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsTimeSince_ReturnValue;                         // 0x0F3E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue2;                         // 0x0F3F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AActor*                                      CallFunc_GetOwner_ReturnValue2;                           // 0x0F40(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter2;                   // 0x0F48(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast3_CastSuccess;                          // 0x0F50(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_PlayerIsLookingAtHLNA_Result;                    // 0x0F51(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsTalking_Result;                                // 0x0F52(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x1];                                       // 0x0F53(0x0001) MISSED OFFSET
+	float                                              CallFunc_SelectFloat_ReturnValue;                         // 0x0F54(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsActive_ReturnValue;                            // 0x0F58(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue3;                            // 0x0F59(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData17[0x2];                                       // 0x0F5A(0x0002) MISSED OFFSET
+	float                                              CallFunc_GetWorldDeltaSeconds_ReturnValue;                // 0x0F5C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue3;                         // 0x0F60(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData18[0x3];                                       // 0x0F61(0x0003) MISSED OFFSET
+	float                                              CallFunc_SelectFloat_ReturnValue2;                        // 0x0F64(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_FInterpTo_ReturnValue;                           // 0x0F68(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_Event_DeltaTime;                                   // 0x0F6C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_K2_IsTimerActive_ReturnValue;                    // 0x0F70(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData19[0x3];                                       // 0x0F71(0x0003) MISSED OFFSET
+	int                                                K2Node_CustomEvent_index;                                 // 0x0F74(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue4;                         // 0x0F78(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData20[0x7];                                       // 0x0F79(0x0007) MISSED OFFSET
+	class AActor*                                      CallFunc_GetOwner_ReturnValue3;                           // 0x0F80(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter3;                   // 0x0F88(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast4_CastSuccess;                          // 0x0F90(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData21[0x7];                                       // 0x0F91(0x0007) MISSED OFFSET
+	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x0F98(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_NotEqual_BoolBool_ReturnValue;                   // 0x0FA0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData22[0x7];                                       // 0x0FA1(0x0007) MISSED OFFSET
+	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x0FA8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast5_CastSuccess;                          // 0x0FB0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData23[0x7];                                       // 0x0FB1(0x0007) MISSED OFFSET
+	struct FExplorerNoteEntry                          CallFunc_GetExplorerNoteEntry_ReturnValue;                // 0x0FB8(0x0098) (Transient, DuplicateTransient)
+	class UGameInstance*                               CallFunc_GetGameInstance_ReturnValue;                     // 0x1050(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UShooterGameInstance*                        K2Node_DynamicCast_AsShooterGameInstance;                 // 0x1058(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast6_CastSuccess;                          // 0x1060(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData24[0x7];                                       // 0x1061(0x0007) MISSED OFFSET
+	struct FLocalizedSoundCueEntry                     CallFunc_GetLocaleSpecificAudio_OutLocalizedAudio;        // 0x1068(0x0020) (Transient, DuplicateTransient)
+	bool                                               CallFunc_GetLocaleSpecificAudio_ReturnValue;              // 0x1088(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData25[0x7];                                       // 0x1089(0x0007) MISSED OFFSET
+	class FString                                      K2Node_CustomEvent_AssetPath;                             // 0x1090(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	class UObject*                                     K2Node_CustomEvent_LoadedAsset;                           // 0x10A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class USoundCue*                                   K2Node_DynamicCast_AsSoundCue;                            // 0x10A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast7_CastSuccess;                          // 0x10B0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData26[0x7];                                       // 0x10B1(0x0007) MISSED OFFSET
+	class USoundCue*                                   K2Node_DynamicCast_AsSoundCue2;                           // 0x10B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast8_CastSuccess;                          // 0x10C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData27[0x7];                                       // 0x10C1(0x0007) MISSED OFFSET
+	class UTexture2D*                                  K2Node_DynamicCast_AsTexture2D;                           // 0x10C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast9_CastSuccess;                          // 0x10D0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue;                   // 0x10D1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData28[0x6];                                       // 0x10D2(0x0006) MISSED OFFSET
+	class UGameInstance*                               CallFunc_GetGameInstance_ReturnValue2;                    // 0x10D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UShooterGameInstance*                        K2Node_DynamicCast_AsShooterGameInstance2;                // 0x10E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast10_CastSuccess;                         // 0x10E8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue2;                  // 0x10E9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData29[0x6];                                       // 0x10EA(0x0006) MISSED OFFSET
+	class UPrimalItem*                                 CallFunc_GetAssociatedItem_Result;                        // 0x10F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APrimalBuff*                                 CallFunc_StaticAddBuff_ReturnValue;                       // 0x10F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	double                                             CallFunc_GetNetworkTimeInSeconds_ReturnValue;             // 0x1100(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue4;                            // 0x1108(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue5;                            // 0x1109(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData30[0x2];                                       // 0x110A(0x0002) MISSED OFFSET
+	struct FName                                       K2Node_CustomEvent_MaterialFName;                         // 0x110C(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData31[0x4];                                       // 0x1114(0x0004) MISSED OFFSET
+	class UMaterialInstanceDynamic*                    K2Node_CustomEvent_LoadedMaterial;                        // 0x1118(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterPlayerController*                    K2Node_CustomEvent_Controller;                            // 0x1120(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APawn*                                       CallFunc_K2_GetPawn_ReturnValue;                          // 0x1128(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterHUD*                                 CallFunc_GetShooterHUD_ReturnValue;                       // 0x1130(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UUI_Subtitles*                               CallFunc_GetSubtitlesWidget_ReturnValue;                  // 0x1138(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x1140(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FName                                       CallFunc_GetObjectFName_ReturnValue;                      // 0x1148(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Conv_DoubleToFloat_ReturnValue;                  // 0x1150(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_NameName_ReturnValue;                 // 0x1154(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData32[0x3];                                       // 0x1155(0x0003) MISSED OFFSET
+	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x1158(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
+	float                                              CallFunc_GetDuration_ReturnValue;                         // 0x1168(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData33[0x4];                                       // 0x116C(0x0004) MISSED OFFSET
+	class UPrimalItem*                                 CallFunc_GetAssociatedItem_Result2;                       // 0x1170(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                Temp_int_Variable;                                        // 0x1178(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate2;                    // 0x117C(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
+	int                                                CallFunc_GetItemColorID_ReturnValue;                      // 0x118C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_SwitchInteger_CmpSuccess;                          // 0x1190(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData34[0x3];                                       // 0x1191(0x0003) MISSED OFFSET
+	struct FLinearColor                                CallFunc_StaticGetColorForItemColorID_ReturnValue;        // 0x1194(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData35[0x4];                                       // 0x11A4(0x0004) MISSED OFFSET
+	struct FText                                       CallFunc_Conv_IntToText_ReturnValue;                      // 0x11A8(0x0028) (Transient, DuplicateTransient)
+	struct FText                                       CallFunc_Conv_IntToText_ReturnValue2;                     // 0x11D0(0x0028) (Transient, DuplicateTransient)
+	struct FFormatTextArgument                         K2Node_MakeStruct_FormatTextArgument;                     // 0x11F8(0x0050) (Transient, DuplicateTransient)
+	struct FFormatTextArgument                         K2Node_MakeStruct_FormatTextArgument2;                    // 0x1248(0x0050) (Transient, DuplicateTransient)
+	TArray<struct FFormatTextArgument>                 K2Node_MakeArray_Array;                                   // 0x1298(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	TArray<struct FFormatTextArgument>                 K2Node_MakeArray_Array2;                                  // 0x12A8(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FText                                       CallFunc_Format_ReturnValue;                              // 0x12B8(0x0028) (Transient, DuplicateTransient)
+	struct FText                                       CallFunc_Format_ReturnValue2;                             // 0x12E0(0x0028) (Transient, DuplicateTransient)
+	class FString                                      CallFunc_Conv_TextToString_ReturnValue;                   // 0x1308(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	class FString                                      CallFunc_Conv_TextToString_ReturnValue2;                  // 0x1318(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FName                                       CallFunc_Conv_StringToName_ReturnValue;                   // 0x1328(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FName                                       CallFunc_Conv_StringToName_ReturnValue2;                  // 0x1330(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FText                                       CallFunc_Conv_IntToText_ReturnValue3;                     // 0x1338(0x0028) (Transient, DuplicateTransient)
+	struct FFormatTextArgument                         K2Node_MakeStruct_FormatTextArgument3;                    // 0x1360(0x0050) (Transient, DuplicateTransient)
+	bool                                               CallFunc_LessEqual_IntInt_ReturnValue;                    // 0x13B0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData36[0x7];                                       // 0x13B1(0x0007) MISSED OFFSET
+	TArray<struct FFormatTextArgument>                 K2Node_MakeArray_Array3;                                  // 0x13B8(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FText                                       CallFunc_Format_ReturnValue3;                             // 0x13C8(0x0028) (Transient, DuplicateTransient)
+	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x13F0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData37[0x4];                                       // 0x13F4(0x0004) MISSED OFFSET
+	class FString                                      CallFunc_Conv_TextToString_ReturnValue3;                  // 0x13F8(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FName                                       CallFunc_Conv_StringToName_ReturnValue3;                  // 0x1408(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UAudioComponent*                             CallFunc_PlaySoundAttached_ReturnValue;                   // 0x1410(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue6;                            // 0x1418(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Greater_IntInt_ReturnValue;                      // 0x1419(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData38[0x6];                                       // 0x141A(0x0006) MISSED OFFSET
+	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAttached_ReturnValue;                // 0x1420(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue7;                            // 0x1428(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData39[0x3];                                       // 0x1429(0x0003) MISSED OFFSET
+	struct FLinearColor                                CallFunc_StaticGetColorForItemColorID_ReturnValue2;       // 0x142C(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData40[0x4];                                       // 0x143C(0x0004) MISSED OFFSET
+	class UGameInstance*                               CallFunc_GetGameInstance_ReturnValue3;                    // 0x1440(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UShooterGameInstance*                        K2Node_DynamicCast_AsShooterGameInstance3;                // 0x1448(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast11_CastSuccess;                         // 0x1450(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue3;                  // 0x1451(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData41[0x6];                                       // 0x1452(0x0006) MISSED OFFSET
+	class UGameInstance*                               CallFunc_GetGameInstance_ReturnValue4;                    // 0x1458(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue8;                            // 0x1460(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData42[0x7];                                       // 0x1461(0x0007) MISSED OFFSET
+	class UShooterGameInstance*                        K2Node_DynamicCast_AsShooterGameInstance4;                // 0x1468(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast12_CastSuccess;                         // 0x1470(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData43[0x7];                                       // 0x1471(0x0007) MISSED OFFSET
-	class UShooterGameInstance*                        K2Node_DynamicCast_AsShooterGameInstance4;                // 0x1478(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast12_CastSuccess;                         // 0x1480(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData44[0x7];                                       // 0x1481(0x0007) MISSED OFFSET
-	TArray<struct FLocalizedSoundCueEntry>             K2Node_CustomEvent_Localized_Sound_Cues;                  // 0x1488(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FLocalizedSoundCueEntry                     CallFunc_GetLocaleSpecificAudio_OutLocalizedAudio2;       // 0x1498(0x0020) (Transient, DuplicateTransient)
-	bool                                               CallFunc_GetLocaleSpecificAudio_ReturnValue2;             // 0x14B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue4;                  // 0x14B9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Greater_FloatFloat_ReturnValue;                  // 0x14BA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData45[0x1];                                       // 0x14BB(0x0001) MISSED OFFSET
+	TArray<struct FLocalizedSoundCueEntry>             K2Node_CustomEvent_Localized_Sound_Cues;                  // 0x1478(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FLocalizedSoundCueEntry                     CallFunc_GetLocaleSpecificAudio_OutLocalizedAudio2;       // 0x1488(0x0020) (Transient, DuplicateTransient)
+	bool                                               CallFunc_GetLocaleSpecificAudio_ReturnValue2;             // 0x14A8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue4;                  // 0x14A9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Greater_FloatFloat_ReturnValue;                  // 0x14AA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData44[0x5];                                       // 0x14AB(0x0005) MISSED OFFSET
+	class AActor*                                      CallFunc_GetOwner_ReturnValue4;                           // 0x14B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_ObjectObject_ReturnValue;             // 0x14B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData45[0x3];                                       // 0x14B9(0x0003) MISSED OFFSET
 	float                                              CallFunc_Array_Set_Item_RefProperty;                      // 0x14BC(0x0004) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
 	float                                              CallFunc_Array_Set_Item2_RefProperty;                     // 0x14C0(0x0004) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
 
@@ -289,6 +289,7 @@ public:
 	}
 
 
+	void IsPlayingExplorerNote(bool* Result);
 	void Clear_Async_Loaded_Audio();
 	void STATIC_PrintDMICAnimTextureParams(class UMaterialInstanceDynamic* DMIC, int MatIndex);
 	void GetAssociatedItem(class UPrimalItem** Result);
@@ -303,7 +304,7 @@ public:
 	void PlaySound(class USoundBase* Sound);
 	void STATIC_PlayEmote(int EmoteIndex);
 	void CheckEmotes(class AShooterCharacter* Character);
-	void STATIC_UpdateInterpolation(class ACharacter* Character);
+	void UpdateInterpolation(class ACharacter* Character);
 	void AddedAsPrimalItemAttachment();
 	void StopFacingPlayer();
 	void BPOnComponentTick(float* DeltaTime);

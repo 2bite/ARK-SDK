@@ -14,6 +14,12 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.IsPlayingExplorerNote
+struct USKComponent_SkinAttachment_Interp_C_IsPlayingExplorerNote_Params
+{
+	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function SKComponent_SkinAttachment_Interp.SKComponent_SkinAttachment_Interp_C.Clear Async Loaded Audio
 struct USKComponent_SkinAttachment_Interp_C_Clear_Async_Loaded_Audio_Params
 {

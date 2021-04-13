@@ -117,7 +117,7 @@ void ABP_Sky_Sphere_ARK_C::UpdateSunDirection()
 
 
 // Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.UserConstructionScript
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void ABP_Sky_Sphere_ARK_C::UserConstructionScript()
 {
@@ -126,7 +126,6 @@ void ABP_Sky_Sphere_ARK_C::UserConstructionScript()
 	ABP_Sky_Sphere_ARK_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

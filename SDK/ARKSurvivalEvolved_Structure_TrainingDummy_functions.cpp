@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Structure_TrainingDummy.Structure_TrainingDummy_C.ReportDPS
-// (Exec, Event, Static, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
+// (Net, NetRequest, Static, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 
 void AStructure_TrainingDummy_C::STATIC_ReportDPS()
 {

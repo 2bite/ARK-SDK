@@ -99,15 +99,17 @@ void ATekCloningChamber_C::IsValidToClone(class APrimalDinoCharacter* InDino, bo
 // Parameters:
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsAccessAllowed               (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bForInventoryOnly              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATekCloningChamber_C::BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed)
+bool ATekCloningChamber_C::BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed, bool* bForInventoryOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.BPOverrideAllowStructureAccess");
 
 	ATekCloningChamber_C_BPOverrideAllowStructureAccess_Params params;
 	params.ForPC = ForPC;
 	params.bIsAccessAllowed = bIsAccessAllowed;
+	params.bForInventoryOnly = bForInventoryOnly;
 
 	auto flags = fn->FunctionFlags;
 
@@ -120,13 +122,13 @@ bool ATekCloningChamber_C::BPOverrideAllowStructureAccess(class AShooterPlayerCo
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BlueprintDrawHUD
-// (NetRequest, NetMulticast, Public, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Event, Static, NetMulticast, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCloningChamber_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void ATekCloningChamber_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.BlueprintDrawHUD");
 
@@ -199,7 +201,7 @@ bool ATekCloningChamber_C::BPPreventStasis()
 
 
 // Function TekCloningChamber.TekCloningChamber_C.StartCloneDino
-// (NetRequest, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    DinoToClone                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -248,12 +250,12 @@ bool ATekCloningChamber_C::BPServerHandleNetExecCommand(class APlayerController*
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BPClientDoMultiUse
-// (Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Event, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCloningChamber_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void ATekCloningChamber_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.BPClientDoMultiUse");
 
@@ -262,7 +264,6 @@ void ATekCloningChamber_C::STATIC_BPClientDoMultiUse(class APlayerController** F
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,13 +272,13 @@ void ATekCloningChamber_C::STATIC_BPClientDoMultiUse(class APlayerController** F
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Native, NetResponse, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATekCloningChamber_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATekCloningChamber_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.BPGetMultiUseEntries");
 

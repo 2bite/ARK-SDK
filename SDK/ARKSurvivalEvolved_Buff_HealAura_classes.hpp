@@ -160,7 +160,7 @@ public:
 	class APlayerController*                           CallFunc_CastToPlayerController_ReturnValue3;             // 0x0CC8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsValid_ReturnValue7;                            // 0x0CD0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData30[0x3];                                       // 0x0CD1(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_delay;                                 // 0x0CD4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_Delay;                                 // 0x0CD4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x0CD8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast5_CastSuccess;                          // 0x0CE0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData31[0x7];                                       // 0x0CE1(0x0007) MISSED OFFSET

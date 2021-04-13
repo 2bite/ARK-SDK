@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Manta_Character_BP_Aberrant.Manta_Character_BP_Aberrant_C
-// 0x0000 (0x2296 - 0x2296)
+// 0x0000 (0x22A6 - 0x22A6)
 class AManta_Character_BP_Aberrant_C : public AManta_Character_BP_C
 {
 public:

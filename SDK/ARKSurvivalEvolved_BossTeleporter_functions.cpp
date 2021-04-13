@@ -30,11 +30,11 @@ void ABossTeleporter_C::Do_TeleportSound()
 
 
 // Function BossTeleporter.BossTeleporter_C.BuffTickClient
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintEvent, Const)
+// (Net, Exec, Event, NetResponse, Static, NetServer, NetClient, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABossTeleporter_C::BuffTickClient(float* DeltaTime)
+void ABossTeleporter_C::STATIC_BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossTeleporter.BossTeleporter_C.BuffTickClient");
 
@@ -42,7 +42,6 @@ void ABossTeleporter_C::BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

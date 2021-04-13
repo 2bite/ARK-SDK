@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Buff Create Charge Manager No Instigator Library
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalBuff*             Buff                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalBuff*             chargeManager                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UChargeFunctions_FakeLibrary_C::STATIC_Buff_Create_Charge_Manager_No_Instigator_Library(class APrimalBuff* Buff, class UClass* managerClass, class APrimalBuff** chargeManager)
+void UChargeFunctions_FakeLibrary_C::Buff_Create_Charge_Manager_No_Instigator_Library(class APrimalBuff* Buff, class UClass* managerClass, class APrimalBuff** chargeManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Buff Create Charge Manager No Instigator Library");
 
@@ -237,7 +237,7 @@ void UChargeFunctions_FakeLibrary_C::Buff_Create_Charge_Manager_Library(class AP
 
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Structure Create Charge Manager Library
-// (NetReliable, Native, Static, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalStructure*        Structure                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -322,13 +322,13 @@ void UChargeFunctions_FakeLibrary_C::ChargeVariableEventLibrary(TEnumAsByte<E_Ch
 
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.CharacterCreateChargeManagerLibrary
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        CharacterOwner                 (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalBuff*             chargeManager                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UChargeFunctions_FakeLibrary_C::STATIC_CharacterCreateChargeManagerLibrary(class APrimalCharacter* CharacterOwner, class UClass* managerClass, class APrimalBuff** chargeManager)
+void UChargeFunctions_FakeLibrary_C::CharacterCreateChargeManagerLibrary(class APrimalCharacter* CharacterOwner, class UClass* managerClass, class APrimalBuff** chargeManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.CharacterCreateChargeManagerLibrary");
 

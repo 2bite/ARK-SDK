@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponRocketLauncher.PrimalItem_WeaponRocketLauncher_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_WeaponRocketLauncher_C : public UPrimalItemWeaponGenericGun_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Alpha_Leedsichthys_Character_BP.Alpha_Leedsichthys_Character_BP_C
-// 0x0000 (0x2501 - 0x2501)
+// 0x0000 (0x2511 - 0x2511)
 class AAlpha_Leedsichthys_Character_BP_C : public ALeedsichthys_Character_BP_C
 {
 public:

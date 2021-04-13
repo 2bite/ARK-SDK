@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Volcanic_Dragon_Character_BP.Volcanic_Dragon_Character_BP_C
-// 0x0000 (0x236F - 0x236F)
+// 0x0000 (0x237F - 0x237F)
 class AVolcanic_Dragon_Character_BP_C : public ADragon_Character_BP_Boss_C
 {
 public:

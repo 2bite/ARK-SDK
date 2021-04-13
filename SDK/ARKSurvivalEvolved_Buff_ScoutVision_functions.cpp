@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPGetDebugInfoString
-// (Net, Native, NetResponse, Static, NetMulticast, Public, NetClient, BlueprintEvent, Const)
+// (Net, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ABuff_ScoutVision_C::STATIC_BPGetDebugInfoString()
+class FString ABuff_ScoutVision_C::BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutVision.Buff_ScoutVision_C.BPGetDebugInfoString");
 
@@ -75,9 +75,9 @@ void ABuff_ScoutVision_C::ReceiveBeginPlay()
 // Function Buff_ScoutVision.Buff_ScoutVision_C.IsLocalScout
 // ()
 // Parameters:
-// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ScoutVision_C::IsLocalScout(bool* retVal)
+void ABuff_ScoutVision_C::IsLocalScout(bool* RetVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ScoutVision.Buff_ScoutVision_C.IsLocalScout");
 
@@ -89,8 +89,8 @@ void ABuff_ScoutVision_C::IsLocalScout(bool* retVal)
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (RetVal != nullptr)
+		*RetVal = params.RetVal;
 }
 
 
@@ -185,7 +185,7 @@ void ABuff_ScoutVision_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPDrawBuffStatusHUD
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, NetClient, BlueprintEvent, Const)
+// (Net, NetReliable, Static, MulticastDelegate, Private, Protected, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -203,7 +203,6 @@ void ABuff_ScoutVision_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, fl
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

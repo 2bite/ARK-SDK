@@ -78,7 +78,7 @@ bool UIceBreathAttackStateRanged_C::BPCanAttack(float* Distance, float* attackRa
 
 
 // Function IceBreathAttackStateRanged.IceBreathAttackStateRanged_C.OnTickEvent
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetRequest, Native, NetResponse, Static, Public, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -73,9 +73,9 @@ void AProjGlowStick_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AAct
 // Function ProjGlowStick.ProjGlowStick_C.GetDefaultGlowStickRef
 // ()
 // Parameters:
-// class AWeapGlowStick_C*        Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AWeapGlowStick_C*        ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjGlowStick_C::GetDefaultGlowStickRef(class AWeapGlowStick_C** Ref)
+void AProjGlowStick_C::GetDefaultGlowStickRef(class AWeapGlowStick_C** ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjGlowStick.ProjGlowStick_C.GetDefaultGlowStickRef");
 
@@ -87,8 +87,8 @@ void AProjGlowStick_C::GetDefaultGlowStickRef(class AWeapGlowStick_C** Ref)
 
 	fn->FunctionFlags = flags;
 
-	if (Ref != nullptr)
-		*Ref = params.Ref;
+	if (ref != nullptr)
+		*ref = params.ref;
 }
 
 
@@ -149,7 +149,7 @@ void AProjGlowStick_C::IsAttachedToCharacter(bool* Result)
 
 
 // Function ProjGlowStick.ProjGlowStick_C.Get Average Normal Within Radius
-// (NetRequest, Exec, Event, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)

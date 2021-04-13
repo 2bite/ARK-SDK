@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.UpdateAttackAnimWeights
-// (NetReliable, NetRequest, NetResponse, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABigfoot_Character_BP_C::UpdateAttackAnimWeights(int AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,7 +213,7 @@ bool ABigfoot_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Event, Static, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -226,7 +227,6 @@ TArray<struct FMultiUseEntry> ABigfoot_Character_BP_C::STATIC_BPGetMultiUseEntri
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -442,9 +442,9 @@ void ABigfoot_Character_BP_C::On_Throw_Pressed(bool overheadThrow)
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsThrowing
 // ()
 // Parameters:
-// bool                           RetValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::IsThrowing(bool* RetValue)
+void ABigfoot_Character_BP_C::IsThrowing(bool* retValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsThrowing");
 
@@ -456,8 +456,8 @@ void ABigfoot_Character_BP_C::IsThrowing(bool* RetValue)
 
 	fn->FunctionFlags = flags;
 
-	if (RetValue != nullptr)
-		*RetValue = params.RetValue;
+	if (retValue != nullptr)
+		*retValue = params.retValue;
 }
 
 
@@ -718,7 +718,7 @@ struct FVector ABigfoot_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch)
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.ThrowTrace
-// (NetReliable, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Native, Static, Public, Protected, Delegate, NetServer, NetClient)
 
 void ABigfoot_Character_BP_C::STATIC_ThrowTrace()
 {
@@ -727,6 +727,7 @@ void ABigfoot_Character_BP_C::STATIC_ThrowTrace()
 	ABigfoot_Character_BP_C_ThrowTrace_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -755,7 +756,7 @@ void ABigfoot_Character_BP_C::CarryDino(class APrimalCharacter* dinoToCarry)
 
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, NetResponse, Static, Public, Protected, Delegate, NetServer, NetClient)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -774,7 +775,6 @@ float ABigfoot_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackInd
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -897,14 +897,14 @@ void ABigfoot_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_202
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_198
 // ()
 
-void ABigfoot_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_202()
+void ABigfoot_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_198()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_202");
+	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_198");
 
-	ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_202_Params params;
+	ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_198_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -914,14 +914,14 @@ void ABigfoot_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_202()
 }
 
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_201
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_197
 // ()
 
-void ABigfoot_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_201()
+void ABigfoot_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_197()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_201");
+	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_197");
 
-	ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_201_Params params;
+	ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_197_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -931,14 +931,14 @@ void ABigfoot_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_201()
 }
 
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_200
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_196
 // ()
 
-void ABigfoot_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_200()
+void ABigfoot_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_196()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_200");
+	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_196");
 
-	ABigfoot_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_200_Params params;
+	ABigfoot_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_196_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -948,14 +948,14 @@ void ABigfoot_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_200()
 }
 
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_199
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_195
 // ()
 
-void ABigfoot_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_199()
+void ABigfoot_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_195()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_199");
+	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_195");
 
-	ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_199_Params params;
+	ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_195_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -965,14 +965,14 @@ void ABigfoot_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActio
 }
 
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_198
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_194
 // ()
 
-void ABigfoot_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_198()
+void ABigfoot_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_194()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_198");
+	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_194");
 
-	ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_198_Params params;
+	ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_194_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1044,16 +1044,16 @@ void ABigfoot_Character_BP_C::DelayedGrab()
 // Parameters:
 // struct FVector                 AimLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AimHit                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           throwInstant                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ThrowInstant                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABigfoot_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool throwInstant)
+void ABigfoot_Character_BP_C::Server_TraceTargetDir(const struct FVector& AimLoc, bool AimHit, bool ThrowInstant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.Server_TraceTargetDir");
 
 	ABigfoot_Character_BP_C_Server_TraceTargetDir_Params params;
 	params.AimLoc = AimLoc;
 	params.AimHit = AimHit;
-	params.throwInstant = throwInstant;
+	params.ThrowInstant = ThrowInstant;
 
 	auto flags = fn->FunctionFlags;
 

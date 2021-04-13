@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapLance.WeapLance_C.DoTrace
-// (Native, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapLance_C::STATIC_DoTrace(const struct FVector& Start, const struct FVector& End)
+void AWeapLance_C::DoTrace(const struct FVector& Start, const struct FVector& End)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapLance.WeapLance_C.DoTrace");
 
@@ -27,7 +27,6 @@ void AWeapLance_C::STATIC_DoTrace(const struct FVector& Start, const struct FVec
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

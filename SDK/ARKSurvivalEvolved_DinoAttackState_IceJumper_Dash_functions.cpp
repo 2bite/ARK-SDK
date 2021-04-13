@@ -98,7 +98,7 @@ void UDinoAttackState_IceJumper_Dash_C::OnTickEvent(float* DeltaSeconds)
 
 
 // Function DinoAttackState_IceJumper_Dash.DinoAttackState_IceJumper_Dash_C.OnBeginEvent
-// (Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetRequest, NetResponse, NetMulticast, Public, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimalAIState**         InParentState                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,7 +110,6 @@ void UDinoAttackState_IceJumper_Dash_C::OnBeginEvent(class UPrimalAIState** InPa
 	params.InParentState = InParentState;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

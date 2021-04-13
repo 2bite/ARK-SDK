@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_Allo_Fertilized_Volcano.PrimalItemConsumable_Egg_Allo_Fertilized_Volcano_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_Egg_Allo_Fertilized_Volcano_C : public UPrimalItemConsumable_Egg_Allo_C
 {
 public:

@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss
-// (NetReliable, Native, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Event, NetMulticast, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           DifficultyIndex                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName*                  BossName                       (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalPlayerDataBP_Base_C::STATIC_BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController)
+void UPrimalPlayerDataBP_Base_C::BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss");
 
@@ -29,7 +29,6 @@ void UPrimalPlayerDataBP_Base_C::STATIC_BPForceDefeatedBoss(int* DifficultyIndex
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

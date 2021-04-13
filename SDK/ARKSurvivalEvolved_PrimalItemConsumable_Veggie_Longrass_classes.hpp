@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Veggie_Longrass.PrimalItemConsumable_Veggie_Longrass_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_Veggie_Longrass_C : public UPrimalItemConsumable_Veggie_Base_C
 {
 public:

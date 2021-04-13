@@ -176,7 +176,7 @@ struct ABuff_TekArmor_ShoulderCannon_C_SpawnProjectile_Params
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.IsElectricalStormActive
 struct ABuff_TekArmor_ShoulderCannon_C_IsElectricalStormActive_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.Update Weapon Firing

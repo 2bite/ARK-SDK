@@ -97,9 +97,9 @@ void ARaptor_Character_BP_C::PushbackAfterPounceFn()
 // ()
 // Parameters:
 // class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARaptor_Character_BP_C::HasPouncePreventionBuff(class APrimalCharacter* Target, bool* ret)
+void ARaptor_Character_BP_C::HasPouncePreventionBuff(class APrimalCharacter* Target, bool* Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.HasPouncePreventionBuff");
 
@@ -112,8 +112,8 @@ void ARaptor_Character_BP_C::HasPouncePreventionBuff(class APrimalCharacter* Tar
 
 	fn->FunctionFlags = flags;
 
-	if (ret != nullptr)
-		*ret = params.ret;
+	if (Ret != nullptr)
+		*Ret = params.Ret;
 }
 
 
@@ -344,12 +344,12 @@ void ARaptor_Character_BP_C::OnRep_bCanMaul()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintCanRiderAttack
-// (Native, Event, NetResponse, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ARaptor_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
+bool ARaptor_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintCanRiderAttack");
 
@@ -357,7 +357,6 @@ bool ARaptor_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -385,7 +384,7 @@ void ARaptor_Character_BP_C::BPTimerServer()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.CheckForPounceTarget
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APrimalCharacter*        RetTarget                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -396,7 +395,6 @@ void ARaptor_Character_BP_C::CheckForPounceTarget(class APrimalCharacter** RetTa
 	ARaptor_Character_BP_C_CheckForPounceTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -109,7 +109,7 @@ void AMegatherium_Character_BP_C::BPOnAnimPlayedNotify(class UAnimMontage** Anim
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BPGetMultiUseEntries
-// (Native, NetResponse, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, HasDefaults, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -248,7 +248,7 @@ void AMegatherium_Character_BP_C::BPDoAttack(int* AttackIndex)
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintCanRiderAttack
-// (NetRequest, NetResponse, Static, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, HasDefaults, NetClient)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -333,7 +333,7 @@ void AMegatherium_Character_BP_C::OnNewTarget()
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetMulticast, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, HasDefaults, NetClient)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -342,7 +342,7 @@ void AMegatherium_Character_BP_C::OnNewTarget()
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AMegatherium_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AMegatherium_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintAdjustOutputDamage");
 

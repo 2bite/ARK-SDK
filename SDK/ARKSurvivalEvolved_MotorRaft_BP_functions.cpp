@@ -36,14 +36,14 @@ bool AMotorRaft_BP_C::BPCanCryo(class AShooterPlayerController** ForPC)
 
 
 // Function MotorRaft_BP.MotorRaft_BP_C.BPPlayDying
-// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
 // class APawn**                  InstigatingPawn                (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMotorRaft_BP_C::BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
+void AMotorRaft_BP_C::STATIC_BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MotorRaft_BP.MotorRaft_BP_C.BPPlayDying");
 
@@ -128,13 +128,13 @@ bool AMotorRaft_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function MotorRaft_BP.MotorRaft_BP_C.BPGetMultiUseEntries
-// (Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AMotorRaft_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AMotorRaft_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MotorRaft_BP.MotorRaft_BP_C.BPGetMultiUseEntries");
 
@@ -318,7 +318,7 @@ void AMotorRaft_BP_C::BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrima
 
 
 // Function MotorRaft_BP.MotorRaft_BP_C.BlueprintDrawFloatingHUD
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Native, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -336,6 +336,7 @@ void AMotorRaft_BP_C::STATIC_BlueprintDrawFloatingHUD(class AShooterHUD** HUD, f
 	params.DrawScale = DrawScale;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

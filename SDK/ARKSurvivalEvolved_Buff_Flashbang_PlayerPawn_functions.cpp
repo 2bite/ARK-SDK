@@ -96,13 +96,13 @@ void ABuff_Flashbang_PlayerPawn_C::ShouldStartFading(bool* ShouldFade)
 
 
 // Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.IsNearbyStructure
-// (NetReliable, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, Const)
+// (NetReliable, Native, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            CheckIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          IndexOffset                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           StructureInBetween             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Flashbang_PlayerPawn_C::STATIC_IsNearbyStructure(int CheckIndex, float IndexOffset, bool* StructureInBetween)
+void ABuff_Flashbang_PlayerPawn_C::IsNearbyStructure(int CheckIndex, float IndexOffset, bool* StructureInBetween)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.IsNearbyStructure");
 
@@ -183,9 +183,9 @@ void ABuff_Flashbang_PlayerPawn_C::CalculateWeightedIntensityAverage(float Expos
 // Parameters:
 // class AActor*                  Actor1                         (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor2                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* retVal)
+void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* RetVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.Get Normalized Distance");
 
@@ -199,8 +199,8 @@ void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1,
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (RetVal != nullptr)
+		*RetVal = params.RetVal;
 }
 
 
@@ -209,9 +209,9 @@ void ABuff_Flashbang_PlayerPawn_C::Get_Normalized_Distance(class AActor* Actor1,
 // Parameters:
 // struct FVector                 v1                             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 v2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RetValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          retValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Flashbang_PlayerPawn_C::Get_NormalizedViewing_Angle(const struct FVector& v1, const struct FVector& v2, float* RetValue)
+void ABuff_Flashbang_PlayerPawn_C::Get_NormalizedViewing_Angle(const struct FVector& v1, const struct FVector& v2, float* retValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.Get NormalizedViewing Angle");
 
@@ -225,8 +225,8 @@ void ABuff_Flashbang_PlayerPawn_C::Get_NormalizedViewing_Angle(const struct FVec
 
 	fn->FunctionFlags = flags;
 
-	if (RetValue != nullptr)
-		*RetValue = params.RetValue;
+	if (retValue != nullptr)
+		*retValue = params.retValue;
 }
 
 

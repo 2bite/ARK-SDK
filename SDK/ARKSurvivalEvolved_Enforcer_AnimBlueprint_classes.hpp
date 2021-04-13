@@ -29,7 +29,7 @@ public:
 
 
 	void IsDinoRunning(class ADino_Character_BP_Climber_C** Dino, bool* Running);
-	void GetStrafeBlendspacePlayRate(float* forwardVelocity, float* rightVelocity, struct FVector2D* BlendspaceInputs, float* BlendspacePlayRate);
+	void GetStrafeBlendspacePlayRate(float* ForwardVelocity, float* RightVelocity, struct FVector2D* BlendspaceInputs, float* BlendspacePlayRate);
 	void ShouldPlayClimbRunAnim(bool* PlayClimbRun);
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void BlueprintInitializeAnimation();

@@ -45,7 +45,7 @@ public:
 	float                                              DropAtEndThreshold;                                       // 0x0D0C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              AttachOffsetHanging;                                      // 0x0D10(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              AttachOffsetAbove;                                        // 0x0D14(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              meshOffsetHanging;                                        // 0x0D18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MeshOffsetHanging;                                        // 0x0D18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MeshOffsetAbove;                                          // 0x0D1C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               DoActorOffsetUpdate;                                      // 0x0D20(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x7];                                       // 0x0D21(0x0007) MISSED OFFSET
@@ -68,7 +68,7 @@ public:
 	float                                              CallFunc_PlayAnimEx_ReturnValue2;                         // 0x0D48(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               Temp_bool_IsClosed_Variable3;                             // 0x0D4C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x3];                                       // 0x0D4D(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_delay;                                 // 0x0D50(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_Delay;                                 // 0x0D50(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayTurnAnimation_Duration;                      // 0x0D54(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_Add_FloatFloat_ReturnValue;                      // 0x0D58(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0D5C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -131,10 +131,10 @@ public:
 	void GetAttachOffset(struct FVector* AttachOffset);
 	void Play_Detach_Animation(float* Duration);
 	void STATIC_IsStillColliding();
-	void STATIC_CanZiplineFlip(bool* _return);
+	void CanZiplineFlip(bool* Return);
 	void ResetCamera();
 	void HandleCollision(struct FHitResult* Hit);
-	void HitZiplineEndStop(class UMovementComponent** MovementComp);
+	void STATIC_HitZiplineEndStop(class UMovementComponent** MovementComp);
 	void CalcZiplinePreservedStartVelocity(struct FVector* InVelocity, struct FVector* Velocity);
 	void SetZiplineRunningSpeedAndAcceleration();
 	void ResetZiplineSpeedAndAcceleration();
@@ -142,33 +142,33 @@ public:
 	void CalcZiplineVelocityNonMotorized(struct FVector* InVelocity, float* DeltaTime, struct FVector* OutVelocity);
 	void UpdateFX();
 	void ProcessMotorInput(float* A);
-	void STATIC_JumpImpulse(struct FVector* Direction);
+	void JumpImpulse(struct FVector* Direction);
 	void UpdateActorZiplineOffset();
 	void TickMoveAlongZipline();
 	void SetHurtAnim(bool Hanging, bool Reset);
-	void AttachToZipline(struct FVector* StartLocation);
+	void STATIC_AttachToZipline(struct FVector* StartLocation);
 	void BuffTickClient(float* DeltaTime);
 	void UpdateFPVCameraAndMeshPosition();
 	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
-	void PlayTurnAnimation(class UAnimMontage** Override, float* Duration);
+	void PlayTurnAnimation(class UAnimMontage** override, float* Duration);
 	void SetZiplineControlRotation();
-	void RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* _return);
+	void RotationNearlyEqual(const struct FRotator& RotA, const struct FRotator& RotB, float ErrorTolerance, bool* Return);
 	void BPDeactivated(class AActor** ForInstigator);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void ResetMeshPosition();
 	void InterpolateCharacterMeshToLine(float* DeltaTime);
 	void UserConstructionScript();
-	void InpActEvt_Run_K2Node_InputActionEvent_107();
-	void InpActEvt_Run_K2Node_InputActionEvent_106();
-	void InpActEvt_Jump_K2Node_InputActionEvent_105();
-	void InpActEvt_Use_K2Node_InputActionEvent_104();
-	void InpActEvt_Crouch_K2Node_InputActionEvent_103();
-	void InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_102();
-	void InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_54();
-	void InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_53();
-	void InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_101();
-	void InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_52();
+	void InpActEvt_Run_K2Node_InputActionEvent_103();
+	void InpActEvt_Run_K2Node_InputActionEvent_102();
+	void InpActEvt_Jump_K2Node_InputActionEvent_101();
+	void InpActEvt_Use_K2Node_InputActionEvent_100();
+	void InpActEvt_Crouch_K2Node_InputActionEvent_99();
+	void InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_98();
+	void InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50();
+	void InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_49();
+	void InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_97();
+	void InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48();
 	void FlipOnZipline_Multicast();
 	void FlipOnZipline_RunOnServer();
 	void SetIsTurning(float Delay);

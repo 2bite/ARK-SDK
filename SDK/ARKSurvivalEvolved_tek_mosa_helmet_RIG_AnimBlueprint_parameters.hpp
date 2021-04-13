@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function tek_mosa_helmet_RIG_AnimBlueprint.tek_mosa_helmet_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_mosa_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2616
-struct Utek_mosa_helmet_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_mosa_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2616_Params
+// Function tek_mosa_helmet_RIG_AnimBlueprint.tek_mosa_helmet_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_mosa_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2670
+struct Utek_mosa_helmet_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_mosa_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2670_Params
 {
 };
 

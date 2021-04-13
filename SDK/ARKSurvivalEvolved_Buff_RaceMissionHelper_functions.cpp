@@ -30,7 +30,7 @@ void ABuff_RaceMissionHelper_C::Tick_UpdatePowerUps()
 
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.ListenServerUpdateCheckpoints
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, BlueprintEvent)
+// (NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<struct FMissionWorldIndicator> MissionDataBuff                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AShooterCharacter*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
@@ -43,7 +43,6 @@ void ABuff_RaceMissionHelper_C::STATIC_ListenServerUpdateCheckpoints(class AShoo
 	params.PC = PC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

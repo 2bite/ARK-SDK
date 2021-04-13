@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Otter_Character_BP_Aberrant.Otter_Character_BP_Aberrant_C
-// 0x0000 (0x2238 - 0x2238)
+// 0x0000 (0x2248 - 0x2248)
 class AOtter_Character_BP_Aberrant_C : public AOtter_Character_BP_C
 {
 public:

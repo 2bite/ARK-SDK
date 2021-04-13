@@ -60,7 +60,7 @@ public:
 
 
 	void OnRep_IsParticleActive();
-	void IsOnSteepSlope(bool* ret, struct FVector* SurfaceNormal);
+	void IsOnSteepSlope(bool* Ret, struct FVector* surfaceNormal);
 	void OnRep_NewWalkableZIsActive();
 	void BuffTickServer(float* DeltaTime);
 	void BPDeactivated(class AActor** ForInstigator);

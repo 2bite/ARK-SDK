@@ -30,7 +30,7 @@ struct ABuff_Zipline_DinoBase_C_GetDistanceToAnchor_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.CanZiplineFlip
 struct ABuff_Zipline_DinoBase_C_CanZiplineFlip_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.ResetZiplineSpeedAndAcceleration
@@ -52,10 +52,10 @@ struct ABuff_Zipline_DinoBase_C_SetZiplineRunningSpeedAndAcceleration_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.RotationNearlyEqual
 struct ABuff_Zipline_DinoBase_C_RotationNearlyEqual_Params
 {
-	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    rotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    RotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    RotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ErrorTolerance;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.ReceiveBeginPlay
@@ -194,7 +194,7 @@ struct ABuff_Zipline_DinoBase_C_SetZiplineControlRotation_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.PlayTurnAnimation
 struct ABuff_Zipline_DinoBase_C_PlayTurnAnimation_Params
 {
-	class UAnimMontage*                                Override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -429,43 +429,43 @@ struct ABuff_Zipline_DinoBase_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_113
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_113_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_109
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_109_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_112
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_112_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_108
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_108_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_111
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Jump_K2Node_InputActionEvent_111_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_107
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Jump_K2Node_InputActionEvent_107_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_110
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Crouch_K2Node_InputActionEvent_110_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_106
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Crouch_K2Node_InputActionEvent_106_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_109
-struct ABuff_Zipline_DinoBase_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_109_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105
+struct ABuff_Zipline_DinoBase_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_56
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_56_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_52
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_52_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_55
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_55_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_108
-struct ABuff_Zipline_DinoBase_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_108_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104
+struct ABuff_Zipline_DinoBase_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104_Params
 {
 };
 
@@ -530,7 +530,7 @@ struct ABuff_Zipline_DinoBase_C_SecondJumpImpulse_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.FlipOnZipline_Multicast
 struct ABuff_Zipline_DinoBase_C_FlipOnZipline_Multicast_Params
 {
-	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	class ADinoCharacter_BP_Zipline_C*                 attachedDino;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

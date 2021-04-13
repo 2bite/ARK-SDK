@@ -30,15 +30,16 @@ void AHesperornis_Character_BP_C::UpdateSwimOffsetLocal()
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.TryToLerpToZ
-// (NetReliable, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Native, NetResponse, MulticastDelegate, Delegate, HasOutParms, NetClient)
 
-void AHesperornis_Character_BP_C::STATIC_TryToLerpToZ()
+void AHesperornis_Character_BP_C::TryToLerpToZ()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.TryToLerpToZ");
 
 	AHesperornis_Character_BP_C_TryToLerpToZ_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -174,7 +175,7 @@ void AHesperornis_Character_BP_C::BPUnstasis()
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.OverrideFinalWanderLocation
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Native, Static, MulticastDelegate, Delegate, HasOutParms, NetClient)
 // Parameters:
 // struct FVector                 outVec                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -186,6 +187,7 @@ bool AHesperornis_Character_BP_C::STATIC_OverrideFinalWanderLocation(struct FVec
 	AHesperornis_Character_BP_C_OverrideFinalWanderLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,7 +201,7 @@ bool AHesperornis_Character_BP_C::STATIC_OverrideFinalWanderLocation(struct FVec
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.OverrideRandomWanderLocation
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, NetClient)
 // Parameters:
 // struct FVector                 originalDestination            (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 inVec                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -211,7 +213,6 @@ void AHesperornis_Character_BP_C::STATIC_OverrideRandomWanderLocation(struct FVe
 	AHesperornis_Character_BP_C_OverrideRandomWanderLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -295,7 +296,7 @@ bool AHesperornis_Character_BP_C::BPCanDragCharacter(class APrimalCharacter** Ch
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.FishHasVit
-// (NetRequest, Native, NetResponse, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient)
 // Parameters:
 // class APrimalCharacter*        Player                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -389,13 +390,13 @@ void AHesperornis_Character_BP_C::BPClientDoMultiUse(class APlayerController** F
 
 
 // Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AHesperornis_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AHesperornis_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hesperornis_Character_BP.Hesperornis_Character_BP_C.BPGetMultiUseEntries");
 

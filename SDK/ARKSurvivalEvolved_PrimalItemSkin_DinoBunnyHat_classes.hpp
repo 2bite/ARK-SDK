@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_DinoBunnyHat.PrimalItemSkin_DinoBunnyHat_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemSkin_DinoBunnyHat_C : public UPrimalItemSkinGeneric_C
 {
 public:

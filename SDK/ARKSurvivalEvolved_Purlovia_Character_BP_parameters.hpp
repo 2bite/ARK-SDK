@@ -248,11 +248,11 @@ struct APurlovia_Character_BP_C_Has_Conflict_with_AI_Params
 	bool                                               hasConflict;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Purlovia_Character_BP.Purlovia_Character_BP_C.canBury
-struct APurlovia_Character_BP_C_canBury_Params
+// Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanBury
+struct APurlovia_Character_BP_C_CanBury_Params
 {
 	bool                                               forceBury;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               canBury;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               CanBury;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanPlayBuryAnim

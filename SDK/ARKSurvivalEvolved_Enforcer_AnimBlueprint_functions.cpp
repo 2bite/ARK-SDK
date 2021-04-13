@@ -39,18 +39,18 @@ void UEnforcer_AnimBlueprint_C::IsDinoRunning(class ADino_Character_BP_Climber_C
 // Function Enforcer_AnimBlueprint.Enforcer_AnimBlueprint_C.GetStrafeBlendspacePlayRate
 // ()
 // Parameters:
-// float*                         forwardVelocity                (Parm, ZeroConstructor, IsPlainOldData)
-// float*                         rightVelocity                  (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         ForwardVelocity                (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         RightVelocity                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D*              BlendspaceInputs               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          BlendspacePlayRate             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UEnforcer_AnimBlueprint_C::GetStrafeBlendspacePlayRate(float* forwardVelocity, float* rightVelocity, struct FVector2D* BlendspaceInputs, float* BlendspacePlayRate)
+void UEnforcer_AnimBlueprint_C::GetStrafeBlendspacePlayRate(float* ForwardVelocity, float* RightVelocity, struct FVector2D* BlendspaceInputs, float* BlendspacePlayRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_AnimBlueprint.Enforcer_AnimBlueprint_C.GetStrafeBlendspacePlayRate");
 
 	UEnforcer_AnimBlueprint_C_GetStrafeBlendspacePlayRate_Params params;
-	params.forwardVelocity = forwardVelocity;
-	params.rightVelocity = rightVelocity;
+	params.ForwardVelocity = ForwardVelocity;
+	params.RightVelocity = RightVelocity;
 	params.BlendspaceInputs = BlendspaceInputs;
 
 	auto flags = fn->FunctionFlags;

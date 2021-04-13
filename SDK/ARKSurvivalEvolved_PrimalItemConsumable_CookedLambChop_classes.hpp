@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_CookedLambChop.PrimalItemConsumable_CookedLambChop_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_CookedLambChop_C : public UPrimalItemConsumable_CookedPrimeMeat_C
 {
 public:

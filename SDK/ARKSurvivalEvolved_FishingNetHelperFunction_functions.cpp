@@ -56,15 +56,15 @@ void UFishingNetHelperFunction_C::Cancel_Cast(class UObject* Projectile_Owner)
 // ()
 // Parameters:
 // class UObject*                 Projectile_Owner               (Parm, ZeroConstructor, IsPlainOldData)
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void UFishingNetHelperFunction_C::Caught_Fish(class UObject* Projectile_Owner, class APrimalDinoCharacter* fish)
+void UFishingNetHelperFunction_C::Caught_Fish(class UObject* Projectile_Owner, class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FishingNetHelperFunction.FishingNetHelperFunction_C.Caught Fish");
 
 	UFishingNetHelperFunction_C_Caught_Fish_Params params;
 	params.Projectile_Owner = Projectile_Owner;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 

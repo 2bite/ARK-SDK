@@ -184,7 +184,7 @@ void AMissionTrigger_RaceCheckpoint_C::SetCheckpointFX_Active(bool newActive, bo
 
 
 // Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.BP_OverrideTargetingLocation
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, BlueprintEvent)
+// (Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor**                 Attacker                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -197,6 +197,7 @@ struct FVector AMissionTrigger_RaceCheckpoint_C::BP_OverrideTargetingLocation(cl
 	params.Attacker = Attacker;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

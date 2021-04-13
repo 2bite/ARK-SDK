@@ -77,9 +77,9 @@ void AWeapFishingRod_C::AllowFishing(bool* Result)
 // Function WeapFishingRod.WeapFishingRod_C.IsOwnerInCaveVolume
 // ()
 // Parameters:
-// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::IsOwnerInCaveVolume(bool* ret)
+void AWeapFishingRod_C::IsOwnerInCaveVolume(bool* Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.IsOwnerInCaveVolume");
 
@@ -91,8 +91,8 @@ void AWeapFishingRod_C::IsOwnerInCaveVolume(bool* ret)
 
 	fn->FunctionFlags = flags;
 
-	if (ret != nullptr)
-		*ret = params.ret;
+	if (Ret != nullptr)
+		*Ret = params.Ret;
 }
 
 
@@ -225,12 +225,12 @@ void AWeapFishingRod_C::PlayFishAttackAnimation()
 
 
 // Function WeapFishingRod.WeapFishingRod_C.IsPointInWater
-// (Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Point                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::IsPointInWater(const struct FVector& Point, bool* _return)
+void AWeapFishingRod_C::STATIC_IsPointInWater(const struct FVector& Point, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.IsPointInWater");
 
@@ -238,13 +238,14 @@ void AWeapFishingRod_C::IsPointInWater(const struct FVector& Point, bool* _retur
 	params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -372,11 +373,11 @@ void AWeapFishingRod_C::OnRGKeySuccess()
 
 
 // Function WeapFishingRod.WeapFishingRod_C.TugFishingCable
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            remainingMoves                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::STATIC_TugFishingCable(int remainingMoves)
+void AWeapFishingRod_C::TugFishingCable(int remainingMoves)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.TugFishingCable");
 
@@ -452,15 +453,15 @@ void AWeapFishingRod_C::StartSecondaryActionEvent()
 // Function WeapFishingRod.WeapFishingRod_C.CanSnareFish
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CanSnare                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           canSnare                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::CanSnareFish(class APrimalDinoCharacter* fish, bool* CanSnare)
+void AWeapFishingRod_C::CanSnareFish(class APrimalDinoCharacter* Fish, bool* canSnare)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.CanSnareFish");
 
 	AWeapFishingRod_C_CanSnareFish_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -468,19 +469,19 @@ void AWeapFishingRod_C::CanSnareFish(class APrimalDinoCharacter* fish, bool* Can
 
 	fn->FunctionFlags = flags;
 
-	if (CanSnare != nullptr)
-		*CanSnare = params.CanSnare;
+	if (canSnare != nullptr)
+		*canSnare = params.canSnare;
 }
 
 
 // Function WeapFishingRod.WeapFishingRod_C.GenerateRandomKeys
-// (NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            NumSets                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            NumSetKeys                     (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FKey>            Keys                           (Parm, OutParm, ZeroConstructor)
 
-void AWeapFishingRod_C::GenerateRandomKeys(int NumSets, int NumSetKeys, TArray<struct FKey>* Keys)
+void AWeapFishingRod_C::STATIC_GenerateRandomKeys(int NumSets, int NumSetKeys, TArray<struct FKey>* Keys)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.GenerateRandomKeys");
 
@@ -489,6 +490,7 @@ void AWeapFishingRod_C::GenerateRandomKeys(int NumSets, int NumSetKeys, TArray<s
 	params.NumSetKeys = NumSetKeys;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -502,14 +504,14 @@ void AWeapFishingRod_C::GenerateRandomKeys(int NumSets, int NumSetKeys, TArray<s
 // Function WeapFishingRod.WeapFishingRod_C.FishSnared
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::FishSnared(class APrimalDinoCharacter* fish)
+void AWeapFishingRod_C::FishSnared(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.FishSnared");
 
 	AWeapFishingRod_C_FishSnared_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -520,9 +522,9 @@ void AWeapFishingRod_C::FishSnared(class APrimalDinoCharacter* fish)
 
 
 // Function WeapFishingRod.WeapFishingRod_C.UpdateSurroundingPrey
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AWeapFishingRod_C::UpdateSurroundingPrey()
+void AWeapFishingRod_C::STATIC_UpdateSurroundingPrey()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.UpdateSurroundingPrey");
 
@@ -537,12 +539,12 @@ void AWeapFishingRod_C::UpdateSurroundingPrey()
 
 
 // Function WeapFishingRod.WeapFishingRod_C.GetCableEndPoint
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 EndPoint                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::STATIC_GetCableEndPoint(float DeltaTime, struct FVector* EndPoint)
+void AWeapFishingRod_C::GetCableEndPoint(float DeltaTime, struct FVector* EndPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.GetCableEndPoint");
 
@@ -586,14 +588,14 @@ void AWeapFishingRod_C::StartFishing(const struct FVector& BaitTargetLocation, c
 // Function WeapFishingRod.WeapFishingRod_C.OnFishReleased
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::OnFishReleased(class APrimalDinoCharacter* fish)
+void AWeapFishingRod_C::OnFishReleased(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.OnFishReleased");
 
 	AWeapFishingRod_C_OnFishReleased_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -606,14 +608,14 @@ void AWeapFishingRod_C::OnFishReleased(class APrimalDinoCharacter* fish)
 // Function WeapFishingRod.WeapFishingRod_C.OnFishSnared
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::OnFishSnared(class APrimalDinoCharacter* fish)
+void AWeapFishingRod_C::OnFishSnared(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.OnFishSnared");
 
 	AWeapFishingRod_C_OnFishSnared_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -641,7 +643,7 @@ void AWeapFishingRod_C::ReleaseReeledFish()
 
 
 // Function WeapFishingRod.WeapFishingRod_C.CaughtFish
-// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Event, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    CaughtFish                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -653,7 +655,6 @@ void AWeapFishingRod_C::STATIC_CaughtFish(class APrimalDinoCharacter* CaughtFish
 	params.CaughtFish = CaughtFish;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -823,18 +824,17 @@ void AWeapFishingRod_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function WeapFishingRod.WeapFishingRod_C.BPWeaponCanFire
-// (Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AWeapFishingRod_C::STATIC_BPWeaponCanFire()
+bool AWeapFishingRod_C::BPWeaponCanFire()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.BPWeaponCanFire");
 
 	AWeapFishingRod_C_BPWeaponCanFire_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -924,14 +924,14 @@ void AWeapFishingRod_C::ReelingGameFinishedEvent(bool bSuccess)
 // Function WeapFishingRod.WeapFishingRod_C.OnFishSnaredEvent
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::OnFishSnaredEvent(class APrimalDinoCharacter* fish)
+void AWeapFishingRod_C::OnFishSnaredEvent(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.OnFishSnaredEvent");
 
 	AWeapFishingRod_C_OnFishSnaredEvent_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -944,14 +944,14 @@ void AWeapFishingRod_C::OnFishSnaredEvent(class APrimalDinoCharacter* fish)
 // Function WeapFishingRod.WeapFishingRod_C.OnFishReleasedEvent
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingRod_C::OnFishReleasedEvent(class APrimalDinoCharacter* fish)
+void AWeapFishingRod_C::OnFishReleasedEvent(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingRod.WeapFishingRod_C.OnFishReleasedEvent");
 
 	AWeapFishingRod_C_OnFishReleasedEvent_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 

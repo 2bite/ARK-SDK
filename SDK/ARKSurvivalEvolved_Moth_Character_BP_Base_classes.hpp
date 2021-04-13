@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Moth_Character_BP_Base.Moth_Character_BP_Base_C
-// 0x0000 (0x2188 - 0x2188)
+// 0x0000 (0x2198 - 0x2198)
 class AMoth_Character_BP_Base_C : public ADino_Character_BP_C
 {
 public:

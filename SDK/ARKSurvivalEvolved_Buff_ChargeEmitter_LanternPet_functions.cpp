@@ -44,9 +44,9 @@ void ABuff_ChargeEmitter_LanternPet_C::ShouldEnableTimers(bool* tickServer, bool
 // bool*                          bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double*                        dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int*                           ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_LanternPet_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue)
+void ABuff_ChargeEmitter_LanternPet_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter_LanternPet.Buff_ChargeEmitter_LanternPet_C.ChargeVariableEvent");
 
@@ -55,7 +55,7 @@ void ABuff_ChargeEmitter_LanternPet_C::ChargeVariableEvent(TEnumAsByte<E_ChargeV
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 

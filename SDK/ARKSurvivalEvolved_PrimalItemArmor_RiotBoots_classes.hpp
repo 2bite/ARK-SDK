@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_RiotBoots.PrimalItemArmor_RiotBoots_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemArmor_RiotBoots_C : public UPrimalItemArmor_BaseBoots_C
 {
 public:

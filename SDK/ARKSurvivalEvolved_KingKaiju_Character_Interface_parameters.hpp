@@ -17,13 +17,13 @@ namespace sdk
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_DifficultyIndex
 struct UKingKaiju_Character_Interface_C_GetVar_DifficultyIndex_Params
 {
-	int                                                _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetVar_InHordeMode
 struct UKingKaiju_Character_Interface_C_GetVar_InHordeMode_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function KingKaiju_Character_Interface.KingKaiju_Character_Interface_C.GetKingKaijuCharStatusComponent

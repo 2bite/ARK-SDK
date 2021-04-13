@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ocean_Megalodon_Character_BP.Ocean_Megalodon_Character_BP_C
-// 0x0000 (0x21D1 - 0x21D1)
+// 0x0000 (0x21E1 - 0x21E1)
 class AOcean_Megalodon_Character_BP_C : public AMegalodon_Character_BP_C
 {
 public:

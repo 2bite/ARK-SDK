@@ -48,7 +48,7 @@ public:
 
 
 	void SpawnImpactVFX();
-	void ScheduleNextTrackerImpactVFXSpawn();
+	void STATIC_ScheduleNextTrackerImpactVFXSpawn();
 	void Is_Clientor_Single_Player(bool* Result);
 	void IsServerOrSinglePlayer(bool* Result);
 	void ReceiveBeginPlay();

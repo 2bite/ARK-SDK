@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPGetDebugInfoString
-// (Net, NetReliable, Exec, Native, NetResponse, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -75,9 +75,9 @@ void ABuff_TekCruiseMissileVision_C::ReceiveBeginPlay()
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout
 // ()
 // Parameters:
-// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* retVal)
+void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* RetVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout");
 
@@ -89,8 +89,8 @@ void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* retVal)
 
 	fn->FunctionFlags = flags;
 
-	if (retVal != nullptr)
-		*retVal = params.retVal;
+	if (RetVal != nullptr)
+		*RetVal = params.RetVal;
 }
 
 
@@ -185,7 +185,7 @@ void ABuff_TekCruiseMissileVision_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPDrawBuffStatusHUD
-// (Net, NetReliable, Exec, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (Net, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)

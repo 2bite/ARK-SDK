@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_TaxidermyDermis.PrimalItem_TaxidermyDermis_C.BPInitIconMaterial
-// (NetRequest, Exec, Static, MulticastDelegate, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
 
 void UPrimalItem_TaxidermyDermis_C::STATIC_BPInitIconMaterial()
 {

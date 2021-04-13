@@ -38,8 +38,8 @@ public:
 	void Check_Team_and_Set_Visual_Visibility();
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	void OnRep_ShowArea();
-	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void ReceiveBeginPlay();
 	void ThrottledTick();
 	void UserConstructionScript();

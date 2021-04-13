@@ -29,7 +29,7 @@ public:
 	}
 
 
-	void CraftItem(int ItemToCraftIndex);
+	void STATIC_CraftItem(int ItemToCraftIndex);
 	void BPInventoryRefresh();
 	void BPInitializeInventory();
 	void CheckIfAnythingNewCanBeCrafted();

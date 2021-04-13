@@ -33,7 +33,7 @@ struct ABogSpider_Character_BP_C_StoreClimb_Trace_Socket_Offsets_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetSpiderClimbingTraceTransform
 struct ABogSpider_Character_BP_C_GetSpiderClimbingTraceTransform_Params
 {
-	int                                                traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bWorldSpace;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          TraceTransform;                                           // (Parm, OutParm, IsPlainOldData)
 };
@@ -45,7 +45,7 @@ struct ABogSpider_Character_BP_C_IsClimbingTraceHitResultValid_Params
 	struct FHitResult                                  Hit;                                                      // (Parm, OutParm, ReferenceParm)
 	struct FVector*                                    TraceStart;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector*                                    TraceEnd;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	int*                                               traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               TraceRetryNum;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bResult;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -227,7 +227,7 @@ struct ABogSpider_Character_BP_C_AdjustClimbTraceTransform_Params
 {
 	struct FName*                                      WithSocketName;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          WithTraceTransform;                                       // (Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct UObject_FTransform                          climberTransform;                                         // (Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct UObject_FTransform                          ClimberTransform;                                         // (Parm, OutParm, ReferenceParm, IsPlainOldData)
 	struct UObject_FTransform                          AdjustedTransform;                                        // (Parm, OutParm, IsPlainOldData)
 };
 

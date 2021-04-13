@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.BPGetDebugInfoString
-// (Net, NetResponse, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UDinoAttackState_Spindles_MinigunDirected_C::BPGetDebugInfoString()
+class FString UDinoAttackState_Spindles_MinigunDirected_C::STATIC_BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.BPGetDebugInfoString");
 
@@ -60,7 +60,7 @@ void UDinoAttackState_Spindles_MinigunDirected_C::GetRandomVectorOnCircle(float 
 
 
 // Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.BPShouldEndAttack
-// (NetReliable, NetRequest, Exec, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Private, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -188,14 +188,14 @@ void UDinoAttackState_Spindles_MinigunDirected_C::GetAttackIndex(int* AttackInde
 
 
 // Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.Get Spine Start and End Position
-// (NetReliable, NetRequest, Native, Event, NetResponse, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 VFXStart                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 VFXEnd                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_Spindles_MinigunDirected_C::Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd)
+void UDinoAttackState_Spindles_MinigunDirected_C::STATIC_Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunDirected.DinoAttackState_Spindles_MinigunDirected_C.Get Spine Start and End Position");
 

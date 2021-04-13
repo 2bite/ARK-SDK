@@ -79,7 +79,7 @@ void AWyvern_Character_BP_Base_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function Wyvern_Character_BP_Base.Wyvern_Character_BP_Base_C.SpawnNestEgg
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void AWyvern_Character_BP_Base_C::SpawnNestEgg()
 {

@@ -40,9 +40,9 @@ void UTask_FKaijuChooseBasicAttack_C::CheckIfTargetIsCloseToFoot(bool* FoundFoot
 // Function Task_FKaijuChooseBasicAttack.Task_FKaijuChooseBasicAttack_C.MaybeFootstomp
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTask_FKaijuChooseBasicAttack_C::MaybeFootstomp(bool* _return)
+void UTask_FKaijuChooseBasicAttack_C::MaybeFootstomp(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Task_FKaijuChooseBasicAttack.Task_FKaijuChooseBasicAttack_C.MaybeFootstomp");
 
@@ -54,8 +54,8 @@ void UTask_FKaijuChooseBasicAttack_C::MaybeFootstomp(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 

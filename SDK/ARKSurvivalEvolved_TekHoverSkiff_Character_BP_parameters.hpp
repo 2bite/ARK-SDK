@@ -1213,7 +1213,7 @@ struct ATekHoverSkiff_Character_BP_C_StopHovering_Params
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.SetTimerIntervals
 struct ATekHoverSkiff_Character_BP_C_SetTimerIntervals_Params
 {
-	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPShouldLimitForwardDirection

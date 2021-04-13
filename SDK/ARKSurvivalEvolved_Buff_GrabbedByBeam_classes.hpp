@@ -30,7 +30,7 @@ public:
 	float                                              logDeviation;                                             // 0x0970(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              minProgressDeltaBasedOnDistance;                          // 0x0974(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              maxProgressDeltaBasedOnDistance;                          // 0x0978(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxProgress;                                              // 0x097C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              maxProgress;                                              // 0x097C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              RequiredLookDirDotToCapture;                              // 0x0980(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              maxProgressMultiplierForMinWeight;                        // 0x0984(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bIsInitialized;                                           // 0x0988(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -53,7 +53,7 @@ public:
 	void ReceiveSkiffVars(const struct FVector& BeamStartLoc, const struct FVector& BeamEndLoc, TEnumAsByte<E_HoverSkiffBeamState> BeamState);
 	void GetBeamCapturePercent(float* Percent);
 	float GetOwnerDragWeight();
-	void GetMaxProgress(float* MaxProgress);
+	void GetMaxProgress(float* maxProgress);
 	void Calculate_Progress(float timeDelta, float* NewProgress);
 	void CalculateBeamProgressDelta(float timeDelta, float* ProgressDelta, bool* bInvalidProgress);
 	void InitializeBuff(float MaxBeamLength);

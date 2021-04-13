@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.CraftItem
-// (Native, Event, NetResponse, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            ItemToCraftIndex               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoTamedInventoryComponent_Beetle_C::CraftItem(int ItemToCraftIndex)
+void UDinoTamedInventoryComponent_Beetle_C::STATIC_CraftItem(int ItemToCraftIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.CraftItem");
 
@@ -136,7 +136,7 @@ void UDinoTamedInventoryComponent_Beetle_C::UnsetAll()
 
 
 // Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.HasEnoughResources
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            IndexClassToCheck              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           hasEnough                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)

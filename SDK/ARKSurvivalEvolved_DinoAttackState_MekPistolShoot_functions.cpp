@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackState_MekPistolShoot.DinoAttackState_MekPistolShoot_C.BPOnAttackTick
-// (NetReliable, Exec, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Native, Event, NetResponse, NetMulticast, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_MekPistolShoot_C::STATIC_BPOnAttackTick(float* DeltaTime)
+void UDinoAttackState_MekPistolShoot_C::BPOnAttackTick(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_MekPistolShoot.DinoAttackState_MekPistolShoot_C.BPOnAttackTick");
 
@@ -25,6 +25,7 @@ void UDinoAttackState_MekPistolShoot_C::STATIC_BPOnAttackTick(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

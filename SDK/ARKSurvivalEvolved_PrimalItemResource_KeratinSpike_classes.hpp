@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_KeratinSpike.PrimalItemResource_KeratinSpike_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemResource_KeratinSpike_C : public UPrimalItemResource_Horn_C
 {
 public:

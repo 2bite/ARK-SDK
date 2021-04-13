@@ -40,10 +40,10 @@ public:
 	float GetBuffPostprocessIntensity();
 	bool AllowPostProcessEffect();
 	void Is_Valid_PounceTarget(class APrimalCharacter* Target, bool* Result);
-	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
-	void IsAnotherDinoAlreadyAttached(class AActor* Target, bool* ret);
+	void STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
+	void IsAnotherDinoAlreadyAttached(class AActor* Target, bool* Ret);
 	void Can_Ignore_Traced_Actor(class AActor* Actor, bool* CanBeIgnored);
-	void STATIC_BuffTickClient(float* DeltaTime);
+	void BuffTickClient(float* DeltaTime);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_BiglyPostProccess(int EntryPoint);
 };

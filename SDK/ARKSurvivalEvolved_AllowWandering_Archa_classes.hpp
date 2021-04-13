@@ -19,7 +19,7 @@ namespace sdk
 class UAllowWandering_Archa_C : public UBTTask_BlueprintBase
 {
 public:
-	bool                                               ret;                                                      // 0x0078(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Ret;                                                      // 0x0078(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
 	struct FBlackboardKeySelector                      LastWanderTimeKey;                                        // 0x0080(0x0028) (Edit, BlueprintVisible)
 	float                                              WanderInterval;                                           // 0x00A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)

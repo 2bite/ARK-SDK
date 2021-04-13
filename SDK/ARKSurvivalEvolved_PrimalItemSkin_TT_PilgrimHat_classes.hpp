@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_TT_PilgrimHat.PrimalItemSkin_TT_PilgrimHat_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemSkin_TT_PilgrimHat_C : public UPrimalItemSkinGeneric_C
 {
 public:

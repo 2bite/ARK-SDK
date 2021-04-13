@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bigfoot_Character_BP_Aggressive_Med.Bigfoot_Character_BP_Aggressive_Med_C
-// 0x0008 (0x2970 - 0x2968)
+// 0x0008 (0x2980 - 0x2978)
 class ABigfoot_Character_BP_Aggressive_Med_C : public ABigfoot_Character_BP_Aggressive_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Bigfoot_Med_C* DinoCharacterStatus_BP_Bigfoot_Med_C1;                    // 0x2968(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Bigfoot_Med_C* DinoCharacterStatus_BP_Bigfoot_Med_C1;                    // 0x2978(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

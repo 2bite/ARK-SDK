@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wyvern_Character_BP_ZombieLightning.Wyvern_Character_BP_ZombieLightning_C
-// 0x000E (0x238C - 0x237E)
+// 0x000E (0x239C - 0x238E)
 class AWyvern_Character_BP_ZombieLightning_C : public AWyvern_Character_BP_ZombieBase_C
 {
 public:
-	unsigned char                                      UnknownData00[0x2];                                       // 0x237E(0x0002) MISSED OFFSET
-	struct FVector                                     TargetAimOffset;                                          // 0x2380(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x238E(0x0002) MISSED OFFSET
+	struct FVector                                     TargetAimOffset;                                          // 0x2390(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

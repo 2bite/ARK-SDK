@@ -14,6 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Spindles_Character_BP.Spindles_Character_BP_C.AllowPlayMontage
+struct ASpindles_Character_BP_C_AllowPlayMontage_Params
+{
+	class UAnimMontage**                               AnimMontage;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Spindles_Character_BP.Spindles_Character_BP_C.BPTimerNonDedicated
 struct ASpindles_Character_BP_C_BPTimerNonDedicated_Params
 {
@@ -253,13 +260,13 @@ struct ASpindles_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_150
-struct ASpindles_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_150_Params
+// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_146
+struct ASpindles_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_146_Params
 {
 };
 
-// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_149
-struct ASpindles_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_149_Params
+// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_145
+struct ASpindles_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_145_Params
 {
 };
 

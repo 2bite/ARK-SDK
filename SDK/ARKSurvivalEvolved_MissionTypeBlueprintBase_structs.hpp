@@ -7,10 +7,10 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_MissionAudioData_classes.hpp"
 #include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_MissionMetaTags_classes.hpp"
+#include "ARKSurvivalEvolved_MissionAudioData_classes.hpp"
 
 namespace sdk
 {

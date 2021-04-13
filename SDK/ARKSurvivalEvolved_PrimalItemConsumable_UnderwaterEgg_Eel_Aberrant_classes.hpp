@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_UnderwaterEgg_Eel_Aberrant.PrimalItemConsumable_UnderwaterEgg_Eel_Aberrant_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_UnderwaterEgg_Eel_Aberrant_C : public UPrimalItemConsumable_UnderwaterEgg_Eel_C
 {
 public:

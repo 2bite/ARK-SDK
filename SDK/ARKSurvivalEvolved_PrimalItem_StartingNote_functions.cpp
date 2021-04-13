@@ -68,7 +68,7 @@ class UTexture2D* UPrimalItem_StartingNote_C::BPGetItemIcon(class AShooterPlayer
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.IsLocalImplant
-// (NetReliable, Exec, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetRequest, Native, NetResponse, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterPlayerController* ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsLocal                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -81,6 +81,7 @@ void UPrimalItem_StartingNote_C::IsLocalImplant(class AShooterPlayerController* 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +118,7 @@ class FString UPrimalItem_StartingNote_C::BPGetItemName(class FString* ItemNameI
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.Get Survival Quotient String
-// (NetReliable, Exec, Native, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Event, NetResponse, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // TArray<float>                  SurvData                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class FString                  OutString                      (Parm, OutParm, ZeroConstructor)
@@ -129,7 +130,6 @@ void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<float>* Sur
 	UPrimalItem_StartingNote_C_Get_Survival_Quotient_String_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,14 +143,14 @@ void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<float>* Sur
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemDescription
-// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItem_StartingNote_C::BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
+class FString UPrimalItem_StartingNote_C::STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemDescription");
 
@@ -160,7 +160,6 @@ class FString UPrimalItem_StartingNote_C::BPGetItemDescription(class FString* In
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,11 +170,11 @@ class FString UPrimalItem_StartingNote_C::BPGetItemDescription(class FString* In
 
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPPreInitializeItem
-// (NetReliable, Exec, Native, NetResponse, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetRequest, Event, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UWorld**                 OptionalInitWorld              (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_StartingNote_C::BPPreInitializeItem(class UWorld** OptionalInitWorld)
+void UPrimalItem_StartingNote_C::STATIC_BPPreInitializeItem(class UWorld** OptionalInitWorld)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPPreInitializeItem");
 
@@ -183,7 +182,6 @@ void UPrimalItem_StartingNote_C::BPPreInitializeItem(class UWorld** OptionalInit
 	params.OptionalInitWorld = OptionalInitWorld;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

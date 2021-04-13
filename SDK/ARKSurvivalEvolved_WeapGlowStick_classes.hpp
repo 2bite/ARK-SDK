@@ -76,7 +76,7 @@ public:
 	bool                                               CallFunc_IsServer_ReturnValue3;                           // 0x0F6C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData11[0x3];                                       // 0x0F6D(0x0003) MISSED OFFSET
 	float                                              CallFunc_Multiply_FloatFloat_ReturnValue;                 // 0x0F70(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_delay;                                 // 0x0F74(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_Delay;                                 // 0x0F74(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x0F78(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData12[0x3];                                       // 0x0F79(0x0003) MISSED OFFSET
 	float                                              K2Node_CustomEvent_duration;                              // 0x0F7C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)

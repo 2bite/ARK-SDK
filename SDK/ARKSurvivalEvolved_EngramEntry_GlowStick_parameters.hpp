@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function EngramEntry_Glowstick.EngramEntry_Glowstick_C.ExecuteUbergraph_EngramEntry_GlowStick
-struct UEngramEntry_Glowstick_C_ExecuteUbergraph_EngramEntry_GlowStick_Params
+// Function EngramEntry_Glowstick.EngramEntry_Glowstick_C.ExecuteUbergraph_EngramEntry_Glowstick
+struct UEngramEntry_Glowstick_C_ExecuteUbergraph_EngramEntry_Glowstick_Params
 {
 	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };

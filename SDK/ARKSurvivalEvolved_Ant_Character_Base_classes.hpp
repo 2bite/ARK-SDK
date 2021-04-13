@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ant_Character_Base.Ant_Character_Base_C
-// 0x0000 (0x2188 - 0x2188)
+// 0x0000 (0x2198 - 0x2198)
 class AAnt_Character_Base_C : public AInsect_Character_Base_C
 {
 public:

@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BP_OverseerText_EX.BP_OverseerText_EX_C.ConstructionProcess
-// (NetRequest, NetResponse, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
 
-void ABP_OverseerText_EX_C::ConstructionProcess()
+void ABP_OverseerText_EX_C::STATIC_ConstructionProcess()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OverseerText_EX.BP_OverseerText_EX_C.ConstructionProcess");
 
@@ -189,10 +189,10 @@ void ABP_OverseerText_EX_C::RenderOriginalText(class UTextRenderComponent* TextR
 // class FString                  GlyphRepresentation            (Parm, ZeroConstructor)
 // struct FLinearColor            Color                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UTextRenderComponent*    TextRender                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           OffsetLeft                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           offsetLeft                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Offset                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OverseerText_EX_C::RenderGlyph(const class FString& GlyphRepresentation, const struct FLinearColor& Color, class UTextRenderComponent* TextRender, bool OffsetLeft, bool Offset)
+void ABP_OverseerText_EX_C::RenderGlyph(const class FString& GlyphRepresentation, const struct FLinearColor& Color, class UTextRenderComponent* TextRender, bool offsetLeft, bool Offset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OverseerText_EX.BP_OverseerText_EX_C.RenderGlyph");
 
@@ -200,7 +200,7 @@ void ABP_OverseerText_EX_C::RenderGlyph(const class FString& GlyphRepresentation
 	params.GlyphRepresentation = GlyphRepresentation;
 	params.Color = Color;
 	params.TextRender = TextRender;
-	params.OffsetLeft = OffsetLeft;
+	params.offsetLeft = offsetLeft;
 	params.Offset = Offset;
 
 	auto flags = fn->FunctionFlags;

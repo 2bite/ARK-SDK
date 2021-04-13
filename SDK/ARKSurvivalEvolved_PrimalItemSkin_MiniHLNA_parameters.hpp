@@ -14,6 +14,12 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.IsPlayingExplorerNote
+struct UPrimalItemSkin_MiniHLNA_C_IsPlayingExplorerNote_Params
+{
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.hide skin
 struct UPrimalItemSkin_MiniHLNA_C_hide_skin_Params
 {

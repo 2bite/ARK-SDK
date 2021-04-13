@@ -100,7 +100,7 @@ void ADroppedItem_GachaPod_C::ReceiveBeginPlay()
 
 
 // Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.CheckForItem
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
 {
@@ -109,6 +109,7 @@ void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
 	ADroppedItem_GachaPod_C_CheckForItem_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,9 +118,9 @@ void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
 
 
 // Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ActivateFX
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
-void ADroppedItem_GachaPod_C::STATIC_ActivateFX()
+void ADroppedItem_GachaPod_C::ActivateFX()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ActivateFX");
 

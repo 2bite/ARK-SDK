@@ -61,7 +61,7 @@ public:
 	}
 
 
-	void STATIC_DoTrace(const struct FVector& Start, const struct FVector& End);
+	void DoTrace(const struct FVector& Start, const struct FVector& End);
 	void DamageActor(class AActor* Victim, struct FHitResult* HitInfo);
 	void DoTraceAttacks();
 	bool BPForceTPVTargetingAnimation();

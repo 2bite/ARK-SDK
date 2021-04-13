@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ShooterHudBP.ShooterHudBP_C.GetAdditionalExplorerNoteDynamicMaterialParams
-// (Event, NetMulticast, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
+// (NetReliable, NetMulticast, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FExplorerNoteEntry      ExplorerNote                   (Parm, OutParm, ReferenceParm)
 // TArray<struct FNameScalarPair> ScalarMaterialParams           (Parm, OutParm, ZeroConstructor)

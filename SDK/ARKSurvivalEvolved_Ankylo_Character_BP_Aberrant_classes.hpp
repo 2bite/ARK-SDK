@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ankylo_Character_BP_Aberrant.Ankylo_Character_BP_Aberrant_C
-// 0x0000 (0x2198 - 0x2198)
+// 0x0000 (0x21A8 - 0x21A8)
 class AAnkylo_Character_BP_Aberrant_C : public AAnkylo_Character_BP_C
 {
 public:

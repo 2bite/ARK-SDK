@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Allo_Character_BP.Allo_Character_BP_C
-// 0x0008 (0x2220 - 0x2218)
+// 0x0008 (0x2230 - 0x2228)
 class AAllo_Character_BP_C : public ADino_Character_BP_Pack_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Allo_C*     DinoCharacterStatus_BP_Allo_C2;                           // 0x2218(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Allo_C*     DinoCharacterStatus_BP_Allo_C2;                           // 0x2228(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

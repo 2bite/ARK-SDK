@@ -12,6 +12,31 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function WeapEmptyCryopod.WeapEmptyCryopod_C.GetContainedDinoClass
+// ()
+// Parameters:
+// struct FCustomItemData         CustomItemData                 (Parm, OutParm, ReferenceParm)
+// class UClass*                  ReturnedClass                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AWeapEmptyCryopod_C::GetContainedDinoClass(struct FCustomItemData* CustomItemData, class UClass** ReturnedClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapEmptyCryopod.WeapEmptyCryopod_C.GetContainedDinoClass");
+
+	AWeapEmptyCryopod_C_GetContainedDinoClass_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CustomItemData != nullptr)
+		*CustomItemData = params.CustomItemData;
+	if (ReturnedClass != nullptr)
+		*ReturnedClass = params.ReturnedClass;
+}
+
+
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.Get Character StatsAsFloats
 // ()
 // Parameters:
@@ -93,7 +118,7 @@ void AWeapEmptyCryopod_C::ReceiveBeginPlay()
 
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.UpdateContainsFX
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Event, NetResponse, Static, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           ForceOff                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -105,7 +130,6 @@ void AWeapEmptyCryopod_C::STATIC_UpdateContainsFX(bool ForceOff)
 	params.ForceOff = ForceOff;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,7 +179,7 @@ void AWeapEmptyCryopod_C::CanCapture(class APrimalDinoCharacter* Dino, bool* Cap
 
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.BPTryFireWeapon
-// (NetRequest, Exec, Native, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 

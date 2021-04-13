@@ -7,8 +7,8 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_Rex_Character_BP_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
+#include "ARKSurvivalEvolved_Rex_Character_BP_classes.hpp"
 
 namespace sdk
 {

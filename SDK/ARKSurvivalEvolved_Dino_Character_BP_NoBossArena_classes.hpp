@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dino_Character_BP_NoBossArena.Dino_Character_BP_NoBossArena_C
-// 0x0000 (0x2188 - 0x2188)
+// 0x0000 (0x2198 - 0x2198)
 class ADino_Character_BP_NoBossArena_C : public ADino_Character_BP_C
 {
 public:

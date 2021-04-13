@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemDye_Cantaloupe.PrimalItemDye_Cantaloupe_C
-// 0x0000 (0x0A10 - 0x0A10)
+// 0x0000 (0x0A20 - 0x0A20)
 class UPrimalItemDye_Cantaloupe_C : public UPrimalItemDyeGeneric_C
 {
 public:

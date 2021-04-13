@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponLasso.PrimalItem_WeaponLasso_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_WeaponLasso_C : public UPrimalItemWeaponGenericAmmolessConsumeSelf_C
 {
 public:

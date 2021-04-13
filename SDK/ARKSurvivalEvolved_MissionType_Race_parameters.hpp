@@ -41,7 +41,7 @@ struct AMissionType_Race_C_GetNearbyWaterLocation_Params
 struct AMissionType_Race_C_Is_Power_Up_Active_for_Player_Params
 {
 	class AShooterPlayerController*                    SC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class AMissionTrigger*                             Powerup;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class AMissionTrigger*                             PowerUp;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsValid;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

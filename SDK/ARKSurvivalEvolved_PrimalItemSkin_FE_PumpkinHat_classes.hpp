@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_FE_PumpkinHat.PrimalItemSkin_FE_PumpkinHat_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemSkin_FE_PumpkinHat_C : public UPrimalItemSkinGeneric_C
 {
 public:

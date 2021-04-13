@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GetRandomPointOnGround.GetRandomPointOnGround_C.ReceiveExecute
-// (Native, Event, Static, MulticastDelegate, Protected, HasOutParms, NetClient, Const)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UGetRandomPointOnGround_C::STATIC_ReceiveExecute(class AActor** OwnerActor)
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

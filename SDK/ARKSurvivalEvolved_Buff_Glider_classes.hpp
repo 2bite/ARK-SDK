@@ -137,7 +137,7 @@ public:
 	float                                              TimeBeforeCancelGlide;                                    // 0x0BA8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData12[0x4];                                       // 0x0BAC(0x0004) MISSED OFFSET
 	double                                             ClientLastGlideStartTime;                                 // 0x0BB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<E_GliderStates>                        K2Node_CustomEvent_NewState;                              // 0x0BB8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<E_GliderStates>                        K2Node_CustomEvent_newState;                              // 0x0BB8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData13[0x7];                                       // 0x0BB9(0x0007) MISSED OFFSET
 	class AActor*                                      CallFunc_GetOwner_ReturnValue;                            // 0x0BC0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x0BC8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -152,7 +152,7 @@ public:
 	struct FRotator                                    K2Node_CustomEvent_newRotation2;                          // 0x0BE8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_newGlideMult;                          // 0x0BF4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate2;                    // 0x0BF8(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FVector                                     K2Node_CustomEvent_newVelocity;                           // 0x0C08(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_NewVelocity;                           // 0x0C08(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FRotator                                    K2Node_CustomEvent_newRotation;                           // 0x0C14(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x0C20(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData16[0x8];                                       // 0x0C28(0x0008) MISSED OFFSET
@@ -207,7 +207,7 @@ public:
 	void CheckForGliderStuckOnWall(bool* CanKeepGliding);
 	void GetGlideSpeedRatio(float* Result);
 	float BP_ModifyCharacterFOV(float* inFOV);
-	void ServerTick_GlideFalling();
+	void STATIC_ServerTick_GlideFalling();
 	void GetGliderMesh(bool* foundMesh, class USkeletalMeshComponent** meshRef);
 	void AttachWingVFX();
 	void UpdateVelocityForVFX();
@@ -216,15 +216,15 @@ public:
 	bool AllowPostProcessEffect();
 	float GetBuffPostprocessIntensity();
 	float BuffAdjustDamage(float* Damage, class AController** EventInstigator, class AActor** DamageCauser, class UClass** TheDamgeType, struct FHitResult* HitInfo);
-	void AreRotatorsNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float Error, bool* Result);
-	void ServerTick_UpdateGlideVelocity();
+	void AreRotatorsNearlyEqual(const struct FRotator& RotA, const struct FRotator& RotB, float Error, bool* Result);
+	void STATIC_ServerTick_UpdateGlideVelocity();
 	void UpdateGliderByState_NonDedicated();
-	void UpdateGliderByState_ServerAndClient();
-	void UpdateGliderByState_Server();
+	void STATIC_UpdateGliderByState_ServerAndClient();
+	void STATIC_UpdateGliderByState_Server();
 	void OnRep_GliderState_Current();
 	void IsGliderActive(bool* Result);
 	void GetGlideSpeedRatio_Pure(float* Result);
-	void GetDefaultOwningPlayer(class AShooterCharacter** Ref);
+	void GetDefaultOwningPlayer(class AShooterCharacter** ref);
 	void IsPlayerGrounded(bool* Result);
 	void Can_Use_Glider(bool isToStart, bool* Result);
 	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
@@ -239,11 +239,11 @@ public:
 	void BuffTickClient(float* DeltaTime);
 	void ClientSetGlidingState(TEnumAsByte<E_GliderStates> NewState);
 	void UserConstructionScript();
-	void InpActEvt_Jump_K2Node_InputActionEvent_96();
-	void InpActEvt_Run_K2Node_InputActionEvent_95();
-	void InpActEvt_Run_K2Node_InputActionEvent_94();
-	void InpActEvt_RunToggle_K2Node_InputActionEvent_93();
-	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_48();
+	void InpActEvt_Jump_K2Node_InputActionEvent_92();
+	void InpActEvt_Run_K2Node_InputActionEvent_91();
+	void InpActEvt_Run_K2Node_InputActionEvent_90();
+	void InpActEvt_RunToggle_K2Node_InputActionEvent_89();
+	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44();
 	void Server_RequestSetThrusterState(TEnumAsByte<E_GliderStates> NewState);
 	void ReceiveBeginPlay();
 	void Multi_GlideStart(const struct FRotator& NewRotation, float newGlideMult);

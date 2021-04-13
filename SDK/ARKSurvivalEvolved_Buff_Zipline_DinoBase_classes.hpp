@@ -125,7 +125,7 @@ public:
 	float                                              DropAtEndThreshold;                                       // 0x0B48(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              AttachOffsetHanging;                                      // 0x0B4C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              AttachOffsetAbove;                                        // 0x0B50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              meshOffsetHanging;                                        // 0x0B54(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MeshOffsetHanging;                                        // 0x0B54(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MeshOffsetAbove;                                          // 0x0B58(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ZiplineJumpOffMinDistanceToEnd;                           // 0x0B5C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ZiplineFlipTraceRadius;                                   // 0x0B60(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -154,7 +154,7 @@ public:
 	bool                                               K2Node_CustomEvent_AddImpulse;                            // 0x0BEE(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData14[0x1];                                       // 0x0BEF(0x0001) MISSED OFFSET
 	float                                              K2Node_InputAxisEvent_AxisValue;                          // 0x0BF0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	TEnumAsByte<E_ZiplineMotorState>                   K2Node_CustomEvent_NewState;                              // 0x0BF4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<E_ZiplineMotorState>                   K2Node_CustomEvent_newState;                              // 0x0BF4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               Temp_bool_Has_Been_Initd_Variable3;                       // 0x0BF5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_HasAuthority_ReturnValue2;                       // 0x0BF6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData15[0x1];                                       // 0x0BF7(0x0001) MISSED OFFSET
@@ -185,7 +185,7 @@ public:
 	unsigned char                                      UnknownData20[0x2];                                       // 0x0D2A(0x0002) MISSED OFFSET
 	float                                              CallFunc_PlayAnimEx_ReturnValue;                          // 0x0D2C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayAnimEx_ReturnValue2;                         // 0x0D30(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_delay;                                 // 0x0D34(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_Delay;                                 // 0x0D34(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayTurnAnimation_Duration;                      // 0x0D38(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_Add_FloatFloat_ReturnValue;                      // 0x0D3C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue2;                        // 0x0D40(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -243,11 +243,11 @@ public:
 
 	void SetZiplineFaceUpDirection(bool FaceUpDirection);
 	void GetDistanceToAnchor(bool GetLower, float* Distance);
-	void CanZiplineFlip(bool* _return);
+	void STATIC_CanZiplineFlip(bool* Return);
 	void ResetZiplineSpeedAndAcceleration();
 	void SetZiplineSliding(bool Reset);
 	void SetZiplineRunningSpeedAndAcceleration();
-	void RotationNearlyEqual(const struct FRotator& rotA, const struct FRotator& rotB, float ErrorTolerance, bool* _return);
+	void RotationNearlyEqual(const struct FRotator& RotA, const struct FRotator& RotB, float ErrorTolerance, bool* Return);
 	void ReceiveBeginPlay();
 	void UpdateActorZiplineOffset();
 	void SetHurtAnim(bool Hanging, bool Reset);
@@ -270,7 +270,7 @@ public:
 	void BPNonDedicatedPlayerPostAnimUpdate();
 	void BPCharacterDetach();
 	void SetZiplineControlRotation();
-	void PlayTurnAnimation(class UAnimMontage* Override, float* Duration);
+	void PlayTurnAnimation(class UAnimMontage* override, float* Duration);
 	float BuffAdjustDamage(float* Damage, class AController** EventInstigator, class AActor** DamageCauser, class UClass** TheDamgeType, struct FHitResult* HitInfo);
 	void UpdateFPVCameraAndMeshPosition();
 	void GetFPVViewLocation(struct FVector* ViewLoc);
@@ -282,7 +282,7 @@ public:
 	void ResetFOV();
 	void UpdateFOV(float DeltaTime);
 	void ResetMeshPosition();
-	void JumpImpulse(const struct FVector& Direction);
+	void STATIC_JumpImpulse(const struct FVector& Direction);
 	void InterpolateCharacterMeshToLine(float DeltaTime);
 	void GetZiplineStartAndEndPoint(bool NoOffset, struct FVector* Start, struct FVector* End);
 	void CalculateZiplineMaxVelocity(float Accleration, float Length, float* MaxVelocity);
@@ -306,15 +306,15 @@ public:
 	void End_Move_Along_Zipline(bool AddImpulse);
 	void TickMoveAlongZipline();
 	void StartMoveAlongZipline(const struct FVector& StartLocation, class AZipline_Anchor_C* UpperZiplineAnchor, class AZipline_Anchor_C* LowerZiplineAnchor, const struct FVector& Direction);
-	void STATIC_UserConstructionScript();
-	void InpActEvt_Run_K2Node_InputActionEvent_113();
-	void InpActEvt_Run_K2Node_InputActionEvent_112();
-	void InpActEvt_Jump_K2Node_InputActionEvent_111();
-	void InpActEvt_Crouch_K2Node_InputActionEvent_110();
-	void InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_109();
-	void InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_56();
-	void InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_55();
-	void InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_108();
+	void UserConstructionScript();
+	void InpActEvt_Run_K2Node_InputActionEvent_109();
+	void InpActEvt_Run_K2Node_InputActionEvent_108();
+	void InpActEvt_Jump_K2Node_InputActionEvent_107();
+	void InpActEvt_Crouch_K2Node_InputActionEvent_106();
+	void InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105();
+	void InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_52();
+	void InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51();
+	void InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104();
 	void EndMoveAlongZipline_RunOnServer(bool AddImpulse);
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_87(float AxisValue);
 	void SetMotorState_RunOnServer(TEnumAsByte<E_ZiplineMotorState> NewState);
@@ -325,7 +325,7 @@ public:
 	void OnComponentHit_Event(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, struct FHitResult* Hit);
 	void SetInitialVelocity(const struct FVector& Velocity);
 	void SecondJumpImpulse();
-	void FlipOnZipline_Multicast(bool Fast, class ADinoCharacter_BP_Zipline_C* attachedDino);
+	void FlipOnZipline_Multicast(bool fast, class ADinoCharacter_BP_Zipline_C* attachedDino);
 	void FlipOnZipline_RunOnServer();
 	void SetIsTurning(float Delay);
 	void DoZiplineTurn_RunOnServer();

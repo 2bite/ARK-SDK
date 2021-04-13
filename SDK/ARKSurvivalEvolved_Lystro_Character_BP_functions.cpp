@@ -60,13 +60,13 @@ void ALystro_Character_BP_C::Has_XPBuff(bool* Result)
 
 
 // Function Lystro_Character_BP.Lystro_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Event, NetResponse, Static, Private, HasOutParms, NetClient, BlueprintEvent, Const)
+// (Exec, NetResponse, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ALystro_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ALystro_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Lystro_Character_BP.Lystro_Character_BP_C.BPGetMultiUseEntries");
 

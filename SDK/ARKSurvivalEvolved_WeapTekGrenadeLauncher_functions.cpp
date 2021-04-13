@@ -39,7 +39,7 @@ void AWeapTekGrenadeLauncher_C::GetSlotDifference(int A, int B, int* Difference)
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.GetCurrentSlotAdvancement
-// ()
+// (Net, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            CurrentSlot                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Remainder                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -51,6 +51,7 @@ void AWeapTekGrenadeLauncher_C::GetCurrentSlotAdvancement(int* CurrentSlot, floa
 	AWeapTekGrenadeLauncher_C_GetCurrentSlotAdvancement_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,7 +82,7 @@ void AWeapTekGrenadeLauncher_C::FinishedFullReload()
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.CanReloadLauncher
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetRequest, Native, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           bCanReload                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -187,15 +188,16 @@ void AWeapTekGrenadeLauncher_C::ReceiveDestroyed()
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.ClientInit
-// (NetReliable, Event, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (Exec, Native, Event, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 
-void AWeapTekGrenadeLauncher_C::ClientInit()
+void AWeapTekGrenadeLauncher_C::STATIC_ClientInit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.ClientInit");
 
 	AWeapTekGrenadeLauncher_C_ClientInit_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,11 +287,11 @@ void AWeapTekGrenadeLauncher_C::SetProjectileArcVisibility(bool IsVisible)
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.UpdateProjectileArc
-// (NetRequest, Exec, Native, NetResponse, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekGrenadeLauncher_C::UpdateProjectileArc(float DeltaTime)
+void AWeapTekGrenadeLauncher_C::STATIC_UpdateProjectileArc(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.UpdateProjectileArc");
 
@@ -352,7 +354,7 @@ struct FVector AWeapTekGrenadeLauncher_C::BPOverrideAimDirection(struct FVector*
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.UpdateSlotMeshes
-// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 
 void AWeapTekGrenadeLauncher_C::STATIC_UpdateSlotMeshes()
 {
@@ -361,6 +363,7 @@ void AWeapTekGrenadeLauncher_C::STATIC_UpdateSlotMeshes()
 	AWeapTekGrenadeLauncher_C_UpdateSlotMeshes_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -369,15 +372,16 @@ void AWeapTekGrenadeLauncher_C::STATIC_UpdateSlotMeshes()
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.SyncAmmoInClipValue
-// (NetReliable, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (Exec, Native, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 
-void AWeapTekGrenadeLauncher_C::SyncAmmoInClipValue()
+void AWeapTekGrenadeLauncher_C::STATIC_SyncAmmoInClipValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.SyncAmmoInClipValue");
 
 	AWeapTekGrenadeLauncher_C_SyncAmmoInClipValue_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -406,7 +410,7 @@ void AWeapTekGrenadeLauncher_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.GetSlotInfo
-// (Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (Exec, Event, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            SlotIdx                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           GotValidSlotData               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -414,7 +418,7 @@ void AWeapTekGrenadeLauncher_C::ReceiveTick(float* DeltaSeconds)
 // double                         LastFiredNetworkTime           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           AmmoLoaded                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekGrenadeLauncher_C::GetSlotInfo(int SlotIdx, bool* GotValidSlotData, class UClass** AmmoType, double* LastFiredNetworkTime, bool* AmmoLoaded)
+void AWeapTekGrenadeLauncher_C::STATIC_GetSlotInfo(int SlotIdx, bool* GotValidSlotData, class UClass** AmmoType, double* LastFiredNetworkTime, bool* AmmoLoaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.GetSlotInfo");
 
@@ -422,7 +426,6 @@ void AWeapTekGrenadeLauncher_C::GetSlotInfo(int SlotIdx, bool* GotValidSlotData,
 	params.SlotIdx = SlotIdx;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -440,9 +443,9 @@ void AWeapTekGrenadeLauncher_C::GetSlotInfo(int SlotIdx, bool* GotValidSlotData,
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.SaveAmmoToItem
-// (NetReliable, Exec, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, Native, Event, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 
-void AWeapTekGrenadeLauncher_C::SaveAmmoToItem()
+void AWeapTekGrenadeLauncher_C::STATIC_SaveAmmoToItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.SaveAmmoToItem");
 
@@ -458,17 +461,18 @@ void AWeapTekGrenadeLauncher_C::SaveAmmoToItem()
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.LoadAmmoFromItem
-// (NetReliable, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (Exec, Native, NetResponse, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekGrenadeLauncher_C::LoadAmmoFromItem(bool* Success)
+void AWeapTekGrenadeLauncher_C::STATIC_LoadAmmoFromItem(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.LoadAmmoFromItem");
 
 	AWeapTekGrenadeLauncher_C_LoadAmmoFromItem_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -480,13 +484,13 @@ void AWeapTekGrenadeLauncher_C::LoadAmmoFromItem(bool* Success)
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.SetProjectileSlotType
-// (NetRequest, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            SlotIdx                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ItemType                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekGrenadeLauncher_C::SetProjectileSlotType(int SlotIdx, class UClass* ItemType, bool* Success)
+void AWeapTekGrenadeLauncher_C::STATIC_SetProjectileSlotType(int SlotIdx, class UClass* ItemType, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.SetProjectileSlotType");
 
@@ -495,6 +499,7 @@ void AWeapTekGrenadeLauncher_C::SetProjectileSlotType(int SlotIdx, class UClass*
 	params.ItemType = ItemType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -595,16 +600,15 @@ void AWeapTekGrenadeLauncher_C::ModifyAmmoQuantityInInventory(class UClass* Ammo
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.ReceiveBeginPlay
-// (NetReliable, Native, Event, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 
-void AWeapTekGrenadeLauncher_C::STATIC_ReceiveBeginPlay()
+void AWeapTekGrenadeLauncher_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.ReceiveBeginPlay");
 
 	AWeapTekGrenadeLauncher_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -637,20 +641,19 @@ void AWeapTekGrenadeLauncher_C::GetAmmoCountOfType(class UClass* AmmoType, int* 
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.GetNextAvailableSlot
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           SlotIsValid                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            SlotIdx                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          TimeToAdvance                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekGrenadeLauncher_C::STATIC_GetNextAvailableSlot(bool* SlotIsValid, int* SlotIdx, float* TimeToAdvance)
+void AWeapTekGrenadeLauncher_C::GetNextAvailableSlot(bool* SlotIsValid, int* SlotIdx, float* TimeToAdvance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.GetNextAvailableSlot");
 
 	AWeapTekGrenadeLauncher_C_GetNextAvailableSlot_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -666,17 +669,18 @@ void AWeapTekGrenadeLauncher_C::STATIC_GetNextAvailableSlot(bool* SlotIsValid, i
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.BPWeaponCanFire
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AWeapTekGrenadeLauncher_C::STATIC_BPWeaponCanFire()
+bool AWeapTekGrenadeLauncher_C::BPWeaponCanFire()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.BPWeaponCanFire");
 
 	AWeapTekGrenadeLauncher_C_BPWeaponCanFire_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -687,17 +691,18 @@ bool AWeapTekGrenadeLauncher_C::STATIC_BPWeaponCanFire()
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.ReloadProjectiles
-// (Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            NumReloadedSlots               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekGrenadeLauncher_C::STATIC_ReloadProjectiles(int* NumReloadedSlots)
+void AWeapTekGrenadeLauncher_C::ReloadProjectiles(int* NumReloadedSlots)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.ReloadProjectiles");
 
 	AWeapTekGrenadeLauncher_C_ReloadProjectiles_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -726,20 +731,21 @@ void AWeapTekGrenadeLauncher_C::BPFiredWeapon()
 
 
 // Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.BPSelectProjectileToFire
-// (NetReliable, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (Exec, Native, Static, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UClass*                  ProjectileClassOverride        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class USoundCue*               FireSoundOverride              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bSpawnOnClient                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          OverrideMaxSpeed               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekGrenadeLauncher_C::BPSelectProjectileToFire(class UClass** ProjectileClassOverride, class USoundCue** FireSoundOverride, bool* bSpawnOnClient, float* OverrideMaxSpeed)
+void AWeapTekGrenadeLauncher_C::STATIC_BPSelectProjectileToFire(class UClass** ProjectileClassOverride, class USoundCue** FireSoundOverride, bool* bSpawnOnClient, float* OverrideMaxSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekGrenadeLauncher.WeapTekGrenadeLauncher_C.BPSelectProjectileToFire");
 
 	AWeapTekGrenadeLauncher_C_BPSelectProjectileToFire_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

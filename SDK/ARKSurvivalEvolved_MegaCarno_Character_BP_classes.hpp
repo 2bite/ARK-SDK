@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MegaCarno_Character_BP.MegaCarno_Character_BP_C
-// 0x0008 (0x2198 - 0x2190)
+// 0x0008 (0x21A8 - 0x21A0)
 class AMegaCarno_Character_BP_C : public ACarno_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_MegaCarno_C* DinoCharacterStatus_BP_MegaCarno_C1;                      // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_MegaCarno_C* DinoCharacterStatus_BP_MegaCarno_C1;                      // 0x21A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

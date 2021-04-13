@@ -114,7 +114,7 @@ void ABuff_InsideMekShield_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_InsideMekShield.Buff_InsideMekShield_C.GetBuffDescription
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -125,7 +125,6 @@ struct FStatusValueModifierDescription ABuff_InsideMekShield_C::STATIC_GetBuffDe
 	ABuff_InsideMekShield_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -77,11 +77,11 @@ void APara_Character_BP_C::GetNearbyEnemies(TArray<struct FVector>* Locations)
 
 
 // Function Para_Character_BP.Para_Character_BP_C.NotifyPlayerAboutAlert
-// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void APara_Character_BP_C::STATIC_NotifyPlayerAboutAlert(class AShooterCharacter* Character)
+void APara_Character_BP_C::NotifyPlayerAboutAlert(class AShooterCharacter* Character)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Para_Character_BP.Para_Character_BP_C.NotifyPlayerAboutAlert");
 
@@ -89,7 +89,6 @@ void APara_Character_BP_C::STATIC_NotifyPlayerAboutAlert(class AShooterCharacter
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -471,13 +470,13 @@ bool APara_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* U
 
 
 // Function Para_Character_BP.Para_Character_BP_C.BPGetMultiUseEntries
-// (Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> APara_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> APara_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Para_Character_BP.Para_Character_BP_C.BPGetMultiUseEntries");
 

@@ -30,7 +30,7 @@ public:
 
 
 	void BPPostLoadedFromSaveGame();
-	void STATIC_BPPlacedStructure(class APlayerController** ForPC);
+	void BPPlacedStructure(class APlayerController** ForPC);
 	void UserConstructionScript();
 	void ExecuteUbergraph_TransGPSCharge(int EntryPoint);
 };

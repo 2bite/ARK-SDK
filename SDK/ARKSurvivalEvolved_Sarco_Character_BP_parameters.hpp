@@ -101,13 +101,13 @@ struct ASarco_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_67
-struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_67_Params
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_65
+struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_65_Params
 {
 };
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_66
-struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_66_Params
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_64
+struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_64_Params
 {
 };
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dino_Character_BP_RepelType.Dino_Character_BP_RepelType_C
-// 0x0000 (0x2188 - 0x2188)
+// 0x0000 (0x2198 - 0x2198)
 class ADino_Character_BP_RepelType_C : public ADino_Character_BP_C
 {
 public:

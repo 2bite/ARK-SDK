@@ -33,7 +33,7 @@ public:
 	}
 
 
-	void ReceiveExecute(class AActor** OwnerActor);
+	void STATIC_ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_CaveWolf_FindAttachPointForZipline_TK(int EntryPoint);
 };
 

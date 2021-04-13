@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_Gasoline_GasCrafted.PrimalItemResource_Gasoline_GasCrafted_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemResource_Gasoline_GasCrafted_C : public UPrimalItemResource_Gasoline_C
 {
 public:

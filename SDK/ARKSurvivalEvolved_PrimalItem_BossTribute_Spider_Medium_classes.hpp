@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_BossTribute_Spider_Medium.PrimalItem_BossTribute_Spider_Medium_C
-// 0x0000 (0x0A08 - 0x0A08)
+// 0x0000 (0x0A18 - 0x0A18)
 class UPrimalItem_BossTribute_Spider_Medium_C : public UPrimalItem_BossTribute1_C
 {
 public:

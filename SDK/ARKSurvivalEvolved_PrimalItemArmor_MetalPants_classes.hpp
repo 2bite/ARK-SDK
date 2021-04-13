@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_MetalPants.PrimalItemArmor_MetalPants_C
-// 0x0000 (0x0A18 - 0x0A18)
+// 0x0000 (0x0A28 - 0x0A28)
 class UPrimalItemArmor_MetalPants_C : public UPrimalItemArmor_BasePants_C
 {
 public:

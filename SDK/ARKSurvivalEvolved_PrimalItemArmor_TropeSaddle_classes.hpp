@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_TropeSaddle.PrimalItemArmor_TropeSaddle_C
-// 0x0004 (0x09FC - 0x09F8)
+// 0x0004 (0x0A0C - 0x0A08)
 class UPrimalItemArmor_TropeSaddle_C : public UPrimalItemArmor_SaddleGeneric_C
 {
 public:
-	int                                                TooltipDisplayQualityOffset;                              // 0x09F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                TooltipDisplayQualityOffset;                              // 0x0A08(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,8 +28,7 @@ public:
 	}
 
 
-	bool BPAllowRemoteRemoveFromInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer);
-	class FString STATIC_GetInventoryIconDisplayText();
+	class FString GetInventoryIconDisplayText();
 	void ExecuteUbergraph_PrimalItemArmor_TropeSaddle(int EntryPoint);
 };
 

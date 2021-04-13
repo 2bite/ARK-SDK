@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_ChitinPants.PrimalItemArmor_ChitinPants_C
-// 0x0000 (0x0A18 - 0x0A18)
+// 0x0000 (0x0A28 - 0x0A28)
 class UPrimalItemArmor_ChitinPants_C : public UPrimalItemArmor_BasePants_C
 {
 public:

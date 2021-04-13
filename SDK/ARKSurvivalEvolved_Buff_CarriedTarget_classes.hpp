@@ -83,14 +83,14 @@ public:
 	}
 
 
-	void Sruggle();
+	void STATIC_Sruggle();
 	void Validate();
 	void SetIsHostileBuff(bool NewSetting);
 	struct FStatusValueModifierDescription STATIC_GetBuffDescription();
 	void UpdateEquipmentDOT(float B);
 	void UpdateStruggle(float DeltaTime);
 	void BPActivated(class AActor** ForInstigator);
-	void STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
+	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	void BuffTickServer(float* DeltaTime);
 	void BPHandleOnStartAltFire(bool* bFromGamepad);
 	void TryStruggle();

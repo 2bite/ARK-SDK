@@ -38,7 +38,7 @@ bool ABuff_ChainBola_C::BPTryMultiUse(class APlayerController** ForPC, int* UseI
 
 
 // Function Buff_ChainBola.Buff_ChainBola_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

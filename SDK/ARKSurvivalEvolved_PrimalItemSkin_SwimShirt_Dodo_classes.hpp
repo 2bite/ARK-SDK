@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_SwimShirt_Dodo.PrimalItemSkin_SwimShirt_Dodo_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemSkin_SwimShirt_Dodo_C : public UPrimalItemSkin_SummerSwimShirt_Base_C
 {
 public:

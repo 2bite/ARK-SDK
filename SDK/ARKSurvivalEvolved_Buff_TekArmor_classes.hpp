@@ -61,7 +61,7 @@ public:
 	TEnumAsByte<EPrimalEquipmentType>                  K2Node_CustomEvent_ItemSlot;                              // 0x0A20(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x7];                                       // 0x0A21(0x0007) MISSED OFFSET
 	class UParticleSystem*                             K2Node_CustomEvent_particleTemplate;                      // 0x0A28(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class USoundBase*                                  K2Node_CustomEvent_sound;                                 // 0x0A30(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class USoundBase*                                  K2Node_CustomEvent_Sound;                                 // 0x0A30(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x8];                                       // 0x0A38(0x0008) MISSED OFFSET
 	struct UObject_FTransform                          K2Node_CustomEvent_transform;                             // 0x0A40(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_CustomEvent_soundVolume;                           // 0x0A70(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -114,14 +114,14 @@ public:
 	void BPDeactivated(class AActor** ForInstigator);
 	void ResetTargetFOV();
 	void IsWarping_FOV(bool* Result);
-	void Get_DefaultTekBuff(class ABuff_TekArmor_C** Ref);
-	void GetDefaultPlayer(class APrimalCharacter** Ref);
-	void Client_Consume_Element_After_Time(float DeltaTime, int elementCost);
+	void Get_DefaultTekBuff(class ABuff_TekArmor_C** ref);
+	void GetDefaultPlayer(class APrimalCharacter** ref);
+	void Client_Consume_Element_After_Time(float DeltaTime, int ElementCost);
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void IsPlayerGrounded(bool* Result);
-	void Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** Ref);
+	void Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** ref);
 	void UpdatePlayerFOV(float intensityRatio, bool warpIn);
-	void Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** Movement);
+	void Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** movement);
 	void Get_Ref_Owning_PlayerController(class AShooterPlayerController** Controller);
 	void GetRef_OwningPlayer(class AShooterCharacter** Player);
 	void AreAnyTekAbilitiesActive(bool* Result);
@@ -131,8 +131,8 @@ public:
 	void GetRelatedTekArmorRef(class UPrimalItemArmor_Base_Tek_C** tekArmorRef);
 	void CanUseTekAbility(bool bNotifyIfOutOfElement, bool* bResult);
 	void UserConstructionScript();
-	void InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_35();
-	void InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34();
+	void InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33();
+	void InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32();
 	void Equipped_TryToDecreaseElement(int AmountToDecreaseBy, TEnumAsByte<EPrimalEquipmentType> ItemSlot);
 	void Equipped_SetToMaxElement(TEnumAsByte<EPrimalEquipmentType> ItemSlot);
 	void Multi_SpawnFX(class UParticleSystem* particleTemplate, class USoundBase* Sound, const struct UObject_FTransform& Transform, float soundVolume, float soundPitch);

@@ -91,7 +91,7 @@ struct ABuff_TekGravityGrenadeForce_C_ForceInstigatorNetUpdate_Params
 // Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.ClientSyncDesiredFallVelocity
 struct ABuff_TekGravityGrenadeForce_C_ClientSyncDesiredFallVelocity_Params
 {
-	struct FVector                                     vel;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Vel;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.ExecuteUbergraph_Buff_TekGravityGrenadeForce

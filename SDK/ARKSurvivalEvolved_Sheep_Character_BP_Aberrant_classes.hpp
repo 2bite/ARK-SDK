@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sheep_Character_BP_Aberrant.Sheep_Character_BP_Aberrant_C
-// 0x0000 (0x2208 - 0x2208)
+// 0x0000 (0x2218 - 0x2218)
 class ASheep_Character_BP_Aberrant_C : public ASheep_Character_BP_C
 {
 public:

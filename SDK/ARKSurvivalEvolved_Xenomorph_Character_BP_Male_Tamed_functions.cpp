@@ -220,7 +220,7 @@ void AXenomorph_Character_BP_Male_Tamed_C::ProcessJump()
 
 
 // Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.Jump Trace
-// (NetReliable, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure, Const)
+// (NetRequest, Event, NetResponse, Static, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, Const, NetValidate)
 
 void AXenomorph_Character_BP_Male_Tamed_C::STATIC_Jump_Trace()
 {
@@ -239,9 +239,9 @@ void AXenomorph_Character_BP_Male_Tamed_C::STATIC_Jump_Trace()
 // Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.ShouldStopJumpRotation
 // ()
 // Parameters:
-// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_Male_Tamed_C::ShouldStopJumpRotation(bool* return_value)
+void AXenomorph_Character_BP_Male_Tamed_C::ShouldStopJumpRotation(bool* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.ShouldStopJumpRotation");
 
@@ -253,8 +253,8 @@ void AXenomorph_Character_BP_Male_Tamed_C::ShouldStopJumpRotation(bool* return_v
 
 	fn->FunctionFlags = flags;
 
-	if (return_value != nullptr)
-		*return_value = params.return_value;
+	if (Return_Value != nullptr)
+		*Return_Value = params.Return_Value;
 }
 
 

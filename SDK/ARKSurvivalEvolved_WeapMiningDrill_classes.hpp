@@ -68,7 +68,7 @@ public:
 	void StartUnequipEvent();
 	void HandleActivation(bool* bActive);
 	void ReceiveDestroyed();
-	void CreateDynamicMATS();
+	void CreateDynamicMats();
 	void BPSpawnHarvestEffects(TArray<struct FVector>* Impacts);
 	struct FVector CalculateTargetPosition();
 	void BPStartEquippedNotify();

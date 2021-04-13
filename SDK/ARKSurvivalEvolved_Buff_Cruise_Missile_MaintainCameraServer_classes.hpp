@@ -30,7 +30,7 @@ public:
 
 
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void STATIC_BPHandleOnStartFire(bool* bFromGamepad);
+	void BPHandleOnStartFire(bool* bFromGamepad);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_Cruise_Missile_MaintainCameraServer(int EntryPoint);
 };

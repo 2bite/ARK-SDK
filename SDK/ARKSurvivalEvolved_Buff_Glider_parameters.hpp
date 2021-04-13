@@ -154,8 +154,8 @@ struct ABuff_Glider_C_BuffAdjustDamage_Params
 // Function Buff_Glider.Buff_Glider_C.AreRotatorsNearlyEqual
 struct ABuff_Glider_C_AreRotatorsNearlyEqual_Params
 {
-	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    rotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    RotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    RotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Error;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -200,7 +200,7 @@ struct ABuff_Glider_C_GetGlideSpeedRatio_Pure_Params
 // Function Buff_Glider.Buff_Glider_C.GetDefaultOwningPlayer
 struct ABuff_Glider_C_GetDefaultOwningPlayer_Params
 {
-	class AShooterCharacter*                           Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Glider.Buff_Glider_C.IsPlayerGrounded
@@ -286,28 +286,28 @@ struct ABuff_Glider_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_96
-struct ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_96_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_92
+struct ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_92_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_95
-struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_95_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_91
+struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_91_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_94
-struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_94_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_90
+struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_90_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_93
-struct ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_93_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_89
+struct ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_89_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_48
-struct ABuff_Glider_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_48_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44
+struct ABuff_Glider_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44_Params
 {
 };
 

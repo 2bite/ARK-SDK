@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_RecipeNote_Kibble_Kentrosaurus.PrimalItem_RecipeNote_Kibble_Kentrosaurus_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_RecipeNote_Kibble_Kentrosaurus_C : public UPrimalItem_RecipeNote_Base_C
 {
 public:

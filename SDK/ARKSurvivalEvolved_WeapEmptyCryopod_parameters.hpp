@@ -14,6 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function WeapEmptyCryopod.WeapEmptyCryopod_C.GetContainedDinoClass
+struct AWeapEmptyCryopod_C_GetContainedDinoClass_Params
+{
+	struct FCustomItemData                             CustomItemData;                                           // (Parm, OutParm, ReferenceParm)
+	class UClass*                                      ReturnedClass;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.Get Character StatsAsFloats
 struct AWeapEmptyCryopod_C_Get_Character_StatsAsFloats_Params
 {

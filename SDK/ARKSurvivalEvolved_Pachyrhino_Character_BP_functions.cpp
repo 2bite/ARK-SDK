@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.BlueprintAdjustOutputDamage
-// (Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, HasDefaults, NetClient)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -22,7 +22,7 @@ namespace sdk
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float APachyrhino_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -32,7 +32,6 @@ float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attack
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,9 +47,9 @@ float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attack
 
 
 // Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.OnDecidedToFlee
-// (NetReliable, NetRequest, Exec, Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, HasDefaults, NetClient)
 
-void APachyrhino_Character_BP_C::STATIC_OnDecidedToFlee()
+void APachyrhino_Character_BP_C::OnDecidedToFlee()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.OnDecidedToFlee");
 

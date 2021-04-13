@@ -48,7 +48,7 @@ public:
 	struct FVector BP_OverrideCharacterFlyingVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
 	void PopBubble();
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void STATIC_BPHandleOnStartFire(bool* bFromGamepad);
+	void BPHandleOnStartFire(bool* bFromGamepad);
 	void BuffTickClient(float* DeltaTime);
 	void AttachBubble(const struct FVector& BubbleLocation);
 	struct FVector BP_OverrideCharacterSwimmingVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity, float* FluidFriction, float* NetBuoyancy);

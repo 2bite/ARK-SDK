@@ -41,9 +41,9 @@ void ARadioActiveLanternGroundCharge_C::GetNumBatteries(int* numBatteries)
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue)
+void ARadioActiveLanternGroundCharge_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.Get Charge Variable Interface");
 
@@ -62,8 +62,8 @@ void ARadioActiveLanternGroundCharge_C::Get_Charge_Variable_Interface(TEnumAsByt
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (ivalue != nullptr)
-		*ivalue = params.ivalue;
+	if (iValue != nullptr)
+		*iValue = params.iValue;
 }
 
 
@@ -558,13 +558,13 @@ bool ARadioActiveLanternGroundCharge_C::BPTryMultiUse(class APlayerController** 
 
 
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.BPGetMultiUseEntries
-// (NetReliable, Exec, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, Const)
+// (Exec, Event, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ARadioActiveLanternGroundCharge_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ARadioActiveLanternGroundCharge_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.BPGetMultiUseEntries");
 
@@ -642,9 +642,9 @@ void ARadioActiveLanternGroundCharge_C::FadeInLightTimeline__UpdateFunc()
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue)
+void ARadioActiveLanternGroundCharge_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.Charge Variable Event Interface");
 
@@ -653,7 +653,7 @@ void ARadioActiveLanternGroundCharge_C::Charge_Variable_Event_Interface(TEnumAsB
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -735,9 +735,9 @@ void ARadioActiveLanternGroundCharge_C::ReceiveBeginPlay()
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           triggerEvent                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           multicastEvent                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue)
+void ARadioActiveLanternGroundCharge_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.Set Charge Variable Interface");
 
@@ -749,7 +749,7 @@ void ARadioActiveLanternGroundCharge_C::Set_Charge_Variable_Interface(TEnumAsByt
 	params.bBValue = bBValue;
 	params.triggerEvent = triggerEvent;
 	params.multicastEvent = multicastEvent;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1237,14 +1237,14 @@ void ARadioActiveLanternGroundCharge_C::CreateChargeBuff()
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.DeactivateLantern
 // ()
 // Parameters:
-// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::DeactivateLantern(bool Fast)
+void ARadioActiveLanternGroundCharge_C::DeactivateLantern(bool fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.DeactivateLantern");
 
 	ARadioActiveLanternGroundCharge_C_DeactivateLantern_Params params;
-	params.Fast = Fast;
+	params.fast = fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1257,14 +1257,14 @@ void ARadioActiveLanternGroundCharge_C::DeactivateLantern(bool Fast)
 // Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.DeactivateLantern_Multicast
 // ()
 // Parameters:
-// bool                           Fast                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           fast                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::DeactivateLantern_Multicast(bool Fast)
+void ARadioActiveLanternGroundCharge_C::DeactivateLantern_Multicast(bool fast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.DeactivateLantern_Multicast");
 
 	ARadioActiveLanternGroundCharge_C_DeactivateLantern_Multicast_Params params;
-	params.Fast = Fast;
+	params.fast = fast;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1278,15 +1278,15 @@ void ARadioActiveLanternGroundCharge_C::DeactivateLantern_Multicast(bool Fast)
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void ARadioActiveLanternGroundCharge_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.ChargeVariableEventIntInterface");
 
 	ARadioActiveLanternGroundCharge_C_ChargeVariableEventIntInterface_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1300,15 +1300,15 @@ void ARadioActiveLanternGroundCharge_C::ChargeVariableEventIntInterface(TEnumAsB
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void ARadioActiveLanternGroundCharge_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.ChargeVariableEventIntMulticastInterface");
 
 	ARadioActiveLanternGroundCharge_C_ChargeVariableEventIntMulticastInterface_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1322,15 +1322,15 @@ void ARadioActiveLanternGroundCharge_C::ChargeVariableEventIntMulticastInterface
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::ChargeVariableEvent_Int(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void ARadioActiveLanternGroundCharge_C::ChargeVariableEvent_Int(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.ChargeVariableEvent_Int");
 
 	ARadioActiveLanternGroundCharge_C_ChargeVariableEvent_Int_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1344,15 +1344,15 @@ void ARadioActiveLanternGroundCharge_C::ChargeVariableEvent_Int(TEnumAsByte<E_Ch
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARadioActiveLanternGroundCharge_C::ChargeVariableEvent_Int_Multicast(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void ARadioActiveLanternGroundCharge_C::ChargeVariableEvent_Int_Multicast(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RadioActiveLanternGroundCharge.RadioActiveLanternGroundCharge_C.ChargeVariableEvent_Int_Multicast");
 
 	ARadioActiveLanternGroundCharge_C_ChargeVariableEvent_Int_Multicast_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ragnarok_Wyvern_Override_Ice.Ragnarok_Wyvern_Override_Ice_C
-// 0x0000 (0x22E6 - 0x22E6)
+// 0x0000 (0x22F6 - 0x22F6)
 class ARagnarok_Wyvern_Override_Ice_C : public ARagnarok_Wyvern_Override_C
 {
 public:

@@ -34,7 +34,7 @@ public:
 	}
 
 
-	void STATIC_ReceiveTick(float* DeltaSeconds);
+	void ReceiveTick(float* DeltaSeconds);
 	void ReceiveBeginPlay();
 	void BPInitializedVelocity(float* CustomSpeed, struct FVector* InVelocity);
 	void UserConstructionScript();

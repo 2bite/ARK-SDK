@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemCostume_GhostLanternPug.PrimalItemCostume_GhostLanternPug_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemCostume_GhostLanternPug_C : public UPrimalItemCostume_Ghost_Base_C
 {
 public:

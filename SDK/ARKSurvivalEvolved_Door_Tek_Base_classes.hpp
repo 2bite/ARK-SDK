@@ -114,7 +114,7 @@ public:
 
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool IsValidSnapPointFrom(class APrimalStructure** ParentStructure, int* MySnapPointFromIndex);
 	void IsValidDoorOpener(class APrimalCharacter* DoorOpener, bool* IsValid);
 	void DoAutoCloseCheck();

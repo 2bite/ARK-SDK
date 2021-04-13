@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Tropeognathus_AnimBP.Tropeognathus_AnimBP_C.GetFlyingBlendspaceCoords
-// (Exec, NetMulticast, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Native, NetResponse, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    ForDino                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               BlendspaceCoords               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -26,6 +26,7 @@ void UTropeognathus_AnimBP_C::GetFlyingBlendspaceCoords(class APrimalDinoCharact
 	params.ForDino = ForDino;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

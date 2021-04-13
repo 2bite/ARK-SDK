@@ -82,11 +82,11 @@ void AArcha_Character_BP_C::OnRep_bPreventGlide()
 
 
 // Function Archa_Character_BP.Archa_Character_BP_C.HandleMountedDinoAction
-// (Exec, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterPlayerController** PC                             (Parm, ZeroConstructor, IsPlainOldData)
 
-void AArcha_Character_BP_C::HandleMountedDinoAction(class AShooterPlayerController** PC)
+void AArcha_Character_BP_C::STATIC_HandleMountedDinoAction(class AShooterPlayerController** PC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Archa_Character_BP.Archa_Character_BP_C.HandleMountedDinoAction");
 
@@ -94,6 +94,7 @@ void AArcha_Character_BP_C::HandleMountedDinoAction(class AShooterPlayerControll
 	params.PC = PC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

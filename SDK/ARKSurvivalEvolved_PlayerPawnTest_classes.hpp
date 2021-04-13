@@ -75,7 +75,7 @@ public:
 	float                                              MaxDistanceToRestPos;                                     // 0x1F18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              InWater;                                                  // 0x1F1C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              HairWetness;                                              // 0x1F20(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WaterLine;                                                // 0x1F24(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Waterline;                                                // 0x1F24(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bPosAsPivot;                                              // 0x1F28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bCollideWithNeck;                                         // 0x1F29(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bCollideMiddle;                                           // 0x1F2A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -244,11 +244,11 @@ public:
 	void ServerAscend(int DifficultyIndex, bool bImmediateAscend, bool bSuppressAchievements);
 	class FString PlayerCommand(class FString* TheCommand);
 	void InitHairRestDistance();
-	void STATIC_SetLastTransforms();
+	void SetLastTransforms();
 	void BPNonDedicatedPostAnimUpdate();
 	void Setup_Collision_Volumes();
-	void STATIC_SetupNewHairstyle();
-	void STATIC_UpdateHair();
+	void SetupNewHairstyle();
+	void UpdateHair();
 	void SetHairParams(struct FVector* HairSocketLoc, struct FRotator* HairSocketRot, struct FVector* NeckSocketLoc, struct FRotator* NeckSocketrot);
 	void SimulateHair(float DeltaTime, struct FVector* HairSocketLoc, struct FRotator* HairSocketRot, struct FVector* ChestSocketLoc, struct FRotator* ChestSocketRot);
 	void UserConstructionScript();

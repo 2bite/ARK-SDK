@@ -32,7 +32,7 @@ public:
 	}
 
 
-	void BPProjectileBounced(struct FHitResult* ImpactResult, struct FVector* ImpactVelocity);
+	void STATIC_BPProjectileBounced(struct FHitResult* ImpactResult, struct FVector* ImpactVelocity);
 	void BPAttachedRootComponent();
 	void UserConstructionScript();
 	void OnExplode(struct FHitResult* Result);

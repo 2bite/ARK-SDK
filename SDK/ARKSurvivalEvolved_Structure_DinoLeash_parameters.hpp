@@ -14,6 +14,25 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Structure_DinoLeash.Structure_DinoLeash_C.BPServerHandleNetExecCommand
+struct AStructure_DinoLeash_C_BPServerHandleNetExecCommand_Params
+{
+	class APlayerController**                          FromPC;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBPNetExecParams                            ExecParams;                                               // (Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.CheckTeamAndSetVisualVisibility
+struct AStructure_DinoLeash_C_CheckTeamAndSetVisualVisibility_Params
+{
+};
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.OnRep_ShowArea
+struct AStructure_DinoLeash_C_OnRep_ShowArea_Params
+{
+};
+
 // Function Structure_DinoLeash.Structure_DinoLeash_C.UpdateTetherAfterLoad
 struct AStructure_DinoLeash_C_UpdateTetherAfterLoad_Params
 {
@@ -187,6 +206,11 @@ struct AStructure_DinoLeash_C_BndEvt__Sphere1_K2Node_ComponentBoundEvent_177_Com
 	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.ServerRequest_ToggleShowarea
+struct AStructure_DinoLeash_C_ServerRequest_ToggleShowarea_Params
+{
 };
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.ExecuteUbergraph_Structure_DinoLeash

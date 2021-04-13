@@ -80,7 +80,7 @@ public:
 	TEnumAsByte<ENetworkModeResult>                    CallFunc_IsRunningOnServer_OutNetworkMode2;               // 0x0D88(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum2_CmpSuccess;                            // 0x0D89(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	TEnumAsByte<ENetworkModeResult>                    CallFunc_IsRunningOnServer_OutNetworkMode3;               // 0x0D8A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_CustomEvent_IsActive;                              // 0x0D8B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_CustomEvent_isActive;                              // 0x0D8B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum3_CmpSuccess;                            // 0x0D8C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData11[0x3];                                       // 0x0D8D(0x0003) MISSED OFFSET
 	float                                              CallFunc_SelectFloat_ReturnValue;                         // 0x0D90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -228,7 +228,7 @@ public:
 	void OnRep_PreventSword();
 	void NotifyInventoryChange(class UPrimalItem** Item, bool* ItemAdded, bool* ItemEquipped);
 	void BPActivated(class AActor** ForInstigator);
-	void OnRep_SiegeCannonMalfunctioned();
+	void STATIC_OnRep_SiegeCannonMalfunctioned();
 	void SubtractAmmo();
 	void GetCurrentAmmo(int* AmmoAmount);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
@@ -241,7 +241,7 @@ public:
 	void AllowMekSword(bool* Allowed);
 	void AllowMekPistol(bool* Allowed);
 	void GetLaunchParams(class AMek_Character_BP_C* Mek, struct FVector* Location, struct FVector* Direction, float* Speed);
-	void BuffTickClient(float* DeltaTime);
+	void STATIC_BuffTickClient(float* DeltaTime);
 	void OnRep_InSiegeMode();
 	void CanDeactivateBackpack(bool* CanDeactivate);
 	void CanActivateBackpack(bool* CanActivate, class FString* FailureMessage);

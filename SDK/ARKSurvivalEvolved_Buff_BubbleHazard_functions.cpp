@@ -109,11 +109,11 @@ bool ABuff_BubbleHazard_C::BPServerHandleNetExecCommand(class APlayerController*
 
 
 // Function Buff_BubbleHazard.Buff_BubbleHazard_C.BPHandleOnStartFire
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Native, Event, NetMulticast, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_BubbleHazard_C::STATIC_BPHandleOnStartFire(bool* bFromGamepad)
+void ABuff_BubbleHazard_C::BPHandleOnStartFire(bool* bFromGamepad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BubbleHazard.Buff_BubbleHazard_C.BPHandleOnStartFire");
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_UnderwaterEgg_Tuso.PrimalItemConsumable_UnderwaterEgg_Tuso_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_UnderwaterEgg_Tuso_C : public UPrimalItemConsumable_UnderwaterEgg_C
 {
 public:

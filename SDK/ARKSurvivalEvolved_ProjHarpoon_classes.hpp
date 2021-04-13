@@ -36,7 +36,7 @@ public:
 
 
 	void ReceiveBeginPlay();
-	void ReceiveTick(float* DeltaSeconds);
+	void STATIC_ReceiveTick(float* DeltaSeconds);
 	void UserConstructionScript();
 	void ExecuteUbergraph_ProjHarpoon(int EntryPoint);
 };

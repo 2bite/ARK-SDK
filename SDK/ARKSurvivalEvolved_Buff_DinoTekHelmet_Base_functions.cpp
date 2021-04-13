@@ -15,9 +15,9 @@ namespace sdk
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsElectricalStormActive
 // ()
 // Parameters:
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* _return)
+void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsElectricalStormActive");
 
@@ -29,8 +29,8 @@ void ABuff_DinoTekHelmet_Base_C::IsElectricalStormActive(bool* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -103,7 +103,7 @@ void ABuff_DinoTekHelmet_Base_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, fl
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsAllowedToFire
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 AimAtLoc                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ServerSpawnAtLoc               (Parm, ZeroConstructor, IsPlainOldData)
@@ -118,7 +118,6 @@ void ABuff_DinoTekHelmet_Base_C::STATIC_IsAllowedToFire(const struct FVector& Ai
 	params.ServerSpawnAtLoc = ServerSpawnAtLoc;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,7 +190,7 @@ void ABuff_DinoTekHelmet_Base_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.LocalDoAttack
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           bDidAttack                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -202,6 +201,7 @@ void ABuff_DinoTekHelmet_Base_C::LocalDoAttack(bool* bDidAttack)
 	ABuff_DinoTekHelmet_Base_C_LocalDoAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

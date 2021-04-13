@@ -82,13 +82,13 @@ void ABirthdayCakeBP_C::BPClientDoMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BirthdayCakeBP.BirthdayCakeBP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
+// (MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABirthdayCakeBP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABirthdayCakeBP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BirthdayCakeBP.BirthdayCakeBP_C.BPGetMultiUseEntries");
 
@@ -162,7 +162,7 @@ bool ABirthdayCakeBP_C::BPServerHandleNetExecCommand(class APlayerController** F
 
 
 // Function BirthdayCakeBP.BirthdayCakeBP_C.OnRep_bIsOpen
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Exec, Event, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 
 void ABirthdayCakeBP_C::OnRep_bIsOpen()
 {
@@ -171,7 +171,6 @@ void ABirthdayCakeBP_C::OnRep_bIsOpen()
 	ABirthdayCakeBP_C_OnRep_bIsOpen_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

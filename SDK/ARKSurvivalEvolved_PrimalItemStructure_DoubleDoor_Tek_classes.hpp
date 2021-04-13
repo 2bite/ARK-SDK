@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_DoubleDoor_Tek.PrimalItemStructure_DoubleDoor_Tek_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_DoubleDoor_Tek_C : public UPrimalItemStructure_BaseGate_C
 {
 public:

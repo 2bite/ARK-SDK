@@ -109,7 +109,7 @@ struct ABuff_ChargeEmitterStructure_ChargeLantern_C_ChargeVariableEvent_Params
 	bool*                                              bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double*                                            dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int*                                               ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.InitializeEmitter

@@ -70,14 +70,14 @@ void ABuff_MinigunOverheat_C::ReceiveBeginPlay()
 
 
 // Function Buff_MinigunOverheat.Buff_MinigunOverheat_C.BPDrawBuffStatusHUD
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MinigunOverheat_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_MinigunOverheat_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MinigunOverheat.Buff_MinigunOverheat_C.BPDrawBuffStatusHUD");
 
@@ -88,6 +88,7 @@ void ABuff_MinigunOverheat_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

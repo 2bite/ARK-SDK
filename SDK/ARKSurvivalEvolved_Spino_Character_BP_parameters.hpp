@@ -14,6 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Spino_Character_BP.Spino_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+struct ASpino_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Spino_Character_BP.Spino_Character_BP_C.BlueprintCanAttack
 struct ASpino_Character_BP_C_BlueprintCanAttack_Params
 {

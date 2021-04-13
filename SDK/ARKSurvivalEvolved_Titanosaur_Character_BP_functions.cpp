@@ -88,11 +88,11 @@ bool ATitanosaur_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.BPSetupTamed
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Private, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient)
 // Parameters:
 // bool*                          bWasJustTamed                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATitanosaur_Character_BP_C::STATIC_BPSetupTamed(bool* bWasJustTamed)
+void ATitanosaur_Character_BP_C::BPSetupTamed(bool* bWasJustTamed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.BPSetupTamed");
 
@@ -133,7 +133,7 @@ void ATitanosaur_Character_BP_C::CheckTorporDistanceTravel(float torporIn, bool*
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.IsHeadObstructed
-// (Native, NetResponse, Static, MulticastDelegate, Private, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient)
 // Parameters:
 // bool                           OutVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -144,7 +144,6 @@ void ATitanosaur_Character_BP_C::STATIC_IsHeadObstructed(bool* OutVal)
 	ATitanosaur_Character_BP_C_IsHeadObstructed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

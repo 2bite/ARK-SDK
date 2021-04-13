@@ -19,7 +19,7 @@ struct AProjZiplineAnchor_C_CheckForInvisibleWall_Params
 {
 	struct FVector                                     Start;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     End;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.HitValidForAttachment

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SpiderS_Character_BP_Aggressive.SpiderS_Character_BP_Aggressive_C
-// 0x0000 (0x2190 - 0x2190)
+// 0x0000 (0x21A0 - 0x21A0)
 class ASpiderS_Character_BP_Aggressive_C : public ASpiderS_Character_BP_C
 {
 public:

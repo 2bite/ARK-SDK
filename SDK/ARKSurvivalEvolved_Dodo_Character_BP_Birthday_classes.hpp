@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dodo_Character_BP_Birthday.Dodo_Character_BP_Birthday_C
-// 0x0008 (0x2198 - 0x2190)
+// 0x0008 (0x21A8 - 0x21A0)
 class ADodo_Character_BP_Birthday_C : public ADodo_Character_BP_C
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x21A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

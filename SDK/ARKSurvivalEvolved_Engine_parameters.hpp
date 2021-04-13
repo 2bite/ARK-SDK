@@ -758,6 +758,12 @@ struct AActor_IsDead_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.Actor.IsCorruptDino
+struct AActor_IsCorruptDino_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.Actor.HasAuthority
 struct AActor_HasAuthority_Params
 {

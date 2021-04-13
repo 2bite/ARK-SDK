@@ -52,7 +52,7 @@ public:
 
 
 	void Do_TeleportSound();
-	void BuffTickClient(float* DeltaTime);
+	void STATIC_BuffTickClient(float* DeltaTime);
 	void DoTeleport();
 	void UserConstructionScript();
 	void NetDoTeleport();

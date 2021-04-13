@@ -79,12 +79,12 @@ public:
 	}
 
 
-	void STATIC_VineCollisionCheck(const struct FVector& Start, const struct FVector& End, class ACharacter* ActorToIgnore, class ACharacter* OtherActorToIgnore, bool* ret);
+	void STATIC_VineCollisionCheck(const struct FVector& Start, const struct FVector& End, class ACharacter* ActorToIgnore, class ACharacter* OtherActorToIgnore, bool* Ret);
 	void OnRep_EndVineLocation();
-	void STATIC_TargetDataContainsTarget(class APrimalCharacter* Target, bool* Result);
+	void TargetDataContainsTarget(class APrimalCharacter* Target, bool* Result);
 	void Get_Current_Vine_End_Location(struct FVector* EndPosition);
 	void GetVineTargets(const struct FVector& Location);
-	void UpdateVines();
+	void STATIC_UpdateVines();
 	void STATIC_InitVines();
 	void ReceiveBeginPlay();
 	void GetAIState(class UForestKaiju_AttackAIState_Grab_C** State);

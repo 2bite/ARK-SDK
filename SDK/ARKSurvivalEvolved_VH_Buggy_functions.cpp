@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function VH_Buggy.VH_Buggy_C.BPPlayDying
-// (NetReliable, NetRequest, Exec, Native, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
@@ -58,14 +58,14 @@ void AVH_Buggy_C::UserConstructionScript()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_65
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_63
 // ()
 
-void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_65()
+void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_63()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_65");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_63");
 
-	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_65_Params params;
+	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_63_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -75,14 +75,14 @@ void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_65()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_64
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_62
 // ()
 
-void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_64()
+void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_62()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_64");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_62");
 
-	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_64_Params params;
+	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_62_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -92,14 +92,14 @@ void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_64()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_33
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_31
 // ()
 
-void AVH_Buggy_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_33()
+void AVH_Buggy_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_31()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_33");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_31");
 
-	AVH_Buggy_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_33_Params params;
+	AVH_Buggy_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_31_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -109,14 +109,14 @@ void AVH_Buggy_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_33()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_32
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_30
 // ()
 
-void AVH_Buggy_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_32()
+void AVH_Buggy_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_30()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_32");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_30");
 
-	AVH_Buggy_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_32_Params params;
+	AVH_Buggy_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_30_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -126,14 +126,14 @@ void AVH_Buggy_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_32()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_31
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_29
 // ()
 
-void AVH_Buggy_C::InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_31()
+void AVH_Buggy_C::InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_29()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_31");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_29");
 
-	AVH_Buggy_C_InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_31_Params params;
+	AVH_Buggy_C_InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_29_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -143,14 +143,14 @@ void AVH_Buggy_C::InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_31()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_30
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_28
 // ()
 
-void AVH_Buggy_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_30()
+void AVH_Buggy_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_28()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_30");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_28");
 
-	AVH_Buggy_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_30_Params params;
+	AVH_Buggy_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_28_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -160,14 +160,14 @@ void AVH_Buggy_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_30()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_29
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_27
 // ()
 
-void AVH_Buggy_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_29()
+void AVH_Buggy_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_27()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_29");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_27");
 
-	AVH_Buggy_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_29_Params params;
+	AVH_Buggy_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_27_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -12,6 +12,45 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function TributeTerminal_Base.TributeTerminal_Base_C.BPOnDemolish
+// ()
+// Parameters:
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ATributeTerminal_Base_C::BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TributeTerminal_Base.TributeTerminal_Base_C.BPOnDemolish");
+
+	ATributeTerminal_Base_C_BPOnDemolish_Params params;
+	params.ForPC = ForPC;
+	params.DamageCauser = DamageCauser;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TributeTerminal_Base.TributeTerminal_Base_C.BPPostLoadedFromSaveGame
+// ()
+
+void ATributeTerminal_Base_C::BPPostLoadedFromSaveGame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TributeTerminal_Base.TributeTerminal_Base_C.BPPostLoadedFromSaveGame");
+
+	ATributeTerminal_Base_C_BPPostLoadedFromSaveGame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TributeTerminal_Base.TributeTerminal_Base_C.UserConstructionScript
 // ()
 

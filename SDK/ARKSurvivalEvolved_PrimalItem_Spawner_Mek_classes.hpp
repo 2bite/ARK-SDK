@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_Spawner_Mek.PrimalItem_Spawner_Mek_C
-// 0x0000 (0x0BE8 - 0x0BE8)
+// 0x0000 (0x0BF8 - 0x0BF8)
 class UPrimalItem_Spawner_Mek_C : public UPrimalItem_DinoSpawner_Base_C
 {
 public:

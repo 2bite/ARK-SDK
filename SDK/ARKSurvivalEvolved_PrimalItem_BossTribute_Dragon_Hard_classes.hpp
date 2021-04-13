@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_BossTribute_Dragon_Hard.PrimalItem_BossTribute_Dragon_Hard_C
-// 0x0000 (0x0A08 - 0x0A08)
+// 0x0000 (0x0A18 - 0x0A18)
 class UPrimalItem_BossTribute_Dragon_Hard_C : public UPrimalItem_BossTribute3_C
 {
 public:

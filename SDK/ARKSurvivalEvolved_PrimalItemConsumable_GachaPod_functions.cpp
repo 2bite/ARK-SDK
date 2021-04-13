@@ -35,7 +35,7 @@ void UPrimalItemConsumable_GachaPod_C::BPOnItemConsumed(class UPrimalInventoryCo
 
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.RollLoot
-// (NetReliable, NetRequest, Native, Event, Static, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Public, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalInventoryComponent* Inv                            (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -56,7 +56,7 @@ void UPrimalItemConsumable_GachaPod_C::STATIC_RollLoot(class UPrimalInventoryCom
 
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.ShowHUDNotification
-// (NetRequest, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  Resource                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -74,6 +74,7 @@ void UPrimalItemConsumable_GachaPod_C::ShowHUDNotification(class UPrimalItem* It
 	params.Inv = Inv;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +83,7 @@ void UPrimalItemConsumable_GachaPod_C::ShowHUDNotification(class UPrimalItem* It
 
 
 // Function PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C.BPPostInitializeItem
-// (NetReliable, Exec, Event, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UWorld**                 OptionalInitWorld              (Parm, ZeroConstructor, IsPlainOldData)
 

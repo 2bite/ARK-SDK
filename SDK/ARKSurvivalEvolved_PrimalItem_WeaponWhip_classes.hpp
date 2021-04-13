@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponWhip.PrimalItem_WeaponWhip_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_WeaponWhip_C : public UPrimalItem_WeaponBaseClub_C
 {
 public:

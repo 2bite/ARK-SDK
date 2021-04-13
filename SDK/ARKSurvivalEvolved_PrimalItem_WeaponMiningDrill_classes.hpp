@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponMiningDrill.PrimalItem_WeaponMiningDrill_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_WeaponMiningDrill_C : public UPrimalItem_WeaponBaseClub_C
 {
 public:

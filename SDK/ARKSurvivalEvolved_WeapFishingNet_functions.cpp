@@ -266,7 +266,7 @@ void AWeapFishingNet_C::FishStruggle()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.spawn vfx at location where cable intersects with water
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected)
 
 void AWeapFishingNet_C::STATIC_spawn_vfx_at_location_where_cable_intersects_with_water()
 {
@@ -275,7 +275,6 @@ void AWeapFishingNet_C::STATIC_spawn_vfx_at_location_where_cable_intersects_with
 	AWeapFishingNet_C_spawn_vfx_at_location_where_cable_intersects_with_water_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -607,7 +606,7 @@ void AWeapFishingNet_C::Kill_all_fish_in_net()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.Send Caught Fish Message to Player
-// (Net, Exec, Static, Public, Protected, Delegate, NetServer, NetClient, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AWeapFishingNet_C::STATIC_Send_Caught_Fish_Message_to_Player()
 {
@@ -643,14 +642,14 @@ void AWeapFishingNet_C::Fully_Catch_Fish_In_Net()
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Remove Buff And Reset Anim
 // ()
 // Parameters:
-// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Cancel_Cast_Remove_Buff_And_Reset_Anim(bool Caught_Success)
+void AWeapFishingNet_C::Cancel_Cast_Remove_Buff_And_Reset_Anim(bool caught_success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Remove Buff And Reset Anim");
 
 	AWeapFishingNet_C_Cancel_Cast_Remove_Buff_And_Reset_Anim_Params params;
-	params.Caught_Success = Caught_Success;
+	params.caught_success = caught_success;
 
 	auto flags = fn->FunctionFlags;
 
@@ -678,7 +677,7 @@ void AWeapFishingNet_C::Cancel_Cast_Destroy_Cable_Components()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.cancel cast destroy net projectile
-// (NetReliable, Exec, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, Const)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected)
 
 void AWeapFishingNet_C::cancel_cast_destroy_net_projectile()
 {
@@ -687,6 +686,7 @@ void AWeapFishingNet_C::cancel_cast_destroy_net_projectile()
 	AWeapFishingNet_C_cancel_cast_destroy_net_projectile_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -878,14 +878,14 @@ void AWeapFishingNet_C::Give_Fish_Rewards()
 // Function WeapFishingNet.WeapFishingNet_C.Set Fish Position To Normal Offset
 // ()
 // Parameters:
-// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Set_Fish_Position_To_Normal_Offset(bool Caught_Success)
+void AWeapFishingNet_C::Set_Fish_Position_To_Normal_Offset(bool caught_success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Set Fish Position To Normal Offset");
 
 	AWeapFishingNet_C_Set_Fish_Position_To_Normal_Offset_Params params;
-	params.Caught_Success = Caught_Success;
+	params.caught_success = caught_success;
 
 	auto flags = fn->FunctionFlags;
 
@@ -898,15 +898,15 @@ void AWeapFishingNet_C::Set_Fish_Position_To_Normal_Offset(bool Caught_Success)
 // Function WeapFishingNet.WeapFishingNet_C.Get Initial Fish Location Offset
 // ()
 // Parameters:
-// class AActor*                  fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Offset                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Get_Initial_Fish_Location_Offset(class AActor* fish, struct FVector* Offset)
+void AWeapFishingNet_C::Get_Initial_Fish_Location_Offset(class AActor* Fish, struct FVector* Offset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Get Initial Fish Location Offset");
 
 	AWeapFishingNet_C_Get_Initial_Fish_Location_Offset_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -989,7 +989,7 @@ struct FVector AWeapFishingNet_C::Reel_Velocity(const struct FVector& Weapon_Loc
 
 
 // Function WeapFishingNet.WeapFishingNet_C.BPAnimNotifyCustomEvent
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, Const)
+// (NetReliable, Native, Static, MulticastDelegate, Private, Protected)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -1007,6 +1007,7 @@ void AWeapFishingNet_C::STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEvent
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1041,14 +1042,14 @@ void AWeapFishingNet_C::Give_Fish_Loot(class UClass* Class, class APrimalDinoCha
 // Function WeapFishingNet.WeapFishingNet_C.Generate Fish Meat
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Generate_Fish_Meat(class APrimalDinoCharacter* fish)
+void AWeapFishingNet_C::Generate_Fish_Meat(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Generate Fish Meat");
 
 	AWeapFishingNet_C_Generate_Fish_Meat_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1078,14 +1079,14 @@ void AWeapFishingNet_C::Check_For_Fish_Collision()
 // Function WeapFishingNet.WeapFishingNet_C.On Fish Released
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::On_Fish_Released(class APrimalDinoCharacter* fish)
+void AWeapFishingNet_C::On_Fish_Released(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.On Fish Released");
 
 	AWeapFishingNet_C_On_Fish_Released_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1096,20 +1097,21 @@ void AWeapFishingNet_C::On_Fish_Released(class APrimalDinoCharacter* fish)
 
 
 // Function WeapFishingNet.WeapFishingNet_C.release fish
-// (NetRequest, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, Const)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected)
 // Parameters:
-// class UObject*                 fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           pulled_completely_up           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::release_fish(class UObject* fish, bool pulled_completely_up)
+void AWeapFishingNet_C::release_fish(class UObject* Fish, bool pulled_completely_up)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.release fish");
 
 	AWeapFishingNet_C_release_fish_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 	params.pulled_completely_up = pulled_completely_up;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1455,15 +1457,15 @@ void AWeapFishingNet_C::Timeline_0__UpdateFunc()
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast
 // ()
 // Parameters:
-// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Force_Reset_Has_Caught_Any_Fish (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Cancel_Cast(bool Caught_Success, bool Force_Reset_Has_Caught_Any_Fish)
+void AWeapFishingNet_C::Cancel_Cast(bool caught_success, bool Force_Reset_Has_Caught_Any_Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Cancel Cast");
 
 	AWeapFishingNet_C_Cancel_Cast_Params params;
-	params.Caught_Success = Caught_Success;
+	params.caught_success = caught_success;
 	params.Force_Reset_Has_Caught_Any_Fish = Force_Reset_Has_Caught_Any_Fish;
 
 	auto flags = fn->FunctionFlags;
@@ -1511,14 +1513,14 @@ void AWeapFishingNet_C::server_reel()
 // Function WeapFishingNet.WeapFishingNet_C.OnFishSnaredEvent
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::OnFishSnaredEvent(class APrimalDinoCharacter* fish)
+void AWeapFishingNet_C::OnFishSnaredEvent(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.OnFishSnaredEvent");
 
 	AWeapFishingNet_C_OnFishSnaredEvent_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1531,14 +1533,14 @@ void AWeapFishingNet_C::OnFishSnaredEvent(class APrimalDinoCharacter* fish)
 // Function WeapFishingNet.WeapFishingNet_C.Projectile net collided with fish
 // ()
 // Parameters:
-// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Projectile_net_collided_with_fish(class APrimalDinoCharacter* fish)
+void AWeapFishingNet_C::Projectile_net_collided_with_fish(class APrimalDinoCharacter* Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Projectile net collided with fish");
 
 	AWeapFishingNet_C_Projectile_net_collided_with_fish_Params params;
-	params.fish = fish;
+	params.Fish = Fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1551,14 +1553,14 @@ void AWeapFishingNet_C::Projectile_net_collided_with_fish(class APrimalDinoChara
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Events
 // ()
 // Parameters:
-// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Cancel_Cast_Events(bool Caught_Success)
+void AWeapFishingNet_C::Cancel_Cast_Events(bool caught_success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Events");
 
 	AWeapFishingNet_C_Cancel_Cast_Events_Params params;
-	params.Caught_Success = Caught_Success;
+	params.caught_success = caught_success;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1860,15 +1862,15 @@ void AWeapFishingNet_C::multicast_release_fish()
 // Function WeapFishingNet.WeapFishingNet_C.client request cancel cast
 // ()
 // Parameters:
-// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Reset_Has_Caught_Any_FIsh      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::client_request_cancel_cast(bool Caught_Success, bool Reset_Has_Caught_Any_FIsh)
+void AWeapFishingNet_C::client_request_cancel_cast(bool caught_success, bool Reset_Has_Caught_Any_FIsh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.client request cancel cast");
 
 	AWeapFishingNet_C_client_request_cancel_cast_Params params;
-	params.Caught_Success = Caught_Success;
+	params.caught_success = caught_success;
 	params.Reset_Has_Caught_Any_FIsh = Reset_Has_Caught_Any_FIsh;
 
 	auto flags = fn->FunctionFlags;

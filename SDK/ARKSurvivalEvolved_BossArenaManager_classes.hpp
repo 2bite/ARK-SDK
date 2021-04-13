@@ -110,16 +110,16 @@ public:
 
 	void SpawnedBoss();
 	void SFXBack_to_Home();
-	void IssueReturnWarning();
-	bool STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
+	void STATIC_IssueReturnWarning();
+	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
 	void KillMinions();
 	void CheckForActivePlayers();
 	void GetAllActorsInBossArena(bool bIncludeUnconscious, bool bIncludeUntamedCreatures, bool bIncludeDead, bool bIgnorePlayers, bool bIgnoreDinos, bool bIgnoreAttached, TArray<class AActor*>* TheActors);
-	void STATIC_IssueTimeWarning();
+	void IssueTimeWarning();
 	void KillAllOccupants();
 	void TeleportBackToHome();
 	void DidTeleport(const struct FVector& ReturnPosition, class UClass* OverrideBossClass);
-	void IsValidForTeleport(class FString* InvalidReason);
+	void STATIC_IsValidForTeleport(class FString* InvalidReason);
 	void UserConstructionScript();
 	void StartBoss();
 	void ReceiveBeginPlay();

@@ -107,7 +107,7 @@ void AWyvern_Character_BP_Fire_Minion_C::BP_OnSetDeath()
 
 
 // Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPTimerServer
-// (NetRequest, Exec, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void AWyvern_Character_BP_Fire_Minion_C::STATIC_BPTimerServer()
 {
@@ -116,6 +116,7 @@ void AWyvern_Character_BP_Fire_Minion_C::STATIC_BPTimerServer()
 	AWyvern_Character_BP_Fire_Minion_C_BPTimerServer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -337,7 +338,7 @@ bool AWyvern_Character_BP_Fire_Minion_C::BPTryMultiUse(class APlayerController**
 
 
 // Function Wyvern_Character_BP_Fire_Minion.Wyvern_Character_BP_Fire_Minion_C.BPGetMultiUseEntries
-// (Net, NetReliable, NetRequest, Exec, Event, Static, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -351,6 +352,7 @@ TArray<struct FMultiUseEntry> AWyvern_Character_BP_Fire_Minion_C::STATIC_BPGetMu
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemDye_Royalty.PrimalItemDye_Royalty_C
-// 0x0000 (0x0A10 - 0x0A10)
+// 0x0000 (0x0A20 - 0x0A20)
 class UPrimalItemDye_Royalty_C : public UPrimalItemDyeGeneric_C
 {
 public:

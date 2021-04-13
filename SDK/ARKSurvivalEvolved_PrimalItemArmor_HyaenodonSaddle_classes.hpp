@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_HyaenodonSaddle.PrimalItemArmor_HyaenodonSaddle_C
-// 0x0000 (0x09F8 - 0x09F8)
+// 0x0000 (0x0A08 - 0x0A08)
 class UPrimalItemArmor_HyaenodonSaddle_C : public UPrimalItemArmor_SaddleGeneric_C
 {
 public:

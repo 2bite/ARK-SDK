@@ -62,7 +62,7 @@ bool ABP_Wire_Flex_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.BPGetMultiUseEntries
-// (NetRequest, Native, Event, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -76,7 +76,6 @@ TArray<struct FMultiUseEntry> ABP_Wire_Flex_C::BPGetMultiUseEntries(class APlaye
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,11 +111,11 @@ void ABP_Wire_Flex_C::LinkWires(TArray<class APrimalStructure*>* Connections)
 
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.AddSplineMeshComponents
-// (NetReliable, NetRequest, Native, NetResponse, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           UsePreviewMaterial             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Wire_Flex_C::AddSplineMeshComponents(bool UsePreviewMaterial)
+void ABP_Wire_Flex_C::STATIC_AddSplineMeshComponents(bool UsePreviewMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wire_Flex.BP_Wire_Flex_C.AddSplineMeshComponents");
 
@@ -124,7 +123,6 @@ void ABP_Wire_Flex_C::AddSplineMeshComponents(bool UsePreviewMaterial)
 	params.UsePreviewMaterial = UsePreviewMaterial;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

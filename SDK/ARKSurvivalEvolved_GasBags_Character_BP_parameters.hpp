@@ -411,7 +411,7 @@ struct AGasBags_Character_BP_C_MultiUpdateFloatingDirection_Params
 // Function GasBags_Character_BP.GasBags_Character_BP_C.MultiUpdateVelocity
 struct AGasBags_Character_BP_C_MultiUpdateVelocity_Params
 {
-	struct FVector                                     vel;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Vel;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GasBags_Character_BP.GasBags_Character_BP_C.ServerRequestAttachment

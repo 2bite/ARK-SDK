@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_AdobeRamp.PrimalItemStructure_AdobeRamp_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_AdobeRamp_C : public UPrimalItemStructure_BaseRamp_C
 {
 public:

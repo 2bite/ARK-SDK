@@ -41,7 +41,7 @@ public:
 	void BPOnInstigatorCapsuleComponentHit(class AActor** OtherActor, class UPrimitiveComponent** OtherComp, struct FVector* NormalImpulse, struct FHitResult* Hit);
 	void BPDeactivated(class AActor** ForInstigator);
 	void SetupIceCrash(class APrimalCharacter* Character, bool Frozen);
-	void BPSetupForInstigator(class AActor** ForInstigator);
+	void STATIC_BPSetupForInstigator(class AActor** ForInstigator);
 	void BPOnInstigatorMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode, TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_OwlIceCrash(int EntryPoint);

@@ -60,13 +60,13 @@ public:
 
 	void BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent);
 	void UserConstructionScript();
-	void InpActEvt_Jump_K2Node_InputActionEvent_65();
-	void InpActEvt_Jump_K2Node_InputActionEvent_64();
-	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_33();
-	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_32();
-	void InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_31();
-	void InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_30();
-	void InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_29();
+	void InpActEvt_Jump_K2Node_InputActionEvent_63();
+	void InpActEvt_Jump_K2Node_InputActionEvent_62();
+	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_31();
+	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_30();
+	void InpActEvt_Gamepad_RightShoulder_K2Node_InputKeyEvent_29();
+	void InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_28();
+	void InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_27();
 	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_135(float AxisValue);
 	void ReceivePossessed(class AController** NewController);
 	void ReceiveTick(float* DeltaSeconds);

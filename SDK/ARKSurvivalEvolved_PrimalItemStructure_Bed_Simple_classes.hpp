@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_Bed_Simple.PrimalItemStructure_Bed_Simple_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_Bed_Simple_C : public UPrimalItemStructure_Bed_Base_C
 {
 public:

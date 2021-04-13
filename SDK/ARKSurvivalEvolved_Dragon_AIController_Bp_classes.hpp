@@ -50,8 +50,8 @@ public:
 
 	void OnLosingTargetEvent();
 	void ReceiveTick(float* DeltaSeconds);
-	void ShouldStayOnLand(bool* _return);
-	void IsUsingSpline(bool* _return);
+	void ShouldStayOnLand(bool* Return);
+	void IsUsingSpline(bool* Return);
 	bool CalculateAndSetWonderingAIStateEvent(bool* StateChanged);
 	void OnPossess(class APawn** PossessedPawn);
 	void UserConstructionScript();

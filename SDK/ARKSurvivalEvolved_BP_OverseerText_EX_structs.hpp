@@ -7,9 +7,9 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
+#include "ARKSurvivalEvolved_BP_Emitter_Master_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
-#include "ARKSurvivalEvolved_BP_Emitter_Master_classes.hpp"
 
 namespace sdk
 {

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bog_Spino_Character_BP.Bog_Spino_Character_BP_C
-// 0x0000 (0x2373 - 0x2373)
+// 0x0000 (0x2383 - 0x2383)
 class ABog_Spino_Character_BP_C : public ASpino_Character_BP_C
 {
 public:

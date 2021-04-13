@@ -57,11 +57,11 @@ void ABuff_TekSniper_XRay_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_TekSniper_XRay.Buff_TekSniper_XRay_C.BuffTickClient
-// (Event, NetResponse, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekSniper_XRay_C::BuffTickClient(float* DeltaTime)
+void ABuff_TekSniper_XRay_C::STATIC_BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekSniper_XRay.Buff_TekSniper_XRay_C.BuffTickClient");
 
@@ -69,6 +69,7 @@ void ABuff_TekSniper_XRay_C::BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

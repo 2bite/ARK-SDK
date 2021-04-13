@@ -7,8 +7,8 @@
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_Buff_Base_classes.hpp"
 #include "ARKSurvivalEvolved_E_StegoBackplateMode_classes.hpp"
+#include "ARKSurvivalEvolved_Buff_Base_classes.hpp"
 #include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 
 namespace sdk

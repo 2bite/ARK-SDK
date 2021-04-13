@@ -31,7 +31,7 @@ public:
 
 	void GetActorsToIgnoreOnRaycast(class AActor** emitterActor, TArray<class AActor*>* ActorsToIgnore);
 	void GetEmitterActor(class AActor** emitterActor);
-	void Get_Charge_Variable(TEnumAsByte<E_ChargeVariableNames>* VariableName, float* fValue, double* dValue, bool* bBValue, int* ivalue);
+	void Get_Charge_Variable(TEnumAsByte<E_ChargeVariableNames>* VariableName, float* fValue, double* dValue, bool* bBValue, int* iValue);
 	void CanEmitCharge(bool* canEmit);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_Wire_Flex.PrimalItemStructure_Wire_Flex_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_Wire_Flex_C : public UPrimalItemStructure_BaseStonePipe_C
 {
 public:

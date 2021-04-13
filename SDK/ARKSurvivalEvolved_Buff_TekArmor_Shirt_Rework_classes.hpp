@@ -128,7 +128,7 @@ public:
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0D11(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData13[0x6];                                       // 0x0D12(0x0006) MISSED OFFSET
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x0D18(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	TEnumAsByte<E_TekThrusterState>                    K2Node_CustomEvent_NewState;                              // 0x0D20(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<E_TekThrusterState>                    K2Node_CustomEvent_newState;                              // 0x0D20(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum_CmpSuccess;                             // 0x0D21(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData14[0x6];                                       // 0x0D22(0x0006) MISSED OFFSET
 	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x0D28(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -173,6 +173,7 @@ public:
 	}
 
 
+	void STATIC_SetJetpackOffset(const struct UObject_FTransform& AddTransform, bool IsUnequip);
 	void OnInputsPrevented();
 	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
 	void Clamp_LocationZ();
@@ -197,7 +198,7 @@ public:
 	void IsPlayerUnderWater(bool* Result);
 	void NetSetCurrentThrusterState(TEnumAsByte<E_TekThrusterState> NewState);
 	void BuffTickServer(float* DeltaTime);
-	void STATIC_JetpackBoostClient();
+	void JetpackBoostClient();
 	void JetpackBoost_Server();
 	void Update_Thruster_Impulse();
 	void IsThrusterActive(bool* Result);
@@ -207,13 +208,13 @@ public:
 	void Client_SetThrusterState(TEnumAsByte<E_TekThrusterState> NewState);
 	void JetpackBoost_Start();
 	void UserConstructionScript();
-	void InpActEvt_Jump_K2Node_InputActionEvent_86();
-	void InpActEvt_Jump_K2Node_InputActionEvent_85();
-	void InpActEvt_Run_K2Node_InputActionEvent_84();
-	void InpActEvt_Run_K2Node_InputActionEvent_83();
-	void InpActEvt_RunToggle_K2Node_InputActionEvent_82();
-	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_43();
-	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_42();
+	void InpActEvt_Jump_K2Node_InputActionEvent_82();
+	void InpActEvt_Jump_K2Node_InputActionEvent_81();
+	void InpActEvt_Run_K2Node_InputActionEvent_80();
+	void InpActEvt_Run_K2Node_InputActionEvent_79();
+	void InpActEvt_RunToggle_K2Node_InputActionEvent_78();
+	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_39();
+	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_38();
 	void OnPlayerJump_Pressed();
 	void OnPlayerJump_Released();
 	void Server_SetThrusterState(TEnumAsByte<E_TekThrusterState> NewState);

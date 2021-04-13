@@ -43,7 +43,7 @@ struct ABaryonyx_Character_BP_C_BlueprintCanRiderAttack_Params
 struct ABaryonyx_Character_BP_C_BaryCanAttack_Params
 {
 	int                                                AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Baryonyx_Character_BP.Baryonyx_Character_BP_C.BlueprintCanAttack

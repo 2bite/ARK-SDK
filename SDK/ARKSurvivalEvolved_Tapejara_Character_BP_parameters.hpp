@@ -130,7 +130,7 @@ struct ATapejara_Character_BP_C_ProcessLatching_Params
 struct ATapejara_Character_BP_C_TryLatch_Params
 {
 	struct FVector                                     Offset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               BackwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.UserConstructionScript
@@ -138,30 +138,30 @@ struct ATapejara_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_158
-struct ATapejara_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_158_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_154
+struct ATapejara_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_154_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_157
-struct ATapejara_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_157_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_153
+struct ATapejara_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_153_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_156
-struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_156_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_152
+struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_152_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_155
-struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_155_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_151
+struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_151_Params
 {
 };
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.Latch
 struct ATapejara_Character_BP_C_Latch_Params
 {
-	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               BackwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.ReceiveTick

@@ -147,7 +147,7 @@ public:
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x0DB8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsTimeSince_ReturnValue;                         // 0x0DC0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData25[0x3];                                       // 0x0DC1(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_delay;                                 // 0x0DC4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_Delay;                                 // 0x0DC4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x0DC8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x0DD0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_NotEqual_ClassClass_ReturnValue;                 // 0x0DD1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -196,15 +196,15 @@ public:
 	void ProcessFearValue(float Value, class APrimalCharacter* forCharacter, bool canSwitch, bool useClientIndex, float* finalValue);
 	void Max_Courage_ActionsClient();
 	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
-	struct FStatusValueModifierDescription STATIC_GetBuffDescription();
+	struct FStatusValueModifierDescription GetBuffDescription();
 	void Add_Fear_Or_CourageClient(float amountToAdd, bool isFear, class APrimalCharacter* fearCauser, bool switchFromFearToCourageIfNeeded, bool isFromRoar);
-	void IsAtMax_f(class APrimalCharacter* Character, bool useClientIndex, bool* Courage, bool* fear);
+	void IsAtMax_f(class APrimalCharacter* Character, bool useClientIndex, bool* courage, bool* fear);
 	void GetTeamColorForParticles(struct FVector* finalColor);
 	void SetMultiplier(TEnumAsByte<EPrimalCharacterStatusValue> statusValue, int index, bool isFear);
 	void isSameTeamOrAlly(int secondTargetingTeam, int firstTargetingTeamOverride, bool* isAllyOrSameTeam);
 	void CanAddFearOrCourage(bool isFear, bool* canAdd);
 	void UpdateFleePoint();
-	void Send_HUDMessage_to_Rider_From_Server(const class FString& messageID, float Duration);
+	void STATIC_Send_HUDMessage_to_Rider_From_Server(const class FString& messageID, float Duration);
 	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
 	void ReduceTerror(float amount);
 	void BPInventoryItemUsed(class UObject** InventoryItemObject);
@@ -236,10 +236,10 @@ public:
 	void UserConstructionScript();
 	void DecelerationTimeline__FinishedFunc();
 	void DecelerationTimeline__UpdateFunc();
-	void InpActEvt_Fire_K2Node_InputActionEvent_138();
-	void InpActEvt_Targeting_K2Node_InputActionEvent_137();
-	void InpActEvt_Crouch_K2Node_InputActionEvent_136();
-	void InpActEvt_Jump_K2Node_InputActionEvent_135();
+	void InpActEvt_Fire_K2Node_InputActionEvent_134();
+	void InpActEvt_Targeting_K2Node_InputActionEvent_133();
+	void InpActEvt_Crouch_K2Node_InputActionEvent_132();
+	void InpActEvt_Jump_K2Node_InputActionEvent_131();
 	void ReceiveBeginPlay();
 	void InitializeNonDedi();
 	void Decelerate(float Duration);

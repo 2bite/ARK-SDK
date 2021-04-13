@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_CakeSlice.PrimalItemResource_CakeSlice_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemResource_CakeSlice_C : public UPrimalItemResource_PeltOrHair_C
 {
 public:

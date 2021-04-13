@@ -115,7 +115,7 @@ struct ADinoCharacter_BP_Zipline_C_ZiplineNonDediLogic_Params
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.SetNonDediTimerTickEveryFrame
 struct ADinoCharacter_BP_Zipline_C_SetNonDediTimerTickEveryFrame_Params
 {
-	bool                                               TickEveryFrame;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               tickEveryFrame;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.GetClosestLocationToPointFromArray
@@ -130,7 +130,7 @@ struct ADinoCharacter_BP_Zipline_C_GetClosestLocationToPointFromArray_Params
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.SetServerTimerTickEveryFrame
 struct ADinoCharacter_BP_Zipline_C_SetServerTimerTickEveryFrame_Params
 {
-	bool                                               TickEveryFrame;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               tickEveryFrame;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.CreateZiplineBuffAndStartRiding
@@ -161,10 +161,10 @@ struct ADinoCharacter_BP_Zipline_C_GetClosestPointOnLine_Params
 // Function DinoCharacter_BP_Zipline.DinoCharacter_BP_Zipline_C.TryAttachingToZipline
 struct ADinoCharacter_BP_Zipline_C_TryAttachingToZipline_Params
 {
-	class AZipline_Anchor_C*                           overrideAnchor;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class AZipline_Anchor_C*                           OverrideAnchor;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     overrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              overrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     OverrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     overrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

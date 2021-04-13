@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DungBeetle_Character_BP_Aberrant.DungBeetle_Character_BP_Aberrant_C
-// 0x0000 (0x21B9 - 0x21B9)
+// 0x0000 (0x21C9 - 0x21C9)
 class ADungBeetle_Character_BP_Aberrant_C : public ADungBeetle_Character_BP_C
 {
 public:

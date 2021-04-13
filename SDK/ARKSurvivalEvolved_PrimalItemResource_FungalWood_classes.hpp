@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_FungalWood.PrimalItemResource_FungalWood_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemResource_FungalWood_C : public UPrimalItemResource_Wood_C
 {
 public:

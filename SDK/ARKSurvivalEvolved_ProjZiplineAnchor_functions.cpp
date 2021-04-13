@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, HasOutParms, DLLImport, BlueprintPure, Const)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjZiplineAnchor_C::CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* _return)
+void AProjZiplineAnchor_C::STATIC_CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall");
 
@@ -34,8 +34,8 @@ void AProjZiplineAnchor_C::CheckForInvisibleWall(const struct FVector& Start, co
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -65,7 +65,7 @@ void AProjZiplineAnchor_C::HitValidForAttachment(struct FHitResult* Hit, bool* V
 
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.SpawnBreakEmitter
-// (NetRequest, Native, NetMulticast, MulticastDelegate, HasOutParms, DLLImport, BlueprintPure, Const)
+// (NetReliable, Native, Event, NetResponse, Public, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 
 void AProjZiplineAnchor_C::SpawnBreakEmitter()
 {

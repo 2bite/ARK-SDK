@@ -33,9 +33,9 @@ void ADirewolf_Character_BP_C::RidingTick(float* DeltaSeconds)
 
 
 // Function Direwolf_Character_BP.Direwolf_Character_BP_C.AddHowlCooldownBuff
-// (Native, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Native, NetResponse, Static, Public, Private, HasOutParms, NetClient)
 
-void ADirewolf_Character_BP_C::AddHowlCooldownBuff()
+void ADirewolf_Character_BP_C::STATIC_AddHowlCooldownBuff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Direwolf_Character_BP.Direwolf_Character_BP_C.AddHowlCooldownBuff");
 
@@ -177,9 +177,9 @@ void ADirewolf_Character_BP_C::DoSniffAbility()
 // ()
 // Parameters:
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          FoundDinos                     (Parm, OutParm, ZeroConstructor)
+// TArray<class AActor*>          foundDinos                     (Parm, OutParm, ZeroConstructor)
 
-void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*>* FoundDinos)
+void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*>* foundDinos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Direwolf_Character_BP.Direwolf_Character_BP_C.GetHiddenDinos");
 
@@ -192,8 +192,8 @@ void ADirewolf_Character_BP_C::GetHiddenDinos(float Radius, TArray<class AActor*
 
 	fn->FunctionFlags = flags;
 
-	if (FoundDinos != nullptr)
-		*FoundDinos = params.FoundDinos;
+	if (foundDinos != nullptr)
+		*foundDinos = params.foundDinos;
 }
 
 

@@ -30,11 +30,11 @@ void ATransGPSCharge_C::BPPostLoadedFromSaveGame()
 
 
 // Function TransGPSCharge.TransGPSCharge_C.BPPlacedStructure
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATransGPSCharge_C::STATIC_BPPlacedStructure(class APlayerController** ForPC)
+void ATransGPSCharge_C::BPPlacedStructure(class APlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TransGPSCharge.TransGPSCharge_C.BPPlacedStructure");
 

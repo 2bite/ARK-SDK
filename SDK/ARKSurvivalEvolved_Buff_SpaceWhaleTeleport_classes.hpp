@@ -94,9 +94,9 @@ public:
 	void BPDeactivated(class AActor** ForInstigator);
 	void ReceiveDestroyed();
 	void BuffTickClient(float* DeltaTime);
-	void STATIC_BPSetupForInstigator(class AActor** ForInstigator);
+	void BPSetupForInstigator(class AActor** ForInstigator);
 	bool BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser);
-	bool BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
+	bool STATIC_BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode);
 	void STATIC_BPOnOwnerMassTeleportEvent(TEnumAsByte<EMassTeleportState>* EventState, class APrimalCharacter** TeleportInitiatedByChar);
 	void UserConstructionScript();
 	void MultiHyperdriveEffect(class USceneComponent* MeshComp, const struct FVector& Start, const struct FVector& End);

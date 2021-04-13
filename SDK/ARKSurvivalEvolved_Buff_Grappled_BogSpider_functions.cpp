@@ -338,14 +338,14 @@ bool ABuff_Grappled_BogSpider_C::CanSyncGrappleTetherLengths()
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.BPOverrideCharacterNewFallVelocity
-// (NetReliable, NetRequest, Exec, Native, Event, Static, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Private, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 InitialVelocity                (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 Gravity                        (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ABuff_Grappled_BogSpider_C::STATIC_BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity)
+struct FVector ABuff_Grappled_BogSpider_C::BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.BPOverrideCharacterNewFallVelocity");
 
@@ -353,7 +353,6 @@ struct FVector ABuff_Grappled_BogSpider_C::STATIC_BPOverrideCharacterNewFallVelo
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -369,11 +368,11 @@ struct FVector ABuff_Grappled_BogSpider_C::STATIC_BPOverrideCharacterNewFallVelo
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.OnSwingTracePredictedHitFound
-// (NetReliable, Exec, Event, NetResponse, Static, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Event, Private, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 AtHitLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Grappled_BogSpider_C::STATIC_OnSwingTracePredictedHitFound(const struct FVector& AtHitLocation)
+void ABuff_Grappled_BogSpider_C::OnSwingTracePredictedHitFound(const struct FVector& AtHitLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.OnSwingTracePredictedHitFound");
 
@@ -381,6 +380,7 @@ void ABuff_Grappled_BogSpider_C::STATIC_OnSwingTracePredictedHitFound(const stru
 	params.AtHitLocation = AtHitLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -775,19 +775,18 @@ void ABuff_Grappled_BogSpider_C::AddAntiGravityPullVelocity(class APrimalCharact
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.CheckForAutoBreakTether
-// (NetReliable, Exec, Native, NetResponse, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Event, Static, NetMulticast, Private, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FGrappleTether          CheckTether                    (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_Grappled_BogSpider_C::CheckForAutoBreakTether(struct FGrappleTether* CheckTether)
+bool ABuff_Grappled_BogSpider_C::STATIC_CheckForAutoBreakTether(struct FGrappleTether* CheckTether)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.CheckForAutoBreakTether");
 
 	ABuff_Grappled_BogSpider_C_CheckForAutoBreakTether_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -847,12 +846,12 @@ struct FVector ABuff_Grappled_BogSpider_C::GetCurrentTetherMoveDir(struct FGrapp
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.ApplyTetherMoveVelocity
-// (NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Static, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 CurrentVelocity                (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Grappled_BogSpider_C::ApplyTetherMoveVelocity(float* DeltaTime, struct FVector* CurrentVelocity)
+void ABuff_Grappled_BogSpider_C::STATIC_ApplyTetherMoveVelocity(float* DeltaTime, struct FVector* CurrentVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.ApplyTetherMoveVelocity");
 
@@ -860,6 +859,7 @@ void ABuff_Grappled_BogSpider_C::ApplyTetherMoveVelocity(float* DeltaTime, struc
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -999,14 +999,14 @@ float ABuff_Grappled_BogSpider_C::GetTetherBreakLimit_OwnerPastCurrentLengthDelt
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.ShouldTetherBreak
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, NetMulticast, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FGrappleTether          ForTether                      (Parm, OutParm, ReferenceParm)
 // class APrimalCharacter**       forChar                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OverrideBreakPastDist          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_Grappled_BogSpider_C::STATIC_ShouldTetherBreak(class APrimalCharacter** forChar, float* OverrideBreakPastDist, struct FGrappleTether* ForTether)
+bool ABuff_Grappled_BogSpider_C::ShouldTetherBreak(class APrimalCharacter** forChar, float* OverrideBreakPastDist, struct FGrappleTether* ForTether)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.ShouldTetherBreak");
 
@@ -1015,7 +1015,6 @@ bool ABuff_Grappled_BogSpider_C::STATIC_ShouldTetherBreak(class APrimalCharacter
 	params.OverrideBreakPastDist = OverrideBreakPastDist;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1056,13 +1055,13 @@ void ABuff_Grappled_BogSpider_C::IsSpiderTryingToSlingshot(const struct FVector&
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.SimulateTautTetherForces
-// (NetReliable, NetRequest, Native, NetResponse, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (Event, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 WithCharVelocity               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         LastGravityZ                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Grappled_BogSpider_C::SimulateTautTetherForces(float* DeltaTime, float* LastGravityZ, struct FVector* WithCharVelocity)
+void ABuff_Grappled_BogSpider_C::STATIC_SimulateTautTetherForces(float* DeltaTime, float* LastGravityZ, struct FVector* WithCharVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.SimulateTautTetherForces");
 
@@ -1071,7 +1070,6 @@ void ABuff_Grappled_BogSpider_C::SimulateTautTetherForces(float* DeltaTime, floa
 	params.LastGravityZ = LastGravityZ;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1106,7 +1104,7 @@ float ABuff_Grappled_BogSpider_C::BPGetGravityZScale(float* currentScale)
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.IsTetherLeftWeb
-// (NetRequest, Native, Event, Static, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FGrappleTether          Tether                         (Parm, OutParm, ReferenceParm)
 // bool                           bIsWebTether                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1135,12 +1133,12 @@ void ABuff_Grappled_BogSpider_C::STATIC_IsTetherLeftWeb(struct FGrappleTether* T
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.WhichWebIsOnRightSideOfView
-// (NetReliable, NetRequest, NetResponse, Static, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FRotator                withViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bLeft                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Grappled_BogSpider_C::STATIC_WhichWebIsOnRightSideOfView(const struct FRotator& withViewRot, bool* bLeft)
+void ABuff_Grappled_BogSpider_C::WhichWebIsOnRightSideOfView(const struct FRotator& withViewRot, bool* bLeft)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.WhichWebIsOnRightSideOfView");
 
@@ -1205,18 +1203,17 @@ TEnumAsByte<EGrappleState> ABuff_Grappled_BogSpider_C::GetCurrentGrappleState(st
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.CanRotateCharVelocity
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Event, Static, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Grappled_BogSpider_C::CanRotateCharVelocity(bool* Result)
+void ABuff_Grappled_BogSpider_C::STATIC_CanRotateCharVelocity(bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.CanRotateCharVelocity");
 
 	ABuff_Grappled_BogSpider_C_CanRotateCharVelocity_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1296,12 +1293,12 @@ void ABuff_Grappled_BogSpider_C::OnGrappledPrimalChar(class APrimalCharacter** G
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.IsValidSwingHit
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FHitResult              CheckHit                       (Parm, OutParm, ReferenceParm)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Grappled_BogSpider_C::STATIC_IsValidSwingHit(struct FHitResult* CheckHit, bool* IsValid)
+void ABuff_Grappled_BogSpider_C::IsValidSwingHit(struct FHitResult* CheckHit, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.IsValidSwingHit");
 
@@ -1384,13 +1381,13 @@ void ABuff_Grappled_BogSpider_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.CheckForSwingCollision
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 AtProjectedLocation            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           foundHit                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              swingHit                       (Parm, OutParm)
 
-void ABuff_Grappled_BogSpider_C::CheckForSwingCollision(const struct FVector& AtProjectedLocation, bool* foundHit, struct FHitResult* swingHit)
+void ABuff_Grappled_BogSpider_C::STATIC_CheckForSwingCollision(const struct FVector& AtProjectedLocation, bool* foundHit, struct FHitResult* swingHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.CheckForSwingCollision");
 
@@ -1398,7 +1395,6 @@ void ABuff_Grappled_BogSpider_C::CheckForSwingCollision(const struct FVector& At
 	params.AtProjectedLocation = AtProjectedLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1432,9 +1428,9 @@ void ABuff_Grappled_BogSpider_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.Tick_TraceForSwingCollisions
-// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Public, Protected, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 
-void ABuff_Grappled_BogSpider_C::STATIC_Tick_TraceForSwingCollisions()
+void ABuff_Grappled_BogSpider_C::Tick_TraceForSwingCollisions()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.Tick_TraceForSwingCollisions");
 
@@ -1553,14 +1549,14 @@ bool ABuff_Grappled_BogSpider_C::CanChangeGrappleState(unsigned char* DesiredGra
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.ShouldForceOwnerIntoFallingState
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (Event, NetMulticast, Public, Protected, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FGrappleTether          ForTether                      (Parm, OutParm, ReferenceParm)
 // struct FVector                 WithOwnerVelocity              (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // TEnumAsByte<EMovementMode>*    CheckMovementModeOverride      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_Grappled_BogSpider_C::STATIC_ShouldForceOwnerIntoFallingState(TEnumAsByte<EMovementMode>* CheckMovementModeOverride, struct FGrappleTether* ForTether, struct FVector* WithOwnerVelocity)
+bool ABuff_Grappled_BogSpider_C::ShouldForceOwnerIntoFallingState(TEnumAsByte<EMovementMode>* CheckMovementModeOverride, struct FGrappleTether* ForTether, struct FVector* WithOwnerVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.ShouldForceOwnerIntoFallingState");
 
@@ -1568,7 +1564,6 @@ bool ABuff_Grappled_BogSpider_C::STATIC_ShouldForceOwnerIntoFallingState(TEnumAs
 	params.CheckMovementModeOverride = CheckMovementModeOverride;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1584,9 +1579,9 @@ bool ABuff_Grappled_BogSpider_C::STATIC_ShouldForceOwnerIntoFallingState(TEnumAs
 
 
 // Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.OnGrappleTethersChanged
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 
-void ABuff_Grappled_BogSpider_C::STATIC_OnGrappleTethersChanged()
+void ABuff_Grappled_BogSpider_C::OnGrappleTethersChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Grappled_BogSpider.Buff_Grappled_BogSpider_C.OnGrappleTethersChanged");
 

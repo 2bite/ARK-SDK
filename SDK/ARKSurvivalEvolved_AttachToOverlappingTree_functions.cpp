@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function AttachToOverlappingTree.AttachToOverlappingTree_C.ReceiveExecute
-// (NetReliable, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, NetClient, Const)
+// (NetReliable, NetRequest, Event, NetResponse, Public, Private, Delegate)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UAttachToOverlappingTree_C::ReceiveExecute(class AActor** OwnerActor)
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

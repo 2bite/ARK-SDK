@@ -133,9 +133,9 @@ bool AMantis_Character_BP_C::BPCanNotifyTeamAggroAI(class APrimalDinoCharacter**
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.Start Leap Attack
-// (Exec, Event, Static, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 
-void AMantis_Character_BP_C::STATIC_Start_Leap_Attack()
+void AMantis_Character_BP_C::Start_Leap_Attack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mantis_Character_BP.Mantis_Character_BP_C.Start Leap Attack");
 
@@ -150,9 +150,9 @@ void AMantis_Character_BP_C::STATIC_Start_Leap_Attack()
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.CheckLeapAttackEnd
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 
-void AMantis_Character_BP_C::STATIC_CheckLeapAttackEnd()
+void AMantis_Character_BP_C::CheckLeapAttackEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mantis_Character_BP.Mantis_Character_BP_C.CheckLeapAttackEnd");
 
@@ -326,7 +326,7 @@ void AMantis_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custom
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -335,7 +335,7 @@ void AMantis_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custom
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AMantis_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AMantis_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mantis_Character_BP.Mantis_Character_BP_C.BlueprintAdjustOutputDamage");
 

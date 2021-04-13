@@ -454,7 +454,7 @@ public:
 	void BPPostLoadedFromSaveGame();
 	void GetBasedWeight(float* Weight);
 	void HasClearance(bool* Clearance);
-	void Set_Optimal_Cruising_Altitude();
+	void STATIC_Set_Optimal_Cruising_Altitude();
 	void ChangeBalloonSize(float Delta);
 	class FString BPOverrideCantBuildReasonString(int* CantBuildReason);
 	int BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);
@@ -462,13 +462,13 @@ public:
 	void STATIC_CheckOptimalZDistance();
 	void GetInventoryWeight(float* InvWeight);
 	void SetBalloonSpeed();
-	void STATIC_CalcLandingVector(int coord1, int coord2);
+	void CalcLandingVector(int coord1, int coord2);
 	void OnRep_LocationString();
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void ReceivePointDamage(float* Damage, class UDamageType** DamageType, struct FVector* HitLocation, struct FVector* HitNormal, class UPrimitiveComponent** HitComponent, struct FName* BoneName, struct FVector* ShotFromDirection, class AController** InstigatedBy, class AActor** DamageCauser);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void DeployItemBalloon();
 	void BalloonLiftoff();

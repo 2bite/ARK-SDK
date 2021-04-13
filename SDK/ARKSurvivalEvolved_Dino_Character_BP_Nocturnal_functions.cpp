@@ -241,7 +241,7 @@ void ADino_Character_BP_Nocturnal_C::IsTamedFollowing(bool* Result)
 
 
 // Function Dino_Character_BP_Nocturnal.Dino_Character_BP_Nocturnal_C.BPGetMultiUseEntries
-// (NetReliable, Exec, NetResponse, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

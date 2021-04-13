@@ -138,10 +138,10 @@ public:
 
 
 	void ReceiveBeginPlay();
-	void IsValidHairCutTarget(class AActor* PotentialTarget, bool* bIsValid);
+	void STATIC_IsValidHairCutTarget(class AActor* PotentialTarget, bool* bIsValid);
 	void OpenUI(class AShooterCharacter* TheTarget);
 	void GiveHairLocks(int NumLocks);
-	void STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	struct FWeaponAnim BPGetSelectedMeleeAttackAnim();
 	void UserConstructionScript();
 	void InitializeUI(class UUI_Hairstyle* TheUI);

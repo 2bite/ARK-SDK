@@ -14,6 +14,11 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.SetDynamicMaterialProperties
+struct USKComponent_SkinAttachment_ChibiDino_C_SetDynamicMaterialProperties_Params
+{
+};
+
 // Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.BPOnComponentDestroyed
 struct USKComponent_SkinAttachment_ChibiDino_C_BPOnComponentDestroyed_Params
 {

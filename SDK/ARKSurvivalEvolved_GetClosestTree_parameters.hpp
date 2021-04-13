@@ -30,7 +30,7 @@ struct UGetClosestTree_C_GetPointOnTreeSurface_Params
 	struct FVector                                     origPoint;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ItemIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      OwnerActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GetClosestTree.GetClosestTree_C.ReceiveExecute

@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CliffPlatform_Base_BP.CliffPlatform_Base_BP_C.BPIsAllowedToBuild
-// (NetReliable, NetRequest, Native, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FPlacementData          OutPlacementData               (Parm, OutParm, ReferenceParm)
 // int*                           CurrentAllowedReason           (Parm, ZeroConstructor, IsPlainOldData)

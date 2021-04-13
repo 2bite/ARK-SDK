@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_EasterBasket_C4.PrimalItemSkin_EasterBasket_C4_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemSkin_EasterBasket_C4_C : public UPrimalItemSkinGeneric_C
 {
 public:

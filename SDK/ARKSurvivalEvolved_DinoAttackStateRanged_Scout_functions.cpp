@@ -35,7 +35,7 @@ void UDinoAttackStateRanged_Scout_C::GetScout(class AScout_Character_BP_C** Resu
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnTickEvent
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintEvent, Const)
+// (Native, Event, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,6 +47,7 @@ void UDinoAttackStateRanged_Scout_C::STATIC_OnTickEvent(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ void UDinoAttackStateRanged_Scout_C::STATIC_OnTickEvent(float* DeltaSeconds)
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnEndEvent
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void UDinoAttackStateRanged_Scout_C::STATIC_OnEndEvent()
 {
@@ -124,7 +125,7 @@ void UDinoAttackStateRanged_Scout_C::Tracker_Impact_Pawn_or_Terrain(class AActor
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.CalculateProjectileImpacts
-// (NetRequest, Exec, Native, Public, Private, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -138,7 +139,6 @@ void UDinoAttackStateRanged_Scout_C::CalculateProjectileImpacts(const struct FVe
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

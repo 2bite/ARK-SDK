@@ -61,11 +61,11 @@ bool AOwl_Character_BP_C::BPOnStartJump()
 
 
 // Function Owl_Character_BP.Owl_Character_BP_C.RidingTick
-// (NetRequest, Exec, Static, NetMulticast, Public, Private, NetClient, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
+void AOwl_Character_BP_C::RidingTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.RidingTick");
 
@@ -73,6 +73,7 @@ void AOwl_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,11 +105,11 @@ bool AOwl_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackIndex)
 
 
 // Function Owl_Character_BP.Owl_Character_BP_C.IsOnOrNearGround
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintEvent, Const)
+// (NetRequest, Exec, Native, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
-// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::STATIC_IsOnOrNearGround(bool* return_value)
+void AOwl_Character_BP_C::STATIC_IsOnOrNearGround(bool* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.IsOnOrNearGround");
 
@@ -121,8 +122,8 @@ void AOwl_Character_BP_C::STATIC_IsOnOrNearGround(bool* return_value)
 
 	fn->FunctionFlags = flags;
 
-	if (return_value != nullptr)
-		*return_value = params.return_value;
+	if (Return_Value != nullptr)
+		*Return_Value = params.Return_Value;
 }
 
 
@@ -155,9 +156,9 @@ void AOwl_Character_BP_C::SetupIceCrashState(bool Enabled, bool ApplyOneShotEnca
 // Function Owl_Character_BP.Owl_Character_BP_C.GetPredatorVisionStaminaDrainPerSecond
 // ()
 // Parameters:
-// float                          return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::GetPredatorVisionStaminaDrainPerSecond(float* return_value)
+void AOwl_Character_BP_C::GetPredatorVisionStaminaDrainPerSecond(float* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.GetPredatorVisionStaminaDrainPerSecond");
 
@@ -169,8 +170,8 @@ void AOwl_Character_BP_C::GetPredatorVisionStaminaDrainPerSecond(float* return_v
 
 	fn->FunctionFlags = flags;
 
-	if (return_value != nullptr)
-		*return_value = params.return_value;
+	if (Return_Value != nullptr)
+		*Return_Value = params.Return_Value;
 }
 
 
@@ -296,9 +297,9 @@ void AOwl_Character_BP_C::UpdateDivingFX()
 // Function Owl_Character_BP.Owl_Character_BP_C.GetEncapsulateStaminaDrainPerSecond
 // ()
 // Parameters:
-// float                          return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AOwl_Character_BP_C::GetEncapsulateStaminaDrainPerSecond(float* return_value)
+void AOwl_Character_BP_C::GetEncapsulateStaminaDrainPerSecond(float* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Owl_Character_BP.Owl_Character_BP_C.GetEncapsulateStaminaDrainPerSecond");
 
@@ -310,8 +311,8 @@ void AOwl_Character_BP_C::GetEncapsulateStaminaDrainPerSecond(float* return_valu
 
 	fn->FunctionFlags = flags;
 
-	if (return_value != nullptr)
-		*return_value = params.return_value;
+	if (Return_Value != nullptr)
+		*Return_Value = params.Return_Value;
 }
 
 

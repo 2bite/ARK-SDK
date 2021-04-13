@@ -61,7 +61,7 @@ public:
 
 
 	void PlaySoundForPlayersOnMission(class USoundBase* Sound);
-	bool BPStaticIsPlayerEligibleForMission(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, class APrimalBuff_MissionData** PlayerMissionData, class FString* OutReason);
+	bool STATIC_BPStaticIsPlayerEligibleForMission(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, class APrimalBuff_MissionData** PlayerMissionData, class FString* OutReason);
 	void BPGetMetaTagsAsInts(TArray<int>* OutTagIds);
 	void UserConstructionScript();
 	void OnMissionPhaseStarted(struct FName* OldPhase, struct FName* NewPhase);

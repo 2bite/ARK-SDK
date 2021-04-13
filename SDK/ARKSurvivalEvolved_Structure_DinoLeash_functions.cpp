@@ -12,6 +12,69 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Structure_DinoLeash.Structure_DinoLeash_C.BPServerHandleNetExecCommand
+// ()
+// Parameters:
+// class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AStructure_DinoLeash_C::BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.BPServerHandleNetExecCommand");
+
+	AStructure_DinoLeash_C_BPServerHandleNetExecCommand_Params params;
+	params.FromPC = FromPC;
+	params.CommandName = CommandName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ExecParams != nullptr)
+		*ExecParams = params.ExecParams;
+
+	return params.ReturnValue;
+}
+
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.CheckTeamAndSetVisualVisibility
+// ()
+
+void AStructure_DinoLeash_C::CheckTeamAndSetVisualVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.CheckTeamAndSetVisualVisibility");
+
+	AStructure_DinoLeash_C_CheckTeamAndSetVisualVisibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.OnRep_ShowArea
+// ()
+
+void AStructure_DinoLeash_C::OnRep_ShowArea()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.OnRep_ShowArea");
+
+	AStructure_DinoLeash_C_OnRep_ShowArea_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Structure_DinoLeash.Structure_DinoLeash_C.UpdateTetherAfterLoad
 // ()
 
@@ -186,13 +249,13 @@ void AStructure_DinoLeash_C::BPContainerActivated()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BlueprintDrawPreviewHUD
-// (NetReliable, Exec, Event, Public, Protected, NetClient, BlueprintEvent, Const)
+// (Exec, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_DinoLeash_C::BlueprintDrawPreviewHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void AStructure_DinoLeash_C::STATIC_BlueprintDrawPreviewHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.BlueprintDrawPreviewHUD");
 
@@ -291,7 +354,7 @@ void AStructure_DinoLeash_C::OnRep_EffectRadius()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPClientDoMultiUse
-// ()
+// (Exec, Event, NetResponse, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -422,13 +485,13 @@ bool AStructure_DinoLeash_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPGetMultiUseEntries
-// (NetReliable, Native, Event, Static, Public, Protected, NetClient, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructure_DinoLeash_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructure_DinoLeash_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.BPGetMultiUseEntries");
 
@@ -573,6 +636,23 @@ void AStructure_DinoLeash_C::BndEvt__Sphere1_K2Node_ComponentBoundEvent_177_Comp
 	params.OtherActor = OtherActor;
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_DinoLeash.Structure_DinoLeash_C.ServerRequest_ToggleShowarea
+// ()
+
+void AStructure_DinoLeash_C::ServerRequest_ToggleShowarea()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.ServerRequest_ToggleShowarea");
+
+	AStructure_DinoLeash_C_ServerRequest_ToggleShowarea_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -12,6 +12,28 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.IsPlayingExplorerNote
+// ()
+// Parameters:
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemSkin_MiniHLNA_C::IsPlayingExplorerNote(bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.IsPlayingExplorerNote");
+
+	UPrimalItemSkin_MiniHLNA_C_IsPlayingExplorerNote_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
 // Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.hide skin
 // ()
 
@@ -30,7 +52,7 @@ void UPrimalItemSkin_MiniHLNA_C::hide_skin()
 
 
 // Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.BPGetItemDescription
-// (NetReliable, NetRequest, Native, Event, NetResponse, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Exec, Native, NetResponse, Public, Private, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)

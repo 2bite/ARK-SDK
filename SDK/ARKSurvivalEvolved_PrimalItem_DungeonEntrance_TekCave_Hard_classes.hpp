@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_DungeonEntrance_TekCave_Hard.PrimalItem_DungeonEntrance_TekCave_Hard_C
-// 0x0000 (0x09FC - 0x09FC)
+// 0x0000 (0x0A0C - 0x0A0C)
 class UPrimalItem_DungeonEntrance_TekCave_Hard_C : public UPrimalItem_DungeonEntrance_Base_C
 {
 public:

@@ -346,14 +346,14 @@ void ATheIsland_C::MakeItRain()
 }
 
 
-// Function TheIsland.TheIsland_C.fogitup
+// Function TheIsland.TheIsland_C.FogItUp
 // ()
 
-void ATheIsland_C::fogitup()
+void ATheIsland_C::FogItUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TheIsland.TheIsland_C.fogitup");
+	static auto fn = UObject::FindObject<UFunction>("Function TheIsland.TheIsland_C.FogItUp");
 
-	ATheIsland_C_fogitup_Params params;
+	ATheIsland_C_FogItUp_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3533,14 +3533,14 @@ void ATheIsland_C::coldfront()
 }
 
 
-// Function TheIsland.TheIsland_C.heatwave
+// Function TheIsland.TheIsland_C.HeatWave
 // ()
 
-void ATheIsland_C::heatwave()
+void ATheIsland_C::HeatWave()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TheIsland.TheIsland_C.heatwave");
+	static auto fn = UObject::FindObject<UFunction>("Function TheIsland.TheIsland_C.HeatWave");
 
-	ATheIsland_C_heatwave_Params params;
+	ATheIsland_C_HeatWave_Params params;
 
 	auto flags = fn->FunctionFlags;
 

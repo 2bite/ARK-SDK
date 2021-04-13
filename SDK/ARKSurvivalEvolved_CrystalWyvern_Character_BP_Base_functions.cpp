@@ -127,7 +127,7 @@ void ACrystalWyvern_Character_BP_Base_C::DelayClearIsTamingFlyingHigh()
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SetIsTamingFlyingHigh
-// (NetReliable, Exec, Native, NetResponse, Static, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, HasOutParms, NetClient)
 // Parameters:
 // bool                           IsTamingFlyingHigh             (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -170,7 +170,7 @@ void ACrystalWyvern_Character_BP_Base_C::BPRemoveCharacterSnapshot(class UPrimal
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPApplyCharacterSnapshot
-// (Native, NetResponse, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient)
 // Parameters:
 // class UPrimalItem**            Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 To                             (Parm, ZeroConstructor, IsPlainOldData)
@@ -362,13 +362,13 @@ bool ACrystalWyvern_Character_BP_Base_C::BPTryMultiUse(class APlayerController**
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ACrystalWyvern_Character_BP_Base_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ACrystalWyvern_Character_BP_Base_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPGetMultiUseEntries");
 
@@ -519,15 +519,16 @@ void ACrystalWyvern_Character_BP_Base_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SpawnNestEgg
-// (Exec, Static, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient)
 
-void ACrystalWyvern_Character_BP_Base_C::STATIC_SpawnNestEgg()
+void ACrystalWyvern_Character_BP_Base_C::SpawnNestEgg()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SpawnNestEgg");
 
 	ACrystalWyvern_Character_BP_Base_C_SpawnNestEgg_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

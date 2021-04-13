@@ -36,12 +36,12 @@ public:
 	void ShouldProcessChargeConsumedByReceivers(bool* shouldProcess);
 	void Can_Process_New_Receiver_For_Charge_Consumption(bool* canProcess);
 	void GetEmitterForwardVector(struct FVector* ForwardVector);
-	void STATIC_GetEmitterLineTraceOrigin(class AActor** emitterActor, struct FVector* lineTraceOrigin);
+	void GetEmitterLineTraceOrigin(class AActor** emitterActor, struct FVector* lineTraceOrigin);
 	void Modify_Charge(bool* SetValue, float* amount, bool* multicast, bool* triggerEvent, bool* multicastEvent, float* chargeAdded);
 	void EmitterUpdateChargeOnTimer(float* DeltaTime);
 	void ShouldEnableTimers(bool* tickServer, bool* TickClient);
-	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue);
-	void InitializeEmitter();
+	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue);
+	void STATIC_InitializeEmitter();
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_ChargeEmitterStructure_ChargeLantern(int EntryPoint);
 };

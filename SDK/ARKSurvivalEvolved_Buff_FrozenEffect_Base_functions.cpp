@@ -92,7 +92,7 @@ void ABuff_FrozenEffect_Base_C::ReceiveDestroyed()
 
 
 // Function Buff_FrozenEffect_Base.Buff_FrozenEffect_Base_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -104,6 +104,7 @@ void ABuff_FrozenEffect_Base_C::STATIC_BPSetupForInstigator(class AActor** ForIn
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

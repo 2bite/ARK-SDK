@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SpiderL_Character_BP_Easy.SpiderL_Character_BP_Easy_C
-// 0x0000 (0x21E9 - 0x21E9)
+// 0x0000 (0x21F9 - 0x21F9)
 class ASpiderL_Character_BP_Easy_C : public ASpiderL_Character_BP_C
 {
 public:

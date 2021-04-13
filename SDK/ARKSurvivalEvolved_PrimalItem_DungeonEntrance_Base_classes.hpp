@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_DungeonEntrance_Base.PrimalItem_DungeonEntrance_Base_C
-// 0x000C (0x09FC - 0x09F0)
+// 0x000C (0x0A0C - 0x0A00)
 class UPrimalItem_DungeonEntrance_Base_C : public UPrimalItem_Base_C
 {
 public:
-	class UClass*                                      DungeonArenaManagerClass;                                 // 0x09F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                DungeonDifficultyIndex;                                   // 0x09F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      DungeonArenaManagerClass;                                 // 0x0A00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                DungeonDifficultyIndex;                                   // 0x0A08(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

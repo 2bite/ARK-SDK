@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Volcano_Rex_Character_BP.Volcano_Rex_Character_BP_C
-// 0x0000 (0x2238 - 0x2238)
+// 0x0000 (0x2248 - 0x2248)
 class AVolcano_Rex_Character_BP_C : public ARex_Character_BP_C
 {
 public:

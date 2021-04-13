@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_MulticraftItem_BeetlePoop_Massive.PrimalItemConsumable_MulticraftItem_BeetlePoop_Massive_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_MulticraftItem_BeetlePoop_Massive_C : public UPrimalItemConsumable_MulticraftItem_Base_C
 {
 public:

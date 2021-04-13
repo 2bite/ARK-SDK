@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumableEatable_NoIceBox.PrimalItemConsumableEatable_NoIceBox_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumableEatable_NoIceBox_C : public UPrimalItemConsumableEatable_C
 {
 public:

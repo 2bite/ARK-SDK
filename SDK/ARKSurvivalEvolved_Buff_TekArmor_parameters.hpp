@@ -112,20 +112,20 @@ struct ABuff_TekArmor_C_IsWarping_FOV_Params
 // Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff
 struct ABuff_TekArmor_C_Get_DefaultTekBuff_Params
 {
-	class ABuff_TekArmor_C*                            Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ABuff_TekArmor_C*                            ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer
 struct ABuff_TekArmor_C_GetDefaultPlayer_Params
 {
-	class APrimalCharacter*                            Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Client_Consume Element After Time
 struct ABuff_TekArmor_C_Client_Consume_Element_After_Time_Params
 {
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                elementCost;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ElementCost;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.BPSetupForInstigator
@@ -143,7 +143,7 @@ struct ABuff_TekArmor_C_IsPlayerGrounded_Params
 // Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager
 struct ABuff_TekArmor_C_Get_RefOwningPlayer_Camera_Manager_Params
 {
-	class AShooterPlayerCameraManager*                 Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AShooterPlayerCameraManager*                 ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.UpdatePlayerFOV
@@ -156,7 +156,7 @@ struct ABuff_TekArmor_C_UpdatePlayerFOV_Params
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement
 struct ABuff_TekArmor_C_Get_Ref_Owning_PlayerMovement_Params
 {
-	class UCharacterMovementComponent*                 Movement;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UCharacterMovementComponent*                 movement;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerController
@@ -214,13 +214,13 @@ struct ABuff_TekArmor_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_35
-struct ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_35_Params
+// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33
+struct ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33_Params
 {
 };
 
-// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34
-struct ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34_Params
+// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32
+struct ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32_Params
 {
 };
 

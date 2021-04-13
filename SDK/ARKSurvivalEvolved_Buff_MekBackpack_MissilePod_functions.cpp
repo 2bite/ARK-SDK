@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetBackpackSaveData
-// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
@@ -120,9 +120,9 @@ void ABuff_MekBackpack_MissilePod_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.OnRep_MissilePodMalfunctioned
-// (Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_MekBackpack_MissilePod_C::OnRep_MissilePodMalfunctioned()
+void ABuff_MekBackpack_MissilePod_C::STATIC_OnRep_MissilePodMalfunctioned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.OnRep_MissilePodMalfunctioned");
 
@@ -207,7 +207,7 @@ void ABuff_MekBackpack_MissilePod_C::GetCurrentAmmo(int* AmmoQuantity)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetFireDirection
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Event, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Direction                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -218,7 +218,6 @@ void ABuff_MekBackpack_MissilePod_C::GetFireDirection(struct FVector* Direction)
 	ABuff_MekBackpack_MissilePod_C_GetFireDirection_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

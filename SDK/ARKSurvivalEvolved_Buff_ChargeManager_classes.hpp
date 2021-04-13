@@ -68,7 +68,7 @@ public:
 	void ManagerCustomEvent(class AActor* requestingActor, TEnumAsByte<E_ChargeManagerType> requiresManagerOfType);
 	void ManagerIsBuffOfType(TEnumAsByte<E_ChargeManagerType> typeToCheck, bool* isOfType);
 	void Should_Receive_Charge_FromEmitter(class ABuff_ChargeEmitter_C* Emitter, bool* shouldReceive);
-	void GetChargeVariableExternalManager(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue);
+	void GetChargeVariableExternalManager(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue);
 	void Update_Tick_Delta_Time(float* deltaTimeServer, float* deltaTimeClient);
 	void ForceEnableTimer(bool Enable);
 	void On_Batteries_Charged_Client(float chargeAdded);
@@ -81,14 +81,14 @@ public:
 	void DestroyBuff();
 	void AddChargeToBattery(class UPrimalItem_ChargeBattery_C* battery, bool takeChargeFromBuff, bool MulticastCharge, float chargeToAdd, float* chargeAddedToBattery, float* chargeTakenFromBuff);
 	void Batteries_Logic_Server(float DeltaTime);
-	void Take_Charge_from_Batteries(float AmountToTake, class AActor* inventoryOwner, bool addChargeToBuff, bool updateItem, bool MulticastCharge, float* chargeTaken, int* accessedBatteries);
+	void Take_Charge_from_Batteries(float amountToTake, class AActor* inventoryOwner, bool addChargeToBuff, bool updateItem, bool MulticastCharge, float* chargeTaken, int* accessedBatteries);
 	void Add_Charge_to_Batteries(float amountToAdd, class AActor* inventoryOwner, bool takeChargeFromBuff, bool MulticastCharge, float* chargeAddedToBattery, int* accessedBatteries);
 	void OnBatteryItemChange();
 	void Has_Relevant_Battery_in_Inventory(bool* shouldExecuteLogic);
 	void Check_BatteriesAndUpdate();
-	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue);
-	void SetChargeVariable(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue);
-	void Get_Charge_Variable(TEnumAsByte<E_ChargeVariableNames> VariableName, float* fValue, double* dValue, bool* bBValue, int* ivalue);
+	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue);
+	void SetChargeVariable(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue);
+	void Get_Charge_Variable(TEnumAsByte<E_ChargeVariableNames> VariableName, float* fValue, double* dValue, bool* bBValue, int* iValue);
 	void GetChargeMultiplierForSource(class ABuff_ChargeEmitter_C* buffSource, bool isHarvesting, float* Multiplier);
 	void AddChargeSource(class ABuff_ChargeEmitter_C* Source);
 	void ShouldEnableTimers(bool* tickServer, bool* TickClient);
@@ -99,7 +99,7 @@ public:
 	void IsGettingCharge(bool* IsGettingCharge);
 	void CalculateChargeReceivedPerSecond(float* receivedCharge);
 	void OnChargeEvent();
-	void IsFirstCharge(bool* IsFirstCharge);
+	void isFirstCharge(bool* isFirstCharge);
 	void BuffTickClient(float* DeltaTime);
 	void Modify_Charge(bool SetValue, float amount, bool multicast, bool triggerEvent, bool multicastEvent, float* chargeAdded);
 	void Update_Charge_on_Timer(float DeltaTime);

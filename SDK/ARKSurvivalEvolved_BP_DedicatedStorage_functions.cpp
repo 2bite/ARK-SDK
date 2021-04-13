@@ -58,15 +58,17 @@ void ABP_DedicatedStorage_C::DropAllInventoryOnGround()
 // Parameters:
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsAccessAllowed               (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bForInventoryOnly              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_DedicatedStorage_C::BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed)
+bool ABP_DedicatedStorage_C::BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed, bool* bForInventoryOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPOverrideAllowStructureAccess");
 
 	ABP_DedicatedStorage_C_BPOverrideAllowStructureAccess_Params params;
 	params.ForPC = ForPC;
 	params.bIsAccessAllowed = bIsAccessAllowed;
+	params.bForInventoryOnly = bForInventoryOnly;
 
 	auto flags = fn->FunctionFlags;
 
@@ -386,7 +388,7 @@ bool ABP_DedicatedStorage_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPGetMultiUseEntries
-// (NetRequest, Event, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -400,6 +402,7 @@ TArray<struct FMultiUseEntry> ABP_DedicatedStorage_C::BPGetMultiUseEntries(class
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -276,7 +276,7 @@ public:
 
 
 	void GetNumBatteries(int* numBatteries);
-	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue);
+	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue);
 	void RemoveAllBeamsServer();
 	void IsFreeBeamForActor(class AActor* forActor, bool* isFreeBeam);
 	void BPPrefireAction();
@@ -289,14 +289,14 @@ public:
 	bool BPSecondaryAction();
 	void GetLightMultiplier(float* lightMultiplier);
 	void BPWaitingForPlacement();
-	void CheckIfFireStopped(bool* NewParam);
+	void STATIC_CheckIfFireStopped(bool* NewParam);
 	void UpdateLightEffects();
 	void Update_MaterialsAndParticles(bool* couldUpdateMaterial);
 	void DisableFiringEffects();
 	void InitializeFiringEffects();
 	void DetectChupasAndTriggerBeams();
 	void OnStopFiring();
-	void STATIC_DestroyBeamForTarget(class APrimalCharacter* forCharacter);
+	void DestroyBeamForTarget(class APrimalCharacter* forCharacter);
 	void DestroyBeamVisuals(const struct FSTR_ChargeBeamInfo& beamInfo);
 	void ServerTick();
 	void ClientTick();
@@ -308,7 +308,7 @@ public:
 	void Update_Impact_Particles(const struct FSTR_ChargeBeamInfo& beamInfo, int index);
 	void SetEndPoints(class UParticleSystemComponent* beam, const struct FVector& EndPoint1, const struct FVector& endPoint2, const struct FVector& endPoint3);
 	void ConnectBeamToTarget(const struct FSTR_ChargeBeamInfo& beamInfo, int index);
-	void CreateNewBeam(class AActor* ToActor);
+	void STATIC_CreateNewBeam(class AActor* ToActor);
 	void ShouldRemoveBeamForTarget(class APrimalCharacter* Character, bool* shouldRemove);
 	void RemoveBeamTarget_Server(class AActor* BeamTarget);
 	void UpdateCharge(bool ShouldActivate);
@@ -320,19 +320,19 @@ public:
 	void LightFlickerTimeline__UpdateFunc();
 	void LightTurnOffTimeline__FinishedFunc();
 	void LightTurnOffTimeline__UpdateFunc();
-	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue);
+	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue);
 	void Charge_Variable_Event_Trigger_Multicast_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iVariable);
 	void Interface_Check_for_Batteries_and_Update_Multicast();
 	void Charge_Variable_Event_Double_MulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
 	void ChargeVariableEventDoubleInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
-	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
-	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
+	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
+	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
 	void ReceiveBeginPlay();
 	void OnNewActorAffected_Multicast(class AActor* actorAffected);
 	void DestroyBeamForTarget_Multicast(class APrimalCharacter* Character);
 	void PlayLanternCameraShake();
 	void CreateChargeManager();
-	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue);
+	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue);
 	void FiringBeamLogic();
 	void OnStartFiring();
 	void ChargeVariableEvent_Boolean(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue);

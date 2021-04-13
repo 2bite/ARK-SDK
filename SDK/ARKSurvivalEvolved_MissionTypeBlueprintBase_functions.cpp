@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.PlaySoundForPlayersOnMission
-// (NetReliable, Exec, Event, Protected, HasOutParms, HasDefaults, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USoundBase*              Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void AMissionTypeBlueprintBase_C::PlaySoundForPlayersOnMission(class USoundBase*
 	params.Sound = Sound;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33,7 +34,7 @@ void AMissionTypeBlueprintBase_C::PlaySoundForPlayersOnMission(class USoundBase*
 
 
 // Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.BPStaticIsPlayerEligibleForMission
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter**      PlayerPawn                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -41,7 +42,7 @@ void AMissionTypeBlueprintBase_C::PlaySoundForPlayersOnMission(class USoundBase*
 // class FString                  OutReason                      (Parm, OutParm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AMissionTypeBlueprintBase_C::BPStaticIsPlayerEligibleForMission(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, class APrimalBuff_MissionData** PlayerMissionData, class FString* OutReason)
+bool AMissionTypeBlueprintBase_C::STATIC_BPStaticIsPlayerEligibleForMission(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, class APrimalBuff_MissionData** PlayerMissionData, class FString* OutReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.BPStaticIsPlayerEligibleForMission");
 
@@ -51,6 +52,7 @@ bool AMissionTypeBlueprintBase_C::BPStaticIsPlayerEligibleForMission(class APlay
 	params.PlayerMissionData = PlayerMissionData;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

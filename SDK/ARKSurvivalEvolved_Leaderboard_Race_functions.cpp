@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Leaderboard_Race.Leaderboard_Race_C.BPFormatLeaderboardRow
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Public, Protected, HasOutParms, HasDefaults, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName*                  MissionTag                     (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           index                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLeaderboardRow         DatabaseRow                    (Parm, OutParm, ReferenceParm)
 // struct FLeaderboardDisplayRow  ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FLeaderboardDisplayRow ULeaderboard_Race_C::BPFormatLeaderboardRow(struct FName* MissionTag, int* index, struct FLeaderboardRow* DatabaseRow)
+struct FLeaderboardDisplayRow ULeaderboard_Race_C::STATIC_BPFormatLeaderboardRow(struct FName* MissionTag, int* index, struct FLeaderboardRow* DatabaseRow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Leaderboard_Race.Leaderboard_Race_C.BPFormatLeaderboardRow");
 

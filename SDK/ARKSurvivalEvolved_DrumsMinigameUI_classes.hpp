@@ -186,7 +186,7 @@ public:
 	float Too_Soon_Percent();
 	float TooLatePercent();
 	void Map_Percent_to_Position(float Percent, float* Distance);
-	void STATIC_Set_ProgressBar_Color(class UProgressBar* ProgressBar, const struct FLinearColor& TintColor);
+	void Set_ProgressBar_Color(class UProgressBar* ProgressBar, const struct FLinearColor& TintColor);
 	float Get_Beat_Travel_Percent();
 	void Reset_Beat(bool TryToResetBeatPosition);
 	void Stop_Minigame();

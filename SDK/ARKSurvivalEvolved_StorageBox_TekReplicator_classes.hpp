@@ -31,7 +31,7 @@ public:
 	}
 
 
-	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
+	bool STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
 	void NotifyCraftingFinished();
 	void UserConstructionScript();
 	void ExecuteUbergraph_StorageBox_TekReplicator(int EntryPoint);

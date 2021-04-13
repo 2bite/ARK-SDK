@@ -122,13 +122,13 @@ int AStructureTurretBaseBP_C::BPIsAllowedToBuildEx(int* CurrentAllowedReason, cl
 
 
 // Function StructureTurretBaseBP.StructureTurretBaseBP_C.BlueprintDrawHUD
-// (Net, Exec, NetResponse, NetMulticast, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructureTurretBaseBP_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void AStructureTurretBaseBP_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretBaseBP.StructureTurretBaseBP_C.BlueprintDrawHUD");
 
@@ -138,6 +138,7 @@ void AStructureTurretBaseBP_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* 
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

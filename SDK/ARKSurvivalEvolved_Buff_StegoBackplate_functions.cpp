@@ -44,11 +44,11 @@ float ABuff_StegoBackplate_C::BPAdjustStatusValueModification(class UPrimalChara
 
 
 // Function Buff_StegoBackplate.Buff_StegoBackplate_C.GetBuffDescription
-// (NetRequest, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_StegoBackplate_C::STATIC_GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_StegoBackplate_C::GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_StegoBackplate.Buff_StegoBackplate_C.GetBuffDescription");
 
@@ -65,11 +65,11 @@ struct FStatusValueModifierDescription ABuff_StegoBackplate_C::STATIC_GetBuffDes
 
 
 // Function Buff_StegoBackplate.Buff_StegoBackplate_C.Set Backplate Mode
-// (NetReliable, NetRequest, Native, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient)
 // Parameters:
 // TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_StegoBackplate_C::STATIC_Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode)
+void ABuff_StegoBackplate_C::Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_StegoBackplate.Buff_StegoBackplate_C.Set Backplate Mode");
 

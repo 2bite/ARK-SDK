@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_Tapejara_Tek.PrimalItemArmor_Tapejara_Tek_C
-// 0x0000 (0x0A94 - 0x0A94)
+// 0x0000 (0x0AA4 - 0x0AA4)
 class UPrimalItemArmor_Tapejara_Tek_C : public UPrimalItemArmor_SaddleGeneric_Tek_C
 {
 public:

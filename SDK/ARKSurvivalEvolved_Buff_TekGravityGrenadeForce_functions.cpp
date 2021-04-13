@@ -253,14 +253,14 @@ void ABuff_TekGravityGrenadeForce_C::ForceInstigatorNetUpdate()
 // Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.ClientSyncDesiredFallVelocity
 // ()
 // Parameters:
-// struct FVector                 vel                            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Vel                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekGravityGrenadeForce_C::ClientSyncDesiredFallVelocity(const struct FVector& vel)
+void ABuff_TekGravityGrenadeForce_C::ClientSyncDesiredFallVelocity(const struct FVector& Vel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.ClientSyncDesiredFallVelocity");
 
 	ABuff_TekGravityGrenadeForce_C_ClientSyncDesiredFallVelocity_Params params;
-	params.vel = vel;
+	params.Vel = Vel;
 
 	auto flags = fn->FunctionFlags;
 

@@ -31,7 +31,7 @@ public:
 	bool                                               HasLOS;                                                   // 0x0941(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               HasLOSRight;                                              // 0x0942(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               HasLOSLeft;                                               // 0x0943(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               retVal;                                                   // 0x0944(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               RetVal;                                                   // 0x0944(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x0945(0x0003) MISSED OFFSET
 	double                                             LastTimeFallingVelocityGreaterThanThreshold;              // 0x0948(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	double                                             LastBabySnowballTime;                                     // 0x0950(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -87,11 +87,11 @@ public:
 	void GetBabyFleeLocation(struct FVector* Result);
 	void IsStuckInAir(bool* Result);
 	class AActor* BPUpdateBestTarget(class AActor** bestTarget, bool* dontSetIn, bool* dontSetOut);
-	void DoLOS(const struct FVector& ViewLocationOffset, bool* retVal);
+	void DoLOS(const struct FVector& ViewLocationOffset, bool* RetVal);
 	void Update_LOSChecks();
-	void Get_Percent_Stamina(float* ret);
+	void Get_Percent_Stamina(float* Ret);
 	bool IsFallingToGroundBelowTarget();
-	float STATIC_BPGetTargetingDesire(class AActor** forTarget, float* ForTargetingDesireValue);
+	float BPGetTargetingDesire(class AActor** forTarget, float* ForTargetingDesireValue);
 	void GetPrimalTarget(class APrimalCharacter** Result);
 	bool Target_Is_PreventingFrozen();
 	bool Target_Is_Freezing();
@@ -100,17 +100,17 @@ public:
 	void TookLotsOfDamage(bool* Result);
 	bool TargetIsFrozen();
 	void GetMeleeWeight(float* Result);
-	void STATIC_UpdateMelee();
+	void UpdateMelee();
 	void melee();
 	void UpdateIceBreath();
 	void OnMovementModeChanged(TEnumAsByte<EMovementMode> PrevMovementMode, TEnumAsByte<EMovementMode> NewMovementMode);
-	void STATIC_OnAbilityChanged(TEnumAsByte<EIceJumperAbilities_Enum> NewAbility, TEnumAsByte<EIceJumperAbilities_Enum> PrevAbility, TEnumAsByte<EIceJumperShortDashTypes_Enum> SecondaryAbility);
-	void STATIC_Trigger_RandomWeighted_Ability(TEnumAsByte<EIceJumperAbilities_Enum>* TriggeredAbility, TEnumAsByte<EIceJumperShortDashTypes_Enum>* SecondaryAbility);
+	void OnAbilityChanged(TEnumAsByte<EIceJumperAbilities_Enum> NewAbility, TEnumAsByte<EIceJumperAbilities_Enum> PrevAbility, TEnumAsByte<EIceJumperShortDashTypes_Enum> SecondaryAbility);
+	void Trigger_RandomWeighted_Ability(TEnumAsByte<EIceJumperAbilities_Enum>* TriggeredAbility, TEnumAsByte<EIceJumperShortDashTypes_Enum>* SecondaryAbility);
 	void Get_ShortForward_Dash_Weight(float* Result);
 	void GetSide_DashWeight(bool Left, float* Result);
-	void Get_JumpWeight(float* Result);
+	void STATIC_Get_JumpWeight(float* Result);
 	void IsTarget_Tamed_or_Survivor(bool* Result);
-	void Get_Forward_DashWeight(float* Result);
+	void STATIC_Get_Forward_DashWeight(float* Result);
 	void IsInAir(bool* Result);
 	void STATIC_Get_Ice_BreathWeight(float* Result);
 	void IceBreath();

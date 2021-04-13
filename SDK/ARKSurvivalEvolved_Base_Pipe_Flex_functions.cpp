@@ -57,7 +57,7 @@ void ABase_Pipe_Flex_C::IsAllowedToRefreshConnections(class APlayerController* F
 
 
 // Function Base_Pipe_Flex.Base_Pipe_Flex_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -171,11 +171,11 @@ class FString ABase_Pipe_Flex_C::BPOverrideCantBuildReasonString(int* CantBuildR
 
 
 // Function Base_Pipe_Flex.Base_Pipe_Flex_C.AddSplineMeshComponents
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           UsePreviewMaterial             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABase_Pipe_Flex_C::STATIC_AddSplineMeshComponents(bool UsePreviewMaterial)
+void ABase_Pipe_Flex_C::AddSplineMeshComponents(bool UsePreviewMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Base_Pipe_Flex.Base_Pipe_Flex_C.AddSplineMeshComponents");
 
@@ -183,6 +183,7 @@ void ABase_Pipe_Flex_C::STATIC_AddSplineMeshComponents(bool UsePreviewMaterial)
 	params.UsePreviewMaterial = UsePreviewMaterial;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

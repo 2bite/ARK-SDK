@@ -30,9 +30,9 @@ void AGriffin_Character_BP_C::UpdateDivingFX()
 
 
 // Function Griffin_Character_BP.Griffin_Character_BP_C.OnDiveSwipe
-// (Exec, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient)
 
-void AGriffin_Character_BP_C::OnDiveSwipe()
+void AGriffin_Character_BP_C::STATIC_OnDiveSwipe()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Griffin_Character_BP.Griffin_Character_BP_C.OnDiveSwipe");
 
@@ -170,9 +170,9 @@ void AGriffin_Character_BP_C::Update_Diving_Effects()
 
 
 // Function Griffin_Character_BP.Griffin_Character_BP_C.CheckGroundForWingFlap
-// (NetRequest, Native, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Native, NetResponse, Public, Private, HasOutParms, NetClient)
 
-void AGriffin_Character_BP_C::STATIC_CheckGroundForWingFlap()
+void AGriffin_Character_BP_C::CheckGroundForWingFlap()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Griffin_Character_BP.Griffin_Character_BP_C.CheckGroundForWingFlap");
 

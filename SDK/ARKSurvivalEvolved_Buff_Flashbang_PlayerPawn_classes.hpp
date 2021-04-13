@@ -102,11 +102,11 @@ public:
 	void BPSetupForInstigator(class AActor** ForInstigator);
 	void BPPreSetupForInstigator(class AActor** ForInstigator);
 	void ShouldStartFading(bool* ShouldFade);
-	void STATIC_IsNearbyStructure(int CheckIndex, float IndexOffset, bool* StructureInBetween);
+	void IsNearbyStructure(int CheckIndex, float IndexOffset, bool* StructureInBetween);
 	void CalculateIntensityAverage(float Exposure, float Distance, float ViewingAngle, float* Average);
 	void CalculateWeightedIntensityAverage(float Exposure, float Distance, float ViewingAngle, float* Average);
-	void Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* retVal);
-	void Get_NormalizedViewing_Angle(const struct FVector& v1, const struct FVector& v2, float* RetValue);
+	void Get_Normalized_Distance(class AActor* Actor1, class AActor* Actor2, float* RetVal);
+	void Get_NormalizedViewing_Angle(const struct FVector& v1, const struct FVector& v2, float* retValue);
 	void GetNormalizedExposure(float* Value);
 	void UserConstructionScript();
 	void BuffTickClient(float* DeltaTime);

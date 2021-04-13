@@ -74,11 +74,11 @@ bool UDKaijuFlock_AttackAIState_Slap_C::BPShouldEndAttack()
 
 
 // Function DKaijuFlock_AttackAIState_Slap.DKaijuFlock_AttackAIState_Slap_C.OnTickEvent
-// (MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDKaijuFlock_AttackAIState_Slap_C::OnTickEvent(float* DeltaSeconds)
+void UDKaijuFlock_AttackAIState_Slap_C::STATIC_OnTickEvent(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DKaijuFlock_AttackAIState_Slap.DKaijuFlock_AttackAIState_Slap_C.OnTickEvent");
 
@@ -86,6 +86,7 @@ void UDKaijuFlock_AttackAIState_Slap_C::OnTickEvent(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

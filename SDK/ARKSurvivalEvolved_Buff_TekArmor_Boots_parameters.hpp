@@ -22,8 +22,8 @@ struct ABuff_TekArmor_Boots_C_OnRep_IsParticleActive_Params
 // Function Buff_TekArmor_Boots.Buff_TekArmor_Boots_C.IsOnSteepSlope
 struct ABuff_TekArmor_Boots_C_IsOnSteepSlope_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SurfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     surfaceNormal;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Boots.Buff_TekArmor_Boots_C.OnRep_NewWalkableZIsActive

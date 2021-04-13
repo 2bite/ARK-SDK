@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_CrystalWyvern_Fertilized_Bloodfall.PrimalItemConsumable_Egg_CrystalWyvern_Fertilized_Bloodfall_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_Egg_CrystalWyvern_Fertilized_Bloodfall_C : public UPrimalItemConsumable_Egg_CrystalWyvern_Fertilized_C
 {
 public:

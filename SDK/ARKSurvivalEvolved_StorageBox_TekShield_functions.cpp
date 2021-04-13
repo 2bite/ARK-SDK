@@ -127,13 +127,13 @@ void AStorageBox_TekShield_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* C
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPImpactEffect
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FHitResult              HitRes                         (Parm, OutParm, ReferenceParm)
 // struct FVector                 ShootDirection                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AStorageBox_TekShield_C::BPImpactEffect(struct FHitResult* HitRes, struct FVector* ShootDirection)
+bool AStorageBox_TekShield_C::STATIC_BPImpactEffect(struct FHitResult* HitRes, struct FVector* ShootDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekShield.StorageBox_TekShield_C.BPImpactEffect");
 
@@ -156,7 +156,7 @@ bool AStorageBox_TekShield_C::BPImpactEffect(struct FHitResult* HitRes, struct F
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPHitEffect
-// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DamageTaken                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
@@ -167,7 +167,7 @@ bool AStorageBox_TekShield_C::BPImpactEffect(struct FHitResult* HitRes, struct F
 // struct FVector*                DamageLoc                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator*               HitNormal                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStorageBox_TekShield_C::BPHitEffect(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, class UPrimitiveComponent** HitComponent, struct FVector* DamageLoc, struct FRotator* HitNormal, struct FDamageEvent* DamageEvent)
+void AStorageBox_TekShield_C::STATIC_BPHitEffect(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, class UPrimitiveComponent** HitComponent, struct FVector* DamageLoc, struct FRotator* HitNormal, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekShield.StorageBox_TekShield_C.BPHitEffect");
 
@@ -318,15 +318,17 @@ bool AStorageBox_TekShield_C::BPCanBeActivatedByPlayer(class AShooterPlayerContr
 // Parameters:
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsAccessAllowed               (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bForInventoryOnly              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AStorageBox_TekShield_C::BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed)
+bool AStorageBox_TekShield_C::BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed, bool* bForInventoryOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekShield.StorageBox_TekShield_C.BPOverrideAllowStructureAccess");
 
 	AStorageBox_TekShield_C_BPOverrideAllowStructureAccess_Params params;
 	params.ForPC = ForPC;
 	params.bIsAccessAllowed = bIsAccessAllowed;
+	params.bForInventoryOnly = bForInventoryOnly;
 
 	auto flags = fn->FunctionFlags;
 
@@ -388,13 +390,13 @@ bool AStorageBox_TekShield_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPGetMultiUseEntries
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, NetResponse, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStorageBox_TekShield_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStorageBox_TekShield_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekShield.StorageBox_TekShield_C.BPGetMultiUseEntries");
 

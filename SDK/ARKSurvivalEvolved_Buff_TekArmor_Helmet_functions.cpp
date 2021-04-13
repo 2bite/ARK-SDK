@@ -12,6 +12,80 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPClientDoMultiUse
+// ()
+// Parameters:
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_TekArmor_Helmet_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPClientDoMultiUse");
+
+	ABuff_TekArmor_Helmet_C_BPClientDoMultiUse_Params params;
+	params.ForPC = ForPC;
+	params.ClientUseIndex = ClientUseIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPTryMultiUse
+// ()
+// Parameters:
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_TekArmor_Helmet_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPTryMultiUse");
+
+	ABuff_TekArmor_Helmet_C_BPTryMultiUse_Params params;
+	params.ForPC = ForPC;
+	params.UseIndex = UseIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPGetMultiUseEntries
+// (Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
+// Parameters:
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FMultiUseEntry> ABuff_TekArmor_Helmet_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPGetMultiUseEntries");
+
+	ABuff_TekArmor_Helmet_C_BPGetMultiUseEntries_Params params;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (MultiUseEntries != nullptr)
+		*MultiUseEntries = params.MultiUseEntries;
+
+	return params.ReturnValue;
+}
+
+
 // Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExternalVisorToggle
 // ()
 
@@ -310,74 +384,6 @@ void ABuff_TekArmor_Helmet_C::FadeOut__UpdateFunc()
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.FadeOut__UpdateFunc");
 
 	ABuff_TekArmor_Helmet_C_FadeOut__UpdateFunc_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_81
-// ()
-
-void ABuff_TekArmor_Helmet_C::InpActEvt_Use_K2Node_InputActionEvent_81()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_81");
-
-	ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_81_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_80
-// ()
-
-void ABuff_TekArmor_Helmet_C::InpActEvt_Use_K2Node_InputActionEvent_80()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_80");
-
-	ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_80_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_41
-// ()
-
-void ABuff_TekArmor_Helmet_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_41()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_41");
-
-	ABuff_TekArmor_Helmet_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_41_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_40
-// ()
-
-void ABuff_TekArmor_Helmet_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_40()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_40");
-
-	ABuff_TekArmor_Helmet_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_40_Params params;
 
 	auto flags = fn->FunctionFlags;
 

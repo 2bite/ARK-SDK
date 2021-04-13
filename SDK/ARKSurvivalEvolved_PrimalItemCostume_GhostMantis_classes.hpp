@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemCostume_GhostMantis.PrimalItemCostume_GhostMantis_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemCostume_GhostMantis_C : public UPrimalItemCostume_Ghost_Base_C
 {
 public:

@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPreventAttachments
-// (Exec, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Native, NetResponse, Static, MulticastDelegate, Private, Delegate)
 // Parameters:
 // class UObject**                ForItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -26,6 +26,7 @@ bool ABasilisk_Character_BP_C::STATIC_BPPreventAttachments(class UObject** ForIt
 	params.ForItem = ForItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,9 +98,9 @@ bool ABasilisk_Character_BP_C::BPIsHidden()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPostLoadedFromSaveGame
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate)
 
-void ABasilisk_Character_BP_C::STATIC_BPPostLoadedFromSaveGame()
+void ABasilisk_Character_BP_C::BPPostLoadedFromSaveGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPPostLoadedFromSaveGame");
 
@@ -202,7 +203,7 @@ void ABasilisk_Character_BP_C::BPNotifyInventoryItemChange(bool* bIsItemAdd, cla
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.UpdatedTracedMoundTransform
-// (MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate)
 
 void ABasilisk_Character_BP_C::UpdatedTracedMoundTransform()
 {
@@ -219,7 +220,7 @@ void ABasilisk_Character_BP_C::UpdatedTracedMoundTransform()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.GetBuriedMoundTransform
-// (NetRequest, Exec, Native, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate)
 // Parameters:
 // float                          HeightAlpha                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -232,7 +233,6 @@ struct UObject_FTransform ABasilisk_Character_BP_C::GetBuriedMoundTransform(floa
 	params.HeightAlpha = HeightAlpha;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -413,9 +413,9 @@ void ABasilisk_Character_BP_C::PlayUndergroundEffectPulse()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.TraceForInvalidGround
-// (Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Native, Event, Private, Delegate)
 
-void ABasilisk_Character_BP_C::STATIC_TraceForInvalidGround()
+void ABasilisk_Character_BP_C::TraceForInvalidGround()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.TraceForInvalidGround");
 
@@ -659,7 +659,7 @@ bool ABasilisk_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Dista
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, Private, Delegate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -711,12 +711,12 @@ bool ABasilisk_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.TimeSinceLastAttackForIndex
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, NetMulticast, Private, Delegate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABasilisk_Character_BP_C::STATIC_TimeSinceLastAttackForIndex(int index)
+float ABasilisk_Character_BP_C::TimeSinceLastAttackForIndex(int index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.TimeSinceLastAttackForIndex");
 
@@ -959,12 +959,12 @@ void ABasilisk_Character_BP_C::DiveIdle()
 
 
 // Function Basilisk_Character_BP.Basilisk_Character_BP_C.CanDive
-// (Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Private, Delegate)
 // Parameters:
 // bool                           DiveInCheck                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABasilisk_Character_BP_C::STATIC_CanDive(bool DiveInCheck)
+bool ABasilisk_Character_BP_C::CanDive(bool DiveInCheck)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Basilisk_Character_BP.Basilisk_Character_BP_C.CanDive");
 
@@ -972,6 +972,7 @@ bool ABasilisk_Character_BP_C::STATIC_CanDive(bool DiveInCheck)
 	params.DiveInCheck = DiveInCheck;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

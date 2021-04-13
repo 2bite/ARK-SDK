@@ -232,15 +232,16 @@ void AHyaenodon_Character_BP_C::OnSaddleUnequipped()
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnSaddleEquipped
-// (NetReliable, NetRequest, Exec, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient)
 
-void AHyaenodon_Character_BP_C::OnSaddleEquipped()
+void AHyaenodon_Character_BP_C::STATIC_OnSaddleEquipped()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnSaddleEquipped");
 
 	AHyaenodon_Character_BP_C_OnSaddleEquipped_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -714,13 +715,13 @@ void AHyaenodon_Character_BP_C::IsInTamingFriendlyState(bool* tamingCanOccur, bo
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Native, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AHyaenodon_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AHyaenodon_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.BPGetMultiUseEntries");
 
@@ -767,11 +768,11 @@ bool AHyaenodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnEatFood
-// (NetReliable, Native, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, NetResponse, Public, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UPrimalItem*             foodItem                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AHyaenodon_Character_BP_C::STATIC_OnEatFood(class UPrimalItem* foodItem)
+void AHyaenodon_Character_BP_C::OnEatFood(class UPrimalItem* foodItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Hyaenodon_Character_BP.Hyaenodon_Character_BP_C.OnEatFood");
 

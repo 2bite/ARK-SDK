@@ -36,6 +36,12 @@ struct ATestGameMode_C_OnShooterCharacterSpawned_Event_Params
 	class AShooterCharacter*                           TheShooterCharacter;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function TestGameMode.TestGameMode_C.ReceiveTick
+struct ATestGameMode_C_ReceiveTick_Params
+{
+	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function TestGameMode.TestGameMode_C.ExecuteUbergraph_TestGameMode
 struct ATestGameMode_C_ExecuteUbergraph_TestGameMode_Params
 {

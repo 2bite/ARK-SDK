@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PlayerControllerBlueprint.PlayerControllerBlueprint_C.CanFit
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const)
+// (Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VerticalOffset                 (Parm, ZeroConstructor, IsPlainOldData)

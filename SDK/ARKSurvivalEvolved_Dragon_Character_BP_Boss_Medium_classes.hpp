@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dragon_Character_BP_Boss_Medium.Dragon_Character_BP_Boss_Medium_C
-// 0x0009 (0x2378 - 0x236F)
+// 0x0009 (0x2388 - 0x237F)
 class ADragon_Character_BP_Boss_Medium_C : public ADragon_Character_BP_Boss_C
 {
 public:
-	unsigned char                                      UnknownData00[0x1];                                       // 0x236F(0x0001) MISSED OFFSET
-	class UDinoCharacterStatusComponent_BP_DragonBoss_Medium_C* DinoCharacterStatus_BP_DragonBoss_Medium_C1;              // 0x2370(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x237F(0x0001) MISSED OFFSET
+	class UDinoCharacterStatusComponent_BP_DragonBoss_Medium_C* DinoCharacterStatus_BP_DragonBoss_Medium_C1;              // 0x2380(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

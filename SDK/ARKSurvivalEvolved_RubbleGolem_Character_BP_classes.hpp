@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass RubbleGolem_Character_BP.RubbleGolem_Character_BP_C
-// 0x000B (0x2380 - 0x2375)
+// 0x000B (0x2390 - 0x2385)
 class ARubbleGolem_Character_BP_C : public ARockGolem_Character_BP_C
 {
 public:
-	unsigned char                                      UnknownData00[0x3];                                       // 0x2375(0x0003) MISSED OFFSET
-	class UDinoCharacterStatusComponent_BP_RubbleGolem_C* DinoCharacterStatus_BP_RubbleGolem_C1;                    // 0x2378(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x2385(0x0003) MISSED OFFSET
+	class UDinoCharacterStatusComponent_BP_RubbleGolem_C* DinoCharacterStatus_BP_RubbleGolem_C1;                    // 0x2388(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

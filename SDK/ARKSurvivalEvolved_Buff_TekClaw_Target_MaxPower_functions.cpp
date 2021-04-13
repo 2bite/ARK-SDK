@@ -30,7 +30,7 @@ void ABuff_TekClaw_Target_MaxPower_C::ReceiveDestroyed()
 
 
 // Function Buff_TekClaw_Target_MaxPower.Buff_TekClaw_Target_MaxPower_C.BPSetupForInstigator
-// (NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, Const)
+// (NetRequest, Native, Event, Static, NetMulticast, Public, Private, Delegate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -42,6 +42,7 @@ void ABuff_TekClaw_Target_MaxPower_C::STATIC_BPSetupForInstigator(class AActor**
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

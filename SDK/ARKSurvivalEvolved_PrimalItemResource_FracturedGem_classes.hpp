@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_FracturedGem.PrimalItemResource_FracturedGem_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemResource_FracturedGem_C : public UPrimalItemResource_Gem_Fertile_C
 {
 public:

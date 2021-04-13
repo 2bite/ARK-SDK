@@ -47,9 +47,9 @@ void ABossArenaManager_C::SFXBack_to_Home()
 
 
 // Function BossArenaManager.BossArenaManager_C.IssueReturnWarning
-// (Exec, Public, Protected, NetServer, NetClient, BlueprintEvent, Const)
+// (Event, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults)
 
-void ABossArenaManager_C::IssueReturnWarning()
+void ABossArenaManager_C::STATIC_IssueReturnWarning()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.IssueReturnWarning");
 
@@ -64,14 +64,14 @@ void ABossArenaManager_C::IssueReturnWarning()
 
 
 // Function BossArenaManager.BossArenaManager_C.BPClientHandleNetExecCommand
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, NetServer, NetClient, BlueprintEvent)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABossArenaManager_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool ABossArenaManager_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.BPClientHandleNetExecCommand");
 
@@ -162,15 +162,16 @@ void ABossArenaManager_C::GetAllActorsInBossArena(bool bIncludeUnconscious, bool
 
 
 // Function BossArenaManager.BossArenaManager_C.IssueTimeWarning
-// (Exec, Event, NetResponse, Static, Public, Protected, NetServer, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Private, Delegate, NetServer, HasDefaults)
 
-void ABossArenaManager_C::STATIC_IssueTimeWarning()
+void ABossArenaManager_C::IssueTimeWarning()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.IssueTimeWarning");
 
 	ABossArenaManager_C_IssueTimeWarning_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,11 +236,11 @@ void ABossArenaManager_C::DidTeleport(const struct FVector& ReturnPosition, clas
 
 
 // Function BossArenaManager.BossArenaManager_C.IsValidForTeleport
-// (NetReliable, Event, NetResponse, MulticastDelegate, Private, NetServer, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, NetServer, NetClient, BlueprintEvent)
 // Parameters:
 // class FString                  InvalidReason                  (Parm, OutParm, ZeroConstructor)
 
-void ABossArenaManager_C::IsValidForTeleport(class FString* InvalidReason)
+void ABossArenaManager_C::STATIC_IsValidForTeleport(class FString* InvalidReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossArenaManager.BossArenaManager_C.IsValidForTeleport");
 

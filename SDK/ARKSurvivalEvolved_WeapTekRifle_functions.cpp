@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapTekRifle.WeapTekRifle_C.BPAppliedPrimalItemToWeapon
-// (Native, NetMulticast, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
 {
@@ -31,7 +31,7 @@ void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
 
 
 // Function WeapTekRifle.WeapTekRifle_C.ReceiveDestroyed
-// (Exec, Native, NetMulticast, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void AWeapTekRifle_C::ReceiveDestroyed()
 {

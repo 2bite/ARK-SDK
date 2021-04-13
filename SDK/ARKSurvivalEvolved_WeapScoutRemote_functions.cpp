@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetDebugInfoString
-// (Net, NetRequest, Native, Event, NetResponse, Static, Public, Protected, NetClient, BlueprintEvent, Const)
+// (Net, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString AWeapScoutRemote_C::STATIC_BPGetDebugInfoString()
+class FString AWeapScoutRemote_C::BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScoutRemote.WeapScoutRemote_C.BPGetDebugInfoString");
 
@@ -56,7 +56,7 @@ bool AWeapScoutRemote_C::AllowTargeting()
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetTargetingTooltipInfoLabel
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, NetClient, BlueprintEvent, Const)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -67,7 +67,6 @@ struct FText AWeapScoutRemote_C::STATIC_BPGetTargetingTooltipInfoLabel()
 	AWeapScoutRemote_C_BPGetTargetingTooltipInfoLabel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -294,11 +293,11 @@ void AWeapScoutRemote_C::BPOnStopTargeting(bool* bFromGamepadLeft)
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.ReceiveTick
-// (Exec, NetMulticast, Public, Protected, NetClient, BlueprintEvent, Const)
+// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapScoutRemote_C::ReceiveTick(float* DeltaSeconds)
+void AWeapScoutRemote_C::STATIC_ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScoutRemote.WeapScoutRemote_C.ReceiveTick");
 
@@ -547,7 +546,7 @@ void AWeapScoutRemote_C::Scout_Launched(class AScout_Character_BP_C* Scout)
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetActorForTargetingTooltip
-// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -558,7 +557,6 @@ class AActor* AWeapScoutRemote_C::BPGetActorForTargetingTooltip()
 	AWeapScoutRemote_C_BPGetActorForTargetingTooltip_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -569,11 +567,11 @@ class AActor* AWeapScoutRemote_C::BPGetActorForTargetingTooltip()
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPWeaponCanFire
-// (NetReliable, Event, NetMulticast, Public, Protected, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AWeapScoutRemote_C::BPWeaponCanFire()
+bool AWeapScoutRemote_C::STATIC_BPWeaponCanFire()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScoutRemote.WeapScoutRemote_C.BPWeaponCanFire");
 

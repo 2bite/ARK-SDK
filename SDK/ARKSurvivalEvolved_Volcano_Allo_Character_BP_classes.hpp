@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Volcano_Allo_Character_BP.Volcano_Allo_Character_BP_C
-// 0x0000 (0x2220 - 0x2220)
+// 0x0000 (0x2230 - 0x2230)
 class AVolcano_Allo_Character_BP_C : public AAllo_Character_BP_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ExplorerChest_Base.ExplorerChest_Base_C
-// 0x0135 (0x059D - 0x0468)
+// 0x0186 (0x05EE - 0x0468)
 class AExplorerChest_Base_C : public AActor
 {
 public:
@@ -27,37 +27,59 @@ public:
 	class UAnimMontage*                                OpenAnimation;                                            // 0x0480(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class AShooterPlayerController*                    CachedPC;                                                 // 0x0488(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class FString                                      ExplorerNoteString;                                       // 0x0490(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class AActor*                                      K2Node_ComponentBoundEvent_OtherActor;                    // 0x04A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UPrimitiveComponent*                         K2Node_ComponentBoundEvent_OtherComp;                     // 0x04A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                K2Node_ComponentBoundEvent_OtherBodyIndex;                // 0x04B0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_ComponentBoundEvent_bFromSweep;                    // 0x04B4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x04B5(0x0003) MISSED OFFSET
-	struct FHitResult                                  K2Node_ComponentBoundEvent_SweepResult;                   // 0x04B8(0x0088) (OutParm, Transient, DuplicateTransient, ReferenceParm)
-	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x0540(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0548(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0549(0x0007) MISSED OFFSET
-	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x0550(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x0558(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x0559(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x6];                                       // 0x055A(0x0006) MISSED OFFSET
-	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x0560(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x0568(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0569(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x6];                                       // 0x056A(0x0006) MISSED OFFSET
-	class APlayerController*                           CallFunc_GetPlayerController_ReturnValue;                 // 0x0570(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x0578(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x057C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x057D(0x0003) MISSED OFFSET
-	class AShooterPlayerState*                         K2Node_DynamicCast_AsShooterPlayerState;                  // 0x0580(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               RequiresMiniHLNA;                                         // 0x04A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x04A1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x04A2(0x0006) MISSED OFFSET
+	class AActor*                                      K2Node_ComponentBoundEvent_OtherActor;                    // 0x04A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UPrimitiveComponent*                         K2Node_ComponentBoundEvent_OtherComp;                     // 0x04B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                K2Node_ComponentBoundEvent_OtherBodyIndex;                // 0x04B8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_ComponentBoundEvent_bFromSweep;                    // 0x04BC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x04BD(0x0003) MISSED OFFSET
+	struct FHitResult                                  K2Node_ComponentBoundEvent_SweepResult;                   // 0x04C0(0x0088) (OutParm, Transient, DuplicateTransient, ReferenceParm)
+	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x0548(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0550(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x0551(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x6];                                       // 0x0552(0x0006) MISSED OFFSET
+	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x0558(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x0560(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0561(0x0007) MISSED OFFSET
+	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x0568(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x0570(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x7];                                       // 0x0571(0x0007) MISSED OFFSET
+	class AShooterCharacter*                           CallFunc_GetPlayerCharacter_ReturnValue;                  // 0x0578(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter2;                    // 0x0580(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast3_CastSuccess;                          // 0x0588(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LocalIsGlobalExplorerNoteUnlocked_ReturnValue;   // 0x0589(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LocalIsPerMapExplorerNoteUnlocked_ReturnValue;   // 0x058A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x058B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue3;                            // 0x058C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x058D(0x0003) MISSED OFFSET
-	class UActorComponent*                             CallFunc_GetComponentByClass_ReturnValue;                 // 0x0590(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_GetWorldDeltaSeconds_ReturnValue;                // 0x0598(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue4;                            // 0x059C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x0589(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x6];                                       // 0x058A(0x0006) MISSED OFFSET
+	class AController*                                 CallFunc_GetController_ReturnValue2;                      // 0x0590(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue3;                            // 0x0598(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x7];                                       // 0x0599(0x0007) MISSED OFFSET
+	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController2;            // 0x05A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast4_CastSuccess;                          // 0x05A8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsLocallyControlled_ReturnValue2;                // 0x05A9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x6];                                       // 0x05AA(0x0006) MISSED OFFSET
+	class UPrimalItem*                                 CallFunc_GetEquippedItemOfType_ReturnValue;               // 0x05B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_NameName_ReturnValue;                 // 0x05B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_NameName_ReturnValue2;                // 0x05B9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue4;                            // 0x05BA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue5;                            // 0x05BB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x05BC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x3];                                       // 0x05BD(0x0003) MISSED OFFSET
+	class APlayerController*                           CallFunc_GetPlayerController_ReturnValue;                 // 0x05C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x05C8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue6;                            // 0x05CC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x3];                                       // 0x05CD(0x0003) MISSED OFFSET
+	class AShooterPlayerState*                         K2Node_DynamicCast_AsShooterPlayerState;                  // 0x05D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast5_CastSuccess;                          // 0x05D8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LocalIsGlobalExplorerNoteUnlocked_ReturnValue;   // 0x05D9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LocalIsPerMapExplorerNoteUnlocked_ReturnValue;   // 0x05DA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue2;                         // 0x05DB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue7;                            // 0x05DC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x3];                                       // 0x05DD(0x0003) MISSED OFFSET
+	class UActorComponent*                             CallFunc_GetComponentByClass_ReturnValue;                 // 0x05E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_GetWorldDeltaSeconds_ReturnValue;                // 0x05E8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue8;                            // 0x05EC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LocalIsPerMapExplorerNoteUnlocked_ReturnValue2;  // 0x05ED(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

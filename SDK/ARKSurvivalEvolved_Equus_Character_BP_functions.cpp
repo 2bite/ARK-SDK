@@ -80,13 +80,13 @@ bool AEquus_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Equus_Character_BP.Equus_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Private, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AEquus_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AEquus_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Equus_Character_BP.Equus_Character_BP_C.BPGetMultiUseEntries");
 

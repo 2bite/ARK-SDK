@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicStego_Character_BP.BionicStego_Character_BP_C
-// 0x0000 (0x2568 - 0x2568)
+// 0x0000 (0x2578 - 0x2578)
 class ABionicStego_Character_BP_C : public AStego_Character_BP_C
 {
 public:

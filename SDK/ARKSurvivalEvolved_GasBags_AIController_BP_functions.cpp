@@ -33,9 +33,9 @@ void AGasBags_AIController_BP_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function GasBags_AIController_BP.GasBags_AIController_BP_C.TickCheckDangerLevels
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
-void AGasBags_AIController_BP_C::STATIC_TickCheckDangerLevels()
+void AGasBags_AIController_BP_C::TickCheckDangerLevels()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GasBags_AIController_BP.GasBags_AIController_BP_C.TickCheckDangerLevels");
 

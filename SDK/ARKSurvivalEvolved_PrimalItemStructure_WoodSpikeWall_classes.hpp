@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_WoodSpikeWall.PrimalItemStructure_WoodSpikeWall_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_WoodSpikeWall_C : public UPrimalItemStructureGeneric_C
 {
 public:

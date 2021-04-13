@@ -252,7 +252,7 @@ public:
 
 	void OnRep_ShowIndicator();
 	void SetLaunchPreviewVisibility(bool IsVisible);
-	void TickLaunchPreview();
+	void STATIC_TickLaunchPreview();
 	void BPContainerDeactivated();
 	void BPContainerActivated();
 	void BPRefreshedStructureColors();
@@ -271,7 +271,7 @@ public:
 	void UpdateLaunchTriggerTransform(const struct FRotator& NewRotation, float NewCapsuleHalfHeight, float NewLaunchForce);
 	void OnRep_LaunchRotation();
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void LaunchCharacter(class APrimalCharacter* Character, float VelocityMultiplier);
 	void GetVelocityMultiplierForCharacter(class APrimalCharacter* Char, bool* AllowedToLaunch, float* VelocityMultiplier);

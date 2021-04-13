@@ -37,7 +37,7 @@ public:
 	bool BPUseCountStructureInRange();
 	bool BPCanBeActivated();
 	int BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);
-	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
+	void STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	void UserConstructionScript();
 	void ExecuteUbergraph_StructureTurretBaseBP(int EntryPoint);
 };

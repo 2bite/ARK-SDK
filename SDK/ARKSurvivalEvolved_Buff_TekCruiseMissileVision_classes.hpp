@@ -139,7 +139,7 @@ public:
 	class FString BPGetDebugInfoString();
 	class APrimalCharacter* BPOverrideTalkerCharacter();
 	void ReceiveBeginPlay();
-	void IsLocalScout(bool* retVal);
+	void IsLocalScout(bool* RetVal);
 	bool BPIsValidUnStasisCaster();
 	bool BPOverrideIsNetRelevantFor(class APlayerController** RealViewer, class AActor** Viewer, struct FVector* SrcLocation);
 	void Missile_Possession_Change_Pending(class ATekCruiseMissile_Character_BP_C* missile);

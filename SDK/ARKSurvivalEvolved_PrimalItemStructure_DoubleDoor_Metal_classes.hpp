@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_DoubleDoor_Metal.PrimalItemStructure_DoubleDoor_Metal_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_DoubleDoor_Metal_C : public UPrimalItemStructure_BaseGate_C
 {
 public:

@@ -156,11 +156,11 @@ void ADesertKaiju_FirstFlockChar_BP_C::TickFlockGroup(int Shape, float DeltaTime
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.GetFlockAvoidanceArea
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
-// TArray<struct FAvoidanceArea>  _return                        (Parm, OutParm, ZeroConstructor)
+// TArray<struct FAvoidanceArea>  Return                         (Parm, OutParm, ZeroConstructor)
 
-void ADesertKaiju_FirstFlockChar_BP_C::GetFlockAvoidanceArea(TArray<struct FAvoidanceArea>* _return)
+void ADesertKaiju_FirstFlockChar_BP_C::GetFlockAvoidanceArea(TArray<struct FAvoidanceArea>* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.GetFlockAvoidanceArea");
 
@@ -172,13 +172,13 @@ void ADesertKaiju_FirstFlockChar_BP_C::GetFlockAvoidanceArea(TArray<struct FAvoi
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.DistanceToKaiju
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -189,6 +189,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::DistanceToKaiju(float* Distance)
 	ADesertKaiju_FirstFlockChar_BP_C_DistanceToKaiju_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,7 +234,7 @@ float ADesertKaiju_FirstFlockChar_BP_C::BPAdjustDamage(float* IncomingDamage, st
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BPDinoPostBeginPlay
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, NetResponse, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ADesertKaiju_FirstFlockChar_BP_C::BPDinoPostBeginPlay()
 {
@@ -242,6 +243,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::BPDinoPostBeginPlay()
 	ADesertKaiju_FirstFlockChar_BP_C_BPDinoPostBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,7 +252,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::BPDinoPostBeginPlay()
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.ReceiveTick
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -262,7 +264,6 @@ void ADesertKaiju_FirstFlockChar_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -288,7 +289,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::BP_OnSetDeath()
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Event, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)

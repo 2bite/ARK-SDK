@@ -110,7 +110,7 @@ public:
 	bool                                               K2Node_CustomEvent_AddImpulse;                            // 0x0B29(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x2];                                       // 0x0B2A(0x0002) MISSED OFFSET
 	float                                              K2Node_InputAxisEvent_AxisValue;                          // 0x0B2C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	TEnumAsByte<E_ZiplineMotorState>                   K2Node_CustomEvent_NewState;                              // 0x0B30(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<E_ZiplineMotorState>                   K2Node_CustomEvent_newState;                              // 0x0B30(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_HasAuthority_ReturnValue2;                       // 0x0B31(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               Temp_bool_Has_Been_Initd_Variable;                        // 0x0B32(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData11[0x1];                                       // 0x0B33(0x0001) MISSED OFFSET
@@ -156,7 +156,7 @@ public:
 	void SetAttachedCharacterTransform(const struct UObject_FTransform& NewTransform);
 	void SetupLocalClient(class AActor* Pawn);
 	void Deactivate_Local_Client(class AActor* Pawn);
-	void STATIC_IsStillColliding();
+	void IsStillColliding();
 	void HandleCollision(struct FHitResult* Hit);
 	void HitZiplineEndStop(class UMovementComponent* MovementComp);
 	void CalcZiplinePreservedStartVelocity(const struct FVector& InVelocity, struct FVector* Velocity);
@@ -169,7 +169,7 @@ public:
 	void BPNonDedicatedPlayerPostAnimUpdate();
 	void BPCharacterDetach();
 	void SetZiplineControlRotation();
-	void PlayTurnAnimation(class UAnimMontage* Override, float* Duration);
+	void PlayTurnAnimation(class UAnimMontage* override, float* Duration);
 	float BuffAdjustDamage(float* Damage, class AController** EventInstigator, class AActor** DamageCauser, class UClass** TheDamgeType, struct FHitResult* HitInfo);
 	void UpdateFPVCameraAndMeshPosition();
 	void GetFPVViewLocation(struct FVector* ViewLoc);
@@ -198,21 +198,21 @@ public:
 	void UpdateFX();
 	void BuffTickClient(float* DeltaTime);
 	void GetAttachOffset(struct FVector* AttachOffset);
-	void BPSetupForInstigator(class AActor** ForInstigator);
+	void STATIC_BPSetupForInstigator(class AActor** ForInstigator);
 	void BPDeactivated(class AActor** ForInstigator);
 	struct FVector BPOverrideCharacterNewFallVelocity(float* DeltaTime, struct FVector* InitialVelocity, struct FVector* Gravity);
-	void STATIC_AttachToZipline(const struct FVector& StartLocation);
+	void AttachToZipline(const struct FVector& StartLocation);
 	void End_Move_Along_Zipline(bool AddImpulse);
 	void TickMoveAlongZipline();
 	void StartMoveAlongZipline(const struct FVector& StartLocation, class AZipline_Anchor_C* UpperZiplineAnchor, class AZipline_Anchor_C* LowerZiplineAnchor, const struct FVector& Direction);
-	void STATIC_UserConstructionScript();
-	void InpActEvt_Use_K2Node_InputActionEvent_100();
-	void InpActEvt_Prone_K2Node_InputActionEvent_99();
-	void InpActEvt_Crouch_K2Node_InputActionEvent_98();
-	void InpActEvt_Jump_K2Node_InputActionEvent_97();
-	void InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_51();
-	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_50();
-	void InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_49();
+	void UserConstructionScript();
+	void InpActEvt_Use_K2Node_InputActionEvent_96();
+	void InpActEvt_Prone_K2Node_InputActionEvent_95();
+	void InpActEvt_Crouch_K2Node_InputActionEvent_94();
+	void InpActEvt_Jump_K2Node_InputActionEvent_93();
+	void InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_47();
+	void InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_46();
+	void InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_45();
 	void EndMoveAlongZipline_RunOnServer(bool AddImpulse);
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_87(float AxisValue);
 	void SetMotorState_RunOnServer(TEnumAsByte<E_ZiplineMotorState> NewState);

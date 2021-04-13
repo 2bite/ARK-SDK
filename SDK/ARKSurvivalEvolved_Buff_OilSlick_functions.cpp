@@ -33,7 +33,7 @@ void ABuff_OilSlick_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function Buff_OilSlick.Buff_OilSlick_C.SpawnOilFire
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 OverrideOriginLocation         (Parm, ZeroConstructor, IsPlainOldData)
 

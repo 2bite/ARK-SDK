@@ -30,7 +30,7 @@ void ASpaceWhale_AIController_BP_C::BPOnFleeEvent()
 
 
 // Function SpaceWhale_AIController_BP.SpaceWhale_AIController_BP_C.ReceiveTick
-// (Net, NetReliable, Event, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 

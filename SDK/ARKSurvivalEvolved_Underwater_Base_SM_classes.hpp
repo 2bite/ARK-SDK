@@ -36,7 +36,7 @@ public:
 
 	bool BPPreventPlacingStructureOntoMe(class APlayerController** PC, class APrimalStructure** ForNewStructure, struct FHitResult* ForHitResult);
 	bool BPForceConsideredEnemyFoundation(class APlayerController** PC, class APrimalStructure** ForNewStructure, struct FVector* TestAtLocation);
-	void STATIC_ChangedCompartmentFloodState();
+	void ChangedCompartmentFloodState();
 	void UserConstructionScript();
 	void ExecuteUbergraph_Underwater_Base_SM(int EntryPoint);
 };

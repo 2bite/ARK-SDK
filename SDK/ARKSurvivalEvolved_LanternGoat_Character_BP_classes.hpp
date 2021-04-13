@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LanternGoat_Character_BP.LanternGoat_Character_BP_C
-// 0x0008 (0x24C0 - 0x24B8)
+// 0x0008 (0x24D0 - 0x24C8)
 class ALanternGoat_Character_BP_C : public ALanternPet_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_LanternGoat_C* DinoCharacterStatus_BP_LanternGoat_C1;                    // 0x24B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_LanternGoat_C* DinoCharacterStatus_BP_LanternGoat_C1;                    // 0x24C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

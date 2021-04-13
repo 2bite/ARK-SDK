@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bog_Para_Character_BP.Bog_Para_Character_BP_C
-// 0x0000 (0x2379 - 0x2379)
+// 0x0000 (0x2389 - 0x2389)
 class ABog_Para_Character_BP_C : public APara_Character_BP_C
 {
 public:

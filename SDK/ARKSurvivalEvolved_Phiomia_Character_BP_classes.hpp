@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Phiomia_Character_BP.Phiomia_Character_BP_C
-// 0x0008 (0x2190 - 0x2188)
+// 0x0008 (0x21A0 - 0x2198)
 class APhiomia_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Phiomia_C*  DinoCharacterStatus_BP_Phiomia_C2;                        // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Phiomia_C*  DinoCharacterStatus_BP_Phiomia_C2;                        // 0x2198(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

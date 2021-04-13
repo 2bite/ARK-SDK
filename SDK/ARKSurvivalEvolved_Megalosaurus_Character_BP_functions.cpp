@@ -12,6 +12,29 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+// ()
+// Parameters:
+// int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName AMegalosaurus_Character_BP_C::GetSocketForMeleeTraceForHitBlockers(int* AttackIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.GetSocketForMeleeTraceForHitBlockers");
+
+	AMegalosaurus_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params params;
+	params.AttackIndex = AttackIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits
 // ()
 // Parameters:
@@ -123,7 +146,7 @@ void AMegalosaurus_Character_BP_C::BPTimerServer()
 
 
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, NetResponse, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -137,6 +160,7 @@ TArray<struct FMultiUseEntry> AMegalosaurus_Character_BP_C::BPGetMultiUseEntries
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

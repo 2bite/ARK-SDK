@@ -177,7 +177,7 @@ void ABuff_Freeze_C::Initialize()
 
 
 // Function Buff_Freeze.Buff_Freeze_C.CreateMIC
-// (NetReliable, Static, NetMulticast, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Exec, NetResponse, Static, Public, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ABuff_Freeze_C::STATIC_CreateMIC()
 {
@@ -231,12 +231,12 @@ void ABuff_Freeze_C::ApplyFrozenDebuff()
 
 
 // Function Buff_Freeze.Buff_Freeze_C.AddFreeze
-// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          amount                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Freeze_C::AddFreeze(float amount, float Time)
+void ABuff_Freeze_C::STATIC_AddFreeze(float amount, float Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Freeze.Buff_Freeze_C.AddFreeze");
 

@@ -86,7 +86,7 @@ public:
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void LinkWires(TArray<class APrimalStructure*>* Connections);
-	void AddSplineMeshComponents(bool UsePreviewMaterial);
+	void STATIC_AddSplineMeshComponents(bool UsePreviewMaterial);
 	class FString BPOverrideCantBuildReasonString(int* CantBuildReason);
 	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void UserConstructionScript();

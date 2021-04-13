@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_Spawner_Enforcer.PrimalItem_Spawner_Enforcer_C.PreDinoSpawned
-// (Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
 
-void UPrimalItem_Spawner_Enforcer_C::STATIC_PreDinoSpawned()
+void UPrimalItem_Spawner_Enforcer_C::PreDinoSpawned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_Spawner_Enforcer.PrimalItem_Spawner_Enforcer_C.PreDinoSpawned");
 

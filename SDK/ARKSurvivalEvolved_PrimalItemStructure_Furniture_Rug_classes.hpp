@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_Furniture_Rug.PrimalItemStructure_Furniture_Rug_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_Furniture_Rug_C : public UPrimalItemStructure_BaseSign_C
 {
 public:

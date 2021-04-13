@@ -73,7 +73,7 @@ void ABuff_AttachedToBeam_C::BPSetupForInstigator(class AActor** ForInstigator)
 
 
 // Function Buff_AttachedToBeam.Buff_AttachedToBeam_C.DoStruggle
-// (NetReliable, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (NetReliable, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 
 void ABuff_AttachedToBeam_C::STATIC_DoStruggle()
 {
@@ -82,6 +82,7 @@ void ABuff_AttachedToBeam_C::STATIC_DoStruggle()
 	ABuff_AttachedToBeam_C_DoStruggle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

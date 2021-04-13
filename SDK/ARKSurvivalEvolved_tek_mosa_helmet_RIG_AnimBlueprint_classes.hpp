@@ -53,7 +53,7 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_tek_mosa_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2616();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_tek_mosa_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2670();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_tek_mosa_helmet_RIG_AnimBlueprint(int EntryPoint);
 };

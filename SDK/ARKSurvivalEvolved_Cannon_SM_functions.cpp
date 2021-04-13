@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Cannon_SM.Cannon_SM_C.IsValidToFire
-// (NetRequest, Static, NetMulticast, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ValidToFire                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -60,13 +60,13 @@ bool ACannon_SM_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function Cannon_SM.Cannon_SM_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ACannon_SM_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ACannon_SM_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Cannon_SM.Cannon_SM_C.BPGetMultiUseEntries");
 

@@ -133,7 +133,7 @@ bool UTask_IceKaijuFindBestMeleeAttack_C::CanGroundSmash(class AIceKaiju_Charact
 
 
 // Function Task_IceKaijuFindBestMeleeAttack.Task_IceKaijuFindBestMeleeAttack_C.CanUseGroundSmash
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (Exec, Native, Event, Static, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           IsOnCooldown                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

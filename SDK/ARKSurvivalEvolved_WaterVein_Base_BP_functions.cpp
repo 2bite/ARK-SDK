@@ -71,7 +71,7 @@ void AWaterVein_Base_BP_C::ReceiveBeginPlay()
 
 
 // Function WaterVein_Base_BP.WaterVein_Base_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

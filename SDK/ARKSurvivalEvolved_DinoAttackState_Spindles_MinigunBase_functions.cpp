@@ -15,9 +15,9 @@ namespace sdk
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.IsDebugMode
 // ()
 // Parameters:
-// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackState_Spindles_MinigunBase_C::IsDebugMode(bool* ret)
+void UDinoAttackState_Spindles_MinigunBase_C::IsDebugMode(bool* Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.IsDebugMode");
 
@@ -29,8 +29,8 @@ void UDinoAttackState_Spindles_MinigunBase_C::IsDebugMode(bool* ret)
 
 	fn->FunctionFlags = flags;
 
-	if (ret != nullptr)
-		*ret = params.ret;
+	if (Ret != nullptr)
+		*Ret = params.Ret;
 }
 
 
@@ -59,7 +59,7 @@ void UDinoAttackState_Spindles_MinigunBase_C::GetDamageForSpine(class APrimalCha
 
 
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.FireSpine
-// (Native, Event, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void UDinoAttackState_Spindles_MinigunBase_C::FireSpine()
 {
@@ -68,7 +68,6 @@ void UDinoAttackState_Spindles_MinigunBase_C::FireSpine()
 	UDinoAttackState_Spindles_MinigunBase_C_FireSpine_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,18 +129,17 @@ void UDinoAttackState_Spindles_MinigunBase_C::GetAttackIndex(int* AttackIndex)
 
 
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.BPShouldEndAttack
-// (Net, NetReliable, Native, Event, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Net, Static, NetMulticast, MulticastDelegate, Private, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDinoAttackState_Spindles_MinigunBase_C::BPShouldEndAttack()
+bool UDinoAttackState_Spindles_MinigunBase_C::STATIC_BPShouldEndAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.BPShouldEndAttack");
 
 	UDinoAttackState_Spindles_MinigunBase_C_BPShouldEndAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

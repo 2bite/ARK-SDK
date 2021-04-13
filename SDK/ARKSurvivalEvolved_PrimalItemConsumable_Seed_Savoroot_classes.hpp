@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Seed_Savoroot.PrimalItemConsumable_Seed_Savoroot_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_Seed_Savoroot_C : public UPrimalItemConsumable_Seed_BaseVeggie_C
 {
 public:

@@ -1600,6 +1600,17 @@ struct FInvalidReferenceRedirector
 	TArray<class FString>                              LimitedToMaps;                                            // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
+// ScriptStruct ShooterGame.PrimalGameData.ExtraEggItem
+// 0x0020
+struct FExtraEggItem
+{
+	class UClass*                                      DropItem;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       ActiveEventFilter;                                        // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ForDinoCharacter;                                         // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DropChance;                                               // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct ShooterGame.PrimalGameData.ExtraItemAttachmentInfo
 // 0x0010
 struct FExtraItemAttachmentInfo

@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Mushroom_Aquatic.PrimalItemConsumable_Mushroom_Aquatic_C
-// 0x001C (0x0A0C - 0x09F0)
+// 0x001C (0x0A1C - 0x0A00)
 class UPrimalItemConsumable_Mushroom_Aquatic_C : public UPrimalItemConsumable_Berry_Base_C
 {
 public:
-	class UClass*                                      BuffTimeReductionClass;                                   // 0x09F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BuffTimeReductionDuration;                                // 0x09F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x09FC(0x0004) MISSED OFFSET
-	class UClass*                                      ImmunityBuffClass;                                        // 0x0A00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ImmunityBuffTimeExtension;                                // 0x0A08(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      BuffTimeReductionClass;                                   // 0x0A00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              BuffTimeReductionDuration;                                // 0x0A08(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0A0C(0x0004) MISSED OFFSET
+	class UClass*                                      ImmunityBuffClass;                                        // 0x0A10(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ImmunityBuffTimeExtension;                                // 0x0A18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

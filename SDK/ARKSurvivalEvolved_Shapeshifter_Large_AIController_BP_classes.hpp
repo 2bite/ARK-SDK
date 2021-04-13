@@ -41,17 +41,17 @@ public:
 
 
 	void STATIC_DinoUberpounce(bool* Success);
-	void STATIC_LocationUberpounce();
-	void AllowSurfaceNormalForUberpounce(const struct FVector& SurfaceNormal, bool* IsValid);
+	void LocationUberpounce();
+	void AllowSurfaceNormalForUberpounce(const struct FVector& surfaceNormal, bool* IsValid);
 	void Enable();
 	void Start_Uberpounce(const struct FUberpounceData& Data);
 	void Deinonychus_AttackedWhileLatched();
-	void OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState);
+	void STATIC_OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState);
 	void UpdateUberpounce();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float* DeltaSeconds);
 	void GetPrimalTarget(class APrimalCharacter** Target);
-	void GetDino(class ADeinonychus_Character_BP_C** ret);
+	void GetDino(class ADeinonychus_Character_BP_C** Ret);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Shapeshifter_Large_AIController_BP(int EntryPoint);
 };

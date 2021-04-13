@@ -30,9 +30,9 @@ void AProjScoutTracker_C::SpawnImpactVFX()
 
 
 // Function ProjScoutTracker.ProjScoutTracker_C.ScheduleNextTrackerImpactVFXSpawn
-// (Exec, Public, Private, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AProjScoutTracker_C::ScheduleNextTrackerImpactVFXSpawn()
+void AProjScoutTracker_C::STATIC_ScheduleNextTrackerImpactVFXSpawn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjScoutTracker.ProjScoutTracker_C.ScheduleNextTrackerImpactVFXSpawn");
 

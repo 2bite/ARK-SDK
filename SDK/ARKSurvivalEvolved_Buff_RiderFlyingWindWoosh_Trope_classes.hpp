@@ -50,8 +50,8 @@ public:
 
 	void UpdateSFX();
 	int GetBuffType();
-	struct FStatusValueModifierDescription STATIC_GetBuffDescription();
-	void STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
+	struct FStatusValueModifierDescription GetBuffDescription();
+	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	bool AllowPostProcessEffect();
 	float GetBuffPostprocessIntensity();
 	bool BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser);

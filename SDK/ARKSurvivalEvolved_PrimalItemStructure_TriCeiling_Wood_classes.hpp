@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_TriCeiling_Wood.PrimalItemStructure_TriCeiling_Wood_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_TriCeiling_Wood_C : public UPrimalItemStructure_BaseCeiling_C
 {
 public:

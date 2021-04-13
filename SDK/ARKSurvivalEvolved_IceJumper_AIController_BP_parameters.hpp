@@ -39,7 +39,7 @@ struct AIceJumper_AIController_BP_C_BPUpdateBestTarget_Params
 struct AIceJumper_AIController_BP_C_DoLOS_Params
 {
 	struct FVector                                     ViewLocationOffset;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Update LOSChecks
@@ -50,7 +50,7 @@ struct AIceJumper_AIController_BP_C_Update_LOSChecks_Params
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Get Percent Stamina
 struct AIceJumper_AIController_BP_C_Get_Percent_Stamina_Params
 {
-	float                                              ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.IsFallingToGroundBelowTarget

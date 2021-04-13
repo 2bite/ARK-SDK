@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function IsWithinDistanceOfTree.IsWithinDistanceOfTree_C.ReceiveTick
-// (NetRequest, Native, MulticastDelegate, Protected, HasOutParms, NetClient, Const)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -27,7 +27,6 @@ void UIsWithinDistanceOfTree_C::ReceiveTick(class AActor** OwnerActor, float* De
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

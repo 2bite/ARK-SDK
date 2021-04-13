@@ -34,7 +34,7 @@ public:
 
 
 	void BPDeactivated(class AActor** ForInstigator);
-	void STATIC_BPSetupForInstigator(class AActor** ForInstigator);
+	void BPSetupForInstigator(class AActor** ForInstigator);
 	void ReceiveTick(float* DeltaSeconds);
 	bool BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser);
 	void UserConstructionScript();

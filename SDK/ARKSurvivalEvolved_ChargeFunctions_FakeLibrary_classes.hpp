@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void STATIC_Buff_Create_Charge_Manager_No_Instigator_Library(class APrimalBuff* Buff, class UClass* managerClass, class APrimalBuff** chargeManager);
+	void Buff_Create_Charge_Manager_No_Instigator_Library(class APrimalBuff* Buff, class UClass* managerClass, class APrimalBuff** chargeManager);
 	void Charge_Variable_Event_Integer_Library(TEnumAsByte<E_ChargeVariableNames> variableType, int dValue, class AActor* OwnerActor, class APrimalBuff* managerBuff, bool multicastEvent);
 	void Get_Charge_At_Point_Accurate(const struct FVector& Location, class AActor* worldActor, float Radius, class UClass* chargeEmitterClass, float* Charge);
 	void Charge_Variable_Event_Double_Library(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue, class AActor* OwnerActor, class APrimalBuff* managerBuff, bool multicastEvent);
@@ -38,7 +38,7 @@ public:
 	void STATIC_Structure_Create_Charge_Manager_Library(class APrimalStructure* Structure, class UClass* managerClass, class APrimalBuff** chargeManager);
 	void Weapon_Create_Charge_Manager_Library(class AShooterWeapon* weapon, class UClass* managerClass, class APrimalBuff** chargeManager);
 	void ChargeVariableEventLibrary(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, class AActor* OwnerActor, class APrimalBuff* managerBuff, bool multicastEvent);
-	void STATIC_CharacterCreateChargeManagerLibrary(class APrimalCharacter* CharacterOwner, class UClass* managerClass, class APrimalBuff** chargeManager);
+	void CharacterCreateChargeManagerLibrary(class APrimalCharacter* CharacterOwner, class UClass* managerClass, class APrimalBuff** chargeManager);
 	void ExecuteUbergraph_ChargeFunctions_FakeLibrary(int EntryPoint);
 };
 

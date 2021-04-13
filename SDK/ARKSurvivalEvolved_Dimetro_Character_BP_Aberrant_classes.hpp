@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dimetro_Character_BP_Aberrant.Dimetro_Character_BP_Aberrant_C
-// 0x0000 (0x2190 - 0x2190)
+// 0x0000 (0x21A0 - 0x21A0)
 class ADimetro_Character_BP_Aberrant_C : public ADimetro_Character_BP_C
 {
 public:

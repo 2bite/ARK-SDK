@@ -90,14 +90,14 @@ public:
 	}
 
 
-	void IsDebugMode(bool* ret);
-	bool STATIC_BPShouldEndAttack();
+	void IsDebugMode(bool* Ret);
+	bool BPShouldEndAttack();
 	void GetDamageForSpine(class APrimalCharacter** Target, float* Damage);
 	void FireGuaranteedHitSpine();
 	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void OnEndEvent();
 	void OnBeginEvent(class UPrimalAIState** InParentState);
-	void Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
+	void STATIC_Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);
 	void FireRandomSpines();
 	void FireGuaranteedSpines();
 	void ExecuteUbergraph_DinoAttackState_Spindles_MinigunAOE(int EntryPoint);

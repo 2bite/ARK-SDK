@@ -33,7 +33,7 @@ void AArgent_Character_BP_C::BPDidClearCarriedCharacter(class APrimalCharacter**
 
 
 // Function Argent_Character_BP.Argent_Character_BP_C.Allow Passenger in Slot
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Slot                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -130,9 +130,9 @@ void AArgent_Character_BP_C::Get_Passenger(int Slot, class APrimalCharacter** Ch
 // ()
 // Parameters:
 // int                            Slot                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AArgent_Character_BP_C::Has_Passenger_In_Slot(int Slot, bool* return_value)
+void AArgent_Character_BP_C::Has_Passenger_In_Slot(int Slot, bool* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Argent_Character_BP.Argent_Character_BP_C.Has Passenger In Slot");
 
@@ -145,8 +145,8 @@ void AArgent_Character_BP_C::Has_Passenger_In_Slot(int Slot, bool* return_value)
 
 	fn->FunctionFlags = flags;
 
-	if (return_value != nullptr)
-		*return_value = params.return_value;
+	if (Return_Value != nullptr)
+		*Return_Value = params.Return_Value;
 }
 
 

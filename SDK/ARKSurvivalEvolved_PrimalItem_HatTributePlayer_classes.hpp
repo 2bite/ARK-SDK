@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_HatTributePlayer.PrimalItem_HatTributePlayer_C
-// 0x0000 (0x0A08 - 0x0A08)
+// 0x0000 (0x0A18 - 0x0A18)
 class UPrimalItem_HatTributePlayer_C : public UPrimalItem_BossTributeGeneric_C
 {
 public:

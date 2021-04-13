@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Tusoteuthis_Character_BP_Caves.Tusoteuthis_Character_BP_Caves_C
-// 0x0000 (0x26A9 - 0x26A9)
+// 0x0000 (0x26B9 - 0x26B9)
 class ATusoteuthis_Character_BP_Caves_C : public ATusoteuthis_Character_BP_CaveBase_C
 {
 public:

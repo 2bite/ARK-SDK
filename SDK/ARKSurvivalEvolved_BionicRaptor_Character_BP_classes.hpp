@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicRaptor_Character_BP.BionicRaptor_Character_BP_C
-// 0x0000 (0x2549 - 0x2549)
+// 0x0000 (0x2559 - 0x2559)
 class ABionicRaptor_Character_BP_C : public ARaptor_Character_BP_C
 {
 public:

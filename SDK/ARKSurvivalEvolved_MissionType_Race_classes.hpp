@@ -569,14 +569,14 @@ public:
 	bool BPCanRideMissionDino(class AShooterCharacter** Character, class APrimalDinoCharacter** Dino);
 	void OnTeleportedCharInBounds(class APrimalCharacter* forChar);
 	void GetNearbyWaterLocation(const struct FVector& StartLocation, const struct FVector& Forward, float OverrideZOffset, struct FVector* FinalLocation);
-	void Is_Power_Up_Active_for_Player(class AShooterPlayerController* SC, class AMissionTrigger* Powerup, bool* IsValid);
+	void Is_Power_Up_Active_for_Player(class AShooterPlayerController* SC, class AMissionTrigger* PowerUp, bool* IsValid);
 	void Handle_Out_Of_Bounds();
 	void TeleportPlayerAndDinoToCheckpoint(class APrimalDinoCharacter* Dino, class AShooterCharacter* Player);
 	void SpawnDinoForPlayer(class AShooterCharacter* Player, class APrimalDinoCharacter** SpawnedDino);
 	void Handle_Player_Time_Outs();
 	bool BPOverrideMissionTimerColor(class AShooterPlayerController** ShooterContr, struct FLinearColor* DefaultColor, struct FLinearColor* CurrentColor, struct FLinearColor* TimerOverrideColor);
 	void GetBestTimeForPlayer(class AShooterPlayerController* ShooterCont, float* BestValidTime);
-	void STATIC_BPGetExtraLocalMissionIndicators(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, TArray<struct FMissionWorldIndicator>* IndicatorsIn, TArray<struct FMissionWorldIndicator>* IndicatorsOut);
+	void BPGetExtraLocalMissionIndicators(class APlayerController** Controller, class AShooterCharacter** PlayerPawn, TArray<struct FMissionWorldIndicator>* IndicatorsIn, TArray<struct FMissionWorldIndicator>* IndicatorsOut);
 	void STATIC_GetBestTime(float* BestTime);
 	void STATIC_NotifyAllTopPlayerFinish(bool Finished, class AShooterCharacter* Character);
 	void STATIC_Play_Leaderboard_Reactions(float Leaderboard_Score_Float, class AShooterCharacter* Player);
@@ -601,7 +601,7 @@ public:
 	void GetDinoNameFromArray(int ArrayIndex, class FString* Item);
 	void STATIC_GetNamedDinoSetup(const struct FDinoSetup& InSetup, const class FString& Name, struct FDinoSetup* Setup);
 	bool IsMissionComplete(class AShooterCharacter** forCharacter, class AShooterPlayerController** ForController);
-	void TryIncrementCheckpoint(class AShooterPlayerController* PlayerController, class AMissionTrigger* HitTrigger, bool* Success, bool* AtEnd);
+	void STATIC_TryIncrementCheckpoint(class AShooterPlayerController* PlayerController, class AMissionTrigger* HitTrigger, bool* Success, bool* AtEnd);
 	bool BPIsPhaseComplete(struct FName* PhaseName);
 	void GetPerPlayerWorldIndicators(class AShooterPlayerController** Controller, class AShooterCharacter** Character, TArray<struct FMissionWorldIndicator>* WorldIndicators);
 	void GetNextCheckpoint(class AShooterPlayerController* Controller, class AMissionTrigger* NewParam, int* index, class AMissionTrigger** NextCheckpoint, bool* CompletedRace);

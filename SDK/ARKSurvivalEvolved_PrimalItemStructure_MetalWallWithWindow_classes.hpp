@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_MetalWallWithWindow.PrimalItemStructure_MetalWallWithWindow_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_MetalWallWithWindow_C : public UPrimalItemStructure_BaseWallWithWindow_C
 {
 public:

@@ -42,11 +42,11 @@ bool ABuff_Cruise_Missile_MaintainCameraServer_C::BPServerHandleNetExecCommand(c
 
 
 // Function Buff_Cruise_Missile_MaintainCameraServer.Buff_Cruise_Missile_MaintainCameraServer_C.BPHandleOnStartFire
-// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, Const)
+// (NetReliable, Native, NetResponse, Public, NetServer, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Cruise_Missile_MaintainCameraServer_C::STATIC_BPHandleOnStartFire(bool* bFromGamepad)
+void ABuff_Cruise_Missile_MaintainCameraServer_C::BPHandleOnStartFire(bool* bFromGamepad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Cruise_Missile_MaintainCameraServer.Buff_Cruise_Missile_MaintainCameraServer_C.BPHandleOnStartFire");
 

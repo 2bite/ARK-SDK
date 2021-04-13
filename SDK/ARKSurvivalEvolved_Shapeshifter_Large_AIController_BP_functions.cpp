@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.DinoUberpounce
-// (NetReliable, Exec, Native, Event, Static, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,9 +36,9 @@ void AShapeshifter_Large_AIController_BP_C::STATIC_DinoUberpounce(bool* Success)
 
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.LocationUberpounce
-// (Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, Event, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 
-void AShapeshifter_Large_AIController_BP_C::STATIC_LocationUberpounce()
+void AShapeshifter_Large_AIController_BP_C::LocationUberpounce()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.LocationUberpounce");
 
@@ -56,15 +56,15 @@ void AShapeshifter_Large_AIController_BP_C::STATIC_LocationUberpounce()
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.AllowSurfaceNormalForUberpounce
 // ()
 // Parameters:
-// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Large_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& SurfaceNormal, bool* IsValid)
+void AShapeshifter_Large_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& surfaceNormal, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.AllowSurfaceNormalForUberpounce");
 
 	AShapeshifter_Large_AIController_BP_C_AllowSurfaceNormalForUberpounce_Params params;
-	params.SurfaceNormal = SurfaceNormal;
+	params.surfaceNormal = surfaceNormal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -132,12 +132,12 @@ void AShapeshifter_Large_AIController_BP_C::Deinonychus_AttackedWhileLatched()
 
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.OnUberpounceStateChanged
-// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EUberpounceState>  NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EUberpounceState>  PrevState                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Large_AIController_BP_C::OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState)
+void AShapeshifter_Large_AIController_BP_C::STATIC_OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.OnUberpounceStateChanged");
 
@@ -233,9 +233,9 @@ void AShapeshifter_Large_AIController_BP_C::GetPrimalTarget(class APrimalCharact
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.GetDino
 // ()
 // Parameters:
-// class ADeinonychus_Character_BP_C* ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ADeinonychus_Character_BP_C* Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Large_AIController_BP_C::GetDino(class ADeinonychus_Character_BP_C** ret)
+void AShapeshifter_Large_AIController_BP_C::GetDino(class ADeinonychus_Character_BP_C** Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.GetDino");
 
@@ -247,8 +247,8 @@ void AShapeshifter_Large_AIController_BP_C::GetDino(class ADeinonychus_Character
 
 	fn->FunctionFlags = flags;
 
-	if (ret != nullptr)
-		*ret = params.ret;
+	if (Ret != nullptr)
+		*Ret = params.Ret;
 }
 
 

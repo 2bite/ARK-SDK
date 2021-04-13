@@ -30,11 +30,11 @@ void AProjHarpoon_C::ReceiveBeginPlay()
 
 
 // Function ProjHarpoon.ProjHarpoon_C.ReceiveTick
-// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, Static, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjHarpoon_C::ReceiveTick(float* DeltaSeconds)
+void AProjHarpoon_C::STATIC_ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjHarpoon.ProjHarpoon_C.ReceiveTick");
 

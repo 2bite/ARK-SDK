@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dodo_Character_BP_Aberrant.Dodo_Character_BP_Aberrant_C
-// 0x0000 (0x2190 - 0x2190)
+// 0x0000 (0x21A0 - 0x21A0)
 class ADodo_Character_BP_Aberrant_C : public ADodo_Character_BP_C
 {
 public:

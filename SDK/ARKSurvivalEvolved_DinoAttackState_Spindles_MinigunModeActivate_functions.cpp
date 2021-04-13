@@ -30,14 +30,14 @@ void UDinoAttackState_Spindles_MinigunModeActivate_C::OnEndEvent()
 
 
 // Function DinoAttackState_Spindles_MinigunModeActivate.DinoAttackState_Spindles_MinigunModeActivate_C.BPCanAttack
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, NetMulticast, Private, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         attackRangeOffset              (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 OtherTarget                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDinoAttackState_Spindles_MinigunModeActivate_C::STATIC_BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
+bool UDinoAttackState_Spindles_MinigunModeActivate_C::BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunModeActivate.DinoAttackState_Spindles_MinigunModeActivate_C.BPCanAttack");
 

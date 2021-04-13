@@ -28743,6 +28743,26 @@ void APrimalStructure::SetStaticMobility()
 }
 
 
+// Function ShooterGame.PrimalStructure.SetPreventSaving
+// ()
+// Parameters:
+// bool                           bPrevent                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalStructure::SetPreventSaving(bool bPrevent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructure.SetPreventSaving");
+
+	APrimalStructure_SetPreventSaving_Params params;
+	params.bPrevent = bPrevent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalStructure.SetHarvestingActive
 // ()
 // Parameters:
@@ -30278,15 +30298,17 @@ class FString APrimalStructure::BPOverrideCantBuildReasonString(int CantBuildRea
 // Parameters:
 // class AShooterPlayerController* ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bIsAccessAllowed               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bForInventoryOnly              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APrimalStructure::BPOverrideAllowStructureAccess(class AShooterPlayerController* ForPC, bool bIsAccessAllowed)
+bool APrimalStructure::BPOverrideAllowStructureAccess(class AShooterPlayerController* ForPC, bool bIsAccessAllowed, bool bForInventoryOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructure.BPOverrideAllowStructureAccess");
 
 	APrimalStructure_BPOverrideAllowStructureAccess_Params params;
 	params.ForPC = ForPC;
 	params.bIsAccessAllowed = bIsAccessAllowed;
+	params.bForInventoryOnly = bForInventoryOnly;
 
 	auto flags = fn->FunctionFlags;
 
@@ -30930,6 +30952,26 @@ bool APrimalStructureItemContainer::VerifyPinCode(int pinCode)
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalStructureItemContainer.UpdateTribeGroupInventoryRank
+// ()
+// Parameters:
+// unsigned char                  NewRank                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalStructureItemContainer::UpdateTribeGroupInventoryRank(unsigned char NewRank)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructureItemContainer.UpdateTribeGroupInventoryRank");
+
+	APrimalStructureItemContainer_UpdateTribeGroupInventoryRank_Params params;
+	params.NewRank = NewRank;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -46326,6 +46368,29 @@ struct FVector APrimalCharacter::GetTPVCameraOffset()
 }
 
 
+// Function ShooterGame.PrimalCharacter.GetSocketLocation
+// ()
+// Parameters:
+// struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector APrimalCharacter::GetSocketLocation(const struct FName& SocketName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.GetSocketLocation");
+
+	APrimalCharacter_GetSocketLocation_Params params;
+	params.SocketName = SocketName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalCharacter.GetSnapshotComponent
 // ()
 // Parameters:
@@ -52280,6 +52345,29 @@ bool APrimalDinoCharacter::IsAttacking()
 }
 
 
+// Function ShooterGame.PrimalDinoCharacter.IsAllowedToTransfer
+// ()
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalDinoCharacter::IsAllowedToTransfer(class UObject* WorldContextObject)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.IsAllowedToTransfer");
+
+	APrimalDinoCharacter_IsAllowedToTransfer_Params params;
+	params.WorldContextObject = WorldContextObject;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalDinoCharacter.IsActiveEventDino
 // ()
 // Parameters:
@@ -52413,6 +52501,27 @@ bool APrimalDinoCharacter::HasTarget()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.HasTarget");
 
 	APrimalDinoCharacter_HasTarget_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.HasSelfBuried
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalDinoCharacter::HasSelfBuried()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.HasSelfBuried");
+
+	APrimalDinoCharacter_HasSelfBuried_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -53291,6 +53400,48 @@ struct FRotator APrimalDinoCharacter::GetCurrentAimOffsetsRotation()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.GetCurrentAimOffsetsRotation");
 
 	APrimalDinoCharacter_GetCurrentAimOffsetsRotation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.GetColorSetNamesAsArray
+// ()
+// Parameters:
+// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FName> APrimalDinoCharacter::GetColorSetNamesAsArray()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.GetColorSetNamesAsArray");
+
+	APrimalDinoCharacter_GetColorSetNamesAsArray_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.GetColorSetInidcesAsString
+// ()
+// Parameters:
+// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+class FString APrimalDinoCharacter::GetColorSetInidcesAsString()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.GetColorSetInidcesAsString");
+
+	APrimalDinoCharacter_GetColorSetInidcesAsString_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -73864,6 +74015,26 @@ void UShooterCheatManager::ToggleClawStepping()
 }
 
 
+// Function ShooterGame.ShooterCheatManager.TOD
+// ()
+// Parameters:
+// class FString                  timeString                     (Parm, ZeroConstructor)
+
+void UShooterCheatManager::TOD(const class FString& timeString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.TOD");
+
+	UShooterCheatManager_TOD_Params params;
+	params.timeString = timeString;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.TestSteamRefreshItems
 // ()
 
@@ -78152,6 +78323,23 @@ void UShooterCheatManager::ClearMyBuffs()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ClearMyBuffs");
 
 	UShooterCheatManager_ClearMyBuffs_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ClearMessageOfTheDay
+// ()
+
+void UShooterCheatManager::ClearMessageOfTheDay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ClearMessageOfTheDay");
+
+	UShooterCheatManager_ClearMessageOfTheDay_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -93833,6 +94021,31 @@ class UClass* UVictoryCore::GetGrinderReplacementItem(class UClass* current)
 
 	UVictoryCore_GetGrinderReplacementItem_Params params;
 	params.current = current;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.VictoryCore.GetGPSCoords
+// ()
+// Parameters:
+// class UWorld*                  ForWorld                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 InLoc                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UVictoryCore::GetGPSCoords(class UWorld* ForWorld, const struct FVector& InLoc)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.GetGPSCoords");
+
+	UVictoryCore_GetGPSCoords_Params params;
+	params.ForWorld = ForWorld;
+	params.InLoc = InLoc;
 
 	auto flags = fn->FunctionFlags;
 

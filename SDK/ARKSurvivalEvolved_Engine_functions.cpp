@@ -2328,6 +2328,27 @@ bool AActor::IsDead()
 }
 
 
+// Function Engine.Actor.IsCorruptDino
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AActor::IsCorruptDino()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.IsCorruptDino");
+
+	AActor_IsCorruptDino_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.Actor.HasAuthority
 // ()
 // Parameters:

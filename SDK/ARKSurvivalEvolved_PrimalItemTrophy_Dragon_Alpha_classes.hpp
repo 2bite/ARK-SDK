@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophy_Dragon_Alpha.PrimalItemTrophy_Dragon_Alpha_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemTrophy_Dragon_Alpha_C : public UPrimalItemTrophy_Dragon_Beta_C
 {
 public:

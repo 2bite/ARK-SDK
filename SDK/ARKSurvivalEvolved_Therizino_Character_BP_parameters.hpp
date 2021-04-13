@@ -14,6 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Therizino_Character_BP.Therizino_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+struct ATherizino_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Therizino_Character_BP.Therizino_Character_BP_C.Cap Harvest Stats
 struct ATherizino_Character_BP_C_Cap_Harvest_Stats_Params
 {

@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Equus_Character_BP_Unicorn.Equus_Character_BP_Unicorn_C
-// 0x000D (0x2360 - 0x2353)
+// 0x000D (0x2370 - 0x2363)
 class AEquus_Character_BP_Unicorn_C : public AEquus_Character_BP_C
 {
 public:
-	unsigned char                                      UnknownData00[0x5];                                       // 0x2353(0x0005) MISSED OFFSET
-	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x2358(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x2363(0x0005) MISSED OFFSET
+	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x2368(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

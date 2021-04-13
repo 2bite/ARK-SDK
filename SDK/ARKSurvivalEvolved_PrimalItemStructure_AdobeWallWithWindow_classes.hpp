@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_AdobeWallWithWindow.PrimalItemStructure_AdobeWallWithWindow_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_AdobeWallWithWindow_C : public UPrimalItemStructure_BaseWallWithWindow_C
 {
 public:

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemCostume_BoneRaptor.PrimalItemCostume_BoneRaptor_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemCostume_BoneRaptor_C : public UPrimalItemCostumeGeneric_C
 {
 public:

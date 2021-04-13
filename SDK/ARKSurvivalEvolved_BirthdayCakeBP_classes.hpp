@@ -72,7 +72,7 @@ public:
 	bool BPPreventReleaseSeatingStructure(class AShooterCharacter** ForSitter);
 	void BPDefaultProcessEditText(class AShooterPlayerController** ForPC, class FString* TextToUse, bool* checkedBox);
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	void OnRep_bIsOpen();

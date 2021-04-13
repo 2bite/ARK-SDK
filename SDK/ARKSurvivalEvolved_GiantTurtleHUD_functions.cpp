@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GiantTurtleHUD.GiantTurtleHUD_C.Get_AbilityTextBlock_Text_1
-// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UGiantTurtleHUD_C::Get_AbilityTextBlock_Text_1()
+struct FText UGiantTurtleHUD_C::STATIC_Get_AbilityTextBlock_Text_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtleHUD.GiantTurtleHUD_C.Get_AbilityTextBlock_Text_1");
 

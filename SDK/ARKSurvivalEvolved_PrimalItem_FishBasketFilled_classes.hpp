@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItem_FishBasketFilled_C : public UPrimalItem_Base_C
 {
 public:
@@ -27,11 +27,11 @@ public:
 	}
 
 
-	void BPDrawItemIcon(class UCanvas** ItemCanvas, bool* bItemEnabled, struct FVector2D* ItemCanvasSize, struct FVector2D* ItemCanvasScale, struct FLinearColor* TheTintColor);
+	void STATIC_BPDrawItemIcon(class UCanvas** ItemCanvas, bool* bItemEnabled, struct FVector2D* ItemCanvasSize, struct FVector2D* ItemCanvasScale, struct FLinearColor* TheTintColor);
 	void SlottedTick(float* DeltaSeconds);
-	void BlueprintUsed();
-	class FString STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC);
-	bool STATIC_BPCanUse(bool* bIgnoreCooldown);
+	void STATIC_BlueprintUsed();
+	class FString BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC);
+	bool BPCanUse(bool* bIgnoreCooldown);
 	void ExecuteUbergraph_PrimalItem_FishBasketFilled(int EntryPoint);
 };
 

@@ -13,15 +13,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.VineCollisionCheck
-// (Exec, Native, Event, Static, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 // class ACharacter*              ActorToIgnore                  (Parm, ZeroConstructor, IsPlainOldData)
 // class ACharacter*              OtherActorToIgnore             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ForestKaiju_Vine_C::STATIC_VineCollisionCheck(const struct FVector& Start, const struct FVector& End, class ACharacter* ActorToIgnore, class ACharacter* OtherActorToIgnore, bool* ret)
+void ABP_ForestKaiju_Vine_C::STATIC_VineCollisionCheck(const struct FVector& Start, const struct FVector& End, class ACharacter* ActorToIgnore, class ACharacter* OtherActorToIgnore, bool* Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.VineCollisionCheck");
 
@@ -38,8 +38,8 @@ void ABP_ForestKaiju_Vine_C::STATIC_VineCollisionCheck(const struct FVector& Sta
 
 	fn->FunctionFlags = flags;
 
-	if (ret != nullptr)
-		*ret = params.ret;
+	if (Ret != nullptr)
+		*Ret = params.Ret;
 }
 
 
@@ -61,12 +61,12 @@ void ABP_ForestKaiju_Vine_C::OnRep_EndVineLocation()
 
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.TargetDataContainsTarget
-// (NetReliable, Native, Event, NetResponse, Static, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Native, Event, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ForestKaiju_Vine_C::STATIC_TargetDataContainsTarget(class APrimalCharacter* Target, bool* Result)
+void ABP_ForestKaiju_Vine_C::TargetDataContainsTarget(class APrimalCharacter* Target, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.TargetDataContainsTarget");
 
@@ -108,7 +108,7 @@ void ABP_ForestKaiju_Vine_C::Get_Current_Vine_End_Location(struct FVector* EndPo
 
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.GetVineTargets
-// (NetReliable, Native, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -129,9 +129,9 @@ void ABP_ForestKaiju_Vine_C::GetVineTargets(const struct FVector& Location)
 
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.UpdateVines
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Event, Static, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ABP_ForestKaiju_Vine_C::UpdateVines()
+void ABP_ForestKaiju_Vine_C::STATIC_UpdateVines()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.UpdateVines");
 
@@ -146,7 +146,7 @@ void ABP_ForestKaiju_Vine_C::UpdateVines()
 
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.InitVines
-// (NetReliable, NetRequest, Native, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_ForestKaiju_Vine_C::STATIC_InitVines()
 {

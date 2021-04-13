@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Thylaco_CanPounceOnTargetFromTree_DK.Thylaco_CanPounceOnTargetFromTree_DK_C.ReceiveConditionCheck
-// (NetRequest, Native, Event, Static, MulticastDelegate, Protected, HasOutParms, NetClient, Const)
+// (NetRequest, Exec, Event, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UThylaco_CanPounceOnTargetFromTree_DK_C::STATIC_ReceiveConditionCheck(class
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

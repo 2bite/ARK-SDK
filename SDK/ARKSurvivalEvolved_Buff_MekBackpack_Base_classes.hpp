@@ -32,7 +32,7 @@ public:
 	void OnSyncColorization();
 	void NotifySetRider(class AShooterCharacter* Rider);
 	void RestoreBackpackSaveData(const struct FMekBackpackData& SaveData);
-	void GetBackpackSaveData(struct FMekBackpackData* Data);
+	void STATIC_GetBackpackSaveData(struct FMekBackpackData* Data);
 	void NotifyInventoryChange(class UPrimalItem* Item, bool ItemAdded, bool ItemEquipped);
 	void BPActivated(class AActor** ForInstigator);
 	void SetBackpackMalfunctioned(bool IsBackpackDisabled);

@@ -38,7 +38,7 @@ public:
 
 
 	void ReceiveBeginPlay();
-	void TrapFish(class APrimalDinoCharacter* TrapFish, class APlayerController* ForPC);
+	void STATIC_TrapFish(class APrimalDinoCharacter* TrapFish, class APlayerController* ForPC);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();

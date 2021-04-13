@@ -22,14 +22,14 @@ struct ATropeognathus_Character_BP_C_ReceiveBeginPlay_Params
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.IsUsingWindGust
 struct ATropeognathus_Character_BP_C_IsUsingWindGust_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             StartTime;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.IsUsingForwardInput
 struct ATropeognathus_Character_BP_C_IsUsingForwardInput_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPUnsetupDinoTameable
@@ -218,8 +218,8 @@ struct ATropeognathus_Character_BP_C_BPGetCrosshairLocation_Params
 	float                                              OutY;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ConsumeItem
-struct ATropeognathus_Character_BP_C_ConsumeItem_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.consumeItem
+struct ATropeognathus_Character_BP_C_consumeItem_Params
 {
 	class UClass*                                      Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -247,7 +247,7 @@ struct ATropeognathus_Character_BP_C_Fire_Flak_Cannon_Params
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Has Saddle Public
 struct ATropeognathus_Character_BP_C_Has_Saddle_Public_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               RetIsSuperSaddle;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -296,14 +296,14 @@ struct ATropeognathus_Character_BP_C_Get_Current_Percent_Of_Max_Fly_Speed_Public
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Is Using Super Flight Public
 struct ATropeognathus_Character_BP_C_Is_Using_Super_Flight_Public_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             StartedEndingTime;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.IsUsingSuperFlight
 struct ATropeognathus_Character_BP_C_IsUsingSuperFlight_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             StartedEndingTime;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -369,7 +369,7 @@ struct ATropeognathus_Character_BP_C_BPDidSetCarriedCharacter_Params
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.HasSaddle
 struct ATropeognathus_Character_BP_C_HasSaddle_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               RetIsSuperSaddle;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -419,7 +419,7 @@ struct ATropeognathus_Character_BP_C_DoWing_GustAOE_Params
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Is Diving Public
 struct ATropeognathus_Character_BP_C_Is_Diving_Public_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             TimeDiveStart;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -452,7 +452,7 @@ struct ATropeognathus_Character_BP_C_UpdateDiving_Params
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.IsDiving
 struct ATropeognathus_Character_BP_C_IsDiving_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             TimeDiveStart;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             TimeStoppedDiving;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -460,7 +460,7 @@ struct ATropeognathus_Character_BP_C_IsDiving_Params
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.GetAnimBP
 struct ATropeognathus_Character_BP_C_GetAnimBP_Params
 {
-	class UTropeognathus_AnimBP_C*                     ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UTropeognathus_AnimBP_C*                     Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.GetCurrentPercentOfMaxFlySpeed
@@ -688,7 +688,7 @@ struct ATropeognathus_Character_BP_C_ProcessLatching_Params
 struct ATropeognathus_Character_BP_C_TryLatch_Params
 {
 	struct FVector                                     Offset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               BackwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.UserConstructionScript
@@ -696,60 +696,60 @@ struct ATropeognathus_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_216
-struct ATropeognathus_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_216_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_212
+struct ATropeognathus_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_212_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_215
-struct ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_215_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_211
+struct ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_211_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_214
-struct ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_214_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_210
+struct ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_210_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_213
-struct ATropeognathus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_213_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_209
+struct ATropeognathus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_209_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_212
-struct ATropeognathus_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_212_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_208
+struct ATropeognathus_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_208_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_66
-struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_66_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_62
+struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_62_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_211
-struct ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_211_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_207
+struct ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_207_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_210
-struct ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_210_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_206
+struct ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_206_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_65
-struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_65_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_61
+struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_61_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_64
-struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_64_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_60
+struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_60_Params
 {
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Latch
 struct ATropeognathus_Character_BP_C_Latch_Params
 {
-	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               BackwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.LatchStartAnimation

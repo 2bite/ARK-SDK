@@ -47,7 +47,7 @@ public:
 	}
 
 
-	void STATIC_OnRep_Colors();
+	void OnRep_Colors();
 	void OnRep_ScoutItemClient();
 	void Set_Colors(TArray<struct FLinearColor>* Colors);
 	void Tick(float DeltaSeconds);

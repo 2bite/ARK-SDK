@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemConsumable_Seed_DefensePlant.PrimalItemConsumable_Seed_DefensePlant_C.BPAllowRemoteAddToInventory
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalInventoryComponent** invComp                        (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ByPC                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bRequestedByPlayer             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalItemConsumable_Seed_DefensePlant_C::STATIC_BPAllowRemoteAddToInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer)
+bool UPrimalItemConsumable_Seed_DefensePlant_C::BPAllowRemoteAddToInventory(class UPrimalInventoryComponent** invComp, class AShooterPlayerController** ByPC, bool* bRequestedByPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_Seed_DefensePlant.PrimalItemConsumable_Seed_DefensePlant_C.BPAllowRemoteAddToInventory");
 
@@ -30,7 +30,6 @@ bool UPrimalItemConsumable_Seed_DefensePlant_C::STATIC_BPAllowRemoteAddToInvento
 	params.bRequestedByPlayer = bRequestedByPlayer;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

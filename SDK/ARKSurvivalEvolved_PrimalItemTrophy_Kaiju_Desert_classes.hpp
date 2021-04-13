@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophy_Kaiju_Desert.PrimalItemTrophy_Kaiju_Desert_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemTrophy_Kaiju_Desert_C : public UPrimalItemTrophy_Broodmother_Gamma_C
 {
 public:

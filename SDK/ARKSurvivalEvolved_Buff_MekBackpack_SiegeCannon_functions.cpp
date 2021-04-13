@@ -48,7 +48,7 @@ struct FVector ABuff_MekBackpack_SiegeCannon_C::BPAdjustImpulseFromDamage(struct
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BuffTickServer
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Native, NetResponse, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +60,7 @@ void ABuff_MekBackpack_SiegeCannon_C::BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,7 +193,7 @@ void ABuff_MekBackpack_SiegeCannon_C::BPInstigatorPossessed(class AController** 
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.GetBackpackSaveData
-// (NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Exec, Native, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
@@ -296,9 +297,9 @@ void ABuff_MekBackpack_SiegeCannon_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.OnRep_SiegeCannonMalfunctioned
-// (NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_MekBackpack_SiegeCannon_C::OnRep_SiegeCannonMalfunctioned()
+void ABuff_MekBackpack_SiegeCannon_C::STATIC_OnRep_SiegeCannonMalfunctioned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.OnRep_SiegeCannonMalfunctioned");
 
@@ -552,7 +553,7 @@ void ABuff_MekBackpack_SiegeCannon_C::AllowMekPistol(bool* Allowed)
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.GetLaunchParams
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AMek_Character_BP_C*     Mek                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -583,11 +584,11 @@ void ABuff_MekBackpack_SiegeCannon_C::GetLaunchParams(class AMek_Character_BP_C*
 
 
 // Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BuffTickClient
-// (Net, Exec, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_MekBackpack_SiegeCannon_C::BuffTickClient(float* DeltaTime)
+void ABuff_MekBackpack_SiegeCannon_C::STATIC_BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_SiegeCannon.Buff_MekBackpack_SiegeCannon_C.BuffTickClient");
 

@@ -163,7 +163,7 @@ void UForestKaiju_AttackAIState_Grab_C::OnBeginEvent(class UPrimalAIState** InPa
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.VineRetracted
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, NetResponse, Static, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<struct FVineTargetData> Targets                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -226,7 +226,7 @@ void UForestKaiju_AttackAIState_Grab_C::Debug_Draw_Sphere(const struct FVector& 
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.AnimNotifyGrabAttackSmash
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Event, NetResponse, Static, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UForestKaiju_AttackAIState_Grab_C::STATIC_AnimNotifyGrabAttackSmash()
 {
@@ -267,9 +267,9 @@ void UForestKaiju_AttackAIState_Grab_C::DebugDrawLine(const struct FVector& Star
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.SpawnVines
-// (Net, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UForestKaiju_AttackAIState_Grab_C::SpawnVines()
+void UForestKaiju_AttackAIState_Grab_C::STATIC_SpawnVines()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.SpawnVines");
 

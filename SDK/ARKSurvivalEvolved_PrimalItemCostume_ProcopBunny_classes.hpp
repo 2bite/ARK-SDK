@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemCostume_ProcopBunny.PrimalItemCostume_ProcopBunny_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemCostume_ProcopBunny_C : public UPrimalItemCostumeGeneric_C
 {
 public:

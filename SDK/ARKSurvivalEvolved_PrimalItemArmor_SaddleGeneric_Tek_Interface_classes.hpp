@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void IGet_Max_Ammo(int* retVal);
+	void IGet_Max_Ammo(int* RetVal);
 	void ISetElementToMax();
 };
 

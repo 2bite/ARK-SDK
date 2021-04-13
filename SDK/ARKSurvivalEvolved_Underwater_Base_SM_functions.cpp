@@ -71,9 +71,9 @@ bool AUnderwater_Base_SM_C::BPForceConsideredEnemyFoundation(class APlayerContro
 
 
 // Function Underwater_Base_SM.Underwater_Base_SM_C.ChangedCompartmentFloodState
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
-void AUnderwater_Base_SM_C::STATIC_ChangedCompartmentFloodState()
+void AUnderwater_Base_SM_C::ChangedCompartmentFloodState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Underwater_Base_SM.Underwater_Base_SM_C.ChangedCompartmentFloodState");
 

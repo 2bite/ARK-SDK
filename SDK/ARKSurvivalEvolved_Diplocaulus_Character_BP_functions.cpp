@@ -166,11 +166,11 @@ void ADiplocaulus_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMov
 
 
 // Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.ChangeLandSwimState
-// (NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            State                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADiplocaulus_Character_BP_C::STATIC_ChangeLandSwimState(int State)
+void ADiplocaulus_Character_BP_C::ChangeLandSwimState(int State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.ChangeLandSwimState");
 
@@ -211,13 +211,13 @@ bool ADiplocaulus_Character_BP_C::BPPreventRiding(class AShooterCharacter** ByPa
 
 
 // Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.BPGetMultiUseEntries
-// (Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ADiplocaulus_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ADiplocaulus_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.BPGetMultiUseEntries");
 

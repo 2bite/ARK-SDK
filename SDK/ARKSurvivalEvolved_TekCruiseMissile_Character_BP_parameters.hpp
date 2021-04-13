@@ -171,7 +171,7 @@ struct ATekCruiseMissile_Character_BP_C_BP_PreventMovementMode_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ServerIsFiringItemInInventory
 struct ATekCruiseMissile_Character_BP_C_ServerIsFiringItemInInventory_Params
 {
-	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BP_InterceptTurnInput
@@ -248,7 +248,7 @@ struct ATekCruiseMissile_Character_BP_C_ReceiveTick_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ScoutIsFirstPerson
 struct ATekCruiseMissile_Character_BP_C_ScoutIsFirstPerson_Params
 {
-	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.SetTargetImpactMaterial

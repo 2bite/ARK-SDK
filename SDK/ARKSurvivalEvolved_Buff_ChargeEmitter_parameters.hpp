@@ -48,7 +48,7 @@ struct ABuff_ChargeEmitter_C_GetChargeVariableExternalEmitter_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.ShouldProcessChargeConsumedByReceivers
@@ -165,7 +165,7 @@ struct ABuff_ChargeEmitter_C_ChargeVariableEvent_Params
 	bool*                                              bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double*                                            dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int*                                               ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.OnEmitterRangeChanged

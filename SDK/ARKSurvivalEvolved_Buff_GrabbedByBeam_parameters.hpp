@@ -37,7 +37,7 @@ struct ABuff_GrabbedByBeam_C_GetOwnerDragWeight_Params
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.GetMaxProgress
 struct ABuff_GrabbedByBeam_C_GetMaxProgress_Params
 {
-	float                                              MaxProgress;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              maxProgress;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.Calculate Progress

@@ -291,7 +291,7 @@ public:
 
 
 	void GetNumBatteries(int* numBatteries);
-	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue);
+	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue);
 	void BPRefreshedStructureColors();
 	void PlacementInitialization(class AShooterWeapon* constructorWeapon);
 	void Placement_TickActions(bool* reachedDestination);
@@ -315,15 +315,15 @@ public:
 	void GetLight_ModeValues(int LightMode, float* Intensity, float* Emissiveness, float* Range, float* chargeEmittedPerSecond, float* chargeConsumedPerSecond);
 	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void FadeInLightTimeline__FinishedFunc();
 	void FadeInLightTimeline__UpdateFunc();
-	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue);
+	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue);
 	void Charge_Variable_Event_Trigger_Multicast_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iVariable);
 	void BPUnstasis();
 	void ReceiveBeginPlay();
-	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue);
+	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue);
 	void CheckForBatteriesAndUpdate_Multicast();
 	void Interface_Check_for_Batteries_and_Update_Multicast();
 	void BPApplyCustomDurabilityOnPickup(class UPrimalItem** pickedup);
@@ -347,12 +347,12 @@ public:
 	void ChargeVariableEventDoubleInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
 	void Charge_Variable_Event_Double_MulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
 	void CreateChargeBuff();
-	void DeactivateLantern(bool Fast);
-	void DeactivateLantern_Multicast(bool Fast);
-	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
-	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
-	void ChargeVariableEvent_Int(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
-	void ChargeVariableEvent_Int_Multicast(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
+	void DeactivateLantern(bool fast);
+	void DeactivateLantern_Multicast(bool fast);
+	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
+	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
+	void ChargeVariableEvent_Int(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
+	void ChargeVariableEvent_Int_Multicast(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
 	void InitialUpdateMaterial(bool StaticMesh);
 	void OnChargeFromBatteriesChanged_Multicast(float NewValue);
 	void StartPlacement_Multicast(class AShooterCharacter* constructor);

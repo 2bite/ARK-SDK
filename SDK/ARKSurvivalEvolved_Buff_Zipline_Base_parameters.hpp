@@ -133,7 +133,7 @@ struct ABuff_Zipline_Base_C_SetZiplineControlRotation_Params
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.PlayTurnAnimation
 struct ABuff_Zipline_Base_C_PlayTurnAnimation_Params
 {
-	class UAnimMontage*                                Override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -368,38 +368,38 @@ struct ABuff_Zipline_Base_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_100
-struct ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_100_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_96
+struct ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_96_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_99
-struct ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_99_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_95
+struct ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_95_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_98
-struct ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_98_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_94
+struct ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_94_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_97
-struct ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_97_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_93
+struct ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_93_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_51
-struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_51_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_47
+struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_47_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_50
-struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_50_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_46
+struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_46_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_49
-struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_49_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_45
+struct ABuff_Zipline_Base_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_45_Params
 {
 };
 

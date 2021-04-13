@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BeeHive.BeeHive_C.BlueprintDrawHUD
-// (Net, Exec, Native, Event, Static, MulticastDelegate, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABeeHive_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void ABeeHive_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BeeHive.BeeHive_C.BlueprintDrawHUD");
 
@@ -190,13 +190,13 @@ bool ABeeHive_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function BeeHive.BeeHive_C.BPGetMultiUseEntries
-// (Net, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, NetServer, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABeeHive_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABeeHive_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BeeHive.BeeHive_C.BPGetMultiUseEntries");
 
@@ -308,15 +308,17 @@ void ABeeHive_C::ReceiveAnyDamage(float* Damage, class UDamageType** DamageType,
 // Parameters:
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsAccessAllowed               (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bForInventoryOnly              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABeeHive_C::BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed)
+bool ABeeHive_C::BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed, bool* bForInventoryOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BeeHive.BeeHive_C.BPOverrideAllowStructureAccess");
 
 	ABeeHive_C_BPOverrideAllowStructureAccess_Params params;
 	params.ForPC = ForPC;
 	params.bIsAccessAllowed = bIsAccessAllowed;
+	params.bForInventoryOnly = bForInventoryOnly;
 
 	auto flags = fn->FunctionFlags;
 

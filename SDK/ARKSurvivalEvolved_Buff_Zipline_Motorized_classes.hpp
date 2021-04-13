@@ -69,10 +69,10 @@ public:
 	}
 
 
-	void UpdateFX();
+	void STATIC_UpdateFX();
 	struct FVector BPOverrideWeaponBob(struct FVector* InWeaponBob);
 	void BuffTickClient(float* DeltaTime);
-	void Try_Refill_Gas();
+	void STATIC_Try_Refill_Gas();
 	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void GetMotorAndParentItem(class UObject* Actor, class UPrimalItem** ParentItem, class UPrimalItem** MyItemSkin);
 	void TickMoveAlongZipline();

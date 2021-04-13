@@ -17,7 +17,7 @@ namespace sdk
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.IsDebugMode
 struct UDinoAttackState_Spindles_MinigunBase_C_IsDebugMode_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DinoAttackState_Spindles_MinigunBase.DinoAttackState_Spindles_MinigunBase_C.GetDamageForSpine

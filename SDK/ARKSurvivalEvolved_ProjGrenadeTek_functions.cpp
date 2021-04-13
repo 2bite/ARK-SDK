@@ -13,19 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjGrenadeTek.ProjGrenadeTek_C.BPProjectileBounced
-// (NetReliable, NetRequest, Native, NetResponse, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Event, Static, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FHitResult              ImpactResult                   (Parm, OutParm, ReferenceParm)
 // struct FVector                 ImpactVelocity                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void AProjGrenadeTek_C::BPProjectileBounced(struct FHitResult* ImpactResult, struct FVector* ImpactVelocity)
+void AProjGrenadeTek_C::STATIC_BPProjectileBounced(struct FHitResult* ImpactResult, struct FVector* ImpactVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjGrenadeTek.ProjGrenadeTek_C.BPProjectileBounced");
 
 	AProjGrenadeTek_C_BPProjectileBounced_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

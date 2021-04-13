@@ -33,14 +33,14 @@ public:
 	}
 
 
-	void Grab_Character(class APrimalCharacter* Character, bool* return_value);
+	void Grab_Character(class APrimalCharacter* Character, bool* Return_Value);
 	bool Can_Grab_Character(class APrimalCharacter* ACharacter, int PassengerSeatIndex);
 	void Reset_State();
 	void OnEndEvent();
 	void OnTickEvent(float* DeltaSeconds);
 	void StartAnimationStateEvent(struct FName* CustomEventName, TEnumAsByte<ENetRole>* Role);
 	void GetAttackSocketLocations(TArray<struct UObject_FTransform>* Locations);
-	void STATIC_Find_Best_Grab_Target(class APrimalCharacter** bestTarget);
+	void Find_Best_Grab_Target(class APrimalCharacter** bestTarget);
 	void Get_Best_Passenger_Candidate(const struct FVector& SocketWorldPos, TArray<class AActor*>* Chars, class AActor** BestChar);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void ExecuteUbergraph_DinoAttackStateFlyerPassengerGrab(int EntryPoint);

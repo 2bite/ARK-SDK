@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Volcano_Ankylo_Character_BP.Volcano_Ankylo_Character_BP_C
-// 0x0000 (0x2198 - 0x2198)
+// 0x0000 (0x21A8 - 0x21A8)
 class AVolcano_Ankylo_Character_BP_C : public AAnkylo_Character_BP_C
 {
 public:

@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lamprey_Character.Lamprey_Character_C
-// 0x0020 (0x21A8 - 0x2188)
+// 0x0020 (0x21B8 - 0x2198)
 class ALamprey_Character_C : public AInsect_Character_Base_C
 {
 public:
-	class UParticleSystemComponent*                    Effects;                                                  // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDinoCharacterStatusComponent_BP_Leech_C*    DinoCharacterStatus_BP_Leech_C1;                          // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                ChargeColor;                                              // 0x2198(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystemComponent*                    Effects;                                                  // 0x2198(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Leech_C*    DinoCharacterStatus_BP_Leech_C1;                          // 0x21A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                ChargeColor;                                              // 0x21A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

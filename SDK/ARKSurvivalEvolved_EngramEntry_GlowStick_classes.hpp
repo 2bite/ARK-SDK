@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void ExecuteUbergraph_EngramEntry_GlowStick(int EntryPoint);
+	void ExecuteUbergraph_EngramEntry_Glowstick(int EntryPoint);
 };
 
 

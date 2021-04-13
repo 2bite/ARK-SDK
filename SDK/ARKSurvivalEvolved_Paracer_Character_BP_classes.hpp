@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Paracer_Character_BP.Paracer_Character_BP_C
-// 0x0010 (0x2198 - 0x2188)
+// 0x0010 (0x21A8 - 0x2198)
 class AParacer_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UBoxComponent*                               PlatformSaddleBuildArea;                                  // 0x2188(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDinoCharacterStatusComponent_BP_Paracer_C*  DinoCharacterStatus_BP_Paracer_C1;                        // 0x2190(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               PlatformSaddleBuildArea;                                  // 0x2198(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Paracer_C*  DinoCharacterStatus_BP_Paracer_C1;                        // 0x21A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

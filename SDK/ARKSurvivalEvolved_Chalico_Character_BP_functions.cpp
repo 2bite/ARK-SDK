@@ -284,7 +284,7 @@ bool AChalico_Character_BP_C::BPPreventRiding(class AShooterCharacter** ByPawn, 
 
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, Static, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -398,9 +398,9 @@ void AChalico_Character_BP_C::CanSitDown(bool* canSit)
 
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.Look for Chalicos
-// (NetRequest, Event, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (Exec, Static, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void AChalico_Character_BP_C::Look_for_Chalicos()
+void AChalico_Character_BP_C::STATIC_Look_for_Chalicos()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Chalico_Character_BP.Chalico_Character_BP_C.Look for Chalicos");
 

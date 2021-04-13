@@ -35,7 +35,7 @@ public:
 	}
 
 
-	void STATIC_BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController);
+	void BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController);
 	bool SetPlayerHexagonCount(int* NewHexagonCount);
 	int GetPlayerHexagonCount();
 	void BPCreatedNewPlayerData();

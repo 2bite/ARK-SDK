@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function StructureTekCavePortalTerminal.StructureTekCavePortalTerminal_C.BPTryMultiUse
-// (NetRequest, Native, Event, Static, NetMulticast, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, Static, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -39,13 +39,13 @@ bool AStructureTekCavePortalTerminal_C::STATIC_BPTryMultiUse(class APlayerContro
 
 
 // Function StructureTekCavePortalTerminal.StructureTekCavePortalTerminal_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Event, Static, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructureTekCavePortalTerminal_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructureTekCavePortalTerminal_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTekCavePortalTerminal.StructureTekCavePortalTerminal_C.BPGetMultiUseEntries");
 
@@ -53,6 +53,7 @@ TArray<struct FMultiUseEntry> AStructureTekCavePortalTerminal_C::BPGetMultiUseEn
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

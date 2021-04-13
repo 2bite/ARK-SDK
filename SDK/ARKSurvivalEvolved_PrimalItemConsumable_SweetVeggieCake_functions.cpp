@@ -36,7 +36,7 @@ bool UPrimalItemConsumable_SweetVeggieCake_C::BPCanUse(bool* bIgnoreCooldown)
 
 
 // Function PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C.BPPreUseItem
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Private, Protected, HasOutParms, NetClient, BlueprintEvent, Const)
+// (Exec, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void UPrimalItemConsumable_SweetVeggieCake_C::BPPreUseItem()
 {
@@ -45,7 +45,6 @@ void UPrimalItemConsumable_SweetVeggieCake_C::BPPreUseItem()
 	UPrimalItemConsumable_SweetVeggieCake_C_BPPreUseItem_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

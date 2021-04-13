@@ -66,14 +66,14 @@ void AWeapMiningDrill_C::ReceiveDestroyed()
 }
 
 
-// Function WeapMiningDrill.WeapMiningDrill_C.CreateDynamicMATS
+// Function WeapMiningDrill.WeapMiningDrill_C.CreateDynamicMats
 // ()
 
-void AWeapMiningDrill_C::CreateDynamicMATS()
+void AWeapMiningDrill_C::CreateDynamicMats()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeapMiningDrill.WeapMiningDrill_C.CreateDynamicMATS");
+	static auto fn = UObject::FindObject<UFunction>("Function WeapMiningDrill.WeapMiningDrill_C.CreateDynamicMats");
 
-	AWeapMiningDrill_C_CreateDynamicMATS_Params params;
+	AWeapMiningDrill_C_CreateDynamicMats_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -106,7 +106,7 @@ void AWeapMiningDrill_C::BPSpawnHarvestEffects(TArray<struct FVector>* Impacts)
 
 
 // Function WeapMiningDrill.WeapMiningDrill_C.CalculateTargetPosition
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -117,7 +117,6 @@ struct FVector AWeapMiningDrill_C::CalculateTargetPosition()
 	AWeapMiningDrill_C_CalculateTargetPosition_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,7 +178,7 @@ int AWeapMiningDrill_C::BPWeaponDealDamage(int* DamageAmount, class UClass** Dam
 
 
 // Function WeapMiningDrill.WeapMiningDrill_C.BPPreFireEvent
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, Const)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected)
 // Parameters:
 // struct FVector*                Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                ShootDir                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -193,7 +192,6 @@ void AWeapMiningDrill_C::STATIC_BPPreFireEvent(struct FVector* Origin, struct FV
 	params.ShootDir = ShootDir;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

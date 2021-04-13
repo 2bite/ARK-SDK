@@ -433,14 +433,14 @@ struct ARockDrake_Character_BP_C_Replicate_Index_Update_Target_TPV_Camera_Offset
 struct ARockDrake_Character_BP_C_AddRiderToCamoFadeQueue_Params
 {
 	class AShooterCharacter*                           Rider;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               enterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               EnterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bInstant;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.ActivateRiderCamoParticles
 struct ARockDrake_Character_BP_C_ActivateRiderCamoParticles_Params
 {
-	bool                                               enterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               EnterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class AShooterCharacter*                           specificRider;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -685,8 +685,8 @@ struct ARockDrake_Character_BP_C_FadeToInvisible_Rider__UpdateFunc_Params
 {
 };
 
-// Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_118
-struct ARockDrake_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_118_Params
+// Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_114
+struct ARockDrake_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_114_Params
 {
 };
 

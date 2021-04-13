@@ -12,6 +12,29 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Spino_Character_BP.Spino_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+// ()
+// Parameters:
+// int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName ASpino_Character_BP_C::GetSocketForMeleeTraceForHitBlockers(int* AttackIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Spino_Character_BP.Spino_Character_BP_C.GetSocketForMeleeTraceForHitBlockers");
+
+	ASpino_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params params;
+	params.AttackIndex = AttackIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Spino_Character_BP.Spino_Character_BP_C.BlueprintCanAttack
 // ()
 // Parameters:

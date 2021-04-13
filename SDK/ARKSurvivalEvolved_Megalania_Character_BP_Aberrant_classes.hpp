@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Megalania_Character_BP_Aberrant.Megalania_Character_BP_Aberrant_C
-// 0x0000 (0x2F08 - 0x2F08)
+// 0x0000 (0x2F18 - 0x2F18)
 class AMegalania_Character_BP_Aberrant_C : public AMegalania_Character_BP_C
 {
 public:

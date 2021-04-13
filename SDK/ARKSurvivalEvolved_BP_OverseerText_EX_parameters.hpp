@@ -71,7 +71,7 @@ struct ABP_OverseerText_EX_C_RenderGlyph_Params
 	class FString                                      GlyphRepresentation;                                      // (Parm, ZeroConstructor)
 	struct FLinearColor                                Color;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class UTextRenderComponent*                        TextRender;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               OffsetLeft;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               offsetLeft;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Offset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

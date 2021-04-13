@@ -110,10 +110,10 @@ public:
 	}
 
 
-	class FString STATIC_BPGetDebugInfoString();
+	class FString BPGetDebugInfoString();
 	class APrimalCharacter* BPOverrideTalkerCharacter();
 	void ReceiveBeginPlay();
-	void IsLocalScout(bool* retVal);
+	void IsLocalScout(bool* RetVal);
 	bool BPIsValidUnStasisCaster();
 	bool BPOverrideIsNetRelevantFor(class APlayerController** RealViewer, class AActor** Viewer, struct FVector* SrcLocation);
 	void Scout_PossessionChange_Pending(class AScout_Character_BP_C* Scout);

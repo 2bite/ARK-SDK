@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bigfoot_Character_BP_Aberrant.Bigfoot_Character_BP_Aberrant_C
-// 0x0000 (0x2968 - 0x2968)
+// 0x0000 (0x2978 - 0x2978)
 class ABigfoot_Character_BP_Aberrant_C : public ABigfoot_Character_BP_C
 {
 public:

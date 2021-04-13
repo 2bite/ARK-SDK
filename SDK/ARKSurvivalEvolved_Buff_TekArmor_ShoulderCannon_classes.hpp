@@ -144,36 +144,36 @@ public:
 	}
 
 
-	void STATIC_BPDeactivated(class AActor** ForInstigator);
-	struct UObject_FTransform STATIC_ClampFireTransform(struct UObject_FTransform* InTransform);
+	void BPDeactivated(class AActor** ForInstigator);
+	struct UObject_FTransform ClampFireTransform(struct UObject_FTransform* InTransform);
 	void OnRep_Overheated();
 	void OnRep_Activated();
 	void UpdateSound(int ModeIndex);
 	void STATIC_IsAllowedToFire(bool* Allowed);
-	void UpdateTarget(float DeltaTime);
+	void STATIC_UpdateTarget(float DeltaTime);
 	void UpdateWeaponHeat(float A);
 	float ClampPitchByYaw(float Yaw, float Pitch);
 	void UpdateAmmo(float DeltaTime);
 	void UseAlternateSocket(bool* UseAlt);
 	bool CanAimAtTarget(class AActor* Target);
-	void STATIC_Update_Fire_Mode();
+	void Update_Fire_Mode();
 	void BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void DrawBuffFloatingHUD(int* BuffIndex, class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale);
 	void Calculate_Ready_to_Fire();
 	bool IsValidTarget(class APrimalCharacter* TargetChar);
-	void TryFire_Weapon(const struct UObject_FTransform& AimTransform);
+	void STATIC_TryFire_Weapon(const struct UObject_FTransform& AimTransform);
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
-	struct UObject_FTransform ApplyAccuracy(struct UObject_FTransform* InTransform);
+	struct UObject_FTransform STATIC_ApplyAccuracy(struct UObject_FTransform* InTransform);
 	void SpawnProjectile(struct UObject_FTransform* InTransform);
-	void IsElectricalStormActive(bool* _return);
-	void STATIC_Update_Weapon_Firing(float DeltaSeconds);
-	void STATIC_BPSetupForInstigator(class AActor** ForInstigator);
+	void IsElectricalStormActive(bool* Return);
+	void Update_Weapon_Firing(float DeltaSeconds);
+	void BPSetupForInstigator(class AActor** ForInstigator);
 	struct FVector GetTargetPos();
-	void Update_Weapon_Position(float DeltaSeconds);
-	void UpdateWeaponAim(float DeltaSeconds);
+	void STATIC_Update_Weapon_Position(float DeltaSeconds);
+	void STATIC_UpdateWeaponAim(float DeltaSeconds);
 	void BuffTickServer(float* DeltaTime);
 	void BuffTickClient(float* DeltaTime);
 	bool PreventBlockingWithShield();

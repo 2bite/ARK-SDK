@@ -36,7 +36,7 @@ public:
 	bool                                               bDontSpawnOutOfView;                                      // 0x009D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bOnlySpawnIfFirstPersonMeshVisible;                       // 0x009E(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x1];                                       // 0x009F(0x0001) MISSED OFFSET
-	struct FVector                                     particleScale;                                            // 0x00A0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     ParticleScale;                                            // 0x00A0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bUseComponentTransform;                                   // 0x00AC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bOnlySpawnInThirdPerson;                                  // 0x00AD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bOnlySpawnInFirstPerson;                                  // 0x00AE(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -50,7 +50,7 @@ public:
 
 
 	class FString GetNotifyName();
-	bool STATIC_Received_Notify(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation);
+	bool Received_Notify(class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation);
 	void ExecuteUbergraph_AnimNotify_PlayParticleEffect(int EntryPoint);
 };
 

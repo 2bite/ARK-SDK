@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicTrike_Character_BP.BionicTrike_Character_BP_C
-// 0x0000 (0x28A3 - 0x28A3)
+// 0x0000 (0x28B3 - 0x28B3)
 class ABionicTrike_Character_BP_C : public ATrike_Character_BP_C
 {
 public:

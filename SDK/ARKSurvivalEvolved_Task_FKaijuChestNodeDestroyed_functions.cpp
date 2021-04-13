@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Task_FKaijuChestNodeDestroyed.Task_FKaijuChestNodeDestroyed_C.Wipe Out All Poison Trees And Wyverns
-// (NetReliable, NetRequest, Exec, Native, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UTask_FKaijuChestNodeDestroyed_C::Wipe_Out_All_Poison_Trees_And_Wyverns()
 {

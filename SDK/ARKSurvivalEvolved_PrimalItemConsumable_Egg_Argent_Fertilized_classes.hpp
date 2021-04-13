@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Egg_Argent_Fertilized.PrimalItemConsumable_Egg_Argent_Fertilized_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_Egg_Argent_Fertilized_C : public UPrimalItemConsumable_Egg_Argent_C
 {
 public:

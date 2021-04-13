@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Snow_Rhino_Character_BP.Snow_Rhino_Character_BP_C
-// 0x0000 (0x2194 - 0x2194)
+// 0x0000 (0x21A4 - 0x21A4)
 class ASnow_Rhino_Character_BP_C : public ARhino_Character_BP_C
 {
 public:

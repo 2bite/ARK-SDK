@@ -42,16 +42,16 @@ public:
 
 
 	void GetTimeBasedAlpha(float* Alpha);
-	struct FStatusValueModifierDescription GetBuffDescription();
+	struct FStatusValueModifierDescription STATIC_GetBuffDescription();
 	void DrawActiveStateText(int ActiveState, class AShooterHUD* HUD, float XPos, float YPos, float Scale);
 	void GetActiveTameState(class APrimalDinoCharacter* MyRidingDino, int* IsInState);
 	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void BuffTickServer(float* DeltaTime);
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
 	void UserConstructionScript();
-	void InpActEvt_Jump_K2Node_InputActionEvent_130();
-	void InpActEvt_Use_K2Node_InputActionEvent_129();
-	void InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_58();
+	void InpActEvt_Jump_K2Node_InputActionEvent_126();
+	void InpActEvt_Use_K2Node_InputActionEvent_125();
+	void InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_54();
 	void ReceiveBeginPlay();
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_125(float AxisValue);
 	void ServerTameEvent();

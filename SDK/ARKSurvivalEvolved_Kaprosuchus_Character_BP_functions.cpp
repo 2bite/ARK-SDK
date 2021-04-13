@@ -38,13 +38,13 @@ bool AKaprosuchus_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC,
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AKaprosuchus_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AKaprosuchus_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BPGetMultiUseEntries");
 
@@ -87,7 +87,7 @@ void AKaprosuchus_Character_BP_C::Play_Leap_FX(int MovementMode, bool IsLeapStar
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.EvaluateHeightInWater
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Private, Protected, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           NearSurface                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -172,12 +172,12 @@ void AKaprosuchus_Character_BP_C::BPTimerServer()
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BlueprintCanRiderAttack
-// (NetReliable, NetRequest, Event, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AKaprosuchus_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
+bool AKaprosuchus_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.BlueprintCanRiderAttack");
 
@@ -195,7 +195,7 @@ bool AKaprosuchus_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.CalcLeapImpulse
-// (NetReliable, NetRequest, Exec, Native, Event, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, NetMulticast, MulticastDelegate, Private, Protected, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 RetImpulse                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -206,7 +206,6 @@ void AKaprosuchus_Character_BP_C::CalcLeapImpulse(struct FVector* RetImpulse)
 	AKaprosuchus_Character_BP_C_CalcLeapImpulse_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -247,11 +246,11 @@ bool AKaprosuchus_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Di
 
 
 // Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.ChangeGroundSwimAttackAnims
-// (NetReliable, NetRequest, Native, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int                            NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AKaprosuchus_Character_BP_C::STATIC_ChangeGroundSwimAttackAnims(int NewState)
+void AKaprosuchus_Character_BP_C::ChangeGroundSwimAttackAnims(int NewState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Kaprosuchus_Character_BP.Kaprosuchus_Character_BP_C.ChangeGroundSwimAttackAnims");
 

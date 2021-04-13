@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_PipeFlex_Stone.PrimalItemStructure_PipeFlex_Stone_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_PipeFlex_Stone_C : public UPrimalItemStructure_BaseStonePipe_C
 {
 public:

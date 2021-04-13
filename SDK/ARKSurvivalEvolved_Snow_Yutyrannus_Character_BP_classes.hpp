@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Snow_Yutyrannus_Character_BP.Snow_Yutyrannus_Character_BP_C
-// 0x0000 (0x2440 - 0x2440)
+// 0x0000 (0x2450 - 0x2450)
 class ASnow_Yutyrannus_Character_BP_C : public AYutyrannus_Character_BP_C
 {
 public:

@@ -106,13 +106,13 @@ bool ABuff_Leech_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex
 
 
 // Function Buff_Leech.Buff_Leech_C.BPGetMultiUseEntries
-// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Native, Event, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABuff_Leech_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABuff_Leech_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Leech.Buff_Leech_C.BPGetMultiUseEntries");
 
@@ -134,7 +134,7 @@ TArray<struct FMultiUseEntry> ABuff_Leech_C::STATIC_BPGetMultiUseEntries(class A
 
 
 // Function Buff_Leech.Buff_Leech_C.BPSetupForInstigator
-// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (Event, NetResponse, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -146,7 +146,6 @@ void ABuff_Leech_C::BPSetupForInstigator(class AActor** ForInstigator)
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

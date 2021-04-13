@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CrystalWyvern_Character_BP_WS.CrystalWyvern_Character_BP_WS_C.SpawnWaterOverlapVFX
-// (NetReliable, NetRequest, Exec, NetResponse, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, NetMulticast, Public, Private, HasOutParms, NetClient)
 // Parameters:
 // class AActor*                  WaterActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ACrystalWyvern_Character_BP_WS_C::SpawnWaterOverlapVFX(class AActor* WaterA
 	params.WaterActor = WaterActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

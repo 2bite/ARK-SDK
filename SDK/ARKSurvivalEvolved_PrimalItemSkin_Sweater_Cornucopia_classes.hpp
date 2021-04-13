@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_Sweater_Cornucopia.PrimalItemSkin_Sweater_Cornucopia_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemSkin_Sweater_Cornucopia_C : public UPrimalItemSkin_SummerSwimShirt_Base_C
 {
 public:

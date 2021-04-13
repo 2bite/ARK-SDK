@@ -38,7 +38,7 @@ public:
 
 	void GetFriendOrFoe(class AActor* Actor, float* Value);
 	void BPDeactivated(class AActor** ForInstigator);
-	void BuffTickClient(float* DeltaTime);
+	void STATIC_BuffTickClient(float* DeltaTime);
 	float GetBuffPostprocessIntensity();
 	float Smooth_Overheating_Amount(float amount, float DeltaTime);
 	void Set_Overheating_Amount(float Value);

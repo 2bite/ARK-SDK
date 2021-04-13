@@ -65,7 +65,7 @@ public:
 
 	void GetGlowstickOwner(class AActor** glowstickOwner);
 	void ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit);
-	void GetDefaultGlowStickRef(class AWeapGlowStick_C** Ref);
+	void GetDefaultGlowStickRef(class AWeapGlowStick_C** ref);
 	void HideAttachedComponents();
 	void Set_Collision_Response();
 	void IsAttachedToCharacter(bool* Result);

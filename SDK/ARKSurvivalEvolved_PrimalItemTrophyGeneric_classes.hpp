@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophyGeneric.PrimalItemTrophyGeneric_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemTrophyGeneric_C : public UPrimalItemTrophyGenericParent_C
 {
 public:

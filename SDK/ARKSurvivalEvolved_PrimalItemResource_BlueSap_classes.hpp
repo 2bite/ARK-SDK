@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_BlueSap.PrimalItemResource_BlueSap_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemResource_BlueSap_C : public UPrimalItemResource_Gem_BioLum_C
 {
 public:

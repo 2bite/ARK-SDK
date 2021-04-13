@@ -34,7 +34,7 @@ struct ABuff_TekCruiseMissileVision_C_ReceiveBeginPlay_Params
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout
 struct ABuff_TekCruiseMissileVision_C_IsLocalScout_Params
 {
-	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPIsValidUnStasisCaster

@@ -31,7 +31,7 @@ public:
 
 
 	void ShouldEnableTimers(bool* tickServer, bool* TickClient);
-	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue);
+	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue);
 	void ReceiveDestroyed();
 	void BuffTickServer(float* DeltaTime);
 	void UserConstructionScript();

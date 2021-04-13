@@ -80,10 +80,10 @@ struct AShapeshifter_Small_Character_BP_C_StartTransform_Params
 	bool                                               QueueRoar;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.isTransforming
-struct AShapeshifter_Small_Character_BP_C_isTransforming_Params
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.IsTransforming
+struct AShapeshifter_Small_Character_BP_C_IsTransforming_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPCanMountOnCharacter
@@ -250,7 +250,7 @@ struct AShapeshifter_Small_Character_BP_C_Try_Digging_Params
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.FindTargetWithElementEquipped
 struct AShapeshifter_Small_Character_BP_C_FindTargetWithElementEquipped_Params
 {
-	class APrimalCharacter*                            ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPShouldForceFlee

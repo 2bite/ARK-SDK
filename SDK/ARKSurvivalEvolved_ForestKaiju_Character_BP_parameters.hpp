@@ -212,7 +212,7 @@ struct AForestKaiju_Character_BP_C_DissolveArm_Params
 struct AForestKaiju_Character_BP_C_Is_Location_Valid_Vine_Attack_Range_Params
 {
 	struct FVector                                     Loc;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.MaybeLoseArmWhileProtecting
@@ -250,8 +250,8 @@ struct AForestKaiju_Character_BP_C_InterpNodeStates_Params
 	float                                              Delta;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.CreateDynamicMATS
-struct AForestKaiju_Character_BP_C_CreateDynamicMATS_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.CreateDynamicMats
+struct AForestKaiju_Character_BP_C_CreateDynamicMats_Params
 {
 };
 
@@ -559,7 +559,7 @@ struct AForestKaiju_Character_BP_C_ShortestAngleDistance_Params
 struct AForestKaiju_Character_BP_C_GetClampedLookDir_Params
 {
 	bool                                               LimitLowerPitch;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.BPHandleControllerInitiatedAttack
@@ -676,23 +676,23 @@ struct AForestKaiju_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_166
-struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_166_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_162
+struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_162_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_165
-struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_165_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_161
+struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_161_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_164
-struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_164_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_160
+struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_160_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_163
-struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_163_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_159
+struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_159_Params
 {
 };
 

@@ -30,7 +30,7 @@ struct UFishingNetHelperFunction_C_Cancel_Cast_Params
 struct UFishingNetHelperFunction_C_Caught_Fish_Params
 {
 	class UObject*                                     Projectile_Owner;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FishingNetHelperFunction.FishingNetHelperFunction_C.Pass Projectile Reference

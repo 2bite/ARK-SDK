@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ocean_Mosa_Character_BP.Ocean_Mosa_Character_BP_C
-// 0x0000 (0x21D9 - 0x21D9)
+// 0x0000 (0x21E9 - 0x21E9)
 class AOcean_Mosa_Character_BP_C : public AMosa_Character_BP_C
 {
 public:

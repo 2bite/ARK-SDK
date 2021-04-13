@@ -59,7 +59,7 @@ public:
 	void Debug_Draw_Sphere(const struct FVector& Center, float Radius, const struct FLinearColor& Color);
 	void STATIC_AnimNotifyGrabAttackSmash();
 	void DebugDrawLine(const struct FVector& Start, const struct FVector& End, const struct FLinearColor& Color);
-	void SpawnVines();
+	void STATIC_SpawnVines();
 	bool BPShouldEndAttack();
 	void OnTickEvent(float* DeltaSeconds);
 	void FailsafeMissingVineRetracts();

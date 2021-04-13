@@ -31,7 +31,7 @@ public:
 	void BuffTickClient(float* DeltaTime);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason);
 	void ReceiveBeginPlay();
-	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void UserConstructionScript();
 	void StopStaminaDrain();
 	void ExecuteUbergraph_Buff_MinigunOverheat(int EntryPoint);

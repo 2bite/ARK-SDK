@@ -136,7 +136,7 @@ public:
 	void NotifyInventoryChange(class UPrimalItem** Item, bool* ItemAdded, bool* ItemEquipped);
 	float GetHUDProgressBarPercent();
 	void BPActivated(class AActor** ForInstigator);
-	void OnRep_MissilePodMalfunctioned();
+	void STATIC_OnRep_MissilePodMalfunctioned();
 	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void TryUseAmmo(bool* Success);
 	void GetCurrentAmmo(int* AmmoQuantity);

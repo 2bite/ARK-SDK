@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C
-// 0x0008 (0x09F8 - 0x09F0)
+// 0x0008 (0x0A08 - 0x0A00)
 class UPrimalItemArmor_SaddleGeneric_C : public UPrimalItemArmorGeneric_C
 {
 public:
-	double                                             LastTorchDurabilityLossTime;                              // 0x09F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
+	double                                             LastTorchDurabilityLossTime;                              // 0x0A00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

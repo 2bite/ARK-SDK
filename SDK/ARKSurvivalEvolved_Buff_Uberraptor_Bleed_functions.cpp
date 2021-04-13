@@ -57,11 +57,11 @@ void ABuff_Uberraptor_Bleed_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.Do Damage Over TimeFn
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient)
 // Parameters:
 // double                         LastDotTime                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Uberraptor_Bleed_C::STATIC_Do_Damage_Over_TimeFn(double LastDotTime)
+void ABuff_Uberraptor_Bleed_C::Do_Damage_Over_TimeFn(double LastDotTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.Do Damage Over TimeFn");
 
@@ -78,7 +78,7 @@ void ABuff_Uberraptor_Bleed_C::STATIC_Do_Damage_Over_TimeFn(double LastDotTime)
 
 
 // Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.BPAdjustStatusValueModification
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Exec, Native, Static, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient)
 // Parameters:
 // class UPrimalCharacterStatusComponent** ForComponent                   (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)

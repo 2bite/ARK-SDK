@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bog_Paracer_Character_BP.Bog_Paracer_Character_BP_C
-// 0x0000 (0x2198 - 0x2198)
+// 0x0000 (0x21A8 - 0x21A8)
 class ABog_Paracer_Character_BP_C : public AParacer_Character_BP_C
 {
 public:

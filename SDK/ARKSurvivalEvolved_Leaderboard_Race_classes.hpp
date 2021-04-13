@@ -31,7 +31,7 @@ public:
 	}
 
 
-	struct FLeaderboardDisplayRow BPFormatLeaderboardRow(struct FName* MissionTag, int* index, struct FLeaderboardRow* DatabaseRow);
+	struct FLeaderboardDisplayRow STATIC_BPFormatLeaderboardRow(struct FName* MissionTag, int* index, struct FLeaderboardRow* DatabaseRow);
 	void SelectIcon(int Place, class UTexture2D** Icon);
 	void ExecuteUbergraph_Leaderboard_Race(int EntryPoint);
 };

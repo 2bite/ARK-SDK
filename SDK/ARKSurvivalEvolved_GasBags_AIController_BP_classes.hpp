@@ -32,7 +32,7 @@ public:
 
 
 	void ReceiveTick(float* DeltaSeconds);
-	void STATIC_TickCheckDangerLevels();
+	void TickCheckDangerLevels();
 	void GetDangerLevel(float* Danger);
 	void UserConstructionScript();
 	void ExecuteUbergraph_GasBags_AIController_BP(int EntryPoint);

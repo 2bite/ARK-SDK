@@ -318,13 +318,13 @@ bool AIguanodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, HasOutParms, NetClient, BlueprintEvent, Const)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AIguanodon_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AIguanodon_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPGetMultiUseEntries");
 
@@ -403,11 +403,11 @@ void AIguanodon_Character_BP_C::Net_SetCurrentStance(bool isBiped)
 
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPDoAttack
-// (NetRequest, Exec, NetResponse, NetMulticast, Private, HasOutParms, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIguanodon_Character_BP_C::BPDoAttack(int* AttackIndex)
+void AIguanodon_Character_BP_C::STATIC_BPDoAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPDoAttack");
 
@@ -514,9 +514,9 @@ void AIguanodon_Character_BP_C::ClientSetBipedState(bool isBiped)
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.GetDefaultDino
 // ()
 // Parameters:
-// class AIguanodon_Character_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AIguanodon_Character_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C** Ref)
+void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C** ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.GetDefaultDino");
 
@@ -528,8 +528,8 @@ void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C**
 
 	fn->FunctionFlags = flags;
 
-	if (Ref != nullptr)
-		*Ref = params.Ref;
+	if (ref != nullptr)
+		*ref = params.ref;
 }
 
 

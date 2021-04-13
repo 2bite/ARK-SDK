@@ -67,7 +67,7 @@ void ABuff_CryoCooldown_C::ReceiveBeginPlay()
 
 
 // Function Buff_CryoCooldown.Buff_CryoCooldown_C.BPDrawBuffStatusHUD
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)

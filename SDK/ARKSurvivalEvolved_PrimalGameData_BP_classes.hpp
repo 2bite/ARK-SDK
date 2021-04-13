@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalGameData_BP.PrimalGameData_BP_C
-// 0x0000 (0x2000 - 0x2000)
+// 0x0000 (0x2020 - 0x2020)
 class UPrimalGameData_BP_C : public UBASE_PrimalGameData_BP_C
 {
 public:

@@ -34,8 +34,8 @@ public:
 
 
 	float BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification);
-	struct FStatusValueModifierDescription STATIC_GetBuffDescription();
-	void STATIC_Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode);
+	struct FStatusValueModifierDescription GetBuffDescription();
+	void Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode);
 	void GetBackplateMode(TEnumAsByte<E_StegoBackplateMode>* BackplateMode);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_StegoBackplate(int EntryPoint);

@@ -35,8 +35,8 @@ public:
 	}
 
 
-	void GetClosestTree(class AActor* OwnerActor, bool AllowPrev, int* ItemIndex, class UStaticMeshComponent** treeComp);
-	void GetPointOnTreeSurface(class UPrimitiveComponent* treeComp, const struct FVector& origPoint, int ItemIndex, class AActor* OwnerActor, struct FVector* ret);
+	void STATIC_GetClosestTree(class AActor* OwnerActor, bool AllowPrev, int* ItemIndex, class UStaticMeshComponent** treeComp);
+	void GetPointOnTreeSurface(class UPrimitiveComponent* treeComp, const struct FVector& origPoint, int ItemIndex, class AActor* OwnerActor, struct FVector* Ret);
 	void STATIC_ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_GetClosestTree(int EntryPoint);
 };

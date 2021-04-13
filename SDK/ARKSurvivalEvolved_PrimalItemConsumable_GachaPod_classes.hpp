@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_GachaPod.PrimalItemConsumable_GachaPod_C
-// 0x0010 (0x0A00 - 0x09F0)
+// 0x0010 (0x0A10 - 0x0A00)
 class UPrimalItemConsumable_GachaPod_C : public UPrimalItemConsumableGeneric_C
 {
 public:
-	class USoundCue*                                   ResourceOpen_Cue;                                         // 0x09F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USoundCue*                                   ItemOpen_Cue;                                             // 0x09F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundCue*                                   ResourceOpen_Cue;                                         // 0x0A00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundCue*                                   ItemOpen_Cue;                                             // 0x0A08(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

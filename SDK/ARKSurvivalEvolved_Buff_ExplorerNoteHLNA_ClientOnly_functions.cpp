@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ExplorerNoteHLNA_ClientOnly.Buff_ExplorerNoteHLNA_ClientOnly_C.DrawBuffFloatingHUD
-// (Net, Event, Static, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, Const)
+// (Net, NetRequest, Static, Public, Private, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           BuffIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)

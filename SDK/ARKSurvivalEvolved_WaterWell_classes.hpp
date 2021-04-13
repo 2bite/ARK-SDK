@@ -50,7 +50,7 @@ public:
 	void IsAWaterItem(class UObject* PrimalItem, bool* Result);
 	bool BPForceAllowsInventoryUse(class UObject** InventoryItemObject);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void PlayWaterParticles();

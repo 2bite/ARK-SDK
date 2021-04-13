@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophy_AlphaRex.PrimalItemTrophy_AlphaRex_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemTrophy_AlphaRex_C : public UPrimalItemTrophyGenericWall_C
 {
 public:

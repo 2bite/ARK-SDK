@@ -48,7 +48,7 @@ struct AProjPlantSpeciesZFruit_C_GetAngleBetween_Params
 {
 	struct FVector                                     v1;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     v2;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.UserConstructionScript

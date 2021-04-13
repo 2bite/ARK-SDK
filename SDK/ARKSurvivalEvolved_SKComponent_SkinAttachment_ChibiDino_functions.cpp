@@ -12,6 +12,24 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.SetDynamicMaterialProperties
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+
+void USKComponent_SkinAttachment_ChibiDino_C::SetDynamicMaterialProperties()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.SetDynamicMaterialProperties");
+
+	USKComponent_SkinAttachment_ChibiDino_C_SetDynamicMaterialProperties_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.BPOnComponentDestroyed
 // ()
 
@@ -30,9 +48,9 @@ void USKComponent_SkinAttachment_ChibiDino_C::BPOnComponentDestroyed()
 
 
 // Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.AttachSubMeshes
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
-void USKComponent_SkinAttachment_ChibiDino_C::STATIC_AttachSubMeshes()
+void USKComponent_SkinAttachment_ChibiDino_C::AttachSubMeshes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.AttachSubMeshes");
 
@@ -106,11 +124,11 @@ void USKComponent_SkinAttachment_ChibiDino_C::PlayMontage(class UAnimMontage* Th
 
 
 // Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.UpdateMovement
-// (NetReliable, NetRequest, Native, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class ACharacter*              CharacterRef                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void USKComponent_SkinAttachment_ChibiDino_C::UpdateMovement(class ACharacter* CharacterRef)
+void USKComponent_SkinAttachment_ChibiDino_C::STATIC_UpdateMovement(class ACharacter* CharacterRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.UpdateMovement");
 

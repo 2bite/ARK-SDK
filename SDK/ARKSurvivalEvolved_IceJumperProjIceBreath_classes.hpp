@@ -272,8 +272,8 @@ public:
 	void Get_Best_Impact_Location(const struct FVector& Start, const struct FVector& End, class APrimalCharacter* Rider, struct FVector* ImpactLocation, struct FVector* ImpactNormal, bool* FoundNewimpactLocation);
 	void CanCollideWith(class AActor* Actor, bool* Result);
 	void ValidateTick(bool* Result);
-	void UpdateBeamLength();
-	void GetBeamStartEnd(const struct FVector& Start, const struct FVector& End, struct FVector* ValidatedStart, struct FVector* ValidatedEnd);
+	void STATIC_UpdateBeamLength();
+	void STATIC_GetBeamStartEnd(const struct FVector& Start, const struct FVector& End, struct FVector* ValidatedStart, struct FVector* ValidatedEnd);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float* DeltaSeconds);

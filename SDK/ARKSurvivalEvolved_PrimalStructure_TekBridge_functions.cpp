@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.SetupSnaps
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetClient, BlueprintEvent, Const)
+// (Static, Protected, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void APrimalStructure_TekBridge_C::STATIC_SetupSnaps()
 {
@@ -22,7 +22,6 @@ void APrimalStructure_TekBridge_C::STATIC_SetupSnaps()
 	APrimalStructure_TekBridge_C_SetupSnaps_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,14 +30,14 @@ void APrimalStructure_TekBridge_C::STATIC_SetupSnaps()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPPlayDying
-// (NetReliable, Native, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (Event, Static, Protected, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
 // class APawn**                  InstigatingPawn                (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void APrimalStructure_TekBridge_C::BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
+void APrimalStructure_TekBridge_C::STATIC_BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPPlayDying");
 
@@ -48,7 +47,6 @@ void APrimalStructure_TekBridge_C::BPPlayDying(float* KillingDamage, class APawn
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,13 +110,13 @@ struct FRotator APrimalStructure_TekBridge_C::CalculatePlacementRotation(class A
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPOverridePlacementRotation
-// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (Event, NetResponse, Static, Protected, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector*                ViewPos                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator*               ViewRot                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FRotator APrimalStructure_TekBridge_C::BPOverridePlacementRotation(struct FVector* ViewPos, struct FRotator* ViewRot)
+struct FRotator APrimalStructure_TekBridge_C::STATIC_BPOverridePlacementRotation(struct FVector* ViewPos, struct FRotator* ViewRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPOverridePlacementRotation");
 
@@ -127,7 +125,6 @@ struct FRotator APrimalStructure_TekBridge_C::BPOverridePlacementRotation(struct
 	params.ViewRot = ViewRot;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +135,7 @@ struct FRotator APrimalStructure_TekBridge_C::BPOverridePlacementRotation(struct
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPIsAllowedToBuildEx
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (Exec, Native, NetResponse, NetMulticast, Protected, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FPlacementData          OutPlacementData               (Parm, OutParm, ReferenceParm)
 // int*                           CurrentAllowedReason           (Parm, ZeroConstructor, IsPlainOldData)
@@ -147,7 +144,7 @@ struct FRotator APrimalStructure_TekBridge_C::BPOverridePlacementRotation(struct
 // bool*                          bChoosingRotation              (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int APrimalStructure_TekBridge_C::STATIC_BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData)
+int APrimalStructure_TekBridge_C::BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPIsAllowedToBuildEx");
 
@@ -158,6 +155,7 @@ int APrimalStructure_TekBridge_C::STATIC_BPIsAllowedToBuildEx(int* CurrentAllowe
 	params.bChoosingRotation = bChoosingRotation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -308,16 +306,15 @@ void APrimalStructure_TekBridge_C::BPContainerActivated()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.DeactivationComplete
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Protected, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void APrimalStructure_TekBridge_C::DeactivationComplete()
+void APrimalStructure_TekBridge_C::STATIC_DeactivationComplete()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.DeactivationComplete");
 
 	APrimalStructure_TekBridge_C_DeactivationComplete_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -505,11 +502,11 @@ void APrimalStructure_TekBridge_C::OnRep_Activating()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.TryActivate
-// (NetReliable, Event, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, Static, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           ActivateBridge                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void APrimalStructure_TekBridge_C::TryActivate(bool ActivateBridge)
+void APrimalStructure_TekBridge_C::STATIC_TryActivate(bool ActivateBridge)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.TryActivate");
 
@@ -545,7 +542,7 @@ void APrimalStructure_TekBridge_C::Activate(bool ActivateBridge)
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (NetReliable, Exec, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -559,7 +556,6 @@ TArray<struct FMultiUseEntry> APrimalStructure_TekBridge_C::BPGetMultiUseEntries
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -598,7 +594,7 @@ bool APrimalStructure_TekBridge_C::BPTryMultiUse(class APlayerController** ForPC
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.IsBlocked
-// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -606,7 +602,7 @@ bool APrimalStructure_TekBridge_C::BPTryMultiUse(class APlayerController** ForPC
 // bool                           CheckLanding                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bLocked                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APrimalStructure_TekBridge_C::STATIC_IsBlocked(const struct FVector& Start, const struct FRotator& Rotation, const struct FVector& End, bool CheckLanding, bool* bLocked)
+void APrimalStructure_TekBridge_C::IsBlocked(const struct FVector& Start, const struct FRotator& Rotation, const struct FVector& End, bool CheckLanding, bool* bLocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.IsBlocked");
 
@@ -617,6 +613,7 @@ void APrimalStructure_TekBridge_C::STATIC_IsBlocked(const struct FVector& Start,
 	params.CheckLanding = CheckLanding;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -679,7 +676,7 @@ void APrimalStructure_TekBridge_C::PreviewLanding()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.TestExtension
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -689,7 +686,7 @@ void APrimalStructure_TekBridge_C::PreviewLanding()
 // bool                           Good                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Placement                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APrimalStructure_TekBridge_C::STATIC_TestExtension(const struct FVector& Start, const struct FRotator& Rotation, int Extension, class APrimalStructure* SnapTarget, bool ChoosingRotation, bool* Good, struct FVector* Placement)
+void APrimalStructure_TekBridge_C::TestExtension(const struct FVector& Start, const struct FRotator& Rotation, int Extension, class APrimalStructure* SnapTarget, bool ChoosingRotation, bool* Good, struct FVector* Placement)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.TestExtension");
 
@@ -701,6 +698,7 @@ void APrimalStructure_TekBridge_C::STATIC_TestExtension(const struct FVector& St
 	params.ChoosingRotation = ChoosingRotation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -751,7 +749,7 @@ void APrimalStructure_TekBridge_C::BPBeginPreview()
 
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.ExtendBridge
-// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetClient, BlueprintEvent, Const)
+// (Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -763,7 +761,6 @@ void APrimalStructure_TekBridge_C::ExtendBridge(const struct FVector& Location)
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

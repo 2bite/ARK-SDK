@@ -14,6 +14,29 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPClientDoMultiUse
+struct ABuff_TekArmor_Helmet_C_BPClientDoMultiUse_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ClientUseIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPTryMultiUse
+struct ABuff_TekArmor_Helmet_C_BPTryMultiUse_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               UseIndex;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPGetMultiUseEntries
+struct ABuff_TekArmor_Helmet_C_BPGetMultiUseEntries_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FMultiUseEntry>                      MultiUseEntries;                                          // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FMultiUseEntry>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.ExternalVisorToggle
 struct ABuff_TekArmor_Helmet_C_ExternalVisorToggle_Params
 {
@@ -102,26 +125,6 @@ struct ABuff_TekArmor_Helmet_C_FadeOut__FinishedFunc_Params
 
 // Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.FadeOut__UpdateFunc
 struct ABuff_TekArmor_Helmet_C_FadeOut__UpdateFunc_Params
-{
-};
-
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_81
-struct ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_81_Params
-{
-};
-
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Use_K2Node_InputActionEvent_80
-struct ABuff_TekArmor_Helmet_C_InpActEvt_Use_K2Node_InputActionEvent_80_Params
-{
-};
-
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_41
-struct ABuff_TekArmor_Helmet_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_41_Params
-{
-};
-
-// Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_40
-struct ABuff_TekArmor_Helmet_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_40_Params
 {
 };
 

@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CORE_PrimalGameData.CORE_PrimalGameData_C
-// 0x0020 (0x2000 - 0x1FE0)
+// 0x0020 (0x2020 - 0x2000)
 class UCORE_PrimalGameData_C : public UPrimalGameData
 {
 public:
-	TArray<struct FHairMetaData>                       FemaleHairStylesMetaDatas;                                // 0x1FE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FHairMetaData>                       MaleHairStylesMetaDatas;                                  // 0x1FF0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FHairMetaData>                       FemaleHairStylesMetaDatas;                                // 0x2000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FHairMetaData>                       MaleHairStylesMetaDatas;                                  // 0x2010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

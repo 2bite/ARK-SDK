@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_FenceSupport_Tek.PrimalItemStructure_FenceSupport_Tek_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_FenceSupport_Tek_C : public UPrimalItemStructure_BaseFenceFoundation_C
 {
 public:

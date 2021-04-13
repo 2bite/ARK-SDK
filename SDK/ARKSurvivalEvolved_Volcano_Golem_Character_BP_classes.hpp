@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Volcano_Golem_Character_BP.Volcano_Golem_Character_BP_C
-// 0x0000 (0x2375 - 0x2375)
+// 0x0000 (0x2385 - 0x2385)
 class AVolcano_Golem_Character_BP_C : public ARockGolem_Character_BP_C
 {
 public:

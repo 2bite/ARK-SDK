@@ -149,11 +149,11 @@ void ABuff_OwlIceCrash_C::SetupIceCrash(class APrimalCharacter* Character, bool 
 
 
 // Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPSetupForInstigator
-// (Exec, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_OwlIceCrash_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_OwlIceCrash_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_OwlIceCrash.Buff_OwlIceCrash_C.BPSetupForInstigator");
 

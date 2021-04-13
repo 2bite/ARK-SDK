@@ -249,7 +249,7 @@ bool ATrike_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Trike_Character_BP.Trike_Character_BP_C.BPHandleControllerInitiatedAttack
-// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -262,7 +262,6 @@ bool ATrike_Character_BP_C::STATIC_BPHandleControllerInitiatedAttack(int* Attack
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -368,7 +367,7 @@ void ATrike_Character_BP_C::GetPawnRootComponent(class AActor* Target, class UPr
 
 
 // Function Trike_Character_BP.Trike_Character_BP_C.BPAdjustDamage
-// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (Native, NetResponse, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)

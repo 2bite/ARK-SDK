@@ -70,7 +70,7 @@ public:
 	void BuffTickServer(float* DeltaTime);
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void STATIC_ToggleEnsnareVFX();
+	void ToggleEnsnareVFX();
 	void BuffTickClient(float* DeltaTime);
 	bool BPCheckPreventInput(TEnumAsByte<EPrimalCharacterInputType>* inputType);
 	void BPHandleOnStartAltFire(bool* bFromGamepad);

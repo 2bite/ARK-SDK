@@ -62,11 +62,11 @@ public:
 
 
 	void AllowedToChangePublicUse(class APlayerController* PC, bool* Allow);
-	void Make_Multi_Use_Entry(TEnumAsByte<EPrimalStructureElevatorState> Direction, int Priority, struct FMultiUseEntry* Entry);
+	void STATIC_Make_Multi_Use_Entry(TEnumAsByte<EPrimalStructureElevatorState> Direction, int Priority, struct FMultiUseEntry* Entry);
 	void Get_Elevator_Platform(class AWoodElevatorPlatform_Base_C** Elevator);
 	void Move_Elevator(class APrimalStructureElevatorPlatform* Elevator, class APlayerController* PC, TEnumAsByte<EPrimalStructureElevatorState> Direction, bool* Success);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void OnElevatorStartMove(TEnumAsByte<EPrimalStructureElevatorState> Direction);

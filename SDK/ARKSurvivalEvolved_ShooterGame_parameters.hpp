@@ -9047,6 +9047,12 @@ struct APrimalStructure_SetStaticMobility_Params
 {
 };
 
+// Function ShooterGame.PrimalStructure.SetPreventSaving
+struct APrimalStructure_SetPreventSaving_Params
+{
+	bool                                               bPrevent;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function ShooterGame.PrimalStructure.SetHarvestingActive
 struct APrimalStructure_SetHarvestingActive_Params
 {
@@ -9533,6 +9539,7 @@ struct APrimalStructure_BPOverrideAllowStructureAccess_Params
 {
 	class AShooterPlayerController*                    ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bIsAccessAllowed;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bForInventoryOnly;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -9736,6 +9743,12 @@ struct APrimalStructureItemContainer_VerifyPinCode_Params
 {
 	int                                                pinCode;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ShooterGame.PrimalStructureItemContainer.UpdateTribeGroupInventoryRank
+struct APrimalStructureItemContainer_UpdateTribeGroupInventoryRank_Params
+{
+	unsigned char                                      NewRank;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ShooterGame.PrimalStructureItemContainer.UpdateSolarPower
@@ -14571,6 +14584,13 @@ struct APrimalCharacter_GetTPVCameraOffset_Params
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ShooterGame.PrimalCharacter.GetSocketLocation
+struct APrimalCharacter_GetSocketLocation_Params
+{
+	struct FName                                       SocketName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ShooterGame.PrimalCharacter.GetSnapshotComponent
 struct APrimalCharacter_GetSnapshotComponent_Params
 {
@@ -16415,6 +16435,13 @@ struct APrimalDinoCharacter_IsAttacking_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function ShooterGame.PrimalDinoCharacter.IsAllowedToTransfer
+struct APrimalDinoCharacter_IsAllowedToTransfer_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function ShooterGame.PrimalDinoCharacter.IsActiveEventDino
 struct APrimalDinoCharacter_IsActiveEventDino_Params
 {
@@ -16454,6 +16481,12 @@ struct APrimalDinoCharacter_ImprintOnPlayerTarget_Params
 
 // Function ShooterGame.PrimalDinoCharacter.HasTarget
 struct APrimalDinoCharacter_HasTarget_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ShooterGame.PrimalDinoCharacter.HasSelfBuried
+struct APrimalDinoCharacter_HasSelfBuried_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -16716,6 +16749,18 @@ struct APrimalDinoCharacter_GetCurrentAttackInfo_Params
 struct APrimalDinoCharacter_GetCurrentAimOffsetsRotation_Params
 {
 	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ShooterGame.PrimalDinoCharacter.GetColorSetNamesAsArray
+struct APrimalDinoCharacter_GetColorSetNamesAsArray_Params
+{
+	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function ShooterGame.PrimalDinoCharacter.GetColorSetInidcesAsString
+struct APrimalDinoCharacter_GetColorSetInidcesAsString_Params
+{
+	class FString                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function ShooterGame.PrimalDinoCharacter.GetColorizationData
@@ -23011,6 +23056,12 @@ struct UShooterCheatManager_ToggleClawStepping_Params
 {
 };
 
+// Function ShooterGame.ShooterCheatManager.TOD
+struct UShooterCheatManager_TOD_Params
+{
+	class FString                                      timeString;                                               // (Parm, ZeroConstructor)
+};
+
 // Function ShooterGame.ShooterCheatManager.TestSteamRefreshItems
 struct UShooterCheatManager_TestSteamRefreshItems_Params
 {
@@ -24342,6 +24393,11 @@ struct UShooterCheatManager_ClearPlayerInventory_Params
 
 // Function ShooterGame.ShooterCheatManager.ClearMyBuffs
 struct UShooterCheatManager_ClearMyBuffs_Params
+{
+};
+
+// Function ShooterGame.ShooterCheatManager.ClearMessageOfTheDay
+struct UShooterCheatManager_ClearMessageOfTheDay_Params
 {
 };
 
@@ -29365,6 +29421,14 @@ struct UVictoryCore_GetGrinderReplacementItem_Params
 {
 	class UClass*                                      current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function ShooterGame.VictoryCore.GetGPSCoords
+struct UVictoryCore_GetGPSCoords_Params
+{
+	class UWorld*                                      ForWorld;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     InLoc;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function ShooterGame.VictoryCore.GetFirstDirectionalLight

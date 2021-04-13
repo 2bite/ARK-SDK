@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Dino_Character_BP_Ramming.Dino_Character_BP_Ramming_C.ToString
-// (Net, Exec, Static, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString                  CallerName                     (Parm, ZeroConstructor)
 // class FString                  DebugText                      (Parm, OutParm, ZeroConstructor)
@@ -26,6 +26,7 @@ void ADino_Character_BP_Ramming_C::STATIC_ToString(const class FString& CallerNa
 	params.CallerName = CallerName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,10 +63,10 @@ void ADino_Character_BP_Ramming_C::BPNotifyClearRider(class AShooterCharacter** 
 // float                          CurrentValue                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          MinValue                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          MaxValue                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          VelocityAlpha                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          velocityAlpha                  (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ScaledDamage                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Ramming_C::GetStructureDamageScaled(float CurrentValue, float MinValue, float MaxValue, float VelocityAlpha, float* ScaledDamage)
+void ADino_Character_BP_Ramming_C::GetStructureDamageScaled(float CurrentValue, float MinValue, float MaxValue, float velocityAlpha, float* ScaledDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Ramming.Dino_Character_BP_Ramming_C.GetStructureDamageScaled");
 
@@ -73,7 +74,7 @@ void ADino_Character_BP_Ramming_C::GetStructureDamageScaled(float CurrentValue, 
 	params.CurrentValue = CurrentValue;
 	params.MinValue = MinValue;
 	params.MaxValue = MaxValue;
-	params.VelocityAlpha = VelocityAlpha;
+	params.velocityAlpha = velocityAlpha;
 
 	auto flags = fn->FunctionFlags;
 
@@ -225,11 +226,11 @@ void ADino_Character_BP_Ramming_C::Calculate_Ram_Duration(float HoldTime, float*
 
 
 // Function Dino_Character_BP_Ramming.Dino_Character_BP_Ramming_C.ReceiveTick
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, NetMulticast, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Ramming_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void ADino_Character_BP_Ramming_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Ramming.Dino_Character_BP_Ramming_C.ReceiveTick");
 
@@ -237,7 +238,6 @@ void ADino_Character_BP_Ramming_C::STATIC_ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

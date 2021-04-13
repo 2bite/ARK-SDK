@@ -36,7 +36,7 @@ public:
 
 	void CalculateDoTDamage(float TimeSinceLastDoT, float* Damage);
 	void BuffTickServer(float* DeltaTime);
-	void STATIC_Do_Damage_Over_TimeFn(double LastDotTime);
+	void Do_Damage_Over_TimeFn(double LastDotTime);
 	float STATIC_BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification);
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason);

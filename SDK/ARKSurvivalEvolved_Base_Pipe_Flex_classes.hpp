@@ -73,7 +73,7 @@ public:
 	void UpdateWaterStatus();
 	void LinkPipes(TArray<class APrimalStructure*>* ConnectedPipes);
 	class FString BPOverrideCantBuildReasonString(int* CantBuildReason);
-	void STATIC_AddSplineMeshComponents(bool UsePreviewMaterial);
+	void AddSplineMeshComponents(bool UsePreviewMaterial);
 	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void UserConstructionScript();
 	void UpdateSplineMeshesEvent();

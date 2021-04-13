@@ -314,6 +314,7 @@ public:
 	bool IsLocallyControlledByPlayer();
 	bool IsFirstPersonMeshVisible();
 	bool IsDead();
+	bool IsCorruptDino();
 	bool HasAuthority();
 	class UPrimitiveComponent* GetVisibleComponentByClass(class UClass* ComponentClass);
 	float GetVerticalDistanceTo(class AActor* OtherActor);

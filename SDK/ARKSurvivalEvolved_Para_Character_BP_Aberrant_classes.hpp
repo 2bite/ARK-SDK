@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Para_Character_BP_Aberrant.Para_Character_BP_Aberrant_C
-// 0x0000 (0x2379 - 0x2379)
+// 0x0000 (0x2389 - 0x2389)
 class APara_Character_BP_Aberrant_C : public APara_Character_BP_C
 {
 public:

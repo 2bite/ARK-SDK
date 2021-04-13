@@ -35,11 +35,11 @@ void ABuff_IsTameRiding_C::GetTimeBasedAlpha(float* Alpha)
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.GetBuffDescription
-// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (Exec, Native, Event, Static, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_IsTameRiding_C::GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_IsTameRiding_C::STATIC_GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.GetBuffDescription");
 
@@ -109,7 +109,7 @@ void ABuff_IsTameRiding_C::GetActiveTameState(class APrimalDinoCharacter* MyRidi
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.BPDrawBuffStatusHUD
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (Net, NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -195,14 +195,14 @@ void ABuff_IsTameRiding_C::UserConstructionScript()
 }
 
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_130
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_126
 // ()
 
-void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_130()
+void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_126()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_130");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_126");
 
-	ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_130_Params params;
+	ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_126_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -212,14 +212,14 @@ void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_130()
 }
 
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_129
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_125
 // ()
 
-void ABuff_IsTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_129()
+void ABuff_IsTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_125()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_129");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_125");
 
-	ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_129_Params params;
+	ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_125_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -229,14 +229,14 @@ void ABuff_IsTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_129()
 }
 
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_58
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_54
 // ()
 
-void ABuff_IsTameRiding_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_58()
+void ABuff_IsTameRiding_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_54()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_58");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_54");
 
-	ABuff_IsTameRiding_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_58_Params params;
+	ABuff_IsTameRiding_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_54_Params params;
 
 	auto flags = fn->FunctionFlags;
 

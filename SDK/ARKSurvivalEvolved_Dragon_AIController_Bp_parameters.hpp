@@ -28,13 +28,13 @@ struct ADragon_AIController_Bp_C_ReceiveTick_Params
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.ShouldStayOnLand
 struct ADragon_AIController_Bp_C_ShouldStayOnLand_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.IsUsingSpline
 struct ADragon_AIController_Bp_C_IsUsingSpline_Params
 {
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.CalculateAndSetWonderingAIStateEvent

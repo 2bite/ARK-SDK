@@ -267,7 +267,7 @@ void ABuff_Frozen_IceKaiju_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BuffTickServer
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -279,7 +279,6 @@ void ABuff_Frozen_IceKaiju_C::BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

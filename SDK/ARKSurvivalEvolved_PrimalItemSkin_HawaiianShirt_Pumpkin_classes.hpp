@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_HawaiianShirt_Pumpkin.PrimalItemSkin_HawaiianShirt_Pumpkin_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemSkin_HawaiianShirt_Pumpkin_C : public UPrimalItemSkin_HawaiianShirt_Base_C
 {
 public:

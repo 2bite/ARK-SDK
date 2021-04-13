@@ -43,7 +43,7 @@ public:
 	void SetupMissileSpawnParticles(class USkeletalMeshComponent* MekMesh, const struct FName& BoneName);
 	struct FVector2D PointOnGrid(int ThisIndex, int Width, int Height, float HorizScale, float VertScale);
 	void ReceiveTick(float* DeltaSeconds);
-	void STATIC_BPGetBoidSpawnLocationAndVelocity(int* BoidIndex, struct FBoid* BoidData, struct FVector* SpawnLocation, struct FVector* SpawnVelocity);
+	void BPGetBoidSpawnLocationAndVelocity(int* BoidIndex, struct FBoid* BoidData, struct FVector* SpawnLocation, struct FVector* SpawnVelocity);
 	void UserConstructionScript();
 	void BPOnBoidExplode(int* BoidIndex, class UParticleSystemComponent** BoidParticles, struct FHitResult* Hit);
 	void OnExplode(struct FHitResult* Result);

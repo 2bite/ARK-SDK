@@ -325,15 +325,16 @@ void APlayerPawnTest_C::InitHairRestDistance()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetLastTransforms
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Native, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void APlayerPawnTest_C::STATIC_SetLastTransforms()
+void APlayerPawnTest_C::SetLastTransforms()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.SetLastTransforms");
 
 	APlayerPawnTest_C_SetLastTransforms_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -376,15 +377,16 @@ void APlayerPawnTest_C::Setup_Collision_Volumes()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle
-// (Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
+void APlayerPawnTest_C::SetupNewHairstyle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle");
 
 	APlayerPawnTest_C_SetupNewHairstyle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -393,16 +395,15 @@ void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, NetResponse, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void APlayerPawnTest_C::STATIC_UpdateHair()
+void APlayerPawnTest_C::UpdateHair()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair");
 
 	APlayerPawnTest_C_UpdateHair_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

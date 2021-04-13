@@ -268,12 +268,12 @@ float ABuff_Encapsulated_C::BuffAdjustDamage(float* Damage, class AController** 
 
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.ApplyDamageToIceShield
-// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Net, NetReliable, Exec, Event, NetResponse, Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsRemoteDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Encapsulated_C::STATIC_ApplyDamageToIceShield(float Damage, bool IsRemoteDamage)
+void ABuff_Encapsulated_C::ApplyDamageToIceShield(float Damage, bool IsRemoteDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Encapsulated.Buff_Encapsulated_C.ApplyDamageToIceShield");
 
@@ -355,7 +355,7 @@ void ABuff_Encapsulated_C::FreezeCharacter(class APrimalCharacter* Character, bo
 
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.BPDeactivated
-// (NetReliable, Exec, Static, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

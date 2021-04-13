@@ -50,7 +50,7 @@ public:
 	void OnRep_ItemQuality();
 	void ReceiveBeginPlay();
 	void STATIC_CheckForItem();
-	void STATIC_ActivateFX();
+	void ActivateFX();
 	void UserConstructionScript();
 	void ColorShift();
 	void ExecuteUbergraph_DroppedItem_GachaPod(int EntryPoint);

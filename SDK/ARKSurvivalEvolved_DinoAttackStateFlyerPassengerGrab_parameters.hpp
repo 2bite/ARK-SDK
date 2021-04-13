@@ -18,7 +18,7 @@ namespace sdk
 struct UDinoAttackStateFlyerPassengerGrab_C_Grab_Character_Params
 {
 	class APrimalCharacter*                            Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DinoAttackStateFlyerPassengerGrab.DinoAttackStateFlyerPassengerGrab_C.Can Grab Character

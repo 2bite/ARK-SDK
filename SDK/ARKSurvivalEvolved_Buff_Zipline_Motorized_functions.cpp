@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.UpdateFX
-// (NetReliable, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Event, Static, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Zipline_Motorized_C::UpdateFX()
+void ABuff_Zipline_Motorized_C::STATIC_UpdateFX()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.UpdateFX");
 
@@ -75,9 +75,9 @@ void ABuff_Zipline_Motorized_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.Try Refill Gas
-// (NetReliable, Native, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Native, NetResponse, Static, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Zipline_Motorized_C::Try_Refill_Gas()
+void ABuff_Zipline_Motorized_C::STATIC_Try_Refill_Gas()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.Try Refill Gas");
 
@@ -93,7 +93,7 @@ void ABuff_Zipline_Motorized_C::Try_Refill_Gas()
 
 
 // Function Buff_Zipline_Motorized.Buff_Zipline_Motorized_C.BPDrawBuffStatusHUD
-// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)

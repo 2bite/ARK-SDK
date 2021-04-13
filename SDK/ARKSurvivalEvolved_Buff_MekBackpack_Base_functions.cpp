@@ -70,17 +70,18 @@ void ABuff_MekBackpack_Base_C::RestoreBackpackSaveData(const struct FMekBackpack
 
 
 // Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.GetBackpackSaveData
-// (NetReliable, Exec, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, Const)
+// (Native, Event, NetResponse, Static, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
-void ABuff_MekBackpack_Base_C::GetBackpackSaveData(struct FMekBackpackData* Data)
+void ABuff_MekBackpack_Base_C::STATIC_GetBackpackSaveData(struct FMekBackpackData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_MekBackpack_Base.Buff_MekBackpack_Base_C.GetBackpackSaveData");
 
 	ABuff_MekBackpack_Base_C_GetBackpackSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

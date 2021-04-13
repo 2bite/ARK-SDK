@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Spino_Character_BP_Aberrant.Spino_Character_BP_Aberrant_C
-// 0x0000 (0x2373 - 0x2373)
+// 0x0000 (0x2383 - 0x2383)
 class ASpino_Character_BP_Aberrant_C : public ASpino_Character_BP_C
 {
 public:

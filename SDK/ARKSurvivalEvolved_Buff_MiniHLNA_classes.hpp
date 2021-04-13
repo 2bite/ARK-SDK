@@ -37,7 +37,7 @@ public:
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x09A5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x09A6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsLocallyControlledByPlayer_ReturnValue;         // 0x09A7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class USoundBase*                                  K2Node_CustomEvent_sound;                                 // 0x09A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class USoundBase*                                  K2Node_CustomEvent_Sound;                                 // 0x09A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x09B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x09B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x09B9(0x0003) MISSED OFFSET

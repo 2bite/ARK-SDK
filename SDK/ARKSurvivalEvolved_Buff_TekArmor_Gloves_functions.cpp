@@ -145,12 +145,12 @@ void ABuff_TekArmor_Gloves_C::Should_Damage_Actor(class AActor** Victim, bool* R
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Has Line Of SightToActor
-// (Native, NetResponse, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Native, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Gloves_C::Has_Line_Of_SightToActor(class AActor* Actor, bool* Result)
+void ABuff_TekArmor_Gloves_C::STATIC_Has_Line_Of_SightToActor(class AActor* Actor, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Has Line Of SightToActor");
 
@@ -302,11 +302,11 @@ void ABuff_TekArmor_Gloves_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Update Local Vars by State
-// (NetReliable, NetRequest, Exec, NetResponse, Static, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (Native, MulticastDelegate, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<E_TekGlovePunchState> NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Gloves_C::STATIC_Update_Local_Vars_by_State(TEnumAsByte<E_TekGlovePunchState> NewState)
+void ABuff_TekArmor_Gloves_C::Update_Local_Vars_by_State(TEnumAsByte<E_TekGlovePunchState> NewState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Update Local Vars by State");
 
@@ -314,6 +314,7 @@ void ABuff_TekArmor_Gloves_C::STATIC_Update_Local_Vars_by_State(TEnumAsByte<E_Te
 	params.NewState = NewState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -620,7 +621,7 @@ void ABuff_TekArmor_Gloves_C::DrawBuffFloatingHUD(int* BuffIndex, class AShooter
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.ScanForRocketFistTargets
-// (Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          Range                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           anyHit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -650,7 +651,7 @@ void ABuff_TekArmor_Gloves_C::STATIC_ScanForRocketFistTargets(float Range, bool*
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.AccurateSphereCheck
-// (NetRequest, Exec, Native, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 EndLocation                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -679,13 +680,13 @@ void ABuff_TekArmor_Gloves_C::AccurateSphereCheck(const struct FVector& EndLocat
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Spawn Sound at Fist Location
-// (NetRequest, Exec, NetResponse, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class USoundBase*              SoundToSpawn                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VolumeMultiplier               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          PitchMultiplier                (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Gloves_C::Spawn_Sound_at_Fist_Location(class USoundBase* SoundToSpawn, float VolumeMultiplier, float PitchMultiplier)
+void ABuff_TekArmor_Gloves_C::STATIC_Spawn_Sound_at_Fist_Location(class USoundBase* SoundToSpawn, float VolumeMultiplier, float PitchMultiplier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Spawn Sound at Fist Location");
 
@@ -762,7 +763,7 @@ void ABuff_TekArmor_Gloves_C::RocketPunchStart()
 
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Punch
-// (NetRequest, Native, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void ABuff_TekArmor_Gloves_C::Punch()
 {
@@ -837,14 +838,14 @@ void ABuff_TekArmor_Gloves_C::UserConstructionScript()
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_77
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_75
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_Targeting_K2Node_InputActionEvent_77()
+void ABuff_TekArmor_Gloves_C::InpActEvt_Targeting_K2Node_InputActionEvent_75()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_77");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_75");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_Targeting_K2Node_InputActionEvent_77_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_Targeting_K2Node_InputActionEvent_75_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -854,14 +855,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_Targeting_K2Node_InputActionEvent_77()
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_76
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_74
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_Targeting_K2Node_InputActionEvent_76()
+void ABuff_TekArmor_Gloves_C::InpActEvt_Targeting_K2Node_InputActionEvent_74()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_76");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_74");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_Targeting_K2Node_InputActionEvent_76_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_Targeting_K2Node_InputActionEvent_74_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -871,14 +872,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_Targeting_K2Node_InputActionEvent_76()
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_75
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_73
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_AltFire_K2Node_InputActionEvent_75()
+void ABuff_TekArmor_Gloves_C::InpActEvt_AltFire_K2Node_InputActionEvent_73()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_75");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_73");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_AltFire_K2Node_InputActionEvent_75_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_AltFire_K2Node_InputActionEvent_73_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -888,14 +889,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_AltFire_K2Node_InputActionEvent_75()
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_74
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_72
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_AltFire_K2Node_InputActionEvent_74()
+void ABuff_TekArmor_Gloves_C::InpActEvt_AltFire_K2Node_InputActionEvent_72()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_74");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_72");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_AltFire_K2Node_InputActionEvent_74_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_AltFire_K2Node_InputActionEvent_72_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -905,14 +906,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_AltFire_K2Node_InputActionEvent_74()
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_73
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_71
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_Fire_K2Node_InputActionEvent_73()
+void ABuff_TekArmor_Gloves_C::InpActEvt_Fire_K2Node_InputActionEvent_71()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_73");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_71");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_Fire_K2Node_InputActionEvent_73_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_Fire_K2Node_InputActionEvent_71_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -922,14 +923,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_Fire_K2Node_InputActionEvent_73()
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_72
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_70
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_Fire_K2Node_InputActionEvent_72()
+void ABuff_TekArmor_Gloves_C::InpActEvt_Fire_K2Node_InputActionEvent_70()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_72");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_70");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_Fire_K2Node_InputActionEvent_72_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_Fire_K2Node_InputActionEvent_70_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -939,14 +940,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_Fire_K2Node_InputActionEvent_72()
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_39
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_37
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_39()
+void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_37()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_39");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_37");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_39_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_37_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -956,14 +957,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_38
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_36
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_38()
+void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_36()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_38");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_36");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_38_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_36_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -973,14 +974,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_37
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_35
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_37()
+void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_35()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_37");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_35");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_37_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_35_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -990,14 +991,14 @@ void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEven
 }
 
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_36
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_34
 // ()
 
-void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_36()
+void ABuff_TekArmor_Gloves_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_34()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_36");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_34");
 
-	ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_36_Params params;
+	ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_34_Params params;
 
 	auto flags = fn->FunctionFlags;
 

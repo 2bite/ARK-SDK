@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_CactusBuffSoup.PrimalItemConsumable_CactusBuffSoup_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_CactusBuffSoup_C : public UPrimalItemConsumableEatable_BuffingSoup_C
 {
 public:

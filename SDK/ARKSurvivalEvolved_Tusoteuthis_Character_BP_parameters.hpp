@@ -93,7 +93,7 @@ struct ATusoteuthis_Character_BP_C_BPFedWakingTameEvent_Params
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino
 struct ATusoteuthis_Character_BP_C_GetDefaultDino_Params
 {
-	class ATusoteuthis_Character_BP_C*                 Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ATusoteuthis_Character_BP_C*                 ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.OnRep_UTurnTargetRot
@@ -255,8 +255,8 @@ struct ATusoteuthis_Character_BP_C_TurnActorAround__UpdateFunc_Params
 {
 };
 
-// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_218
-struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_218_Params
+// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_214
+struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_214_Params
 {
 };
 

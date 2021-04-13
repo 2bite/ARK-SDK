@@ -35,7 +35,7 @@ struct AWeapFishingRod_C_AllowFishing_Params
 // Function WeapFishingRod.WeapFishingRod_C.IsOwnerInCaveVolume
 struct AWeapFishingRod_C_IsOwnerInCaveVolume_Params
 {
-	bool                                               ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.GiveFishLoot
@@ -79,7 +79,7 @@ struct AWeapFishingRod_C_PlayFishAttackAnimation_Params
 struct AWeapFishingRod_C_IsPointInWater_Params
 {
 	struct FVector                                     Point;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               _return;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.HandleReleasingFish
@@ -144,8 +144,8 @@ struct AWeapFishingRod_C_StartSecondaryActionEvent_Params
 // Function WeapFishingRod.WeapFishingRod_C.CanSnareFish
 struct AWeapFishingRod_C_CanSnareFish_Params
 {
-	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanSnare;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               canSnare;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.GenerateRandomKeys
@@ -159,7 +159,7 @@ struct AWeapFishingRod_C_GenerateRandomKeys_Params
 // Function WeapFishingRod.WeapFishingRod_C.FishSnared
 struct AWeapFishingRod_C_FishSnared_Params
 {
-	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.UpdateSurroundingPrey
@@ -184,13 +184,13 @@ struct AWeapFishingRod_C_StartFishing_Params
 // Function WeapFishingRod.WeapFishingRod_C.OnFishReleased
 struct AWeapFishingRod_C_OnFishReleased_Params
 {
-	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.OnFishSnared
 struct AWeapFishingRod_C_OnFishSnared_Params
 {
-	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.ReleaseReeledFish
@@ -283,13 +283,13 @@ struct AWeapFishingRod_C_ReelingGameFinishedEvent_Params
 // Function WeapFishingRod.WeapFishingRod_C.OnFishSnaredEvent
 struct AWeapFishingRod_C_OnFishSnaredEvent_Params
 {
-	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.OnFishReleasedEvent
 struct AWeapFishingRod_C_OnFishReleasedEvent_Params
 {
-	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.BPAnimNotifyCustomState_Begin

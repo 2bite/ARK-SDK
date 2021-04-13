@@ -48,7 +48,7 @@ public:
 	bool                                               AllowCableDraw;                                           // 0x0E28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x0E29(0x0003) MISSED OFFSET
 	float                                              SnareStartTime;                                           // 0x0E2C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CanSnare;                                                 // 0x0E30(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               canSnare;                                                 // 0x0E30(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x3];                                       // 0x0E31(0x0003) MISSED OFFSET
 	float                                              BaitMinSnareTime;                                         // 0x0E34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FFishSnareData>                      FishSnareTimes;                                           // 0x0E38(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -174,14 +174,14 @@ public:
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason);
 	void Draw_Crosshair_While_Riding_Dino(bool shouldDraw);
 	void AllowFishing(bool* Result);
-	void IsOwnerInCaveVolume(bool* ret);
+	void IsOwnerInCaveVolume(bool* Ret);
 	void GiveFishLoot(class UClass* Class, class APrimalDinoCharacter* Outer, float* OutQuality);
 	void GetNum_Remaining_Reel_Keys(int* Count);
 	void CalculateDistanceToCover(bool UnderWater, float* DistanceToCover);
 	void Get_Reeled_Fish_Target_Location(struct FVector* TargetLocation);
 	void UpdateBaitMeshLocation();
 	void PlayFishAttackAnimation();
-	void IsPointInWater(const struct FVector& Point, bool* _return);
+	void STATIC_IsPointInWater(const struct FVector& Point, bool* Return);
 	void HandleReleasingFish();
 	void OnInstigatorPlayDyingEvent();
 	void StartUnequipEvent();
@@ -189,18 +189,18 @@ public:
 	void UpdateToBeSnaredFish();
 	void Finish_SnaringFish();
 	void OnRGKeySuccess();
-	void STATIC_TugFishingCable(int remainingMoves);
+	void TugFishingCable(int remainingMoves);
 	void GetReelingGameDuration(class APrimalDinoCharacter* ReeledFish, float* Duration);
 	void OnStartPlayAnimation();
 	void StartSecondaryActionEvent();
-	void CanSnareFish(class APrimalDinoCharacter* fish, bool* CanSnare);
-	void GenerateRandomKeys(int NumSets, int NumSetKeys, TArray<struct FKey>* Keys);
-	void FishSnared(class APrimalDinoCharacter* fish);
-	void UpdateSurroundingPrey();
-	void STATIC_GetCableEndPoint(float DeltaTime, struct FVector* EndPoint);
+	void CanSnareFish(class APrimalDinoCharacter* Fish, bool* canSnare);
+	void STATIC_GenerateRandomKeys(int NumSets, int NumSetKeys, TArray<struct FKey>* Keys);
+	void FishSnared(class APrimalDinoCharacter* Fish);
+	void STATIC_UpdateSurroundingPrey();
+	void GetCableEndPoint(float DeltaTime, struct FVector* EndPoint);
 	void StartFishing(const struct FVector& BaitTargetLocation, const struct FVector& BaitWaterSurfaceLocation);
-	void OnFishReleased(class APrimalDinoCharacter* fish);
-	void OnFishSnared(class APrimalDinoCharacter* fish);
+	void OnFishReleased(class APrimalDinoCharacter* Fish);
+	void OnFishSnared(class APrimalDinoCharacter* Fish);
 	void ReleaseReeledFish();
 	void STATIC_CaughtFish(class APrimalDinoCharacter* CaughtFish);
 	void ReelingGameFinished(bool bSuccess);
@@ -211,13 +211,13 @@ public:
 	void GetCableAttachComponent(class USceneComponent** Comp);
 	void UpdateCableComponent(float DeltaTime);
 	void ReceiveTick(float* DeltaSeconds);
-	bool STATIC_BPWeaponCanFire();
+	bool BPWeaponCanFire();
 	void UserConstructionScript();
 	void EndFishingEvent(bool releaseFish);
 	void StartReelingGameEvent(class APrimalDinoCharacter* ReeledInFish);
 	void ReelingGameFinishedEvent(bool bSuccess);
-	void OnFishSnaredEvent(class APrimalDinoCharacter* fish);
-	void OnFishReleasedEvent(class APrimalDinoCharacter* fish);
+	void OnFishSnaredEvent(class APrimalDinoCharacter* Fish);
+	void OnFishReleasedEvent(class APrimalDinoCharacter* Fish);
 	void BPAnimNotifyCustomState_Begin(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, float* TotalDuration, class UAnimNotifyState** AnimNotifyObject);
 	void ServerStartFishing(const struct FVector& BaitTargetLocation, const struct FVector& BaitWaterSurfaceLocation);
 	void ServerEndFishing(bool releaseFish);

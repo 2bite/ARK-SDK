@@ -83,7 +83,7 @@ public:
 	bool                                               K2Node_DynamicCast5_CastSuccess;                          // 0x0F80(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x3];                                       // 0x0F81(0x0003) MISSED OFFSET
 	float                                              CallFunc_PlayAnimEx_ReturnValue4;                         // 0x0F84(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterCharacter*                           K2Node_CustomEvent_Target;                                // 0x0F88(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterCharacter*                           K2Node_CustomEvent_target;                                // 0x0F88(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayWeaponAnimationEx_ReturnValue;               // 0x0F90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x4];                                       // 0x0F94(0x0004) MISSED OFFSET
 	class AShooterPlayerState*                         K2Node_DynamicCast_AsShooterPlayerState;                  // 0x0F98(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -114,7 +114,7 @@ public:
 	}
 
 
-	class FString STATIC_BPGetDebugInfoString();
+	class FString BPGetDebugInfoString();
 	bool AllowTargeting();
 	struct FText STATIC_BPGetTargetingTooltipInfoLabel();
 	float BPGetProjectileSpeed();
@@ -128,7 +128,7 @@ public:
 	void Setup_Grenade_Anim_Instance_Class();
 	bool BPIsValidUnStasisCaster();
 	void BPOnStopTargeting(bool* bFromGamepadLeft);
-	void ReceiveTick(float* DeltaSeconds);
+	void STATIC_ReceiveTick(float* DeltaSeconds);
 	void ScoutDespawned();
 	void Show(class USceneComponent* SceneComp);
 	void Hide(class USceneComponent* SceneComp);
@@ -142,7 +142,7 @@ public:
 	void ReceiveBeginPlay();
 	void Scout_Launched(class AScout_Character_BP_C* Scout);
 	class AActor* BPGetActorForTargetingTooltip();
-	bool BPWeaponCanFire();
+	bool STATIC_BPWeaponCanFire();
 	void UserConstructionScript();
 	void MULTI_ScoutLaunched();
 	void MULTI_ReleasedPossessingSurvivor();

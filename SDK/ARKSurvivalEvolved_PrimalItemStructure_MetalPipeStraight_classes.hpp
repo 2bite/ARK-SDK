@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_MetalPipeStraight.PrimalItemStructure_MetalPipeStraight_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_MetalPipeStraight_C : public UPrimalItemStructure_BaseStonePipe_C
 {
 public:

@@ -30,7 +30,7 @@ void AWeapGlowStick_C::BPHandleMeleeAttack()
 
 
 // Function WeapGlowStick.WeapGlowStick_C.BPAnimNotifyCustomEvent
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)

@@ -70,11 +70,11 @@ void ABuff_SpaceWhaleTeleport_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, DLLImport)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_SpaceWhaleTeleport_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_SpaceWhaleTeleport_C::BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPSetupForInstigator");
 
@@ -116,13 +116,13 @@ bool ABuff_SpaceWhaleTeleport_C::BPCustomAllowAddBuff(class APrimalCharacter** f
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPPreventInstigatorMovementMode
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport)
+// (NetRequest, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_SpaceWhaleTeleport_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
+bool ABuff_SpaceWhaleTeleport_C::STATIC_BPPreventInstigatorMovementMode(TEnumAsByte<EMovementMode>* NewMovementMode, unsigned char* NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPPreventInstigatorMovementMode");
 
@@ -131,7 +131,6 @@ bool ABuff_SpaceWhaleTeleport_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMo
 	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,7 +141,7 @@ bool ABuff_SpaceWhaleTeleport_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMo
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPOnOwnerMassTeleportEvent
-// (Net, NetRequest, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport)
+// (Native, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EMassTeleportState>* EventState                     (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter**       TeleportInitiatedByChar        (Parm, ZeroConstructor, IsPlainOldData)
@@ -156,6 +155,7 @@ void ABuff_SpaceWhaleTeleport_C::STATIC_BPOnOwnerMassTeleportEvent(TEnumAsByte<E
 	params.TeleportInitiatedByChar = TeleportInitiatedByChar;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -35,7 +35,7 @@ void ABuff_ParaWarningAlert_C::Add_Enemy_Indicators(TArray<struct FVector>* Enem
 
 
 // Function Buff_ParaWarningAlert.Buff_ParaWarningAlert_C.BPActivated
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, Const)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

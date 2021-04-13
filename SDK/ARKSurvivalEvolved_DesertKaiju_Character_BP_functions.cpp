@@ -149,9 +149,9 @@ bool ADesertKaiju_Character_BP_C::BPCanBaseOnCharacter(class APrimalCharacter** 
 // ()
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::ActorIsKaiju(class AActor* Actor, bool* _return)
+void ADesertKaiju_Character_BP_C::ActorIsKaiju(class AActor* Actor, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.ActorIsKaiju");
 
@@ -164,8 +164,8 @@ void ADesertKaiju_Character_BP_C::ActorIsKaiju(class AActor* Actor, bool* _retur
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -204,7 +204,7 @@ void ADesertKaiju_Character_BP_C::OnRep_UseTamedPhysics()
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BPOverrideDamageCauserHitMarker
-// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterPlayerController** DamageCauserController         (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bHitFriendlyTarget             (Parm, ZeroConstructor, IsPlainOldData)
@@ -227,6 +227,7 @@ struct FHitMarkerSettings ADesertKaiju_Character_BP_C::BPOverrideDamageCauserHit
 	params.bIsPointDamage = bIsPointDamage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -321,7 +322,7 @@ void ADesertKaiju_Character_BP_C::StunKaiju()
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BPGetRiderUnboardLocation
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter**       RidingCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -334,6 +335,7 @@ struct FVector ADesertKaiju_Character_BP_C::STATIC_BPGetRiderUnboardLocation(cla
 	params.RidingCharacter = RidingCharacter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -449,17 +451,18 @@ void ADesertKaiju_Character_BP_C::K2_OnMovementModeChanged(TEnumAsByte<EMovement
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Get Kaiju Transform
-// (NetRequest, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct UObject_FTransform      ActualTransform                (Parm, OutParm, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::STATIC_Get_Kaiju_Transform(struct UObject_FTransform* ActualTransform)
+void ADesertKaiju_Character_BP_C::Get_Kaiju_Transform(struct UObject_FTransform* ActualTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Get Kaiju Transform");
 
 	ADesertKaiju_Character_BP_C_Get_Kaiju_Transform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -514,9 +517,9 @@ void ADesertKaiju_Character_BP_C::TickLightningTargetVFX()
 // struct FVector                 WorldLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                WorldRotation                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              HitResult                      (Parm)
-// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::UpdateLightningTargetVFXLocation(bool IsVisible, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, const struct FHitResult& HitResult, const struct FVector& SurfaceNormal)
+void ADesertKaiju_Character_BP_C::UpdateLightningTargetVFXLocation(bool IsVisible, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, const struct FHitResult& HitResult, const struct FVector& surfaceNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.UpdateLightningTargetVFXLocation");
 
@@ -525,7 +528,7 @@ void ADesertKaiju_Character_BP_C::UpdateLightningTargetVFXLocation(bool IsVisibl
 	params.WorldLocation = WorldLocation;
 	params.WorldRotation = WorldRotation;
 	params.HitResult = HitResult;
-	params.SurfaceNormal = SurfaceNormal;
+	params.surfaceNormal = surfaceNormal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -736,7 +739,7 @@ int ADesertKaiju_Character_BP_C::BPAdjustAttackIndex(int* AttackIndex)
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.TamedFlockScan for Enemies
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Native, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ADesertKaiju_Character_BP_C::STATIC_TamedFlockScan_for_Enemies()
 {
@@ -788,7 +791,7 @@ void ADesertKaiju_Character_BP_C::WildFlocks_Distance_to_Kaiju_Check()
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.FlockCommandTrace
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           FlockOne                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -800,6 +803,7 @@ void ADesertKaiju_Character_BP_C::FlockCommandTrace(bool FlockOne)
 	params.FlockOne = FlockOne;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1127,7 +1131,7 @@ void ADesertKaiju_Character_BP_C::BPTimerServer()
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.SpawnGroundFlock
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           FirstFlock                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1139,7 +1143,6 @@ void ADesertKaiju_Character_BP_C::STATIC_SpawnGroundFlock(bool FirstFlock)
 	params.FirstFlock = FirstFlock;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1148,7 +1151,7 @@ void ADesertKaiju_Character_BP_C::STATIC_SpawnGroundFlock(bool FirstFlock)
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Event, NetMulticast, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -1210,9 +1213,9 @@ void ADesertKaiju_Character_BP_C::ShortestAngleDistance(float AngleCurrent, floa
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.GetLookDir
 // ()
 // Parameters:
-// struct FVector                 _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::GetLookDir(struct FVector* _return)
+void ADesertKaiju_Character_BP_C::GetLookDir(struct FVector* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.GetLookDir");
 
@@ -1224,13 +1227,13 @@ void ADesertKaiju_Character_BP_C::GetLookDir(struct FVector* _return)
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.LightningTrace
-// (NetReliable, Exec, Static, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           FireLightning                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ValidTarget                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1239,7 +1242,7 @@ void ADesertKaiju_Character_BP_C::GetLookDir(struct FVector* _return)
 // struct FVector                 HitNormal                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           SuccessFiredLightning          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::STATIC_LightningTrace(bool FireLightning, bool* ValidTarget, struct FVector* hitLoc, bool* HitActor, struct FVector* HitNormal, bool* SuccessFiredLightning)
+void ADesertKaiju_Character_BP_C::LightningTrace(bool FireLightning, bool* ValidTarget, struct FVector* hitLoc, bool* HitActor, struct FVector* HitNormal, bool* SuccessFiredLightning)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.LightningTrace");
 
@@ -1247,6 +1250,7 @@ void ADesertKaiju_Character_BP_C::STATIC_LightningTrace(bool FireLightning, bool
 	params.FireLightning = FireLightning;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1401,13 +1405,13 @@ bool ADesertKaiju_Character_BP_C::BPAllowCarryCharacter(class APrimalCharacter**
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BPGetMultiUseEntries
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, Const)
+// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ADesertKaiju_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ADesertKaiju_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.BPGetMultiUseEntries");
 
@@ -1415,6 +1419,7 @@ TArray<struct FMultiUseEntry> ADesertKaiju_Character_BP_C::BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1547,7 +1552,7 @@ float ADesertKaiju_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct 
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.DealLightningStrikeExplosionDamage
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 ExplosionLoc                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           OnKaiju                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -1563,7 +1568,6 @@ void ADesertKaiju_Character_BP_C::STATIC_DealLightningStrikeExplosionDamage(cons
 	params.Rotation = Rotation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1572,7 +1576,7 @@ void ADesertKaiju_Character_BP_C::STATIC_DealLightningStrikeExplosionDamage(cons
 
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.SpawnBasedFlock
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           FirstFlock                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1584,6 +1588,7 @@ void ADesertKaiju_Character_BP_C::STATIC_SpawnBasedFlock(bool FirstFlock)
 	params.FirstFlock = FirstFlock;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1631,14 +1636,14 @@ void ADesertKaiju_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_126
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_122
 // ()
 
-void ADesertKaiju_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_126()
+void ADesertKaiju_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_122()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_126");
+	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_122");
 
-	ADesertKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_126_Params params;
+	ADesertKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_122_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1648,14 +1653,14 @@ void ADesertKaiju_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_126()
 }
 
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_125
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_121
 // ()
 
-void ADesertKaiju_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_125()
+void ADesertKaiju_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_121()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_125");
+	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_121");
 
-	ADesertKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_125_Params params;
+	ADesertKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_121_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2176,15 +2181,15 @@ void ADesertKaiju_Character_BP_C::Server_UpdateRiderLightningStrikeCharges(float
 // ()
 // Parameters:
 // class APrimalCharacter*        Passenger                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           useOverride                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UseOverride                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::Passenger1DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool useOverride)
+void ADesertKaiju_Character_BP_C::Passenger1DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool UseOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger1DelayedSetInterpSpeed");
 
 	ADesertKaiju_Character_BP_C_Passenger1DelayedSetInterpSpeed_Params params;
 	params.Passenger = Passenger;
-	params.useOverride = useOverride;
+	params.UseOverride = UseOverride;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2198,15 +2203,15 @@ void ADesertKaiju_Character_BP_C::Passenger1DelayedSetInterpSpeed(class APrimalC
 // ()
 // Parameters:
 // class APrimalCharacter*        Passenger                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           useOverride                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UseOverride                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::Passenger2DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool useOverride)
+void ADesertKaiju_Character_BP_C::Passenger2DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool UseOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger2DelayedSetInterpSpeed");
 
 	ADesertKaiju_Character_BP_C_Passenger2DelayedSetInterpSpeed_Params params;
 	params.Passenger = Passenger;
-	params.useOverride = useOverride;
+	params.UseOverride = UseOverride;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2220,15 +2225,15 @@ void ADesertKaiju_Character_BP_C::Passenger2DelayedSetInterpSpeed(class APrimalC
 // ()
 // Parameters:
 // class APrimalCharacter*        Passenger                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           useOverride                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UseOverride                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::Passenger3DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool useOverride)
+void ADesertKaiju_Character_BP_C::Passenger3DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool UseOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger3DelayedSetInterpSpeed");
 
 	ADesertKaiju_Character_BP_C_Passenger3DelayedSetInterpSpeed_Params params;
 	params.Passenger = Passenger;
-	params.useOverride = useOverride;
+	params.UseOverride = UseOverride;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2242,15 +2247,15 @@ void ADesertKaiju_Character_BP_C::Passenger3DelayedSetInterpSpeed(class APrimalC
 // ()
 // Parameters:
 // class APrimalCharacter*        Passenger                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           useOverride                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           UseOverride                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADesertKaiju_Character_BP_C::Passenger4DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool useOverride)
+void ADesertKaiju_Character_BP_C::Passenger4DelayedSetInterpSpeed(class APrimalCharacter* Passenger, bool UseOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger4DelayedSetInterpSpeed");
 
 	ADesertKaiju_Character_BP_C_Passenger4DelayedSetInterpSpeed_Params params;
 	params.Passenger = Passenger;
-	params.useOverride = useOverride;
+	params.UseOverride = UseOverride;
 
 	auto flags = fn->FunctionFlags;
 

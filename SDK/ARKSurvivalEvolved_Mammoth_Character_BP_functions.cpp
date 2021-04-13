@@ -120,7 +120,7 @@ void AMammoth_Character_BP_C::ThrottledTick()
 
 
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.BlueprintAdjustOutputDamage
-// (Exec, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, HasDefaults, NetClient)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -129,7 +129,7 @@ void AMammoth_Character_BP_C::ThrottledTick()
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AMammoth_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AMammoth_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mammoth_Character_BP.Mammoth_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -204,7 +204,7 @@ void AMammoth_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch, struct FVe
 
 
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.ThrowTrace
-// (NetReliable, Exec, Native, Event, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetMulticast, MulticastDelegate, HasDefaults, NetClient)
 
 void AMammoth_Character_BP_C::ThrowTrace()
 {
@@ -213,7 +213,6 @@ void AMammoth_Character_BP_C::ThrowTrace()
 	AMammoth_Character_BP_C_ThrowTrace_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,12 +221,12 @@ void AMammoth_Character_BP_C::ThrowTrace()
 
 
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.GetThrowVelocity
-// (NetRequest, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        ThrownCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector AMammoth_Character_BP_C::STATIC_GetThrowVelocity(class APrimalCharacter* ThrownCharacter)
+struct FVector AMammoth_Character_BP_C::GetThrowVelocity(class APrimalCharacter* ThrownCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mammoth_Character_BP.Mammoth_Character_BP_C.GetThrowVelocity");
 
@@ -365,7 +364,7 @@ bool AMammoth_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, HasDefaults, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -556,7 +555,7 @@ struct FVector AMammoth_Character_BP_C::GetGrabLocation()
 
 
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.RetrieveAnyGrabbableCharacter
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, Public, Private, Delegate, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           FoundCharacter                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -578,13 +577,13 @@ void AMammoth_Character_BP_C::RetrieveAnyGrabbableCharacter(bool* FoundCharacter
 
 
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.BPOverrideGetAttackAnimationIndex
-// (NetRequest, Event, Static, NetMulticast, Public, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (Exec, Event, NetResponse, Public, Private, Delegate, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UAnimMontage*>    AnimationArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int AMammoth_Character_BP_C::STATIC_BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray)
+int AMammoth_Character_BP_C::BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mammoth_Character_BP.Mammoth_Character_BP_C.BPOverrideGetAttackAnimationIndex");
 
@@ -714,9 +713,9 @@ void AMammoth_Character_BP_C::AllowTrumpetDebuff(class APrimalCharacter* Target,
 
 
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.DoTrumpetAttack
-// (NetReliable, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, Public, Private, Delegate, BlueprintEvent, BlueprintPure, Const, NetValidate)
 
-void AMammoth_Character_BP_C::DoTrumpetAttack()
+void AMammoth_Character_BP_C::STATIC_DoTrumpetAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mammoth_Character_BP.Mammoth_Character_BP_C.DoTrumpetAttack");
 

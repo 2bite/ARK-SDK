@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Insect_Character_Base.Insect_Character_Base_C
-// 0x0000 (0x2188 - 0x2188)
+// 0x0000 (0x2198 - 0x2198)
 class AInsect_Character_Base_C : public ADino_Character_BP_C
 {
 public:

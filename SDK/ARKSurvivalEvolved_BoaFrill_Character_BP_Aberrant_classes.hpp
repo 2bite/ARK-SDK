@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BoaFrill_Character_BP_Aberrant.BoaFrill_Character_BP_Aberrant_C
-// 0x0000 (0x2354 - 0x2354)
+// 0x0000 (0x2364 - 0x2364)
 class ABoaFrill_Character_BP_Aberrant_C : public ABoaFrill_Character_BP_C
 {
 public:

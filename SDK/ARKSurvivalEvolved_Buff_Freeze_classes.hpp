@@ -107,7 +107,7 @@ public:
 	void STATIC_CreateMIC();
 	void BuffTickServer(float* DeltaTime);
 	void ApplyFrozenDebuff();
-	void AddFreeze(float amount, float Time);
+	void STATIC_AddFreeze(float amount, float Time);
 	void CheckDeactivateCondition();
 	void BPActivated(class AActor** ForInstigator);
 	void BPDeactivated(class AActor** ForInstigator);

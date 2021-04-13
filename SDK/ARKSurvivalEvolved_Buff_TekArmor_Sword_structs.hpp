@@ -8,10 +8,10 @@
 
 #include "ARKSurvivalEvolved_Basic.hpp"
 #include "ARKSurvivalEvolved_Buff_TekArmor_classes.hpp"
+#include "ARKSurvivalEvolved_E_TekGlovePunchState_classes.hpp"
 #include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
-#include "ARKSurvivalEvolved_E_TekGlovePunchState_classes.hpp"
 
 namespace sdk
 {

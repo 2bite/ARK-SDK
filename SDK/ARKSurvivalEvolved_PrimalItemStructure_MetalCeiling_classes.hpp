@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_MetalCeiling.PrimalItemStructure_MetalCeiling_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_MetalCeiling_C : public UPrimalItemStructure_BaseCeiling_C
 {
 public:

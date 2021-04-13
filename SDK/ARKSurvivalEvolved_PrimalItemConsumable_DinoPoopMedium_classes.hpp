@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_DinoPoopMedium.PrimalItemConsumable_DinoPoopMedium_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemConsumable_DinoPoopMedium_C : public UPrimalItemConsumablePoop_C
 {
 public:

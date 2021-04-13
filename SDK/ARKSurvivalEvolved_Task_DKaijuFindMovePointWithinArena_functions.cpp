@@ -16,9 +16,9 @@ namespace sdk
 // ()
 // Parameters:
 // struct FVector                 Origin                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTask_DKaijuFindMovePointWithinArena_C::Get_Random_PointNoMin(const struct FVector& Origin, struct FVector* _return)
+void UTask_DKaijuFindMovePointWithinArena_C::Get_Random_PointNoMin(const struct FVector& Origin, struct FVector* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Task_DKaijuFindMovePointWithinArena.Task_DKaijuFindMovePointWithinArena_C.Get Random PointNoMin");
 
@@ -31,8 +31,8 @@ void UTask_DKaijuFindMovePointWithinArena_C::Get_Random_PointNoMin(const struct 
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 
@@ -40,10 +40,10 @@ void UTask_DKaijuFindMovePointWithinArena_C::Get_Random_PointNoMin(const struct 
 // ()
 // Parameters:
 // struct FVector                 Origin                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 _return                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           DidNotFindLoc                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTask_DKaijuFindMovePointWithinArena_C::Get_Random_PointMin(const struct FVector& Origin, struct FVector* _return, bool* DidNotFindLoc)
+void UTask_DKaijuFindMovePointWithinArena_C::Get_Random_PointMin(const struct FVector& Origin, struct FVector* Return, bool* DidNotFindLoc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Task_DKaijuFindMovePointWithinArena.Task_DKaijuFindMovePointWithinArena_C.Get Random PointMin");
 
@@ -56,15 +56,15 @@ void UTask_DKaijuFindMovePointWithinArena_C::Get_Random_PointMin(const struct FV
 
 	fn->FunctionFlags = flags;
 
-	if (_return != nullptr)
-		*_return = params._return;
+	if (Return != nullptr)
+		*Return = params.Return;
 	if (DidNotFindLoc != nullptr)
 		*DidNotFindLoc = params.DidNotFindLoc;
 }
 
 
 // Function Task_DKaijuFindMovePointWithinArena.Task_DKaijuFindMovePointWithinArena_C.ReceiveExecute
-// (NetReliable, Event, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -76,6 +76,7 @@ void UTask_DKaijuFindMovePointWithinArena_C::ReceiveExecute(class AActor** Owner
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

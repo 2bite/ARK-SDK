@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ScoutTracker.Buff_ScoutTracker_C.BPGetDebugInfoString
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Net, NetMulticast, Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -24,7 +24,6 @@ class FString ABuff_ScoutTracker_C::BPGetDebugInfoString()
 	ABuff_ScoutTracker_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

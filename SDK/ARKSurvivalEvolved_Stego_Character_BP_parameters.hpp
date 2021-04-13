@@ -14,6 +14,11 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Stego_Character_BP.Stego_Character_BP_C.BPCharacterSleeped
+struct AStego_Character_BP_C_BPCharacterSleeped_Params
+{
+};
+
 // Function Stego_Character_BP.Stego_Character_BP_C.BPOverrideMoveToOrder
 struct AStego_Character_BP_C_BPOverrideMoveToOrder_Params
 {

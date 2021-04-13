@@ -10,9 +10,9 @@
 #include "ARKSurvivalEvolved_Dino_Character_BP_RepelType_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
+#include "ARKSurvivalEvolved_FlockBehaviorData_classes.hpp"
 #include "ARKSurvivalEvolved_AIModule_classes.hpp"
 #include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
-#include "ARKSurvivalEvolved_FlockBehaviorData_classes.hpp"
 
 namespace sdk
 {

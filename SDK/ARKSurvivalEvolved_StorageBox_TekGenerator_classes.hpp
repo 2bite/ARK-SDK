@@ -123,10 +123,10 @@ public:
 	void BPRefreshedStructureColors();
 	float BPGetFuelConsumptionMultiplier();
 	bool BPCanBeActivatedByPlayer(class AShooterPlayerController** PC);
-	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed);
+	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed, bool* bForInventoryOnly);
 	void GetDesiredRadiusMultiplier(int IncrementAmount, float* OutRadiusMultiplier);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPPostInitializeComponents();
 	void BPPostSetStructureCollisionChannels();
 	void SetShieldActive(bool bActive);

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Iguanodon_Character_BP_Aberrant.Iguanodon_Character_BP_Aberrant_C
-// 0x0000 (0x22C2 - 0x22C2)
+// 0x0000 (0x22D2 - 0x22D2)
 class AIguanodon_Character_BP_Aberrant_C : public AIguanodon_Character_BP_C
 {
 public:

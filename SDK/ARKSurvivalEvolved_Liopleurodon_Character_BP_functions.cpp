@@ -53,7 +53,7 @@ void ALiopleurodon_Character_BP_C::BPTimerServer()
 
 
 // Function Liopleurodon_Character_BP.Liopleurodon_Character_BP_C.BlueprintDrawFloatingHUD
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Net, Static, NetMulticast, MulticastDelegate, Private, Delegate, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -71,7 +71,6 @@ void ALiopleurodon_Character_BP_C::STATIC_BlueprintDrawFloatingHUD(class AShoote
 	params.DrawScale = DrawScale;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

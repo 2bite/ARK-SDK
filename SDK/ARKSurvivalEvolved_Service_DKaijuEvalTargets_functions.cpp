@@ -103,7 +103,7 @@ void UService_DKaijuEvalTargets_C::SetFlockTargets()
 
 
 // Function Service_DKaijuEvalTargets.Service_DKaijuEvalTargets_C.SummonLightningGroundTargets
-// (NetRequest, Exec, Native, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void UService_DKaijuEvalTargets_C::SummonLightningGroundTargets()
 {
@@ -112,7 +112,6 @@ void UService_DKaijuEvalTargets_C::SummonLightningGroundTargets()
 	UService_DKaijuEvalTargets_C_SummonLightningGroundTargets_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

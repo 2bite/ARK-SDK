@@ -27,8 +27,8 @@ public:
 	}
 
 
-	void GetVar_DifficultyIndex(int* _return);
-	void GetVar_InHordeMode(bool* _return);
+	void GetVar_DifficultyIndex(int* Return);
+	void GetVar_InHordeMode(bool* Return);
 	void GetKingKaijuCharStatusComponent(class UPrimalCharacterStatusComponent** Component);
 	void SetVar_PlayersLostHordeMode(bool Value);
 	void SetVar_FinishCurrentHordeMode(bool Value);

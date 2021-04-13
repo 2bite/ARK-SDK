@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CaveWolf_FindAttachPointForZipline_TK.CaveWolf_FindAttachPointForZipline_TK_C.ReceiveExecute
-// (Exec, NetMulticast, Public, NetServer, NetClient, BlueprintEvent, Const)
+// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCaveWolf_FindAttachPointForZipline_TK_C::ReceiveExecute(class AActor** OwnerActor)
+void UCaveWolf_FindAttachPointForZipline_TK_C::STATIC_ReceiveExecute(class AActor** OwnerActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CaveWolf_FindAttachPointForZipline_TK.CaveWolf_FindAttachPointForZipline_TK_C.ReceiveExecute");
 

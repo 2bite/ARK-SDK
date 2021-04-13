@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bog_Raptor_Character_BP.Bog_Raptor_Character_BP_C
-// 0x0000 (0x2549 - 0x2549)
+// 0x0000 (0x2559 - 0x2559)
 class ABog_Raptor_Character_BP_C : public ARaptor_Character_BP_C
 {
 public:

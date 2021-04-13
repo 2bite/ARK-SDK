@@ -34,7 +34,7 @@ public:
 	bool BPCanBeActivated();
 	void BPPostLoadedFromSaveGame();
 	void TurretCheckHardLimit();
-	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
+	void STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void UserConstructionScript();
 	void ExecuteUbergraph_StructureTurretBaseBP_BaseHeavy(int EntryPoint);

@@ -289,7 +289,7 @@ bool ARockGolem_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function RockGolem_Character_BP.RockGolem_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, DLLImport, BlueprintEvent, Const)
+// (NetReliable, Native, NetResponse, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -303,6 +303,7 @@ TArray<struct FMultiUseEntry> ARockGolem_Character_BP_C::BPGetMultiUseEntries(cl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

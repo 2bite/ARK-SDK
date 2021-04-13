@@ -30,7 +30,7 @@ void AProjTropeFlakCannon_C::ReceiveBeginPlay()
 
 
 // Function ProjTropeFlakCannon.ProjTropeFlakCannon_C.ReceiveTick
-// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -42,6 +42,7 @@ void AProjTropeFlakCannon_C::STATIC_ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_ThatchRoof.PrimalItemStructure_ThatchRoof_C
-// 0x0000 (0x09F0 - 0x09F0)
+// 0x0000 (0x0A00 - 0x0A00)
 class UPrimalItemStructure_ThatchRoof_C : public UPrimalItemStructure_BaseRoof_C
 {
 public:

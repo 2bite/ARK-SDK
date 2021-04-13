@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.CheckForGasolineData
-// (NetReliable, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Native, NetMulticast, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalItem*             DestinationItem                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SupportsDragOn                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemResource_Gasoline_C::STATIC_CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn)
+void UPrimalItemResource_Gasoline_C::CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.CheckForGasolineData");
 
@@ -26,6 +26,7 @@ void UPrimalItemResource_Gasoline_C::STATIC_CheckForGasolineData(class UPrimalIt
 	params.DestinationItem = DestinationItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,11 +38,11 @@ void UPrimalItemResource_Gasoline_C::STATIC_CheckForGasolineData(class UPrimalIt
 
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.RefillGasoline
-// (NetRequest, Native, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Event, NetMulticast, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalItem*             DestinationItem                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemResource_Gasoline_C::STATIC_RefillGasoline(class UPrimalItem* DestinationItem)
+void UPrimalItemResource_Gasoline_C::RefillGasoline(class UPrimalItem* DestinationItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.RefillGasoline");
 
@@ -49,7 +50,6 @@ void UPrimalItemResource_Gasoline_C::STATIC_RefillGasoline(class UPrimalItem* De
 	params.DestinationItem = DestinationItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

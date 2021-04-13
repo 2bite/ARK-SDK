@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Purlovia_Character_BP_Aberrant.Purlovia_Character_BP_Aberrant_C
-// 0x0000 (0x2978 - 0x2978)
+// 0x0000 (0x2988 - 0x2988)
 class APurlovia_Character_BP_Aberrant_C : public APurlovia_Character_BP_C
 {
 public:

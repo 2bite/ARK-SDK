@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Snow_Argent_Character_BP.Snow_Argent_Character_BP_C
-// 0x0000 (0x21E8 - 0x21E8)
+// 0x0000 (0x21F8 - 0x21F8)
 class ASnow_Argent_Character_BP_C : public AArgent_Character_BP_C
 {
 public:

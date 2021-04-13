@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.Sruggle
-// (Net, NetReliable, Exec, Native, NetResponse, Public, Private, Protected, Delegate, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, HasOutParms, HasDefaults, NetClient)
 
-void ABuff_CarriedTarget_C::Sruggle()
+void ABuff_CarriedTarget_C::STATIC_Sruggle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CarriedTarget.Buff_CarriedTarget_C.Sruggle");
 
@@ -68,7 +68,7 @@ void ABuff_CarriedTarget_C::SetIsHostileBuff(bool NewSetting)
 
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.GetBuffDescription
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, Protected, Delegate, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -150,12 +150,12 @@ void ABuff_CarriedTarget_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.BPGetHUDElements
-// (NetRequest, Static, Public, Private, Protected, Delegate, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Event, Public, Delegate, NetServer, HasDefaults, NetClient)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_CarriedTarget_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABuff_CarriedTarget_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CarriedTarget.Buff_CarriedTarget_C.BPGetHUDElements");
 

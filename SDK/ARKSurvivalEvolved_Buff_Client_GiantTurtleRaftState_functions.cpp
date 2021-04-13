@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Client_GiantTurtleRaftState.Buff_Client_GiantTurtleRaftState_C.BuffTickClient
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Client_GiantTurtleRaftState_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_Client_GiantTurtleRaftState_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Client_GiantTurtleRaftState.Buff_Client_GiantTurtleRaftState_C.BuffTickClient");
 

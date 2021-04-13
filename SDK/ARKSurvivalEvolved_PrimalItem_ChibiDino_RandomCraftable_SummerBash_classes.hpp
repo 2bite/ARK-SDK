@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_ChibiDino_RandomCraftable_SummerBash.PrimalItem_ChibiDino_RandomCraftable_SummerBash_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0A10 - 0x0A10)
 class UPrimalItem_ChibiDino_RandomCraftable_SummerBash_C : public UPrimalItem_ChibiDino_RandomCraftable_C
 {
 public:

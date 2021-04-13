@@ -207,13 +207,13 @@ public:
 
 
 	void InitSavedTribeLoggingSettings();
-	void GetNextRotation(const struct FRotator& CurrentRotation, bool bDecrease, bool Roll, bool Pitch, bool Yaw, struct FRotator* NextRotation);
+	void GetNextRotation(const struct FRotator& currentRotation, bool bDecrease, bool Roll, bool Pitch, bool Yaw, struct FRotator* NextRotation);
 	void OnRep_CurrentStructureDetectBoxRotation();
 	void OnRep_CurrentTargetDetectBoxRotation();
 	void UpdateAutoDeactivation();
 	void GetTargetTypesToChange(TArray<TEnumAsByte<ETekAlarmTargetTypes>>* ActiveTypes, TArray<bool>* ShouldActivate);
 	void ToggleKeypadLink(class AShooterPlayerController* OptionalShooterPC);
-	void STATIC_AlignBoxedToWorldUp();
+	void AlignBoxedToWorldUp();
 	void OnRep_CurrentStructureDetectBoxExtent();
 	void OnRep_CurrentTargetDetectBoxExtent();
 	void Is_Target_Detect_Box(bool* bIsBox);
@@ -237,14 +237,14 @@ public:
 	void GetNextTribeLoggingSetting(int CurrentSetting, int* NewSetting);
 	void GetTribe_Logging_String(const class FString& TypeName, int CooldownInSeconds, class FString* Output);
 	void HasPendingPINActivation(bool* Result);
-	void GetPINDataByType(TEnumAsByte<ETekAlarmTargetTypes> Type, struct FTekAlarmPINData* ret);
+	void GetPINDataByType(TEnumAsByte<ETekAlarmTargetTypes> Type, struct FTekAlarmPINData* Ret);
 	void SetPINCodeInPINData(int pinCode, TEnumAsByte<ETekAlarmTargetTypes> Type);
 	void GetMultiUseTitleWithDelay(float DelaySeconds, const struct FText& Title, class FString* Output);
-	void STATIC_GetPINDataByPIN(int PIN, struct FTekAlarmPINData* Res, int* retIndex);
+	void GetPINDataByPIN(int PIN, struct FTekAlarmPINData* Res, int* retIndex);
 	void CalcuateDelay(float CurrentDelay, float* NewDelay);
 	void STATIC_PinCodeFlagsToString(int PinCodesFlag, class FString* Output);
-	void Was_Pin_Code_Bit_Triggered(int Bit, bool* ret, bool* Activated, bool* Deactivated);
-	void STATIC_IsRelevantPinCode(int pinCode, bool* ret, bool* IsDeactivation);
+	void Was_Pin_Code_Bit_Triggered(int Bit, bool* Ret, bool* Activated, bool* Deactivated);
+	void STATIC_IsRelevantPinCode(int pinCode, bool* Ret, bool* IsDeactivation);
 	void IsAreaVisualsLocallyVisible(bool* Result);
 	void CalcuateMeshAlpha_Fn(class UStaticMeshComponent* Mesh1, class UStaticMeshComponent* Mesh2, double TimeSince, float* Alpha);
 	void BPContainerActivated();
@@ -257,7 +257,7 @@ public:
 	void STATIC_IsActorInBoxArea(class AActor* Actor, class UBoxComponent* BoxComponent, bool* Value);
 	void GetOctreeCheckType(TEnumAsByte<EServerOctreeGroup>* Value);
 	void Get_Octree_Data_ForTarget_Detect_Area(float* Radius, struct FVector* Location);
-	void HasFiltered_Target_in_the_Area(bool* TargetLost);
+	void STATIC_HasFiltered_Target_in_the_Area(bool* TargetLost);
 	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
 	bool BPApplyPinCode(class AShooterPlayerController** ForPC, int* appledPinCode, bool* bIsSetting, int* TheCustomIndex);
 	void Get_Detect_Area_Adjust_Speed(float* AdjustSpeed);

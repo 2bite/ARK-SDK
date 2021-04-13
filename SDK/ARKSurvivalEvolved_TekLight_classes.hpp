@@ -28,7 +28,7 @@ public:
 	float                                              LightIntensityMult_Medium;                                // 0x0DFC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              LightIntensityMult_Low;                                   // 0x0E00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0E04(0x0004) MISSED OFFSET
-	class ULightComponent*                             CallFunc_GetLampLight_light;                              // 0x0E08(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class ULightComponent*                             CallFunc_GetLampLight_Light;                              // 0x0E08(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	int                                                K2Node_CustomEvent_newPowerLevel2;                        // 0x0E10(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0E14(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue2;                  // 0x0E15(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -47,7 +47,7 @@ public:
 	void GetLampLight(class ULightComponent** Light);
 	void Get_Next_Cycled_LightIntensity_Level(int* nextLevel);
 	void SetLampLightIntensity(int intensityLevel);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPRefreshedStructureColors();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

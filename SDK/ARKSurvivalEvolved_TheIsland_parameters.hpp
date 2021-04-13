@@ -114,8 +114,8 @@ struct ATheIsland_C_MakeItRain_Params
 {
 };
 
-// Function TheIsland.TheIsland_C.fogitup
-struct ATheIsland_C_fogitup_Params
+// Function TheIsland.TheIsland_C.FogItUp
+struct ATheIsland_C_FogItUp_Params
 {
 };
 
@@ -1122,8 +1122,8 @@ struct ATheIsland_C_coldfront_Params
 {
 };
 
-// Function TheIsland.TheIsland_C.heatwave
-struct ATheIsland_C_heatwave_Params
+// Function TheIsland.TheIsland_C.HeatWave
+struct ATheIsland_C_HeatWave_Params
 {
 };
 
