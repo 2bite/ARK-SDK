@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_560
-struct URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_560_Params
+// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620
+struct URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620_Params
 {
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct ABuff_ChargeEmitter_Foliage_C_Get_Charge_Variable_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeEmitter_Foliage.Buff_ChargeEmitter_Foliage_C.CanEmitCharge

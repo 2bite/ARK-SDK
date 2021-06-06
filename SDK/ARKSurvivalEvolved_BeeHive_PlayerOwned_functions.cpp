@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,11 +38,11 @@ bool ABeeHive_PlayerOwned_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BeeHive_PlayerOwned.BeeHive_PlayerOwned_C.BPGetInfoFromConsumedItemForPlacedStructure
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient)
+// (NetReliable, NetRequest, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // class UPrimalItem**            ItemToConsumed                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABeeHive_PlayerOwned_C::STATIC_BPGetInfoFromConsumedItemForPlacedStructure(class UPrimalItem** ItemToConsumed)
+void ABeeHive_PlayerOwned_C::BPGetInfoFromConsumedItemForPlacedStructure(class UPrimalItem** ItemToConsumed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BeeHive_PlayerOwned.BeeHive_PlayerOwned_C.BPGetInfoFromConsumedItemForPlacedStructure");
 
@@ -50,7 +50,6 @@ void ABeeHive_PlayerOwned_C::STATIC_BPGetInfoFromConsumedItemForPlacedStructure(
 	params.ItemToConsumed = ItemToConsumed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

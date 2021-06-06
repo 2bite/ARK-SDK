@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureBP_Wardrums.StructureBP_Wardrums_C
-// 0x0000 (0x0F00 - 0x0F00)
+// 0x0000 (0x0F48 - 0x0F48)
 class AStructureBP_Wardrums_C : public AStructureSeatingMusicBaseBP_C
 {
 public:

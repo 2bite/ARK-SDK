@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,13 +45,13 @@ struct AMegalodon_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_166
-struct AMegalodon_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_166_Params
+// Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_180
+struct AMegalodon_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_180_Params
 {
 };
 
-// Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_165
-struct AMegalodon_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_165_Params
+// Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_179
+struct AMegalodon_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_179_Params
 {
 };
 

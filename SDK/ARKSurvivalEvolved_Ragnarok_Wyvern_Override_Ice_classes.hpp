@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ragnarok_Wyvern_Override_Ice.Ragnarok_Wyvern_Override_Ice_C
-// 0x0000 (0x22F6 - 0x22F6)
+// 0x0000 (0x23C6 - 0x23C6)
 class ARagnarok_Wyvern_Override_Ice_C : public ARagnarok_Wyvern_Override_C
 {
 public:

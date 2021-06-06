@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,45 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.GetSkyMaterialReference
+// ()
+// Parameters:
+// class UMaterialInstanceDynamic* Mid                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABP_Sky_Sphere_ARK_C::GetSkyMaterialReference(class UMaterialInstanceDynamic** Mid)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.GetSkyMaterialReference");
+
+	ABP_Sky_Sphere_ARK_C_GetSkyMaterialReference_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Mid != nullptr)
+		*Mid = params.Mid;
+}
+
+
+// Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.ResetMaterials
+// ()
+
+void ABP_Sky_Sphere_ARK_C::ResetMaterials()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.ResetMaterials");
+
+	ABP_Sky_Sphere_ARK_C_ResetMaterials_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.SetMaterials
 // ()
@@ -117,15 +156,16 @@ void ABP_Sky_Sphere_ARK_C::UpdateSunDirection()
 
 
 // Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.UserConstructionScript
-// (NetReliable, NetRequest, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Native, NetResponse, Static, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, Const)
 
-void ABP_Sky_Sphere_ARK_C::UserConstructionScript()
+void ABP_Sky_Sphere_ARK_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.UserConstructionScript");
 
 	ABP_Sky_Sphere_ARK_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

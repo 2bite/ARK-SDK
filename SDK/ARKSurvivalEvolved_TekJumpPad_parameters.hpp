@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function TekJumpPad.TekJumpPad_C.ExtraAllowLaunchCheck
+struct ATekJumpPad_C_ExtraAllowLaunchCheck_Params
+{
+	class APrimalCharacter*                            Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Allow;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function TekJumpPad.TekJumpPad_C.OnRep_ShowIndicator
 struct ATekJumpPad_C_OnRep_ShowIndicator_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ArtifactCrate_11.ArtifactCrate_10_C
-// 0x0008 (0x0EA0 - 0x0E98)
+// 0x0008 (0x0ED8 - 0x0ED0)
 class AArtifactCrate_10_C : public AArtifactCrate_Instantaneous_C
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem2;                                          // 0x0E98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem2;                                          // 0x0ED0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

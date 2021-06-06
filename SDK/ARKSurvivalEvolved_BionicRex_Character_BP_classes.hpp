@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicRex_Character_BP.BionicRex_Character_BP_C
-// 0x0014 (0x225C - 0x2248)
+// 0x0014 (0x232C - 0x2318)
 class ABionicRex_Character_BP_C : public ARex_Character_BP_C
 {
 public:
-	bool                                               NewVar;                                                   // 0x2248(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x2249(0x0003) MISSED OFFSET
-	struct FLinearColor                                Color5;                                                   // 0x224C(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               NewVar;                                                   // 0x2318(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x2319(0x0003) MISSED OFFSET
+	struct FLinearColor                                Color5;                                                   // 0x231C(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

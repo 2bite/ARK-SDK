@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1576
-struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1576_Params
+// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2602
+struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2602_Params
 {
 };
 
-// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1575
-struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1575_Params
+// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2601
+struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2601_Params
 {
 };
 
@@ -34,8 +34,8 @@ struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph
 {
 };
 
-// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_576
-struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_576_Params
+// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_636
+struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_636_Params
 {
 };
 
@@ -49,8 +49,8 @@ struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph
 {
 };
 
-// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_126
-struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_126_Params
+// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_132
+struct UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_132_Params
 {
 };
 

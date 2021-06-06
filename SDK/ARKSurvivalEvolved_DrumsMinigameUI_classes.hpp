@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -186,7 +186,7 @@ public:
 	float Too_Soon_Percent();
 	float TooLatePercent();
 	void Map_Percent_to_Position(float Percent, float* Distance);
-	void Set_ProgressBar_Color(class UProgressBar* ProgressBar, const struct FLinearColor& TintColor);
+	void STATIC_Set_ProgressBar_Color(class UProgressBar* ProgressBar, const struct FLinearColor& TintColor);
 	float Get_Beat_Travel_Percent();
 	void Reset_Beat(bool TryToResetBeatPosition);
 	void Stop_Minigame();

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -297,6 +297,26 @@ void AActor::SetOwner(class AActor* NewOwner)
 
 	AActor_SetOwner_Params params;
 	params.NewOwner = NewOwner;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Actor.SetNetworkSpatializationParent
+// ()
+// Parameters:
+// class AActor*                  NewParent                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AActor::SetNetworkSpatializationParent(class AActor* NewParent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.SetNetworkSpatializationParent");
+
+	AActor_SetNetworkSpatializationParent_Params params;
+	params.NewParent = NewParent;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1390,8 +1410,9 @@ void AActor::MulticastProperty(const struct FName& PropertyName)
 // class AActor*                  TestBaseActor                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            TextColor                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugString(const struct FVector& TextLocation, const class FString& Text, class AActor* TestBaseActor, const struct FLinearColor& TextColor, float Duration)
+void AActor::MulticastDrawDebugString(const struct FVector& TextLocation, const class FString& Text, class AActor* TestBaseActor, const struct FLinearColor& TextColor, float Duration, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugString");
 
@@ -1401,6 +1422,7 @@ void AActor::MulticastDrawDebugString(const struct FVector& TextLocation, const 
 	params.TestBaseActor = TestBaseActor;
 	params.TextColor = TextColor;
 	params.Duration = Duration;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1447,8 +1469,9 @@ void AActor::MulticastDrawDebugSphere(const struct FVector& Center, float Radius
 // float                          Size                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            PointColor                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugPoint(const struct FVector& Position, float Size, const struct FLinearColor& PointColor, float Duration)
+void AActor::MulticastDrawDebugPoint(const struct FVector& Position, float Size, const struct FLinearColor& PointColor, float Duration, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugPoint");
 
@@ -1457,6 +1480,37 @@ void AActor::MulticastDrawDebugPoint(const struct FVector& Position, float Size,
 	params.Size = Size;
 	params.PointColor = PointColor;
 	params.Duration = Duration;
+	params.enableInShipping = enableInShipping;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Actor.MulticastDrawDebugPlane
+// ()
+// Parameters:
+// struct FPlane                  PlaneCoordinates               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Location                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Size                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            PlaneColor                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
+
+void AActor::MulticastDrawDebugPlane(const struct FPlane& PlaneCoordinates, const struct FVector& Location, float Size, const struct FLinearColor& PlaneColor, float Duration, bool enableInShipping)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugPlane");
+
+	AActor_MulticastDrawDebugPlane_Params params;
+	params.PlaneCoordinates = PlaneCoordinates;
+	params.Location = Location;
+	params.Size = Size;
+	params.PlaneColor = PlaneColor;
+	params.Duration = Duration;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1480,8 +1534,9 @@ void AActor::MulticastDrawDebugPoint(const struct FVector& Position, float Size,
 // struct FLinearColor            HitNormalColor                 (Parm, ZeroConstructor, IsPlainOldData)
 // float                          HitNormalLength                (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugLineTraceHitResult(const struct FHitResult& Hit, const struct FVector& TraceStart, const struct FVector& TraceEnd, const struct FLinearColor& StartColor, const struct FLinearColor& HitColor, float LineThickness, float HitSize, bool bDrawHitNormal, const struct FLinearColor& HitNormalColor, float HitNormalLength, float Duration)
+void AActor::MulticastDrawDebugLineTraceHitResult(const struct FHitResult& Hit, const struct FVector& TraceStart, const struct FVector& TraceEnd, const struct FLinearColor& StartColor, const struct FLinearColor& HitColor, float LineThickness, float HitSize, bool bDrawHitNormal, const struct FLinearColor& HitNormalColor, float HitNormalLength, float Duration, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugLineTraceHitResult");
 
@@ -1497,6 +1552,7 @@ void AActor::MulticastDrawDebugLineTraceHitResult(const struct FHitResult& Hit, 
 	params.HitNormalColor = HitNormalColor;
 	params.HitNormalLength = HitNormalLength;
 	params.Duration = Duration;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1545,8 +1601,9 @@ void AActor::MulticastDrawDebugLine(const struct FVector& LineStart, const struc
 // int                            Segments                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            LineColor                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugCylinder(const struct FVector& Start, const struct FVector& End, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration)
+void AActor::MulticastDrawDebugCylinder(const struct FVector& Start, const struct FVector& End, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugCylinder");
 
@@ -1557,6 +1614,7 @@ void AActor::MulticastDrawDebugCylinder(const struct FVector& Start, const struc
 	params.Segments = Segments;
 	params.LineColor = LineColor;
 	params.Duration = Duration;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1574,8 +1632,9 @@ void AActor::MulticastDrawDebugCylinder(const struct FVector& Start, const struc
 // float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Thickness                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugCoordinateSystem(const struct FVector& AxisLoc, const struct FRotator& AxisRot, float Scale, float Duration, float Thickness)
+void AActor::MulticastDrawDebugCoordinateSystem(const struct FVector& AxisLoc, const struct FRotator& AxisRot, float Scale, float Duration, float Thickness, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugCoordinateSystem");
 
@@ -1585,6 +1644,7 @@ void AActor::MulticastDrawDebugCoordinateSystem(const struct FVector& AxisLoc, c
 	params.Scale = Scale;
 	params.Duration = Duration;
 	params.Thickness = Thickness;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1603,8 +1663,9 @@ void AActor::MulticastDrawDebugCoordinateSystem(const struct FVector& AxisLoc, c
 // struct FLinearColor            LineColor                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bPersistent                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugCapsuleWithExtents(const struct FVector& Top, const struct FVector& Bottom, float Radius, const struct FLinearColor& LineColor, float Duration, bool bPersistent)
+void AActor::MulticastDrawDebugCapsuleWithExtents(const struct FVector& Top, const struct FVector& Bottom, float Radius, const struct FLinearColor& LineColor, float Duration, bool bPersistent, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugCapsuleWithExtents");
 
@@ -1615,6 +1676,7 @@ void AActor::MulticastDrawDebugCapsuleWithExtents(const struct FVector& Top, con
 	params.LineColor = LineColor;
 	params.Duration = Duration;
 	params.bPersistent = bPersistent;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1662,8 +1724,9 @@ void AActor::MulticastDrawDebugCapsule(const struct FVector& Center, float HalfH
 // class ACameraActor*            CameraActor                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            CameraColor                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugCamera(class ACameraActor* CameraActor, const struct FLinearColor& CameraColor, float Duration)
+void AActor::MulticastDrawDebugCamera(class ACameraActor* CameraActor, const struct FLinearColor& CameraColor, float Duration, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugCamera");
 
@@ -1671,6 +1734,7 @@ void AActor::MulticastDrawDebugCamera(class ACameraActor* CameraActor, const str
 	params.CameraActor = CameraActor;
 	params.CameraColor = CameraColor;
 	params.Duration = Duration;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1688,8 +1752,9 @@ void AActor::MulticastDrawDebugCamera(class ACameraActor* CameraActor, const str
 // struct FLinearColor            LineColor                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugBox(const struct FVector& Center, const struct FVector& Extent, const struct FLinearColor& LineColor, const struct FRotator& Rotation, float Duration)
+void AActor::MulticastDrawDebugBox(const struct FVector& Center, const struct FVector& Extent, const struct FLinearColor& LineColor, const struct FRotator& Rotation, float Duration, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugBox");
 
@@ -1699,6 +1764,7 @@ void AActor::MulticastDrawDebugBox(const struct FVector& Center, const struct FV
 	params.LineColor = LineColor;
 	params.Rotation = Rotation;
 	params.Duration = Duration;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1716,8 +1782,9 @@ void AActor::MulticastDrawDebugBox(const struct FVector& Center, const struct FV
 // float                          ArrowSize                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            LineColor                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           enableInShipping               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AActor::MulticastDrawDebugArrow(const struct FVector& LineStart, const struct FVector& LineEnd, float ArrowSize, const struct FLinearColor& LineColor, float Duration)
+void AActor::MulticastDrawDebugArrow(const struct FVector& LineStart, const struct FVector& LineEnd, float ArrowSize, const struct FLinearColor& LineColor, float Duration, bool enableInShipping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MulticastDrawDebugArrow");
 
@@ -1727,6 +1794,7 @@ void AActor::MulticastDrawDebugArrow(const struct FVector& LineStart, const stru
 	params.ArrowSize = ArrowSize;
 	params.LineColor = LineColor;
 	params.Duration = Duration;
+	params.enableInShipping = enableInShipping;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1739,7 +1807,7 @@ void AActor::MulticastDrawDebugArrow(const struct FVector& LineStart, const stru
 // Function Engine.Actor.ModifyHudMultiUseLoc
 // ()
 // Parameters:
-// struct FVector2D               theVec                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               theVec                         (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2374,14 +2442,16 @@ bool AActor::HasAuthority()
 // ()
 // Parameters:
 // class UClass*                  ComponentClass                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSkipHiddenComponents          (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UPrimitiveComponent* AActor::GetVisibleComponentByClass(class UClass* ComponentClass)
+class UPrimitiveComponent* AActor::GetVisibleComponentByClass(class UClass* ComponentClass, bool bSkipHiddenComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetVisibleComponentByClass");
 
 	AActor_GetVisibleComponentByClass_Params params;
 	params.ComponentClass = ComponentClass;
+	params.bSkipHiddenComponents = bSkipHiddenComponents;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3432,6 +3502,38 @@ void AActor::EnableInput(class APlayerController* PlayerController)
 }
 
 
+// Function Engine.Actor.DrawInEditorViewport
+// ()
+// Parameters:
+// class UCanvas*                 Canvas                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            LHSX                           (Parm, ZeroConstructor, IsPlainOldData)
+// int                            InOutLHSY                      (Parm, ZeroConstructor, IsPlainOldData)
+// int                            RHSX                           (Parm, ZeroConstructor, IsPlainOldData)
+// int                            InOutRHSY                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ViewLocation                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                ViewRotation                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void AActor::DrawInEditorViewport(class UCanvas* Canvas, int LHSX, int InOutLHSY, int RHSX, int InOutRHSY, const struct FVector& ViewLocation, const struct FRotator& ViewRotation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.DrawInEditorViewport");
+
+	AActor_DrawInEditorViewport_Params params;
+	params.Canvas = Canvas;
+	params.LHSX = LHSX;
+	params.InOutLHSY = InOutLHSY;
+	params.RHSX = RHSX;
+	params.InOutRHSY = InOutRHSY;
+	params.ViewLocation = ViewLocation;
+	params.ViewRotation = ViewRotation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.Actor.DrawBasicFloatingHUD
 // ()
 // Parameters:
@@ -3511,6 +3613,29 @@ void AActor::ClientMultiUse(class APlayerController* ForPC, int UseIndex)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.Actor.CalculateComponentsBoundingBoxInLocalSpace
+// ()
+// Parameters:
+// bool                           bNonColliding                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBox                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FBox AActor::CalculateComponentsBoundingBoxInLocalSpace(bool bNonColliding)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.CalculateComponentsBoundingBoxInLocalSpace");
+
+	AActor_CalculateComponentsBoundingBoxInLocalSpace_Params params;
+	params.bNonColliding = bNonColliding;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -3798,6 +3923,27 @@ int AActor::BPGetExtraSpecialBlueprintInt()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.BPGetExtraSpecialBlueprintInt");
 
 	AActor_BPGetExtraSpecialBlueprintInt_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.Actor.BPGetBonesToHideOnAllocation
+// ()
+// Parameters:
+// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FName> AActor::BPGetBonesToHideOnAllocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.BPGetBonesToHideOnAllocation");
+
+	AActor_BPGetBonesToHideOnAllocation_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -7076,15 +7222,15 @@ void APlayerController::NetSpawnActorAtLocation(class UClass* anActorClass, cons
 // Function Engine.PlayerController.NetConnectionHasActiveActor
 // ()
 // Parameters:
-// class AActor*                  AnActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  anActor                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APlayerController::NetConnectionHasActiveActor(class AActor* AnActor)
+bool APlayerController::NetConnectionHasActiveActor(class AActor* anActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.NetConnectionHasActiveActor");
 
 	APlayerController_NetConnectionHasActiveActor_Params params;
-	params.AnActor = AnActor;
+	params.anActor = anActor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -7233,13 +7379,15 @@ void APlayerController::GetViewportSize(int* SizeX, int* SizeY)
 // Parameters:
 // float                          LocationX                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          LocationY                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           bEvenWhenMouseNotAttached      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APlayerController::GetMousePosition(float* LocationX, float* LocationY)
+bool APlayerController::GetMousePosition(bool bEvenWhenMouseNotAttached, float* LocationX, float* LocationY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.GetMousePosition");
 
 	APlayerController_GetMousePosition_Params params;
+	params.bEvenWhenMouseNotAttached = bEvenWhenMouseNotAttached;
 
 	auto flags = fn->FunctionFlags;
 
@@ -7736,6 +7884,26 @@ bool APlayerController::DeprojectMousePositionToWorld(struct FVector* WorldLocat
 		*WorldDirection = params.WorldDirection;
 
 	return params.ReturnValue;
+}
+
+
+// Function Engine.PlayerController.CopyStringToClipboard
+// ()
+// Parameters:
+// class FString                  S                              (Parm, ZeroConstructor)
+
+void APlayerController::CopyStringToClipboard(const class FString& S)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.CopyStringToClipboard");
+
+	APlayerController_CopyStringToClipboard_Params params;
+	params.S = S;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -8608,8 +8776,9 @@ void APlayerController::ClientPlayForceFeedback(class UForceFeedbackEffect* Forc
 // TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                UserPlaySpaceRot               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Speed                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bForceUseWorldCameraShakeScale (Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerController::ClientPlayCameraShake(class UClass* Shake, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot, float Speed)
+void APlayerController::ClientPlayCameraShake(class UClass* Shake, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot, float Speed, bool bForceUseWorldCameraShakeScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ClientPlayCameraShake");
 
@@ -8619,6 +8788,7 @@ void APlayerController::ClientPlayCameraShake(class UClass* Shake, float Scale, 
 	params.PlaySpace = PlaySpace;
 	params.UserPlaySpaceRot = UserPlaySpaceRot;
 	params.Speed = Speed;
+	params.bForceUseWorldCameraShakeScale = bForceUseWorldCameraShakeScale;
 
 	auto flags = fn->FunctionFlags;
 
@@ -9035,6 +9205,27 @@ void APlayerController::Camera(const struct FName& NewMode)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.PlayerController.BPGetAimedUseActor
+// ()
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* APlayerController::BPGetAimedUseActor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.BPGetAimedUseActor");
+
+	APlayerController_BPGetAimedUseActor_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -10105,6 +10296,23 @@ void UActorComponent::BPOnComponentDestroyed()
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.BPOnComponentDestroyed");
 
 	UActorComponent_BPOnComponentDestroyed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.ActorComponent.BPOnComponentCreated
+// ()
+
+void UActorComponent::BPOnComponentCreated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.ActorComponent.BPOnComponentCreated");
+
+	UActorComponent_BPOnComponentCreated_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -12987,6 +13195,67 @@ bool AVolume::BPEncompassesPoint(const struct FVector& Point, float SphereRadius
 
 	if (OutDistanceToPoint != nullptr)
 		*OutDistanceToPoint = params.OutDistanceToPoint;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.DestructibleActor.SetFadingStaticMesh
+// ()
+// Parameters:
+// class UStaticMesh*             TheMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADestructibleActor::SetFadingStaticMesh(class UStaticMesh* TheMesh)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.DestructibleActor.SetFadingStaticMesh");
+
+	ADestructibleActor_SetFadingStaticMesh_Params params;
+	params.TheMesh = TheMesh;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.DestructibleActor.SetFadingSkeletalMesh
+// ()
+// Parameters:
+// class USkeletalMesh*           TheMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADestructibleActor::SetFadingSkeletalMesh(class USkeletalMesh* TheMesh)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.DestructibleActor.SetFadingSkeletalMesh");
+
+	ADestructibleActor_SetFadingSkeletalMesh_Params params;
+	params.TheMesh = TheMesh;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.DestructibleActor.GetFadingMeshComponent
+// ()
+// Parameters:
+// class UMeshComponent*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UMeshComponent* ADestructibleActor::GetFadingMeshComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.DestructibleActor.GetFadingMeshComponent");
+
+	ADestructibleActor_GetFadingMeshComponent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -19148,6 +19417,29 @@ class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* A
 }
 
 
+// Function Engine.PlayerCameraManager.GetWorldCameraShakeScale
+// ()
+// Parameters:
+// bool                           bForceReturnUserSettingScale   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APlayerCameraManager::GetWorldCameraShakeScale(bool bForceReturnUserSettingScale)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetWorldCameraShakeScale");
+
+	APlayerCameraManager_GetWorldCameraShakeScale_Params params;
+	params.bForceReturnUserSettingScale = bForceReturnUserSettingScale;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.PlayerCameraManager.GetOwningPlayerController
 // ()
 // Parameters:
@@ -19424,6 +19716,29 @@ void ADefaultPawn::LookUp(float val)
 }
 
 
+// Function Engine.PhysicsVolume.GetVolumeZAtPosition2D
+// ()
+// Parameters:
+// struct FVector2D               Position                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APhysicsVolume::GetVolumeZAtPosition2D(const struct FVector2D& Position)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsVolume.GetVolumeZAtPosition2D");
+
+	APhysicsVolume_GetVolumeZAtPosition2D_Params params;
+	params.Position = Position;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.AmbientSound.Stop
 // ()
 
@@ -19527,6 +19842,27 @@ void AAmbientSound::AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeL
 }
 
 
+// Function Engine.World.IsActuallyUsingTrueSkyActor
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWorld::IsActuallyUsingTrueSkyActor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.World.IsActuallyUsingTrueSkyActor");
+
+	UWorld_IsActuallyUsingTrueSkyActor_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.World.GetWorldSettings
 // ()
 // Parameters:
@@ -19541,6 +19877,27 @@ class AWorldSettings* UWorld::GetWorldSettings(bool bCheckStreamingPesistent, bo
 	UWorld_GetWorldSettings_Params params;
 	params.bCheckStreamingPesistent = bCheckStreamingPesistent;
 	params.bChecked = bChecked;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.World.GetFirstPlayerController
+// ()
+// Parameters:
+// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class APlayerController* UWorld::GetFirstPlayerController()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.World.GetFirstPlayerController");
+
+	UWorld_GetFirstPlayerController_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -19589,29 +19946,6 @@ void ABlockingVolume::DoToggle(bool bEnable)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.PhysicsVolume.GetVolumeZAtPosition2D
-// ()
-// Parameters:
-// struct FVector2D               Position                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float APhysicsVolume::GetVolumeZAtPosition2D(const struct FVector2D& Position)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsVolume.GetVolumeZAtPosition2D");
-
-	APhysicsVolume_GetVolumeZAtPosition2D_Params params;
-	params.Position = Position;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -22509,6 +22843,29 @@ void USkeletalMeshComponent::ClearMorphTargets()
 }
 
 
+// Function Engine.SkeletalMeshComponent.BPValidBoneToUnhide
+// ()
+// Parameters:
+// int                            BoneIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USkeletalMeshComponent::BPValidBoneToUnhide(int BoneIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshComponent.BPValidBoneToUnhide");
+
+	USkeletalMeshComponent_BPValidBoneToUnhide_Params params;
+	params.BoneIndex = BoneIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.SkeletalMeshComponent.BPTickPose
 // ()
 // Parameters:
@@ -22747,6 +23104,37 @@ void UNavigationSystem::SimpleMoveToActor(class AController* Controller, class A
 }
 
 
+// Function Engine.NavigationSystem.ProjectPointToNavigationEx
+// ()
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Point                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 Extent                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class ANavigationData*         NavData                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  FilterClass                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UNavigationSystem::ProjectPointToNavigationEx(class UObject* WorldContext, const struct FVector& Point, const struct FVector& Extent, class ANavigationData* NavData, class UClass* FilterClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.ProjectPointToNavigationEx");
+
+	UNavigationSystem_ProjectPointToNavigationEx_Params params;
+	params.WorldContext = WorldContext;
+	params.Point = Point;
+	params.Extent = Extent;
+	params.NavData = NavData;
+	params.FilterClass = FilterClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.NavigationSystem.ProjectPointToNavigation
 // ()
 // Parameters:
@@ -22843,6 +23231,45 @@ bool UNavigationSystem::IsNavigationBeingBuilt(class UObject* WorldContext)
 
 	UNavigationSystem_IsNavigationBeingBuilt_Params params;
 	params.WorldContext = WorldContext;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.NavigationSystem.GetRandomReachablePointInMinMaxRadius
+// ()
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Origin                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          MinRadius                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          MaxRadius                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRandomStream           RandStream                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector                 PathDirection                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          DotLimit                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class ANavigationData*         NavData                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  FilterClass                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UNavigationSystem::GetRandomReachablePointInMinMaxRadius(class UObject* WorldContext, const struct FVector& Origin, float MinRadius, float MaxRadius, const struct FRandomStream& RandStream, const struct FVector& PathDirection, float DotLimit, class ANavigationData* NavData, class UClass* FilterClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.GetRandomReachablePointInMinMaxRadius");
+
+	UNavigationSystem_GetRandomReachablePointInMinMaxRadius_Params params;
+	params.WorldContext = WorldContext;
+	params.Origin = Origin;
+	params.MinRadius = MinRadius;
+	params.MaxRadius = MaxRadius;
+	params.RandStream = RandStream;
+	params.PathDirection = PathDirection;
+	params.DotLimit = DotLimit;
+	params.NavData = NavData;
+	params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
 
@@ -25439,6 +25866,27 @@ void UBillboardComponent::SetSprite(class UTexture2D* NewSprite)
 }
 
 
+// Function Engine.BrushComponent.GetBoxBrushXYZ
+// ()
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UBrushComponent::GetBoxBrushXYZ()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.BrushComponent.GetBoxBrushXYZ");
+
+	UBrushComponent_GetBoxBrushXYZ_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.MaterialBillboardComponent.AddElement
 // ()
 // Parameters:
@@ -27101,6 +27549,26 @@ void UTextRenderComponent::SetWorldSize(float Value)
 }
 
 
+// Function Engine.TextRenderComponent.SetVerticalAlignment
+// ()
+// Parameters:
+// TEnumAsByte<EVerticalTextAligment> Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UTextRenderComponent::SetVerticalAlignment(TEnumAsByte<EVerticalTextAligment> Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.TextRenderComponent.SetVerticalAlignment");
+
+	UTextRenderComponent_SetVerticalAlignment_Params params;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.TextRenderComponent.SetTextRenderColor
 // ()
 // Parameters:
@@ -27417,6 +27885,28 @@ void USceneCaptureComponent::HideActorComponents(class AActor* InActor)
 }
 
 
+// Function Engine.SplineComponent.SetWorldSplinePointsAndType
+// ()
+// Parameters:
+// TArray<struct FVector>         Points                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TEnumAsByte<ESplinePointType>  Type                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void USplineComponent::SetWorldSplinePointsAndType(TArray<struct FVector> Points, TEnumAsByte<ESplinePointType> Type)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetWorldSplinePointsAndType");
+
+	USplineComponent_SetWorldSplinePointsAndType_Params params;
+	params.Points = Points;
+	params.Type = Type;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.SplineComponent.SetWorldLocationAtSplinePoint
 // ()
 // Parameters:
@@ -27439,6 +27929,30 @@ void USplineComponent::SetWorldLocationAtSplinePoint(int PointIndex, const struc
 }
 
 
+// Function Engine.SplineComponent.SetTangentAtSplinePoint
+// ()
+// Parameters:
+// int                            PointIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 InTangent                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (Parm, ZeroConstructor, IsPlainOldData)
+
+void USplineComponent::SetTangentAtSplinePoint(int PointIndex, const struct FVector& InTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetTangentAtSplinePoint");
+
+	USplineComponent_SetTangentAtSplinePoint_Params params;
+	params.PointIndex = PointIndex;
+	params.InTangent = InTangent;
+	params.CoordinateSpace = CoordinateSpace;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.SplineComponent.SetSplineWorldPoints
 // ()
 // Parameters:
@@ -27450,6 +27964,48 @@ void USplineComponent::SetSplineWorldPoints(TArray<struct FVector> Points)
 
 	USplineComponent_SetSplineWorldPoints_Params params;
 	params.Points = Points;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SplineComponent.SetSplinePointTypeAllPoints
+// ()
+// Parameters:
+// TEnumAsByte<ESplinePointType>  Type                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void USplineComponent::SetSplinePointTypeAllPoints(TEnumAsByte<ESplinePointType> Type)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetSplinePointTypeAllPoints");
+
+	USplineComponent_SetSplinePointTypeAllPoints_Params params;
+	params.Type = Type;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SplineComponent.SetSplinePointType
+// ()
+// Parameters:
+// int                            PointIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ESplinePointType>  Type                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void USplineComponent::SetSplinePointType(int PointIndex, TEnumAsByte<ESplinePointType> Type)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetSplinePointType");
+
+	USplineComponent_SetSplinePointType_Params params;
+	params.PointIndex = PointIndex;
+	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
 
@@ -27658,6 +28214,29 @@ struct FVector USplineComponent::GetWorldDirectionAtDistanceAlongSpline(float Di
 
 	USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Params params;
 	params.Distance = Distance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.SplineComponent.GetSplinePointType
+// ()
+// Parameters:
+// int                            PointIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ESplinePointType>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<ESplinePointType> USplineComponent::GetSplinePointType(int PointIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetSplinePointType");
+
+	USplineComponent_GetSplinePointType_Params params;
+	params.PointIndex = PointIndex;
 
 	auto flags = fn->FunctionFlags;
 
@@ -32443,6 +33022,37 @@ struct FVector UKismetMathLibrary::VInterpTo_Constant_SnapPastDist(const struct 
 }
 
 
+// Function Engine.KismetMathLibrary.VInterpTo_Constant_ClampDist
+// ()
+// Parameters:
+// struct FVector                 current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ClampDist                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UKismetMathLibrary::VInterpTo_Constant_ClampDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float ClampDist)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo_Constant_ClampDist");
+
+	UKismetMathLibrary_VInterpTo_Constant_ClampDist_Params params;
+	params.current = current;
+	params.Target = Target;
+	params.DeltaTime = DeltaTime;
+	params.InterpSpeed = InterpSpeed;
+	params.ClampDist = ClampDist;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.KismetMathLibrary.VInterpTo_Constant
 // ()
 // Parameters:
@@ -32461,6 +33071,37 @@ struct FVector UKismetMathLibrary::VInterpTo_Constant(const struct FVector& curr
 	params.Target = Target;
 	params.DeltaTime = DeltaTime;
 	params.InterpSpeed = InterpSpeed;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.VInterpTo_ClampDist
+// ()
+// Parameters:
+// struct FVector                 current                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float                          InterpSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ClampDist                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UKismetMathLibrary::VInterpTo_ClampDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float ClampDist)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo_ClampDist");
+
+	UKismetMathLibrary_VInterpTo_ClampDist_Params params;
+	params.current = current;
+	params.Target = Target;
+	params.DeltaTime = DeltaTime;
+	params.InterpSpeed = InterpSpeed;
+	params.ClampDist = ClampDist;
 
 	auto flags = fn->FunctionFlags;
 
@@ -36546,6 +37187,56 @@ float UKismetMathLibrary::Lerp(float A, float B, float Alpha)
 }
 
 
+// Function Engine.KismetMathLibrary.IsRotatorInfiniteOrNaN
+// ()
+// Parameters:
+// struct FRotator                A                              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKismetMathLibrary::IsRotatorInfiniteOrNaN(const struct FRotator& A)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.IsRotatorInfiniteOrNaN");
+
+	UKismetMathLibrary_IsRotatorInfiniteOrNaN_Params params;
+	params.A = A;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.IsPointInBox
+// ()
+// Parameters:
+// struct FVector                 Point                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 BoxOrigin                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 BoxExtent                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKismetMathLibrary::IsPointInBox(const struct FVector& Point, const struct FVector& BoxOrigin, const struct FVector& BoxExtent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.IsPointInBox");
+
+	UKismetMathLibrary_IsPointInBox_Params params;
+	params.Point = Point;
+	params.BoxOrigin = BoxOrigin;
+	params.BoxExtent = BoxExtent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.KismetMathLibrary.IsMorning
 // ()
 // Parameters:
@@ -36581,6 +37272,29 @@ bool UKismetMathLibrary::IsLeapYear(int Year)
 
 	UKismetMathLibrary_IsLeapYear_Params params;
 	params.Year = Year;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.IsInfiniteOrNaN
+// ()
+// Parameters:
+// struct FVector                 A                              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKismetMathLibrary::IsInfiniteOrNaN(const struct FVector& A)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.IsInfiniteOrNaN");
+
+	UKismetMathLibrary_IsInfiniteOrNaN_Params params;
+	params.A = A;
 
 	auto flags = fn->FunctionFlags;
 
@@ -48064,6 +48778,34 @@ void UCanvas::K2_DrawLine(const struct FVector2D& ScreenPositionA, const struct 
 }
 
 
+// Function Engine.Canvas.K2_DrawBoxEx
+// ()
+// Parameters:
+// struct FVector2D               ScreenPosition                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D               ScreenSize                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Thickness                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor            RenderColor                    (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EBlendMode>        BlendMode                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCanvas::K2_DrawBoxEx(const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, float Thickness, const struct FLinearColor& RenderColor, TEnumAsByte<EBlendMode> BlendMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_DrawBoxEx");
+
+	UCanvas_K2_DrawBoxEx_Params params;
+	params.ScreenPosition = ScreenPosition;
+	params.ScreenSize = ScreenSize;
+	params.Thickness = Thickness;
+	params.RenderColor = RenderColor;
+	params.BlendMode = BlendMode;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.Canvas.K2_DrawBox
 // ()
 // Parameters:
@@ -48162,6 +48904,29 @@ void UCanvas::K2_Deproject(const struct FVector2D& ScreenPosition, struct FVecto
 		*WorldOrigin = params.WorldOrigin;
 	if (WorldDirection != nullptr)
 		*WorldDirection = params.WorldDirection;
+}
+
+
+// Function Engine.Canvas.IsPositionInFrontOfViewport
+// ()
+// Parameters:
+// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCanvas::IsPositionInFrontOfViewport(const struct FVector& Location)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.IsPositionInFrontOfViewport");
+
+	UCanvas_IsPositionInFrontOfViewport_Params params;
+	params.Location = Location;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -48458,6 +49223,27 @@ void ULevelStreaming::LevelStreamingLoadedStatus__DelegateSignature()
 }
 
 
+// Function Engine.LevelStreaming.IsTileStreamingEnabled
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ULevelStreaming::IsTileStreamingEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelStreaming.IsTileStreamingEnabled");
+
+	ULevelStreaming_IsTileStreamingEnabled_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.LevelStreaming.IsLevelVisible
 // ()
 // Parameters:
@@ -48512,6 +49298,49 @@ class ULevelStreaming* ULevelStreaming::CreateInstance(const class FString& Uniq
 
 	ULevelStreaming_CreateInstance_Params params;
 	params.UniqueInstanceName = UniqueInstanceName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.LevelStreaming.BPSetLevelVisibility
+// ()
+// Parameters:
+// bool                           bVisible                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bIsLowMemory                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ULevelStreaming::BPSetLevelVisibility(bool bVisible, bool bIsLowMemory)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelStreaming.BPSetLevelVisibility");
+
+	ULevelStreaming_BPSetLevelVisibility_Params params;
+	params.bVisible = bVisible;
+	params.bIsLowMemory = bIsLowMemory;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.LevelStreaming.BPGetPackageName
+// ()
+// Parameters:
+// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+class FString ULevelStreaming::BPGetPackageName()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelStreaming.BPGetPackageName");
+
+	ULevelStreaming_BPGetPackageName_Params params;
 
 	auto flags = fn->FunctionFlags;
 

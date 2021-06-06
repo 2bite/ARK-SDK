@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,8 +109,8 @@ struct ATheIsland_C_BndEvt__Cave02_Encompassing_PostProcess_K2Node_ActorBoundEve
 	bool                                               bIsPrimaryPlayer;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function TheIsland.TheIsland_C.MakeItRain
-struct ATheIsland_C_MakeItRain_Params
+// Function TheIsland.TheIsland_C.makeitrain
+struct ATheIsland_C_makeitrain_Params
 {
 };
 
@@ -1117,8 +1117,8 @@ struct ATheIsland_C_BndEvt__CaveEastPostprocessVolume_2_K2Node_ActorBoundEvent_1
 	bool                                               bIsPrimaryPlayer;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function TheIsland.TheIsland_C.coldfront
-struct ATheIsland_C_coldfront_Params
+// Function TheIsland.TheIsland_C.ColdFront
+struct ATheIsland_C_ColdFront_Params
 {
 };
 

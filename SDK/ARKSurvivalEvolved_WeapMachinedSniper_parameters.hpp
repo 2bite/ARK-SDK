@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function WeapMachinedSniper.WeapMachinedSniper_C.ForceDisableCameraOverrides
+struct AWeapMachinedSniper_C_ForceDisableCameraOverrides_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function WeapMachinedSniper.WeapMachinedSniper_C.UserConstructionScript
 struct AWeapMachinedSniper_C_UserConstructionScript_Params

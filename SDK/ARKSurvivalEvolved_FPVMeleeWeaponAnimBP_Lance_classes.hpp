@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,14 +90,14 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1576();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1575();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2602();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2601();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_BlendListByBool_2687();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_BlendListByBool_2688();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_576();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_636();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_BlendListByBool_2685();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_BlendListByBool_2686();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_126();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_132();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TwoWayBlend_48();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance(int EntryPoint);

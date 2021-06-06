@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DroppedItemGeneric_FertilizedEgg_NoPhysicsCrystalWyvern.DroppedItemGeneric_FertilizedEgg_NoPhysicsCrystalWyvern_C
-// 0x0000 (0x0738 - 0x0738)
+// 0x0000 (0x0740 - 0x0740)
 class ADroppedItemGeneric_FertilizedEgg_NoPhysicsCrystalWyvern_C : public ADroppedItemGeneric_FertilizedEgg_NoPhysics_C
 {
 public:

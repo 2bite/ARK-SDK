@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -302,14 +302,14 @@ void ASarco_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_65
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_72
 // ()
 
-void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_65()
+void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_72()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_65");
+	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_72");
 
-	ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_65_Params params;
+	ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_72_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -319,14 +319,14 @@ void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_65()
 }
 
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_64
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_71
 // ()
 
-void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_64()
+void ASarco_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_71()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_64");
+	static auto fn = UObject::FindObject<UFunction>("Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_71");
 
-	ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_64_Params params;
+	ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_71_Params params;
 
 	auto flags = fn->FunctionFlags;
 

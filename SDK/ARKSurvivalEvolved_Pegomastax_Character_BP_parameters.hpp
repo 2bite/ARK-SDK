@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,11 +27,11 @@ struct APegomastax_Character_BP_C_BPClientHandleNetExecCommand_Params
 struct APegomastax_Character_BP_C_UpdateWaitingState_Params
 {
 	class APrimalCharacter*                            TargetCharacter;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsInWaitingState;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isInWaitingState;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.IsInWaitingState
-struct APegomastax_Character_BP_C_IsInWaitingState_Params
+// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.isInWaitingState
+struct APegomastax_Character_BP_C_isInWaitingState_Params
 {
 	class APrimalCharacter*                            TargetCharacter;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               isWaiting;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -86,7 +86,7 @@ struct APegomastax_Character_BP_C_PostAttackActions_Params
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.ShouldStopHolding
 struct APegomastax_Character_BP_C_ShouldStopHolding_Params
 {
-	bool                                               shouldStop;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldStop;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.Can Play Holding Anim
@@ -270,9 +270,9 @@ struct APegomastax_Character_BP_C_BPShouldForceFlee_Params
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.Do StealItem
 struct APegomastax_Character_BP_C_Do_StealItem_Params
 {
-	class APrimalCharacter*                            CharacterToStealFrom;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            characterToStealFrom;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimalItem*                                 itemToSteal;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               consumeItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ConsumeItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -346,11 +346,11 @@ struct APegomastax_Character_BP_C_PlayHoldingForTime_Params
 	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              preDelay;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Idle;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               hideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               HideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.hideBag
-struct APegomastax_Character_BP_C_hideBag_Params
+// Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.HideBag
+struct APegomastax_Character_BP_C_HideBag_Params
 {
 };
 
@@ -365,7 +365,7 @@ struct APegomastax_Character_BP_C_StopHoldingImmediate_Params
 {
 	bool                                               stopIdleHoldingAnim;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               stopRunHoldingAnim;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               hideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               HideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              idleBlendOutTime;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -396,7 +396,7 @@ struct APegomastax_Character_BP_C_PlayCombinedHolding_Params
 {
 	float                                              timeBeforeRun;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              preDelay;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               hideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               HideBag;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              runHoldDuration;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	class APawn*                                       Owner;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };

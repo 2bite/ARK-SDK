@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass Oviraptor_AnimBlueprint.Oviraptor_AnimBlueprint_C
-// 0x0000 (0x1669 - 0x1669)
+// 0x0000 (0x18B0 - 0x18B0)
 class UOviraptor_AnimBlueprint_C : public UDinoBlueprintBase_VariableMovement_C
 {
 public:

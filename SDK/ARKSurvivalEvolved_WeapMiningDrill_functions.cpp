@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,17 +106,18 @@ void AWeapMiningDrill_C::BPSpawnHarvestEffects(TArray<struct FVector>* Impacts)
 
 
 // Function WeapMiningDrill.WeapMiningDrill_C.CalculateTargetPosition
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected)
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector AWeapMiningDrill_C::CalculateTargetPosition()
+struct FVector AWeapMiningDrill_C::STATIC_CalculateTargetPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapMiningDrill.WeapMiningDrill_C.CalculateTargetPosition");
 
 	AWeapMiningDrill_C_CalculateTargetPosition_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,12 +179,12 @@ int AWeapMiningDrill_C::BPWeaponDealDamage(int* DamageAmount, class UClass** Dam
 
 
 // Function WeapMiningDrill.WeapMiningDrill_C.BPPreFireEvent
-// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected)
+// (NetRequest, Native, NetMulticast, Public, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector*                Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                ShootDir                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapMiningDrill_C::STATIC_BPPreFireEvent(struct FVector* Origin, struct FVector* ShootDir)
+void AWeapMiningDrill_C::BPPreFireEvent(struct FVector* Origin, struct FVector* ShootDir)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapMiningDrill.WeapMiningDrill_C.BPPreFireEvent");
 
@@ -192,6 +193,7 @@ void AWeapMiningDrill_C::STATIC_BPPreFireEvent(struct FVector* Origin, struct FV
 	params.ShootDir = ShootDir;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

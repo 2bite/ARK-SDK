@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_MekBackpack_Base.Buff_MekBackpack_Base_C
-// 0x0002 (0x0952 - 0x0950)
+// 0x0002 (0x0962 - 0x0960)
 class ABuff_MekBackpack_Base_C : public APrimalBuff
 {
 public:
-	bool                                               InterceptMekAttacks;                                      // 0x0950(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverrideTurnInPlaceSpeed;                              // 0x0951(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               InterceptMekAttacks;                                      // 0x0960(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               UseOverrideTurnInPlaceSpeed;                              // 0x0961(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

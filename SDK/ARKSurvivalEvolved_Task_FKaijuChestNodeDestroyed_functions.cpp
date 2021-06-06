@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Task_FKaijuChestNodeDestroyed.Task_FKaijuChestNodeDestroyed_C.Wipe Out All Poison Trees And Wyverns
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UTask_FKaijuChestNodeDestroyed_C::Wipe_Out_All_Poison_Trees_And_Wyverns()
 {
@@ -22,7 +22,6 @@ void UTask_FKaijuChestNodeDestroyed_C::Wipe_Out_All_Poison_Trees_And_Wyverns()
 	UTask_FKaijuChestNodeDestroyed_C_Wipe_Out_All_Poison_Trees_And_Wyverns_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

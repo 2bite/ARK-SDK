@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Plesiosaur_Character_BP.Plesiosaur_Character_BP_C
-// 0x0010 (0x21A8 - 0x2198)
+// 0x0010 (0x2278 - 0x2268)
 class APlesiosaur_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UBoxComponent*                               PlatformSaddleBuildArea;                                  // 0x2198(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UDinoCharacterStatusComponent_BP_Plesiosaur_C* DinoCharacterStatus_BP_Plesiosaur_C1;                     // 0x21A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               PlatformSaddleBuildArea;                                  // 0x2268(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Plesiosaur_C* DinoCharacterStatus_BP_Plesiosaur_C1;                     // 0x2270(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

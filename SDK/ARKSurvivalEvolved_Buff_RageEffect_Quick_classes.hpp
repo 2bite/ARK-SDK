@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_RageEffect_Quick.Buff_RageEffect_Quick_C
-// 0x0000 (0x0984 - 0x0984)
+// 0x0000 (0x0994 - 0x0994)
 class ABuff_RageEffect_Quick_C : public ABuff_RageEffect_Ammonite_C
 {
 public:

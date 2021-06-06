@@ -1,0 +1,163 @@
+#pragma once
+
+// ARKSurvivalEvolved (329.9) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_TekBow_FPV_AnimBlueprint_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2548
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2548_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2547
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2547_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2546
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2546_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2545
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2545_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2544
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2544_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2543
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2543_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2542
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2542_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2541
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2541_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2540
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2540_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2539
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2539_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2538
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2538_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2537
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2537_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2536
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2536_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2535
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2535_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2534
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2534_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2533
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2533_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2532
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2532_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2531
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2531_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2530
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2530_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2529
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2529_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2528
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2528_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2527
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2527_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2526
+struct UTekBow_FPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_AnimGraphNode_TransitionResult_2526_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.BlueprintUpdateAnimation
+struct UTekBow_FPV_AnimBlueprint_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.AnimNotify_EnterIdle
+struct UTekBow_FPV_AnimBlueprint_C_AnimNotify_EnterIdle_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.AnimNotify_EnterTargetIdle
+struct UTekBow_FPV_AnimBlueprint_C_AnimNotify_EnterTargetIdle_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.AnimNotify_EndPullString
+struct UTekBow_FPV_AnimBlueprint_C_AnimNotify_EndPullString_Params
+{
+};
+
+// Function TekBow_FPV_AnimBlueprint.TekBow_FPV_AnimBlueprint_C.ExecuteUbergraph_TekBow_FPV_AnimBlueprint
+struct UTekBow_FPV_AnimBlueprint_C_ExecuteUbergraph_TekBow_FPV_AnimBlueprint_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

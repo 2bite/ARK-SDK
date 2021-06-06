@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Bola_Xmas.Buff_Bola_Xmas_C
-// 0x0000 (0x0A02 - 0x0A02)
+// 0x0000 (0x0A12 - 0x0A12)
 class ABuff_Bola_Xmas_C : public ABuff_Bola_C
 {
 public:

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,7 +83,7 @@ void AIceJumperProjIceBreath_C::Get_Normalized_Vector_On_Ice_Jumper_Plane_from_L
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.Get Best Impact Location
-// (NetReliable, Native, Event, MulticastDelegate, Protected, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -102,7 +102,6 @@ void AIceJumperProjIceBreath_C::Get_Best_Impact_Location(const struct FVector& S
 	params.Rider = Rider;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,7 +163,7 @@ void AIceJumperProjIceBreath_C::ValidateTick(bool* Result)
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.UpdateBeamLength
-// (NetRequest, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
 
 void AIceJumperProjIceBreath_C::STATIC_UpdateBeamLength()
 {
@@ -181,7 +180,7 @@ void AIceJumperProjIceBreath_C::STATIC_UpdateBeamLength()
 
 
 // Function IceJumperProjIceBreath.IceJumperProjIceBreath_C.GetBeamStartEnd
-// (Net, NetReliable, NetRequest, Native, Static, Public, Private, Protected, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -197,7 +196,6 @@ void AIceJumperProjIceBreath_C::STATIC_GetBeamStartEnd(const struct FVector& Sta
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

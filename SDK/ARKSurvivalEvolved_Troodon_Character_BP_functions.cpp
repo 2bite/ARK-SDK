@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -222,7 +222,7 @@ bool ATroodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Troodon_Character_BP.Troodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, HasOutParms, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, NetClient, DLLImport, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -236,6 +236,7 @@ TArray<struct FMultiUseEntry> ATroodon_Character_BP_C::BPGetMultiUseEntries(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -323,7 +324,7 @@ void ATroodon_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMovemen
 
 
 // Function Troodon_Character_BP.Troodon_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Native, Event, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Static, MulticastDelegate, NetClient, DLLImport, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -342,7 +343,6 @@ float ATroodon_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackInd
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -358,7 +358,7 @@ float ATroodon_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackInd
 
 
 // Function Troodon_Character_BP.Troodon_Character_BP_C.OnJumped
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, NetClient, DLLImport, NetValidate)
 
 void ATroodon_Character_BP_C::STATIC_OnJumped()
 {
@@ -367,6 +367,7 @@ void ATroodon_Character_BP_C::STATIC_OnJumped()
 	ATroodon_Character_BP_C_OnJumped_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

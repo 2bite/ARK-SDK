@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wyvern_Character_BP_Poison.Wyvern_Character_BP_Poison_C
-// 0x0000 (0x22D0 - 0x22D0)
+// 0x0000 (0x23A0 - 0x23A0)
 class AWyvern_Character_BP_Poison_C : public AWyvern_Character_BP_Base_C
 {
 public:

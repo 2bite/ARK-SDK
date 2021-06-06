@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Structure_TaxidermyBase_Medium.Structure_TaxidermyBase_Medium_C
-// 0x0000 (0x0E08 - 0x0E08)
+// 0x0000 (0x0F11 - 0x0F11)
 class AStructure_TaxidermyBase_Medium_C : public AStructure_TaxidermyBase_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 
 
 	void IsAnchorVisible(bool* bResult);
-	void GetAnchorRadiusMult(float* mult);
+	void GetAnchorRadiusMult(float* Mult);
 	void GetAnchorColor(struct FLinearColor* Color);
 	void SetAnchorRadius(float NewRadius);
 	void SetAnchorVisibility(bool bNewVisibility);

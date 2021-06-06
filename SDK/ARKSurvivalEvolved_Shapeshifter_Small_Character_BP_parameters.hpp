@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,49 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPOverrideMutationLabels
+struct AShapeshifter_Small_Character_BP_C_BPOverrideMutationLabels_Params
+{
+	bool*                                              male;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPNotifyLevelUp
+struct AShapeshifter_Small_Character_BP_C_BPNotifyLevelUp_Params
+{
+	int*                                               ExtraCharacterLevel;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.GetBiglyStats
+struct AShapeshifter_Small_Character_BP_C_GetBiglyStats_Params
+{
+};
+
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPGetStatusNameString
+struct AShapeshifter_Small_Character_BP_C_BPGetStatusNameString_Params
+{
+	TEnumAsByte<EPrimalCharacterStatusValue>*          ValueType;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.UpdateBiglyStatsCache
+struct AShapeshifter_Small_Character_BP_C_UpdateBiglyStatsCache_Params
+{
+	class APrimalCharacter*                            Bigly;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPBecameNewBaby
+struct AShapeshifter_Small_Character_BP_C_BPBecameNewBaby_Params
+{
+	class APrimalDinoCharacter**                       Parent;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.DoMate
+struct AShapeshifter_Small_Character_BP_C_DoMate_Params
+{
+	class APrimalDinoCharacter**                       WithMate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPOnDinoCheat
 struct AShapeshifter_Small_Character_BP_C_BPOnDinoCheat_Params
@@ -293,7 +336,7 @@ struct AShapeshifter_Small_Character_BP_C_GetTarget_Params
 struct AShapeshifter_Small_Character_BP_C_TargetHasElement_Params
 {
 	class AShooterCharacter*                           Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.DisableBegging
@@ -478,6 +521,11 @@ struct AShapeshifter_Small_Character_BP_C_CheckWildShouldRandomTransform_Params
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.AnimNotify_StartSniff
 struct AShapeshifter_Small_Character_BP_C_AnimNotify_StartSniff_Params
+{
+};
+
+// Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.LevelUpRefresh
+struct AShapeshifter_Small_Character_BP_C_LevelUpRefresh_Params
 {
 };
 

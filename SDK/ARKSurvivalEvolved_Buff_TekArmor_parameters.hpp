@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_TekArmor.Buff_TekArmor_C.HasRequiredEngrams
+struct ABuff_TekArmor_C_HasRequiredEngrams_Params
+{
+	bool                                               HasEngrams;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor.Buff_TekArmor_C.IsTekBuffDisabled
+struct ABuff_TekArmor_C_IsTekBuffDisabled_Params
+{
+	bool                                               bIsDisabled;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_TekArmor.Buff_TekArmor_C.check genesis restrictions for player
 struct ABuff_TekArmor_C_check_genesis_restrictions_for_player_Params
@@ -125,7 +137,7 @@ struct ABuff_TekArmor_C_GetDefaultPlayer_Params
 struct ABuff_TekArmor_C_Client_Consume_Element_After_Time_Params
 {
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ElementCost;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                elementCost;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor.Buff_TekArmor_C.BPSetupForInstigator
@@ -214,13 +226,13 @@ struct ABuff_TekArmor_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33
-struct ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33_Params
+// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34
+struct ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34_Params
 {
 };
 
-// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32
-struct ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32_Params
+// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33
+struct ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33_Params
 {
 };
 
@@ -240,7 +252,7 @@ struct ABuff_TekArmor_C_Equipped_SetToMaxElement_Params
 // Function Buff_TekArmor.Buff_TekArmor_C.Multi_SpawnFX
 struct ABuff_TekArmor_C_Multi_SpawnFX_Params
 {
-	class UParticleSystem*                             particleTemplate;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             ParticleTemplate;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	class USoundBase*                                  Sound;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          Transform;                                                // (Parm, IsPlainOldData)
 	float                                              soundVolume;                                              // (Parm, ZeroConstructor, IsPlainOldData)

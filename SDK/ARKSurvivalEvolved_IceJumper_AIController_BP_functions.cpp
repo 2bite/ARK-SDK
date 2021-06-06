@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -89,9 +89,9 @@ class AActor* AIceJumper_AIController_BP_C::BPUpdateBestTarget(class AActor** be
 // ()
 // Parameters:
 // struct FVector                 ViewLocationOffset             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_AIController_BP_C::DoLOS(const struct FVector& ViewLocationOffset, bool* RetVal)
+void AIceJumper_AIController_BP_C::DoLOS(const struct FVector& ViewLocationOffset, bool* Retval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.DoLOS");
 
@@ -104,8 +104,8 @@ void AIceJumper_AIController_BP_C::DoLOS(const struct FVector& ViewLocationOffse
 
 	fn->FunctionFlags = flags;
 
-	if (RetVal != nullptr)
-		*RetVal = params.RetVal;
+	if (Retval != nullptr)
+		*Retval = params.Retval;
 }
 
 
@@ -149,7 +149,7 @@ void AIceJumper_AIController_BP_C::Get_Percent_Stamina(float* Ret)
 
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.IsFallingToGroundBelowTarget
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -171,7 +171,7 @@ bool AIceJumper_AIController_BP_C::IsFallingToGroundBelowTarget()
 
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.BPGetTargetingDesire
-// (Net, Event, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AActor**                 forTarget                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ForTargetingDesireValue        (Parm, ZeroConstructor, IsPlainOldData)
@@ -186,6 +186,7 @@ float AIceJumper_AIController_BP_C::BPGetTargetingDesire(class AActor** forTarge
 	params.ForTargetingDesireValue = ForTargetingDesireValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -367,7 +368,7 @@ void AIceJumper_AIController_BP_C::GetMeleeWeight(float* Result)
 
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.UpdateMelee
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Native, Event, NetResponse, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void AIceJumper_AIController_BP_C::UpdateMelee()
 {
@@ -376,6 +377,7 @@ void AIceJumper_AIController_BP_C::UpdateMelee()
 	AIceJumper_AIController_BP_C_UpdateMelee_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -383,14 +385,14 @@ void AIceJumper_AIController_BP_C::UpdateMelee()
 }
 
 
-// Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.melee
+// Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Melee
 // ()
 
-void AIceJumper_AIController_BP_C::melee()
+void AIceJumper_AIController_BP_C::Melee()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.melee");
+	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Melee");
 
-	AIceJumper_AIController_BP_C_melee_Params params;
+	AIceJumper_AIController_BP_C_Melee_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -440,13 +442,13 @@ void AIceJumper_AIController_BP_C::OnMovementModeChanged(TEnumAsByte<EMovementMo
 
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.OnAbilityChanged
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, Native, Static, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EIceJumperAbilities_Enum> NewAbility                     (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EIceJumperAbilities_Enum> PrevAbility                    (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EIceJumperShortDashTypes_Enum> SecondaryAbility               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_AIController_BP_C::OnAbilityChanged(TEnumAsByte<EIceJumperAbilities_Enum> NewAbility, TEnumAsByte<EIceJumperAbilities_Enum> PrevAbility, TEnumAsByte<EIceJumperShortDashTypes_Enum> SecondaryAbility)
+void AIceJumper_AIController_BP_C::STATIC_OnAbilityChanged(TEnumAsByte<EIceJumperAbilities_Enum> NewAbility, TEnumAsByte<EIceJumperAbilities_Enum> PrevAbility, TEnumAsByte<EIceJumperShortDashTypes_Enum> SecondaryAbility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.OnAbilityChanged");
 
@@ -465,12 +467,12 @@ void AIceJumper_AIController_BP_C::OnAbilityChanged(TEnumAsByte<EIceJumperAbilit
 
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Trigger RandomWeighted Ability
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Event, Static, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EIceJumperAbilities_Enum> TriggeredAbility               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EIceJumperShortDashTypes_Enum> SecondaryAbility               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_AIController_BP_C::Trigger_RandomWeighted_Ability(TEnumAsByte<EIceJumperAbilities_Enum>* TriggeredAbility, TEnumAsByte<EIceJumperShortDashTypes_Enum>* SecondaryAbility)
+void AIceJumper_AIController_BP_C::STATIC_Trigger_RandomWeighted_Ability(TEnumAsByte<EIceJumperAbilities_Enum>* TriggeredAbility, TEnumAsByte<EIceJumperShortDashTypes_Enum>* SecondaryAbility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Trigger RandomWeighted Ability");
 
@@ -536,7 +538,7 @@ void AIceJumper_AIController_BP_C::GetSide_DashWeight(bool Left, float* Result)
 
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Get JumpWeight
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -547,7 +549,6 @@ void AIceJumper_AIController_BP_C::STATIC_Get_JumpWeight(float* Result)
 	AIceJumper_AIController_BP_C_Get_JumpWeight_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -581,17 +582,18 @@ void AIceJumper_AIController_BP_C::IsTarget_Tamed_or_Survivor(bool* Result)
 
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Get Forward DashWeight
-// (Net, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIceJumper_AIController_BP_C::STATIC_Get_Forward_DashWeight(float* Result)
+void AIceJumper_AIController_BP_C::Get_Forward_DashWeight(float* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Get Forward DashWeight");
 
 	AIceJumper_AIController_BP_C_Get_Forward_DashWeight_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -625,7 +627,7 @@ void AIceJumper_AIController_BP_C::IsInAir(bool* Result)
 
 
 // Function IceJumper_AIController_BP.IceJumper_AIController_BP_C.Get Ice BreathWeight
-// (Native, NetResponse, Static, NetMulticast, Public, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -636,7 +638,6 @@ void AIceJumper_AIController_BP_C::STATIC_Get_Ice_BreathWeight(float* Result)
 	AIceJumper_AIController_BP_C_Get_Ice_BreathWeight_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

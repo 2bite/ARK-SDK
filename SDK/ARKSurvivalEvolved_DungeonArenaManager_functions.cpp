@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ void ADungeonArenaManager_C::GetNumEntitiesInCave(int* NumPlayers, int* NumDinos
 
 
 // Function DungeonArenaManager.DungeonArenaManager_C.BPClientHandleNetExecCommand
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
@@ -87,7 +87,7 @@ void ADungeonArenaManager_C::ActivateArena(int DifficultyIndex)
 
 
 // Function DungeonArenaManager.DungeonArenaManager_C.IssueTimeWarning
-// (NetRequest, Exec, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintPure)
 
 void ADungeonArenaManager_C::IssueTimeWarning()
 {

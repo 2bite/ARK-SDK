@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Purlovia_Character_BP_Aberrant.Purlovia_Character_BP_Aberrant_C
-// 0x0000 (0x2988 - 0x2988)
+// 0x0000 (0x2A58 - 0x2A58)
 class APurlovia_Character_BP_Aberrant_C : public APurlovia_Character_BP_C
 {
 public:

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,28 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function StructureTurretPlant.StructureTurretPlant_C.BPOnDemolish
+// (NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void AStructureTurretPlant_C::BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretPlant.StructureTurretPlant_C.BPOnDemolish");
+
+	AStructureTurretPlant_C_BPOnDemolish_Params params;
+	params.ForPC = ForPC;
+	params.DamageCauser = DamageCauser;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function StructureTurretPlant.StructureTurretPlant_C.BPPostLoadedFromSaveGame
 // ()
@@ -68,7 +90,7 @@ void AStructureTurretPlant_C::Turret_Check_Hard_Limit()
 
 
 // Function StructureTurretPlant.StructureTurretPlant_C.BlueprintDrawHUD
-// (Net, Exec, Event, NetResponse, Static, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -84,6 +106,7 @@ void AStructureTurretPlant_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, f
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

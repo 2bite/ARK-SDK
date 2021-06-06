@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ public:
 	unsigned char                                      UnknownData00 : 2;                                        // 0x0081(0x0001)
 	unsigned char                                      bIgnoredByCharacterEncroachment : 1;                      // 0x0081(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bClimbable : 1;                                           // 0x0081(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bAttachmentReplicationUseNetworkParent : 1;               // 0x0081(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bAttachmentReplicationUseNetworkParent : 1;               // 0x0081(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bUnstreamComponentsUseEndOverlap : 1;                     // 0x0082(0x0001) (Edit)
 	unsigned char                                      bUseBPOverrideUILocation : 1;                             // 0x0082(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bForceBasedActorsOutOfFastTick : 1;                       // 0x0082(0x0001) (Edit, DisableEditOnInstance)
@@ -53,6 +53,7 @@ public:
 	unsigned char                                      bNetCritical : 1;                                         // 0x0089(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bUseBPCustomIsRelevantForClient : 1;                      // 0x0089(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bUseStasisGrid : 1;                                       // 0x0089(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bPreventCliffPlatforms : 1;                               // 0x0089(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData03[0x2];                                       // 0x008A(0x0002) MISSED OFFSET
 	float                                              ClientReplicationSendNowThreshold;                        // 0x008C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      bReplicateInstigator : 1;                                 // 0x0090(0x0001) (Edit, DisableEditOnInstance)
@@ -83,26 +84,26 @@ public:
 	unsigned char                                      bReplicates : 1;                                          // 0x0093(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      UnknownData05 : 4;                                        // 0x0093(0x0001)
 	unsigned char                                      bActorEnableCollision : 1;                                // 0x0093(0x0001) (Edit)
-	unsigned char                                      UnknownData06[0x1];                                       // 0x0094(0x0001) MISSED OFFSET
+	bool                                               bForceAllowNetMulticast;                                  // 0x0094(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<ENetRole>                              RemoteRole;                                               // 0x0095(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x2];                                       // 0x0096(0x0002) MISSED OFFSET
+	unsigned char                                      UnknownData06[0x2];                                       // 0x0096(0x0002) MISSED OFFSET
 	class AActor*                                      Owner;                                                    // 0x0098(0x0008) (Net, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x1C];                                      // 0x00A0(0x001C) MISSED OFFSET
+	unsigned char                                      UnknownData07[0x1C];                                      // 0x00A0(0x001C) MISSED OFFSET
 	struct FRepMovement                                ReplicatedMovement;                                       // 0x00BC(0x0034) (Net, Transient)
 	struct FRepAttachment                              AttachmentReplication;                                    // 0x00F0(0x0040) (BlueprintVisible, BlueprintReadOnly, Net, Transient)
 	TEnumAsByte<ENetRole>                              Role;                                                     // 0x0130(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ENetDormancy>                          NetDormancy;                                              // 0x0131(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x6];                                       // 0x0132(0x0006) MISSED OFFSET
+	unsigned char                                      UnknownData08[0x6];                                       // 0x0132(0x0006) MISSED OFFSET
 	TArray<TWeakObjectPtr<class UActorComponent>>      ReplicatedComponents;                                     // 0x0138(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData10[0x8];                                       // 0x0148(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData09[0x8];                                       // 0x0148(0x0008) MISSED OFFSET
 	TEnumAsByte<EAutoReceiveInput>                     AutoReceiveInput;                                         // 0x0150(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x3];                                       // 0x0151(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData10[0x3];                                       // 0x0151(0x0003) MISSED OFFSET
 	int                                                DefaultStasisComponentOctreeFlags;                        // 0x0154(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UPrimitiveComponent*                         StasisCheckComponent;                                     // 0x0158(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	TArray<class AActor*>                              NetworkSpatializationChildren;                            // 0x0160(0x0010) (ZeroConstructor, Transient)
 	class AActor*                                      NetworkSpatializationParent;                              // 0x0170(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	float                                              NetworkAndStasisRangeMultiplier;                          // 0x0178(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x4];                                       // 0x017C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData11[0x4];                                       // 0x017C(0x0004) MISSED OFFSET
 	double                                             UnstasisLastInRangeTime;                                  // 0x0180(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
 	double                                             LastPreReplicationTime;                                   // 0x0188(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	double                                             LastEnterStasisTime;                                      // 0x0190(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, SaveGame, IsPlainOldData)
@@ -110,11 +111,11 @@ public:
 	struct FName                                       CustomTag;                                                // 0x01A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                CustomData;                                               // 0x01A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              ReplicationIntervalMultiplier;                            // 0x01AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x18];                                      // 0x01B0(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData12[0x18];                                      // 0x01B0(0x0018) MISSED OFFSET
 	TArray<TWeakObjectPtr<class UActorComponent>>      StasisUnRegisteredComponents;                             // 0x01C8(0x0010) (ExportObject, ZeroConstructor)
 	class UInputComponent*                             InputComponent;                                           // 0x01D8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<EInputConsumeOptions>                  InputConsumeOption;                                       // 0x01E0(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x3];                                       // 0x01E1(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData13[0x3];                                       // 0x01E1(0x0003) MISSED OFFSET
 	float                                              NetCullDistanceSquared;                                   // 0x01E4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              NetCullDistanceSquaredDormant;                            // 0x01E8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                NetTag;                                                   // 0x01EC(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
@@ -128,8 +129,8 @@ public:
 	unsigned char                                      bPendingKillPending : 1;                                  // 0x0210(0x0001)
 	unsigned char                                      bCollideWhenPlacing : 1;                                  // 0x0210(0x0001)
 	unsigned char                                      bPreventOnDedicatedServer : 1;                            // 0x0210(0x0001) (Edit)
-	unsigned char                                      UnknownData15 : 3;                                        // 0x0210(0x0001)
-	unsigned char                                      UnknownData16 : 2;                                        // 0x0211(0x0001)
+	unsigned char                                      UnknownData14 : 3;                                        // 0x0210(0x0001)
+	unsigned char                                      UnknownData15 : 2;                                        // 0x0211(0x0001)
 	unsigned char                                      bAllowReceiveTickEventOnDedicatedServer : 1;              // 0x0211(0x0001)
 	unsigned char                                      bLoadedFromSaveGame : 1;                                  // 0x0211(0x0001) (BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bPreventLevelBoundsRelevant : 1;                          // 0x0211(0x0001) (Edit)
@@ -152,9 +153,10 @@ public:
 	unsigned char                                      bIgnoresOriginShifting : 1;                               // 0x0213(0x0001) (Edit)
 	unsigned char                                      bReplicateHidden : 1;                                     // 0x0213(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bPreventActorStasis : 1;                                  // 0x0213(0x0001) (Edit, DisableEditOnInstance)
-	int                                                TargetingTeam;                                            // 0x0214(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, SaveGame, IsPlainOldData)
-	float                                              OverrideStasisComponentRadius;                            // 0x0218(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData17[0x4];                                       // 0x021C(0x0004) MISSED OFFSET
+	unsigned char                                      bUseBPGetBonesToHideOnAllocation : 1;                     // 0x0214(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char                                      UnknownData16[0x3];                                       // 0x0215(0x0003) MISSED OFFSET
+	int                                                TargetingTeam;                                            // 0x0218(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, SaveGame, IsPlainOldData)
+	float                                              OverrideStasisComponentRadius;                            // 0x021C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class APawn*                                       Instigator;                                               // 0x0220(0x0008) (BlueprintVisible, Net, ZeroConstructor, SaveGame, IsPlainOldData)
 	double                                             CreationTime;                                             // 0x0228(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
 	double                                             OriginalCreationTime;                                     // 0x0230(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, SaveGame, IsPlainOldData)
@@ -164,7 +166,7 @@ public:
 	class USceneComponent*                             RootComponent;                                            // 0x0250(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TArray<class AMatineeActor*>                       ControllingMatineeActors;                                 // 0x0258(0x0010) (ZeroConstructor, Transient)
 	float                                              InitialLifeSpan;                                          // 0x0268(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x4];                                       // 0x026C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData17[0x4];                                       // 0x026C(0x0004) MISSED OFFSET
 	TArray<struct FName>                               Layers;                                                   // 0x0270(0x0010) (ZeroConstructor)
 	TWeakObjectPtr<class AActor>                       ParentComponentActor;                                     // 0x0280(0x0008) (ZeroConstructor, IsPlainOldData)
 	double                                             LastRenderTime;                                           // 0x0288(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
@@ -187,22 +189,23 @@ public:
 	struct FScriptMulticastDelegate                    OnTargetingTeamChanged;                                   // 0x0380(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FVector                                     DefaultActorLocation;                                     // 0x0390(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
 	struct FGuid                                       UniqueGuidId;                                             // 0x039C(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData19[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData18[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
 	struct FScriptMulticastDelegate                    OnDestroyed;                                              // 0x03B0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnActorCustomEvent;                                       // 0x03C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnEndPlay;                                                // 0x03D0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData20[0x8];                                       // 0x03E0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData19[0x8];                                       // 0x03E0(0x0008) MISSED OFFSET
 	struct FScriptMulticastDelegate                    OnMatineeUpdated;                                         // 0x03E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData21[0x20];                                      // 0x03F8(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData20[0x20];                                      // 0x03F8(0x0020) MISSED OFFSET
 	struct FScriptMulticastDelegate                    OnSemaphoreTaken;                                         // 0x0418(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	float                                              ForceMaximumReplicationRateUntilTime;                     // 0x0428(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData22[0x4];                                       // 0x042C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData21[0x4];                                       // 0x042C(0x0004) MISSED OFFSET
 	double                                             LastActorForceReplicationTime;                            // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData23[0x10];                                      // 0x0438(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData22[0x10];                                      // 0x0438(0x0010) MISSED OFFSET
 	TArray<class UActorComponent*>                     SerializedComponents;                                     // 0x0448(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData24[0xC];                                       // 0x0458(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData23[0xC];                                       // 0x0458(0x000C) MISSED OFFSET
 	bool                                               bUseBPPreventAttachments;                                 // 0x0464(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData25[0x3];                                       // 0x0465(0x0003) MISSED OFFSET
+	bool                                               bForceNonBlockingHits;                                    // 0x0465(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData24[0x2];                                       // 0x0466(0x0002) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -225,6 +228,7 @@ public:
 	void SetTickableWhenPaused(bool bTickableWhenPaused);
 	void SetReplicates(bool bInReplicates);
 	void SetOwner(class AActor* NewOwner);
+	void SetNetworkSpatializationParent(class AActor* NewParent);
 	void SetLifeSpan(float InLifespan);
 	bool SetActorTransform(const struct UObject_FTransform& NewTransform, bool bSweep);
 	void SetActorScale3D(const struct FVector& NewScale3D);
@@ -275,18 +279,19 @@ public:
 	void NetAttachRootComponentTo(class USceneComponent* InParent, const struct FName& InSocketName, const struct FVector& RelativeLocation, const struct FRotator& RelativeRotation);
 	void MulticastPropertyToPlayer(const struct FName& PropertyName, class APlayerController* PC);
 	void MulticastProperty(const struct FName& PropertyName);
-	void MulticastDrawDebugString(const struct FVector& TextLocation, const class FString& Text, class AActor* TestBaseActor, const struct FLinearColor& TextColor, float Duration);
+	void MulticastDrawDebugString(const struct FVector& TextLocation, const class FString& Text, class AActor* TestBaseActor, const struct FLinearColor& TextColor, float Duration, bool enableInShipping);
 	void MulticastDrawDebugSphere(const struct FVector& Center, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration, bool enableInShipping);
-	void MulticastDrawDebugPoint(const struct FVector& Position, float Size, const struct FLinearColor& PointColor, float Duration);
-	void MulticastDrawDebugLineTraceHitResult(const struct FHitResult& Hit, const struct FVector& TraceStart, const struct FVector& TraceEnd, const struct FLinearColor& StartColor, const struct FLinearColor& HitColor, float LineThickness, float HitSize, bool bDrawHitNormal, const struct FLinearColor& HitNormalColor, float HitNormalLength, float Duration);
+	void MulticastDrawDebugPoint(const struct FVector& Position, float Size, const struct FLinearColor& PointColor, float Duration, bool enableInShipping);
+	void MulticastDrawDebugPlane(const struct FPlane& PlaneCoordinates, const struct FVector& Location, float Size, const struct FLinearColor& PlaneColor, float Duration, bool enableInShipping);
+	void MulticastDrawDebugLineTraceHitResult(const struct FHitResult& Hit, const struct FVector& TraceStart, const struct FVector& TraceEnd, const struct FLinearColor& StartColor, const struct FLinearColor& HitColor, float LineThickness, float HitSize, bool bDrawHitNormal, const struct FLinearColor& HitNormalColor, float HitNormalLength, float Duration, bool enableInShipping);
 	void MulticastDrawDebugLine(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FLinearColor& LineColor, float Duration, float Thickness, bool enableInShipping);
-	void MulticastDrawDebugCylinder(const struct FVector& Start, const struct FVector& End, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration);
-	void MulticastDrawDebugCoordinateSystem(const struct FVector& AxisLoc, const struct FRotator& AxisRot, float Scale, float Duration, float Thickness);
-	void MulticastDrawDebugCapsuleWithExtents(const struct FVector& Top, const struct FVector& Bottom, float Radius, const struct FLinearColor& LineColor, float Duration, bool bPersistent);
+	void MulticastDrawDebugCylinder(const struct FVector& Start, const struct FVector& End, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration, bool enableInShipping);
+	void MulticastDrawDebugCoordinateSystem(const struct FVector& AxisLoc, const struct FRotator& AxisRot, float Scale, float Duration, float Thickness, bool enableInShipping);
+	void MulticastDrawDebugCapsuleWithExtents(const struct FVector& Top, const struct FVector& Bottom, float Radius, const struct FLinearColor& LineColor, float Duration, bool bPersistent, bool enableInShipping);
 	void MulticastDrawDebugCapsule(const struct FVector& Center, float HalfHeight, float Radius, const struct FRotator& Rotation, const struct FLinearColor& LineColor, float Duration, bool enableInShipping);
-	void MulticastDrawDebugCamera(class ACameraActor* CameraActor, const struct FLinearColor& CameraColor, float Duration);
-	void MulticastDrawDebugBox(const struct FVector& Center, const struct FVector& Extent, const struct FLinearColor& LineColor, const struct FRotator& Rotation, float Duration);
-	void MulticastDrawDebugArrow(const struct FVector& LineStart, const struct FVector& LineEnd, float ArrowSize, const struct FLinearColor& LineColor, float Duration);
+	void MulticastDrawDebugCamera(class ACameraActor* CameraActor, const struct FLinearColor& CameraColor, float Duration, bool enableInShipping);
+	void MulticastDrawDebugBox(const struct FVector& Center, const struct FVector& Extent, const struct FLinearColor& LineColor, const struct FRotator& Rotation, float Duration, bool enableInShipping);
+	void MulticastDrawDebugArrow(const struct FVector& LineStart, const struct FVector& LineEnd, float ArrowSize, const struct FLinearColor& LineColor, float Duration, bool enableInShipping);
 	void ModifyHudMultiUseLoc(class APlayerController* PC, int index, struct FVector2D* theVec);
 	void MakeNoise(float Loudness, class APawn* NoiseInstigator, const struct FVector& NoiseLocation);
 	class UMaterialInstanceDynamic* MakeMIDForMaterial(class UMaterialInterface* Parent);
@@ -316,7 +321,7 @@ public:
 	bool IsDead();
 	bool IsCorruptDino();
 	bool HasAuthority();
-	class UPrimitiveComponent* GetVisibleComponentByClass(class UClass* ComponentClass);
+	class UPrimitiveComponent* GetVisibleComponentByClass(class UClass* ComponentClass, bool bSkipHiddenComponents);
 	float GetVerticalDistanceTo(class AActor* OtherActor);
 	struct FVector GetVelocity(bool bIsForRagdoll);
 	float GetUsablePriority();
@@ -365,10 +370,12 @@ public:
 	void ForceDestroy();
 	void FlushNetDormancy();
 	void EnableInput(class APlayerController* PlayerController);
+	void DrawInEditorViewport(class UCanvas* Canvas, int LHSX, int InOutLHSY, int RHSX, int InOutRHSY, const struct FVector& ViewLocation, const struct FRotator& ViewRotation);
 	void DrawBasicFloatingHUD(class AHUD* ForHUD);
 	void DisableInput(class APlayerController* PlayerController);
 	void DetachRootComponentFromParent(bool bMaintainWorldPosition);
 	void ClientMultiUse(class APlayerController* ForPC, int UseIndex);
+	struct FBox CalculateComponentsBoundingBoxInLocalSpace(bool bNonColliding);
 	bool BPTryMultiUse(class APlayerController* ForPC, int UseIndex);
 	bool BPServerHandleNetExecCommand(class APlayerController* FromPC, const struct FName& CommandName, const struct FBPNetExecParams& ExecParams);
 	bool BPPreventAttachments(class UObject* ForItem);
@@ -382,6 +389,7 @@ public:
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController* ForPC, TArray<struct FMultiUseEntry> MultiUseEntries);
 	bool BPGetMultiUseCenterText(class APlayerController* ForPC, int UseIndex, class FString* OutCenterText, struct FLinearColor* OutCenterTextColor);
 	int BPGetExtraSpecialBlueprintInt();
+	TArray<struct FName> BPGetBonesToHideOnAllocation();
 	void BPGetActorEyesViewPoint(struct FVector* Location, struct FRotator* Rotation);
 	bool BPForceAllowsInventoryUse(class UObject* InventoryItemObject);
 	bool BPCustomIsRelevantForClient(class APlayerController* ForPC);
@@ -625,6 +633,7 @@ public:
 	float                                              InputPitchScale;                                          // 0x0684(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	float                                              InputRollScale;                                           // 0x0688(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      bShowMouseCursor : 1;                                     // 0x068C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bForceShowMouseCursor : 1;                                // 0x068C(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bEnableClickEvents : 1;                                   // 0x068C(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bEnableTouchEvents : 1;                                   // 0x068C(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bEnableMouseOverEvents : 1;                               // 0x068C(0x0001) (Edit, BlueprintVisible)
@@ -697,14 +706,14 @@ public:
 	void PlayDynamicForceFeedback(float Intensity, float Duration, bool bAffectsLeftLarge, bool bAffectsLeftSmall, bool bAffectsRightLarge, bool bAffectsRightSmall, TEnumAsByte<EDynamicForceFeedbackAction> Action, const struct FLatentActionInfo& LatentInfo);
 	void Pause();
 	void NetSpawnActorAtLocation(class UClass* anActorClass, const struct FVector_NetQuantize& AtLocation, const struct FRotator_NetQuantize& AtRotation, class USceneComponent* attachToComponent, int dataIndex, const struct FName& attachSocketName);
-	bool NetConnectionHasActiveActor(class AActor* AnActor);
+	bool NetConnectionHasActiveActor(class AActor* anActor);
 	void LocalTravel(const class FString& URL);
 	bool IsMoveInputIgnored();
 	bool IsLookInputIgnored();
 	bool IsInputKeyDown(const struct FKey& Key);
 	void HandleRespawned(class APawn* NewPawn, bool IsFirstSpawn);
 	void GetViewportSize(int* SizeX, int* SizeY);
-	bool GetMousePosition(float* LocationX, float* LocationY);
+	bool GetMousePosition(bool bEvenWhenMouseNotAttached, float* LocationX, float* LocationY);
 	struct FVector GetInputVectorKeyState(const struct FKey& Key);
 	void GetInputTouchState(TEnumAsByte<ETouchIndex> FingerIndex, float* LocationX, float* LocationY, bool* bIsCurrentlyPressed);
 	void GetInputMouseDelta(float* DeltaX, float* DeltaY);
@@ -723,6 +732,7 @@ public:
 	void EnableCheats(const class FString& pass);
 	bool DeprojectScreenPositionToWorld(float ScreenX, float ScreenY, struct FVector* WorldLocation, struct FVector* WorldDirection);
 	bool DeprojectMousePositionToWorld(struct FVector* WorldLocation, struct FVector* WorldDirection);
+	void CopyStringToClipboard(const class FString& S);
 	void ConsoleKey(const struct FKey& Key);
 	void ClientWasKicked(const struct FText& KickReason);
 	void ClientVoiceHandshakeComplete();
@@ -761,7 +771,7 @@ public:
 	void ClientPlaySoundAtLocation(class USoundBase* Sound, const struct FVector& Location, float VolumeMultiplier, float PitchMultiplier);
 	void ClientPlaySound(class USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier);
 	void ClientPlayForceFeedback(class UForceFeedbackEffect* ForceFeedbackEffect, bool bLooping, const struct FName& Tag);
-	void ClientPlayCameraShake(class UClass* Shake, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot, float Speed);
+	void ClientPlayCameraShake(class UClass* Shake, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot, float Speed, bool bForceUseWorldCameraShakeScale);
 	void ClientPlayCameraAnim(class UCameraAnim* AnimToPlay, float Scale, float Rate, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, TEnumAsByte<ECameraAnimPlaySpace> Space, const struct FRotator& CustomPlaySpace);
 	void ClientNotifyRespawned(class APawn* NewPawn, bool IsFirstSpawn);
 	void ClientNotifyReconnected(class APawn* NewPawn);
@@ -782,6 +792,7 @@ public:
 	void ClientAddTextureStreamingLoc(const struct FVector& InLoc, float Duration, bool bOverrideLocation);
 	void ClearAudioListenerOverride();
 	void Camera(const struct FName& NewMode);
+	class AActor* BPGetAimedUseActor();
 	void AddYawInput(float val);
 	void AddRollInput(float val);
 	void AddPitchInput(float val);
@@ -873,6 +884,7 @@ public:
 	unsigned char                                      bAlwaysReplicatePropertyConditional : 1;                  // 0x00A9(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bUseBPOnComponentTick : 1;                                // 0x00A9(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bUseBPOnComponentDestroyed : 1;                           // 0x00AA(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bUseBPOnComponentCreated : 1;                             // 0x00AA(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData03[0x1];                                       // 0x00AB(0x0001) MISSED OFFSET
 	struct FName                                       CustomTag;                                                // 0x00AC(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                CustomData;                                               // 0x00B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -906,6 +918,7 @@ public:
 	void BPTickComponent(float DeltaTime);
 	void BPOnComponentTick(float DeltaTime);
 	void BPOnComponentDestroyed();
+	void BPOnComponentCreated();
 	void AddTickPrerequisiteComponent(class UActorComponent* PrerequisiteComponent);
 	void AddTickPrerequisiteActor(class AActor* PrerequisiteActor);
 	void AddedAsPrimalItemAttachment();
@@ -1271,11 +1284,11 @@ public:
 	TEnumAsByte<ECsgOper>                              CsgOper;                                                  // 0x0468(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
 	TEnumAsByte<EBrushType>                            BrushType;                                                // 0x0469(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x046A(0x0002) MISSED OFFSET
-	struct FColor                                      BrushColor;                                               // 0x046C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      BrushColor;                                               // 0x046C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                PolyFlags;                                                // 0x0470(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bColored : 1;                                             // 0x0474(0x0001)
-	unsigned char                                      bSolidWhenSelected : 1;                                   // 0x0474(0x0001)
-	unsigned char                                      bPlaceableFromClassBrowser : 1;                           // 0x0474(0x0001)
+	unsigned char                                      bColored : 1;                                             // 0x0474(0x0001) (Edit)
+	unsigned char                                      bSolidWhenSelected : 1;                                   // 0x0474(0x0001) (Edit)
+	unsigned char                                      bPlaceableFromClassBrowser : 1;                           // 0x0474(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bNotForClientOrServer : 1;                                // 0x0474(0x0001)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0475(0x0003) MISSED OFFSET
 	class UModel*                                      Brush;                                                    // 0x0478(0x0008) (ExportObject, ZeroConstructor, IsPlainOldData)
@@ -1356,6 +1369,9 @@ public:
 	}
 
 
+	void SetFadingStaticMesh(class UStaticMesh* TheMesh);
+	void SetFadingSkeletalMesh(class USkeletalMesh* TheMesh);
+	class UMeshComponent* GetFadingMeshComponent();
 	void ActorFractureSignature__DelegateSignature(const struct FVector& HitPoint, const struct FVector& HitDirection);
 };
 
@@ -1651,7 +1667,7 @@ public:
 	unsigned char                                      bUseBPOverrideCharacterSound : 1;                         // 0x058C(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bUseBPOverrideCharacterParticle : 1;                      // 0x058C(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bPressedJump : 1;                                         // 0x058C(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bClientUpdating : 1;                                      // 0x058D(0x0001) (Transient)
+	unsigned char                                      bClientUpdating : 1;                                      // 0x058D(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
 	unsigned char                                      bIsPlayingTurningAnim : 1;                                // 0x058D(0x0001) (BlueprintVisible, Transient)
 	unsigned char                                      bClientWasFalling : 1;                                    // 0x058D(0x0001) (Transient)
 	unsigned char                                      bClientResimulateRootMotion : 1;                          // 0x058D(0x0001) (Transient)
@@ -1662,13 +1678,17 @@ public:
 	unsigned char                                      UnknownData01 : 1;                                        // 0x058E(0x0001)
 	unsigned char                                      bOverrideWalkingVelocity : 1;                             // 0x058E(0x0001) (BlueprintVisible, Transient)
 	unsigned char                                      bOverrideSwimmingVelocity : 1;                            // 0x058E(0x0001) (BlueprintVisible, Transient)
+	unsigned char                                      bOverrideSwimmingAcceleration : 1;                        // 0x058E(0x0001) (BlueprintVisible, Transient)
 	unsigned char                                      bOverrideNewFallVelocity : 1;                             // 0x058E(0x0001) (BlueprintVisible, Transient)
 	unsigned char                                      bOverrideFlyingVelocity : 1;                              // 0x058E(0x0001) (BlueprintVisible, Transient)
 	unsigned char                                      bPreventWaterHopCorrectionVelChange : 1;                  // 0x058E(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bUsesRootMotion : 1;                                      // 0x058E(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bBasedUsesFastPathSMCTick : 1;                            // 0x058E(0x0001) (Transient)
+	unsigned char                                      bBasedUsesFastPathSMCTick : 1;                            // 0x058F(0x0001) (Transient)
 	unsigned char                                      bBasedUsesFastPathMoveTick : 1;                           // 0x058F(0x0001) (Transient)
 	unsigned char                                      bForceUnfreezeIkNextFrame : 1;                            // 0x058F(0x0001) (Edit, BlueprintVisible, Transient)
+	unsigned char                                      bForceReplicationWithoutController : 1;                   // 0x058F(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bUse_ModifySavedMoveAcceleration_PreRep : 1;              // 0x058F(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bUse_ModifySavedMoveAcceleration_PostRep : 1;             // 0x058F(0x0001) (Edit, BlueprintVisible)
 	float                                              HarvestingDestructionMeshRangeMultipler;                  // 0x0590(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x0594(0x0004) MISSED OFFSET
 	TArray<class USoundBase*>                          CharacterOverrideSoundFrom;                               // 0x0598(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
@@ -1685,8 +1705,8 @@ public:
 	struct FRootMotionMovementParams                   ClientRootMotionParams;                                   // 0x0610(0x0040) (Transient)
 	TArray<struct FSimulatedRootMotionReplicatedMove>  RootMotionRepMoves;                                       // 0x0650(0x0010) (ZeroConstructor, Transient)
 	struct FRepRootMotionMontage                       RepRootMotion;                                            // 0x0660(0x0040) (Net)
-	float                                              ExtraMaxAccelerationModifier;                             // 0x06A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ExtraFrictionModifier;                                    // 0x06A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ExtraMaxAccelerationModifier;                             // 0x06A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ExtraFrictionModifier;                                    // 0x06A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x8];                                       // 0x06A8(0x0008) MISSED OFFSET
 	double                                             ForceUnfreezeSkeletalDynamicsUntilTime;                   // 0x06B0(0x0008) (BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x8];                                       // 0x06B8(0x0008) MISSED OFFSET
@@ -1744,7 +1764,7 @@ public:
 
 
 // Class Engine.WorldSettings
-// 0x0810 (0x0C78 - 0x0468)
+// 0x0850 (0x0CB8 - 0x0468)
 class AWorldSettings : public AInfo
 {
 public:
@@ -1767,92 +1787,102 @@ public:
 	int                                                ConsoleOnlyTexturePoolSizeOverride;                       // 0x04B4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              GlobalViewDistanceMultiplier;                             // 0x04B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              GlobalProxyDistanceMultiplier;                            // 0x04BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class ASkyLight*                                   SkyLightReference;                                        // 0x04C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class ADirectionalLight*                           DirectionalLightReference;                                // 0x04C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              GlobalIBLCaptureBrightness;                               // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              GlobalBakeAndStreamIBLMultiplier;                         // 0x04D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     TrueSkyColorMultiplier;                                   // 0x04D8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SkyIBLIntensityMultiplier;                                // 0x04E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              KillZIntervalMin;                                         // 0x04E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              KillZIntervalMax;                                         // 0x04EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDisableDFAO;                                             // 0x04F0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bForceAtmosphericFogWithTrueSky;                          // 0x04F1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x04F2(0x0002) MISSED OFFSET
-	float                                              DistanceFieldShadowRaytraceDistanceOverride;              // 0x04F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bInteriorLightingKeepDistanceFieldsOnLowEnd;              // 0x04F8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x04F9(0x0007) MISSED OFFSET
-	TArray<class UParticleSystemComponent*>            PooledParticles;                                          // 0x0500(0x0010) (ExportObject, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData03[0x4A8];                                     // 0x0510(0x04A8) MISSED OFFSET
-	unsigned char                                      bEnableWorldBoundsChecks : 1;                             // 0x09B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bEnableNavigationSystem : 1;                              // 0x09B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bEnableWorldComposition : 1;                              // 0x09B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bEnableWorldOriginRebasing : 1;                           // 0x09B8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bWorldGravitySet : 1;                                     // 0x09B8(0x0001) (Transient)
-	unsigned char                                      bCheckedForCachesLights : 1;                              // 0x09B8(0x0001) (Transient)
-	unsigned char                                      bUse3DWorldCompStreaming : 1;                             // 0x09B8(0x0001) (Edit)
-	unsigned char                                      bSetIBLDFAOToMatch : 1;                                   // 0x09B8(0x0001) (Edit)
-	unsigned char                                      bRunMeshOptimizer : 1;                                    // 0x09B9(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x6];                                       // 0x09BA(0x0006) MISSED OFFSET
-	class ADynamicCaptureManager*                      MasterSkyLightOverride;                                   // 0x09C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      bBakeOutAllProceduralAssetsToActors : 1;                  // 0x09C8(0x0001) (Edit)
-	unsigned char                                      bEnableInteriorLightingMode : 1;                          // 0x09C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bEnableShadowCache : 1;                                   // 0x09C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bEnableGlobalDistanceField : 1;                           // 0x09C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bGlobalGravitySet : 1;                                    // 0x09C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x09C9(0x0003) MISSED OFFSET
-	float                                              DefaultAmbientShadowNear;                                 // 0x09CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              DefaultAmbientShadowFar;                                  // 0x09D0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x09D4(0x0004) MISSED OFFSET
-	class FString                                      Title;                                                    // 0x09D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	float                                              KillZ;                                                    // 0x09E8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bWorldUseStasis;                                          // 0x04C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04C1(0x0007) MISSED OFFSET
+	class ASkyLight*                                   SkyLightReference;                                        // 0x04C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class ADirectionalLight*                           DirectionalLightReference;                                // 0x04D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              GlobalIBLCaptureBrightness;                               // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              GlobalBakeAndStreamIBLMultiplier;                         // 0x04DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     TrueSkyColorMultiplier;                                   // 0x04E0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              SkyIBLIntensityMultiplier;                                // 0x04EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              KillZIntervalMin;                                         // 0x04F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              KillZIntervalMax;                                         // 0x04F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bDisableDFAO;                                             // 0x04F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bForceAtmosphericFogWithTrueSky;                          // 0x04F9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x04FA(0x0002) MISSED OFFSET
+	float                                              DistanceFieldShadowRaytraceDistanceOverride;              // 0x04FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bInteriorLightingKeepDistanceFieldsOnLowEnd;              // 0x0500(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0501(0x0007) MISSED OFFSET
+	TArray<class UParticleSystemComponent*>            PooledParticles;                                          // 0x0508(0x0010) (ExportObject, ZeroConstructor, Transient)
+	unsigned char                                      UnknownData04[0x4A8];                                     // 0x0518(0x04A8) MISSED OFFSET
+	unsigned char                                      bEnableWorldBoundsChecks : 1;                             // 0x09C0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bEnableNavigationSystem : 1;                              // 0x09C0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bEnableWorldComposition : 1;                              // 0x09C0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bEnableWorldOriginRebasing : 1;                           // 0x09C0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bWorldGravitySet : 1;                                     // 0x09C0(0x0001) (Transient)
+	unsigned char                                      bCheckedForCachesLights : 1;                              // 0x09C0(0x0001) (Transient)
+	unsigned char                                      bUse3DWorldCompStreaming : 1;                             // 0x09C0(0x0001) (Edit)
+	unsigned char                                      bSetIBLDFAOToMatch : 1;                                   // 0x09C0(0x0001) (Edit)
+	unsigned char                                      bRunMeshOptimizer : 1;                                    // 0x09C1(0x0001) (Edit)
+	unsigned char                                      bForceLoadAllLevelsOnDediServer : 1;                      // 0x09C1(0x0001) (Edit)
+	unsigned char                                      UnknownData05[0x6];                                       // 0x09C2(0x0006) MISSED OFFSET
+	TArray<struct FName>                               LevelsToAbsolutelyNotLoadOnDediServer;                    // 0x09C8(0x0010) (Edit, ZeroConstructor)
+	class ADynamicCaptureManager*                      MasterSkyLightOverride;                                   // 0x09D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      bBakeOutAllProceduralAssetsToActors : 1;                  // 0x09E0(0x0001) (Edit)
+	unsigned char                                      bEnableInteriorLightingMode : 1;                          // 0x09E0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bEnableShadowCache : 1;                                   // 0x09E0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bEnableGlobalDistanceField : 1;                           // 0x09E0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bGlobalGravitySet : 1;                                    // 0x09E0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x09E1(0x0003) MISSED OFFSET
+	float                                              DefaultAmbientShadowNear;                                 // 0x09E4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DefaultAmbientShadowFar;                                  // 0x09E8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x4];                                       // 0x09EC(0x0004) MISSED OFFSET
-	class UClass*                                      KillZDamageType;                                          // 0x09F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              WorldGravityZ;                                            // 0x09F8(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              GlobalGravityZ;                                           // 0x09FC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      PhysicsCollisionHandlerClass;                             // 0x0A00(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      DefaultGameMode;                                          // 0x0A08(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FGameModePrefix>                     DefaultMapPrefixes;                                       // 0x0A10(0x0010) (ZeroConstructor, Config)
-	class UClass*                                      GameNetworkManagerClass;                                  // 0x0A20(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                PackedLightAndShadowMapTextureSize;                       // 0x0A28(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bMinimizeBSPSections : 1;                                 // 0x0A2C(0x0001) (Edit)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x0A2D(0x0003) MISSED OFFSET
-	struct FVector                                     DefaultColorScale;                                        // 0x0A30(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              DefaultMaxDistanceFieldOcclusionDistance;                 // 0x0A3C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              GlobalDistanceFieldViewDistance;                          // 0x0A40(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bPrecomputeVisibility : 1;                                // 0x0A44(0x0001) (Edit)
-	unsigned char                                      bPlaceCellsOnlyAlongCameraTracks : 1;                     // 0x0A44(0x0001) (Edit)
+	class FString                                      Title;                                                    // 0x09F0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	float                                              KillZ;                                                    // 0x0A00(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x4];                                       // 0x0A04(0x0004) MISSED OFFSET
+	class UClass*                                      KillZDamageType;                                          // 0x0A08(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              WorldGravityZ;                                            // 0x0A10(0x0004) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	float                                              GlobalGravityZ;                                           // 0x0A14(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      PhysicsCollisionHandlerClass;                             // 0x0A18(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      DefaultGameMode;                                          // 0x0A20(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FGameModePrefix>                     DefaultMapPrefixes;                                       // 0x0A28(0x0010) (ZeroConstructor, Config)
+	class UClass*                                      GameNetworkManagerClass;                                  // 0x0A38(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                PackedLightAndShadowMapTextureSize;                       // 0x0A40(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bMinimizeBSPSections : 1;                                 // 0x0A44(0x0001) (Edit)
 	unsigned char                                      UnknownData09[0x3];                                       // 0x0A45(0x0003) MISSED OFFSET
-	int                                                VisibilityCellSize;                                       // 0x0A48(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EVisibilityAggressiveness>             VisibilityAggressiveness;                                 // 0x0A4C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x3];                                       // 0x0A4D(0x0003) MISSED OFFSET
-	unsigned char                                      bForceNoPrecomputedLighting : 1;                          // 0x0A50(0x0001) (Edit)
-	unsigned char                                      UnknownData11[0x3];                                       // 0x0A51(0x0003) MISSED OFFSET
-	struct FLightmassWorldInfoSettings                 LightmassSettings;                                        // 0x0A54(0x0044) (Edit)
-	TEnumAsByte<ELightingBuildQuality>                 LevelLightingQuality;                                     // 0x0A98(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x7];                                       // 0x0A99(0x0007) MISSED OFFSET
-	struct FReverbSettings                             DefaultReverbSettings;                                    // 0x0AA0(0x0018) (Edit, Config)
-	struct FInteriorSettings                           DefaultAmbientZoneSettings;                               // 0x0AB8(0x0024) (Edit, Config)
-	unsigned char                                      UnknownData13[0x4];                                       // 0x0ADC(0x0004) MISSED OFFSET
-	class USoundMix*                                   DefaultBaseSoundMix;                                      // 0x0AE0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SM4ExposureOffset;                                        // 0x0AE8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData14[0xC];                                       // 0x0AEC(0x000C) MISSED OFFSET
-	struct FReverbSettings                             DefaultWaterReverbSettings;                               // 0x0AF8(0x0018) (Edit, BlueprintVisible)
-	struct FInteriorSettings                           DefaultWaterAmbientZoneSettings;                          // 0x0B10(0x0024) (Edit, BlueprintVisible)
-	struct FProxyMeshSettings                          ProxySettings;                                            // 0x0B34(0x000C) (Edit)
-	unsigned char                                      UnknownData15[0x50];                                      // 0x0B40(0x0050) MISSED OFFSET
-	float                                              WorldToMeters;                                            // 0x0B90(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x4];                                       // 0x0B94(0x0004) MISSED OFFSET
-	TArray<class ULevelStreaming*>                     StreamingLevels;                                          // 0x0B98(0x0010) (ZeroConstructor, Deprecated)
-	float                                              TimeDilation;                                             // 0x0BA8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              MatineeTimeDilation;                                      // 0x0BAC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	class APlayerState*                                Pauser;                                                   // 0x0BB0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bHighPriorityLoading : 1;                                 // 0x0BB8(0x0001) (Net)
-	unsigned char                                      bHighPriorityLoadingLocal : 1;                            // 0x0BB8(0x0001)
-	unsigned char                                      UnknownData17[0x3];                                       // 0x0BB9(0x0003) MISSED OFFSET
-	float                                              DistanceFieldRuntimeQualityMultiplier;                    // 0x0BBC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x58];                                      // 0x0BC0(0x0058) MISSED OFFSET
-	TArray<class UAssetUserData*>                      AssetUserData;                                            // 0x0C18(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData19[0x50];                                      // 0x0C28(0x0050) MISSED OFFSET
+	struct FVector                                     DefaultColorScale;                                        // 0x0A48(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DefaultMaxDistanceFieldOcclusionDistance;                 // 0x0A54(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              GlobalDistanceFieldViewDistance;                          // 0x0A58(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bPrecomputeVisibility : 1;                                // 0x0A5C(0x0001) (Edit)
+	unsigned char                                      bPlaceCellsOnlyAlongCameraTracks : 1;                     // 0x0A5C(0x0001) (Edit)
+	unsigned char                                      UnknownData10[0x3];                                       // 0x0A5D(0x0003) MISSED OFFSET
+	int                                                VisibilityCellSize;                                       // 0x0A60(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EVisibilityAggressiveness>             VisibilityAggressiveness;                                 // 0x0A64(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x3];                                       // 0x0A65(0x0003) MISSED OFFSET
+	unsigned char                                      bForceNoPrecomputedLighting : 1;                          // 0x0A68(0x0001) (Edit)
+	unsigned char                                      UnknownData12[0x3];                                       // 0x0A69(0x0003) MISSED OFFSET
+	struct FLightmassWorldInfoSettings                 LightmassSettings;                                        // 0x0A6C(0x0044) (Edit)
+	TEnumAsByte<ELightingBuildQuality>                 LevelLightingQuality;                                     // 0x0AB0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x7];                                       // 0x0AB1(0x0007) MISSED OFFSET
+	struct FReverbSettings                             DefaultReverbSettings;                                    // 0x0AB8(0x0018) (Edit, Config)
+	struct FInteriorSettings                           DefaultAmbientZoneSettings;                               // 0x0AD0(0x0024) (Edit, Config)
+	unsigned char                                      UnknownData14[0x4];                                       // 0x0AF4(0x0004) MISSED OFFSET
+	class USoundMix*                                   DefaultBaseSoundMix;                                      // 0x0AF8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bDisableSpatialReplication;                               // 0x0B00(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x3];                                       // 0x0B01(0x0003) MISSED OFFSET
+	float                                              SM4ExposureOffset;                                        // 0x0B04(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x8];                                       // 0x0B08(0x0008) MISSED OFFSET
+	struct FReverbSettings                             DefaultWaterReverbSettings;                               // 0x0B10(0x0018) (Edit, BlueprintVisible)
+	struct FInteriorSettings                           DefaultWaterAmbientZoneSettings;                          // 0x0B28(0x0024) (Edit, BlueprintVisible)
+	struct FProxyMeshSettings                          ProxySettings;                                            // 0x0B4C(0x000C) (Edit)
+	unsigned char                                      UnknownData17[0x50];                                      // 0x0B58(0x0050) MISSED OFFSET
+	float                                              WorldToMeters;                                            // 0x0BA8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData18[0x4];                                       // 0x0BAC(0x0004) MISSED OFFSET
+	TArray<class ULevelStreaming*>                     StreamingLevels;                                          // 0x0BB0(0x0010) (ZeroConstructor, Deprecated)
+	float                                              TimeDilation;                                             // 0x0BC0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              MatineeTimeDilation;                                      // 0x0BC4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	class APlayerState*                                Pauser;                                                   // 0x0BC8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bHighPriorityLoading : 1;                                 // 0x0BD0(0x0001) (Net)
+	unsigned char                                      bHighPriorityLoadingLocal : 1;                            // 0x0BD0(0x0001)
+	unsigned char                                      UnknownData19[0x3];                                       // 0x0BD1(0x0003) MISSED OFFSET
+	float                                              DistanceFieldRuntimeQualityMultiplier;                    // 0x0BD4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FName>                               AlwaysVisibleLevelNames;                                  // 0x0BD8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               LevelsToForceInvisibleWhenExcluded;                       // 0x0BE8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	int                                                MinInstancesForConsoleFoliageAutoReduction;               // 0x0BF8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ConsoleFoliageAutoReductionPercent;                       // 0x0BFC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData20[0x58];                                      // 0x0C00(0x0058) MISSED OFFSET
+	TArray<class UAssetUserData*>                      AssetUserData;                                            // 0x0C58(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData21[0x50];                                      // 0x0C68(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2036,11 +2066,12 @@ public:
 	unsigned char                                      bPreventZeroPitchAndRollWhileFalling : 1;                 // 0x0246(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bOrientRotationToMovement : 1;                            // 0x0246(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bAssumeSymmetricalRotation : 1;                           // 0x0246(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bEnableSwimmingOutsideOfWater : 1;                        // 0x0246(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bMovementInProgress : 1;                                  // 0x0246(0x0001)
 	unsigned char                                      bEnableScopedMovementUpdates : 1;                         // 0x0246(0x0001) (Edit)
 	unsigned char                                      bForceMaxAccel : 1;                                       // 0x0246(0x0001)
 	unsigned char                                      bRunPhysicsWithNoController : 1;                          // 0x0246(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bForceNextFloorCheck : 1;                                 // 0x0246(0x0001) (Edit, BlueprintVisible, DisableEditOnTemplate, EditConst)
+	unsigned char                                      bForceNextFloorCheck : 1;                                 // 0x0247(0x0001) (Edit, BlueprintVisible, DisableEditOnTemplate, EditConst)
 	unsigned char                                      bShrinkProxyCapsule : 1;                                  // 0x0247(0x0001)
 	unsigned char                                      bCanWalkOffLedges : 1;                                    // 0x0247(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bCanWalkOffLedgesWhenCrouching : 1;                       // 0x0247(0x0001) (Edit, BlueprintVisible)
@@ -2093,8 +2124,8 @@ public:
 	unsigned char                                      bImpartBaseVelocityZ : 1;                                 // 0x0394(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bImpartBaseAngularVelocity : 1;                           // 0x0394(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bCanSlide : 1;                                            // 0x0394(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bJustTeleported : 1;                                      // 0x0394(0x0001) (Transient)
-	unsigned char                                      bNetworkUpdateReceived : 1;                               // 0x0394(0x0001) (Transient)
+	unsigned char                                      bJustTeleported : 1;                                      // 0x0394(0x0001) (BlueprintVisible, Transient)
+	unsigned char                                      bNetworkUpdateReceived : 1;                               // 0x0394(0x0001) (BlueprintVisible, Transient)
 	unsigned char                                      bNetworkMovementModeChanged : 1;                          // 0x0395(0x0001) (Transient)
 	unsigned char                                      bNotifyApex : 1;                                          // 0x0395(0x0001)
 	unsigned char                                      bCheatFlying : 1;                                         // 0x0395(0x0001) (BlueprintVisible, BlueprintReadOnly)
@@ -2124,22 +2155,24 @@ public:
 	float                                              TamedSwimmingAccelZMultiplier;                            // 0x03C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bUseRotationAcceleration : 1;                             // 0x03C4(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bIgnoreRotationAccelerationWhenSwimming : 1;              // 0x03C4(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData13[0x7];                                       // 0x03C5(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData13 : 1;                                        // 0x03C4(0x0001)
+	unsigned char                                      bForceModifyDesiredRotation : 1;                          // 0x03C4(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData14[0x7];                                       // 0x03C5(0x0007) MISSED OFFSET
 	unsigned char                                      bLastHasRequestedVelocity : 1;                            // 0x03CC(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
 	unsigned char                                      bHasRequestedVelocity : 1;                                // 0x03CC(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
 	unsigned char                                      bRequestedMoveWithMaxSpeed : 1;                           // 0x03CC(0x0001) (Transient)
 	unsigned char                                      bWasAvoidanceUpdated : 1;                                 // 0x03CC(0x0001) (Transient)
-	unsigned char                                      UnknownData14 : 2;                                        // 0x03CC(0x0001)
+	unsigned char                                      UnknownData15 : 2;                                        // 0x03CC(0x0001)
 	unsigned char                                      bPreventExitingWater : 1;                                 // 0x03CC(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bForcePreventExitingWater : 1;                            // 0x03CC(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bPreventEnteringWater : 1;                                // 0x03CD(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
 	unsigned char                                      bPendingLaunchNoLowerVelocity : 1;                        // 0x03CD(0x0001)
 	unsigned char                                      bForceNextTickUpdate : 1;                                 // 0x03CD(0x0001) (Transient)
-	unsigned char                                      UnknownData15[0x2];                                       // 0x03CE(0x0002) MISSED OFFSET
+	unsigned char                                      UnknownData16[0x2];                                       // 0x03CE(0x0002) MISSED OFFSET
 	struct FVector                                     LastForcedNetVelocity;                                    // 0x03D0(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x4];                                       // 0x03DC(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData17[0x4];                                       // 0x03DC(0x0004) MISSED OFFSET
 	double                                             LastStepUpTime;                                           // 0x03E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData17[0x20];                                      // 0x03E8(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData18[0x20];                                      // 0x03E8(0x0020) MISSED OFFSET
 	double                                             LastSwimTime;                                             // 0x0408(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	struct FRotator                                    CurrentRotationSpeed;                                     // 0x0410(0x000C) (ZeroConstructor, Transient, IsPlainOldData)
 	struct FVector                                     RequestedVelocity;                                        // 0x041C(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
@@ -2149,16 +2182,16 @@ public:
 	int                                                AvoidanceUID;                                             // 0x0438(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	float                                              AvoidanceWeight;                                          // 0x043C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     PendingLaunchVelocity;                                    // 0x0440(0x000C) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x4];                                       // 0x044C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData19[0x4];                                       // 0x044C(0x0004) MISSED OFFSET
 	struct FCharacterMovementComponentPreClothTickFunction PreClothComponentTick;                                    // 0x0450(0x0050)
-	unsigned char                                      UnknownData19[0x20];                                      // 0x04A0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData20[0x20];                                      // 0x04A0(0x0020) MISSED OFFSET
 	float                                              MinTimeBetweenTimeStampResets;                            // 0x04C0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData20[0x4];                                       // 0x04C4(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData21[0x4];                                       // 0x04C4(0x0004) MISSED OFFSET
 	TArray<struct FStoredMoveData>                     ClientMovedData;                                          // 0x04C8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData21[0x8];                                       // 0x04D8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData22[0x8];                                       // 0x04D8(0x0008) MISSED OFFSET
 	struct FRootMotionMovementParams                   RootMotionParams;                                         // 0x04E0(0x0040) (Transient)
 	bool                                               bWasSimulatingRootMotion;                                 // 0x0520(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData22[0xF];                                       // 0x0521(0x000F) MISSED OFFSET
+	unsigned char                                      UnknownData23[0xF];                                       // 0x0521(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3003,6 +3036,7 @@ public:
 	void StopAllCameraAnims(bool bImmediate);
 	void RemoveCameraLensEffect(class AEmitterCameraLensEffectBase* Emitter);
 	class UCameraAnimInst* PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot);
+	float GetWorldCameraShakeScale(bool bForceReturnUserSettingScale);
 	class APlayerController* GetOwningPlayerController();
 	struct FRotator GetCameraRotation();
 	struct FVector GetCameraLocation();
@@ -3073,6 +3107,35 @@ public:
 };
 
 
+// Class Engine.PhysicsVolume
+// 0x0020 (0x04C0 - 0x04A0)
+class APhysicsVolume : public AVolume
+{
+public:
+	float                                              TerminalVelocity;                                         // 0x04A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                Priority;                                                 // 0x04A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FluidFriction;                                            // 0x04A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bWaterVolume : 1;                                         // 0x04AC(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bDynamicWaterVolume : 1;                                  // 0x04AC(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bPhysicsOnContact : 1;                                    // 0x04AC(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bPreventWaterSubmersion : 1;                              // 0x04AC(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04AD(0x0003) MISSED OFFSET
+	float                                              WaterDensity;                                             // 0x04B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              WaterDamping;                                             // 0x04B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              PhysicsMinWalkableFloorZ;                                 // 0x04B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x04BC(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.PhysicsVolume");
+		return ptr;
+	}
+
+
+	float GetVolumeZAtPosition2D(const struct FVector2D& Position);
+};
+
+
 // Class Engine.AISystemBase
 // 0x0018 (0x0040 - 0x0028)
 class UAISystemBase : public UObject
@@ -3113,7 +3176,7 @@ public:
 
 
 // Class Engine.NetConnection
-// 0x342B8 (0x34308 - 0x0050)
+// 0x342C8 (0x34318 - 0x0050)
 class UNetConnection : public UPlayer
 {
 public:
@@ -3139,9 +3202,9 @@ public:
 	unsigned char                                      bSendingHandoverToken : 1;                                // 0x00DC(0x0001)
 	unsigned char                                      UnknownData02[0xEB];                                      // 0x00DD(0x00EB) MISSED OFFSET
 	double                                             LastReceiveTime;                                          // 0x01C8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x34008];                                   // 0x01D0(0x34008) MISSED OFFSET
-	class FString                                      ClientGivenIP;                                            // 0x341D8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData04[0x120];                                     // 0x341E8(0x0120) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x34018];                                   // 0x01D0(0x34018) MISSED OFFSET
+	class FString                                      ClientGivenIP;                                            // 0x341E8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData04[0x120];                                     // 0x341F8(0x0120) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3319,50 +3382,52 @@ public:
 
 
 // Class Engine.World
-// 0x0B90 (0x0BB8 - 0x0028)
+// 0x0BF8 (0x0C20 - 0x0028)
 class UWorld : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0028(0x0080) MISSED OFFSET
-	class ULevel*                                      PersistentLevel;                                          // 0x00A8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	class USaveGameSummary*                            SaveGameSummary;                                          // 0x00B0(0x0008) (ZeroConstructor, Transient, Deprecated, IsPlainOldData)
-	class UNetDriver*                                  NetDriver;                                                // 0x00B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class ULineBatchComponent*                         LineBatcher;                                              // 0x00C0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class ULineBatchComponent*                         PersistentLineBatcher;                                    // 0x00C8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class ULineBatchComponent*                         ForegroundLineBatcher;                                    // 0x00D0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class AGameState*                                  GameState;                                                // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AGameNetworkManager*                         NetworkManager;                                           // 0x00E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UPhysicsCollisionHandler*                    PhysicsCollisionHandler;                                  // 0x00E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class UObject*>                             ExtraReferencedObjects;                                   // 0x00F0(0x0010) (ZeroConstructor, Transient)
-	TArray<class ULevelStreaming*>                     StreamingLevels;                                          // 0x0100(0x0010) (ZeroConstructor, Transient)
-	class FString                                      StreamingLevelsPrefix;                                    // 0x0110(0x0010) (ZeroConstructor)
-	class ULevel*                                      CurrentLevelPendingVisibility;                            // 0x0120(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AParticleEventManager*                       MyParticleEventManager;                                   // 0x0128(0x0008) (ZeroConstructor, IsPlainOldData)
-	class APhysicsVolume*                              DefaultPhysicsVolume;                                     // 0x0130(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xB8];                                      // 0x0138(0x00B8) MISSED OFFSET
-	unsigned char                                      bWorldWasLoadedThisTick : 1;                              // 0x01F0(0x0001) (Transient)
-	unsigned char                                      bTriggerPostLoadMap : 1;                                  // 0x01F0(0x0001) (Transient)
-	unsigned char                                      bWorldWasPlayerView : 1;                                  // 0x01F0(0x0001) (Transient)
-	unsigned char                                      bUseSimpleWorld : 1;                                      // 0x01F0(0x0001) (Transient)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x01F1(0x0007) MISSED OFFSET
-	class AGameMode*                                   AuthorityGameMode;                                        // 0x01F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UNavigationSystem*                           NavigationSystem;                                         // 0x0200(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UAISystemBase*                               AISystem;                                                 // 0x0208(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UAvoidanceManager*                           AvoidanceManager;                                         // 0x0210(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class ULevel*>                              Levels;                                                   // 0x0218(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x0228(0x0010) MISSED OFFSET
-	class ULevel*                                      CurrentLevel;                                             // 0x0238(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UGameInstance*                               OwningGameInstance;                                       // 0x0240(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class UMaterialParameterCollectionInstance*> ParameterCollectionInstances;                             // 0x0248(0x0010) (ZeroConstructor, Transient)
-	class UCanvas*                                     CanvasForRenderingToTarget;                               // 0x0258(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UCanvas*                                     CanvasForDrawMaterialToRenderTarget;                      // 0x0260(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	int                                                FrameCounter;                                             // 0x0268(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x88C];                                     // 0x026C(0x088C) MISSED OFFSET
-	class UWorldComposition*                           WorldComposition;                                         // 0x0AF8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0xB4];                                      // 0x0B00(0x00B4) MISSED OFFSET
-	unsigned char                                      UnknownData06 : 5;                                        // 0x0BB4(0x0001)
-	unsigned char                                      bAreConstraintsDirty : 1;                                 // 0x0BB4(0x0001) (Transient)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x0BB5(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xD0];                                      // 0x0028(0x00D0) MISSED OFFSET
+	class ULevel*                                      PersistentLevel;                                          // 0x00F8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	class USaveGameSummary*                            SaveGameSummary;                                          // 0x0100(0x0008) (ZeroConstructor, Transient, Deprecated, IsPlainOldData)
+	class UNetDriver*                                  NetDriver;                                                // 0x0108(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class ULineBatchComponent*                         LineBatcher;                                              // 0x0110(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class ULineBatchComponent*                         PersistentLineBatcher;                                    // 0x0118(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class ULineBatchComponent*                         ForegroundLineBatcher;                                    // 0x0120(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class AGameState*                                  GameState;                                                // 0x0128(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AGameNetworkManager*                         NetworkManager;                                           // 0x0130(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UPhysicsCollisionHandler*                    PhysicsCollisionHandler;                                  // 0x0138(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class UObject*>                             ExtraReferencedObjects;                                   // 0x0140(0x0010) (ZeroConstructor, Transient)
+	TArray<class ULevelStreaming*>                     StreamingLevels;                                          // 0x0150(0x0010) (ZeroConstructor, Transient)
+	class FString                                      StreamingLevelsPrefix;                                    // 0x0160(0x0010) (ZeroConstructor)
+	class ULevel*                                      CurrentLevelPendingVisibility;                            // 0x0170(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AParticleEventManager*                       MyParticleEventManager;                                   // 0x0178(0x0008) (ZeroConstructor, IsPlainOldData)
+	class APhysicsVolume*                              DefaultPhysicsVolume;                                     // 0x0180(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB8];                                      // 0x0188(0x00B8) MISSED OFFSET
+	unsigned char                                      bWorldWasLoadedThisTick : 1;                              // 0x0240(0x0001) (Transient)
+	unsigned char                                      bTriggerPostLoadMap : 1;                                  // 0x0240(0x0001) (Transient)
+	unsigned char                                      bWorldWasPlayerView : 1;                                  // 0x0240(0x0001) (Transient)
+	unsigned char                                      bUseSimpleWorld : 1;                                      // 0x0240(0x0001) (Transient)
+	unsigned char                                      UnknownData02 : 1;                                        // 0x0240(0x0001)
+	unsigned char                                      bForceLevelStreamingUpdateForOneTick : 1;                 // 0x0240(0x0001) (Transient)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0241(0x0007) MISSED OFFSET
+	class AGameMode*                                   AuthorityGameMode;                                        // 0x0248(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UNavigationSystem*                           NavigationSystem;                                         // 0x0250(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UAISystemBase*                               AISystem;                                                 // 0x0258(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UAvoidanceManager*                           AvoidanceManager;                                         // 0x0260(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class ULevel*>                              Levels;                                                   // 0x0268(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData04[0x10];                                      // 0x0278(0x0010) MISSED OFFSET
+	class ULevel*                                      CurrentLevel;                                             // 0x0288(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UGameInstance*                               OwningGameInstance;                                       // 0x0290(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class UMaterialParameterCollectionInstance*> ParameterCollectionInstances;                             // 0x0298(0x0010) (ZeroConstructor, Transient)
+	class UCanvas*                                     CanvasForRenderingToTarget;                               // 0x02A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UCanvas*                                     CanvasForDrawMaterialToRenderTarget;                      // 0x02B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	int                                                FrameCounter;                                             // 0x02B8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x8A4];                                     // 0x02BC(0x08A4) MISSED OFFSET
+	class UWorldComposition*                           WorldComposition;                                         // 0x0B60(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0xB4];                                      // 0x0B68(0x00B4) MISSED OFFSET
+	unsigned char                                      UnknownData07 : 5;                                        // 0x0C1C(0x0001)
+	unsigned char                                      bAreConstraintsDirty : 1;                                 // 0x0C1C(0x0001) (Transient)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x0C1D(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3371,7 +3436,9 @@ public:
 	}
 
 
+	bool IsActuallyUsingTrueSkyActor();
 	class AWorldSettings* GetWorldSettings(bool bCheckStreamingPesistent, bool bChecked);
+	class APlayerController* GetFirstPlayerController();
 };
 
 
@@ -3563,10 +3630,12 @@ public:
 
 
 // Class Engine.NavMeshBoundsVolume
-// 0x0000 (0x04A0 - 0x04A0)
+// 0x0008 (0x04A8 - 0x04A0)
 class ANavMeshBoundsVolume : public AVolume
 {
 public:
+	unsigned char                                      bAutoUpdateBounds : 1;                                    // 0x04A0(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x04A1(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3606,34 +3675,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Engine.PhysicsVolume
-// 0x0020 (0x04C0 - 0x04A0)
-class APhysicsVolume : public AVolume
-{
-public:
-	float                                              TerminalVelocity;                                         // 0x04A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                Priority;                                                 // 0x04A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FluidFriction;                                            // 0x04A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bWaterVolume : 1;                                         // 0x04AC(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bPhysicsOnContact : 1;                                    // 0x04AC(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bPreventWaterSubmersion : 1;                              // 0x04AC(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04AD(0x0003) MISSED OFFSET
-	float                                              WaterDensity;                                             // 0x04B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              WaterDamping;                                             // 0x04B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PhysicsMinWalkableFloorZ;                                 // 0x04B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04BC(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.PhysicsVolume");
-		return ptr;
-	}
-
-
-	float GetVolumeZAtPosition2D(const struct FVector2D& Position);
 };
 
 
@@ -3852,6 +3893,8 @@ public:
 	unsigned char                                      bHideOtherLevels : 1;                                     // 0x0510(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bBlockOnLoading : 1;                                      // 0x0510(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bEnableUpdatesWorldComp : 1;                              // 0x0510(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bDestroyContainedPawnsOnStartup : 1;                      // 0x0510(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bForceLevelsAsDistanceStreamingEnabled : 1;               // 0x0510(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0511(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -4765,7 +4808,8 @@ public:
 	unsigned char                                      bRebuildAtRuntime : 1;                                    // 0x0498(0x0001) (Edit, Config)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0499(0x0003) MISSED OFFSET
 	float                                              ObservedPathsTickInterval;                                // 0x049C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xD8];                                      // 0x04A0(0x00D8) MISSED OFFSET
+	unsigned char                                      bLockNavigation : 1;                                      // 0x04A0(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0xD7];                                      // 0x04A1(0x00D7) MISSED OFFSET
 	TArray<struct FSupportedAreaData>                  SupportedAreas;                                           // 0x0578(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData02[0x58];                                      // 0x0588(0x0058) MISSED OFFSET
 
@@ -5135,6 +5179,8 @@ public:
 	unsigned char                                      bReinitDataOnStreaming : 1;                               // 0x00C8(0x0001) (Edit)
 	unsigned char                                      bIgnoreMasterPoseLODs : 1;                                // 0x00C9(0x0001) (Edit)
 	unsigned char                                      bConsoleDropLOD0 : 1;                                     // 0x00C9(0x0001) (Edit)
+	unsigned char                                      bConsoleDropLOD0onLowMemPlatform : 1;                     // 0x00C9(0x0001) (Edit)
+	unsigned char                                      bPreventLODStreamingOnWindows : 1;                        // 0x00C9(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData02[0x2];                                       // 0x00CA(0x0002) MISSED OFFSET
 	int                                                ConsoleDropLODNewTriangleCount;                           // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x30];                                      // 0x00D0(0x0030) MISSED OFFSET
@@ -5443,7 +5489,7 @@ public:
 	unsigned char                                      UnknownData08[0x4];                                       // 0x077C(0x0004) MISSED OFFSET
 	struct FAnimUpdateRateParameters                   AnimUpdateRateParams;                                     // 0x0780(0x000C) (Transient)
 	unsigned char                                      UnknownData09[0x4];                                       // 0x078C(0x0004) MISSED OFFSET
-	class USkinnedMeshComponent*                       OverrideTickingVisiblityMesh;                             // 0x0790(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class USkinnedMeshComponent*                       OverrideTickingVisiblityMesh;                             // 0x0790(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x8];                                       // 0x0798(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -5727,6 +5773,7 @@ public:
 	void FlushMorphTargets();
 	void DecrementIKLegMute(int LegIndex);
 	void ClearMorphTargets();
+	bool BPValidBoneToUnhide(int BoneIndex);
 	void BPTickPose(float DeltaTime);
 	void BPSetBoneModifiers(TArray<struct FBoneModifierNamed> NamedBoneModifiers);
 	void BPRefreshBoneTransforms();
@@ -5924,6 +5971,21 @@ public:
 };
 
 
+// Class Engine.TrueSkyActorParent
+// 0x0000 (0x0468 - 0x0468)
+class ATrueSkyActorParent : public AActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.TrueSkyActorParent");
+		return ptr;
+	}
+
+};
+
+
 // Class Engine.VectorFieldVolume
 // 0x0008 (0x0470 - 0x0468)
 class AVectorFieldVolume : public AActor
@@ -5995,10 +6057,12 @@ public:
 
 	void SimpleMoveToLocation(class AController* Controller, const struct FVector& Goal);
 	void SimpleMoveToActor(class AController* Controller, class AActor* Goal);
+	struct FVector ProjectPointToNavigationEx(class UObject* WorldContext, const struct FVector& Point, const struct FVector& Extent, class ANavigationData* NavData, class UClass* FilterClass);
 	struct FVector ProjectPointToNavigation(class UObject* WorldContext, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass);
 	void OnNavDataRegistered__DelegateSignature(class ANavigationData* NavData);
 	bool NavigationRaycast(class UObject* WorldContext, const struct FVector& RayStart, const struct FVector& RayEnd, class UClass* FilterClass, class AController* Querier, struct FVector* HitLocation);
 	bool IsNavigationBeingBuilt(class UObject* WorldContext);
+	struct FVector GetRandomReachablePointInMinMaxRadius(class UObject* WorldContext, const struct FVector& Origin, float MinRadius, float MaxRadius, const struct FRandomStream& RandStream, const struct FVector& PathDirection, float DotLimit, class ANavigationData* NavData, class UClass* FilterClass);
 	struct FVector GetRandomPointInRadius(class UObject* WorldContext, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass);
 	struct FVector GetRandomPoint(class UObject* WorldContext, class ANavigationData* NavData, class UClass* FilterClass);
 	TEnumAsByte<ENavigationQueryResult> GetPathLength(class UObject* WorldContext, const struct FVector& PathStart, const struct FVector& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathLength);
@@ -6957,6 +7021,7 @@ class UBrushComponent : public UPrimitiveComponent
 public:
 	class UBodySetup*                                  BrushBodySetup;                                           // 0x0670(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bBodySetupLocked : 1;                                     // 0x0678(0x0001)
+	unsigned char                                      bSolidWhenShownInGame : 1;                                // 0x0678(0x0001) (Transient)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0679(0x0003) MISSED OFFSET
 	struct FVector                                     PrePivot;                                                 // 0x067C(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0688(0x0008) MISSED OFFSET
@@ -6967,6 +7032,8 @@ public:
 		return ptr;
 	}
 
+
+	struct FVector GetBoxBrushXYZ();
 };
 
 
@@ -7213,18 +7280,20 @@ public:
 	unsigned char                                      bIgnoreInstanceForTextureStreaming : 1;                   // 0x0690(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bOverrideLightMapRes : 1;                                 // 0x0690(0x0001) (BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bRenderLandscapeInfo : 1;                                 // 0x0690(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bUseDirectionalShadowDistanceLimit : 1;                   // 0x0690(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bForcedAllowInstancedVertexColor : 1;                     // 0x0690(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0691(0x0003) MISSED OFFSET
 	int                                                LandscapeInfoMask;                                        // 0x0694(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                OverriddenLightMapRes;                                    // 0x0698(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              StreamingDistanceMultiplier;                              // 0x069C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                SubDivisionStepSize;                                      // 0x06A0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseSubDivisions : 1;                                     // 0x06A4(0x0001)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x06A5(0x0003) MISSED OFFSET
-	TArray<struct FGuid>                               IrrelevantLights;                                         // 0x06A8(0x0010) (ZeroConstructor)
-	TArray<struct FStaticMeshComponentLODInfo>         LODData;                                                  // 0x06B8(0x0010) (ZeroConstructor, Transient)
-	struct FLightmassPrimitiveSettings                 LightmassSettings;                                        // 0x06C8(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x06E0(0x0020) MISSED OFFSET
+	float                                              DirectionalShadowDistanceLimit;                           // 0x069C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              StreamingDistanceMultiplier;                              // 0x06A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                SubDivisionStepSize;                                      // 0x06A4(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUseSubDivisions : 1;                                     // 0x06A8(0x0001)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x06A9(0x0007) MISSED OFFSET
+	TArray<struct FGuid>                               IrrelevantLights;                                         // 0x06B0(0x0010) (ZeroConstructor)
+	TArray<struct FStaticMeshComponentLODInfo>         LODData;                                                  // 0x06C0(0x0010) (ZeroConstructor, Transient)
+	struct FLightmassPrimitiveSettings                 LightmassSettings;                                        // 0x06D0(0x0018) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData03[0x18];                                      // 0x06E8(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7259,11 +7328,11 @@ public:
 class UGroundClutterComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0700(0x0008) MISSED OFFSET
-	TArray<struct FClutterData>                        ActiveClutterLayers;                                      // 0x0708(0x0010) (ZeroConstructor)
-	int                                                LayerID;                                                  // 0x0718(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bDrawDebugInfo;                                           // 0x071C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x23];                                      // 0x071D(0x0023) MISSED OFFSET
+	TArray<struct FClutterData>                        ClutterLayers;                                            // 0x0700(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FClutterData>                        ActiveClutterLayers;                                      // 0x0710(0x0010) (ZeroConstructor)
+	int                                                LayerID;                                                  // 0x0720(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bDrawDebugInfo;                                           // 0x0724(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1B];                                      // 0x0725(0x001B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7275,46 +7344,47 @@ public:
 
 
 // Class Engine.InstancedStaticMeshComponent
-// 0x0110 (0x0810 - 0x0700)
+// 0x0120 (0x0820 - 0x0700)
 class UInstancedStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0700(0x0008) MISSED OFFSET
-	int                                                InstancingRandomSeed;                                     // 0x0708(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                InstanceStartCullDistance;                                // 0x070C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                InstanceEndCullDistance;                                  // 0x0710(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0714(0x0004) MISSED OFFSET
-	TArray<int>                                        InstanceReorderTable;                                     // 0x0718(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0728(0x0010) MISSED OFFSET
-	TArray<int>                                        RemovedInstances;                                         // 0x0738(0x0010) (ZeroConstructor)
-	float                                              LargestSingleBounds;                                      // 0x0748(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x074C(0x0004) MISSED OFFSET
-	class UClass*                                      AttachedComponentClass;                                   // 0x0750(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UDestructibleMesh*                           DestroyedMesh;                                            // 0x0758(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      DestroyedMeshActorClass;                                  // 0x0760(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              OverrideWalkableFloorZ;                                   // 0x0768(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              PlayerOverrideWalkableFloorZ;                             // 0x076C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bReplicateThisComponent : 1;                              // 0x0770(0x0001) (Edit, SaveGame)
-	unsigned char                                      bIsFallingTree : 1;                                       // 0x0770(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bIgnoreVisibilityCheck : 1;                               // 0x0770(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0771(0x0007) MISSED OFFSET
-	class USoundBase*                                  DestroyedSound;                                           // 0x0778(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05 : 3;                                        // 0x0780(0x0001)
-	unsigned char                                      bDontScaleAttachedComponent : 1;                          // 0x0780(0x0001)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x0781(0x0003) MISSED OFFSET
-	float                                              ScaleMaxX;                                                // 0x0784(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              ScaleMinX;                                                // 0x0788(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              AttachedComponentScaleFactor;                             // 0x078C(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              MaxScaleForAttachedComponent;                             // 0x0790(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              MinScaleForAttachedComponent;                             // 0x0794(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              MeshUnscaledBounds;                                       // 0x0798(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x4];                                       // 0x079C(0x0004) MISSED OFFSET
-	class UClass*                                      DamageFXActorToSpawn;                                     // 0x07A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInterface*>                  OverrideDestructionMaterials;                             // 0x07A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData08[0x30];                                      // 0x07B8(0x0030) MISSED OFFSET
-	TArray<class UActorComponent*>                     ReferencedAttachedComponentObjects;                       // 0x07E8(0x0010) (ExportObject, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData09[0x8];                                       // 0x07F8(0x0008) MISSED OFFSET
-	TArray<uint32_t>                                   InstancesVisibility;                                      // 0x0800(0x0010) (Net, ZeroConstructor, SaveGame)
+	TArray<struct FInstancedStaticMeshInstanceData>    PerInstanceSMData;                                        // 0x0700(0x0010) (Edit, ZeroConstructor, Transient, DuplicateTransient)
+	int                                                InstancingRandomSeed;                                     // 0x0710(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                InstanceStartCullDistance;                                // 0x0714(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                InstanceEndCullDistance;                                  // 0x0718(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x071C(0x0004) MISSED OFFSET
+	TArray<int>                                        InstanceReorderTable;                                     // 0x0720(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0730(0x0010) MISSED OFFSET
+	TArray<int>                                        RemovedInstances;                                         // 0x0740(0x0010) (ZeroConstructor)
+	float                                              LargestSingleBounds;                                      // 0x0750(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0754(0x0004) MISSED OFFSET
+	class UClass*                                      AttachedComponentClass;                                   // 0x0758(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UDestructibleMesh*                           DestroyedMesh;                                            // 0x0760(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      DestroyedMeshActorClass;                                  // 0x0768(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OverrideWalkableFloorZ;                                   // 0x0770(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              PlayerOverrideWalkableFloorZ;                             // 0x0774(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bReplicateThisComponent : 1;                              // 0x0778(0x0001) (Edit, SaveGame)
+	unsigned char                                      bIsFallingTree : 1;                                       // 0x0778(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bIgnoreVisibilityCheck : 1;                               // 0x0778(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0779(0x0007) MISSED OFFSET
+	class USoundBase*                                  DestroyedSound;                                           // 0x0780(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04 : 3;                                        // 0x0788(0x0001)
+	unsigned char                                      bDontScaleAttachedComponent : 1;                          // 0x0788(0x0001)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x0789(0x0003) MISSED OFFSET
+	float                                              ScaleMaxX;                                                // 0x078C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              ScaleMinX;                                                // 0x0790(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              AttachedComponentScaleFactor;                             // 0x0794(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              MaxScaleForAttachedComponent;                             // 0x0798(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              MinScaleForAttachedComponent;                             // 0x079C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              MeshUnscaledBounds;                                       // 0x07A0(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4];                                       // 0x07A4(0x0004) MISSED OFFSET
+	class UClass*                                      DamageFXActorToSpawn;                                     // 0x07A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UMaterialInterface*>                  OverrideDestructionMaterials;                             // 0x07B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData07[0x30];                                      // 0x07C0(0x0030) MISSED OFFSET
+	TArray<class UActorComponent*>                     ReferencedAttachedComponentObjects;                       // 0x07F0(0x0010) (ExportObject, ZeroConstructor, Transient)
+	unsigned char                                      UnknownData08[0x8];                                       // 0x0800(0x0008) MISSED OFFSET
+	TArray<uint32_t>                                   InstancesVisibility;                                      // 0x0808(0x0010) (Net, ZeroConstructor, SaveGame)
+	unsigned char                                      UnknownData09[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7340,17 +7410,17 @@ public:
 
 
 // Class Engine.HierarchicalInstancedStaticMeshComponent
-// 0x0070 (0x0880 - 0x0810)
+// 0x0080 (0x08A0 - 0x0820)
 class UHierarchicalInstancedStaticMeshComponent : public UInstancedStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0810(0x0020) MISSED OFFSET
-	TArray<int>                                        SortedInstances;                                          // 0x0830(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0840(0x0010) MISSED OFFSET
-	int                                                NumBuiltInstances;                                        // 0x0850(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FBox                                        UnbuiltInstanceBounds;                                    // 0x0854(0x001C) (ZeroConstructor, IsPlainOldData)
-	int                                                OcclusionLayerNumNodes;                                   // 0x0870(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x0874(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0820(0x0018) MISSED OFFSET
+	TArray<int>                                        SortedInstances;                                          // 0x0838(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0848(0x0010) MISSED OFFSET
+	int                                                NumBuiltInstances;                                        // 0x0858(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FBox                                        UnbuiltInstanceBounds;                                    // 0x085C(0x001C) (ZeroConstructor, IsPlainOldData)
+	int                                                OcclusionLayerNumNodes;                                   // 0x0878(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x24];                                      // 0x087C(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7362,10 +7432,11 @@ public:
 
 
 // Class Engine.InteractiveFoliageComponent
-// 0x0000 (0x0700 - 0x0700)
+// 0x0010 (0x0710 - 0x0700)
 class UInteractiveFoliageComponent : public UStaticMeshComponent
 {
 public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0700(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -7381,14 +7452,14 @@ public:
 class USplineMeshComponent : public UStaticMeshComponent
 {
 public:
-	struct FSplineMeshParams                           SplineParams;                                             // 0x0700(0x0058) (Edit)
-	struct FVector                                     SplineUpDir;                                              // 0x0758(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bSmoothInterpRollScale : 1;                               // 0x0764(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0765(0x0003) MISSED OFFSET
-	TEnumAsByte<ESplineMeshAxis>                       ForwardAxis;                                              // 0x0768(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0769(0x0007) MISSED OFFSET
-	class UBodySetup*                                  BodySetup;                                                // 0x0770(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0778(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0700(0x0008) MISSED OFFSET
+	struct FSplineMeshParams                           SplineParams;                                             // 0x0708(0x0058) (Edit)
+	struct FVector                                     SplineUpDir;                                              // 0x0760(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bSmoothInterpRollScale : 1;                               // 0x076C(0x0001) (Edit)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x076D(0x0003) MISSED OFFSET
+	TEnumAsByte<ESplineMeshAxis>                       ForwardAxis;                                              // 0x0770(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0771(0x0007) MISSED OFFSET
+	class UBodySetup*                                  BodySetup;                                                // 0x0778(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -7741,6 +7812,7 @@ public:
 	void SetYScale(float Value);
 	void SetXScale(float Value);
 	void SetWorldSize(float Value);
+	void SetVerticalAlignment(TEnumAsByte<EVerticalTextAligment> Value);
 	void SetTextRenderColor(const struct FColor& Value);
 	void SetTextMaterial(class UMaterialInterface* Material);
 	void SetText(const class FString& Value);
@@ -8000,7 +8072,7 @@ public:
 	bool                                               bAlwaysDrawSplineInEditorViewport;                        // 0x01FA(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x1];                                       // 0x01FB(0x0001) MISSED OFFSET
 	float                                              SplineDirectionArrowSize;                                 // 0x01FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                SplineDrawColor;                                          // 0x0200(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                SplineDrawColor;                                          // 0x0200(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                ReparamStepsPerSegment;                                   // 0x0210(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // 0x0214(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bStationaryEndpoints;                                     // 0x0218(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -8013,8 +8085,12 @@ public:
 	}
 
 
+	void SetWorldSplinePointsAndType(TArray<struct FVector> Points, TEnumAsByte<ESplinePointType> Type);
 	void SetWorldLocationAtSplinePoint(int PointIndex, const struct FVector& InLocation);
+	void SetTangentAtSplinePoint(int PointIndex, const struct FVector& InTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
 	void SetSplineWorldPoints(TArray<struct FVector> Points);
+	void SetSplinePointTypeAllPoints(TEnumAsByte<ESplinePointType> Type);
+	void SetSplinePointType(int PointIndex, TEnumAsByte<ESplinePointType> Type);
 	void SetSplineLocalPoints(TArray<struct FVector> Points);
 	struct FVector GetWorldTangentAtDistanceAlongSpline(float Distance);
 	struct FRotator GetWorldRotationAtTime(float Time, bool bUseConstantVelocity);
@@ -8024,6 +8100,7 @@ public:
 	struct FVector GetWorldLocationAtDistanceAlongSpline(float Distance);
 	struct FVector GetWorldDirectionAtTime(float Time, bool bUseConstantVelocity);
 	struct FVector GetWorldDirectionAtDistanceAlongSpline(float Distance);
+	TEnumAsByte<ESplinePointType> GetSplinePointType(int PointIndex);
 	float GetSplineLength();
 	int GetNumSplinePoints();
 	void GetLocalLocationAndTangentAtSplinePoint(int PointIndex, struct FVector* LocalLocation, struct FVector* LocalTangent);
@@ -9230,7 +9307,9 @@ public:
 	struct FVector VInterpTo_SnapPastDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapPastDist);
 	struct FVector VInterpTo_Constant_SnapWithinDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapWithinDist);
 	struct FVector VInterpTo_Constant_SnapPastDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float SnapPastDist);
+	struct FVector VInterpTo_Constant_ClampDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float ClampDist);
 	struct FVector VInterpTo_Constant(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed);
+	struct FVector VInterpTo_ClampDist(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed, float ClampDist);
 	struct FVector VInterpTo(const struct FVector& current, const struct FVector& Target, float DeltaTime, float InterpSpeed);
 	struct FVector VEase(const struct FVector& A, const struct FVector& B, float Alpha, TEnumAsByte<EEasingFunc> EasingFunc, float BlendExp, int Steps);
 	struct FDateTime UtcNow();
@@ -9391,8 +9470,11 @@ public:
 	bool Less_ByteByte(unsigned char A, unsigned char B);
 	float LerpAngle(float startDegrees, float endDegrees, float Alpha);
 	float Lerp(float A, float B, float Alpha);
+	bool IsRotatorInfiniteOrNaN(const struct FRotator& A);
+	bool IsPointInBox(const struct FVector& Point, const struct FVector& BoxOrigin, const struct FVector& BoxExtent);
 	bool IsMorning(const struct FDateTime& A);
 	bool IsLeapYear(int Year);
+	bool IsInfiniteOrNaN(const struct FVector& A);
 	bool IsAfternoon(const struct FDateTime& A);
 	struct FVector InverseTransformLocation(const struct UObject_FTransform& T, const struct FVector& Location);
 	struct FVector InverseTransformDirection(const struct UObject_FTransform& T, const struct FVector& Direction);
@@ -10014,6 +10096,7 @@ public:
 	struct FWalkableSlopeOverride                      WalkableSlopeOverride;                                    // 0x01F0(0x0008) (Edit)
 	unsigned char                                      bReallyUseTriangleMeshCollisions : 1;                     // 0x01F8(0x0001) (Edit)
 	unsigned char                                      bUseLastLODInsteadOfFirstForCollisionMesh : 1;            // 0x01F8(0x0001) (Edit)
+	unsigned char                                      bUseSecondToLastLODInsteadOfFirstForCollisionMesh : 1;    // 0x01F8(0x0001) (Edit)
 	unsigned char                                      bUsesSkelCustomIgnore : 1;                                // 0x01F8(0x0001) (Edit)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x01F9(0x0003) MISSED OFFSET
 	float                                              BuildScale;                                               // 0x01FC(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
@@ -10302,9 +10385,11 @@ public:
 	void K2_DrawPolygon(class UTexture* RenderTexture, const struct FVector2D& ScreenPosition, const struct FVector2D& Radius, int NumberOfSides, const struct FLinearColor& RenderColor);
 	void K2_DrawMaterial(class UMaterialInterface* RenderMaterial, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoordinatePosition, const struct FVector2D& CoordinateSize, float Rotation, const struct FVector2D& PivotPoint);
 	void K2_DrawLine(const struct FVector2D& ScreenPositionA, const struct FVector2D& ScreenPositionB, float Thickness, const struct FLinearColor& RenderColor);
+	void K2_DrawBoxEx(const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, float Thickness, const struct FLinearColor& RenderColor, TEnumAsByte<EBlendMode> BlendMode);
 	void K2_DrawBox(const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, float Thickness);
 	void K2_DrawBorder(class UTexture* BorderTexture, class UTexture* BackgroundTexture, class UTexture* LeftBorderTexture, class UTexture* RightBorderTexture, class UTexture* TopBorderTexture, class UTexture* BottomBorderTexture, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoordinatePosition, const struct FVector2D& CoordinateSize, const struct FLinearColor& RenderColor, const struct FVector2D& BorderScale, const struct FVector2D& BackgroundScale, float Rotation, const struct FVector2D& PivotPoint, const struct FVector2D& CornerSize);
 	void K2_Deproject(const struct FVector2D& ScreenPosition, struct FVector* WorldOrigin, struct FVector* WorldDirection);
+	bool IsPositionInFrontOfViewport(const struct FVector& Location);
 	float BPDrawTextWrapped(class UFont* InFont, const class FString& InText, float X, float Y, float XWidth, float YWidth, float XScale, float YScale, bool bDoCenterX, bool bDoCenterY, const struct FVector2D& SpacingAdjust);
 	float BPDrawTextCentered(class UFont* InFont, const class FString& InText, float X, float Y, float XScale, float YScale, bool bDoCenterX, bool bDoCenterY);
 };
@@ -11452,15 +11537,15 @@ public:
 
 
 // Class Engine.PlayerInput
-// 0x0300 (0x0328 - 0x0028)
+// 0x0310 (0x0338 - 0x0028)
 class UPlayerInput : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0xA0];                                      // 0x0028(0x00A0) MISSED OFFSET
 	TArray<struct FKeyBind>                            DebugExecBindings;                                        // 0x00C8(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData01[0x30];                                      // 0x00D8(0x0030) MISSED OFFSET
-	TArray<struct FName>                               InvertedAxis;                                             // 0x0108(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData02[0x210];                                     // 0x0118(0x0210) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x40];                                      // 0x00D8(0x0040) MISSED OFFSET
+	TArray<struct FName>                               InvertedAxis;                                             // 0x0118(0x0010) (ZeroConstructor, Config)
+	unsigned char                                      UnknownData02[0x210];                                     // 0x0128(0x0210) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -12714,6 +12799,9 @@ public:
 	unsigned char                                      bIsCriticalLoad : 1;                                      // 0x00B0(0x0001) (BlueprintVisible)
 	unsigned char                                      UnknownData02 : 1;                                        // 0x00B1(0x0001)
 	unsigned char                                      bDrawOnLevelStatusMap : 1;                                // 0x00B1(0x0001) (Edit)
+	unsigned char                                      bLevelStreamingVisibilityOnly : 1;                        // 0x00B1(0x0001) (BlueprintVisible)
+	unsigned char                                      bLevelStreamingDesiredVisibility : 1;                     // 0x00B1(0x0001) (BlueprintVisible)
+	unsigned char                                      bForceStreamingStateChange : 1;                           // 0x00B1(0x0001) (BlueprintVisible)
 	unsigned char                                      UnknownData03[0x2];                                       // 0x00B2(0x0002) MISSED OFFSET
 	struct FColor                                      DrawColor;                                                // 0x00B4(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	struct FLinearColor                                LevelColor;                                               // 0x00B8(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
@@ -12726,9 +12814,10 @@ public:
 	struct FScriptMulticastDelegate                    OnLevelUnloaded;                                          // 0x0108(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnLevelShown;                                             // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnLevelHidden;                                            // 0x0128(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class ULevel*                                      LoadedLevel;                                              // 0x0138(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class ULevel*                                      PendingUnloadLevel;                                       // 0x0140(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x8];                                       // 0x0148(0x0008) MISSED OFFSET
+	bool                                               bEnableTileStreaming;                                     // 0x0138(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x7];                                       // 0x0139(0x0007) MISSED OFFSET
+	class ULevel*                                      LoadedLevel;                                              // 0x0140(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class ULevel*                                      PendingUnloadLevel;                                       // 0x0148(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -12739,9 +12828,12 @@ public:
 
 	void LevelStreamingVisibilityStatus__DelegateSignature();
 	void LevelStreamingLoadedStatus__DelegateSignature();
+	bool IsTileStreamingEnabled();
 	bool IsLevelVisible();
 	bool IsLevelLoaded();
 	class ULevelStreaming* CreateInstance(const class FString& UniqueInstanceName);
+	void BPSetLevelVisibility(bool bVisible, bool bIsLowMemory);
+	class FString BPGetPackageName();
 };
 
 
@@ -12776,10 +12868,13 @@ public:
 
 
 // Class Engine.LevelStreamingKismet
-// 0x0000 (0x0150 - 0x0150)
+// 0x0010 (0x0160 - 0x0150)
 class ULevelStreamingKismet : public ULevelStreaming
 {
 public:
+	unsigned char                                      bInitiallyLoaded : 1;                                     // 0x0150(0x0001) (Edit)
+	unsigned char                                      bInitiallyVisible : 1;                                    // 0x0150(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x0151(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -15362,6 +15457,7 @@ public:
 	unsigned char                                      bUsedWithClothing : 1;                                    // 0x090B(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bUsedWithUI : 1;                                          // 0x090B(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bAutomaticallySetUsageInEditor : 1;                       // 0x090B(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bOptOutOfMaterialUsedWithFlagOptimizations : 1;           // 0x090B(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bFullyRough : 1;                                          // 0x090B(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bAllowAdditionalSkyLightMultiplier : 1;                   // 0x090B(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      bUseLightmapDirectionality : 1;                           // 0x090B(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
@@ -15425,8 +15521,9 @@ public:
 	bool                                               bOverrideBaseProperties;                                  // 0x00C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x00C9(0x0003) MISSED OFFSET
 	struct FMaterialInstanceBasePropertyOverrides      BasePropertyOverrides;                                    // 0x00CC(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly)
-	bool                                               bOverrideUsedWithFlags;                                   // 0x00DC(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x00DD(0x0003) MISSED OFFSET
+	bool                                               bOptOutOfMaterialUsedWithFlagOptimizations;               // 0x00DC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bOverrideUsedWithFlags;                                   // 0x00DD(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x2];                                       // 0x00DE(0x0002) MISSED OFFSET
 	struct FMaterialInstanceUsedWithOverride           UsedWithOverrides;                                        // 0x00E0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly)
 	unsigned char                                      UnknownData05[0x124];                                     // 0x00E4(0x0124) MISSED OFFSET
 
@@ -18600,11 +18697,11 @@ public:
 
 
 // Class Engine.ChildConnection
-// 0x0008 (0x34310 - 0x34308)
+// 0x0008 (0x34320 - 0x34318)
 class UChildConnection : public UNetConnection
 {
 public:
-	class UNetConnection*                              Parent;                                                   // 0x34308(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UNetConnection*                              Parent;                                                   // 0x34318(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -19000,7 +19097,7 @@ public:
 
 
 // Class Engine.SoundCue
-// 0x0078 (0x00D0 - 0x0058)
+// 0x0088 (0x00E0 - 0x0058)
 class USoundCue : public USoundBase
 {
 public:
@@ -19010,10 +19107,12 @@ public:
 	float                                              VolumeMultiplier;                                         // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              PitchMultiplier;                                          // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FAttenuationSettings                        AttenuationOverrides;                                     // 0x0070(0x0034) (Edit)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
+	unsigned char                                      SubtitleColorIndex;                                       // 0x00A4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00A5(0x0003) MISSED OFFSET
 	TArray<struct FSubtitleCue>                        Subtitles;                                                // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FStringAssetReference                       AnimTexture;                                              // 0x00B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	TArray<struct FLocalizedSpokenText>                LocalizedSpokenTexts;                                     // 0x00B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FStringAssetReference                       AnimTexture;                                              // 0x00C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19042,13 +19141,13 @@ public:
 
 
 // Class Engine.SoundWave
-// 0x0198 (0x01F0 - 0x0058)
+// 0x01A8 (0x0200 - 0x0058)
 class USoundWave : public USoundBase
 {
 public:
 	int                                                CompressionQuality;                                       // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bLooping : 1;                                             // 0x005C(0x0001) (Edit)
-	unsigned char                                      bStreamingReserved : 1;                                   // 0x005C(0x0001) (Edit, EditConst)
+	unsigned char                                      bStreamingReserved : 1;                                   // 0x005C(0x0001) (Edit)
 	unsigned char                                      bReallyUseStreamingReserved : 1;                          // 0x005C(0x0001) (Edit)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
 	int                                                StreamingPriority;                                        // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -19063,15 +19162,17 @@ public:
 	TEnumAsByte<ESoundGroup>                           SoundGroup;                                               // 0x0068(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 	class FString                                      SpokenText;                                               // 0x0070(0x0010) (Edit, ZeroConstructor)
-	float                                              Volume;                                                   // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Pitch;                                                    // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                NumChannels;                                              // 0x0088(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                SampleRate;                                               // 0x008C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                RawPCMDataSize;                                           // 0x0090(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
-	TArray<struct FSubtitleCue>                        Subtitles;                                                // 0x0098(0x0010) (Edit, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FLocalizedSubtitle>                  LocalizedSubtitles;                                       // 0x00A8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData06[0x138];                                     // 0x00B8(0x0138) MISSED OFFSET
+	TArray<struct FLocalizedSpokenText>                LocalizedSpokenTexts;                                     // 0x0080(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      SubtitleColorIndex;                                       // 0x0090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x0091(0x0003) MISSED OFFSET
+	float                                              Volume;                                                   // 0x0094(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Pitch;                                                    // 0x0098(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                NumChannels;                                              // 0x009C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                SampleRate;                                               // 0x00A0(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                RawPCMDataSize;                                           // 0x00A4(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FSubtitleCue>                        Subtitles;                                                // 0x00A8(0x0010) (ZeroConstructor, Transient)
+	TArray<struct FLocalizedSubtitle>                  LocalizedSubtitles;                                       // 0x00B8(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData06[0x138];                                     // 0x00C8(0x0138) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19083,11 +19184,11 @@ public:
 
 
 // Class Engine.SoundWaveStreaming
-// 0x0018 (0x0208 - 0x01F0)
+// 0x0018 (0x0218 - 0x0200)
 class USoundWaveStreaming : public USoundWave
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x01F0(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0200(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -19673,6 +19774,7 @@ public:
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 	TArray<class UMaterialInterface*>                  Materials;                                                // 0x0050(0x0010) (ZeroConstructor)
 	unsigned char                                      bIgnoreTriReductions : 1;                                 // 0x0060(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bPreventLODStreamingOnWindows : 1;                        // 0x0060(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0061(0x0003) MISSED OFFSET
 	int                                                LightMapResolution;                                       // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                LightMapCoordinateIndex;                                  // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -19695,6 +19797,7 @@ public:
 	unsigned char                                      bCastFarShadow : 1;                                       // 0x0080(0x0001)
 	unsigned char                                      bAllowLODStreaming : 1;                                   // 0x0080(0x0001) (Edit)
 	unsigned char                                      bConsoleDropLOD0 : 1;                                     // 0x0080(0x0001) (Edit)
+	unsigned char                                      bConsoleDropLOD0onLowMemPlatform : 1;                     // 0x0080(0x0001) (Edit)
 	unsigned char                                      UnknownData06[0x3];                                       // 0x0081(0x0003) MISSED OFFSET
 	float                                              DistanceFieldRuntimeQuality;                              // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x30];                                      // 0x0088(0x0030) MISSED OFFSET

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.GetContainedDinoClass
-// (Native, Static, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // class UClass*                  ResolvedClass                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           HasData                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -26,7 +26,6 @@ void UPrimalItem_WeaponEmptyCryopod_C::STATIC_GetContainedDinoClass(class UClass
 	UPrimalItem_WeaponEmptyCryopod_C_GetContainedDinoClass_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,24 +41,29 @@ void UPrimalItem_WeaponEmptyCryopod_C::STATIC_GetContainedDinoClass(class UClass
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPPreventUpload
-// ()
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UPrimalItem_WeaponEmptyCryopod_C::BPPreventUpload()
+bool UPrimalItem_WeaponEmptyCryopod_C::STATIC_BPPreventUpload()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPPreventUpload");
 
 	UPrimalItem_WeaponEmptyCryopod_C_BPPreventUpload_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.Get Stat Value for Display
-// (Exec, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (Exec, Native, NetResponse, NetMulticast, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          MaxValue                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EPrimalCharacterStatusValue> Stat                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -76,6 +80,7 @@ void UPrimalItem_WeaponEmptyCryopod_C::Get_Stat_Value_for_Display(float MaxValue
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +92,7 @@ void UPrimalItem_WeaponEmptyCryopod_C::Get_Stat_Value_for_Display(float MaxValue
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.GetStatDisplayName
-// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EPrimalCharacterStatusValue> Stat                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   DisplayName                    (Parm, OutParm)
@@ -100,7 +105,6 @@ void UPrimalItem_WeaponEmptyCryopod_C::GetStatDisplayName(TEnumAsByte<EPrimalCha
 	params.Stat = Stat;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,7 +116,7 @@ void UPrimalItem_WeaponEmptyCryopod_C::GetStatDisplayName(TEnumAsByte<EPrimalCha
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPGetItemDescription
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -129,6 +133,7 @@ class FString UPrimalItem_WeaponEmptyCryopod_C::BPGetItemDescription(class FStri
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,16 +144,15 @@ class FString UPrimalItem_WeaponEmptyCryopod_C::BPGetItemDescription(class FStri
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPInitIconMaterial
-// (NetReliable, Exec, Native, Event, NetResponse, Static, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
 
-void UPrimalItem_WeaponEmptyCryopod_C::STATIC_BPInitIconMaterial()
+void UPrimalItem_WeaponEmptyCryopod_C::BPInitIconMaterial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPInitIconMaterial");
 
 	UPrimalItem_WeaponEmptyCryopod_C_BPInitIconMaterial_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,7 +182,7 @@ class UMaterialInterface* UPrimalItem_WeaponEmptyCryopod_C::BPGetCustomIconMater
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPTributeItemUploaded
-// (Native, NetMulticast, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Event, NetResponse, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // class UObject**                ContextObject                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -190,7 +194,6 @@ void UPrimalItem_WeaponEmptyCryopod_C::BPTributeItemUploaded(class UObject** Con
 	params.ContextObject = ContextObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,7 +202,7 @@ void UPrimalItem_WeaponEmptyCryopod_C::BPTributeItemUploaded(class UObject** Con
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPTributeItemDownloaded
-// (Exec, Native, NetMulticast, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // class UObject**                ContextObject                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -211,7 +214,6 @@ void UPrimalItem_WeaponEmptyCryopod_C::BPTributeItemDownloaded(class UObject** C
 	params.ContextObject = ContextObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -321,16 +323,15 @@ class FString UPrimalItem_WeaponEmptyCryopod_C::BPGetCustomInventoryWidgetText()
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPItemBroken
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Event, Static, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
 
-void UPrimalItem_WeaponEmptyCryopod_C::BPItemBroken()
+void UPrimalItem_WeaponEmptyCryopod_C::STATIC_BPItemBroken()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPItemBroken");
 
 	UPrimalItem_WeaponEmptyCryopod_C_BPItemBroken_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,7 +340,7 @@ void UPrimalItem_WeaponEmptyCryopod_C::BPItemBroken()
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.TryDeploy
-// (NetReliable, NetRequest, Native, Static, NetMulticast, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Static, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -376,7 +377,7 @@ void UPrimalItem_WeaponEmptyCryopod_C::STATIC_TryDeploy(const struct FVector& Lo
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.CanFit
-// (NetReliable, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (Exec, Native, Event, NetResponse, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VerticalOffset                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -404,6 +405,7 @@ void UPrimalItem_WeaponEmptyCryopod_C::CanFit(const struct FVector& Location, fl
 	params.IgnoreActor = IgnoreActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -453,7 +455,7 @@ void UPrimalItem_WeaponEmptyCryopod_C::CanDeploy(class UClass* Class, const stru
 
 
 // Function PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C.BPGetItemName
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // class FString*                 ItemNameIn                     (Parm, ZeroConstructor)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -468,6 +470,7 @@ class FString UPrimalItem_WeaponEmptyCryopod_C::STATIC_BPGetItemName(class FStri
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

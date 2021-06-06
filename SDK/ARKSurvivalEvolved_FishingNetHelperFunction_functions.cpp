@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,15 +56,15 @@ void UFishingNetHelperFunction_C::Cancel_Cast(class UObject* Projectile_Owner)
 // ()
 // Parameters:
 // class UObject*                 Projectile_Owner               (Parm, ZeroConstructor, IsPlainOldData)
-// class APrimalDinoCharacter*    Fish                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void UFishingNetHelperFunction_C::Caught_Fish(class UObject* Projectile_Owner, class APrimalDinoCharacter* Fish)
+void UFishingNetHelperFunction_C::Caught_Fish(class UObject* Projectile_Owner, class APrimalDinoCharacter* fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FishingNetHelperFunction.FishingNetHelperFunction_C.Caught Fish");
 
 	UFishingNetHelperFunction_C_Caught_Fish_Params params;
 	params.Projectile_Owner = Projectile_Owner;
-	params.Fish = Fish;
+	params.fish = fish;
 
 	auto flags = fn->FunctionFlags;
 
@@ -119,15 +119,15 @@ void UFishingNetHelperFunction_C::reel(class UObject* Fisher)
 // Function FishingNetHelperFunction.FishingNetHelperFunction_C.Update Rope
 // ()
 // Parameters:
-// class AShooterProjectile*      Net_Projectile                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterProjectile*      net_projectile                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Rope_Endpoint_Location         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UFishingNetHelperFunction_C::Update_Rope(class AShooterProjectile* Net_Projectile, const struct FVector& Rope_Endpoint_Location)
+void UFishingNetHelperFunction_C::Update_Rope(class AShooterProjectile* net_projectile, const struct FVector& Rope_Endpoint_Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FishingNetHelperFunction.FishingNetHelperFunction_C.Update Rope");
 
 	UFishingNetHelperFunction_C_Update_Rope_Params params;
-	params.Net_Projectile = Net_Projectile;
+	params.net_projectile = net_projectile;
 	params.Rope_Endpoint_Location = Rope_Endpoint_Location;
 
 	auto flags = fn->FunctionFlags;

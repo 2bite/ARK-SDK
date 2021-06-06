@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LargeWall_Stone.BP_LargeWall_Stone_C
-// 0x0000 (0x0AF8 - 0x0AF8)
+// 0x0000 (0x0B20 - 0x0B20)
 class ABP_LargeWall_Stone_C : public ABase_Wall_Large_C
 {
 public:

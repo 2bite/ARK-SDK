@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Flag_SM_Single.Flag_SM_Single_C
-// 0x0000 (0x0AC8 - 0x0AC8)
+// 0x0000 (0x0AF0 - 0x0AF0)
 class AFlag_SM_Single_C : public AFlag_SM_C
 {
 public:

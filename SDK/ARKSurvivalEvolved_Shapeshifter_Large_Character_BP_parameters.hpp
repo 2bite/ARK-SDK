@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ struct AShapeshifter_Large_Character_BP_C_OnNonInstanceJumpOffWallInput_Params
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetLatchJumpSpeedThresholdForRotate
 struct AShapeshifter_Large_Character_BP_C_GetLatchJumpSpeedThresholdForRotate_Params
 {
-	float                                              Res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPHandleControllerInitiatedAttack
@@ -674,33 +674,33 @@ struct AShapeshifter_Large_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_188
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_188_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_362
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_362_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_187
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_187_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_361
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_361_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_186
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_186_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_360
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_360_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_359
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_359_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_358
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_358_Params
 {
 };
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_56
-struct AShapeshifter_Large_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_56_Params
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_76
+struct AShapeshifter_Large_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_76_Params
 {
 };
 

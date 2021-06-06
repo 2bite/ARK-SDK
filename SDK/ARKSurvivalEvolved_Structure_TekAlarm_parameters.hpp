@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,6 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
-
-// Function Structure_TekAlarm.Structure_TekAlarm_C.InitSavedTribeLoggingSettings
-struct AStructure_TekAlarm_C_InitSavedTribeLoggingSettings_Params
-{
-};
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.GetNextRotation
 struct AStructure_TekAlarm_C_GetNextRotation_Params
@@ -227,8 +222,8 @@ struct AStructure_TekAlarm_C_GetMultiUseTitleWithDelay_Params
 struct AStructure_TekAlarm_C_GetPINDataByPIN_Params
 {
 	int                                                PIN;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTekAlarmPINData                            Res;                                                      // (Parm, OutParm)
-	int                                                retIndex;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FTekAlarmPINData                            res;                                                      // (Parm, OutParm)
+	int                                                RetIndex;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_TekAlarm.Structure_TekAlarm_C.CalcuateDelay

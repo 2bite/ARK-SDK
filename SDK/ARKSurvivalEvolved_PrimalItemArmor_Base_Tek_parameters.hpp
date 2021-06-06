@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,39 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.IsInfiniteAmmo
+struct UPrimalItemArmor_Base_Tek_C_IsInfiniteAmmo_Params
+{
+	bool                                               IsInfinite;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.ApplyingSkinOntoItem
+struct UPrimalItemArmor_Base_Tek_C_ApplyingSkinOntoItem_Params
+{
+	class UPrimalItem**                                ToOwnerItem;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bIsFirstTime;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.RemovedSkinFromItem
+struct UPrimalItemArmor_Base_Tek_C_RemovedSkinFromItem_Params
+{
+	class UPrimalItem**                                FromOwnerItem;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bIsFirstTime;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetInternalMapRestrictedTekArmorBuff
+struct UPrimalItemArmor_Base_Tek_C_GetInternalMapRestrictedTekArmorBuff_Params
+{
+	class AShooterCharacter*                           OwningPlayer;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      TekArmorBuff;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetResolvedTekArmorBuff
+struct UPrimalItemArmor_Base_Tek_C_GetResolvedTekArmorBuff_Params
+{
+	class UClass*                                      ResolvedTekArmorBuff;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.FillEmptyArmorElementWhenAvailable
 struct UPrimalItemArmor_Base_Tek_C_FillEmptyArmorElementWhenAvailable_Params
@@ -70,6 +103,16 @@ struct UPrimalItemArmor_Base_Tek_C_SetElementToMax_Params
 struct UPrimalItemArmor_Base_Tek_C_IncreaseElement_Params
 {
 	float                                              Percent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.TekArmorSkinApplied
+struct UPrimalItemArmor_Base_Tek_C_TekArmorSkinApplied_Params
+{
+};
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.TekArmorSkinRemoved
+struct UPrimalItemArmor_Base_Tek_C_TekArmorSkinRemoved_Params
+{
 };
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.ExecuteUbergraph_PrimalItemArmor_Base_Tek

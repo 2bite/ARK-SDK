@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function StructureTurretPlant.StructureTurretPlant_C.BPOnDemolish
+struct AStructureTurretPlant_C_BPOnDemolish_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor**                                     DamageCauser;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function StructureTurretPlant.StructureTurretPlant_C.BPPostLoadedFromSaveGame
 struct AStructureTurretPlant_C_BPPostLoadedFromSaveGame_Params

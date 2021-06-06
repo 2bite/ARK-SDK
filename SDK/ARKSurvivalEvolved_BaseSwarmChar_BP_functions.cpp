@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,32 +12,88 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.GetFlockTickingInterval
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ReceiveTick
 // ()
 // Parameters:
-// float                          OutInterval                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABaseSwarmChar_BP_C::GetFlockTickingInterval(float* OutInterval)
+void ABaseSwarmChar_BP_C::ReceiveTick(float* DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.GetFlockTickingInterval");
+	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ReceiveTick");
 
-	ABaseSwarmChar_BP_C_GetFlockTickingInterval_Params params;
+	ABaseSwarmChar_BP_C_ReceiveTick_Params params;
+	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
 
-	if (OutInterval != nullptr)
-		*OutInterval = params.OutInterval;
+
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ThrottledTick
+// ()
+
+void ABaseSwarmChar_BP_C::ThrottledTick()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ThrottledTick");
+
+	ABaseSwarmChar_BP_C_ThrottledTick_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Set Material Vector Parameter
+// ()
+// Parameters:
+// class UStaticMeshComponent*    SM                             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   Parameter                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABaseSwarmChar_BP_C::Set_Material_Vector_Parameter(class UStaticMeshComponent* SM, const struct FName& Parameter, const struct FVector& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Set Material Vector Parameter");
+
+	ABaseSwarmChar_BP_C_Set_Material_Vector_Parameter_Params params;
+	params.SM = SM;
+	params.Parameter = Parameter;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SendTargetedMessage
+// ()
+
+void ABaseSwarmChar_BP_C::SendTargetedMessage()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SendTargetedMessage");
+
+	ABaseSwarmChar_BP_C_SendTargetedMessage_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SwarmLifetimeEnded
-// (Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
-void ABaseSwarmChar_BP_C::STATIC_SwarmLifetimeEnded()
+void ABaseSwarmChar_BP_C::SwarmLifetimeEnded()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SwarmLifetimeEnded");
 
@@ -124,7 +180,7 @@ void ABaseSwarmChar_BP_C::SpottedTarget()
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CreateBoidSM
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Exec, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -171,12 +227,12 @@ void ABaseSwarmChar_BP_C::UpdateDeadBoids(float DeltaSeconds)
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BPSetCharacterMeshesMaterialScalarParamValue
-// (NetReliable, Exec, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, Event, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FName*                  ParamName                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABaseSwarmChar_BP_C::BPSetCharacterMeshesMaterialScalarParamValue(struct FName* ParamName, float* Value)
+void ABaseSwarmChar_BP_C::STATIC_BPSetCharacterMeshesMaterialScalarParamValue(struct FName* ParamName, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BPSetCharacterMeshesMaterialScalarParamValue");
 
@@ -185,6 +241,7 @@ void ABaseSwarmChar_BP_C::BPSetCharacterMeshesMaterialScalarParamValue(struct FN
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -280,16 +337,16 @@ void ABaseSwarmChar_BP_C::Attack_Target(bool* StopAttacking_)
 }
 
 
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Get Current Attack Duration
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.GetDestroyNonCharacterTargetDuration
 // ()
 // Parameters:
 // float                          Duration                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABaseSwarmChar_BP_C::Get_Current_Attack_Duration(float* Duration)
+void ABaseSwarmChar_BP_C::GetDestroyNonCharacterTargetDuration(float* Duration)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Get Current Attack Duration");
+	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.GetDestroyNonCharacterTargetDuration");
 
-	ABaseSwarmChar_BP_C_Get_Current_Attack_Duration_Params params;
+	ABaseSwarmChar_BP_C_GetDestroyNonCharacterTargetDuration_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -320,7 +377,7 @@ void ABaseSwarmChar_BP_C::DestroyTarget()
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SetFlockBehavior
-// (Native, Event, NetResponse, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Exec, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
 void ABaseSwarmChar_BP_C::SetFlockBehavior()
 {
@@ -329,7 +386,6 @@ void ABaseSwarmChar_BP_C::SetFlockBehavior()
 	ABaseSwarmChar_BP_C_SetFlockBehavior_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -355,7 +411,7 @@ void ABaseSwarmChar_BP_C::OnRep_FlockShape()
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Get Damage Type Adjuster
-// (NetReliable, Exec, Native, Event, NetResponse, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Native, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class UClass*                  Type                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Multiplier                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -381,12 +437,15 @@ void ABaseSwarmChar_BP_C::Get_Damage_Type_Adjuster(class UClass* Type, float* Mu
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Kill Boids Based On Health
 // ()
+// Parameters:
+// float                          DamageIn                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABaseSwarmChar_BP_C::Kill_Boids_Based_On_Health()
+void ABaseSwarmChar_BP_C::Kill_Boids_Based_On_Health(float DamageIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Kill Boids Based On Health");
 
 	ABaseSwarmChar_BP_C_Kill_Boids_Based_On_Health_Params params;
+	params.DamageIn = DamageIn;
 
 	auto flags = fn->FunctionFlags;
 
@@ -438,9 +497,9 @@ void ABaseSwarmChar_BP_C::Can_Damage_Victim_in_Radius(class AActor* Victim, bool
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CreateFlock
-// (NetReliable, NetRequest, Event, Static, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 
-void ABaseSwarmChar_BP_C::STATIC_CreateFlock()
+void ABaseSwarmChar_BP_C::CreateFlock()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CreateFlock");
 
@@ -455,11 +514,11 @@ void ABaseSwarmChar_BP_C::STATIC_CreateFlock()
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.TickFlock
-// (NetReliable, Exec, Native, Event, Static, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABaseSwarmChar_BP_C::STATIC_TickFlock(float DeltaTime)
+void ABaseSwarmChar_BP_C::TickFlock(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.TickFlock");
 
@@ -537,11 +596,12 @@ float ABaseSwarmChar_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamageE
 
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Damage Victim in Radius
-// (NetReliable, NetRequest, Event, NetResponse, Static, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// ()
 // Parameters:
 // class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bDidDoDamage                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABaseSwarmChar_BP_C::STATIC_Damage_Victim_in_Radius(class AActor* Victim)
+void ABaseSwarmChar_BP_C::Damage_Victim_in_Radius(class AActor* Victim, bool* bDidDoDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Damage Victim in Radius");
 
@@ -553,6 +613,9 @@ void ABaseSwarmChar_BP_C::STATIC_Damage_Victim_in_Radius(class AActor* Victim)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	if (bDidDoDamage != nullptr)
+		*bDidDoDamage = params.bDidDoDamage;
 }
 
 
@@ -627,45 +690,8 @@ void ABaseSwarmChar_BP_C::BPOnLethalDamage(float* KillingDamage, class AControll
 }
 
 
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BPDinoPostBeginPlay
-// ()
-
-void ABaseSwarmChar_BP_C::BPDinoPostBeginPlay()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BPDinoPostBeginPlay");
-
-	ABaseSwarmChar_BP_C_BPDinoPostBeginPlay_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ReceiveTick
-// ()
-// Parameters:
-// float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABaseSwarmChar_BP_C::ReceiveTick(float* DeltaSeconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ReceiveTick");
-
-	ABaseSwarmChar_BP_C_ReceiveTick_Params params;
-	params.DeltaSeconds = DeltaSeconds;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -674,7 +700,7 @@ void ABaseSwarmChar_BP_C::ReceiveTick(float* DeltaSeconds)
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABaseSwarmChar_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ABaseSwarmChar_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BlueprintAdjustOutputDamage");
 
@@ -732,23 +758,6 @@ void ABaseSwarmChar_BP_C::ReceiveBeginPlay()
 }
 
 
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CleanupBoids
-// ()
-
-void ABaseSwarmChar_BP_C::CleanupBoids()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CleanupBoids");
-
-	ABaseSwarmChar_BP_C_CleanupBoids_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.MultiOnLethalDamage
 // ()
 
@@ -757,26 +766,6 @@ void ABaseSwarmChar_BP_C::MultiOnLethalDamage()
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.MultiOnLethalDamage");
 
 	ABaseSwarmChar_BP_C_MultiOnLethalDamage_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.OnDied_Event
-// ()
-// Parameters:
-// class APrimalCharacter*        DiedCharacter                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABaseSwarmChar_BP_C::OnDied_Event(class APrimalCharacter* DiedCharacter)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.OnDied_Event");
-
-	ABaseSwarmChar_BP_C_OnDied_Event_Params params;
-	params.DiedCharacter = DiedCharacter;
 
 	auto flags = fn->FunctionFlags;
 
@@ -879,6 +868,26 @@ void ABaseSwarmChar_BP_C::Multicast_FinishedAttackingTarget()
 	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Multicast_FinishedAttackingTarget");
 
 	ABaseSwarmChar_BP_C_Multicast_FinishedAttackingTarget_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Multi_KillBoidsBasedOnHealth
+// ()
+// Parameters:
+// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABaseSwarmChar_BP_C::Multi_KillBoidsBasedOnHealth(float Damage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Multi_KillBoidsBasedOnHealth");
+
+	ABaseSwarmChar_BP_C_Multi_KillBoidsBasedOnHealth_Params params;
+	params.Damage = Damage;
 
 	auto flags = fn->FunctionFlags;
 

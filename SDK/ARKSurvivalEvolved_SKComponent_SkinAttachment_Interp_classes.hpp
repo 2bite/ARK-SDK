@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,7 +72,7 @@ public:
 	float                                              CurrentEyeMouthOpacity;                                   // 0x0D78(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              EyeMouthOpacityInterpSpeed;                               // 0x0D7C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              InitialPointLightIntensity;                               // 0x0D80(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxLightIntensity;                                        // 0x0D84(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              maxLightIntensity;                                        // 0x0D84(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              minLightIntensity;                                        // 0x0D88(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x4];                                       // 0x0D8C(0x0004) MISSED OFFSET
 	double                                             LastTimePlayedSound;                                      // 0x0D90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -161,7 +161,7 @@ public:
 	float                                              K2Node_Event_DeltaTime;                                   // 0x0F6C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_K2_IsTimerActive_ReturnValue;                    // 0x0F70(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData19[0x3];                                       // 0x0F71(0x0003) MISSED OFFSET
-	int                                                K2Node_CustomEvent_index;                                 // 0x0F74(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                K2Node_CustomEvent_Index;                                 // 0x0F74(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue4;                         // 0x0F78(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData20[0x7];                                       // 0x0F79(0x0007) MISSED OFFSET
 	class AActor*                                      CallFunc_GetOwner_ReturnValue3;                           // 0x0F80(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -210,7 +210,7 @@ public:
 	class UMaterialInstanceDynamic*                    K2Node_CustomEvent_LoadedMaterial;                        // 0x1118(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AShooterPlayerController*                    K2Node_CustomEvent_Controller;                            // 0x1120(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class APawn*                                       CallFunc_K2_GetPawn_ReturnValue;                          // 0x1128(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterHUD*                                 CallFunc_GetShooterHUD_ReturnValue;                       // 0x1130(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterHUD*                                 CallFunc_GetShooterHud_ReturnValue;                       // 0x1130(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class UUI_Subtitles*                               CallFunc_GetSubtitlesWidget_ReturnValue;                  // 0x1138(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x1140(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FName                                       CallFunc_GetObjectFName_ReturnValue;                      // 0x1148(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -294,15 +294,15 @@ public:
 	void STATIC_PrintDMICAnimTextureParams(class UMaterialInstanceDynamic* DMIC, int MatIndex);
 	void GetAssociatedItem(class UPrimalItem** Result);
 	void IsPlayingAnimTexture(bool* Result);
-	void STATIC_UpdateAnimTextureStatus();
+	void UpdateAnimTextureStatus();
 	void BPOnComponentDestroyed();
-	void STATIC_PlayLoaded_Explorer_Note();
-	void STATIC_Set_HLNA_Visibility(bool Visibility);
+	void PlayLoaded_Explorer_Note();
+	void Set_HLNA_Visibility(bool Visibility);
 	void PlayerIsLookingAtHLNA(class APrimalCharacter* Character, bool* Result);
 	void Is_Talking_Public(bool* Result);
 	void IsTalking(bool* Result);
 	void PlaySound(class USoundBase* Sound);
-	void STATIC_PlayEmote(int EmoteIndex);
+	void PlayEmote(int EmoteIndex);
 	void CheckEmotes(class AShooterCharacter* Character);
 	void UpdateInterpolation(class ACharacter* Character);
 	void AddedAsPrimalItemAttachment();

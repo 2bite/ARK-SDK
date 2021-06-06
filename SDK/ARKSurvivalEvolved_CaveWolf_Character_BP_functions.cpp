@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.ValidateZipLineTransform
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Exec, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintCallable)
 // Parameters:
 // struct UObject_FTransform      InTransform                    (Parm, OutParm, ReferenceParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -141,7 +141,7 @@ float ACaveWolf_Character_BP_C::BPGetAddForwardVelocityOnJump()
 
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.IsTargetZiplineBlocked
-// (Exec, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintCallable)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // class AZipline_Anchor_C*       Anchor                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -286,7 +286,7 @@ void ACaveWolf_Character_BP_C::BPTimerServer()
 
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.GetTargetMeshRelativeTransform_Pure
-// (NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintCallable)
 // Parameters:
 // struct UObject_FTransform      Result                         (Parm, OutParm, IsPlainOldData)
 
@@ -328,7 +328,7 @@ void ACaveWolf_Character_BP_C::SetNonDediTimer_TickEveryFrame(bool tickEveryFram
 
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.GetTargetMeshRelativeTransform
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintCallable)
 // Parameters:
 // struct UObject_FTransform      Result                         (Parm, OutParm, IsPlainOldData)
 
@@ -378,11 +378,11 @@ void ACaveWolf_Character_BP_C::DebugDrawRotationAxes(const struct FVector& Origi
 
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.SoftSetCaveWolfTransform
-// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintCallable)
 // Parameters:
 // struct UObject_FTransform      NewTransform                   (Parm, IsPlainOldData)
 
-void ACaveWolf_Character_BP_C::SoftSetCaveWolfTransform(const struct UObject_FTransform& NewTransform)
+void ACaveWolf_Character_BP_C::STATIC_SoftSetCaveWolfTransform(const struct UObject_FTransform& NewTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.SoftSetCaveWolfTransform");
 
@@ -399,7 +399,7 @@ void ACaveWolf_Character_BP_C::SoftSetCaveWolfTransform(const struct UObject_FTr
 
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.InterpCaveWolfMeshRelativeTransform
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Exec, Public, Protected, Delegate, NetServer, BlueprintCallable)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -419,7 +419,7 @@ void ACaveWolf_Character_BP_C::InterpCaveWolfMeshRelativeTransform(float DeltaTi
 
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Public, Protected, Delegate, NetServer, BlueprintCallable)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -428,7 +428,7 @@ void ACaveWolf_Character_BP_C::InterpCaveWolfMeshRelativeTransform(float DeltaTi
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ACaveWolf_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ACaveWolf_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -565,7 +565,7 @@ void ACaveWolf_Character_BP_C::GetZiplineBuff(class ABuff_Zipline_CaveWolf_C** Z
 
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.GetTargetedZipline
-// (NetRequest, NetResponse, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Exec, NetMulticast, Public, Protected, Delegate, NetServer, BlueprintCallable)
 // Parameters:
 // class AZipline_Anchor_C*       targetedZipline                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -708,28 +708,27 @@ bool ACaveWolf_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.TryAttachingToZipline
-// (NetReliable, Native, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, BlueprintCallable)
 // Parameters:
-// class AZipline_Anchor_C*       OverrideAnchor                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AZipline_Anchor_C*       overrideAnchor                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 overrideStartLocation          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          overrideFindLocationDistance   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 overrideFindLocationDirection  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 OverrideFindLocationDirection  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DontUseLineOfSightCheck        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ACaveWolf_Character_BP_C::STATIC_TryAttachingToZipline(class AZipline_Anchor_C* OverrideAnchor, const struct FVector& overrideStartLocation, float overrideFindLocationDistance, const struct FVector& overrideFindLocationDirection, bool DontUseLineOfSightCheck, bool* Success)
+void ACaveWolf_Character_BP_C::STATIC_TryAttachingToZipline(class AZipline_Anchor_C* overrideAnchor, const struct FVector& overrideStartLocation, float overrideFindLocationDistance, const struct FVector& OverrideFindLocationDirection, bool DontUseLineOfSightCheck, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CaveWolf_Character_BP.CaveWolf_Character_BP_C.TryAttachingToZipline");
 
 	ACaveWolf_Character_BP_C_TryAttachingToZipline_Params params;
-	params.OverrideAnchor = OverrideAnchor;
+	params.overrideAnchor = overrideAnchor;
 	params.overrideStartLocation = overrideStartLocation;
 	params.overrideFindLocationDistance = overrideFindLocationDistance;
-	params.overrideFindLocationDirection = overrideFindLocationDirection;
+	params.OverrideFindLocationDirection = OverrideFindLocationDirection;
 	params.DontUseLineOfSightCheck = DontUseLineOfSightCheck;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

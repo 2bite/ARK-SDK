@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,7 +71,7 @@ void AWaterVein_Base_BP_C::ReceiveBeginPlay()
 
 
 // Function WaterVein_Base_BP.WaterVein_Base_BP_C.BPGetMultiUseEntries
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -85,7 +85,6 @@ TArray<struct FMultiUseEntry> AWaterVein_Base_BP_C::BPGetMultiUseEntries(class A
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

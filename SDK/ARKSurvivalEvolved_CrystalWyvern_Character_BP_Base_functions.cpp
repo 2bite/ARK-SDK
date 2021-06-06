@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -127,7 +127,7 @@ void ACrystalWyvern_Character_BP_Base_C::DelayClearIsTamingFlyingHigh()
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SetIsTamingFlyingHigh
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, HasOutParms, NetClient)
+// (NetRequest, NetResponse, Static, Protected, Delegate, DLLImport, NetValidate)
 // Parameters:
 // bool                           IsTamingFlyingHigh             (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -139,7 +139,6 @@ void ACrystalWyvern_Character_BP_Base_C::STATIC_SetIsTamingFlyingHigh(bool IsTam
 	params.IsTamingFlyingHigh = IsTamingFlyingHigh;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,15 +169,16 @@ void ACrystalWyvern_Character_BP_Base_C::BPRemoveCharacterSnapshot(class UPrimal
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPApplyCharacterSnapshot
-// (NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient)
+// (NetRequest, Exec, Native, Event, NetMulticast, Protected, Delegate, DLLImport, NetValidate)
 // Parameters:
 // class UPrimalItem**            Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 To                             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                Offset                         (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         MaxExtent                      (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           Pose                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bCollisionOn                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ACrystalWyvern_Character_BP_Base_C::BPApplyCharacterSnapshot(class UPrimalItem** Item, class AActor** To, struct FVector* Offset, float* MaxExtent, int* Pose)
+void ACrystalWyvern_Character_BP_Base_C::BPApplyCharacterSnapshot(class UPrimalItem** Item, class AActor** To, struct FVector* Offset, float* MaxExtent, int* Pose, bool* bCollisionOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPApplyCharacterSnapshot");
 
@@ -188,6 +188,7 @@ void ACrystalWyvern_Character_BP_Base_C::BPApplyCharacterSnapshot(class UPrimalI
 	params.Offset = Offset;
 	params.MaxExtent = MaxExtent;
 	params.Pose = Pose;
+	params.bCollisionOn = bCollisionOn;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -362,7 +363,7 @@ bool ACrystalWyvern_Character_BP_Base_C::BPTryMultiUse(class APlayerController**
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, DLLImport, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -376,6 +377,7 @@ TArray<struct FMultiUseEntry> ACrystalWyvern_Character_BP_Base_C::STATIC_BPGetMu
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -519,7 +521,7 @@ void ACrystalWyvern_Character_BP_Base_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SpawnNestEgg
-// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient)
+// (NetReliable, Native, Event, NetResponse, Protected, Delegate, DLLImport, NetValidate)
 
 void ACrystalWyvern_Character_BP_Base_C::SpawnNestEgg()
 {

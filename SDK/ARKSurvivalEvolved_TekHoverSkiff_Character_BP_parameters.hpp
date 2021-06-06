@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -111,7 +111,7 @@ struct ATekHoverSkiff_Character_BP_C_BPOnStartJump_Params
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPNotifyToggleHUD
 struct ATekHoverSkiff_Character_BP_C_BPNotifyToggleHUD_Params
 {
-	bool*                                              bHUDHidden;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bHudHidden;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.CalculateTotalAlternateFuel
@@ -426,7 +426,7 @@ struct ATekHoverSkiff_Character_BP_C_CanActivateBeamCamera_Params
 struct ATekHoverSkiff_Character_BP_C_OnReceiveSkiff2dMovementInput_Params
 {
 	float                                              InputAxisVal;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bright;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bRight;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bShouldIntercept;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -820,7 +820,7 @@ struct ATekHoverSkiff_Character_BP_C_UpdateOwningClientReplicatedInputs_Params
 struct ATekHoverSkiff_Character_BP_C_SetSkiffMovementInputAxisValue_Params
 {
 	int                                                Axis;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              newVal;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Newval;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.OnBeamLocked
@@ -1150,6 +1150,7 @@ struct ATekHoverSkiff_Character_BP_C_CanUseBeam_Params
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPModifyDesiredRotation
 struct ATekHoverSkiff_Character_BP_C_BPModifyDesiredRotation_Params
 {
+	float*                                             DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    InDesiredRotation;                                        // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	struct FRotator                                    OutDesiredRotation;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1213,7 +1214,7 @@ struct ATekHoverSkiff_Character_BP_C_StopHovering_Params
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.SetTimerIntervals
 struct ATekHoverSkiff_Character_BP_C_SetTimerIntervals_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.BPShouldLimitForwardDirection

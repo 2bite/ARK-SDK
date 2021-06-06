@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -251,7 +251,7 @@ void ABuff_SpaceWhale_Passenger_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, 
 
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsAllowedToFire
-// (Event, NetResponse, NetMulticast, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
 // Parameters:
 // bool                           bAllowed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -262,6 +262,7 @@ void ABuff_SpaceWhale_Passenger_C::IsAllowedToFire(bool* bAllowed)
 	ABuff_SpaceWhale_Passenger_C_IsAllowedToFire_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -293,17 +294,18 @@ void ABuff_SpaceWhale_Passenger_C::SetTargeting(bool bTargetingEnabled)
 
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.LocalDoAttack
-// (NetReliable, Exec, Static, NetMulticast, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
 // Parameters:
 // bool                           bDidFire                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_SpaceWhale_Passenger_C::STATIC_LocalDoAttack(bool* bDidFire)
+void ABuff_SpaceWhale_Passenger_C::LocalDoAttack(bool* bDidFire)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.LocalDoAttack");
 
 	ABuff_SpaceWhale_Passenger_C_LocalDoAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

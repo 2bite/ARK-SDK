@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Kibble_DiloEgg.PrimalItemConsumable_Kibble_DiloEgg_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0AE0 - 0x0AE0)
 class UPrimalItemConsumable_Kibble_DiloEgg_C : public UPrimalItemConsumable_Kibble_Base_XSmall_C
 {
 public:

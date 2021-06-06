@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_560
+// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620
 // ()
 
-void URaft_Anim_BP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_560()
+void URaft_Anim_BP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_560");
+	static auto fn = UObject::FindObject<UFunction>("Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620");
 
-	URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_560_Params params;
+	URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620_Params params;
 
 	auto flags = fn->FunctionFlags;
 

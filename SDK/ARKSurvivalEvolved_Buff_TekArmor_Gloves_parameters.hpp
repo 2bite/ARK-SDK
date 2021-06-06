@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -165,7 +165,7 @@ struct ABuff_TekArmor_Gloves_C_CheckForTargetsWhileRocketPunching_Params
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.Set AudioParams and Play
 struct ABuff_TekArmor_Gloves_C_Set_AudioParams_and_Play_Params
 {
-	class UAudioComponent*                             Audio;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	class UAudioComponent*                             audio;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	float                                              Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Pitch;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               PlaySound;                                                // (Parm, ZeroConstructor, IsPlainOldData)
@@ -258,33 +258,38 @@ struct ABuff_TekArmor_Gloves_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_75
-struct ABuff_TekArmor_Gloves_C_InpActEvt_Targeting_K2Node_InputActionEvent_75_Params
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_82
+struct ABuff_TekArmor_Gloves_C_InpActEvt_Targeting_K2Node_InputActionEvent_82_Params
 {
 };
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_74
-struct ABuff_TekArmor_Gloves_C_InpActEvt_Targeting_K2Node_InputActionEvent_74_Params
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Targeting_K2Node_InputActionEvent_81
+struct ABuff_TekArmor_Gloves_C_InpActEvt_Targeting_K2Node_InputActionEvent_81_Params
 {
 };
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_73
-struct ABuff_TekArmor_Gloves_C_InpActEvt_AltFire_K2Node_InputActionEvent_73_Params
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_80
+struct ABuff_TekArmor_Gloves_C_InpActEvt_AltFire_K2Node_InputActionEvent_80_Params
 {
 };
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_72
-struct ABuff_TekArmor_Gloves_C_InpActEvt_AltFire_K2Node_InputActionEvent_72_Params
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_AltFire_K2Node_InputActionEvent_79
+struct ABuff_TekArmor_Gloves_C_InpActEvt_AltFire_K2Node_InputActionEvent_79_Params
 {
 };
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_71
-struct ABuff_TekArmor_Gloves_C_InpActEvt_Fire_K2Node_InputActionEvent_71_Params
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_78
+struct ABuff_TekArmor_Gloves_C_InpActEvt_Fire_K2Node_InputActionEvent_78_Params
 {
 };
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_70
-struct ABuff_TekArmor_Gloves_C_InpActEvt_Fire_K2Node_InputActionEvent_70_Params
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Fire_K2Node_InputActionEvent_77
+struct ABuff_TekArmor_Gloves_C_InpActEvt_Fire_K2Node_InputActionEvent_77_Params
+{
+};
+
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_38
+struct ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_38_Params
 {
 };
 
@@ -293,18 +298,13 @@ struct ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEven
 {
 };
 
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_36
-struct ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_36_Params
+// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_36
+struct ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_36_Params
 {
 };
 
 // Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_35
 struct ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_35_Params
-{
-};
-
-// Function Buff_TekArmor_Gloves.Buff_TekArmor_Gloves_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_34
-struct ABuff_TekArmor_Gloves_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_34_Params
 {
 };
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -182,12 +182,12 @@ void AProcoptodon_Character_BP_C::ServerStopJump()
 
 
 // Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.BPOnMovementModeChangedNotify
-// (Event, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    PrevMovementMode               (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 PreviousCustomMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProcoptodon_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode)
+void AProcoptodon_Character_BP_C::STATIC_BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMode>* PrevMovementMode, unsigned char* PreviousCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.BPOnMovementModeChangedNotify");
 
@@ -322,9 +322,9 @@ struct FVector AProcoptodon_Character_BP_C::GetClampedLookDir(bool LimitLowerPit
 
 
 // Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.JumpingTrace
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
 
-void AProcoptodon_Character_BP_C::STATIC_JumpingTrace()
+void AProcoptodon_Character_BP_C::JumpingTrace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.JumpingTrace");
 
@@ -390,17 +390,18 @@ void AProcoptodon_Character_BP_C::BPNotifyCarriedDinoBabyAgeIncrement(class APri
 
 
 // Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.Find Leap Dir
-// (NetReliable, Exec, MulticastDelegate, Public, Delegate, HasDefaults, NetClient)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector AProcoptodon_Character_BP_C::Find_Leap_Dir()
+struct FVector AProcoptodon_Character_BP_C::STATIC_Find_Leap_Dir()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.Find Leap Dir");
 
 	AProcoptodon_Character_BP_C_Find_Leap_Dir_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -512,13 +513,13 @@ float AProcoptodon_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex,
 
 
 // Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.Can Pouch Carry
-// (Net, Exec, Event, MulticastDelegate, Private, Protected, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // class AActor*                  GrabTarget                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SkipCarryCheck                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AProcoptodon_Character_BP_C::Can_Pouch_Carry(class AActor* GrabTarget, bool SkipCarryCheck)
+bool AProcoptodon_Character_BP_C::STATIC_Can_Pouch_Carry(class AActor* GrabTarget, bool SkipCarryCheck)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.Can Pouch Carry");
 
@@ -566,7 +567,7 @@ bool AProcoptodon_Character_BP_C::BPServerHandleNetExecCommand(class APlayerCont
 
 
 // Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.CreatePouchGrabbableEntry
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient)
+// (Exec, Native, Static, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APrimalCharacter*        CharToAdd                      (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  Name                           (Parm, ZeroConstructor)
@@ -581,6 +582,7 @@ void AProcoptodon_Character_BP_C::STATIC_CreatePouchGrabbableEntry(class APrimal
 	params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -617,12 +619,12 @@ bool AProcoptodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC,
 
 
 // Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.BPClientDoMultiUse
-// (Exec, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Exec, Event, Static, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProcoptodon_Character_BP_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void AProcoptodon_Character_BP_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.BPClientDoMultiUse");
 
@@ -659,13 +661,13 @@ void AProcoptodon_Character_BP_C::BPDoAttack(int* AttackIndex)
 
 
 // Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient)
+// (NetRequest, Exec, Native, Event, Static, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AProcoptodon_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AProcoptodon_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Procoptodon_Character_BP.Procoptodon_Character_BP_C.BPGetMultiUseEntries");
 

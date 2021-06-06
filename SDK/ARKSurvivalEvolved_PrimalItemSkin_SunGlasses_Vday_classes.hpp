@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_SunGlasses_Vday.PrimalItemSkin_SunGlasses_Vday_C
-// 0x0000 (0x0A20 - 0x0A20)
+// 0x0000 (0x0B00 - 0x0B00)
 class UPrimalItemSkin_SunGlasses_Vday_C : public UPrimalItemSkin_SunGlasses_C
 {
 public:

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -268,12 +268,12 @@ float ABuff_Encapsulated_C::BuffAdjustDamage(float* Damage, class AController** 
 
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.ApplyDamageToIceShield
-// (Net, NetReliable, Exec, Event, NetResponse, Public, Private, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsRemoteDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Encapsulated_C::ApplyDamageToIceShield(float Damage, bool IsRemoteDamage)
+void ABuff_Encapsulated_C::STATIC_ApplyDamageToIceShield(float Damage, bool IsRemoteDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Encapsulated.Buff_Encapsulated_C.ApplyDamageToIceShield");
 
@@ -282,6 +282,7 @@ void ABuff_Encapsulated_C::ApplyDamageToIceShield(float Damage, bool IsRemoteDam
 	params.IsRemoteDamage = IsRemoteDamage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -355,7 +356,7 @@ void ABuff_Encapsulated_C::FreezeCharacter(class APrimalCharacter* Character, bo
 
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.BPDeactivated
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

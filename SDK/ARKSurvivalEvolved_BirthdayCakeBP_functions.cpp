@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,7 +82,7 @@ void ABirthdayCakeBP_C::BPClientDoMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BirthdayCakeBP.BirthdayCakeBP_C.BPGetMultiUseEntries
-// (MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Native, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -96,6 +96,7 @@ TArray<struct FMultiUseEntry> ABirthdayCakeBP_C::BPGetMultiUseEntries(class APla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,7 +163,7 @@ bool ABirthdayCakeBP_C::BPServerHandleNetExecCommand(class APlayerController** F
 
 
 // Function BirthdayCakeBP.BirthdayCakeBP_C.OnRep_bIsOpen
-// (NetReliable, Exec, Event, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
+// (Exec, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, NetValidate)
 
 void ABirthdayCakeBP_C::OnRep_bIsOpen()
 {

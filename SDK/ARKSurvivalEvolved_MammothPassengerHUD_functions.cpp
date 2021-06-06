@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -99,14 +99,14 @@ void UMammothPassengerHUD_C::Reset_HUD_Widget()
 // Function MammothPassengerHUD.MammothPassengerHUD_C.StartClosingWidget
 // ()
 // Parameters:
-// float                          NewLifespan                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewLifeSpan                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMammothPassengerHUD_C::StartClosingWidget(float NewLifespan)
+void UMammothPassengerHUD_C::StartClosingWidget(float NewLifeSpan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MammothPassengerHUD.MammothPassengerHUD_C.StartClosingWidget");
 
 	UMammothPassengerHUD_C_StartClosingWidget_Params params;
-	params.NewLifespan = NewLifespan;
+	params.NewLifeSpan = NewLifeSpan;
 
 	auto flags = fn->FunctionFlags;
 

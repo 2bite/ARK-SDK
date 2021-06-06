@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MegaWyvern_Character_BP_Fire.MegaWyvern_Character_BP_Fire_C
-// 0x0008 (0x22D8 - 0x22D0)
+// 0x0008 (0x23A8 - 0x23A0)
 class AMegaWyvern_Character_BP_Fire_C : public AWyvern_Character_BP_Fire_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_MegaWyvern_C* DinoCharacterStatus_BP_MegaWyvern_C1;                     // 0x22D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_MegaWyvern_C* DinoCharacterStatus_BP_MegaWyvern_C1;                     // 0x23A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

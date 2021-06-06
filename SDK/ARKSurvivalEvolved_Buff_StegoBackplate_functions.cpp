@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ float ABuff_StegoBackplate_C::BPAdjustStatusValueModification(class UPrimalChara
 
 
 // Function Buff_StegoBackplate.Buff_StegoBackplate_C.GetBuffDescription
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -55,6 +55,7 @@ struct FStatusValueModifierDescription ABuff_StegoBackplate_C::GetBuffDescriptio
 	ABuff_StegoBackplate_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +66,7 @@ struct FStatusValueModifierDescription ABuff_StegoBackplate_C::GetBuffDescriptio
 
 
 // Function Buff_StegoBackplate.Buff_StegoBackplate_C.Set Backplate Mode
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient)
+// (Native, NetResponse, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode             (Parm, ZeroConstructor, IsPlainOldData)
 

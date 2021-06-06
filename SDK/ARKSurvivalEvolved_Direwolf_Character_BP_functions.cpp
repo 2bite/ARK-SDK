@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Direwolf_Character_BP.Direwolf_Character_BP_C.BPPreventNotifySound
+// ()
+// Parameters:
+// class USoundBase**             SoundIn                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ADirewolf_Character_BP_C::BPPreventNotifySound(class USoundBase** SoundIn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Direwolf_Character_BP.Direwolf_Character_BP_C.BPPreventNotifySound");
+
+	ADirewolf_Character_BP_C_BPPreventNotifySound_Params params;
+	params.SoundIn = SoundIn;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Direwolf_Character_BP.Direwolf_Character_BP_C.RidingTick
 // ()
@@ -33,9 +56,9 @@ void ADirewolf_Character_BP_C::RidingTick(float* DeltaSeconds)
 
 
 // Function Direwolf_Character_BP.Direwolf_Character_BP_C.AddHowlCooldownBuff
-// (NetReliable, Exec, Native, NetResponse, Static, Public, Private, HasOutParms, NetClient)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ADirewolf_Character_BP_C::STATIC_AddHowlCooldownBuff()
+void ADirewolf_Character_BP_C::AddHowlCooldownBuff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Direwolf_Character_BP.Direwolf_Character_BP_C.AddHowlCooldownBuff");
 

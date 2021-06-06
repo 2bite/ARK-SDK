@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -286,28 +286,28 @@ struct ABuff_Glider_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_92
-struct ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_92_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_99
+struct ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_99_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_91
-struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_91_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_98
+struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_98_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_90
-struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_90_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_97
+struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_97_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_89
-struct ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_89_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_96
+struct ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_96_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44
-struct ABuff_Glider_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_45
+struct ABuff_Glider_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_45_Params
 {
 };
 

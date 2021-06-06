@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C
-// 0x0000 (0x0B70 - 0x0B70)
+// 0x0000 (0x0B80 - 0x0B80)
 class ABuff_ChargeEmitterStructure_ChargeLantern_C : public ABuff_ChargeEmitterStructure_C
 {
 public:
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void STATIC_GetDistanceAndAngleCheckOrigin(class AActor** emitterActor, struct FVector* distanceAngleOrigin);
+	void GetDistanceAndAngleCheckOrigin(class AActor** emitterActor, struct FVector* distanceAngleOrigin);
 	void BuffTickClient(float* DeltaTime);
 	void TakeChargeConsumedByReceivers(float* chargeToTake);
 	void WillReceiverAffectChargeConsumption(class ABuff_ChargeManager_C** Receiver, bool* canProcess);
@@ -40,7 +40,7 @@ public:
 	void Modify_Charge(bool* SetValue, float* amount, bool* multicast, bool* triggerEvent, bool* multicastEvent, float* chargeAdded);
 	void EmitterUpdateChargeOnTimer(float* DeltaTime);
 	void ShouldEnableTimers(bool* tickServer, bool* TickClient);
-	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue);
+	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue);
 	void STATIC_InitializeEmitter();
 	void UserConstructionScript();
 	void ExecuteUbergraph_Buff_ChargeEmitterStructure_ChargeLantern(int EntryPoint);

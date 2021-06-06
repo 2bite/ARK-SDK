@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FenceSupport_Stone.BP_FenceSupport_Stone_C
-// 0x0000 (0x0AD0 - 0x0AD0)
+// 0x0000 (0x0AF8 - 0x0AF8)
 class ABP_FenceSupport_Stone_C : public ABase_FenceSupport_C
 {
 public:

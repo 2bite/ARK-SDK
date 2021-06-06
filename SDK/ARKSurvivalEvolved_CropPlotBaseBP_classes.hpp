@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CropPlotBaseBP.CropPlotBaseBP_C
-// 0x0008 (0x0EC0 - 0x0EB8)
+// 0x0008 (0x0F00 - 0x0EF8)
 class ACropPlotBaseBP_C : public APrimalStructureItemContainer_CropPlot
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0EB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0EF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,6 +28,9 @@ public:
 	}
 
 
+	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
+	bool CanAttachToExosuit(class AShooterPlayerController** ForPC);
+	bool CanBeStoredByExosuit(class AShooterPlayerController** ForPC);
 	void UserConstructionScript();
 	void ExecuteUbergraph_CropPlotBaseBP(int EntryPoint);
 };

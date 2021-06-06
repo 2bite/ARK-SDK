@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -160,17 +160,17 @@ void ATekArmor_EffectActor_C::UserConstructionScript()
 // ()
 // Parameters:
 // class UParticleSystem*         particle                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ParticleScale                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 particleScale                  (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundBase*              Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        Player                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekArmor_EffectActor_C::InitTekEffect(class UParticleSystem* particle, const struct FVector& ParticleScale, class USoundBase* Sound, class APrimalCharacter* Player)
+void ATekArmor_EffectActor_C::InitTekEffect(class UParticleSystem* particle, const struct FVector& particleScale, class USoundBase* Sound, class APrimalCharacter* Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekArmor_EffectActor.TekArmor_EffectActor_C.InitTekEffect");
 
 	ATekArmor_EffectActor_C_InitTekEffect_Params params;
 	params.particle = particle;
-	params.ParticleScale = ParticleScale;
+	params.particleScale = particleScale;
 	params.Sound = Sound;
 	params.Player = Player;
 
@@ -206,16 +206,16 @@ void ATekArmor_EffectActor_C::PlayerDied(class APrimalCharacter* DiedCharacter)
 // ()
 // Parameters:
 // class UParticleSystem*         particle                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ParticleScale                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 particleScale                  (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundBase*              Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekArmor_EffectActor_C::SetTekFX(class UParticleSystem* particle, const struct FVector& ParticleScale, class USoundBase* Sound)
+void ATekArmor_EffectActor_C::SetTekFX(class UParticleSystem* particle, const struct FVector& particleScale, class USoundBase* Sound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekArmor_EffectActor.TekArmor_EffectActor_C.SetTekFX");
 
 	ATekArmor_EffectActor_C_SetTekFX_Params params;
 	params.particle = particle;
-	params.ParticleScale = ParticleScale;
+	params.particleScale = particleScale;
 	params.Sound = Sound;
 
 	auto flags = fn->FunctionFlags;

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemCustomFoodRecipe_Type3.PrimalItemCustomFoodRecipe_Type3_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0AE0 - 0x0AE0)
 class UPrimalItemCustomFoodRecipe_Type3_C : public UPrimalItemCustomFoodRecipe_Base_C
 {
 public:

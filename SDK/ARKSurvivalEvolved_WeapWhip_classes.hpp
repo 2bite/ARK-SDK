@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapWhip.WeapWhip_C
-// 0x0008 (0x0DA8 - 0x0DA0)
+// 0x0008 (0x0DE0 - 0x0DD8)
 class AWeapWhip_C : public AShooterWeapon_Whip
 {
 public:
-	class USoundCue*                                   GeneralHitSounds;                                         // 0x0DA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USoundCue*                                   GeneralHitSounds;                                         // 0x0DD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

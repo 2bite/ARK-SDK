@@ -1,0 +1,38 @@
+#pragma once
+
+// ARKSurvivalEvolved (329.9) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_EngramEntry_EggIncubator_structs.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass EngramEntry_EggIncubator.EngramEntry_EggIncubator_C
+// 0x0000 (0x0090 - 0x0090)
+class UEngramEntry_EggIncubator_C : public UPrimalEngramEntry
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass EngramEntry_EggIncubator.EngramEntry_EggIncubator_C");
+		return ptr;
+	}
+
+
+	void ExecuteUbergraph_EngramEntry_EggIncubator(int EntryPoint);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

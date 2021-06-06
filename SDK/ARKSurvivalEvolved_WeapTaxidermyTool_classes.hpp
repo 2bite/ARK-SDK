@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapTaxidermyTool.WeapTaxidermyTool_C
-// 0x0018 (0x0D70 - 0x0D58)
+// 0x0018 (0x0DA8 - 0x0D90)
 class AWeapTaxidermyTool_C : public AShooterWeapon_Melee
 {
 public:
-	class UStaticMeshComponent*                        TPTool;                                                   // 0x0D58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        FPTool;                                                   // 0x0D60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AShooterCharacter*                           ShooterCharRef;                                           // 0x0D68(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class UStaticMeshComponent*                        TPTool;                                                   // 0x0D90(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        FPTool;                                                   // 0x0D98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           ShooterCharRef;                                           // 0x0DA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

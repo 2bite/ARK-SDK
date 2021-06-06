@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ public:
 
 
 	void OnEndEvent();
-	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
+	bool STATIC_BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void ExecuteUbergraph_DinoAttackState_Spindles_MinigunModeActivate(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Gate_Large_AdobeBase.Gate_Large_AdobeBase_C
-// 0x0000 (0x0B48 - 0x0B48)
+// 0x0000 (0x0B70 - 0x0B70)
 class AGate_Large_AdobeBase_C : public ADoor_Base_SM_C
 {
 public:

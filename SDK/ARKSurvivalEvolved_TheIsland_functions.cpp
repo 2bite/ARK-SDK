@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -329,14 +329,14 @@ void ATheIsland_C::BndEvt__Cave02_Encompassing_PostProcess_K2Node_ActorBoundEven
 }
 
 
-// Function TheIsland.TheIsland_C.MakeItRain
+// Function TheIsland.TheIsland_C.makeitrain
 // ()
 
-void ATheIsland_C::MakeItRain()
+void ATheIsland_C::makeitrain()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TheIsland.TheIsland_C.MakeItRain");
+	static auto fn = UObject::FindObject<UFunction>("Function TheIsland.TheIsland_C.makeitrain");
 
-	ATheIsland_C_MakeItRain_Params params;
+	ATheIsland_C_makeitrain_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3516,14 +3516,14 @@ void ATheIsland_C::BndEvt__CaveEastPostprocessVolume_2_K2Node_ActorBoundEvent_16
 }
 
 
-// Function TheIsland.TheIsland_C.coldfront
+// Function TheIsland.TheIsland_C.ColdFront
 // ()
 
-void ATheIsland_C::coldfront()
+void ATheIsland_C::ColdFront()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TheIsland.TheIsland_C.coldfront");
+	static auto fn = UObject::FindObject<UFunction>("Function TheIsland.TheIsland_C.ColdFront");
 
-	ATheIsland_C_coldfront_Params params;
+	ATheIsland_C_ColdFront_Params params;
 
 	auto flags = fn->FunctionFlags;
 

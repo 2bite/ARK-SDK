@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_554
+// Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_614
 // ()
 
-void Ucannon_TPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_554()
+void Ucannon_TPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_614()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_554");
+	static auto fn = UObject::FindObject<UFunction>("Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_614");
 
-	Ucannon_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_554_Params params;
+	Ucannon_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_614_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void Ucannon_TPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergrap
 }
 
 
-// Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_553
+// Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_613
 // ()
 
-void Ucannon_TPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_553()
+void Ucannon_TPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_613()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_553");
+	static auto fn = UObject::FindObject<UFunction>("Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_613");
 
-	Ucannon_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_553_Params params;
+	Ucannon_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_613_Params params;
 
 	auto flags = fn->FunctionFlags;
 

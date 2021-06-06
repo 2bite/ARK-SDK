@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_TriRoof_Stone.PrimalItemStructure_TriRoof_Stone_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0AE0 - 0x0AE0)
 class UPrimalItemStructure_TriRoof_Stone_C : public UPrimalItemStructure_BaseWall_C
 {
 public:

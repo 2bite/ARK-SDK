@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,21 +15,21 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass OceanPlatfom_Wood_BP.OceanPlatfom_Wood_BP_C
-// 0x0055 (0x0B4D - 0x0AF8)
+// 0x0055 (0x0B75 - 0x0B20)
 class AOceanPlatfom_Wood_BP_C : public AOceanPlatform_Base_BP_C
 {
 public:
-	class UBoxComponent*                               BuildArea;                                                // 0x0AF8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    FoamInner4;                                               // 0x0B00(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    FoamInner3;                                               // 0x0B08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    FoamInner1;                                               // 0x0B10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    FoamInner2;                                               // 0x0B18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    OuterFoam4;                                               // 0x0B20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    OuterFoam3;                                               // 0x0B28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    OuterFoam2;                                               // 0x0B30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    OuterFoam1;                                               // 0x0B38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     TestOffset;                                               // 0x0B40(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0B4C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UBoxComponent*                               BuildArea;                                                // 0x0B20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    FoamInner4;                                               // 0x0B28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    FoamInner3;                                               // 0x0B30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    FoamInner1;                                               // 0x0B38(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    FoamInner2;                                               // 0x0B40(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    OuterFoam4;                                               // 0x0B48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    OuterFoam3;                                               // 0x0B50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    OuterFoam2;                                               // 0x0B58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    OuterFoam1;                                               // 0x0B60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     TestOffset;                                               // 0x0B68(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0B74(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

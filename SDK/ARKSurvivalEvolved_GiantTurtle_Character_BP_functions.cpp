@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -113,14 +113,14 @@ void AGiantTurtle_Character_BP_C::BPOnDinoCheat(struct FName* CheatName, bool* b
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.BPNotifyToggleHUD
 // ()
 // Parameters:
-// bool*                          bHUDHidden                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bHudHidden                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AGiantTurtle_Character_BP_C::BPNotifyToggleHUD(bool* bHUDHidden)
+void AGiantTurtle_Character_BP_C::BPNotifyToggleHUD(bool* bHudHidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.BPNotifyToggleHUD");
 
 	AGiantTurtle_Character_BP_C_BPNotifyToggleHUD_Params params;
-	params.bHUDHidden = bHUDHidden;
+	params.bHudHidden = bHudHidden;
 
 	auto flags = fn->FunctionFlags;
 
@@ -263,16 +263,16 @@ void AGiantTurtle_Character_BP_C::ReceiveDestroyed()
 }
 
 
-// Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.DestroyHudWidget
+// Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.DestroyHUDWidget
 // ()
 // Parameters:
 // bool                           DestroyNow                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AGiantTurtle_Character_BP_C::DestroyHudWidget(bool DestroyNow)
+void AGiantTurtle_Character_BP_C::DestroyHUDWidget(bool DestroyNow)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.DestroyHudWidget");
+	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.DestroyHUDWidget");
 
-	AGiantTurtle_Character_BP_C_DestroyHudWidget_Params params;
+	AGiantTurtle_Character_BP_C_DestroyHUDWidget_Params params;
 	params.DestroyNow = DestroyNow;
 
 	auto flags = fn->FunctionFlags;
@@ -695,9 +695,9 @@ float AGiantTurtle_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct 
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.Setup Flock
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Event, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
-void AGiantTurtle_Character_BP_C::STATIC_Setup_Flock()
+void AGiantTurtle_Character_BP_C::Setup_Flock()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.Setup Flock");
 
@@ -729,7 +729,7 @@ void AGiantTurtle_Character_BP_C::CheckTurtleTargetForFollowers()
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.TickTaming
-// (NetReliable, NetRequest, Event, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetRequest, Event, NetResponse, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -766,11 +766,11 @@ void AGiantTurtle_Character_BP_C::CheckFullyInWater()
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.TickBirdsFlock
-// (Exec, Native, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Static, NetMulticast, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AGiantTurtle_Character_BP_C::TickBirdsFlock(float DeltaSeconds)
+void AGiantTurtle_Character_BP_C::STATIC_TickBirdsFlock(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.TickBirdsFlock");
 
@@ -807,7 +807,7 @@ void AGiantTurtle_Character_BP_C::PushBackPawnNotInWater(class APrimalCharacter*
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.TickBubbleCooldown
-// (Net, Exec, Event, MulticastDelegate, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Exec, Native, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -819,6 +819,7 @@ void AGiantTurtle_Character_BP_C::TickBubbleCooldown(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -909,7 +910,7 @@ float AGiantTurtle_Character_BP_C::BPGetCrosshairAlpha()
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.BPHandleControllerInitiatedAttack
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -922,7 +923,6 @@ bool AGiantTurtle_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackI
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -954,9 +954,9 @@ bool AGiantTurtle_Character_BP_C::BPHandleOnStopTargeting()
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.GetPlayersOnSeats
-// (NetReliable, NetRequest, NetResponse, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Static, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
-void AGiantTurtle_Character_BP_C::GetPlayersOnSeats()
+void AGiantTurtle_Character_BP_C::STATIC_GetPlayersOnSeats()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.GetPlayersOnSeats");
 
@@ -1058,7 +1058,7 @@ float AGiantTurtle_Character_BP_C::BP_GetCustomModifier_RotationRate()
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.Setup New Crop DataStruct
-// (Native, Event, Static, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            LocationIndex                  (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimalItemConsumableSeed_C* SeedItem                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -1072,7 +1072,6 @@ void AGiantTurtle_Character_BP_C::STATIC_Setup_New_Crop_DataStruct(int LocationI
 	params.SeedItem = SeedItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1137,7 +1136,7 @@ void AGiantTurtle_Character_BP_C::SpawnOxygenVFX()
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.Update CropsVisuals
-// (NetReliable, Native, NetMulticast, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Exec, NetResponse, NetMulticast, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void AGiantTurtle_Character_BP_C::Update_CropsVisuals()
 {
@@ -1146,7 +1145,6 @@ void AGiantTurtle_Character_BP_C::Update_CropsVisuals()
 	AGiantTurtle_Character_BP_C_Update_CropsVisuals_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1175,7 +1173,7 @@ void AGiantTurtle_Character_BP_C::UpdateFlowerAndMushroom(float DeltaSecond)
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.UpdateCropStructs
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1195,7 +1193,7 @@ void AGiantTurtle_Character_BP_C::STATIC_UpdateCropStructs(float DeltaSeconds)
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.AddOxygenBuff
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void AGiantTurtle_Character_BP_C::STATIC_AddOxygenBuff()
 {
@@ -1213,13 +1211,13 @@ void AGiantTurtle_Character_BP_C::STATIC_AddOxygenBuff()
 
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.BPNotifyInventoryItemChange
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, Event, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool*                          bIsItemAdd                     (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimalItem**            theItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bEquipItem                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AGiantTurtle_Character_BP_C::STATIC_BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem)
+void AGiantTurtle_Character_BP_C::BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.BPNotifyInventoryItemChange");
 

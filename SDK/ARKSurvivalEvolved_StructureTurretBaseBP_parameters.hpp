@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,52 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function StructureTurretBaseBP.StructureTurretBaseBP_C.BPCopyCustomSettingsFromTurret
+struct AStructureTurretBaseBP_C_BPCopyCustomSettingsFromTurret_Params
+{
+	class APrimalStructureTurret**                     FromTurret;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function StructureTurretBaseBP.StructureTurretBaseBP_C.BPTurretPreventsTargeting
+struct AStructureTurretBaseBP_C_BPTurretPreventsTargeting_Params
+{
+	class APrimalCharacter**                           PotentialTarget;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function StructureTurretBaseBP.StructureTurretBaseBP_C.BPServerHandleNetExecCommand
+struct AStructureTurretBaseBP_C_BPServerHandleNetExecCommand_Params
+{
+	class APlayerController**                          FromPC;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBPNetExecParams                            ExecParams;                                               // (Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function StructureTurretBaseBP.StructureTurretBaseBP_C.BPClientDoMultiUse
+struct AStructureTurretBaseBP_C_BPClientDoMultiUse_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ClientUseIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function StructureTurretBaseBP.StructureTurretBaseBP_C.BPGetMultiUseEntries
+struct AStructureTurretBaseBP_C_BPGetMultiUseEntries_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FMultiUseEntry>                      MultiUseEntries;                                          // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FMultiUseEntry>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function StructureTurretBaseBP.StructureTurretBaseBP_C.BPTryMultiUse
+struct AStructureTurretBaseBP_C_BPTryMultiUse_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               UseIndex;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function StructureTurretBaseBP.StructureTurretBaseBP_C.BPPostLoadedFromSaveGame
 struct AStructureTurretBaseBP_C_BPPostLoadedFromSaveGame_Params

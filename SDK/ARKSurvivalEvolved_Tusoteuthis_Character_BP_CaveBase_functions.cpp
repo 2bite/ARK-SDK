@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,13 +38,13 @@ bool ATusoteuthis_Character_BP_CaveBase_C::BPTryMultiUse(class APlayerController
 
 
 // Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.BPGetMultiUseEntries
-// (Native, Static, Protected, Delegate, NetClient, DLLImport, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Native, HasOutParms, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATusoteuthis_Character_BP_CaveBase_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATusoteuthis_Character_BP_CaveBase_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.BPGetMultiUseEntries");
 
@@ -360,15 +360,16 @@ void ATusoteuthis_Character_BP_CaveBase_C::CheckForResetTurn()
 
 
 // Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.BPTimerServer
-// (Exec, Private, Protected, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
 
-void ATusoteuthis_Character_BP_CaveBase_C::BPTimerServer()
+void ATusoteuthis_Character_BP_CaveBase_C::STATIC_BPTimerServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.BPTimerServer");
 
 	ATusoteuthis_Character_BP_CaveBase_C_BPTimerServer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -512,15 +513,16 @@ void ATusoteuthis_Character_BP_CaveBase_C::RemoveCarryBuffFromPrey()
 
 
 // Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.SyphonHealthFromPrey
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
 
-void ATusoteuthis_Character_BP_CaveBase_C::SyphonHealthFromPrey()
+void ATusoteuthis_Character_BP_CaveBase_C::STATIC_SyphonHealthFromPrey()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.SyphonHealthFromPrey");
 
 	ATusoteuthis_Character_BP_CaveBase_C_SyphonHealthFromPrey_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -752,14 +754,14 @@ void ATusoteuthis_Character_BP_CaveBase_C::TurnActorAround__UpdateFunc()
 }
 
 
-// Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.InpActEvt_Jump_K2Node_InputActionEvent_228
+// Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.InpActEvt_Jump_K2Node_InputActionEvent_392
 // ()
 
-void ATusoteuthis_Character_BP_CaveBase_C::InpActEvt_Jump_K2Node_InputActionEvent_228()
+void ATusoteuthis_Character_BP_CaveBase_C::InpActEvt_Jump_K2Node_InputActionEvent_392()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.InpActEvt_Jump_K2Node_InputActionEvent_228");
+	static auto fn = UObject::FindObject<UFunction>("Function Tusoteuthis_Character_BP_CaveBase.Tusoteuthis_Character_BP_CaveBase_C.InpActEvt_Jump_K2Node_InputActionEvent_392");
 
-	ATusoteuthis_Character_BP_CaveBase_C_InpActEvt_Jump_K2Node_InputActionEvent_228_Params params;
+	ATusoteuthis_Character_BP_CaveBase_C_InpActEvt_Jump_K2Node_InputActionEvent_392_Params params;
 
 	auto flags = fn->FunctionFlags;
 

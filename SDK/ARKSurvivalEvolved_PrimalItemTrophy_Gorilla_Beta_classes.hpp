@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemTrophy_Gorilla_Beta.PrimalItemTrophy_Gorilla_Beta_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0AE0 - 0x0AE0)
 class UPrimalItemTrophy_Gorilla_Beta_C : public UPrimalItemTrophy_Gorilla_Gamma_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Sky_Sphere.BP_Sky_Sphere_C
-// 0x0000 (0x06B1 - 0x06B1)
+// 0x0000 (0x06C8 - 0x06C8)
 class ABP_Sky_Sphere_C : public ABP_Sky_Sphere_ARK_C
 {
 public:

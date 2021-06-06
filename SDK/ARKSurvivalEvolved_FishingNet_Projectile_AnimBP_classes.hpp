@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ public:
 	struct FAnimNode_StateMachine                      AnimGraphNode_StateMachine_E212A6A746A3205941BDE1A35544FB39;// 0x0620(0x0060)
 	bool                                               Has_Hit_Water;                                            // 0x0680(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               Has_Hit_Ground;                                           // 0x0681(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               Reeling;                                                  // 0x0682(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               reeling;                                                  // 0x0682(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               Open_In_The_Air;                                          // 0x0683(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Time_Before_Net_Opens_In_Air_Local_First_Person;          // 0x0684(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               Local_Controller_Is_Owner_And_Is_First_Person;            // 0x0688(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -88,12 +88,12 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_1963();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_1962();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_1961();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_1960();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_1959();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_1958();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3155();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3154();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3153();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3152();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3151();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3150();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_FishingNet_Projectile_AnimBP(int EntryPoint);
 };

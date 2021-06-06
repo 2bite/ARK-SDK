@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -94,7 +94,7 @@ void ADragon_AIController_Bp_C::IsUsingSpline(bool* Return)
 
 
 // Function Dragon_AIController_Bp.Dragon_AIController_Bp_C.CalculateAndSetWonderingAIStateEvent
-// (Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate)
+// (Exec, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
 // Parameters:
 // bool*                          StateChanged                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -107,7 +107,6 @@ bool ADragon_AIController_Bp_C::CalculateAndSetWonderingAIStateEvent(bool* State
 	params.StateChanged = StateChanged;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPClientHandleNetExecCommand
-// (NetRequest, Native, Static, MulticastDelegate, Public, NetServer, HasOutParms, NetClient)
+// (Exec, Event, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
@@ -29,7 +29,6 @@ bool AIchthyornis_Character_BP_C::STATIC_BPClientHandleNetExecCommand(struct FNa
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +64,7 @@ void AIchthyornis_Character_BP_C::IsOverweightThreshold_F(bool* NewParam)
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPModifyHarvestingQuantity
-// (NetReliable, NetResponse, MulticastDelegate, Private, Protected, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         originalQuantity               (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass**                 resourceSelected               (Parm, ZeroConstructor, IsPlainOldData)
@@ -80,6 +79,7 @@ float AIchthyornis_Character_BP_C::BPModifyHarvestingQuantity(float* originalQua
 	params.resourceSelected = resourceSelected;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -438,7 +438,7 @@ void AIchthyornis_Character_BP_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Improve HarvestingComponent for Dragged Character
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        killedCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -450,7 +450,6 @@ void AIchthyornis_Character_BP_C::Improve_HarvestingComponent_for_Dragged_Charac
 	params.killedCharacter = killedCharacter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -808,7 +807,7 @@ void AIchthyornis_Character_BP_C::CanUseBiteAttack(class APrimalCharacter* Targe
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.OnLaunched
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, NetServer, HasOutParms, NetClient)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector*                LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -916,7 +915,7 @@ void AIchthyornis_Character_BP_C::OnClearCarriedCharacter(bool stopTimerServer, 
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Can Use Wild Dive
-// (NetRequest, Exec, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           canDoAttack                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -964,7 +963,7 @@ void AIchthyornis_Character_BP_C::CanUseDiveAttack(class APrimalCharacter* Targe
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.ApplyChewDamage
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient)
+// (NetRequest, Exec, NetResponse, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          amount                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -976,7 +975,6 @@ void AIchthyornis_Character_BP_C::ApplyChewDamage(float amount)
 	params.amount = amount;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1113,7 +1111,7 @@ void AIchthyornis_Character_BP_C::CanUseGrabAttack(class APrimalCharacter* Prima
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.Remove Weapon
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient)
+// (NetReliable, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Owner                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1188,21 +1186,22 @@ void AIchthyornis_Character_BP_C::CanStealItem(class UPrimalItem* Item, bool isF
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DoStealItem
-// (NetResponse, Public, Private, NetServer, HasOutParms, NetClient)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// class APrimalCharacter*        CharacterToStealFrom           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        characterToStealFrom           (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimalItem*             itemToSteal                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIchthyornis_Character_BP_C::DoStealItem(class APrimalCharacter* CharacterToStealFrom, class UPrimalItem* itemToSteal, bool* Success)
+void AIchthyornis_Character_BP_C::DoStealItem(class APrimalCharacter* characterToStealFrom, class UPrimalItem* itemToSteal, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DoStealItem");
 
 	AIchthyornis_Character_BP_C_DoStealItem_Params params;
-	params.CharacterToStealFrom = CharacterToStealFrom;
+	params.characterToStealFrom = characterToStealFrom;
 	params.itemToSteal = itemToSteal;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1369,7 +1368,7 @@ void AIchthyornis_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** H
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1383,7 +1382,6 @@ TArray<struct FMultiUseEntry> AIchthyornis_Character_BP_C::STATIC_BPGetMultiUseE
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1445,7 +1443,7 @@ bool AIchthyornis_Character_BP_C::BPCanDragCharacter(class APrimalCharacter** Ch
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient)
+// (NetRequest, Exec, Native, Event, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -1464,6 +1462,7 @@ float AIchthyornis_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex,
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1630,7 +1629,7 @@ void AIchthyornis_Character_BP_C::Can_UseRegularDive(class APrimalCharacter* Tar
 
 
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.BPDoAttack
-// (NetReliable, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient)
+// (NetReliable, Native, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1642,6 +1641,7 @@ void AIchthyornis_Character_BP_C::BPDoAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

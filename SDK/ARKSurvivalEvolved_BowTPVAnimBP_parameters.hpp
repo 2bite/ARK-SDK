@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,23 +14,23 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1280
-struct UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1280_Params
+// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1998
+struct UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1998_Params
 {
 };
 
-// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1279
-struct UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1279_Params
+// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1997
+struct UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1997_Params
 {
 };
 
-// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1278
-struct UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1278_Params
+// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1996
+struct UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1996_Params
 {
 };
 
-// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1277
-struct UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1277_Params
+// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1995
+struct UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1995_Params
 {
 };
 

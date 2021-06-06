@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapCompoundBow_Stone.WeapCompoundBow_Stone_C
-// 0x0000 (0x0E80 - 0x0E80)
+// 0x0000 (0x0EB8 - 0x0EB8)
 class AWeapCompoundBow_Stone_C : public AWeapCompoundBow_C
 {
 public:

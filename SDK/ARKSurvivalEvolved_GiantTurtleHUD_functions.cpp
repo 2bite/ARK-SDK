@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GiantTurtleHUD.GiantTurtleHUD_C.Get_AbilityTextBlock_Text_1
-// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -77,14 +77,14 @@ void UGiantTurtleHUD_C::InitFromGiantTurtle(class AGiantTurtle_Character_BP_C* G
 // Function GiantTurtleHUD.GiantTurtleHUD_C.StartClosingWidget
 // ()
 // Parameters:
-// float                          NewLifespan                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewLifeSpan                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UGiantTurtleHUD_C::StartClosingWidget(float NewLifespan)
+void UGiantTurtleHUD_C::StartClosingWidget(float NewLifeSpan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtleHUD.GiantTurtleHUD_C.StartClosingWidget");
 
 	UGiantTurtleHUD_C_StartClosingWidget_Params params;
-	params.NewLifespan = NewLifespan;
+	params.NewLifeSpan = NewLifeSpan;
 
 	auto flags = fn->FunctionFlags;
 
@@ -94,14 +94,14 @@ void UGiantTurtleHUD_C::StartClosingWidget(float NewLifespan)
 }
 
 
-// Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHudWidget
+// Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHUDWidget
 // ()
 
-void UGiantTurtleHUD_C::DestroyHudWidget()
+void UGiantTurtleHUD_C::DestroyHUDWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHudWidget");
+	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHUDWidget");
 
-	UGiantTurtleHUD_C_DestroyHudWidget_Params params;
+	UGiantTurtleHUD_C_DestroyHUDWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
 

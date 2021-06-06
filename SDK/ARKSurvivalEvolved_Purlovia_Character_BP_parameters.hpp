@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Purlovia_Character_BP.Purlovia_Character_BP_C.HasSelfBuried
+struct APurlovia_Character_BP_C_HasSelfBuried_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.BPIsHidden
 struct APurlovia_Character_BP_C_BPIsHidden_Params
@@ -248,11 +254,11 @@ struct APurlovia_Character_BP_C_Has_Conflict_with_AI_Params
 	bool                                               hasConflict;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanBury
-struct APurlovia_Character_BP_C_CanBury_Params
+// Function Purlovia_Character_BP.Purlovia_Character_BP_C.canBury
+struct APurlovia_Character_BP_C_canBury_Params
 {
 	bool                                               forceBury;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CanBury;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               canBury;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanPlayBuryAnim

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_MetalWall_Sloped_Left.PrimalItemStructure_MetalWall_Sloped_Left_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0AE0 - 0x0AE0)
 class UPrimalItemStructure_MetalWall_Sloped_Left_C : public UPrimalItemStructure_BaseWall_Sloped_Left_C
 {
 public:

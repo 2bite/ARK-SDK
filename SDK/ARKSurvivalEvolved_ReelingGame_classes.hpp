@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,15 +47,15 @@ public:
 
 
 	void HandleKeyPress(const struct FKey& Key, bool* retReply);
-	struct FEventReply STATIC_OnControllerButtonReleased(struct FGeometry* MyGeometry, struct FControllerEvent* ControllerEvent);
-	struct FEventReply STATIC_OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
+	struct FEventReply OnControllerButtonReleased(struct FGeometry* MyGeometry, struct FControllerEvent* ControllerEvent);
+	struct FEventReply OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
 	void CycleToNextKey();
-	void STATIC_UpdateRemainingTime();
-	struct FEventReply STATIC_OnKeyUp(struct FGeometry* MyGeometry, struct FKeyboardEvent* InKeyboardEvent);
-	void STATIC_CycleKeys(bool* FinishedGame);
+	void UpdateRemainingTime();
+	struct FEventReply OnKeyUp(struct FGeometry* MyGeometry, struct FKeyboardEvent* InKeyboardEvent);
+	void CycleKeys(bool* FinishedGame);
 	void EndGame(bool succeeded);
 	void Init(float KeyDisplayDuration, class AWeapFishingRod_C* rod, TArray<struct FKey>* GameKeys);
-	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
+	void STATIC_Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void ExecuteUbergraph_ReelingGame(int EntryPoint);
 };
 

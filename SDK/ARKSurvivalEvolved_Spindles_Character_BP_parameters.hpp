@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -260,13 +260,13 @@ struct ASpindles_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_146
-struct ASpindles_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_146_Params
+// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_160
+struct ASpindles_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_160_Params
 {
 };
 
-// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_145
-struct ASpindles_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_145_Params
+// Function Spindles_Character_BP.Spindles_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_159
+struct ASpindles_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_159_Params
 {
 };
 

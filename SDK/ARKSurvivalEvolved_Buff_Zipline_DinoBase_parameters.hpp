@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -429,28 +429,33 @@ struct ABuff_Zipline_DinoBase_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_109
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_109_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_116
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_116_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_108
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_108_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_115
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_115_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_107
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Jump_K2Node_InputActionEvent_107_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_114
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Jump_K2Node_InputActionEvent_114_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_106
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Crouch_K2Node_InputActionEvent_106_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_113
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Crouch_K2Node_InputActionEvent_113_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105
-struct ABuff_Zipline_DinoBase_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_112
+struct ABuff_Zipline_DinoBase_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_112_Params
+{
+};
+
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_53
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_53_Params
 {
 };
 
@@ -459,13 +464,8 @@ struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKey
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51_Params
-{
-};
-
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104
-struct ABuff_Zipline_DinoBase_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_111
+struct ABuff_Zipline_DinoBase_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_111_Params
 {
 };
 
@@ -530,7 +530,7 @@ struct ABuff_Zipline_DinoBase_C_SecondJumpImpulse_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.FlipOnZipline_Multicast
 struct ABuff_Zipline_DinoBase_C_FlipOnZipline_Multicast_Params
 {
-	bool                                               fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	class ADinoCharacter_BP_Zipline_C*                 attachedDino;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

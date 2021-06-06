@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -224,14 +224,14 @@ void AIguanodon_Character_BP_C::InitIguanodon()
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.NetSetHasFruitInInventory
 // ()
 // Parameters:
-// bool                           newVal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Newval                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIguanodon_Character_BP_C::NetSetHasFruitInInventory(bool newVal)
+void AIguanodon_Character_BP_C::NetSetHasFruitInInventory(bool Newval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.NetSetHasFruitInInventory");
 
 	AIguanodon_Character_BP_C_NetSetHasFruitInInventory_Params params;
-	params.newVal = newVal;
+	params.Newval = Newval;
 
 	auto flags = fn->FunctionFlags;
 
@@ -318,7 +318,7 @@ bool AIguanodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -332,7 +332,6 @@ TArray<struct FMultiUseEntry> AIguanodon_Character_BP_C::BPGetMultiUseEntries(cl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -403,11 +402,11 @@ void AIguanodon_Character_BP_C::Net_SetCurrentStance(bool isBiped)
 
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPDoAttack
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void AIguanodon_Character_BP_C::STATIC_BPDoAttack(int* AttackIndex)
+void AIguanodon_Character_BP_C::BPDoAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPDoAttack");
 
@@ -415,6 +414,7 @@ void AIguanodon_Character_BP_C::STATIC_BPDoAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

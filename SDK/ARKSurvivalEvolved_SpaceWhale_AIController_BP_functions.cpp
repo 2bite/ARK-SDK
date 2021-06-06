@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,11 +30,11 @@ void ASpaceWhale_AIController_BP_C::BPOnFleeEvent()
 
 
 // Function SpaceWhale_AIController_BP.SpaceWhale_AIController_BP_C.ReceiveTick
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceWhale_AIController_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void ASpaceWhale_AIController_BP_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhale_AIController_BP.SpaceWhale_AIController_BP_C.ReceiveTick");
 

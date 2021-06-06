@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,62 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.OnContainerRenamed
+struct AStructure_TaxidermyBase_C_OnContainerRenamed_Params
+{
+};
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.Construct Name Renderer Component
+struct AStructure_TaxidermyBase_C_Construct_Name_Renderer_Component_Params
+{
+};
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.RemoveHairMeshes
+struct AStructure_TaxidermyBase_C_RemoveHairMeshes_Params
+{
+};
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.OnRep_SnapshotPoseIndex
+struct AStructure_TaxidermyBase_C_OnRep_SnapshotPoseIndex_Params
+{
+};
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.CreateDefaultSnapshot
+struct AStructure_TaxidermyBase_C_CreateDefaultSnapshot_Params
+{
+	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPClientDoMultiUse
+struct AStructure_TaxidermyBase_C_BPClientDoMultiUse_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ClientUseIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.SetTextRendererColor
+struct AStructure_TaxidermyBase_C_SetTextRendererColor_Params
+{
+};
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.CreateSnapshot
+struct AStructure_TaxidermyBase_C_CreateSnapshot_Params
+{
+	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Use_Default_Snapshot_Mat;                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Capture_Character;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Non_Capture_Gender_Is_Male;                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               KeepPreviousSnapshot;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPPlacedStructure
+struct AStructure_TaxidermyBase_C_BPPlacedStructure_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ApplyEquippedSnapshot
 struct AStructure_TaxidermyBase_C_ApplyEquippedSnapshot_Params
-{
-};
-
-// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.OnRep_PoseIdx
-struct AStructure_TaxidermyBase_C_OnRep_PoseIdx_Params
-{
-};
-
-// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.RefreshSnapshot
-struct AStructure_TaxidermyBase_C_RefreshSnapshot_Params
 {
 };
 
@@ -74,14 +118,19 @@ struct AStructure_TaxidermyBase_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ClientApplySnapshot
-struct AStructure_TaxidermyBase_C_ClientApplySnapshot_Params
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.SetRendererText
+struct AStructure_TaxidermyBase_C_SetRendererText_Params
 {
 };
 
-// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ClientRemoveSnapshot
-struct AStructure_TaxidermyBase_C_ClientRemoveSnapshot_Params
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.Multi_CreateSnapshot
+struct AStructure_TaxidermyBase_C_Multi_CreateSnapshot_Params
 {
+	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               UseDefaultSnapshotMaterial;                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               CaptureCharacter;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               NonCaptureGenderIsMale;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               KeepPreviousSnapshot;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ExecuteUbergraph_Structure_TaxidermyBase

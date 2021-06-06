@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -230,7 +230,7 @@ struct UHoverSkiffHudWidget_C_InitFromSkiff_Params
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.StartClosingWidget
 struct UHoverSkiffHudWidget_C_StartClosingWidget_Params
 {
-	float                                              NewLifespan;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewLifeSpan;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function HoverSkiffHudWidget.HoverSkiffHudWidget_C.DestroySkiffHudWidget

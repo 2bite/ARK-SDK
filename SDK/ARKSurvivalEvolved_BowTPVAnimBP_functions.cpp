@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1280
+// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1998
 // ()
 
-void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1280()
+void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1998()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1280");
+	static auto fn = UObject::FindObject<UFunction>("Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1998");
 
-	UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1280_Params params;
+	UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1998_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_A
 }
 
 
-// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1279
+// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1997
 // ()
 
-void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1279()
+void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1997()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1279");
+	static auto fn = UObject::FindObject<UFunction>("Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1997");
 
-	UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1279_Params params;
+	UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1997_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -46,14 +46,14 @@ void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_A
 }
 
 
-// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1278
+// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1996
 // ()
 
-void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1278()
+void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1996()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1278");
+	static auto fn = UObject::FindObject<UFunction>("Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1996");
 
-	UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1278_Params params;
+	UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1996_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -63,14 +63,14 @@ void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_A
 }
 
 
-// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1277
+// Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1995
 // ()
 
-void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1277()
+void UBowTPVAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1995()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1277");
+	static auto fn = UObject::FindObject<UFunction>("Function BowTPVAnimBP.BowTPVAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1995");
 
-	UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1277_Params params;
+	UBowTPVAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BowTPVAnimBP_AnimGraphNode_TransitionResult_1995_Params params;
 
 	auto flags = fn->FunctionFlags;
 

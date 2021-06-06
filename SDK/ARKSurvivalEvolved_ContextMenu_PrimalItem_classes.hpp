@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ContextMenu_PrimalItem.ContextMenu_PrimalItem_C
-// 0x0000 (0x02B0 - 0x02B0)
+// 0x0000 (0x02C8 - 0x02C8)
 class UContextMenu_PrimalItem_C : public UContextMenu_PrimalItem
 {
 public:

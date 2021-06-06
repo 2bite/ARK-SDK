@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -306,11 +306,11 @@ public:
 
 
 // Class CoreUObject.LinkerLoad
-// 0x04A8 (0x0668 - 0x01C0)
+// 0x04B0 (0x0670 - 0x01C0)
 class ULinkerLoad : public ULinker
 {
 public:
-	unsigned char                                      UnknownData00[0x4A8];                                     // 0x01C0(0x04A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4B0];                                     // 0x01C0(0x04B0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -322,11 +322,11 @@ public:
 
 
 // Class CoreUObject.LinkerSave
-// 0x0110 (0x02D0 - 0x01C0)
+// 0x0118 (0x02D8 - 0x01C0)
 class ULinkerSave : public ULinker
 {
 public:
-	unsigned char                                      UnknownData00[0x110];                                     // 0x01C0(0x0110) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x118];                                     // 0x01C0(0x0118) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

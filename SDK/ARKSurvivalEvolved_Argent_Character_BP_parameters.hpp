@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ struct AArgent_Character_BP_C_Get_Passenger_Params
 struct AArgent_Character_BP_C_Has_Passenger_In_Slot_Params
 {
 	int                                                Slot;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Argent_Character_BP.Argent_Character_BP_C.BPNotifyClearRider

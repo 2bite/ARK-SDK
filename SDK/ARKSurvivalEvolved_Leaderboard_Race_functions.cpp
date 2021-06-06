@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Leaderboard_Race.Leaderboard_Race_C.BPFormatLeaderboardRow
-// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  MissionTag                     (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           index                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -29,7 +29,6 @@ struct FLeaderboardDisplayRow ULeaderboard_Race_C::STATIC_BPFormatLeaderboardRow
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

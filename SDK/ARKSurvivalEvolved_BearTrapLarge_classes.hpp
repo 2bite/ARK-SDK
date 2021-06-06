@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BearTrapLarge.BearTrapLarge_C
-// 0x0000 (0x0B68 - 0x0B68)
+// 0x0000 (0x0B90 - 0x0B90)
 class ABearTrapLarge_C : public ABaseBearTrap_C
 {
 public:

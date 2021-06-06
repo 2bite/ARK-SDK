@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,10 +14,28 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.GetFlockTickingInterval
-struct ABaseSwarmChar_BP_C_GetFlockTickingInterval_Params
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ReceiveTick
+struct ABaseSwarmChar_BP_C_ReceiveTick_Params
 {
-	float                                              OutInterval;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ThrottledTick
+struct ABaseSwarmChar_BP_C_ThrottledTick_Params
+{
+};
+
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Set Material Vector Parameter
+struct ABaseSwarmChar_BP_C_Set_Material_Vector_Parameter_Params
+{
+	class UStaticMeshComponent*                        SM;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Parameter;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SendTargetedMessage
+struct ABaseSwarmChar_BP_C_SendTargetedMessage_Params
+{
 };
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.SwarmLifetimeEnded
@@ -94,8 +112,8 @@ struct ABaseSwarmChar_BP_C_Attack_Target_Params
 	bool                                               StopAttacking_;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Get Current Attack Duration
-struct ABaseSwarmChar_BP_C_Get_Current_Attack_Duration_Params
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.GetDestroyNonCharacterTargetDuration
+struct ABaseSwarmChar_BP_C_GetDestroyNonCharacterTargetDuration_Params
 {
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -125,6 +143,7 @@ struct ABaseSwarmChar_BP_C_Get_Damage_Type_Adjuster_Params
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Kill Boids Based On Health
 struct ABaseSwarmChar_BP_C_Kill_Boids_Based_On_Health_Params
 {
+	float                                              DamageIn;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.OnTargetChanged
@@ -174,6 +193,7 @@ struct ABaseSwarmChar_BP_C_BPAdjustDamage_Params
 struct ABaseSwarmChar_BP_C_Damage_Victim_in_Radius_Params
 {
 	class AActor*                                      Victim;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bDidDoDamage;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Damage Victims In Radius
@@ -198,17 +218,6 @@ struct ABaseSwarmChar_BP_C_BPOnLethalDamage_Params
 	bool                                               bPreventDeath;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BPDinoPostBeginPlay
-struct ABaseSwarmChar_BP_C_BPDinoPostBeginPlay_Params
-{
-};
-
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ReceiveTick
-struct ABaseSwarmChar_BP_C_ReceiveTick_Params
-{
-	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.BlueprintAdjustOutputDamage
 struct ABaseSwarmChar_BP_C_BlueprintAdjustOutputDamage_Params
 {
@@ -230,20 +239,9 @@ struct ABaseSwarmChar_BP_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.CleanupBoids
-struct ABaseSwarmChar_BP_C_CleanupBoids_Params
-{
-};
-
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.MultiOnLethalDamage
 struct ABaseSwarmChar_BP_C_MultiOnLethalDamage_Params
 {
-};
-
-// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.OnDied_Event
-struct ABaseSwarmChar_BP_C_OnDied_Event_Params
-{
-	class APrimalCharacter*                            DiedCharacter;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Server_SpottedTargetEvent
@@ -274,6 +272,12 @@ struct ABaseSwarmChar_BP_C_Server_FinishedAttackingTarget_Params
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Multicast_FinishedAttackingTarget
 struct ABaseSwarmChar_BP_C_Multicast_FinishedAttackingTarget_Params
 {
+};
+
+// Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.Multi_KillBoidsBasedOnHealth
+struct ABaseSwarmChar_BP_C_Multi_KillBoidsBasedOnHealth_Params
+{
+	float                                              Damage;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BaseSwarmChar_BP.BaseSwarmChar_BP_C.ExecuteUbergraph_BaseSwarmChar_BP

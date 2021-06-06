@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SM_AdobeGateDoor_BP.SM_AdobeGateDoor_BP_C.UserConstructionScript
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, HasDefaults, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ASM_AdobeGateDoor_BP_C::STATIC_UserConstructionScript()
+void ASM_AdobeGateDoor_BP_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SM_AdobeGateDoor_BP.SM_AdobeGateDoor_BP_C.UserConstructionScript");
 

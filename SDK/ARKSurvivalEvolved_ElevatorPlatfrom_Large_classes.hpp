@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ElevatorPlatfrom_Large.ElevatorPlatfrom_Large_C
-// 0x0000 (0x0B80 - 0x0B80)
+// 0x0000 (0x0BA8 - 0x0BA8)
 class AElevatorPlatfrom_Large_C : public AElevatorPlatform_Base_C
 {
 public:

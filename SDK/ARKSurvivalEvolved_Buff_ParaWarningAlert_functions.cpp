@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void ABuff_ParaWarningAlert_C::Add_Enemy_Indicators(TArray<struct FVector>* Enem
 
 
 // Function Buff_ParaWarningAlert.Buff_ParaWarningAlert_C.BPActivated
-// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults)
+// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Protected, HasDefaults, NetClient, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,7 +47,6 @@ void ABuff_ParaWarningAlert_C::BPActivated(class AActor** ForInstigator)
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

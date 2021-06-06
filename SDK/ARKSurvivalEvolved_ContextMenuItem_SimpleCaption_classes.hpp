@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ContextMenuItem_SimpleCaption.ContextMenuItem_SimpleCaption_C
-// 0x0018 (0x0330 - 0x0318)
+// 0x0018 (0x0358 - 0x0340)
 class UContextMenuItem_SimpleCaption_C : public UContextMenuItem
 {
 public:
-	class UCustomButtonWidget*                         Button;                                                   // 0x0318(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMenuAnchor*                                 Submenu;                                                  // 0x0320(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UImage*                                      SubmenuIndicator;                                         // 0x0328(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCustomButtonWidget*                         Button;                                                   // 0x0340(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMenuAnchor*                                 Submenu;                                                  // 0x0348(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UImage*                                      SubmenuIndicator;                                         // 0x0350(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

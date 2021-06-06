@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,10 +14,25 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.GetValidAmmoTypes_1
-struct ABuff_TekGrenadeLauncherHelper_C_GetValidAmmoTypes_1_Params
+// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.BPClientDoMultiUse
+struct ABuff_TekGrenadeLauncherHelper_C_BPClientDoMultiUse_Params
 {
-	TArray<class UClass*>                              TypesInInventory;                                         // (Parm, OutParm, ZeroConstructor)
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ClientUseIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.Generate Slot Wheel Entries
+struct ABuff_TekGrenadeLauncherHelper_C_Generate_Slot_Wheel_Entries_Params
+{
+	TArray<struct FCustomWheelEntry>                   Entries;                                                  // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.BPGetMultiUseEntries
+struct ABuff_TekGrenadeLauncherHelper_C_BPGetMultiUseEntries_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FMultiUseEntry>                      MultiUseEntries;                                          // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FMultiUseEntry>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.ReceiveDestroyed
@@ -61,10 +76,10 @@ struct ABuff_TekGrenadeLauncherHelper_C_GenerateAmmoWheelEntries_Params
 	TArray<struct FCustomWheelEntry>                   AmmoEntries;                                              // (Parm, OutParm, ZeroConstructor)
 };
 
-// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.GenerateSlotWheelEntries
-struct ABuff_TekGrenadeLauncherHelper_C_GenerateSlotWheelEntries_Params
+// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.Generate Slot Wheel EntriesMU
+struct ABuff_TekGrenadeLauncherHelper_C_Generate_Slot_Wheel_EntriesMU_Params
 {
-	TArray<struct FCustomWheelEntry>                   Entries;                                                  // (Parm, OutParm, ZeroConstructor)
+	TArray<struct FMultiUseEntry>                      MuEntries;                                                // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.CalcAmmoWidgetLocation
@@ -109,12 +124,6 @@ struct ABuff_TekGrenadeLauncherHelper_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.BuffTickClient
-struct ABuff_TekGrenadeLauncherHelper_C_BuffTickClient_Params
-{
-	float*                                             DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.OnSlotSelected
 struct ABuff_TekGrenadeLauncherHelper_C_OnSlotSelected_Params
 {
@@ -123,18 +132,6 @@ struct ABuff_TekGrenadeLauncherHelper_C_OnSlotSelected_Params
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.OnAmmoTypeSelected
 struct ABuff_TekGrenadeLauncherHelper_C_OnAmmoTypeSelected_Params
 {
-};
-
-// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.BPHandleOnStartAltFire
-struct ABuff_TekGrenadeLauncherHelper_C_BPHandleOnStartAltFire_Params
-{
-	bool*                                              bFromGamepad;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.BPHandleOnStopAltFire
-struct ABuff_TekGrenadeLauncherHelper_C_BPHandleOnStopAltFire_Params
-{
-	bool*                                              bFromGamepad;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.ShowSlotSelectWheel

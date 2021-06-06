@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_HazardSuitGloves.Buff_HazardSuitGloves_C
-// 0x0000 (0x0970 - 0x0970)
+// 0x0000 (0x0980 - 0x0980)
 class ABuff_HazardSuitGloves_C : public ABuff_HazardSuit_Base_C
 {
 public:

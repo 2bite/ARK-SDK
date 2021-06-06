@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -94,11 +94,11 @@ public:
 
 
 // Class OnlineSubsystemUtils.IpConnection
-// 0x0020 (0x34328 - 0x34308)
+// 0x0020 (0x34338 - 0x34318)
 class UIpConnection : public UNetConnection
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x34308(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x34318(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

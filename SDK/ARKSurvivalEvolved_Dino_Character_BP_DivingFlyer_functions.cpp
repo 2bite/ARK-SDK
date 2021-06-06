@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -618,15 +618,15 @@ void ADino_Character_BP_DivingFlyer_C::Diving_Start()
 // ()
 // Parameters:
 // bool                           newDiving                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ForceSet                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           forceSet                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_DivingFlyer_C::Set_Is_Diving(bool newDiving, bool ForceSet)
+void ADino_Character_BP_DivingFlyer_C::Set_Is_Diving(bool newDiving, bool forceSet)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.Set Is Diving");
 
 	ADino_Character_BP_DivingFlyer_C_Set_Is_Diving_Params params;
 	params.newDiving = newDiving;
-	params.ForceSet = ForceSet;
+	params.forceSet = forceSet;
 
 	auto flags = fn->FunctionFlags;
 

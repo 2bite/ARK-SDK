@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,6 +22,7 @@ struct UPrimalPlayerDataHelperFunctions_C_Apply_To_Player_Pawn_Character_Params
 	TArray<float>                                      Ascension_Data;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int                                                HexagonCount;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ChibiLevelUpsCount;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bUnlockedAllExplorerNotes;                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PrimalPlayerDataHelperFunctions.PrimalPlayerDataHelperFunctions_C.ExecuteUbergraph_PrimalPlayerDataHelperFunctions

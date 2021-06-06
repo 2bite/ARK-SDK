@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -116,14 +116,14 @@ void AMegalodon_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_166
+// Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_180
 // ()
 
-void AMegalodon_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_166()
+void AMegalodon_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_180()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_166");
+	static auto fn = UObject::FindObject<UFunction>("Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_180");
 
-	AMegalodon_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_166_Params params;
+	AMegalodon_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_180_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -133,14 +133,14 @@ void AMegalodon_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_166()
 }
 
 
-// Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_165
+// Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_179
 // ()
 
-void AMegalodon_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_165()
+void AMegalodon_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_179()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_165");
+	static auto fn = UObject::FindObject<UFunction>("Function Megalodon_Character_BP.Megalodon_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_179");
 
-	AMegalodon_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_165_Params params;
+	AMegalodon_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_179_Params params;
 
 	auto flags = fn->FunctionFlags;
 

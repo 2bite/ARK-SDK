@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BeeHive.BeeHive_C.BlueprintDrawHUD
-// (Exec, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient)
+// (Net, NetReliable, Exec, NetResponse, Public, Protected, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -29,7 +29,6 @@ void ABeeHive_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -190,7 +189,7 @@ bool ABeeHive_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function BeeHive.BeeHive_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Protected, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -204,6 +203,7 @@ TArray<struct FMultiUseEntry> ABeeHive_C::STATIC_BPGetMultiUseEntries(class APla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

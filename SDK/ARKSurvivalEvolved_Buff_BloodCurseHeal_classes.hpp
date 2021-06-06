@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_BloodCurseHeal.Buff_BloodCurseHeal_C
-// 0x0014 (0x0964 - 0x0950)
+// 0x0014 (0x0974 - 0x0960)
 class ABuff_BloodCurseHeal_C : public APrimalBuff
 {
 public:
-	TArray<class APrimalCharacter*>                    CurrentVictims;                                           // 0x0950(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	float                                              DamageToHealthRecMultiplier;                              // 0x0960(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class APrimalCharacter*>                    CurrentVictims;                                           // 0x0960(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	float                                              DamageToHealthRecMultiplier;                              // 0x0970(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

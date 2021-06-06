@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitterWeapon_ChargeLantern.Buff_ChargeEmitterWeapon_ChargeLantern_C
-// 0x000C (0x0BA8 - 0x0B9C)
+// 0x000C (0x0BB8 - 0x0BAC)
 class ABuff_ChargeEmitterWeapon_ChargeLantern_C : public ABuff_ChargeEmitterWeapon_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0B9C(0x0004) MISSED OFFSET
-	class UStaticMesh*                                 chargeEffectMeshOverride;                                 // 0x0BA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0BAC(0x0004) MISSED OFFSET
+	class UStaticMesh*                                 chargeEffectMeshOverride;                                 // 0x0BB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

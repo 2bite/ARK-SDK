@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void Buff_Create_Charge_Manager_No_Instigator_Library(class APrimalBuff* Buff, class UClass* managerClass, class APrimalBuff** chargeManager);
+	void STATIC_Buff_Create_Charge_Manager_No_Instigator_Library(class APrimalBuff* Buff, class UClass* managerClass, class APrimalBuff** chargeManager);
 	void Charge_Variable_Event_Integer_Library(TEnumAsByte<E_ChargeVariableNames> variableType, int dValue, class AActor* OwnerActor, class APrimalBuff* managerBuff, bool multicastEvent);
 	void Get_Charge_At_Point_Accurate(const struct FVector& Location, class AActor* worldActor, float Radius, class UClass* chargeEmitterClass, float* Charge);
 	void Charge_Variable_Event_Double_Library(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue, class AActor* OwnerActor, class APrimalBuff* managerBuff, bool multicastEvent);

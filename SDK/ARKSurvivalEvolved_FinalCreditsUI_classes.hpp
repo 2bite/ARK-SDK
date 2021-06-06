@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass FinalCreditsUI.FinalCreditsUI_C
-// 0x011A (0x0632 - 0x0518)
+// 0x011B (0x0633 - 0x0518)
 class UFinalCreditsUI_C : public UPrimalUI
 {
 public:
@@ -61,6 +61,7 @@ public:
 	class FString                                      CallFunc_GetLastMapPlayed_ReturnValue;                    // 0x0620(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
 	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue;                   // 0x0630(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue2;                  // 0x0631(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue3;                  // 0x0632(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,11 +57,11 @@ void ABuff_Uberraptor_Bleed_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.Do Damage Over TimeFn
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // double                         LastDotTime                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Uberraptor_Bleed_C::Do_Damage_Over_TimeFn(double LastDotTime)
+void ABuff_Uberraptor_Bleed_C::STATIC_Do_Damage_Over_TimeFn(double LastDotTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.Do Damage Over TimeFn");
 
@@ -69,7 +69,6 @@ void ABuff_Uberraptor_Bleed_C::Do_Damage_Over_TimeFn(double LastDotTime)
 	params.LastDotTime = LastDotTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +77,7 @@ void ABuff_Uberraptor_Bleed_C::Do_Damage_Over_TimeFn(double LastDotTime)
 
 
 // Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.BPAdjustStatusValueModification
-// (Exec, Native, Static, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient)
+// (NetReliable, NetRequest, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalCharacterStatusComponent** ForComponent                   (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -87,7 +86,7 @@ void ABuff_Uberraptor_Bleed_C::Do_Damage_Over_TimeFn(double LastDotTime)
 // bool*                          bManualModification            (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABuff_Uberraptor_Bleed_C::STATIC_BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
+float ABuff_Uberraptor_Bleed_C::BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.BPAdjustStatusValueModification");
 
@@ -99,7 +98,6 @@ float ABuff_Uberraptor_Bleed_C::STATIC_BPAdjustStatusValueModification(class UPr
 	params.bManualModification = bManualModification;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

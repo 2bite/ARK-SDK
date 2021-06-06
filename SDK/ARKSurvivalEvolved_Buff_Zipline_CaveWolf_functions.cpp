@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -240,7 +240,7 @@ void ABuff_Zipline_CaveWolf_C::Play_Detach_Animation(float* Duration)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.IsStillColliding
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, BlueprintCallable)
 
 void ABuff_Zipline_CaveWolf_C::STATIC_IsStillColliding()
 {
@@ -257,17 +257,18 @@ void ABuff_Zipline_CaveWolf_C::STATIC_IsStillColliding()
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.CanZiplineFlip
-// (NetReliable, Exec, Event, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, BlueprintCallable)
 // Parameters:
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_CaveWolf_C::CanZiplineFlip(bool* Return)
+void ABuff_Zipline_CaveWolf_C::STATIC_CanZiplineFlip(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.CanZiplineFlip");
 
 	ABuff_Zipline_CaveWolf_C_CanZiplineFlip_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -318,7 +319,7 @@ void ABuff_Zipline_CaveWolf_C::HandleCollision(struct FHitResult* Hit)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.HitZiplineEndStop
-// (Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, BlueprintCallable)
 // Parameters:
 // class UMovementComponent**     MovementComp                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -330,7 +331,6 @@ void ABuff_Zipline_CaveWolf_C::STATIC_HitZiplineEndStop(class UMovementComponent
 	params.MovementComp = MovementComp;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -480,7 +480,7 @@ void ABuff_Zipline_CaveWolf_C::ProcessMotorInput(float* A)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.JumpImpulse
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (Native, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FVector*                Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -501,7 +501,7 @@ void ABuff_Zipline_CaveWolf_C::JumpImpulse(struct FVector* Direction)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.UpdateActorZiplineOffset
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
 
 void ABuff_Zipline_CaveWolf_C::UpdateActorZiplineOffset()
 {
@@ -557,7 +557,7 @@ void ABuff_Zipline_CaveWolf_C::SetHurtAnim(bool Hanging, bool Reset)
 
 
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.AttachToZipline
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Native, Static, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FVector*                StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -830,14 +830,14 @@ void ABuff_Zipline_CaveWolf_C::UserConstructionScript()
 }
 
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_103
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_110
 // ()
 
-void ABuff_Zipline_CaveWolf_C::InpActEvt_Run_K2Node_InputActionEvent_103()
+void ABuff_Zipline_CaveWolf_C::InpActEvt_Run_K2Node_InputActionEvent_110()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_103");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_110");
 
-	ABuff_Zipline_CaveWolf_C_InpActEvt_Run_K2Node_InputActionEvent_103_Params params;
+	ABuff_Zipline_CaveWolf_C_InpActEvt_Run_K2Node_InputActionEvent_110_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -847,14 +847,14 @@ void ABuff_Zipline_CaveWolf_C::InpActEvt_Run_K2Node_InputActionEvent_103()
 }
 
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_102
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_109
 // ()
 
-void ABuff_Zipline_CaveWolf_C::InpActEvt_Run_K2Node_InputActionEvent_102()
+void ABuff_Zipline_CaveWolf_C::InpActEvt_Run_K2Node_InputActionEvent_109()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_102");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_109");
 
-	ABuff_Zipline_CaveWolf_C_InpActEvt_Run_K2Node_InputActionEvent_102_Params params;
+	ABuff_Zipline_CaveWolf_C_InpActEvt_Run_K2Node_InputActionEvent_109_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -864,14 +864,14 @@ void ABuff_Zipline_CaveWolf_C::InpActEvt_Run_K2Node_InputActionEvent_102()
 }
 
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Jump_K2Node_InputActionEvent_101
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Jump_K2Node_InputActionEvent_108
 // ()
 
-void ABuff_Zipline_CaveWolf_C::InpActEvt_Jump_K2Node_InputActionEvent_101()
+void ABuff_Zipline_CaveWolf_C::InpActEvt_Jump_K2Node_InputActionEvent_108()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Jump_K2Node_InputActionEvent_101");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Jump_K2Node_InputActionEvent_108");
 
-	ABuff_Zipline_CaveWolf_C_InpActEvt_Jump_K2Node_InputActionEvent_101_Params params;
+	ABuff_Zipline_CaveWolf_C_InpActEvt_Jump_K2Node_InputActionEvent_108_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -881,14 +881,14 @@ void ABuff_Zipline_CaveWolf_C::InpActEvt_Jump_K2Node_InputActionEvent_101()
 }
 
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Use_K2Node_InputActionEvent_100
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Use_K2Node_InputActionEvent_107
 // ()
 
-void ABuff_Zipline_CaveWolf_C::InpActEvt_Use_K2Node_InputActionEvent_100()
+void ABuff_Zipline_CaveWolf_C::InpActEvt_Use_K2Node_InputActionEvent_107()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Use_K2Node_InputActionEvent_100");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Use_K2Node_InputActionEvent_107");
 
-	ABuff_Zipline_CaveWolf_C_InpActEvt_Use_K2Node_InputActionEvent_100_Params params;
+	ABuff_Zipline_CaveWolf_C_InpActEvt_Use_K2Node_InputActionEvent_107_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -898,14 +898,14 @@ void ABuff_Zipline_CaveWolf_C::InpActEvt_Use_K2Node_InputActionEvent_100()
 }
 
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Crouch_K2Node_InputActionEvent_99
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Crouch_K2Node_InputActionEvent_106
 // ()
 
-void ABuff_Zipline_CaveWolf_C::InpActEvt_Crouch_K2Node_InputActionEvent_99()
+void ABuff_Zipline_CaveWolf_C::InpActEvt_Crouch_K2Node_InputActionEvent_106()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Crouch_K2Node_InputActionEvent_99");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Crouch_K2Node_InputActionEvent_106");
 
-	ABuff_Zipline_CaveWolf_C_InpActEvt_Crouch_K2Node_InputActionEvent_99_Params params;
+	ABuff_Zipline_CaveWolf_C_InpActEvt_Crouch_K2Node_InputActionEvent_106_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -915,14 +915,31 @@ void ABuff_Zipline_CaveWolf_C::InpActEvt_Crouch_K2Node_InputActionEvent_99()
 }
 
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_98
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105
 // ()
 
-void ABuff_Zipline_CaveWolf_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_98()
+void ABuff_Zipline_CaveWolf_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_98");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105");
 
-	ABuff_Zipline_CaveWolf_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_98_Params params;
+	ABuff_Zipline_CaveWolf_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51
+// ()
+
+void ABuff_Zipline_CaveWolf_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51");
+
+	ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -949,14 +966,14 @@ void ABuff_Zipline_CaveWolf_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyE
 }
 
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_49
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104
 // ()
 
-void ABuff_Zipline_CaveWolf_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_49()
+void ABuff_Zipline_CaveWolf_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_49");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104");
 
-	ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_49_Params params;
+	ABuff_Zipline_CaveWolf_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -966,31 +983,14 @@ void ABuff_Zipline_CaveWolf_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyE
 }
 
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_97
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_49
 // ()
 
-void ABuff_Zipline_CaveWolf_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_97()
+void ABuff_Zipline_CaveWolf_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_49()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_97");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_49");
 
-	ABuff_Zipline_CaveWolf_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_97_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48
-// ()
-
-void ABuff_Zipline_CaveWolf_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48");
-
-	ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48_Params params;
+	ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_49_Params params;
 
 	auto flags = fn->FunctionFlags;
 

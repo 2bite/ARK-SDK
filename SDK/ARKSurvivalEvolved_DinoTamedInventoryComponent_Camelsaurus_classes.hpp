@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Camelsaurus.DinoTamedInventoryComponent_Camelsaurus_C
-// 0x0008 (0x0578 - 0x0570)
+// 0x0008 (0x0598 - 0x0590)
 class UDinoTamedInventoryComponent_Camelsaurus_C : public UDinoTamedInventoryComponent_BP_Base_C
 {
 public:
-	class Acamelsaurus_Character_BP_C*                 CamelSaurusCharacter;                                     // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class Acamelsaurus_Character_BP_C*                 CamelSaurusCharacter;                                     // 0x0590(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +29,7 @@ public:
 
 
 	void BPInitializeInventory();
-	void TakeWaterFromContainers(float amountToTake, float* TakenAmount);
+	void TakeWaterFromContainers(float AmountToTake, float* TakenAmount);
 	void FillWaterContainers(float WaterAmount, float* WaterAmountLeft);
 	void ExecuteUbergraph_DinoTamedInventoryComponent_Camelsaurus(int EntryPoint);
 };

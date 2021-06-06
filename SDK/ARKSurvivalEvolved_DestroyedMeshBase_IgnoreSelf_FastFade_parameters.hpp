@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,26 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function DestroyedMeshBase_IgnoreSelf_FastFade.DestroyedMeshBase_IgnoreSelf_FastFade_C.ReceiveDestroyed
+struct ADestroyedMeshBase_IgnoreSelf_FastFade_C_ReceiveDestroyed_Params
+{
+};
+
+// Function DestroyedMeshBase_IgnoreSelf_FastFade.DestroyedMeshBase_IgnoreSelf_FastFade_C.SetFadingStaticMesh
+struct ADestroyedMeshBase_IgnoreSelf_FastFade_C_SetFadingStaticMesh_Params
+{
+	class UStaticMesh**                                TheMesh;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function DestroyedMeshBase_IgnoreSelf_FastFade.DestroyedMeshBase_IgnoreSelf_FastFade_C.UserConstructionScript
 struct ADestroyedMeshBase_IgnoreSelf_FastFade_C_UserConstructionScript_Params
 {
+};
+
+// Function DestroyedMeshBase_IgnoreSelf_FastFade.DestroyedMeshBase_IgnoreSelf_FastFade_C.ReceiveTick
+struct ADestroyedMeshBase_IgnoreSelf_FastFade_C_ReceiveTick_Params
+{
+	float*                                             DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DestroyedMeshBase_IgnoreSelf_FastFade.DestroyedMeshBase_IgnoreSelf_FastFade_C.ExecuteUbergraph_DestroyedMeshBase_IgnoreSelf_FastFade

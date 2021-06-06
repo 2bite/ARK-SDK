@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,16 +13,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.Sruggle
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, HasOutParms, HasDefaults, NetClient)
+// (Exec, Event, NetResponse, Public, HasDefaults, DLLImport, NetValidate)
 
-void ABuff_CarriedTarget_C::STATIC_Sruggle()
+void ABuff_CarriedTarget_C::Sruggle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CarriedTarget.Buff_CarriedTarget_C.Sruggle");
 
 	ABuff_CarriedTarget_C_Sruggle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,18 +67,17 @@ void ABuff_CarriedTarget_C::SetIsHostileBuff(bool NewSetting)
 
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.GetBuffDescription
-// (Native, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient)
+// (NetRequest, NetResponse, MulticastDelegate, NetClient, DLLImport, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_CarriedTarget_C::STATIC_GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_CarriedTarget_C::GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CarriedTarget.Buff_CarriedTarget_C.GetBuffDescription");
 
 	ABuff_CarriedTarget_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,12 +148,12 @@ void ABuff_CarriedTarget_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.BPGetHUDElements
-// (NetRequest, Event, Public, Delegate, NetServer, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Static, MulticastDelegate, NetClient, DLLImport, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_CarriedTarget_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABuff_CarriedTarget_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CarriedTarget.Buff_CarriedTarget_C.BPGetHUDElements");
 

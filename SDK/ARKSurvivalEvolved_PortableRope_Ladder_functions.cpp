@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,7 +53,7 @@ void APortableRope_Ladder_C::BPAttachedRootComponent()
 
 
 // Function PortableRope_Ladder.PortableRope_Ladder_C.BuildLadder
-// (NetReliable, NetRequest, Event, NetResponse, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void APortableRope_Ladder_C::BuildLadder()
 {
@@ -62,6 +62,7 @@ void APortableRope_Ladder_C::BuildLadder()
 	APortableRope_Ladder_C_BuildLadder_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

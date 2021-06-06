@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,30 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.SetSpline
+// ()
+// Parameters:
+// class AMissionSpline*          Spline                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           WasSet                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_RaceMissionHelper_C::SetSpline(class AMissionSpline* Spline, bool* WasSet)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.SetSpline");
+
+	ABuff_RaceMissionHelper_C_SetSpline_Params params;
+	params.Spline = Spline;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (WasSet != nullptr)
+		*WasSet = params.WasSet;
+}
+
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.Tick_UpdatePowerUps
 // ()
@@ -30,12 +54,12 @@ void ABuff_RaceMissionHelper_C::Tick_UpdatePowerUps()
 
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.ListenServerUpdateCheckpoints
-// (NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FMissionWorldIndicator> MissionDataBuff                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AShooterCharacter*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_RaceMissionHelper_C::STATIC_ListenServerUpdateCheckpoints(class AShooterCharacter* PC, TArray<struct FMissionWorldIndicator>* MissionDataBuff)
+void ABuff_RaceMissionHelper_C::ListenServerUpdateCheckpoints(class AShooterCharacter* PC, TArray<struct FMissionWorldIndicator>* MissionDataBuff)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.ListenServerUpdateCheckpoints");
 

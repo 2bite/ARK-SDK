@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Chest_AnimBP_Base.Chest_AnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_5622
+// Function Chest_AnimBP_Base.Chest_AnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_6684
 // ()
 
-void UChest_AnimBP_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_5622()
+void UChest_AnimBP_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_6684()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Chest_AnimBP_Base.Chest_AnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_5622");
+	static auto fn = UObject::FindObject<UFunction>("Function Chest_AnimBP_Base.Chest_AnimBP_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_6684");
 
-	UChest_AnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_5622_Params params;
+	UChest_AnimBP_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Chest_AnimBP_Base_AnimGraphNode_BlendListByBool_6684_Params params;
 
 	auto flags = fn->FunctionFlags;
 

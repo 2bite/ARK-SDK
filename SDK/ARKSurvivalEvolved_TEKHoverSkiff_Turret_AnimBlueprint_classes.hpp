@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,10 +90,10 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_312();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint_AnimGraphNode_BlendListByBool_5026();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint_AnimGraphNode_BlendListByBool_5025();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint_AnimGraphNode_BlendListByBool_5024();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_492();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint_AnimGraphNode_BlendListByBool_6678();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint_AnimGraphNode_BlendListByBool_6677();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint_AnimGraphNode_BlendListByBool_6676();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_TEKHoverSkiff_Turret_AnimBlueprint(int EntryPoint);
 };

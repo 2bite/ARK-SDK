@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -66,6 +66,12 @@ struct AFeedingTroughBaseBP_C_UserConstructionScript_Params
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ServerRequest_ToggleShowarea
 struct AFeedingTroughBaseBP_C_ServerRequest_ToggleShowarea_Params
 {
+};
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ServerRequest_TurnOffAllShowarea
+struct AFeedingTroughBaseBP_C_ServerRequest_TurnOffAllShowarea_Params
+{
+	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ExecuteUbergraph_FeedingTroughBaseBP

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,76 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.GetHudData
+// ()
+// Parameters:
+// bool                           HasSaddle                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UPrimalInventoryComponent* InventoryComponent             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  SaddleFuelItem                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  FlakCannonAmmoItem             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsUsingSuperFlight             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsUsingSuperFlightBoost        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          FuelPercent                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          CannonCooldownPercent          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          SpeedPercent                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ATropeognathus_Character_BP_C::GetHudData(bool* HasSaddle, class UPrimalInventoryComponent** InventoryComponent, class UClass** SaddleFuelItem, class UClass** FlakCannonAmmoItem, bool* IsUsingSuperFlight, bool* IsUsingSuperFlightBoost, float* FuelPercent, float* CannonCooldownPercent, float* SpeedPercent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.GetHudData");
+
+	ATropeognathus_Character_BP_C_GetHudData_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (HasSaddle != nullptr)
+		*HasSaddle = params.HasSaddle;
+	if (InventoryComponent != nullptr)
+		*InventoryComponent = params.InventoryComponent;
+	if (SaddleFuelItem != nullptr)
+		*SaddleFuelItem = params.SaddleFuelItem;
+	if (FlakCannonAmmoItem != nullptr)
+		*FlakCannonAmmoItem = params.FlakCannonAmmoItem;
+	if (IsUsingSuperFlight != nullptr)
+		*IsUsingSuperFlight = params.IsUsingSuperFlight;
+	if (IsUsingSuperFlightBoost != nullptr)
+		*IsUsingSuperFlightBoost = params.IsUsingSuperFlightBoost;
+	if (FuelPercent != nullptr)
+		*FuelPercent = params.FuelPercent;
+	if (CannonCooldownPercent != nullptr)
+		*CannonCooldownPercent = params.CannonCooldownPercent;
+	if (SpeedPercent != nullptr)
+		*SpeedPercent = params.SpeedPercent;
+}
+
+
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPGetHUDElements
+// (Exec, Static, NetMulticast, Public, Private, Protected, HasDefaults, DLLImport, NetValidate)
+// Parameters:
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
+
+void ATropeognathus_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPGetHUDElements");
+
+	ATropeognathus_Character_BP_C_BPGetHUDElements_Params params;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutElements != nullptr)
+		*OutElements = params.OutElements;
+}
+
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ReceiveBeginPlay
 // ()
@@ -320,7 +390,7 @@ void ATropeognathus_Character_BP_C::GetTamingBuff(bool* IsValid, class APrimalBu
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPOverrideTamingDescriptionLabel
-// (Net, NetReliable, NetRequest, Exec, Private, HasOutParms, HasDefaults, NetClient)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Public, Protected, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // struct FSlateColor             TextColor                      (Parm, OutParm, ReferenceParm)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -332,6 +402,7 @@ class FString ATropeognathus_Character_BP_C::BPOverrideTamingDescriptionLabel(st
 	ATropeognathus_Character_BP_C_BPOverrideTamingDescriptionLabel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -521,7 +592,7 @@ struct FName ATropeognathus_Character_BP_C::BPGetRiderSocket()
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.IsJumpHeld
-// (Net, NetReliable, Exec, Event, Private, HasOutParms, HasDefaults, NetClient)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Public, Protected, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -532,6 +603,7 @@ bool ATropeognathus_Character_BP_C::IsJumpHeld()
 	ATropeognathus_Character_BP_C_IsJumpHeld_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -697,16 +769,16 @@ void ATropeognathus_Character_BP_C::BPGetCrosshairLocation(float* CanvasClipX, f
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.consumeItem
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ConsumeItem
 // ()
 // Parameters:
 // class UClass*                  Item                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATropeognathus_Character_BP_C::consumeItem(class UClass* Item)
+void ATropeognathus_Character_BP_C::ConsumeItem(class UClass* Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.consumeItem");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ConsumeItem");
 
-	ATropeognathus_Character_BP_C_consumeItem_Params params;
+	ATropeognathus_Character_BP_C_ConsumeItem_Params params;
 	params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
@@ -764,12 +836,12 @@ bool ATropeognathus_Character_BP_C::BPOnStopJump()
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Fire Flak Cannon
-// (NetRequest, Native, NetResponse, Private, Protected, HasOutParms, HasDefaults, NetClient)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // struct FVector                 Dir                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATropeognathus_Character_BP_C::Fire_Flak_Cannon(const struct FVector& Dir, const struct FVector& Loc)
+void ATropeognathus_Character_BP_C::STATIC_Fire_Flak_Cannon(const struct FVector& Dir, const struct FVector& Loc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Fire Flak Cannon");
 
@@ -1360,15 +1432,16 @@ struct FVector ATropeognathus_Character_BP_C::GetWindGustEpicenter()
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.DoWing GustAOE
-// (Exec, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, NetValidate)
 
-void ATropeognathus_Character_BP_C::STATIC_DoWing_GustAOE()
+void ATropeognathus_Character_BP_C::DoWing_GustAOE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.DoWing GustAOE");
 
 	ATropeognathus_Character_BP_C_DoWing_GustAOE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1861,30 +1934,6 @@ bool ATropeognathus_Character_BP_C::BP_InterceptMoveForward(float* AxisValue)
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPGetHUDElements
-// ()
-// Parameters:
-// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
-
-void ATropeognathus_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPGetHUDElements");
-
-	ATropeognathus_Character_BP_C_BPGetHUDElements_Params params;
-	params.ForPC = ForPC;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutElements != nullptr)
-		*OutElements = params.OutElements;
-}
-
-
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPOverrideCameraViewTarget
 // ()
 // Parameters:
@@ -2017,15 +2066,17 @@ bool ATropeognathus_Character_BP_C::BPHandleControllerInitiatedAttack(int* Attac
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPModifyDesiredRotation
 // ()
 // Parameters:
+// float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                InDesiredRotation              (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FRotator                OutDesiredRotation             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATropeognathus_Character_BP_C::BPModifyDesiredRotation(struct FRotator* InDesiredRotation, struct FRotator* OutDesiredRotation)
+bool ATropeognathus_Character_BP_C::BPModifyDesiredRotation(float* DeltaTime, struct FRotator* InDesiredRotation, struct FRotator* OutDesiredRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPModifyDesiredRotation");
 
 	ATropeognathus_Character_BP_C_BPModifyDesiredRotation_Params params;
+	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2178,7 +2229,7 @@ void ATropeognathus_Character_BP_C::Controller_Follow_ActorRotation(float DeltaS
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ReferenceLatchingObjects
-// (Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, NetValidate)
 
 void ATropeognathus_Character_BP_C::STATIC_ReferenceLatchingObjects()
 {
@@ -2195,7 +2246,7 @@ void ATropeognathus_Character_BP_C::STATIC_ReferenceLatchingObjects()
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.LineTrace
-// (Exec, Native, Event, NetResponse, Public, Protected, HasOutParms, HasDefaults, NetClient)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // class UMeshComponent*          Mesh                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -2219,7 +2270,6 @@ void ATropeognathus_Character_BP_C::LineTrace(class UMeshComponent* Mesh, const 
 	params.BackwardLatching = BackwardLatching;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2274,20 +2324,21 @@ void ATropeognathus_Character_BP_C::ProcessLatching(float DeltaSeconds)
 
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.TryLatch
-// (NetRequest, NetResponse, Static, Public, Protected, HasOutParms, HasDefaults, NetClient)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // struct FVector                 Offset                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           BackwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           backwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATropeognathus_Character_BP_C::STATIC_TryLatch(const struct FVector& Offset, bool BackwardsLatching)
+void ATropeognathus_Character_BP_C::TryLatch(const struct FVector& Offset, bool backwardsLatching)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.TryLatch");
 
 	ATropeognathus_Character_BP_C_TryLatch_Params params;
 	params.Offset = Offset;
-	params.BackwardsLatching = BackwardsLatching;
+	params.backwardsLatching = backwardsLatching;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2312,14 +2363,14 @@ void ATropeognathus_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_212
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_339
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_212()
+void ATropeognathus_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_339()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_212");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_339");
 
-	ATropeognathus_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_212_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_339_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2329,14 +2380,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_21
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_211
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_338
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_211()
+void ATropeognathus_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_338()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_211");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_338");
 
-	ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_211_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_338_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2346,14 +2397,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_210
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_337
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_210()
+void ATropeognathus_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_337()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_210");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_337");
 
-	ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_210_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_337_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2363,14 +2414,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_209
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_336
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_209()
+void ATropeognathus_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_336()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_209");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_336");
 
-	ATropeognathus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_209_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_336_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2380,14 +2431,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_209
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_208
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_335
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_208()
+void ATropeognathus_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_335()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_208");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_335");
 
-	ATropeognathus_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_208_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_335_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2397,14 +2448,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_208(
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_62
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_72
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_62()
+void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_72()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_62");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_72");
 
-	ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_62_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_72_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2414,14 +2465,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftStick_Down_K2Node_Inpu
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_207
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_334
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_207()
+void ATropeognathus_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_334()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_207");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_334");
 
-	ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_207_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_334_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2431,14 +2482,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_Inpu
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_206
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_333
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_206()
+void ATropeognathus_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_333()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_206");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_333");
 
-	ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_206_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_333_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2448,14 +2499,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_Inpu
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_61
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_71
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_61()
+void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_71()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_61");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_71");
 
-	ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_61_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_71_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2465,14 +2516,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKe
 }
 
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_60
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_70
 // ()
 
-void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_60()
+void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_70()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_60");
+	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_70");
 
-	ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_60_Params params;
+	ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_70_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2485,14 +2536,14 @@ void ATropeognathus_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKe
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Latch
 // ()
 // Parameters:
-// bool                           BackwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           backwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATropeognathus_Character_BP_C::Latch(bool BackwardsLatching)
+void ATropeognathus_Character_BP_C::Latch(bool backwardsLatching)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Latch");
 
 	ATropeognathus_Character_BP_C_Latch_Params params;
-	params.BackwardsLatching = BackwardsLatching;
+	params.backwardsLatching = backwardsLatching;
 
 	auto flags = fn->FunctionFlags;
 

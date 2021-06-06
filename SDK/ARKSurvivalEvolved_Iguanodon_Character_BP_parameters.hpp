@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ struct AIguanodon_Character_BP_C_InitIguanodon_Params
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.NetSetHasFruitInInventory
 struct AIguanodon_Character_BP_C_NetSetHasFruitInInventory_Params
 {
-	bool                                               newVal;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Newval;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.Update Move SpeedByStance

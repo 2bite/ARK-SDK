@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.GetSkyMaterialReference
+struct ABP_Sky_Sphere_ARK_C_GetSkyMaterialReference_Params
+{
+	class UMaterialInstanceDynamic*                    Mid;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.ResetMaterials
+struct ABP_Sky_Sphere_ARK_C_ResetMaterials_Params
+{
+};
 
 // Function BP_Sky_Sphere_ARK.BP_Sky_Sphere_ARK_C.SetMaterials
 struct ABP_Sky_Sphere_ARK_C_SetMaterials_Params

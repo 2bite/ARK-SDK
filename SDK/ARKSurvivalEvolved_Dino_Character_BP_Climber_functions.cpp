@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -120,18 +120,17 @@ void ADino_Character_BP_Climber_C::AdjustClimbTraceTransform(const struct FName&
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Tick_SimulateSeekingBetweenFrames
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetResponse, Protected, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           bFoundSurface                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::STATIC_Tick_SimulateSeekingBetweenFrames(bool* bFoundSurface)
+void ADino_Character_BP_Climber_C::Tick_SimulateSeekingBetweenFrames(bool* bFoundSurface)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Tick_SimulateSeekingBetweenFrames");
 
 	ADino_Character_BP_Climber_C_Tick_SimulateSeekingBetweenFrames_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,7 +159,7 @@ void ADino_Character_BP_Climber_C::ClearCachedServerClimberMoveData()
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.CacheServerClimberMoveData
-// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Native, Static, Protected, HasDefaults, DLLImport, BlueprintPure)
 
 void ADino_Character_BP_Climber_C::STATIC_CacheServerClimberMoveData()
 {
@@ -178,15 +177,16 @@ void ADino_Character_BP_Climber_C::STATIC_CacheServerClimberMoveData()
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Tick_SimulateClimbingBetweenFrames
-// (NetReliable, NetRequest, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Native, Event, Static, Protected, HasDefaults, DLLImport, BlueprintPure)
 
-void ADino_Character_BP_Climber_C::Tick_SimulateClimbingBetweenFrames()
+void ADino_Character_BP_Climber_C::STATIC_Tick_SimulateClimbingBetweenFrames()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Tick_SimulateClimbingBetweenFrames");
 
 	ADino_Character_BP_Climber_C_Tick_SimulateClimbingBetweenFrames_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -434,14 +434,14 @@ void ADino_Character_BP_Climber_C::OnJumped()
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.NetSync_ClimberIsJumping
 // ()
 // Parameters:
-// bool                           newVal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Newval                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::NetSync_ClimberIsJumping(bool newVal)
+void ADino_Character_BP_Climber_C::NetSync_ClimberIsJumping(bool Newval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.NetSync_ClimberIsJumping");
 
 	ADino_Character_BP_Climber_C_NetSync_ClimberIsJumping_Params params;
-	params.newVal = newVal;
+	params.Newval = Newval;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1098,7 +1098,7 @@ void ADino_Character_BP_Climber_C::ConvertRotatorToWorld_Pure(const struct FRota
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ConvertRotatorToWorld
-// (Exec, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Native, Static, Protected, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // struct FRotator                localRotator                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                worldRotator                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1111,6 +1111,7 @@ void ADino_Character_BP_Climber_C::STATIC_ConvertRotatorToWorld(const struct FRo
 	params.localRotator = localRotator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1122,7 +1123,7 @@ void ADino_Character_BP_Climber_C::STATIC_ConvertRotatorToWorld(const struct FRo
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ConvertVectorToWorld
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Event, Static, Protected, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 localVector                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 WorldVector                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1135,7 +1136,6 @@ void ADino_Character_BP_Climber_C::STATIC_ConvertVectorToWorld(const struct FVec
 	params.localVector = localVector;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1150,15 +1150,15 @@ void ADino_Character_BP_Climber_C::STATIC_ConvertVectorToWorld(const struct FVec
 // ()
 // Parameters:
 // float                          newMin                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          newMAX                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          newMax                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::ClimberUpdateServerTimer(float newMin, float newMAX)
+void ADino_Character_BP_Climber_C::ClimberUpdateServerTimer(float newMin, float newMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ClimberUpdateServerTimer");
 
 	ADino_Character_BP_Climber_C_ClimberUpdateServerTimer_Params params;
 	params.newMin = newMin;
-	params.newMAX = newMAX;
+	params.newMax = newMax;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1213,13 +1213,13 @@ void ADino_Character_BP_Climber_C::IsClimberFalling(bool* Result)
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber_TraceForMoveNormal
-// (NetRequest, Native, Event, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, Protected, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // struct FVector                 TargetLocation                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           foundHit                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 newMoveNormal                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::Climber_TraceForMoveNormal(const struct FVector& TargetLocation, bool* foundHit, struct FVector* newMoveNormal)
+void ADino_Character_BP_Climber_C::STATIC_Climber_TraceForMoveNormal(const struct FVector& TargetLocation, bool* foundHit, struct FVector* newMoveNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber_TraceForMoveNormal");
 
@@ -1501,7 +1501,7 @@ void ADino_Character_BP_Climber_C::Climber_AI_Update_ClimbWander_TargetRotation(
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ConvertRotatorToLocal
-// (Event, NetResponse, Static, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Exec, Static, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // struct FRotator                Rotator                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                localRotator                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1828,9 +1828,9 @@ void ADino_Character_BP_Climber_C::CanClimberRetryClimbingTrace(int TraceIndex, 
 // struct FVector                 surfaceLocation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 surfaceNormal                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 surfaceLocation_Move           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SurfaceNormal_Move             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 surfaceNormal_Move             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::ProcessResultsOfClimbingTraces(int numValidTraceHits, bool requireAllTraceHitsValid, int numTraceSockets, const struct UObject_FTransform& currentClimberTransform, bool centerTraceHit, const struct FVector& desiredSurfaceLocation, TArray<int>* traceIndecesArray, TArray<bool>* traceHitsArray, TArray<struct FVector>* traceHitLocationsArray, TArray<struct FVector>* traceNormalsArray, bool* isSurfaceValid, struct FVector* surfaceLocation, struct FVector* surfaceNormal, struct FVector* surfaceLocation_Move, struct FVector* SurfaceNormal_Move)
+void ADino_Character_BP_Climber_C::ProcessResultsOfClimbingTraces(int numValidTraceHits, bool requireAllTraceHitsValid, int numTraceSockets, const struct UObject_FTransform& currentClimberTransform, bool centerTraceHit, const struct FVector& desiredSurfaceLocation, TArray<int>* traceIndecesArray, TArray<bool>* traceHitsArray, TArray<struct FVector>* traceHitLocationsArray, TArray<struct FVector>* traceNormalsArray, bool* isSurfaceValid, struct FVector* surfaceLocation, struct FVector* surfaceNormal, struct FVector* surfaceLocation_Move, struct FVector* surfaceNormal_Move)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ProcessResultsOfClimbingTraces");
 
@@ -1864,13 +1864,13 @@ void ADino_Character_BP_Climber_C::ProcessResultsOfClimbingTraces(int numValidTr
 		*surfaceNormal = params.surfaceNormal;
 	if (surfaceLocation_Move != nullptr)
 		*surfaceLocation_Move = params.surfaceLocation_Move;
-	if (SurfaceNormal_Move != nullptr)
-		*SurfaceNormal_Move = params.SurfaceNormal_Move;
+	if (surfaceNormal_Move != nullptr)
+		*surfaceNormal_Move = params.surfaceNormal_Move;
 }
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.CenterSphereTraceForSurfaceLocation
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Event, Static, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // struct UObject_FTransform      currTransform                  (Parm, IsPlainOldData)
 // bool                           foundSurface                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1884,7 +1884,6 @@ void ADino_Character_BP_Climber_C::STATIC_CenterSphereTraceForSurfaceLocation(co
 	params.currTransform = currTransform;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1898,7 +1897,7 @@ void ADino_Character_BP_Climber_C::STATIC_CenterSphereTraceForSurfaceLocation(co
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.TraceForClimbableSurface
-// (NetRequest, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // TArray<struct UObject_FTransform> traceSocketOffsetTransforms    (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct UObject_FTransform      ClimberTransform               (Parm, IsPlainOldData)
@@ -1911,7 +1910,7 @@ void ADino_Character_BP_Climber_C::STATIC_CenterSphereTraceForSurfaceLocation(co
 // TArray<struct FVector>         traceHitLocations              (Parm, OutParm, ZeroConstructor)
 // TArray<struct FVector>         traceHitNormals                (Parm, OutParm, ZeroConstructor)
 
-void ADino_Character_BP_Climber_C::TraceForClimbableSurface(const struct UObject_FTransform& ClimberTransform, float TraceLength, bool preventTraceRetries, TArray<struct UObject_FTransform>* traceSocketOffsetTransforms, TArray<int>* currSurfaceTraceIndecesArray, bool* foundAnyValidTraceHits, int* numValidTraceHits, TArray<bool>* validTraceHits, TArray<struct FVector>* traceHitLocations, TArray<struct FVector>* traceHitNormals)
+void ADino_Character_BP_Climber_C::STATIC_TraceForClimbableSurface(const struct UObject_FTransform& ClimberTransform, float TraceLength, bool preventTraceRetries, TArray<struct UObject_FTransform>* traceSocketOffsetTransforms, TArray<int>* currSurfaceTraceIndecesArray, bool* foundAnyValidTraceHits, int* numValidTraceHits, TArray<bool>* validTraceHits, TArray<struct FVector>* traceHitLocations, TArray<struct FVector>* traceHitNormals)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.TraceForClimbableSurface");
 
@@ -1968,7 +1967,7 @@ void ADino_Character_BP_Climber_C::ConvertRotatorToLocal_Pure(const struct FRota
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ClimbingIK_TraceForNewSurfaceNormals
-// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
 // Parameters:
 // class FString                  socketGroupSubstring           (Parm, ZeroConstructor)
 // float                          dot                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1981,6 +1980,7 @@ void ADino_Character_BP_Climber_C::STATIC_ClimbingIK_TraceForNewSurfaceNormals(c
 	params.socketGroupSubstring = socketGroupSubstring;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1992,15 +1992,16 @@ void ADino_Character_BP_Climber_C::STATIC_ClimbingIK_TraceForNewSurfaceNormals(c
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ClimbingIK_UpdateMeshHeightOffset
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
+// (Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintPure)
 
-void ADino_Character_BP_Climber_C::ClimbingIK_UpdateMeshHeightOffset()
+void ADino_Character_BP_Climber_C::STATIC_ClimbingIK_UpdateMeshHeightOffset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ClimbingIK_UpdateMeshHeightOffset");
 
 	ADino_Character_BP_Climber_C_ClimbingIK_UpdateMeshHeightOffset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2464,14 +2465,14 @@ void ADino_Character_BP_Climber_C::GetCurrentRiderFinalCameraRotationArrayIndex(
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Update Riding Players Final Camera Rotations
 // ()
 // Parameters:
-// bool                           StartedClimbing                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           startedClimbing                (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::Update_Riding_Players_Final_Camera_Rotations(bool StartedClimbing)
+void ADino_Character_BP_Climber_C::Update_Riding_Players_Final_Camera_Rotations(bool startedClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Update Riding Players Final Camera Rotations");
 
 	ADino_Character_BP_Climber_C_Update_Riding_Players_Final_Camera_Rotations_Params params;
-	params.StartedClimbing = StartedClimbing;
+	params.startedClimbing = startedClimbing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3300,7 +3301,7 @@ void ADino_Character_BP_Climber_C::ResetShouldDrawCrosshair()
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber Check for ObstaclesInDir
-// (NetRequest, Native, NetResponse, Protected, HasOutParms, HasDefaults, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 checkDir                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          checkTrace_Distance            (Parm, ZeroConstructor, IsPlainOldData)
@@ -3310,7 +3311,7 @@ void ADino_Character_BP_Climber_C::ResetShouldDrawCrosshair()
 // bool                           NoObstacles                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              obstacleHit                    (Parm, OutParm)
 
-void ADino_Character_BP_Climber_C::Climber_Check_for_ObstaclesInDir(const struct FVector& checkDir, float checkTrace_Distance, float checkTrace_Padding, TEnumAsByte<ETraceTypeQuery> checkTrace_Channel, bool forceDebug, bool* NoObstacles, struct FHitResult* obstacleHit)
+void ADino_Character_BP_Climber_C::STATIC_Climber_Check_for_ObstaclesInDir(const struct FVector& checkDir, float checkTrace_Distance, float checkTrace_Padding, TEnumAsByte<ETraceTypeQuery> checkTrace_Channel, bool forceDebug, bool* NoObstacles, struct FHitResult* obstacleHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber Check for ObstaclesInDir");
 
@@ -3751,7 +3752,7 @@ bool ADino_Character_BP_Climber_C::BPDesiredRotationIsLocalSpace()
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ClimberCheckForAboveWalkableGround
-// (NetReliable, Native, Event, NetResponse, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Event, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -3762,7 +3763,6 @@ void ADino_Character_BP_Climber_C::ClimberCheckForAboveWalkableGround(bool* Resu
 	ADino_Character_BP_Climber_C_ClimberCheckForAboveWalkableGround_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3776,15 +3776,17 @@ void ADino_Character_BP_Climber_C::ClimberCheckForAboveWalkableGround(bool* Resu
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.BPModifyDesiredRotation
 // ()
 // Parameters:
+// float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                InDesiredRotation              (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FRotator                OutDesiredRotation             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ADino_Character_BP_Climber_C::BPModifyDesiredRotation(struct FRotator* InDesiredRotation, struct FRotator* OutDesiredRotation)
+bool ADino_Character_BP_Climber_C::BPModifyDesiredRotation(float* DeltaTime, struct FRotator* InDesiredRotation, struct FRotator* OutDesiredRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.BPModifyDesiredRotation");
 
 	ADino_Character_BP_Climber_C_BPModifyDesiredRotation_Params params;
+	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4141,7 +4143,7 @@ bool ADino_Character_BP_Climber_C::BPOverrideFPVViewLocation(class APrimalCharac
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.BPGetFPVViewLocation
-// (NetReliable, Native, Event, NetResponse, Protected, HasOutParms, HasDefaults, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APrimalCharacter**       viewingCharacter               (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -4154,7 +4156,6 @@ struct FVector ADino_Character_BP_Climber_C::BPGetFPVViewLocation(class APrimalC
 	params.viewingCharacter = viewingCharacter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4654,7 +4655,7 @@ void ADino_Character_BP_Climber_C::LerpRotatorToTarget(const struct FRotator& cu
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Trace for Non Climbable Surface
-// (Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintEvent, Const, NetValidate)
+// (Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 traceDir                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -4667,6 +4668,7 @@ void ADino_Character_BP_Climber_C::STATIC_Trace_for_Non_Climbable_Surface(const 
 	params.traceDir = traceDir;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4678,7 +4680,7 @@ void ADino_Character_BP_Climber_C::STATIC_Trace_for_Non_Climbable_Surface(const 
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Get Surface Trace Offset Array from UseTraceMap
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintEvent, Const, NetValidate)
+// (Exec, Event, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<bool>                   useMap                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct UObject_FTransform> Result                         (Parm, OutParm, ZeroConstructor)
@@ -4691,7 +4693,6 @@ void ADino_Character_BP_Climber_C::STATIC_Get_Surface_Trace_Offset_Array_from_Us
 	ADino_Character_BP_Climber_C_Get_Surface_Trace_Offset_Array_from_UseTraceMap_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4813,7 +4814,7 @@ void ADino_Character_BP_Climber_C::SetClimbableSurfaceVars(const struct FVector&
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.SnapClimberToSurface
-// (NetReliable, Native, Event, NetResponse, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 
 void ADino_Character_BP_Climber_C::SnapClimberToSurface()
 {
@@ -4822,7 +4823,6 @@ void ADino_Character_BP_Climber_C::SnapClimberToSurface()
 	ADino_Character_BP_Climber_C_SnapClimberToSurface_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5114,15 +5114,15 @@ void ADino_Character_BP_Climber_C::Get_Climber_Up_Vector(struct FVector* Up)
 // ()
 // Parameters:
 // bool                           restoreToDefault               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           newVal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Newval                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::SetClimberCanIgnoreWater(bool restoreToDefault, bool newVal)
+void ADino_Character_BP_Climber_C::SetClimberCanIgnoreWater(bool restoreToDefault, bool Newval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.SetClimberCanIgnoreWater");
 
 	ADino_Character_BP_Climber_C_SetClimberCanIgnoreWater_Params params;
 	params.restoreToDefault = restoreToDefault;
-	params.newVal = newVal;
+	params.Newval = Newval;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5157,9 +5157,9 @@ void ADino_Character_BP_Climber_C::Can_Climber_Currently_Climb_Out_Of_Water(bool
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.CheckForClimbOutOfWater
 // ()
 // Parameters:
-// bool                           allowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           AllowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::CheckForClimbOutOfWater(bool* allowClimbing)
+void ADino_Character_BP_Climber_C::CheckForClimbOutOfWater(bool* AllowClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.CheckForClimbOutOfWater");
 
@@ -5171,8 +5171,8 @@ void ADino_Character_BP_Climber_C::CheckForClimbOutOfWater(bool* allowClimbing)
 
 	fn->FunctionFlags = flags;
 
-	if (allowClimbing != nullptr)
-		*allowClimbing = params.allowClimbing;
+	if (AllowClimbing != nullptr)
+		*AllowClimbing = params.AllowClimbing;
 }
 
 
@@ -5657,7 +5657,7 @@ void ADino_Character_BP_Climber_C::IsClimberPlayingAnim(class UAnimMontage* chec
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Interp Climber toTransform
-// (NetReliable, Event, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct UObject_FTransform      Transform                      (Parm, IsPlainOldData)
 // float                          LocationInterpSpeed            (Parm, ZeroConstructor, IsPlainOldData)
@@ -5665,7 +5665,7 @@ void ADino_Character_BP_Climber_C::IsClimberPlayingAnim(class UAnimMontage* chec
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           reachedTransform               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::Interp_Climber_toTransform(const struct UObject_FTransform& Transform, float LocationInterpSpeed, float RotationInterpSpeed, float DeltaTime, bool* reachedTransform)
+void ADino_Character_BP_Climber_C::STATIC_Interp_Climber_toTransform(const struct UObject_FTransform& Transform, float LocationInterpSpeed, float RotationInterpSpeed, float DeltaTime, bool* reachedTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Interp Climber toTransform");
 
@@ -5676,6 +5676,7 @@ void ADino_Character_BP_Climber_C::Interp_Climber_toTransform(const struct UObje
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5687,11 +5688,11 @@ void ADino_Character_BP_Climber_C::Interp_Climber_toTransform(const struct UObje
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.SoftSetClimberTransform
-// (NetReliable, Native, Event, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct UObject_FTransform      NewTransform                   (Parm, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::SoftSetClimberTransform(const struct UObject_FTransform& NewTransform)
+void ADino_Character_BP_Climber_C::STATIC_SoftSetClimberTransform(const struct UObject_FTransform& NewTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.SoftSetClimberTransform");
 
@@ -5699,7 +5700,6 @@ void ADino_Character_BP_Climber_C::SoftSetClimberTransform(const struct UObject_
 	params.NewTransform = NewTransform;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5752,7 +5752,7 @@ void ADino_Character_BP_Climber_C::Get_Correct_Mesh_Offset(struct FVector* Offse
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.StoreClimb Trace Socket Offsets
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (Native, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 
 void ADino_Character_BP_Climber_C::StoreClimb_Trace_Socket_Offsets()
 {
@@ -5816,9 +5816,9 @@ void ADino_Character_BP_Climber_C::RotateClimber_To_Look_Rotation()
 // TArray<bool>                   traceHitsArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            numValidHits                   (Parm, ZeroConstructor, IsPlainOldData)
 // int                            numTraces                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           allowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           AllowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::Check_For_Prevent_Stop_Climbing(int numValidHits, int numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing)
+void ADino_Character_BP_Climber_C::Check_For_Prevent_Stop_Climbing(int numValidHits, int numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Check For Prevent Stop Climbing");
 
@@ -5834,8 +5834,8 @@ void ADino_Character_BP_Climber_C::Check_For_Prevent_Stop_Climbing(int numValidH
 
 	if (traceHitsArray != nullptr)
 		*traceHitsArray = params.traceHitsArray;
-	if (allowClimbing != nullptr)
-		*allowClimbing = params.allowClimbing;
+	if (AllowClimbing != nullptr)
+		*AllowClimbing = params.AllowClimbing;
 }
 
 
@@ -6286,7 +6286,7 @@ void ADino_Character_BP_Climber_C::Replicate_Index_Update_Non_Dedi_Climber()
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Find Valid AiSpawn Transform
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
+// (Native, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           canSpawn                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      validTransform                 (Parm, OutParm, IsPlainOldData)
@@ -6367,20 +6367,20 @@ void ADino_Character_BP_Climber_C::ReachedTop_Of_Climb()
 // Parameters:
 // bool                           validSurfaceFound              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SurfaceNormal_Move             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 surfaceNormal_Move             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 surfaceLocation                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 surfaceLocation_Move           (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<bool>                   hitMap                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    traceIndexArray                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ADino_Character_BP_Climber_C::UpdateClimbingVars(bool validSurfaceFound, const struct FVector& surfaceNormal, const struct FVector& SurfaceNormal_Move, const struct FVector& surfaceLocation, const struct FVector& surfaceLocation_Move, TArray<bool>* hitMap, TArray<int>* traceIndexArray)
+void ADino_Character_BP_Climber_C::UpdateClimbingVars(bool validSurfaceFound, const struct FVector& surfaceNormal, const struct FVector& surfaceNormal_Move, const struct FVector& surfaceLocation, const struct FVector& surfaceLocation_Move, TArray<bool>* hitMap, TArray<int>* traceIndexArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.UpdateClimbingVars");
 
 	ADino_Character_BP_Climber_C_UpdateClimbingVars_Params params;
 	params.validSurfaceFound = validSurfaceFound;
 	params.surfaceNormal = surfaceNormal;
-	params.SurfaceNormal_Move = SurfaceNormal_Move;
+	params.surfaceNormal_Move = surfaceNormal_Move;
 	params.surfaceLocation = surfaceLocation;
 	params.surfaceLocation_Move = surfaceLocation_Move;
 
@@ -6843,11 +6843,11 @@ void ADino_Character_BP_Climber_C::Reduce_StaminaWhileClimbing()
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ClimberPlayLandAnim
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           forceSuccess                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::STATIC_ClimberPlayLandAnim(bool forceSuccess)
+void ADino_Character_BP_Climber_C::ClimberPlayLandAnim(bool forceSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.ClimberPlayLandAnim");
 
@@ -6855,6 +6855,7 @@ void ADino_Character_BP_Climber_C::STATIC_ClimberPlayLandAnim(bool forceSuccess)
 	params.forceSuccess = forceSuccess;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -6929,14 +6930,14 @@ void ADino_Character_BP_Climber_C::CleanUpClimbingAnims(bool* animsClean)
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Set Should Restore to Attached
 // ()
 // Parameters:
-// bool                           newVal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Newval                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::Set_Should_Restore_to_Attached(bool newVal)
+void ADino_Character_BP_Climber_C::Set_Should_Restore_to_Attached(bool Newval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Set Should Restore to Attached");
 
 	ADino_Character_BP_Climber_C_Set_Should_Restore_to_Attached_Params params;
-	params.newVal = newVal;
+	params.Newval = Newval;
 
 	auto flags = fn->FunctionFlags;
 
@@ -7136,15 +7137,16 @@ void ADino_Character_BP_Climber_C::BPUnstasis()
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber_AI_CheckForAttachToSurfaceOnSpawn
-// (NetReliable, NetRequest, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 
-void ADino_Character_BP_Climber_C::Climber_AI_CheckForAttachToSurfaceOnSpawn()
+void ADino_Character_BP_Climber_C::STATIC_Climber_AI_CheckForAttachToSurfaceOnSpawn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber_AI_CheckForAttachToSurfaceOnSpawn");
 
 	ADino_Character_BP_Climber_C_Climber_AI_CheckForAttachToSurfaceOnSpawn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -7173,7 +7175,7 @@ void ADino_Character_BP_Climber_C::Client_Set_Climber_State(unsigned char NewSta
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Can ClimberContinueClimbing
-// (NetResponse, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (Net, NetReliable, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -7197,15 +7199,15 @@ void ADino_Character_BP_Climber_C::Can_ClimberContinueClimbing(bool* Result)
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber_AI_SetAttachedToSurface
 // ()
 // Parameters:
-// bool                           newVal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Newval                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           forceSuccess                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::Climber_AI_SetAttachedToSurface(bool newVal, bool forceSuccess)
+void ADino_Character_BP_Climber_C::Climber_AI_SetAttachedToSurface(bool Newval, bool forceSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Climber_AI_SetAttachedToSurface");
 
 	ADino_Character_BP_Climber_C_Climber_AI_SetAttachedToSurface_Params params;
-	params.newVal = newVal;
+	params.Newval = Newval;
 	params.forceSuccess = forceSuccess;
 
 	auto flags = fn->FunctionFlags;
@@ -7398,7 +7400,7 @@ void ADino_Character_BP_Climber_C::IsClimberGrounded(bool* Result)
 
 
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.CalcCurrentClimbableSurface
-// (NetReliable, Exec, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TraceDistance                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           preventTraceRetries            (Parm, ZeroConstructor, IsPlainOldData)
@@ -7409,13 +7411,13 @@ void ADino_Character_BP_Climber_C::IsClimberGrounded(bool* Result)
 // TArray<bool>                   newUseMap                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           validSurfaceFound              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 surfaceNormal                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SurfaceNormal_Move             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 surfaceNormal_Move             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 surfaceLocation                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 surfaceLocation_Move           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TArray<bool>                   hitMap                         (Parm, OutParm, ZeroConstructor)
 // TArray<int>                    traceIndexArray                (Parm, OutParm, ZeroConstructor)
 
-void ADino_Character_BP_Climber_C::CalcCurrentClimbableSurface(float TraceDistance, bool preventTraceRetries, bool requireAllTraceHitsAreValid, bool OverrideClimberTransform, const struct UObject_FTransform& NewTransform, bool OverrideTraceUseMap, TArray<bool>* newUseMap, bool* validSurfaceFound, struct FVector* surfaceNormal, struct FVector* SurfaceNormal_Move, struct FVector* surfaceLocation, struct FVector* surfaceLocation_Move, TArray<bool>* hitMap, TArray<int>* traceIndexArray)
+void ADino_Character_BP_Climber_C::STATIC_CalcCurrentClimbableSurface(float TraceDistance, bool preventTraceRetries, bool requireAllTraceHitsAreValid, bool OverrideClimberTransform, const struct UObject_FTransform& NewTransform, bool OverrideTraceUseMap, TArray<bool>* newUseMap, bool* validSurfaceFound, struct FVector* surfaceNormal, struct FVector* surfaceNormal_Move, struct FVector* surfaceLocation, struct FVector* surfaceLocation_Move, TArray<bool>* hitMap, TArray<int>* traceIndexArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.CalcCurrentClimbableSurface");
 
@@ -7428,6 +7430,7 @@ void ADino_Character_BP_Climber_C::CalcCurrentClimbableSurface(float TraceDistan
 	params.OverrideTraceUseMap = OverrideTraceUseMap;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -7439,8 +7442,8 @@ void ADino_Character_BP_Climber_C::CalcCurrentClimbableSurface(float TraceDistan
 		*validSurfaceFound = params.validSurfaceFound;
 	if (surfaceNormal != nullptr)
 		*surfaceNormal = params.surfaceNormal;
-	if (SurfaceNormal_Move != nullptr)
-		*SurfaceNormal_Move = params.SurfaceNormal_Move;
+	if (surfaceNormal_Move != nullptr)
+		*surfaceNormal_Move = params.surfaceNormal_Move;
 	if (surfaceLocation != nullptr)
 		*surfaceLocation = params.surfaceLocation;
 	if (surfaceLocation_Move != nullptr)
@@ -7506,14 +7509,14 @@ void ADino_Character_BP_Climber_C::UserConstructionScript()
 }
 
 
-// Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Run_K2Node_InputActionEvent_113
+// Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Run_K2Node_InputActionEvent_120
 // ()
 
-void ADino_Character_BP_Climber_C::InpActEvt_Run_K2Node_InputActionEvent_113()
+void ADino_Character_BP_Climber_C::InpActEvt_Run_K2Node_InputActionEvent_120()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Run_K2Node_InputActionEvent_113");
+	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Run_K2Node_InputActionEvent_120");
 
-	ADino_Character_BP_Climber_C_InpActEvt_Run_K2Node_InputActionEvent_113_Params params;
+	ADino_Character_BP_Climber_C_InpActEvt_Run_K2Node_InputActionEvent_120_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -7523,14 +7526,14 @@ void ADino_Character_BP_Climber_C::InpActEvt_Run_K2Node_InputActionEvent_113()
 }
 
 
-// Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Run_K2Node_InputActionEvent_112
+// Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Run_K2Node_InputActionEvent_119
 // ()
 
-void ADino_Character_BP_Climber_C::InpActEvt_Run_K2Node_InputActionEvent_112()
+void ADino_Character_BP_Climber_C::InpActEvt_Run_K2Node_InputActionEvent_119()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Run_K2Node_InputActionEvent_112");
+	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Run_K2Node_InputActionEvent_119");
 
-	ADino_Character_BP_Climber_C_InpActEvt_Run_K2Node_InputActionEvent_112_Params params;
+	ADino_Character_BP_Climber_C_InpActEvt_Run_K2Node_InputActionEvent_119_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -7540,14 +7543,14 @@ void ADino_Character_BP_Climber_C::InpActEvt_Run_K2Node_InputActionEvent_112()
 }
 
 
-// Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_RunToggle_K2Node_InputActionEvent_111
+// Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_RunToggle_K2Node_InputActionEvent_118
 // ()
 
-void ADino_Character_BP_Climber_C::InpActEvt_RunToggle_K2Node_InputActionEvent_111()
+void ADino_Character_BP_Climber_C::InpActEvt_RunToggle_K2Node_InputActionEvent_118()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_RunToggle_K2Node_InputActionEvent_111");
+	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_RunToggle_K2Node_InputActionEvent_118");
 
-	ADino_Character_BP_Climber_C_InpActEvt_RunToggle_K2Node_InputActionEvent_111_Params params;
+	ADino_Character_BP_Climber_C_InpActEvt_RunToggle_K2Node_InputActionEvent_118_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -7557,14 +7560,14 @@ void ADino_Character_BP_Climber_C::InpActEvt_RunToggle_K2Node_InputActionEvent_1
 }
 
 
-// Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Jump_K2Node_InputActionEvent_110
+// Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Jump_K2Node_InputActionEvent_117
 // ()
 
-void ADino_Character_BP_Climber_C::InpActEvt_Jump_K2Node_InputActionEvent_110()
+void ADino_Character_BP_Climber_C::InpActEvt_Jump_K2Node_InputActionEvent_117()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Jump_K2Node_InputActionEvent_110");
+	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.InpActEvt_Jump_K2Node_InputActionEvent_117");
 
-	ADino_Character_BP_Climber_C_InpActEvt_Jump_K2Node_InputActionEvent_110_Params params;
+	ADino_Character_BP_Climber_C_InpActEvt_Jump_K2Node_InputActionEvent_117_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -8246,14 +8249,14 @@ void ADino_Character_BP_Climber_C::Multi_SoftSetClimberActorRotation(const struc
 // Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Server_SetIsClimberJumping
 // ()
 // Parameters:
-// bool                           newVal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Newval                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADino_Character_BP_Climber_C::Server_SetIsClimberJumping(bool newVal)
+void ADino_Character_BP_Climber_C::Server_SetIsClimberJumping(bool Newval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Climber.Dino_Character_BP_Climber_C.Server_SetIsClimberJumping");
 
 	ADino_Character_BP_Climber_C_Server_SetIsClimberJumping_Params params;
-	params.newVal = newVal;
+	params.Newval = Newval;
 
 	auto flags = fn->FunctionFlags;
 

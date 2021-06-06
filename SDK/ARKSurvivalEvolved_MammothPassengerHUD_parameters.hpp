@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ struct UMammothPassengerHUD_C_Reset_HUD_Widget_Params
 // Function MammothPassengerHUD.MammothPassengerHUD_C.StartClosingWidget
 struct UMammothPassengerHUD_C_StartClosingWidget_Params
 {
-	float                                              NewLifespan;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              NewLifeSpan;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MammothPassengerHUD.MammothPassengerHUD_C.DestroySkiffHudWidget

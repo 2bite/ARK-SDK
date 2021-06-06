@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_StandingTorch.PrimalInventoryBP_StandingTorch_C
-// 0x0000 (0x0570 - 0x0570)
+// 0x0000 (0x0590 - 0x0590)
 class UPrimalInventoryBP_StandingTorch_C : public UPrimalInventoryBP_BaseFuelBurning_C
 {
 public:

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,16 +101,16 @@ void ABuff_TekArmor_Sword_C::GetRelatedTekArmorRef(class UPrimalItemArmor_Base_T
 // ()
 // Parameters:
 // int                            AmountToDecrease               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsForChargedState              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           isForChargedState              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CanDecrease                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Sword_C::Can_Decrease_Element_Ammo(int AmountToDecrease, bool IsForChargedState, bool* CanDecrease)
+void ABuff_TekArmor_Sword_C::Can_Decrease_Element_Ammo(int AmountToDecrease, bool isForChargedState, bool* CanDecrease)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Can Decrease Element Ammo");
 
 	ABuff_TekArmor_Sword_C_Can_Decrease_Element_Ammo_Params params;
 	params.AmountToDecrease = AmountToDecrease;
-	params.IsForChargedState = IsForChargedState;
+	params.isForChargedState = isForChargedState;
 
 	auto flags = fn->FunctionFlags;
 
@@ -127,15 +127,15 @@ void ABuff_TekArmor_Sword_C::Can_Decrease_Element_Ammo(int AmountToDecrease, boo
 // ()
 // Parameters:
 // int                            AmountToDecrease               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsForChargedState              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           isForChargedState              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Sword_C::TryDecreaseElementAmmo(int AmountToDecrease, bool IsForChargedState)
+void ABuff_TekArmor_Sword_C::TryDecreaseElementAmmo(int AmountToDecrease, bool isForChargedState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.TryDecreaseElementAmmo");
 
 	ABuff_TekArmor_Sword_C_TryDecreaseElementAmmo_Params params;
 	params.AmountToDecrease = AmountToDecrease;
-	params.IsForChargedState = IsForChargedState;
+	params.isForChargedState = isForChargedState;
 
 	auto flags = fn->FunctionFlags;
 
@@ -215,12 +215,12 @@ void ABuff_TekArmor_Sword_C::Should_Damage_Actor(class AActor** Victim, bool* Re
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Has Line Of SightToActor
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Sword_C::Has_Line_Of_SightToActor(class AActor* Actor, bool* Result)
+void ABuff_TekArmor_Sword_C::STATIC_Has_Line_Of_SightToActor(class AActor* Actor, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Has Line Of SightToActor");
 
@@ -228,7 +228,6 @@ void ABuff_TekArmor_Sword_C::Has_Line_Of_SightToActor(class AActor* Actor, bool*
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -372,11 +371,11 @@ void ABuff_TekArmor_Sword_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Update Local Vars by State
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Event, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_TekGlovePunchState> NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Sword_C::STATIC_Update_Local_Vars_by_State(TEnumAsByte<E_TekGlovePunchState> NewState)
+void ABuff_TekArmor_Sword_C::Update_Local_Vars_by_State(TEnumAsByte<E_TekGlovePunchState> NewState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Update Local Vars by State");
 
@@ -384,7 +383,6 @@ void ABuff_TekArmor_Sword_C::STATIC_Update_Local_Vars_by_State(TEnumAsByte<E_Tek
 	params.NewState = NewState;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -597,12 +595,12 @@ void ABuff_TekArmor_Sword_C::CheckForTargetsWhileRocketPunching(bool* punchNow)
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Set AudioParams and Play
 // ()
 // Parameters:
-// class UAudioComponent*         Audio                          (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UAudioComponent*         audio                          (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           PlaySound                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Sword_C::Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** Audio)
+void ABuff_TekArmor_Sword_C::Set_AudioParams_and_Play(float Volume, float Pitch, bool PlaySound, class UAudioComponent** audio)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Set AudioParams and Play");
 
@@ -617,8 +615,8 @@ void ABuff_TekArmor_Sword_C::Set_AudioParams_and_Play(float Volume, float Pitch,
 
 	fn->FunctionFlags = flags;
 
-	if (Audio != nullptr)
-		*Audio = params.Audio;
+	if (audio != nullptr)
+		*audio = params.audio;
 }
 
 
@@ -691,14 +689,14 @@ void ABuff_TekArmor_Sword_C::DrawBuffFloatingHUD(int* BuffIndex, class AShooterH
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.ScanForRocketFistTargets
-// (NetReliable, Exec, Native, NetResponse, Static, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Range                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           anyHit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HitLocation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  HitActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Sword_C::STATIC_ScanForRocketFistTargets(float Range, bool* anyHit, struct FVector* HitLocation, class AActor** HitActor)
+void ABuff_TekArmor_Sword_C::ScanForRocketFistTargets(float Range, bool* anyHit, struct FVector* HitLocation, class AActor** HitActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.ScanForRocketFistTargets");
 
@@ -706,7 +704,6 @@ void ABuff_TekArmor_Sword_C::STATIC_ScanForRocketFistTargets(float Range, bool* 
 	params.Range = Range;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -722,7 +719,7 @@ void ABuff_TekArmor_Sword_C::STATIC_ScanForRocketFistTargets(float Range, bool* 
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.AccurateSphereCheck
-// (NetRequest, Event, NetMulticast, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 EndLocation                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -739,6 +736,7 @@ void ABuff_TekArmor_Sword_C::AccurateSphereCheck(const struct FVector& EndLocati
 	params.IgnoreFriendlies = IgnoreFriendlies;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -750,13 +748,13 @@ void ABuff_TekArmor_Sword_C::AccurateSphereCheck(const struct FVector& EndLocati
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Spawn Sound at Fist Location
-// (NetRequest, Native, NetResponse, NetMulticast, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Event, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USoundBase*              SoundToSpawn                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          VolumeMultiplier               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          PitchMultiplier                (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Sword_C::Spawn_Sound_at_Fist_Location(class USoundBase* SoundToSpawn, float VolumeMultiplier, float PitchMultiplier)
+void ABuff_TekArmor_Sword_C::STATIC_Spawn_Sound_at_Fist_Location(class USoundBase* SoundToSpawn, float VolumeMultiplier, float PitchMultiplier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Spawn Sound at Fist Location");
 
@@ -766,7 +764,6 @@ void ABuff_TekArmor_Sword_C::Spawn_Sound_at_Fist_Location(class USoundBase* Soun
 	params.PitchMultiplier = PitchMultiplier;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -834,7 +831,7 @@ void ABuff_TekArmor_Sword_C::RocketPunchStart()
 
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Punch
-// (NetReliable, Exec, Event, MulticastDelegate, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABuff_TekArmor_Sword_C::Punch()
 {
@@ -843,6 +840,7 @@ void ABuff_TekArmor_Sword_C::Punch()
 	ABuff_TekArmor_Sword_C_Punch_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -908,14 +906,14 @@ void ABuff_TekArmor_Sword_C::UserConstructionScript()
 }
 
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_88
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_95
 // ()
 
-void ABuff_TekArmor_Sword_C::InpActEvt_Targeting_K2Node_InputActionEvent_88()
+void ABuff_TekArmor_Sword_C::InpActEvt_Targeting_K2Node_InputActionEvent_95()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_88");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_95");
 
-	ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_88_Params params;
+	ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_95_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -925,14 +923,14 @@ void ABuff_TekArmor_Sword_C::InpActEvt_Targeting_K2Node_InputActionEvent_88()
 }
 
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_87
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_94
 // ()
 
-void ABuff_TekArmor_Sword_C::InpActEvt_Targeting_K2Node_InputActionEvent_87()
+void ABuff_TekArmor_Sword_C::InpActEvt_Targeting_K2Node_InputActionEvent_94()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_87");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_94");
 
-	ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_87_Params params;
+	ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_94_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -942,14 +940,14 @@ void ABuff_TekArmor_Sword_C::InpActEvt_Targeting_K2Node_InputActionEvent_87()
 }
 
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_86
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_93
 // ()
 
-void ABuff_TekArmor_Sword_C::InpActEvt_AltFire_K2Node_InputActionEvent_86()
+void ABuff_TekArmor_Sword_C::InpActEvt_AltFire_K2Node_InputActionEvent_93()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_86");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_93");
 
-	ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_86_Params params;
+	ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_93_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -959,14 +957,14 @@ void ABuff_TekArmor_Sword_C::InpActEvt_AltFire_K2Node_InputActionEvent_86()
 }
 
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_85
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_92
 // ()
 
-void ABuff_TekArmor_Sword_C::InpActEvt_AltFire_K2Node_InputActionEvent_85()
+void ABuff_TekArmor_Sword_C::InpActEvt_AltFire_K2Node_InputActionEvent_92()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_85");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_92");
 
-	ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_85_Params params;
+	ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_92_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -976,14 +974,14 @@ void ABuff_TekArmor_Sword_C::InpActEvt_AltFire_K2Node_InputActionEvent_85()
 }
 
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_84
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_91
 // ()
 
-void ABuff_TekArmor_Sword_C::InpActEvt_Fire_K2Node_InputActionEvent_84()
+void ABuff_TekArmor_Sword_C::InpActEvt_Fire_K2Node_InputActionEvent_91()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_84");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_91");
 
-	ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_84_Params params;
+	ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_91_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -993,14 +991,31 @@ void ABuff_TekArmor_Sword_C::InpActEvt_Fire_K2Node_InputActionEvent_84()
 }
 
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_83
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_90
 // ()
 
-void ABuff_TekArmor_Sword_C::InpActEvt_Fire_K2Node_InputActionEvent_83()
+void ABuff_TekArmor_Sword_C::InpActEvt_Fire_K2Node_InputActionEvent_90()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_83");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_90");
 
-	ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_83_Params params;
+	ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_90_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_44
+// ()
+
+void ABuff_TekArmor_Sword_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_44()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_44");
+
+	ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_44_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1027,14 +1042,14 @@ void ABuff_TekArmor_Sword_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_
 }
 
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_42
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_42
 // ()
 
-void ABuff_TekArmor_Sword_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_42()
+void ABuff_TekArmor_Sword_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_42()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_42");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_42");
 
-	ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_42_Params params;
+	ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_42_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1052,23 +1067,6 @@ void ABuff_TekArmor_Sword_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_41");
 
 	ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_41_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_40
-// ()
-
-void ABuff_TekArmor_Sword_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_40()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_40");
-
-	ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_40_Params params;
 
 	auto flags = fn->FunctionFlags;
 

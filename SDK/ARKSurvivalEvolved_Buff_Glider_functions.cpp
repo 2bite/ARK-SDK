@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -283,7 +283,7 @@ float ABuff_Glider_C::BP_ModifyCharacterFOV(float* inFOV)
 
 
 // Function Buff_Glider.Buff_Glider_C.ServerTick_GlideFalling
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, NetServer, BlueprintCallable)
 
 void ABuff_Glider_C::STATIC_ServerTick_GlideFalling()
 {
@@ -292,6 +292,7 @@ void ABuff_Glider_C::STATIC_ServerTick_GlideFalling()
 	ABuff_Glider_C_ServerTick_GlideFalling_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -507,7 +508,7 @@ void ABuff_Glider_C::AreRotatorsNearlyEqual(const struct FRotator& RotA, const s
 
 
 // Function Buff_Glider.Buff_Glider_C.ServerTick_UpdateGlideVelocity
-// (NetReliable, Native, Static, Private, Protected, Delegate, NetClient, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, NetServer, BlueprintCallable)
 
 void ABuff_Glider_C::STATIC_ServerTick_UpdateGlideVelocity()
 {
@@ -516,7 +517,6 @@ void ABuff_Glider_C::STATIC_ServerTick_UpdateGlideVelocity()
 	ABuff_Glider_C_ServerTick_UpdateGlideVelocity_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,7 +542,7 @@ void ABuff_Glider_C::UpdateGliderByState_NonDedicated()
 
 
 // Function Buff_Glider.Buff_Glider_C.UpdateGliderByState_ServerAndClient
-// (Exec, Native, Event, Static, Private, Protected, Delegate, NetClient, BlueprintEvent, Const, NetValidate)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, NetServer, BlueprintCallable)
 
 void ABuff_Glider_C::STATIC_UpdateGliderByState_ServerAndClient()
 {
@@ -551,7 +551,6 @@ void ABuff_Glider_C::STATIC_UpdateGliderByState_ServerAndClient()
 	ABuff_Glider_C_UpdateGliderByState_ServerAndClient_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -560,7 +559,7 @@ void ABuff_Glider_C::STATIC_UpdateGliderByState_ServerAndClient()
 
 
 // Function Buff_Glider.Buff_Glider_C.UpdateGliderByState_Server
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, Protected, Delegate, NetClient, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, BlueprintCallable)
 
 void ABuff_Glider_C::STATIC_UpdateGliderByState_Server()
 {
@@ -569,7 +568,6 @@ void ABuff_Glider_C::STATIC_UpdateGliderByState_Server()
 	ABuff_Glider_C_UpdateGliderByState_Server_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -868,7 +866,7 @@ void ABuff_Glider_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Glider.Buff_Glider_C.ServerTick_UpdateGlidingRotation
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, BlueprintCallable)
 
 void ABuff_Glider_C::STATIC_ServerTick_UpdateGlidingRotation()
 {
@@ -877,6 +875,7 @@ void ABuff_Glider_C::STATIC_ServerTick_UpdateGlidingRotation()
 	ABuff_Glider_C_ServerTick_UpdateGlidingRotation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -941,14 +940,14 @@ void ABuff_Glider_C::UserConstructionScript()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_92
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_99
 // ()
 
-void ABuff_Glider_C::InpActEvt_Jump_K2Node_InputActionEvent_92()
+void ABuff_Glider_C::InpActEvt_Jump_K2Node_InputActionEvent_99()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_92");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_99");
 
-	ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_92_Params params;
+	ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_99_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -958,14 +957,14 @@ void ABuff_Glider_C::InpActEvt_Jump_K2Node_InputActionEvent_92()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_91
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_98
 // ()
 
-void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_91()
+void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_98()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_91");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_98");
 
-	ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_91_Params params;
+	ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_98_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -975,14 +974,14 @@ void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_91()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_90
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_97
 // ()
 
-void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_90()
+void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_97()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_90");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_97");
 
-	ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_90_Params params;
+	ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_97_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -992,14 +991,14 @@ void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_90()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_89
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_96
 // ()
 
-void ABuff_Glider_C::InpActEvt_RunToggle_K2Node_InputActionEvent_89()
+void ABuff_Glider_C::InpActEvt_RunToggle_K2Node_InputActionEvent_96()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_89");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_96");
 
-	ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_89_Params params;
+	ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_96_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1009,14 +1008,14 @@ void ABuff_Glider_C::InpActEvt_RunToggle_K2Node_InputActionEvent_89()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_45
 // ()
 
-void ABuff_Glider_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44()
+void ABuff_Glider_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_45()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_45");
 
-	ABuff_Glider_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_44_Params params;
+	ABuff_Glider_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_45_Params params;
 
 	auto flags = fn->FunctionFlags;
 

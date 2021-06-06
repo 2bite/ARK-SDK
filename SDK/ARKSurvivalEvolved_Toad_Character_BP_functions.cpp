@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Toad_Character_BP.Toad_Character_BP_C.BPPreventNotifySound
+// ()
+// Parameters:
+// class USoundBase**             SoundIn                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AToad_Character_BP_C::BPPreventNotifySound(class USoundBase** SoundIn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Toad_Character_BP.Toad_Character_BP_C.BPPreventNotifySound");
+
+	AToad_Character_BP_C_BPPreventNotifySound_Params params;
+	params.SoundIn = SoundIn;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Toad_Character_BP.Toad_Character_BP_C.BlueprintCanRiderAttack
 // ()

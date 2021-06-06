@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function WeapSpyglass.WeapSpyglass_C.ForceDisableCameraOverrides
+struct AWeapSpyglass_C_ForceDisableCameraOverrides_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function WeapSpyglass.WeapSpyglass_C.BPCanToggleAccessory
 struct AWeapSpyglass_C_BPCanToggleAccessory_Params

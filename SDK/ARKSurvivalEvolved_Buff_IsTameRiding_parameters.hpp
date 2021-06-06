@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,18 +70,18 @@ struct ABuff_IsTameRiding_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_126
-struct ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_126_Params
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_140
+struct ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_140_Params
 {
 };
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_125
-struct ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_125_Params
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_139
+struct ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_139_Params
 {
 };
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_54
-struct ABuff_IsTameRiding_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_54_Params
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_56
+struct ABuff_IsTameRiding_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_56_Params
 {
 };
 

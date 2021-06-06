@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -105,6 +105,12 @@ struct AActor_SetReplicates_Params
 struct AActor_SetOwner_Params
 {
 	class AActor*                                      NewOwner;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Actor.SetNetworkSpatializationParent
+struct AActor_SetNetworkSpatializationParent_Params
+{
+	class AActor*                                      NewParent;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.SetLifeSpan
@@ -459,6 +465,7 @@ struct AActor_MulticastDrawDebugString_Params
 	class AActor*                                      TestBaseActor;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                TextColor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.MulticastDrawDebugSphere
@@ -479,6 +486,18 @@ struct AActor_MulticastDrawDebugPoint_Params
 	float                                              Size;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                PointColor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Actor.MulticastDrawDebugPlane
+struct AActor_MulticastDrawDebugPlane_Params
+{
+	struct FPlane                                      PlaneCoordinates;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Size;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                PlaneColor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.MulticastDrawDebugLineTraceHitResult
@@ -495,6 +514,7 @@ struct AActor_MulticastDrawDebugLineTraceHitResult_Params
 	struct FLinearColor                                HitNormalColor;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              HitNormalLength;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.MulticastDrawDebugLine
@@ -517,6 +537,7 @@ struct AActor_MulticastDrawDebugCylinder_Params
 	int                                                Segments;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                LineColor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.MulticastDrawDebugCoordinateSystem
@@ -527,6 +548,7 @@ struct AActor_MulticastDrawDebugCoordinateSystem_Params
 	float                                              Scale;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Thickness;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.MulticastDrawDebugCapsuleWithExtents
@@ -538,6 +560,7 @@ struct AActor_MulticastDrawDebugCapsuleWithExtents_Params
 	struct FLinearColor                                LineColor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bPersistent;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.MulticastDrawDebugCapsule
@@ -558,6 +581,7 @@ struct AActor_MulticastDrawDebugCamera_Params
 	class ACameraActor*                                CameraActor;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                CameraColor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.MulticastDrawDebugBox
@@ -568,6 +592,7 @@ struct AActor_MulticastDrawDebugBox_Params
 	struct FLinearColor                                LineColor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Rotation;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.MulticastDrawDebugArrow
@@ -578,12 +603,13 @@ struct AActor_MulticastDrawDebugArrow_Params
 	float                                              ArrowSize;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                LineColor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               enableInShipping;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.Actor.ModifyHudMultiUseLoc
 struct AActor_ModifyHudMultiUseLoc_Params
 {
-	struct FVector2D                                   theVec;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   theVec;                                                   // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -774,6 +800,7 @@ struct AActor_HasAuthority_Params
 struct AActor_GetVisibleComponentByClass_Params
 {
 	class UClass*                                      ComponentClass;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bSkipHiddenComponents;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
@@ -1082,6 +1109,18 @@ struct AActor_EnableInput_Params
 	class APlayerController*                           PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.Actor.DrawInEditorViewport
+struct AActor_DrawInEditorViewport_Params
+{
+	class UCanvas*                                     Canvas;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                LHSX;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                InOutLHSY;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                RHSX;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                InOutRHSY;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ViewLocation;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    ViewRotation;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.Actor.DrawBasicFloatingHUD
 struct AActor_DrawBasicFloatingHUD_Params
 {
@@ -1105,6 +1144,13 @@ struct AActor_ClientMultiUse_Params
 {
 	class APlayerController*                           ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                UseIndex;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Actor.CalculateComponentsBoundingBoxInLocalSpace
+struct AActor_CalculateComponentsBoundingBoxInLocalSpace_Params
+{
+	bool                                               bNonColliding;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBox                                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.Actor.BPTryMultiUse
@@ -1195,6 +1241,12 @@ struct AActor_BPGetMultiUseCenterText_Params
 struct AActor_BPGetExtraSpecialBlueprintInt_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.Actor.BPGetBonesToHideOnAllocation
+struct AActor_BPGetBonesToHideOnAllocation_Params
+{
+	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Engine.Actor.BPGetActorEyesViewPoint
@@ -2215,7 +2267,7 @@ struct APlayerController_NetSpawnActorAtLocation_Params
 // Function Engine.PlayerController.NetConnectionHasActiveActor
 struct APlayerController_NetConnectionHasActiveActor_Params
 {
-	class AActor*                                      AnActor;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      anActor;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -2263,6 +2315,7 @@ struct APlayerController_GetMousePosition_Params
 {
 	float                                              LocationX;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              LocationY;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               bEvenWhenMouseNotAttached;                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -2411,6 +2464,12 @@ struct APlayerController_DeprojectMousePositionToWorld_Params
 	struct FVector                                     WorldLocation;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     WorldDirection;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.PlayerController.CopyStringToClipboard
+struct APlayerController_CopyStringToClipboard_Params
+{
+	class FString                                      S;                                                        // (Parm, ZeroConstructor)
 };
 
 // Function Engine.PlayerController.ConsoleKey
@@ -2701,6 +2760,7 @@ struct APlayerController_ClientPlayCameraShake_Params
 	TEnumAsByte<ECameraAnimPlaySpace>                  PlaySpace;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    UserPlaySpaceRot;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Speed;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bForceUseWorldCameraShakeScale;                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.PlayerController.ClientPlayCameraAnim
@@ -2829,6 +2889,12 @@ struct APlayerController_ClearAudioListenerOverride_Params
 struct APlayerController_Camera_Params
 {
 	struct FName                                       NewMode;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.PlayerController.BPGetAimedUseActor
+struct APlayerController_BPGetAimedUseActor_Params
+{
+	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.PlayerController.AddYawInput
@@ -3178,6 +3244,11 @@ struct UActorComponent_BPOnComponentTick_Params
 
 // Function Engine.ActorComponent.BPOnComponentDestroyed
 struct UActorComponent_BPOnComponentDestroyed_Params
+{
+};
+
+// Function Engine.ActorComponent.BPOnComponentCreated
+struct UActorComponent_BPOnComponentCreated_Params
 {
 };
 
@@ -4061,6 +4132,24 @@ struct AVolume_BPEncompassesPoint_Params
 	float                                              OutDistanceToPoint;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              SphereRadius;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.DestructibleActor.SetFadingStaticMesh
+struct ADestructibleActor_SetFadingStaticMesh_Params
+{
+	class UStaticMesh*                                 TheMesh;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.DestructibleActor.SetFadingSkeletalMesh
+struct ADestructibleActor_SetFadingSkeletalMesh_Params
+{
+	class USkeletalMesh*                               TheMesh;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.DestructibleActor.GetFadingMeshComponent
+struct ADestructibleActor_GetFadingMeshComponent_Params
+{
+	class UMeshComponent*                              ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function Engine.DestructibleActor.ActorFractureSignature__DelegateSignature
@@ -5978,6 +6067,13 @@ struct APlayerCameraManager_PlayCameraAnim_Params
 	class UCameraAnimInst*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.PlayerCameraManager.GetWorldCameraShakeScale
+struct APlayerCameraManager_GetWorldCameraShakeScale_Params
+{
+	bool                                               bForceReturnUserSettingScale;                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.PlayerCameraManager.GetOwningPlayerController
 struct APlayerCameraManager_GetOwningPlayerController_Params
 {
@@ -6060,6 +6156,13 @@ struct ADefaultPawn_LookUp_Params
 	float                                              val;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.PhysicsVolume.GetVolumeZAtPosition2D
+struct APhysicsVolume_GetVolumeZAtPosition2D_Params
+{
+	struct FVector2D                                   Position;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.AmbientSound.Stop
 struct AAmbientSound_Stop_Params
 {
@@ -6092,12 +6195,24 @@ struct AAmbientSound_AdjustVolume_Params
 	float                                              AdjustVolumeLevel;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.World.IsActuallyUsingTrueSkyActor
+struct UWorld_IsActuallyUsingTrueSkyActor_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.World.GetWorldSettings
 struct UWorld_GetWorldSettings_Params
 {
 	bool                                               bCheckStreamingPesistent;                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bChecked;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class AWorldSettings*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.World.GetFirstPlayerController
+struct UWorld_GetFirstPlayerController_Params
+{
+	class APlayerController*                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.BlockingVolume.OnInterpToggle
@@ -6110,13 +6225,6 @@ struct ABlockingVolume_OnInterpToggle_Params
 struct ABlockingVolume_DoToggle_Params
 {
 	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Engine.PhysicsVolume.GetVolumeZAtPosition2D
-struct APhysicsVolume_GetVolumeZAtPosition2D_Params
-{
-	struct FVector2D                                   Position;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.PostProcessVolume.PostprocessVolumeLeftSignature__DelegateSignature
@@ -7000,6 +7108,13 @@ struct USkeletalMeshComponent_ClearMorphTargets_Params
 {
 };
 
+// Function Engine.SkeletalMeshComponent.BPValidBoneToUnhide
+struct USkeletalMeshComponent_BPValidBoneToUnhide_Params
+{
+	int                                                BoneIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.SkeletalMeshComponent.BPTickPose
 struct USkeletalMeshComponent_BPTickPose_Params
 {
@@ -7074,6 +7189,17 @@ struct UNavigationSystem_SimpleMoveToActor_Params
 	class AActor*                                      Goal;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.NavigationSystem.ProjectPointToNavigationEx
+struct UNavigationSystem_ProjectPointToNavigationEx_Params
+{
+	class UObject*                                     WorldContext;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Point;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FVector                                     Extent;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	class ANavigationData*                             NavData;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      FilterClass;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.NavigationSystem.ProjectPointToNavigation
 struct UNavigationSystem_ProjectPointToNavigation_Params
 {
@@ -7107,6 +7233,21 @@ struct UNavigationSystem_IsNavigationBeingBuilt_Params
 {
 	class UObject*                                     WorldContext;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.NavigationSystem.GetRandomReachablePointInMinMaxRadius
+struct UNavigationSystem_GetRandomReachablePointInMinMaxRadius_Params
+{
+	class UObject*                                     WorldContext;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Origin;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	float                                              MinRadius;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxRadius;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRandomStream                               RandStream;                                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	struct FVector                                     PathDirection;                                            // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DotLimit;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class ANavigationData*                             NavData;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      FilterClass;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.NavigationSystem.GetRandomPointInRadius
@@ -7904,6 +8045,12 @@ struct UBillboardComponent_SetSprite_Params
 	class UTexture2D*                                  NewSprite;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.BrushComponent.GetBoxBrushXYZ
+struct UBrushComponent_GetBoxBrushXYZ_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.MaterialBillboardComponent.AddElement
 struct UMaterialBillboardComponent_AddElement_Params
 {
@@ -8412,6 +8559,12 @@ struct UTextRenderComponent_SetWorldSize_Params
 	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.TextRenderComponent.SetVerticalAlignment
+struct UTextRenderComponent_SetVerticalAlignment_Params
+{
+	TEnumAsByte<EVerticalTextAligment>                 Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.TextRenderComponent.SetTextRenderColor
 struct UTextRenderComponent_SetTextRenderColor_Params
 {
@@ -8506,6 +8659,13 @@ struct USceneCaptureComponent_HideActorComponents_Params
 	class AActor*                                      InActor;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.SplineComponent.SetWorldSplinePointsAndType
+struct USplineComponent_SetWorldSplinePointsAndType_Params
+{
+	TArray<struct FVector>                             Points;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TEnumAsByte<ESplinePointType>                      Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.SplineComponent.SetWorldLocationAtSplinePoint
 struct USplineComponent_SetWorldLocationAtSplinePoint_Params
 {
@@ -8513,10 +8673,31 @@ struct USplineComponent_SetWorldLocationAtSplinePoint_Params
 	struct FVector                                     InLocation;                                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
+// Function Engine.SplineComponent.SetTangentAtSplinePoint
+struct USplineComponent_SetTangentAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     InTangent;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.SplineComponent.SetSplineWorldPoints
 struct USplineComponent_SetSplineWorldPoints_Params
 {
 	TArray<struct FVector>                             Points;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function Engine.SplineComponent.SetSplinePointTypeAllPoints
+struct USplineComponent_SetSplinePointTypeAllPoints_Params
+{
+	TEnumAsByte<ESplinePointType>                      Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetSplinePointType
+struct USplineComponent_SetSplinePointType_Params
+{
+	int                                                PointIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESplinePointType>                      Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.SplineComponent.SetSplineLocalPoints
@@ -8582,6 +8763,13 @@ struct USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Params
 {
 	float                                              Distance;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetSplinePointType
+struct USplineComponent_GetSplinePointType_Params
+{
+	int                                                PointIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESplinePointType>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.SplineComponent.GetSplineLength
@@ -10118,6 +10306,17 @@ struct UKismetMathLibrary_VInterpTo_Constant_SnapPastDist_Params
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.KismetMathLibrary.VInterpTo_Constant_ClampDist
+struct UKismetMathLibrary_VInterpTo_Constant_ClampDist_Params
+{
+	struct FVector                                     current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ClampDist;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.KismetMathLibrary.VInterpTo_Constant
 struct UKismetMathLibrary_VInterpTo_Constant_Params
 {
@@ -10125,6 +10324,17 @@ struct UKismetMathLibrary_VInterpTo_Constant_Params
 	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMathLibrary.VInterpTo_ClampDist
+struct UKismetMathLibrary_VInterpTo_ClampDist_Params
+{
+	struct FVector                                     current;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              InterpSpeed;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ClampDist;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -11431,6 +11641,22 @@ struct UKismetMathLibrary_Lerp_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.KismetMathLibrary.IsRotatorInfiniteOrNaN
+struct UKismetMathLibrary_IsRotatorInfiniteOrNaN_Params
+{
+	struct FRotator                                    A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMathLibrary.IsPointInBox
+struct UKismetMathLibrary_IsPointInBox_Params
+{
+	struct FVector                                     Point;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     BoxOrigin;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     BoxExtent;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.KismetMathLibrary.IsMorning
 struct UKismetMathLibrary_IsMorning_Params
 {
@@ -11442,6 +11668,13 @@ struct UKismetMathLibrary_IsMorning_Params
 struct UKismetMathLibrary_IsLeapYear_Params
 {
 	int                                                Year;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMathLibrary.IsInfiniteOrNaN
+struct UKismetMathLibrary_IsInfiniteOrNaN_Params
+{
+	struct FVector                                     A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -15223,6 +15456,16 @@ struct UCanvas_K2_DrawLine_Params
 	struct FLinearColor                                RenderColor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Engine.Canvas.K2_DrawBoxEx
+struct UCanvas_K2_DrawBoxEx_Params
+{
+	struct FVector2D                                   ScreenPosition;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ScreenSize;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Thickness;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                RenderColor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EBlendMode>                            BlendMode;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.Canvas.K2_DrawBox
 struct UCanvas_K2_DrawBox_Params
 {
@@ -15258,6 +15501,13 @@ struct UCanvas_K2_Deproject_Params
 	struct FVector2D                                   ScreenPosition;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     WorldOrigin;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     WorldDirection;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.Canvas.IsPositionInFrontOfViewport
+struct UCanvas_IsPositionInFrontOfViewport_Params
+{
+	struct FVector                                     Location;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.Canvas.BPDrawTextWrapped
@@ -15355,6 +15605,12 @@ struct ULevelStreaming_LevelStreamingLoadedStatus__DelegateSignature_Params
 {
 };
 
+// Function Engine.LevelStreaming.IsTileStreamingEnabled
+struct ULevelStreaming_IsTileStreamingEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.LevelStreaming.IsLevelVisible
 struct ULevelStreaming_IsLevelVisible_Params
 {
@@ -15372,6 +15628,19 @@ struct ULevelStreaming_CreateInstance_Params
 {
 	class FString                                      UniqueInstanceName;                                       // (Parm, ZeroConstructor)
 	class ULevelStreaming*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.LevelStreaming.BPSetLevelVisibility
+struct ULevelStreaming_BPSetLevelVisibility_Params
+{
+	bool                                               bVisible;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bIsLowMemory;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Engine.LevelStreaming.BPGetPackageName
+struct ULevelStreaming_BPGetPackageName_Params
+{
+	class FString                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Engine.MaterialInstanceDynamic.SetVectorParameterValue

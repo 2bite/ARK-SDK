@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,7 +42,7 @@ struct ABuff_TekArmor_Sword_C_GetRelatedTekArmorRef_Params
 struct ABuff_TekArmor_Sword_C_Can_Decrease_Element_Ammo_Params
 {
 	int                                                AmountToDecrease;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsForChargedState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               isForChargedState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               CanDecrease;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -50,7 +50,7 @@ struct ABuff_TekArmor_Sword_C_Can_Decrease_Element_Ammo_Params
 struct ABuff_TekArmor_Sword_C_TryDecreaseElementAmmo_Params
 {
 	int                                                AmountToDecrease;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsForChargedState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               isForChargedState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.BPCheckPreventInput
@@ -186,7 +186,7 @@ struct ABuff_TekArmor_Sword_C_CheckForTargetsWhileRocketPunching_Params
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Set AudioParams and Play
 struct ABuff_TekArmor_Sword_C_Set_AudioParams_and_Play_Params
 {
-	class UAudioComponent*                             Audio;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	class UAudioComponent*                             audio;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	float                                              Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Pitch;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               PlaySound;                                                // (Parm, ZeroConstructor, IsPlainOldData)
@@ -279,33 +279,38 @@ struct ABuff_TekArmor_Sword_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_88
-struct ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_88_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_95
+struct ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_95_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_87
-struct ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_87_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_94
+struct ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_94_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_86
-struct ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_86_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_93
+struct ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_93_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_85
-struct ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_85_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_92
+struct ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_92_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_84
-struct ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_84_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_91
+struct ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_91_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_83
-struct ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_83_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_90
+struct ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_90_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_44
+struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_44_Params
 {
 };
 
@@ -314,18 +319,13 @@ struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_42
-struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_42_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_42
+struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_42_Params
 {
 };
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_41
 struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_41_Params
-{
-};
-
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_40
-struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_40_Params
 {
 };
 

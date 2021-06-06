@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,7 +100,7 @@ void ADroppedItem_GachaPod_C::ReceiveBeginPlay()
 
 
 // Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.CheckForItem
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
 {
@@ -118,15 +118,16 @@ void ADroppedItem_GachaPod_C::STATIC_CheckForItem()
 
 
 // Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ActivateFX
-// (NetReliable, NetRequest, Exec, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ADroppedItem_GachaPod_C::ActivateFX()
+void ADroppedItem_GachaPod_C::STATIC_ActivateFX()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ActivateFX");
 
 	ADroppedItem_GachaPod_C_ActivateFX_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,14 +152,14 @@ void ADroppedItem_GachaPod_C::UserConstructionScript()
 }
 
 
-// Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ColorShift
+// Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.Colorshift
 // ()
 
-void ADroppedItem_GachaPod_C::ColorShift()
+void ADroppedItem_GachaPod_C::Colorshift()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ColorShift");
+	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.Colorshift");
 
-	ADroppedItem_GachaPod_C_ColorShift_Params params;
+	ADroppedItem_GachaPod_C_Colorshift_Params params;
 
 	auto flags = fn->FunctionFlags;
 

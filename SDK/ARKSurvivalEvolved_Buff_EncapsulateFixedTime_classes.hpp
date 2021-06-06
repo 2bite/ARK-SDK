@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_EncapsulateFixedTime.Buff_EncapsulateFixedTime_C
-// 0x0000 (0x0A2C - 0x0A2C)
+// 0x0000 (0x0A3C - 0x0A3C)
 class ABuff_EncapsulateFixedTime_C : public ABuff_Encapsulated_C
 {
 public:

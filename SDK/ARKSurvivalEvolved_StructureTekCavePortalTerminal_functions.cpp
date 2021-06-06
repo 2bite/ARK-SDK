@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function StructureTekCavePortalTerminal.StructureTekCavePortalTerminal_C.BPTryMultiUse
-// (NetRequest, Exec, Native, Static, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable)
+// (NetReliable, Exec, Event, NetResponse, HasOutParms, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AStructureTekCavePortalTerminal_C::STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
+bool AStructureTekCavePortalTerminal_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTekCavePortalTerminal.StructureTekCavePortalTerminal_C.BPTryMultiUse");
 
@@ -28,7 +28,6 @@ bool AStructureTekCavePortalTerminal_C::STATIC_BPTryMultiUse(class APlayerContro
 	params.UseIndex = UseIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,13 +38,13 @@ bool AStructureTekCavePortalTerminal_C::STATIC_BPTryMultiUse(class APlayerContro
 
 
 // Function StructureTekCavePortalTerminal.StructureTekCavePortalTerminal_C.BPGetMultiUseEntries
-// (NetReliable, Native, Event, Static, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable)
+// (Event, NetResponse, HasOutParms, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructureTekCavePortalTerminal_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructureTekCavePortalTerminal_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTekCavePortalTerminal.StructureTekCavePortalTerminal_C.BPGetMultiUseEntries");
 
@@ -53,7 +52,6 @@ TArray<struct FMultiUseEntry> AStructureTekCavePortalTerminal_C::STATIC_BPGetMul
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

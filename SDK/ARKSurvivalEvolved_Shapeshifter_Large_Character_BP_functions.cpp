@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,11 +55,11 @@ void AShapeshifter_Large_Character_BP_C::OnNonInstanceJumpOffWallInput(float* Ho
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetLatchJumpSpeedThresholdForRotate
-// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, MulticastDelegate, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// float                          Res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Large_Character_BP_C::GetLatchJumpSpeedThresholdForRotate(float* Res)
+void AShapeshifter_Large_Character_BP_C::GetLatchJumpSpeedThresholdForRotate(float* res)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetLatchJumpSpeedThresholdForRotate");
 
@@ -72,8 +72,8 @@ void AShapeshifter_Large_Character_BP_C::GetLatchJumpSpeedThresholdForRotate(flo
 
 	fn->FunctionFlags = flags;
 
-	if (Res != nullptr)
-		*Res = params.Res;
+	if (res != nullptr)
+		*res = params.res;
 }
 
 
@@ -183,7 +183,7 @@ void AShapeshifter_Large_Character_BP_C::CanSequentialJump(bool* Ret)
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.Throttled TickFn
-// (Net, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AShapeshifter_Large_Character_BP_C::STATIC_Throttled_TickFn()
 {
@@ -192,7 +192,6 @@ void AShapeshifter_Large_Character_BP_C::STATIC_Throttled_TickFn()
 	AShapeshifter_Large_Character_BP_C_Throttled_TickFn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -434,7 +433,7 @@ bool AShapeshifter_Large_Character_BP_C::CanJumpInternal()
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.ThrowRock
-// (Exec, Native, Event, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AShapeshifter_Large_Character_BP_C::ThrowRock()
 {
@@ -587,7 +586,7 @@ void AShapeshifter_Large_Character_BP_C::GetUberpounceMaxRange(float* Ret)
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPGetCrosshairAlpha
-// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -757,7 +756,7 @@ void AShapeshifter_Large_Character_BP_C::OnUberpounceStateChanged(TEnumAsByte<EU
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPDinoTooltipCustomTorpidityProgressBar
-// (NetRequest, Event, Static, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Static, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           overrideTorpidityProgressBarIfActive (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          progressPercent                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -788,7 +787,7 @@ bool AShapeshifter_Large_Character_BP_C::STATIC_BPDinoTooltipCustomTorpidityProg
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -900,7 +899,7 @@ bool AShapeshifter_Large_Character_BP_C::AllowPlayMontage(class UAnimMontage** A
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.PrintHealth
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalCharacterStatusComponent* Status                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1017,7 +1016,7 @@ void AShapeshifter_Large_Character_BP_C::LatchedJumpAttached()
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.On Uberpounce AttachedToLocation
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AShapeshifter_Large_Character_BP_C::On_Uberpounce_AttachedToLocation()
 {
@@ -1056,7 +1055,7 @@ bool AShapeshifter_Large_Character_BP_C::BPDisplayTamedMessage()
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.PrintStats
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalCharacterStatusComponent* StatusComp                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1102,7 +1101,7 @@ void AShapeshifter_Large_Character_BP_C::Get_Pounce_Latched_Anim(class UAnimMont
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.ResetMeshRelativeLocation
-// (NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AShapeshifter_Large_Character_BP_C::STATIC_ResetMeshRelativeLocation()
 {
@@ -1111,6 +1110,7 @@ void AShapeshifter_Large_Character_BP_C::STATIC_ResetMeshRelativeLocation()
 	AShapeshifter_Large_Character_BP_C_ResetMeshRelativeLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1119,7 +1119,7 @@ void AShapeshifter_Large_Character_BP_C::STATIC_ResetMeshRelativeLocation()
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -1154,7 +1154,7 @@ float AShapeshifter_Large_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.RidingTick
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1207,7 +1207,7 @@ void AShapeshifter_Large_Character_BP_C::BPOnAnimPlayedNotify(class UAnimMontage
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPDinoTooltipCustomTamingProgressBar
-// (NetReliable, NetRequest, Native, Event, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, NetMulticast, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           overrideTamingProgressBarIfActive (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          progressPercent                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1543,12 +1543,12 @@ int AShapeshifter_Large_Character_BP_C::BPOverrideGetAttackAnimationIndex(int* A
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPGetHUDElements
-// (NetReliable, Exec, Static, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void AShapeshifter_Large_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void AShapeshifter_Large_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPGetHUDElements");
 
@@ -1556,6 +1556,7 @@ void AShapeshifter_Large_Character_BP_C::STATIC_BPGetHUDElements(class APlayerCo
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1606,7 +1607,7 @@ void AShapeshifter_Large_Character_BP_C::StartBerzerk()
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BPOnDinoCheat
-// (NetReliable, NetRequest, Exec, NetResponse, Static, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  CheatName                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bSetValue                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -1622,6 +1623,7 @@ void AShapeshifter_Large_Character_BP_C::STATIC_BPOnDinoCheat(struct FName* Chea
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1652,7 +1654,7 @@ void AShapeshifter_Large_Character_BP_C::IsBerzerk(bool* Ret)
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.BP_OnJumpReleased
-// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AShapeshifter_Large_Character_BP_C::STATIC_BP_OnJumpReleased()
 {
@@ -1726,7 +1728,7 @@ bool AShapeshifter_Large_Character_BP_C::BPIsBasedOnActor(class AActor** Other)
 
 
 // Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.GetDebugString
-// (Net, NetRequest, Event, NetResponse, Static, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  Output                         (Parm, OutParm, ZeroConstructor)
 
@@ -2229,14 +2231,14 @@ void AShapeshifter_Large_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_188
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_362
 // ()
 
-void AShapeshifter_Large_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_188()
+void AShapeshifter_Large_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_362()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_188");
+	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_362");
 
-	AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_188_Params params;
+	AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_362_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2246,14 +2248,14 @@ void AShapeshifter_Large_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEven
 }
 
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_187
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_361
 // ()
 
-void AShapeshifter_Large_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_187()
+void AShapeshifter_Large_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_361()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_187");
+	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_361");
 
-	AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_187_Params params;
+	AShapeshifter_Large_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_361_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2263,14 +2265,14 @@ void AShapeshifter_Large_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEven
 }
 
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_186
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_360
 // ()
 
-void AShapeshifter_Large_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_186()
+void AShapeshifter_Large_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_360()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_186");
+	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_360");
 
-	AShapeshifter_Large_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_186_Params params;
+	AShapeshifter_Large_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_360_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2280,14 +2282,14 @@ void AShapeshifter_Large_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent
 }
 
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_359
 // ()
 
-void AShapeshifter_Large_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185()
+void AShapeshifter_Large_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_359()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185");
+	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_359");
 
-	AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_185_Params params;
+	AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_359_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2297,14 +2299,14 @@ void AShapeshifter_Large_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node
 }
 
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_358
 // ()
 
-void AShapeshifter_Large_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184()
+void AShapeshifter_Large_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_358()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184");
+	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_358");
 
-	AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184_Params params;
+	AShapeshifter_Large_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_358_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2314,14 +2316,14 @@ void AShapeshifter_Large_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node
 }
 
 
-// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_56
+// Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_76
 // ()
 
-void AShapeshifter_Large_Character_BP_C::InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_56()
+void AShapeshifter_Large_Character_BP_C::InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_76()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_56");
+	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_Character_BP.Shapeshifter_Large_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_76");
 
-	AShapeshifter_Large_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_56_Params params;
+	AShapeshifter_Large_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_76_Params params;
 
 	auto flags = fn->FunctionFlags;
 

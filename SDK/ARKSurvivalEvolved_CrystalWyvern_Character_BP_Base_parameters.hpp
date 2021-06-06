@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,6 +69,7 @@ struct ACrystalWyvern_Character_BP_Base_C_BPApplyCharacterSnapshot_Params
 	struct FVector*                                    Offset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float*                                             MaxExtent;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               Pose;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bCollisionOn;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPUntamedConsumeFoodItem

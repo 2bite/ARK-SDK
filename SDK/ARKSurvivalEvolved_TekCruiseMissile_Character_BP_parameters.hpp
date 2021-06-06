@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -117,6 +117,7 @@ struct ATekCruiseMissile_Character_BP_C_Give_Player_Vision_Buff_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BPModifyDesiredRotation
 struct ATekCruiseMissile_Character_BP_C_BPModifyDesiredRotation_Params
 {
+	float*                                             DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    InDesiredRotation;                                        // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	struct FRotator                                    OutDesiredRotation;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -142,7 +143,7 @@ struct ATekCruiseMissile_Character_BP_C_Damage_Actors_By_Explosion_Radius_Params
 {
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Override_Damage;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      Damage_Type;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      damage_type;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               really_damage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -171,7 +172,7 @@ struct ATekCruiseMissile_Character_BP_C_BP_PreventMovementMode_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ServerIsFiringItemInInventory
 struct ATekCruiseMissile_Character_BP_C_ServerIsFiringItemInInventory_Params
 {
-	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BP_InterceptTurnInput
@@ -248,7 +249,7 @@ struct ATekCruiseMissile_Character_BP_C_ReceiveTick_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ScoutIsFirstPerson
 struct ATekCruiseMissile_Character_BP_C_ScoutIsFirstPerson_Params
 {
-	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.SetTargetImpactMaterial
@@ -405,7 +406,7 @@ struct ATekCruiseMissile_Character_BP_C_ReplicateInputVector_Params
 struct ATekCruiseMissile_Character_BP_C_on_hit_something_Params
 {
 	class AActor*                                      other_actor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Hit_Normal;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     hit_normal;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ReleasePossessingSurvivorAndDestroy
@@ -619,7 +620,7 @@ struct ATekCruiseMissile_Character_BP_C_warn_time_almost_up_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.Explode
 struct ATekCruiseMissile_Character_BP_C_Explode_Params
 {
-	struct FVector                                     Hit_Normal;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     hit_normal;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ExecuteUbergraph_TekCruiseMissile_Character_BP

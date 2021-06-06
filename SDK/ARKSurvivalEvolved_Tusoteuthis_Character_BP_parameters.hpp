@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -255,8 +255,8 @@ struct ATusoteuthis_Character_BP_C_TurnActorAround__UpdateFunc_Params
 {
 };
 
-// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_214
-struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_214_Params
+// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_374
+struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_374_Params
 {
 };
 

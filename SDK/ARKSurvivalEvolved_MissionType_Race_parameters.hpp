@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,87 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function MissionType_Race.MissionType_Race_C.BPCanRideMissionDino
-struct AMissionType_Race_C_BPCanRideMissionDino_Params
+// Function MissionType_Race.MissionType_Race_C.GetRaceData
+struct AMissionType_Race_C_GetRaceData_Params
 {
-	class AShooterCharacter**                          Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	class APrimalDinoCharacter**                       Dino;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	TArray<struct FRacePlayerData>                     RaceData;                                                 // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function MissionType_Race.MissionType_Race_C.GetPlayerRanking
+struct AMissionType_Race_C_GetPlayerRanking_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Ranking;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.RaceSetupAfterDelay
+struct AMissionType_Race_C_RaceSetupAfterDelay_Params
+{
+};
+
+// Function MissionType_Race.MissionType_Race_C.GetRaceShooterPCAndPawn
+struct AMissionType_Race_C_GetRaceShooterPCAndPawn_Params
+{
+	class APrimalCharacter*                            primalChar;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterPlayerController*                    ShooterPC;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           ShooterChar;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.TeleportPlayersToStartLine
+struct AMissionType_Race_C_TeleportPlayersToStartLine_Params
+{
+};
+
+// Function MissionType_Race.MissionType_Race_C.OnResultOverlappedCheckpointFX
+struct AMissionType_Race_C_OnResultOverlappedCheckpointFX_Params
+{
+	bool                                               Overlapped;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterPlayerController*                    ForController;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.CheckOverlappedCheckpointFX
+struct AMissionType_Race_C_CheckOverlappedCheckpointFX_Params
+{
+	class AShooterPlayerController*                    PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	class AMissionTrigger*                             HitTrigger;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.AttemptReRideDinoOnDinoRespawn
+struct AMissionType_Race_C_AttemptReRideDinoOnDinoRespawn_Params
+{
+	class AShooterCharacter*                           Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.GetCheckpointToTeleportTo
+struct AMissionType_Race_C_GetCheckpointToTeleportTo_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class AMissionTrigger*                             Checkpoint;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.InitializeRaceData
+struct AMissionType_Race_C_InitializeRaceData_Params
+{
+};
+
+// Function MissionType_Race.MissionType_Race_C.OnCheckpointIncremented
+struct AMissionType_Race_C_OnCheckpointIncremented_Params
+{
+	class AShooterPlayerController*                    PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	class AMissionTrigger*                             HitTrigger;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.GetSplineForOutOfBoundsCheckForPlayer
+struct AMissionType_Race_C_GetSplineForOutOfBoundsCheckForPlayer_Params
+{
+	class AShooterCharacter*                           ShooterChar;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class AMissionSpline*                              Spline;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.GetRaceActorsToUnhide
+struct AMissionType_Race_C_GetRaceActorsToUnhide_Params
+{
+	TArray<class AActor*>                              actors;                                                   // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function MissionType_Race.MissionType_Race_C.OnTeleportedCharInBounds
@@ -41,7 +116,7 @@ struct AMissionType_Race_C_GetNearbyWaterLocation_Params
 struct AMissionType_Race_C_Is_Power_Up_Active_for_Player_Params
 {
 	class AShooterPlayerController*                    SC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class AMissionTrigger*                             PowerUp;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class AMissionTrigger*                             Powerup;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsValid;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

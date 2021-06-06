@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,9 +73,9 @@ void ABuff_AttachedToBeam_C::BPSetupForInstigator(class AActor** ForInstigator)
 
 
 // Function Buff_AttachedToBeam.Buff_AttachedToBeam_C.DoStruggle
-// (NetReliable, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABuff_AttachedToBeam_C::STATIC_DoStruggle()
+void ABuff_AttachedToBeam_C::DoStruggle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_AttachedToBeam.Buff_AttachedToBeam_C.DoStruggle");
 

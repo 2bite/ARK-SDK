@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -95,13 +95,13 @@ struct AGacha_Character_BP_C_FindWanderTarget_Params
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GetDigestionFrequencyMultiplier
 struct AGacha_Character_BP_C_GetDigestionFrequencyMultiplier_Params
 {
-	float                                              mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GetCrystalQualityMultiplier
 struct AGacha_Character_BP_C_GetCrystalQualityMultiplier_Params
 {
-	float                                              mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Gacha_Character_BP.Gacha_Character_BP_C.Get Digestion Amount Multiplier
@@ -326,8 +326,8 @@ struct AGacha_Character_BP_C_LookForTamingDrops_Params
 // Function Gacha_Character_BP.Gacha_Character_BP_C.GiveAffinity
 struct AGacha_Character_BP_C_GiveAffinity_Params
 {
-	class APrimalCharacter*                            tamer;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	float                                              AffinityToGive;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            Tamer;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	float                                              affinityToGive;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               wasTamed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

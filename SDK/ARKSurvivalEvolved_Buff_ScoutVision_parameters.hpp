@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct ABuff_ScoutVision_C_ReceiveBeginPlay_Params
 // Function Buff_ScoutVision.Buff_ScoutVision_C.IsLocalScout
 struct ABuff_ScoutVision_C_IsLocalScout_Params
 {
-	bool                                               RetVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPIsValidUnStasisCaster

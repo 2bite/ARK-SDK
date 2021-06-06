@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,11 +30,11 @@ void ABuff_Liopleurodon_Magic_C::BPResetBuffStart()
 
 
 // Function Buff_Liopleurodon_Magic.Buff_Liopleurodon_Magic_C.BuffTickClient
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, NetClient, BlueprintEvent)
+// (MulticastDelegate, Private, HasDefaults, NetClient, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Liopleurodon_Magic_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_Liopleurodon_Magic_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Liopleurodon_Magic.Buff_Liopleurodon_Magic_C.BuffTickClient");
 
@@ -50,7 +50,7 @@ void ABuff_Liopleurodon_Magic_C::STATIC_BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Liopleurodon_Magic.Buff_Liopleurodon_Magic_C.BPDrawBuffStatusHUD
-// (NetResponse, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, HasDefaults, NetClient, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -68,6 +68,7 @@ void ABuff_Liopleurodon_Magic_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** 
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

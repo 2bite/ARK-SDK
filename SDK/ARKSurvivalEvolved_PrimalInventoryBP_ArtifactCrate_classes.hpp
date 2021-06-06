@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_ArtifactCrate.PrimalInventoryBP_ArtifactCrate_C
-// 0x0008 (0x0578 - 0x0570)
+// 0x0008 (0x0598 - 0x0590)
 class UPrimalInventoryBP_ArtifactCrate_C : public UPrimalInventoryComponent
 {
 public:
-	class UClass*                                      SingleplayerDefaultItemToRemove;                          // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      SingleplayerDefaultItemToRemove;                          // 0x0590(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AscensionTeleporter_Hard.AscensionTeleporter_Hard_C
-// 0x0000 (0x0A48 - 0x0A48)
+// 0x0000 (0x0A58 - 0x0A58)
 class AAscensionTeleporter_Hard_C : public AAscensionTeleporter_C
 {
 public:

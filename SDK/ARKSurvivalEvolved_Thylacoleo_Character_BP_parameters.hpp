@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -136,7 +136,7 @@ struct AThylacoleo_Character_BP_C_CleanUpClimbingAnims_Params
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.SetShouldRestoreToLatched
 struct AThylacoleo_Character_BP_C_SetShouldRestoreToLatched_Params
 {
-	bool                                               newVal;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Newval;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Set ThylacoRotationAnd Interp Mesh
@@ -237,7 +237,7 @@ struct AThylacoleo_Character_BP_C_UpdateJumpingAnim_Params
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.SetAI_LatchedToTree
 struct AThylacoleo_Character_BP_C_SetAI_LatchedToTree_Params
 {
-	bool                                               newVal;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Newval;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Thylacoleo_Character_BP.Thylacoleo_Character_BP_C.Get Thylaco Ai Controller

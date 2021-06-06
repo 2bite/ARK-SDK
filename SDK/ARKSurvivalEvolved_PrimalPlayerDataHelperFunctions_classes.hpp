@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void Apply_To_Player_Pawn_Character(class AShooterPlayerState* For_Player_State, class AShooterCharacter* New_Player_Character, int HexagonCount, int ChibiLevelUpsCount, TArray<float>* Ascension_Data);
+	void Apply_To_Player_Pawn_Character(class AShooterPlayerState* For_Player_State, class AShooterCharacter* New_Player_Character, int HexagonCount, int ChibiLevelUpsCount, bool bUnlockedAllExplorerNotes, TArray<float>* Ascension_Data);
 	void ExecuteUbergraph_PrimalPlayerDataHelperFunctions(int EntryPoint);
 };
 

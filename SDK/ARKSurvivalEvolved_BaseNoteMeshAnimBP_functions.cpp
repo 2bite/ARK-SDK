@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,14 +36,14 @@ void UBaseNoteMeshAnimBP_C::BlueprintTriggerAnimationEvent(struct FName* Animati
 }
 
 
-// Function BaseNoteMeshAnimBP.BaseNoteMeshAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2256
+// Function BaseNoteMeshAnimBP.BaseNoteMeshAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_3468
 // ()
 
-void UBaseNoteMeshAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2256()
+void UBaseNoteMeshAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_3468()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BaseNoteMeshAnimBP.BaseNoteMeshAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2256");
+	static auto fn = UObject::FindObject<UFunction>("Function BaseNoteMeshAnimBP.BaseNoteMeshAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_3468");
 
-	UBaseNoteMeshAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_2256_Params params;
+	UBaseNoteMeshAnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BaseNoteMeshAnimBP_AnimGraphNode_TransitionResult_3468_Params params;
 
 	auto flags = fn->FunctionFlags;
 

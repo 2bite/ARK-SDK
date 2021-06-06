@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_PushedByJumppad.Buff_PushedByJumppad_C.BPNotifyOtherBuffActivated
+struct ABuff_PushedByJumppad_C_BPNotifyOtherBuffActivated_Params
+{
+	class APrimalBuff**                                OtherBuff;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_PushedByJumppad.Buff_PushedByJumppad_C.BPOnInstigatorMovementModeChangedNotify
 struct ABuff_PushedByJumppad_C_BPOnInstigatorMovementModeChangedNotify_Params

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ShooterHudBP.ShooterHudBP_C.GetAdditionalExplorerNoteDynamicMaterialParams
-// (NetReliable, NetMulticast, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Event, Public, NetServer, HasOutParms, HasDefaults, NetClient, NetValidate)
 // Parameters:
 // struct FExplorerNoteEntry      ExplorerNote                   (Parm, OutParm, ReferenceParm)
 // TArray<struct FNameScalarPair> ScalarMaterialParams           (Parm, OutParm, ZeroConstructor)

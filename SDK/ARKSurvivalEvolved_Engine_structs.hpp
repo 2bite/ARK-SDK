@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -448,6 +448,39 @@ enum class ELightMapPaddingType : uint8_t
 	LMPT_PrePadding                = 1,
 	LMPT_NoPadding                 = 2,
 	LMPT_MAX                       = 3
+};
+
+
+// Enum Engine.EngineTypes.ELocalizedLanguage
+enum class ELocalizedLanguage : uint8_t
+{
+	ca                             = 0,
+	cs                             = 1,
+	da                             = 2,
+	de                             = 3,
+	en                             = 4,
+	es                             = 5,
+	eu                             = 6,
+	fi                             = 7,
+	fr                             = 8,
+	hu                             = 9,
+	it                             = 10,
+	ja                             = 11,
+	ka                             = 12,
+	ko                             = 13,
+	nl                             = 14,
+	pl                             = 15,
+	pt_BR                          = 16,
+	ru                             = 17,
+	sv                             = 18,
+	th                             = 19,
+	tr                             = 20,
+	uk                             = 21,
+	zh                             = 22,
+	zh__Hans__CN                   = 23,
+	zh__TW                         = 24,
+	Max                            = 25,
+	ELocalizedLanguage_MAX         = 26
 };
 
 
@@ -2904,6 +2937,18 @@ enum class ESplineCoordinateSpace : uint8_t
 };
 
 
+// Enum Engine.SplineComponent.ESplinePointType
+enum class ESplinePointType : uint8_t
+{
+	ESplinePointType__Linear       = 0,
+	ESplinePointType__Curve        = 1,
+	ESplinePointType__Constant     = 2,
+	ESplinePointType__CurveClamped = 3,
+	ESplinePointType__CurveCustomTangent = 4,
+	ESplinePointType__ESplinePointType_MAX = 5
+};
+
+
 // Enum Engine.DataTableFunctionLibrary.EEvaluateCurveTableResult
 enum class EEvaluateCurveTableResult : uint8_t
 {
@@ -3647,7 +3692,7 @@ struct FHitResult
 };
 
 // ScriptStruct Engine.Actor.MultiUseEntry
-// 0x0040
+// 0x0048
 struct FMultiUseEntry
 {
 	class UActorComponent*                             ForComponent;                                             // 0x0000(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
@@ -3675,6 +3720,8 @@ struct FMultiUseEntry
 	float                                              EntryActivationTimer;                                     // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              DefaultEntryActivationTimer;                              // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class USoundBase*                                  ActivationSound;                                          // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                UseInventoryButtonStyleOverrideIndex;                     // 0x0040(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Engine.Actor.BPMapCheckEntry
@@ -7338,6 +7385,15 @@ struct FDestructibleParameters
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Engine.EngineTypes.LocalizedSpokenText
+// 0x0018
+struct FLocalizedSpokenText
+{
+	TEnumAsByte<ELocalizedLanguage>                    LanguageCode;                                             // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	class FString                                      SpokenText;                                               // 0x0008(0x0010) (Edit, ZeroConstructor)
+};
+
 // ScriptStruct Engine.SoundGroups.SoundGroup
 // 0x0020
 struct FSoundGroup
@@ -7855,6 +7911,38 @@ struct FTickPrerequisite
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
+// ScriptStruct Engine.Canvas.WrappedStringElement
+// 0x0018
+struct FWrappedStringElement
+{
+	class FString                                      Value;                                                    // 0x0000(0x0010) (ZeroConstructor)
+	struct FVector2D                                   LineExtent;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.Canvas.TextSizingParameters
+// 0x0028
+struct FTextSizingParameters
+{
+	float                                              DrawX;                                                    // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              DrawY;                                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              DrawXL;                                                   // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              DrawYL;                                                   // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   Scaling;                                                  // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UFont*                                       DrawFont;                                                 // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   SpacingAdjust;                                            // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.Canvas.CanvasIcon
+// 0x0018
+struct FCanvasIcon
+{
+	class UTexture*                                    Texture;                                                  // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              U;                                                        // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              V;                                                        // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              UL;                                                       // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              VL;                                                       // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Engine.CurveBase.IntegralKey
 // 0x0008
 struct FIntegralKey
@@ -7915,38 +8003,6 @@ struct FAnimExtractContext
 	float                                              CurrentTime;                                              // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ERootMotionRootLock>                   RootMotionRootLock;                                       // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct Engine.Canvas.WrappedStringElement
-// 0x0018
-struct FWrappedStringElement
-{
-	class FString                                      Value;                                                    // 0x0000(0x0010) (ZeroConstructor)
-	struct FVector2D                                   LineExtent;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.Canvas.TextSizingParameters
-// 0x0028
-struct FTextSizingParameters
-{
-	float                                              DrawX;                                                    // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              DrawY;                                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              DrawXL;                                                   // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              DrawYL;                                                   // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   Scaling;                                                  // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UFont*                                       DrawFont;                                                 // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   SpacingAdjust;                                            // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.Canvas.CanvasIcon
-// 0x0018
-struct FCanvasIcon
-{
-	class UTexture*                                    Texture;                                                  // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              U;                                                        // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              V;                                                        // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              UL;                                                       // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              VL;                                                       // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.WorldSettings.TickWorldSettingsDuringPhysics

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,50 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_TekArmor.Buff_TekArmor_C.HasRequiredEngrams
+// ()
+// Parameters:
+// bool                           HasEngrams                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_TekArmor_C::HasRequiredEngrams(bool* HasEngrams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.HasRequiredEngrams");
+
+	ABuff_TekArmor_C_HasRequiredEngrams_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (HasEngrams != nullptr)
+		*HasEngrams = params.HasEngrams;
+}
+
+
+// Function Buff_TekArmor.Buff_TekArmor_C.IsTekBuffDisabled
+// ()
+// Parameters:
+// bool                           bIsDisabled                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_TekArmor_C::IsTekBuffDisabled(bool* bIsDisabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.IsTekBuffDisabled");
+
+	ABuff_TekArmor_C_IsTekBuffDisabled_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bIsDisabled != nullptr)
+		*bIsDisabled = params.bIsDisabled;
+}
+
 
 // Function Buff_TekArmor.Buff_TekArmor_C.check genesis restrictions for player
 // ()
@@ -386,15 +430,15 @@ void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
 // ()
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ElementCost                    (Parm, ZeroConstructor, IsPlainOldData)
+// int                            elementCost                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Client_Consume_Element_After_Time(float DeltaTime, int ElementCost)
+void ABuff_TekArmor_C::Client_Consume_Element_After_Time(float DeltaTime, int elementCost)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Client_Consume Element After Time");
 
 	ABuff_TekArmor_C_Client_Consume_Element_After_Time_Params params;
 	params.DeltaTime = DeltaTime;
-	params.ElementCost = ElementCost;
+	params.elementCost = elementCost;
 
 	auto flags = fn->FunctionFlags;
 
@@ -704,14 +748,14 @@ void ABuff_TekArmor_C::UserConstructionScript()
 }
 
 
-// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33
+// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34
 // ()
 
-void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33()
+void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34");
 
-	ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33_Params params;
+	ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_34_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -721,14 +765,14 @@ void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33()
 }
 
 
-// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32
+// Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33
 // ()
 
-void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32()
+void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33");
 
-	ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_32_Params params;
+	ABuff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_33_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -783,18 +827,18 @@ void ABuff_TekArmor_C::Equipped_SetToMaxElement(TEnumAsByte<EPrimalEquipmentType
 // Function Buff_TekArmor.Buff_TekArmor_C.Multi_SpawnFX
 // ()
 // Parameters:
-// class UParticleSystem*         particleTemplate               (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystem*         ParticleTemplate               (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundBase*              Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      Transform                      (Parm, IsPlainOldData)
 // float                          soundVolume                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          soundPitch                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_C::Multi_SpawnFX(class UParticleSystem* particleTemplate, class USoundBase* Sound, const struct UObject_FTransform& Transform, float soundVolume, float soundPitch)
+void ABuff_TekArmor_C::Multi_SpawnFX(class UParticleSystem* ParticleTemplate, class USoundBase* Sound, const struct UObject_FTransform& Transform, float soundVolume, float soundPitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor.Buff_TekArmor_C.Multi_SpawnFX");
 
 	ABuff_TekArmor_C_Multi_SpawnFX_Params params;
-	params.particleTemplate = particleTemplate;
+	params.ParticleTemplate = ParticleTemplate;
 	params.Sound = Sound;
 	params.Transform = Transform;
 	params.soundVolume = soundVolume;

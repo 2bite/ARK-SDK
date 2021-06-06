@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,11 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.ForceTeleport
+struct ASpaceWhale_Character_BP_C_ForceTeleport_Params
+{
+};
+
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
 struct ASpaceWhale_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
 {
@@ -24,12 +29,13 @@ struct ASpaceWhale_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPNotifyToggleHUD
 struct ASpaceWhale_Character_BP_C_BPNotifyToggleHUD_Params
 {
-	bool*                                              bHUDHidden;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bHudHidden;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.BPModifyDesiredRotation
 struct ASpaceWhale_Character_BP_C_BPModifyDesiredRotation_Params
 {
+	float*                                             DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    InDesiredRotation;                                        // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	struct FRotator                                    OutDesiredRotation;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -48,8 +54,8 @@ struct ASpaceWhale_Character_BP_C_BPSetupTamed_Params
 	bool*                                              bWasJustTamed;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.DestroyHudWidget
-struct ASpaceWhale_Character_BP_C_DestroyHudWidget_Params
+// Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.DestroyHUDWidget
+struct ASpaceWhale_Character_BP_C_DestroyHUDWidget_Params
 {
 	bool                                               DestroyNow;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };

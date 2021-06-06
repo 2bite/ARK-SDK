@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StorageBox_Large.StorageBox_Large_C
-// 0x0008 (0x0DE0 - 0x0DD8)
+// 0x0008 (0x0E18 - 0x0E10)
 class AStorageBox_Large_C : public AStructureItemContainerBaseBP_C
 {
 public:
-	class UPrimalInventoryBP_StorageBox_Large_C*       PrimalInventoryBP_StorageBox_Large_C1;                    // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_StorageBox_Large_C*       PrimalInventoryBP_StorageBox_Large_C1;                    // 0x0E10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

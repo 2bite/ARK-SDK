@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -762,7 +762,7 @@ struct AIceKaiju_Character_BP_C_Server_TraceTargetDir_Params
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               LeapInstant;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     MaxDistLeapTraceGroundLoc;                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               FailedtoFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FailedToFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Multi_TraceTargetDir
@@ -771,7 +771,7 @@ struct AIceKaiju_Character_BP_C_Multi_TraceTargetDir_Params
 	struct FVector                                     AimLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               AimHit;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     MaxDistLeapTraceGroundLoc;                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               FailedtoFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               FailedToFindMaxDistLeapTraceGroundLoc;                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.RequestLeapResponse
@@ -874,8 +874,8 @@ struct AIceKaiju_Character_BP_C_IsDoneAttacking_Params
 {
 };
 
-// Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Multi_SetNodeColor
-struct AIceKaiju_Character_BP_C_Multi_SetNodeColor_Params
+// Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.MULTI_SetNodeColor
+struct AIceKaiju_Character_BP_C_MULTI_SetNodeColor_Params
 {
 	int                                                Node;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Alpha;                                                    // (Parm, ZeroConstructor, IsPlainOldData)

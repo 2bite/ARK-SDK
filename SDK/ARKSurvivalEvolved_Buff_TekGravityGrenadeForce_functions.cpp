@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -253,14 +253,14 @@ void ABuff_TekGravityGrenadeForce_C::ForceInstigatorNetUpdate()
 // Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.ClientSyncDesiredFallVelocity
 // ()
 // Parameters:
-// struct FVector                 Vel                            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 vel                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekGravityGrenadeForce_C::ClientSyncDesiredFallVelocity(const struct FVector& Vel)
+void ABuff_TekGravityGrenadeForce_C::ClientSyncDesiredFallVelocity(const struct FVector& vel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekGravityGrenadeForce.Buff_TekGravityGrenadeForce_C.ClientSyncDesiredFallVelocity");
 
 	ABuff_TekGravityGrenadeForce_C_ClientSyncDesiredFallVelocity_Params params;
-	params.Vel = Vel;
+	params.vel = vel;
 
 	auto flags = fn->FunctionFlags;
 

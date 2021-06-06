@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -98,13 +98,13 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1320();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1319();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1318();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1317();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1316();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_466();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_465();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2022();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2021();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2020();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2019();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2018();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_506();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_smallTrap_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_505();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_smallTrap_RIG_AnimBlueprint(int EntryPoint);
 };

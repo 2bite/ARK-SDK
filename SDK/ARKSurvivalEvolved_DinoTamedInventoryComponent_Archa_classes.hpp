@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Archa.DinoTamedInventoryComponent_Archa_C
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x05A0 - 0x05A0)
 class UDinoTamedInventoryComponent_Archa_C : public UDinoTamedInventoryComponent_BP_RockGolem_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DroppedItemGeneric_NoStasisDelete.DroppedItemGeneric_NoStasisDelete_C
-// 0x0000 (0x0700 - 0x0700)
+// 0x0000 (0x0708 - 0x0708)
 class ADroppedItemGeneric_NoStasisDelete_C : public ADroppedItemGenericLowQuality_C
 {
 public:

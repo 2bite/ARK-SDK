@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -88,7 +88,7 @@ bool ATitanosaur_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.BPSetupTamed
-// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient)
+// (NetReliable, Exec, NetResponse, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // bool*                          bWasJustTamed                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -100,7 +100,6 @@ void ATitanosaur_Character_BP_C::BPSetupTamed(bool* bWasJustTamed)
 	params.bWasJustTamed = bWasJustTamed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,11 +132,11 @@ void ATitanosaur_Character_BP_C::CheckTorporDistanceTravel(float torporIn, bool*
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.IsHeadObstructed
-// (NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient)
+// (Event, NetResponse, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // bool                           OutVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATitanosaur_Character_BP_C::STATIC_IsHeadObstructed(bool* OutVal)
+void ATitanosaur_Character_BP_C::IsHeadObstructed(bool* OutVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.IsHeadObstructed");
 

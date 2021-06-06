@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_Glider.PrimalItemArmor_Glider_C
-// 0x0008 (0x0A08 - 0x0A00)
+// 0x0008 (0x0AE8 - 0x0AE0)
 class UPrimalItemArmor_Glider_C : public UPrimalItemSkinGeneric_C
 {
 public:
-	class UPrimalItem*                                 Ref_OwnerItem;                                            // 0x0A00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UPrimalItem*                                 Ref_OwnerItem;                                            // 0x0AE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

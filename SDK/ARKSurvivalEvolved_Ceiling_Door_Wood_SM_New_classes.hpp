@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ceiling_Door_Wood_SM_New.Ceiling_Door_Wood_SM_New_C
-// 0x0000 (0x0B50 - 0x0B50)
+// 0x0000 (0x0B78 - 0x0B78)
 class ACeiling_Door_Wood_SM_New_C : public ACeiling_Door_Base_SM_C
 {
 public:

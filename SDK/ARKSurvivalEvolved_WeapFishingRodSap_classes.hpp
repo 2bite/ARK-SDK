@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapFishingRodSap.WeapFishingRodSap_C
-// 0x0000 (0x1120 - 0x1120)
+// 0x0000 (0x1158 - 0x1158)
 class AWeapFishingRodSap_C : public AWeapFishingRod_C
 {
 public:

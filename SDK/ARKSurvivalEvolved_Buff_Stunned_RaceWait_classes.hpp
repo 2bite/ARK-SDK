@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Stunned_RaceWait.Buff_Stunned_RaceWait_C
-// 0x0000 (0x0968 - 0x0968)
+// 0x0000 (0x0978 - 0x0978)
 class ABuff_Stunned_RaceWait_C : public ABuff_Stunned_C
 {
 public:

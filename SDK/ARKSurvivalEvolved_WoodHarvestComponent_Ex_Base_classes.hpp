@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WoodHarvestComponent_Ex_Base.WoodHarvestComponent_Ex_Base_C
-// 0x0000 (0x0240 - 0x0240)
+// 0x0000 (0x0250 - 0x0250)
 class UWoodHarvestComponent_Ex_Base_C : public UAttackHarvestComponent_Base_C
 {
 public:

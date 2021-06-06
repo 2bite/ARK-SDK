@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ParaFrightened.Buff_ParaFrightened_C
-// 0x0008 (0x0980 - 0x0978)
+// 0x0008 (0x0990 - 0x0988)
 class ABuff_ParaFrightened_C : public ABuff_ForceFlee_Base_C
 {
 public:
-	class AActor*                                      RunAwayFrom_1;                                            // 0x0978(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AActor*                                      RunAwayFrom_1;                                            // 0x0988(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

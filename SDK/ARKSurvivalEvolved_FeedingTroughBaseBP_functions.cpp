@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,7 +76,7 @@ void AFeedingTroughBaseBP_C::OnRep_ShowArea()
 
 
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPClientDoMultiUse
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -90,6 +90,7 @@ void AFeedingTroughBaseBP_C::BPClientDoMultiUse(class APlayerController** ForPC,
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,7 +99,7 @@ void AFeedingTroughBaseBP_C::BPClientDoMultiUse(class APlayerController** ForPC,
 
 
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPGetMultiUseEntries
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -183,6 +184,26 @@ void AFeedingTroughBaseBP_C::ServerRequest_ToggleShowarea()
 	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ServerRequest_ToggleShowarea");
 
 	AFeedingTroughBaseBP_C_ServerRequest_ToggleShowarea_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ServerRequest_TurnOffAllShowarea
+// ()
+// Parameters:
+// class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFeedingTroughBaseBP_C::ServerRequest_TurnOffAllShowarea(class APlayerController* PC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.ServerRequest_TurnOffAllShowarea");
+
+	AFeedingTroughBaseBP_C_ServerRequest_TurnOffAllShowarea_Params params;
+	params.PC = PC;
 
 	auto flags = fn->FunctionFlags;
 

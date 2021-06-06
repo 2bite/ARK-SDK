@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,7 +40,7 @@ public:
 	}
 
 
-	void STATIC_DinoUberpounce(bool* Success);
+	void DinoUberpounce(bool* Success);
 	void LocationUberpounce();
 	void AllowSurfaceNormalForUberpounce(const struct FVector& surfaceNormal, bool* IsValid);
 	void Enable();

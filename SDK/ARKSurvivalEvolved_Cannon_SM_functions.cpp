@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,8 +12,47 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Cannon_SM.Cannon_SM_C.LoadFromNearby
+// ()
+
+void ACannon_SM_C::LoadFromNearby()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Cannon_SM.Cannon_SM_C.LoadFromNearby");
+
+	ACannon_SM_C_LoadFromNearby_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Cannon_SM.Cannon_SM_C.ValidAmmoContainerNearby
+// ()
+// Parameters:
+// bool                           ContainerNearby                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ACannon_SM_C::ValidAmmoContainerNearby(bool* ContainerNearby)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Cannon_SM.Cannon_SM_C.ValidAmmoContainerNearby");
+
+	ACannon_SM_C_ValidAmmoContainerNearby_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ContainerNearby != nullptr)
+		*ContainerNearby = params.ContainerNearby;
+}
+
+
 // Function Cannon_SM.Cannon_SM_C.IsValidToFire
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           ValidToFire                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -24,6 +63,7 @@ void ACannon_SM_C::STATIC_IsValidToFire(bool* ValidToFire)
 	ACannon_SM_C_IsValidToFire_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,13 +100,13 @@ bool ACannon_SM_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function Cannon_SM.Cannon_SM_C.BPGetMultiUseEntries
-// (NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Native, NetResponse, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ACannon_SM_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ACannon_SM_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Cannon_SM.Cannon_SM_C.BPGetMultiUseEntries");
 

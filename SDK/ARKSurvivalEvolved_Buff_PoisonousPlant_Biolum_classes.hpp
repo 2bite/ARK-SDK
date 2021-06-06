@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_PoisonousPlant_Biolum.Buff_PoisonousPlant_Biolum_C
-// 0x0000 (0x0964 - 0x0964)
+// 0x0000 (0x0974 - 0x0974)
 class ABuff_PoisonousPlant_Biolum_C : public ABuff_PoisonousTrap_Base_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,7 @@ struct ABogSpider_WebAnchorPoint_C_IsAnchorVisible_Params
 // Function BogSpider_WebAnchorPoint.BogSpider_WebAnchorPoint_C.GetAnchorRadiusMult
 struct ABogSpider_WebAnchorPoint_C_GetAnchorRadiusMult_Params
 {
-	float                                              mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BogSpider_WebAnchorPoint.BogSpider_WebAnchorPoint_C.GetAnchorColor

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,17 +75,17 @@ void ABuff_FishingNetXrayVision_C::Set_All_Components_Render_Custom_Depth(class 
 }
 
 
-// Function Buff_FishingNetXrayVision.Buff_FishingNetXrayVision_C.set all components custom depth stencil value
+// Function Buff_FishingNetXrayVision.Buff_FishingNetXrayVision_C.Set All Components Custom Depth Stencil Value
 // ()
 // Parameters:
 // int                            stencil_Value                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_FishingNetXrayVision_C::set_all_components_custom_depth_stencil_value(int stencil_Value, class AActor* Actor)
+void ABuff_FishingNetXrayVision_C::Set_All_Components_Custom_Depth_Stencil_Value(int stencil_Value, class AActor* Actor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_FishingNetXrayVision.Buff_FishingNetXrayVision_C.set all components custom depth stencil value");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_FishingNetXrayVision.Buff_FishingNetXrayVision_C.Set All Components Custom Depth Stencil Value");
 
-	ABuff_FishingNetXrayVision_C_set_all_components_custom_depth_stencil_value_Params params;
+	ABuff_FishingNetXrayVision_C_Set_All_Components_Custom_Depth_Stencil_Value_Params params;
 	params.stencil_Value = stencil_Value;
 	params.Actor = Actor;
 

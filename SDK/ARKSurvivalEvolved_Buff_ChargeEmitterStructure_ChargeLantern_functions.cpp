@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.GetDistanceAndAngleCheckOrigin
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // class AActor**                 emitterActor                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 distanceAngleOrigin            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitterStructure_ChargeLantern_C::STATIC_GetDistanceAndAngleCheckOrigin(class AActor** emitterActor, struct FVector* distanceAngleOrigin)
+void ABuff_ChargeEmitterStructure_ChargeLantern_C::GetDistanceAndAngleCheckOrigin(class AActor** emitterActor, struct FVector* distanceAngleOrigin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.GetDistanceAndAngleCheckOrigin");
 
@@ -26,7 +26,6 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::STATIC_GetDistanceAndAngleChe
 	params.emitterActor = emitterActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,7 +211,7 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::GetEmitterForwardVector(struc
 
 
 // Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.GetEmitterLineTraceOrigin
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // class AActor**                 emitterActor                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 lineTraceOrigin                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -225,7 +224,6 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::GetEmitterLineTraceOrigin(cla
 	params.emitterActor = emitterActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,9 +318,9 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::ShouldEnableTimers(bool* tick
 // bool*                          bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double*                        dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int*                           iValue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitterStructure_ChargeLantern_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue)
+void ABuff_ChargeEmitterStructure_ChargeLantern_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.ChargeVariableEvent");
 
@@ -331,7 +329,7 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::ChargeVariableEvent(TEnumAsBy
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.iValue = iValue;
+	params.ivalue = ivalue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -342,7 +340,7 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::ChargeVariableEvent(TEnumAsBy
 
 
 // Function Buff_ChargeEmitterStructure_ChargeLantern.Buff_ChargeEmitterStructure_ChargeLantern_C.InitializeEmitter
-// (NetReliable, Native, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
 
 void ABuff_ChargeEmitterStructure_ChargeLantern_C::STATIC_InitializeEmitter()
 {
@@ -351,7 +349,6 @@ void ABuff_ChargeEmitterStructure_ChargeLantern_C::STATIC_InitializeEmitter()
 	ABuff_ChargeEmitterStructure_ChargeLantern_C_InitializeEmitter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

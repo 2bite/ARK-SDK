@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sign_Base.Sign_Base_C
-// 0x0008 (0x0AF0 - 0x0AE8)
+// 0x0008 (0x0B18 - 0x0B10)
 class ASign_Base_C : public APrimalStructureSign
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0AE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0B10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,16 +15,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ObeliskStatsPanel.ObeliskStatsPanel_C
-// 0x0030 (0x0618 - 0x05E8)
+// 0x0030 (0x08A8 - 0x0878)
 class UObeliskStatsPanel_C : public UStatsPanelWidget_Obelisk
 {
 public:
-	class UStructureStatWidget_C*                      ArkDinoStat;                                              // 0x05E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStructureStatWidget_C*                      ArkStorageStat;                                           // 0x05F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCustomButtonWidget*                         RefreshArkButton;                                         // 0x05F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStructureStatWidget_C*                      StorageStat;                                              // 0x0600(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCustomButtonWidget*                         TravelToAnotherServerButton;                              // 0x0608(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCustomButtonWidget*                         UploadCharacterDataButton;                                // 0x0610(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStructureStatWidget_C*                      ArkDinoStat;                                              // 0x0878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStructureStatWidget_C*                      ArkStorageStat;                                           // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCustomButtonWidget*                         RefreshArkButton;                                         // 0x0888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStructureStatWidget_C*                      StorageStat;                                              // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCustomButtonWidget*                         TravelToAnotherServerButton;                              // 0x0898(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCustomButtonWidget*                         UploadCharacterDataButton;                                // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -121,7 +121,7 @@ struct AWeapFishingRod_C_OnRGKeySuccess_Params
 // Function WeapFishingRod.WeapFishingRod_C.TugFishingCable
 struct AWeapFishingRod_C_TugFishingCable_Params
 {
-	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.GetReelingGameDuration
@@ -144,8 +144,8 @@ struct AWeapFishingRod_C_StartSecondaryActionEvent_Params
 // Function WeapFishingRod.WeapFishingRod_C.CanSnareFish
 struct AWeapFishingRod_C_CanSnareFish_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               canSnare;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               CanSnare;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.GenerateRandomKeys
@@ -159,7 +159,7 @@ struct AWeapFishingRod_C_GenerateRandomKeys_Params
 // Function WeapFishingRod.WeapFishingRod_C.FishSnared
 struct AWeapFishingRod_C_FishSnared_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.UpdateSurroundingPrey
@@ -184,13 +184,13 @@ struct AWeapFishingRod_C_StartFishing_Params
 // Function WeapFishingRod.WeapFishingRod_C.OnFishReleased
 struct AWeapFishingRod_C_OnFishReleased_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.OnFishSnared
 struct AWeapFishingRod_C_OnFishSnared_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.ReleaseReeledFish
@@ -283,13 +283,13 @@ struct AWeapFishingRod_C_ReelingGameFinishedEvent_Params
 // Function WeapFishingRod.WeapFishingRod_C.OnFishSnaredEvent
 struct AWeapFishingRod_C_OnFishSnaredEvent_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.OnFishReleasedEvent
 struct AWeapFishingRod_C_OnFishReleasedEvent_Params
 {
-	class APrimalDinoCharacter*                        Fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        fish;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.BPAnimNotifyCustomState_Begin
@@ -318,13 +318,13 @@ struct AWeapFishingRod_C_ServerEndFishing_Params
 // Function WeapFishingRod.WeapFishingRod_C.ServerTugCable
 struct AWeapFishingRod_C_ServerTugCable_Params
 {
-	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.TugCableEvent
 struct AWeapFishingRod_C_TugCableEvent_Params
 {
-	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.StartFishingEventMulti

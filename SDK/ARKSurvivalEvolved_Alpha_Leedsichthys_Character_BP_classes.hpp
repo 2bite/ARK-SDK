@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Alpha_Leedsichthys_Character_BP.Alpha_Leedsichthys_Character_BP_C
-// 0x0000 (0x2511 - 0x2511)
+// 0x0000 (0x25E1 - 0x25E1)
 class AAlpha_Leedsichthys_Character_BP_C : public ALeedsichthys_Character_BP_C
 {
 public:

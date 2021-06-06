@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.UnlockGen2ExplorerNote
+// (NetReliable, Exec, Event, NetResponse, Static, Public, NetServer, HasDefaults, NetClient, NetValidate)
+
+void AExplorerChest_Glitch_C::STATIC_UnlockGen2ExplorerNote()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.UnlockGen2ExplorerNote");
+
+	AExplorerChest_Glitch_C_UnlockGen2ExplorerNote_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.DrawBasicFloatingHUD
 // ()
@@ -33,11 +50,11 @@ void AExplorerChest_Glitch_C::DrawBasicFloatingHUD(class AHUD** ForHUD)
 
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, NetServer, HasDefaults, NetClient, NetValidate)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExplorerChest_Glitch_C::STATIC_PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
+void AExplorerChest_Glitch_C::PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA");
 
@@ -150,6 +167,28 @@ void AExplorerChest_Glitch_C::BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_1
 
 	if (SweepResult != nullptr)
 		*SweepResult = params.SweepResult;
+}
+
+
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.delay play reaction
+// ()
+// Parameters:
+// struct FCompanionReactionData  reaction                       (Parm)
+// class APrimalBuff_Companion*   HLNA                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void AExplorerChest_Glitch_C::delay_play_reaction(const struct FCompanionReactionData& reaction, class APrimalBuff_Companion* HLNA)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.delay play reaction");
+
+	AExplorerChest_Glitch_C_delay_play_reaction_Params params;
+	params.reaction = reaction;
+	params.HLNA = HLNA;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 

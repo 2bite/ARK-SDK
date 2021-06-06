@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ public:
 
 
 	void ReceiveTick(float* DeltaSeconds);
-	void TickCheckDangerLevels();
+	void STATIC_TickCheckDangerLevels();
 	void GetDangerLevel(float* Danger);
 	void UserConstructionScript();
 	void ExecuteUbergraph_GasBags_AIController_BP(int EntryPoint);

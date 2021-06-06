@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.VineCollisionCheck
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -32,7 +32,6 @@ void ABP_ForestKaiju_Vine_C::STATIC_VineCollisionCheck(const struct FVector& Sta
 	params.OtherActorToIgnore = OtherActorToIgnore;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +60,7 @@ void ABP_ForestKaiju_Vine_C::OnRep_EndVineLocation()
 
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.TargetDataContainsTarget
-// (NetReliable, Native, Event, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -74,7 +73,6 @@ void ABP_ForestKaiju_Vine_C::TargetDataContainsTarget(class APrimalCharacter* Ta
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,7 +106,7 @@ void ABP_ForestKaiju_Vine_C::Get_Current_Vine_End_Location(struct FVector* EndPo
 
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.GetVineTargets
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -120,7 +118,6 @@ void ABP_ForestKaiju_Vine_C::GetVineTargets(const struct FVector& Location)
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,7 +126,7 @@ void ABP_ForestKaiju_Vine_C::GetVineTargets(const struct FVector& Location)
 
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.UpdateVines
-// (Exec, Event, Static, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_ForestKaiju_Vine_C::STATIC_UpdateVines()
 {
@@ -138,6 +135,7 @@ void ABP_ForestKaiju_Vine_C::STATIC_UpdateVines()
 	ABP_ForestKaiju_Vine_C_UpdateVines_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,7 +144,7 @@ void ABP_ForestKaiju_Vine_C::STATIC_UpdateVines()
 
 
 // Function BP_ForestKaiju_Vine.BP_ForestKaiju_Vine_C.InitVines
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_ForestKaiju_Vine_C::STATIC_InitVines()
 {
@@ -155,7 +153,6 @@ void ABP_ForestKaiju_Vine_C::STATIC_InitVines()
 	ABP_ForestKaiju_Vine_C_InitVines_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

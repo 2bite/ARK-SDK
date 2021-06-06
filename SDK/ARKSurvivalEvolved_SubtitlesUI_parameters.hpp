@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function SubtitlesUI.SubtitlesUI_C.GetSubtitleColors
+struct USubtitlesUI_C_GetSubtitleColors_Params
+{
+	TArray<struct FSlateColor>                         Colors;                                                   // (Parm, OutParm, ZeroConstructor)
+};
 
 // Function SubtitlesUI.SubtitlesUI_C.ProcessDynamicMaterialForDialogueIcon
 struct USubtitlesUI_C_ProcessDynamicMaterialForDialogueIcon_Params

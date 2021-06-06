@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -137,9 +137,9 @@ void ABuff_Zipline_Base_C::Deactivate_Local_Client(class AActor* Pawn)
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.IsStillColliding
-// (NetRequest, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
 
-void ABuff_Zipline_Base_C::IsStillColliding()
+void ABuff_Zipline_Base_C::STATIC_IsStillColliding()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.IsStillColliding");
 
@@ -652,7 +652,7 @@ void ABuff_Zipline_Base_C::ResetMeshPosition()
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.JumpImpulse
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1030,7 +1030,7 @@ void ABuff_Zipline_Base_C::GetAttachOffset(struct FVector* AttachOffset)
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// (NetResponse, Static, Private, NetServer, BlueprintCallable)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1042,7 +1042,6 @@ void ABuff_Zipline_Base_C::STATIC_BPSetupForInstigator(class AActor** ForInstiga
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1101,7 +1100,7 @@ struct FVector ABuff_Zipline_Base_C::BPOverrideCharacterNewFallVelocity(float* D
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.AttachToZipline
-// (NetReliable, Native, Event, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, NetValidate)
+// (NetRequest, Native, NetMulticast, Private, NetServer, BlueprintCallable)
 // Parameters:
 // struct FVector                 StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1185,7 +1184,7 @@ void ABuff_Zipline_Base_C::StartMoveAlongZipline(const struct FVector& StartLoca
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.UserConstructionScript
-// (Event, NetResponse, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, Private, NetServer, BlueprintCallable)
 
 void ABuff_Zipline_Base_C::UserConstructionScript()
 {
@@ -1201,14 +1200,14 @@ void ABuff_Zipline_Base_C::UserConstructionScript()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_96
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_103
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Use_K2Node_InputActionEvent_96()
+void ABuff_Zipline_Base_C::InpActEvt_Use_K2Node_InputActionEvent_103()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_96");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_103");
 
-	ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_96_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_103_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1218,14 +1217,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Use_K2Node_InputActionEvent_96()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_95
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_102
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Prone_K2Node_InputActionEvent_95()
+void ABuff_Zipline_Base_C::InpActEvt_Prone_K2Node_InputActionEvent_102()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_95");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_102");
 
-	ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_95_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_102_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1235,14 +1234,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Prone_K2Node_InputActionEvent_95()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_94
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_101
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Crouch_K2Node_InputActionEvent_94()
+void ABuff_Zipline_Base_C::InpActEvt_Crouch_K2Node_InputActionEvent_101()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_94");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_101");
 
-	ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_94_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_101_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1252,14 +1251,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Crouch_K2Node_InputActionEvent_94()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_93
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_100
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Jump_K2Node_InputActionEvent_93()
+void ABuff_Zipline_Base_C::InpActEvt_Jump_K2Node_InputActionEvent_100()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_93");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_100");
 
-	ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_93_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_100_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1269,14 +1268,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Jump_K2Node_InputActionEvent_93()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_47
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_47()
+void ABuff_Zipline_Base_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_47");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48");
 
-	ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_47_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_48_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1286,14 +1285,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_46
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_47
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_46()
+void ABuff_Zipline_Base_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_47()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_46");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_47");
 
-	ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_46_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEvent_47_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1303,14 +1302,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Gamepad_FaceButton_Bottom_K2Node_InputKeyEv
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_45
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_46
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_45()
+void ABuff_Zipline_Base_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_46()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_45");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_46");
 
-	ABuff_Zipline_Base_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_45_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputKeyEvent_46_Params params;
 
 	auto flags = fn->FunctionFlags;
 

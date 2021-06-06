@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BoobyTrapFemaleAnimBP.BoobyTrapFemaleAnimBP_C
-// 0x0000 (0x3A14 - 0x3A14)
+// 0x0000 (0x3B6C - 0x3B6C)
 class UBoobyTrapFemaleAnimBP_C : public UTPV_Female_NoWeapon_AnimBlueprint_C
 {
 public:

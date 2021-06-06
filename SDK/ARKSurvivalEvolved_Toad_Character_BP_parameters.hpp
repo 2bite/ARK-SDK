@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Toad_Character_BP.Toad_Character_BP_C.BPPreventNotifySound
+struct AToad_Character_BP_C_BPPreventNotifySound_Params
+{
+	class USoundBase**                                 SoundIn;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Toad_Character_BP.Toad_Character_BP_C.BlueprintCanRiderAttack
 struct AToad_Character_BP_C_BlueprintCanRiderAttack_Params

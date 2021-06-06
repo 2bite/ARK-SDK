@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,14 +45,14 @@ struct ADeinonychus_Character_BP_C_OnNonInstanceJumpOffWallInput_Params
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetLatchJumpSpeedThresholdForRotate
 struct ADeinonychus_Character_BP_C_GetLatchJumpSpeedThresholdForRotate_Params
 {
-	float                                              Res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.SpawnUberJumpFX
 struct ADeinonychus_Character_BP_C_SpawnUberJumpFX_Params
 {
 	TArray<struct FName>                               Attach_Point_Names;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
-	class UParticleSystem*                             FX_To_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             FX_to_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Rotation;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -657,8 +657,8 @@ struct ADeinonychus_Character_BP_C_Get_RotationAndLocation_for_UberpounceOnSurfa
 	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         HitComponent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     DeinonychusLocation;                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    RetRotation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     RetLocation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    retRotation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     retLocation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -853,13 +853,13 @@ struct ADeinonychus_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_178
-struct ADeinonychus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_178_Params
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_357
+struct ADeinonychus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_357_Params
 {
 };
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177
-struct ADeinonychus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177_Params
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_356
+struct ADeinonychus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_356_Params
 {
 };
 
@@ -1032,14 +1032,14 @@ struct ADeinonychus_Character_BP_C_ServerSetLocDuringLatchedJump_Params
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Client_CallServerMulticast_JumpFX
 struct ADeinonychus_Character_BP_C_Client_CallServerMulticast_JumpFX_Params
 {
-	class UParticleSystem*                             FX_To_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             FX_to_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FName>                               Attach_Point_Names;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Multicast_JumpFX
 struct ADeinonychus_Character_BP_C_Multicast_JumpFX_Params
 {
-	class UParticleSystem*                             FX_To_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             FX_to_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FName>                               Attach_Point_Names;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 

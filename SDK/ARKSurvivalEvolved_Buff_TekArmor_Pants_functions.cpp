@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,23 +11,6 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
-
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InstigatorDie
-// ()
-
-void ABuff_TekArmor_Pants_C::InstigatorDie()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InstigatorDie");
-
-	ABuff_TekArmor_Pants_C_InstigatorDie_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.IsPlayerUsingJetpack
 // ()
@@ -325,12 +308,12 @@ void ABuff_TekArmor_Pants_C::NetSetRunningSpeedModifier(float newModifier)
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.RunDamageActor
-// (NetRequest, Native, NetResponse, Static, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  HitActor                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DidRebound                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::STATIC_RunDamageActor(class AActor* HitActor, bool* DidRebound)
+void ABuff_TekArmor_Pants_C::RunDamageActor(class AActor* HitActor, bool* DidRebound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.RunDamageActor");
 
@@ -652,9 +635,9 @@ void ABuff_TekArmor_Pants_C::SetChargeStartVariables()
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Get Default Player Run Speed Mult
 // ()
 // Parameters:
-// float                          SpeedMult                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          speedMult                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::Get_Default_Player_Run_Speed_Mult(float* SpeedMult)
+void ABuff_TekArmor_Pants_C::Get_Default_Player_Run_Speed_Mult(float* speedMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Get Default Player Run Speed Mult");
 
@@ -666,8 +649,8 @@ void ABuff_TekArmor_Pants_C::Get_Default_Player_Run_Speed_Mult(float* SpeedMult)
 
 	fn->FunctionFlags = flags;
 
-	if (SpeedMult != nullptr)
-		*SpeedMult = params.SpeedMult;
+	if (speedMult != nullptr)
+		*speedMult = params.speedMult;
 }
 
 
@@ -712,11 +695,11 @@ void ABuff_TekArmor_Pants_C::RedirectPlayerVelocity(const struct FVector& newFor
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.BuffTickClient
-// (Exec, Event, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::BuffTickClient(float* DeltaTime)
+void ABuff_TekArmor_Pants_C::STATIC_BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.BuffTickClient");
 
@@ -724,6 +707,7 @@ void ABuff_TekArmor_Pants_C::BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -734,14 +718,14 @@ void ABuff_TekArmor_Pants_C::BuffTickClient(float* DeltaTime)
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.SetPreventEquipWeapons
 // ()
 // Parameters:
-// bool                           prevent                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Prevent                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::SetPreventEquipWeapons(bool prevent)
+void ABuff_TekArmor_Pants_C::SetPreventEquipWeapons(bool Prevent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.SetPreventEquipWeapons");
 
 	ABuff_TekArmor_Pants_C_SetPreventEquipWeapons_Params params;
-	params.prevent = prevent;
+	params.Prevent = Prevent;
 
 	auto flags = fn->FunctionFlags;
 
@@ -814,15 +798,16 @@ void ABuff_TekArmor_Pants_C::ClearHitActors()
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace and Damage ForwardPawns
-// (NetReliable, NetRequest, Exec, Event, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
+// (NetRequest, Native, Event, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ABuff_TekArmor_Pants_C::STATIC_Trace_and_Damage_ForwardPawns()
+void ABuff_TekArmor_Pants_C::Trace_and_Damage_ForwardPawns()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace and Damage ForwardPawns");
 
 	ABuff_TekArmor_Pants_C_Trace_and_Damage_ForwardPawns_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -857,16 +842,15 @@ void ABuff_TekArmor_Pants_C::GetModifiedForward(float forwardScale, const struct
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace And Damage Forward StationaryActors
-// (NetRequest, Exec, Native, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
+// (NetReliable, Event, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ABuff_TekArmor_Pants_C::Trace_And_Damage_Forward_StationaryActors()
+void ABuff_TekArmor_Pants_C::STATIC_Trace_And_Damage_Forward_StationaryActors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace And Damage Forward StationaryActors");
 
 	ABuff_TekArmor_Pants_C_Trace_And_Damage_Forward_StationaryActors_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -952,14 +936,14 @@ void ABuff_TekArmor_Pants_C::UserConstructionScript()
 }
 
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_77
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_84
 // ()
 
-void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_77()
+void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_84()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_77");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_84");
 
-	ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_77_Params params;
+	ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_84_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -969,14 +953,14 @@ void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_77()
 }
 
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_76
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_83
 // ()
 
-void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_76()
+void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_83()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_76");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_83");
 
-	ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_76_Params params;
+	ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_83_Params params;
 
 	auto flags = fn->FunctionFlags;
 

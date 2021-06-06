@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Client_GiantTurtleRaftState.Buff_Client_GiantTurtleRaftState_C
-// 0x0001 (0x0951 - 0x0950)
+// 0x0001 (0x0961 - 0x0960)
 class ABuff_Client_GiantTurtleRaftState_C : public ABuff_Base_C
 {
 public:
-	bool                                               IsInRaftMode;                                             // 0x0950(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsInRaftMode;                                             // 0x0960(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

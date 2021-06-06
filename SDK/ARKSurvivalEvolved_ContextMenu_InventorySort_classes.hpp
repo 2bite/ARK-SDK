@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ContextMenu_InventorySort.ContextMenu_InventorySort_C
-// 0x0000 (0x0288 - 0x0288)
+// 0x0000 (0x02A0 - 0x02A0)
 class UContextMenu_InventorySort_C : public UContextMenu_InventorySort
 {
 public:

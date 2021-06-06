@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void ABuff_DKaijuLightningNoTarget_C::OnRep_guy()
 
 
 // Function Buff_DKaijuLightningNoTarget.Buff_DKaijuLightningNoTarget_C.BPDeactivated
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Private, Protected, NetServer, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Event, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

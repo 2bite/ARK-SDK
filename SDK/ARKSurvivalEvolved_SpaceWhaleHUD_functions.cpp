@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_HyperdriveValueTextBlock_Text_1
-// (NetRequest, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
+// (NetRequest, Native, NetResponse, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -24,6 +24,7 @@ struct FText USpaceWhaleHUD_C::Get_HyperdriveValueTextBlock_Text_1()
 	USpaceWhaleHUD_C_Get_HyperdriveValueTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,12 +35,12 @@ struct FText USpaceWhaleHUD_C::Get_HyperdriveValueTextBlock_Text_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Set Progress Bar Foreground Color
-// (Static, NetMulticast, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // class UObject*                 ProgressBarObject              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            LinearColor                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void USpaceWhaleHUD_C::STATIC_Set_Progress_Bar_Foreground_Color(class UObject* ProgressBarObject, const struct FLinearColor& LinearColor)
+void USpaceWhaleHUD_C::Set_Progress_Bar_Foreground_Color(class UObject* ProgressBarObject, const struct FLinearColor& LinearColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.Set Progress Bar Foreground Color");
 
@@ -77,7 +78,7 @@ float USpaceWhaleHUD_C::Get_CosmicPowerBelowProgressBar_Percent_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get_CosmicPowerValueTextBlock_Text_1
-// (NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
+// (Native, Event, NetResponse, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -88,6 +89,7 @@ struct FText USpaceWhaleHUD_C::Get_CosmicPowerValueTextBlock_Text_1()
 	USpaceWhaleHUD_C_Get_CosmicPowerValueTextBlock_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,17 +142,18 @@ float USpaceWhaleHUD_C::Get_HyperdriveProgressBar_Percent_1()
 
 
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get BombsHintText 0
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient)
+// (NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText USpaceWhaleHUD_C::Get_BombsHintText_0()
+struct FText USpaceWhaleHUD_C::STATIC_Get_BombsHintText_0()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.Get BombsHintText 0");
 
 	USpaceWhaleHUD_C_Get_BombsHintText_0_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,14 +186,14 @@ void USpaceWhaleHUD_C::InitFromSpaceWhale(class ASpaceWhale_Character_BP_C* Spac
 // Function SpaceWhaleHUD.SpaceWhaleHUD_C.StartClosingWidget
 // ()
 // Parameters:
-// float                          NewLifespan                    (Parm, ZeroConstructor, IsPlainOldData)
+// float                          NewLifeSpan                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void USpaceWhaleHUD_C::StartClosingWidget(float NewLifespan)
+void USpaceWhaleHUD_C::StartClosingWidget(float NewLifeSpan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.StartClosingWidget");
 
 	USpaceWhaleHUD_C_StartClosingWidget_Params params;
-	params.NewLifespan = NewLifespan;
+	params.NewLifeSpan = NewLifeSpan;
 
 	auto flags = fn->FunctionFlags;
 
@@ -200,14 +203,14 @@ void USpaceWhaleHUD_C::StartClosingWidget(float NewLifespan)
 }
 
 
-// Function SpaceWhaleHUD.SpaceWhaleHUD_C.DestroyHudWidget
+// Function SpaceWhaleHUD.SpaceWhaleHUD_C.DestroyHUDWidget
 // ()
 
-void USpaceWhaleHUD_C::DestroyHudWidget()
+void USpaceWhaleHUD_C::DestroyHUDWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.DestroyHudWidget");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceWhaleHUD.SpaceWhaleHUD_C.DestroyHUDWidget");
 
-	USpaceWhaleHUD_C_DestroyHudWidget_Params params;
+	USpaceWhaleHUD_C_DestroyHUDWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ public:
 	}
 
 
-	void UpdateAttackDestinationOffset(bool IsInWaitingState);
+	void UpdateAttackDestinationOffset(bool isInWaitingState);
 	void UserConstructionScript();
 	void ExecuteUbergraph_Pegomastax_AIController_BP(int EntryPoint);
 };

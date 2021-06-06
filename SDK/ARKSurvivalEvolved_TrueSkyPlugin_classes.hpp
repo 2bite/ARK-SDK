@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ public:
 
 // Class TrueSkyPlugin.TrueSkySequenceActor
 // 0x0070 (0x04D8 - 0x0468)
-class ATrueSkySequenceActor : public AActor
+class ATrueSkySequenceActor : public ATrueSkyActorParent
 {
 public:
 	TArray<class UTrueSkySequenceAsset*>               ActiveSequences;                                          // 0x0468(0x0010) (Edit, BlueprintVisible, ZeroConstructor)

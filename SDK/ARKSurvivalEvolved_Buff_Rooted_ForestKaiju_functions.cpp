@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -135,14 +135,14 @@ void ABuff_Rooted_ForestKaiju_C::UserConstructionScript()
 // Function Buff_Rooted_ForestKaiju.Buff_Rooted_ForestKaiju_C.Multi_PreventMovementInput
 // ()
 // Parameters:
-// bool                           prevent                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Prevent                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Rooted_ForestKaiju_C::Multi_PreventMovementInput(bool prevent)
+void ABuff_Rooted_ForestKaiju_C::Multi_PreventMovementInput(bool Prevent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Rooted_ForestKaiju.Buff_Rooted_ForestKaiju_C.Multi_PreventMovementInput");
 
 	ABuff_Rooted_ForestKaiju_C_Multi_PreventMovementInput_Params params;
-	params.prevent = prevent;
+	params.Prevent = Prevent;
 
 	auto flags = fn->FunctionFlags;
 

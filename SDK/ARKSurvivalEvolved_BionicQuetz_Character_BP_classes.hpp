@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicQuetz_Character_BP.BionicQuetz_Character_BP_C
-// 0x0000 (0x21A8 - 0x21A8)
+// 0x0000 (0x2278 - 0x2278)
 class ABionicQuetz_Character_BP_C : public AQuetz_Character_BP_C
 {
 public:

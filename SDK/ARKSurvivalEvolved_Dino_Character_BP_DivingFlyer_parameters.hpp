@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -190,7 +190,7 @@ struct ADino_Character_BP_DivingFlyer_C_Diving_Start_Params
 struct ADino_Character_BP_DivingFlyer_C_Set_Is_Diving_Params
 {
 	bool                                               newDiving;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ForceSet;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               forceSet;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Dino_Character_BP_DivingFlyer.Dino_Character_BP_DivingFlyer_C.OnRep_bIsDiving

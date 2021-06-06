@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,118 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.IsInfiniteAmmo
+// ()
+// Parameters:
+// bool                           IsInfinite                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemArmor_Base_Tek_C::IsInfiniteAmmo(bool* IsInfinite)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.IsInfiniteAmmo");
+
+	UPrimalItemArmor_Base_Tek_C_IsInfiniteAmmo_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (IsInfinite != nullptr)
+		*IsInfinite = params.IsInfinite;
+}
+
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.ApplyingSkinOntoItem
+// ()
+// Parameters:
+// class UPrimalItem**            ToOwnerItem                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bIsFirstTime                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemArmor_Base_Tek_C::ApplyingSkinOntoItem(class UPrimalItem** ToOwnerItem, bool* bIsFirstTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.ApplyingSkinOntoItem");
+
+	UPrimalItemArmor_Base_Tek_C_ApplyingSkinOntoItem_Params params;
+	params.ToOwnerItem = ToOwnerItem;
+	params.bIsFirstTime = bIsFirstTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.RemovedSkinFromItem
+// ()
+// Parameters:
+// class UPrimalItem**            FromOwnerItem                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bIsFirstTime                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemArmor_Base_Tek_C::RemovedSkinFromItem(class UPrimalItem** FromOwnerItem, bool* bIsFirstTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.RemovedSkinFromItem");
+
+	UPrimalItemArmor_Base_Tek_C_RemovedSkinFromItem_Params params;
+	params.FromOwnerItem = FromOwnerItem;
+	params.bIsFirstTime = bIsFirstTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetInternalMapRestrictedTekArmorBuff
+// (NetRequest, Event, NetResponse, NetMulticast, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AShooterCharacter*       OwningPlayer                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  TekArmorBuff                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemArmor_Base_Tek_C::GetInternalMapRestrictedTekArmorBuff(class AShooterCharacter* OwningPlayer, class UClass** TekArmorBuff)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetInternalMapRestrictedTekArmorBuff");
+
+	UPrimalItemArmor_Base_Tek_C_GetInternalMapRestrictedTekArmorBuff_Params params;
+	params.OwningPlayer = OwningPlayer;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (TekArmorBuff != nullptr)
+		*TekArmorBuff = params.TekArmorBuff;
+}
+
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetResolvedTekArmorBuff
+// ()
+// Parameters:
+// class UClass*                  ResolvedTekArmorBuff           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemArmor_Base_Tek_C::GetResolvedTekArmorBuff(class UClass** ResolvedTekArmorBuff)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetResolvedTekArmorBuff");
+
+	UPrimalItemArmor_Base_Tek_C_GetResolvedTekArmorBuff_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ResolvedTekArmorBuff != nullptr)
+		*ResolvedTekArmorBuff = params.ResolvedTekArmorBuff;
+}
+
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.FillEmptyArmorElementWhenAvailable
 // ()
@@ -198,6 +310,40 @@ void UPrimalItemArmor_Base_Tek_C::IncreaseElement(float Percent)
 
 	UPrimalItemArmor_Base_Tek_C_IncreaseElement_Params params;
 	params.Percent = Percent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.TekArmorSkinApplied
+// ()
+
+void UPrimalItemArmor_Base_Tek_C::TekArmorSkinApplied()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.TekArmorSkinApplied");
+
+	UPrimalItemArmor_Base_Tek_C_TekArmorSkinApplied_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.TekArmorSkinRemoved
+// ()
+
+void UPrimalItemArmor_Base_Tek_C::TekArmorSkinRemoved()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.TekArmorSkinRemoved");
+
+	UPrimalItemArmor_Base_Tek_C_TekArmorSkinRemoved_Params params;
 
 	auto flags = fn->FunctionFlags;
 

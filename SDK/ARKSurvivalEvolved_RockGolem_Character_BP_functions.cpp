@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -289,7 +289,7 @@ bool ARockGolem_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function RockGolem_Character_BP.RockGolem_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Native, NetResponse, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Delegate, NetClient, BlueprintCallable, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

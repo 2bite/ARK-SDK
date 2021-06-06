@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -177,7 +177,7 @@ void ABuff_Freeze_C::Initialize()
 
 
 // Function Buff_Freeze.Buff_Freeze_C.CreateMIC
-// (NetReliable, Exec, NetResponse, Static, Public, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, NetResponse, Static, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABuff_Freeze_C::STATIC_CreateMIC()
 {
@@ -186,6 +186,7 @@ void ABuff_Freeze_C::STATIC_CreateMIC()
 	ABuff_Freeze_C_CreateMIC_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,7 +232,7 @@ void ABuff_Freeze_C::ApplyFrozenDebuff()
 
 
 // Function Buff_Freeze.Buff_Freeze_C.AddFreeze
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          amount                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -173,7 +173,7 @@ void ABuff_GrabbedByBeam_C::InitializeBuff(float MaxBeamLength)
 
 
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.BuffTickServer
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Event, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

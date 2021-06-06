@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -64,7 +64,7 @@ struct AMoleRat_Character_BP_C_BPOnEndCharging_Params
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.GiveAffinity
 struct AMoleRat_Character_BP_C_GiveAffinity_Params
 {
-	class APrimalCharacter*                            tamer;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            Tamer;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               wasTamed;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -144,7 +144,7 @@ struct AMoleRat_Character_BP_C_GetChargeValueScaled_Params
 	float                                              CurrentValue;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MinValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MaxValue;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              velocityAlpha;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              VelocityAlpha;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              scaledValue;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

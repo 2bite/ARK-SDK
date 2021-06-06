@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, Event, Static, Public, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -65,7 +65,7 @@ void AProjZiplineAnchor_C::HitValidForAttachment(struct FHitResult* Hit, bool* V
 
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.SpawnBreakEmitter
-// (NetReliable, Native, Event, NetResponse, Public, HasOutParms, HasDefaults, BlueprintCallable, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, NetServer, BlueprintCallable)
 
 void AProjZiplineAnchor_C::SpawnBreakEmitter()
 {
@@ -74,7 +74,6 @@ void AProjZiplineAnchor_C::SpawnBreakEmitter()
 	AProjZiplineAnchor_C_SpawnBreakEmitter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -154,7 +154,7 @@ void ABee_Queen_Character_BP_C::AddBeeReference(class APrimalDinoCharacter* BeeR
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPTryMultiUse
-// (NetReliable, NetRequest, Exec, Native, Event, Public, Protected, Delegate, NetServer, NetClient)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -180,7 +180,7 @@ bool ABee_Queen_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -297,7 +297,7 @@ void ABee_Queen_Character_BP_C::OnRep_bIsHidden()
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.SearchTreesForValidHiveSpawnLocation
-// (NetReliable, Native, Static, Public, Protected, Delegate, NetServer, NetClient)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, NetValidate)
 // Parameters:
 // bool                           succeeded                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      Transform                      (Parm, OutParm, IsPlainOldData)
@@ -309,7 +309,6 @@ void ABee_Queen_Character_BP_C::STATIC_SearchTreesForValidHiveSpawnLocation(bool
 	ABee_Queen_Character_BP_C_SearchTreesForValidHiveSpawnLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

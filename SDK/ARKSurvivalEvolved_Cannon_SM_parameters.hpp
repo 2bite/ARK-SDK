@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Cannon_SM.Cannon_SM_C.LoadFromNearby
+struct ACannon_SM_C_LoadFromNearby_Params
+{
+};
+
+// Function Cannon_SM.Cannon_SM_C.ValidAmmoContainerNearby
+struct ACannon_SM_C_ValidAmmoContainerNearby_Params
+{
+	bool                                               ContainerNearby;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Cannon_SM.Cannon_SM_C.IsValidToFire
 struct ACannon_SM_C_IsValidToFire_Params

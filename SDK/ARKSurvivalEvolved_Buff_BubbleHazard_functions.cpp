@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,11 +109,11 @@ bool ABuff_BubbleHazard_C::BPServerHandleNetExecCommand(class APlayerController*
 
 
 // Function Buff_BubbleHazard.Buff_BubbleHazard_C.BPHandleOnStartFire
-// (NetReliable, Native, Event, NetMulticast, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (Exec, Static, NetMulticast, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool*                          bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_BubbleHazard_C::BPHandleOnStartFire(bool* bFromGamepad)
+void ABuff_BubbleHazard_C::STATIC_BPHandleOnStartFire(bool* bFromGamepad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BubbleHazard.Buff_BubbleHazard_C.BPHandleOnStartFire");
 
@@ -121,7 +121,6 @@ void ABuff_BubbleHazard_C::BPHandleOnStartFire(bool* bFromGamepad)
 	params.bFromGamepad = bFromGamepad;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

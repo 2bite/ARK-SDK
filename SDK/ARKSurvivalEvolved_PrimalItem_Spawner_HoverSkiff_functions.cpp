@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.BPAllowCrafting
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -37,12 +37,12 @@ class FString UPrimalItem_Spawner_HoverSkiff_C::STATIC_BPAllowCrafting(class ASh
 
 
 // Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.GetValidSpawnTransform
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct UObject_FTransform      SpawnTransform                 (Parm, OutParm, IsPlainOldData)
 // bool                           SpawnValid                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_Spawner_HoverSkiff_C::STATIC_GetValidSpawnTransform(struct UObject_FTransform* SpawnTransform, bool* SpawnValid)
+void UPrimalItem_Spawner_HoverSkiff_C::GetValidSpawnTransform(struct UObject_FTransform* SpawnTransform, bool* SpawnValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C.GetValidSpawnTransform");
 

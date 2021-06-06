@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ShooterHudBP.ShooterHudBP_C
-// 0x0008 (0x0B30 - 0x0B28)
+// 0x0008 (0x0B50 - 0x0B48)
 class AShooterHudBP_C : public AShooterHUD
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0B28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0B48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

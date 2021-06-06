@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,7 +47,7 @@ struct AGiantTurtle_Character_BP_C_BPOnDinoCheat_Params
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.BPNotifyToggleHUD
 struct AGiantTurtle_Character_BP_C_BPNotifyToggleHUD_Params
 {
-	bool*                                              bHUDHidden;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bHudHidden;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.OnRep_bAllowMating
@@ -90,8 +90,8 @@ struct AGiantTurtle_Character_BP_C_ReceiveDestroyed_Params
 {
 };
 
-// Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.DestroyHudWidget
-struct AGiantTurtle_Character_BP_C_DestroyHudWidget_Params
+// Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.DestroyHUDWidget
+struct AGiantTurtle_Character_BP_C_DestroyHUDWidget_Params
 {
 	bool                                               DestroyNow;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };

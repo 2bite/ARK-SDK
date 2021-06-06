@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,15 +39,15 @@ struct FName AMegalosaurus_Character_BP_C::GetSocketForMeleeTraceForHitBlockers(
 // ()
 // Parameters:
 // float                          newMin                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          newMAX                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          newMax                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMegalosaurus_Character_BP_C::UpdateSeverTimerLimits(float newMin, float newMAX)
+void AMegalosaurus_Character_BP_C::UpdateSeverTimerLimits(float newMin, float newMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits");
 
 	AMegalosaurus_Character_BP_C_UpdateSeverTimerLimits_Params params;
 	params.newMin = newMin;
-	params.newMAX = newMAX;
+	params.newMax = newMax;
 
 	auto flags = fn->FunctionFlags;
 
@@ -146,7 +146,7 @@ void AMegalosaurus_Character_BP_C::BPTimerServer()
 
 
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.BPGetMultiUseEntries
-// (Native, Event, NetResponse, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

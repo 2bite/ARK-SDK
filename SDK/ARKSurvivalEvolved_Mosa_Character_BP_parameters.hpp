@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,13 +45,13 @@ struct AMosa_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Mosa_Character_BP.Mosa_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_170
-struct AMosa_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_170_Params
+// Function Mosa_Character_BP.Mosa_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_184
+struct AMosa_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_184_Params
 {
 };
 
-// Function Mosa_Character_BP.Mosa_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_169
-struct AMosa_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_169_Params
+// Function Mosa_Character_BP.Mosa_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_183
+struct AMosa_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_183_Params
 {
 };
 

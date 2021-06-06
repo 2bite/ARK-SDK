@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -163,7 +163,7 @@ public:
 	float                                              AimOffsetPitchScale;                                      // 0x1CE8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              AimOffsetYawScale;                                        // 0x1CEC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bSleepingEnableIK;                                        // 0x1CF0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsUsingZipline;                                          // 0x1CF1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bIsUsingZipLine;                                          // 0x1CF1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bHangingOnZipline;                                        // 0x1CF2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ZiplineJumping;                                           // 0x1CF3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               BelowTargetAnchor;                                        // 0x1CF4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -298,49 +298,49 @@ public:
 
 	void GetZiplineBlendY(class APrimalDinoCharacter* Dino, float* BlendY);
 	void BlueprintPlayAnimationEvent(class UAnimMontage** AnimationMontage, float* PlayRate, float* playedAnimLength);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2420();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3297();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_ModifyBone_528();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2419();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2418();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2417();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2416();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3296();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3295();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2415();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2414();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3292();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_RotationOffsetBlendSpace_146();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3291();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2413();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2412();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3290();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3289();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2411();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2410();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2409();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_ModifyBone_527();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2408();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2407();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2406();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_GroundBones_126();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_GroundBones_125();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_ApplyAdditive_168();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2405();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2404();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3549();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_ModifyBone_568();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2403();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_RotationOffsetBlendSpace_145();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2402();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2401();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2400();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3548();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3547();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2399();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3282();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3281();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2398();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3544();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_RotationOffsetBlendSpace_154();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3543();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2397();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2396();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3542();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3541();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2395();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2394();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2393();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_ModifyBone_567();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2392();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2391();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2390();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_GroundBones_126();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_GroundBones_125();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_ApplyAdditive_224();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2389();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2388();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2387();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_RotationOffsetBlendSpace_153();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2386();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2385();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2384();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2383();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3534();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_SequencePlayer_3533();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2382();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2381();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2380();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2379();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine_AnimGraphNode_BlendListByBool_2378();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_DinoBlueprintBase_RootBoneName_ZipLine(int EntryPoint);
 };

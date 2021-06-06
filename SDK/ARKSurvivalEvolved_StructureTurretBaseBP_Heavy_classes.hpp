@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureTurretBaseBP_Heavy.StructureTurretBaseBP_Heavy_C
-// 0x000F (0x0F10 - 0x0F01)
+// 0x0008 (0x0FA8 - 0x0FA0)
 class AStructureTurretBaseBP_Heavy_C : public AStructureTurretBaseBP_BaseHeavy_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0F01(0x0007) MISSED OFFSET
-	class UPrimalInventoryBP_HeavyTurret_C*            PrimalInventoryBP_HeavyTurret_C1;                         // 0x0F08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryBP_HeavyTurret_C*            PrimalInventoryBP_HeavyTurret_C1;                         // 0x0FA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

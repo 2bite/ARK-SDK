@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass AlarmTrap.AlarmTrap_C
-// 0x0008 (0x0BC0 - 0x0BB8)
+// 0x0008 (0x0BE8 - 0x0BE0)
 class AAlarmTrap_C : public APrimalStructureTripwire
 {
 public:
-	class USphereComponent*                            StasisComponent;                                          // 0x0BB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0BE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

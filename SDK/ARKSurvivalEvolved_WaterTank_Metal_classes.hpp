@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WaterTank_Metal.WaterTank_Metal_C
-// 0x0000 (0x0EC8 - 0x0EC8)
+// 0x0000 (0x0F08 - 0x0F08)
 class AWaterTank_Metal_C : public AWaterTankBaseBP_C
 {
 public:

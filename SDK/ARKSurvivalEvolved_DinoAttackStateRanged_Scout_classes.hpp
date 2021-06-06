@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,7 +41,7 @@ public:
 	void STATIC_OnEndEvent();
 	void BPRangedAttackOnBegin(struct FVector* TargetLocation, struct FVector* TargetVelocity);
 	void Tracker_Impact_Pawn_or_Terrain(class AActor* Target, const struct FVector& ImpactLocation, bool* IsValidTarget);
-	void CalculateProjectileImpacts(const struct FVector& Origin, const struct FVector& Direction);
+	void STATIC_CalculateProjectileImpacts(const struct FVector& Origin, const struct FVector& Direction);
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void ExecuteUbergraph_DinoAttackStateRanged_Scout(int EntryPoint);
 };

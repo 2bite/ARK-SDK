@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 // Function SM_Mirror_BP.SM_Mirror_BP_C.CanUseRenderTarget
 struct ASM_Mirror_BP_C_CanUseRenderTarget_Params
 {
-	bool                                               Can_Use;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               can_use;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SM_Mirror_BP.SM_Mirror_BP_C.GetMirrorBlend

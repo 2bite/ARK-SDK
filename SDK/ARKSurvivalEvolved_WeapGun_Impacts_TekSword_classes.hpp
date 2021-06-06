@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapGun_Impacts_TekSword.WeapGun_Impacts_TekSword_C
-// 0x0000 (0x0850 - 0x0850)
+// 0x0000 (0x0888 - 0x0888)
 class AWeapGun_Impacts_TekSword_C : public AWeapGun_Impacts_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -110,7 +110,7 @@ struct AMammoth_Character_BP_C_BPDidSetCarriedCharacter_Params
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.BPNotifyToggleHUD
 struct AMammoth_Character_BP_C_BPNotifyToggleHUD_Params
 {
-	bool*                                              bHUDHidden;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bHudHidden;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mammoth_Character_BP.Mammoth_Character_BP_C.BPTryMultiUse

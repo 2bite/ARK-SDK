@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,13 +101,13 @@ public:
 	}
 
 
-	void SetDynamicMaterialProperties();
+	void STATIC_SetDynamicMaterialProperties();
 	void BPOnComponentDestroyed();
 	void AttachSubMeshes();
 	void BPOnComponentTick(float* DeltaTime);
 	void LevelUp();
 	void PlayMontage(class UAnimMontage* TheAnimMontage, class USoundBase* ExtraSound);
-	void STATIC_UpdateMovement(class ACharacter* CharacterRef);
+	void UpdateMovement(class ACharacter* CharacterRef);
 	void PlayEmote(int EmoteIndex);
 	void CheckEmotes(class AShooterCharacter* Character);
 	void UpdateInterpolation(class ACharacter* Character);

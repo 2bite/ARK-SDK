@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -184,12 +184,12 @@ void AMissionTrigger_RaceCheckpoint_C::SetCheckpointFX_Active(bool newActive, bo
 
 
 // Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.BP_OverrideTargetingLocation
-// (Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, Static, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 Attacker                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector AMissionTrigger_RaceCheckpoint_C::BP_OverrideTargetingLocation(class AActor** Attacker)
+struct FVector AMissionTrigger_RaceCheckpoint_C::STATIC_BP_OverrideTargetingLocation(class AActor** Attacker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.BP_OverrideTargetingLocation");
 
@@ -197,7 +197,6 @@ struct FVector AMissionTrigger_RaceCheckpoint_C::BP_OverrideTargetingLocation(cl
 	params.Attacker = Attacker;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -436,6 +435,26 @@ void AMissionTrigger_RaceCheckpoint_C::EnableCheckpoint_NOW()
 	static auto fn = UObject::FindObject<UFunction>("Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.EnableCheckpoint_NOW");
 
 	AMissionTrigger_RaceCheckpoint_C_EnableCheckpoint_NOW_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.CheckpointHitServerReaction
+// ()
+// Parameters:
+// class APrimalCharacter*        TriggeringActor                (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMissionTrigger_RaceCheckpoint_C::CheckpointHitServerReaction(class APrimalCharacter* TriggeringActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.CheckpointHitServerReaction");
+
+	AMissionTrigger_RaceCheckpoint_C_CheckpointHitServerReaction_Params params;
+	params.TriggeringActor = TriggeringActor;
 
 	auto flags = fn->FunctionFlags;
 

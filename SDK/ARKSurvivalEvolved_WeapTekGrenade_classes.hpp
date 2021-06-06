@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapTekGrenade.WeapTekGrenade_C
-// 0x0008 (0x0E70 - 0x0E68)
+// 0x0008 (0x0EA8 - 0x0EA0)
 class AWeapTekGrenade_C : public APrimalWeaponGrenade
 {
 public:
-	class UStaticMeshComponent*                        TekGrenade;                                               // 0x0E68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        TekGrenade;                                               // 0x0EA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

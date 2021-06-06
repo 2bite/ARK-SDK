@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeGateDoor_BP.SM_AdobeGateDoor_BP_C
-// 0x0000 (0x0B58 - 0x0B58)
+// 0x0000 (0x0B80 - 0x0B80)
 class ASM_AdobeGateDoor_BP_C : public AGate_Metal_C
 {
 public:
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ExecuteUbergraph_SM_AdobeGateDoor_BP(int EntryPoint);
 };
 

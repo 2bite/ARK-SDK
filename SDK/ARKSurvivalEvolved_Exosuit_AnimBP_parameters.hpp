@@ -1,0 +1,268 @@
+#pragma once
+
+// ARKSurvivalEvolved (329.9) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_Exosuit_AnimBP_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByEnum_36
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByEnum_36_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_ModifyBone_918
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_ModifyBone_918_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4327
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4327_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3130
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3130_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3129
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3129_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3128
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3128_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3127
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3127_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3126
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3126_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3125
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3125_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3124
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3124_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3123
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3123_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3122
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3122_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3121
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3121_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3120
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3120_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3119
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3119_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5927
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5927_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5928
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5928_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4332
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4332_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4331
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4331_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5925
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5925_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5926
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5926_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4330
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4330_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5923
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5923_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5922
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5922_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5921
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5921_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4329
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4329_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5919
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_SequencePlayer_5919_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4326
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4326_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendSpacePlayer_285
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendSpacePlayer_285_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4325
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4325_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_ApplyAdditive_470
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_ApplyAdditive_470_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_ApplyAdditive_469
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_ApplyAdditive_469_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_294
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_294_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4324
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4324_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_ApplyAdditive_468
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_ApplyAdditive_468_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendSpacePlayer_284
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendSpacePlayer_284_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_LayeredBoneBlend_172
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_LayeredBoneBlend_172_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3118
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3118_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3117
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3117_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3116
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3116_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3115
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3115_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3114
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_TransitionResult_3114_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_LayeredBoneBlend_170
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_LayeredBoneBlend_170_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendSpacePlayer_286
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendSpacePlayer_286_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4328
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4328_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendSpacePlayer_283
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendSpacePlayer_283_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4323
+struct UExosuit_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Exosuit_AnimBP_AnimGraphNode_BlendListByBool_4323_Params
+{
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.BlueprintUpdateAnimation
+struct UExosuit_AnimBP_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Exosuit_AnimBP.Exosuit_AnimBP_C.ExecuteUbergraph_Exosuit_AnimBP
+struct UExosuit_AnimBP_C_ExecuteUbergraph_Exosuit_AnimBP_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

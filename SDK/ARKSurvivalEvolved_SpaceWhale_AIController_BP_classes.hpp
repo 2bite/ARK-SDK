@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ public:
 
 
 	void BPOnFleeEvent();
-	void STATIC_ReceiveTick(float* DeltaSeconds);
+	void ReceiveTick(float* DeltaSeconds);
 	void UserConstructionScript();
 	void ExecuteUbergraph_SpaceWhale_AIController_BP(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_Impacts_Big.ProjArrow_Impacts_Big_C
-// 0x0000 (0x0850 - 0x0850)
+// 0x0000 (0x0888 - 0x0888)
 class AProjArrow_Impacts_Big_C : public AProjArrow_Impacts_C
 {
 public:

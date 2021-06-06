@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_ForgeCapable_Cherufe.DinoTamedInventoryComponent_ForgeCapable_Cherufe_C
-// 0x0010 (0x0580 - 0x0570)
+// 0x0010 (0x05A0 - 0x0590)
 class UDinoTamedInventoryComponent_ForgeCapable_Cherufe_C : public UDinoTamedInventoryComponent_ForgeCapable_C
 {
 public:
-	TArray<class UClass*>                              ForceAllowUseItemClasses;                                 // 0x0570(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UClass*>                              ForceAllowUseItemClasses;                                 // 0x0590(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.Find Shadowmane
+struct UPrimalItem_FishBasketFilled_C_Find_Shadowmane_Params
+{
+	bool                                               backup;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        Shadowmane;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPDrawItemIcon
 struct UPrimalItem_FishBasketFilled_C_BPDrawItemIcon_Params

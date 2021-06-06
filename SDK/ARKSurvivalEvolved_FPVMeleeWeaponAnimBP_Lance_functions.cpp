@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1576
+// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2602
 // ()
 
-void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1576()
+void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2602()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1576");
+	static auto fn = UObject::FindObject<UFunction>("Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2602");
 
-	UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1576_Params params;
+	UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2602_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_
 }
 
 
-// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1575
+// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2601
 // ()
 
-void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1575()
+void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2601()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1575");
+	static auto fn = UObject::FindObject<UFunction>("Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2601");
 
-	UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_1575_Params params;
+	UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_TransitionResult_2601_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -80,14 +80,14 @@ void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_
 }
 
 
-// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_576
+// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_636
 // ()
 
-void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_576()
+void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_636()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_576");
+	static auto fn = UObject::FindObject<UFunction>("Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_636");
 
-	UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_576_Params params;
+	UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_ModifyBone_636_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -131,14 +131,14 @@ void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_
 }
 
 
-// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_126
+// Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_132
 // ()
 
-void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_126()
+void UFPVMeleeWeaponAnimBP_Lance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_132()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_126");
+	static auto fn = UObject::FindObject<UFunction>("Function FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_132");
 
-	UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_126_Params params;
+	UFPVMeleeWeaponAnimBP_Lance_C_EvaluateGraphExposedInputs_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance_AnimGraphNode_LayeredBoneBlend_132_Params params;
 
 	auto flags = fn->FunctionFlags;
 

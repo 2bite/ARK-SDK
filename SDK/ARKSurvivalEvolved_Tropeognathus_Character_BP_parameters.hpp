@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.GetHudData
+struct ATropeognathus_Character_BP_C_GetHudData_Params
+{
+	bool                                               HasSaddle;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryComponent*                   InventoryComponent;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      SaddleFuelItem;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      FlakCannonAmmoItem;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsUsingSuperFlight;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsUsingSuperFlightBoost;                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              FuelPercent;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              CannonCooldownPercent;                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              SpeedPercent;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPGetHUDElements
+struct ATropeognathus_Character_BP_C_BPGetHUDElements_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FHUDElement>                         OutElements;                                              // (Parm, OutParm, ZeroConstructor)
+};
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ReceiveBeginPlay
 struct ATropeognathus_Character_BP_C_ReceiveBeginPlay_Params
@@ -218,8 +239,8 @@ struct ATropeognathus_Character_BP_C_BPGetCrosshairLocation_Params
 	float                                              OutY;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.consumeItem
-struct ATropeognathus_Character_BP_C_consumeItem_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.ConsumeItem
+struct ATropeognathus_Character_BP_C_ConsumeItem_Params
 {
 	class UClass*                                      Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -559,13 +580,6 @@ struct ATropeognathus_Character_BP_C_BP_InterceptMoveForward_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPGetHUDElements
-struct ATropeognathus_Character_BP_C_BPGetHUDElements_Params
-{
-	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FHUDElement>                         OutElements;                                              // (Parm, OutParm, ZeroConstructor)
-};
-
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPOverrideCameraViewTarget
 struct ATropeognathus_Character_BP_C_BPOverrideCameraViewTarget_Params
 {
@@ -609,6 +623,7 @@ struct ATropeognathus_Character_BP_C_BPHandleControllerInitiatedAttack_Params
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.BPModifyDesiredRotation
 struct ATropeognathus_Character_BP_C_BPModifyDesiredRotation_Params
 {
+	float*                                             DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    InDesiredRotation;                                        // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	struct FRotator                                    OutDesiredRotation;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -688,7 +703,7 @@ struct ATropeognathus_Character_BP_C_ProcessLatching_Params
 struct ATropeognathus_Character_BP_C_TryLatch_Params
 {
 	struct FVector                                     Offset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               BackwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.UserConstructionScript
@@ -696,60 +711,60 @@ struct ATropeognathus_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_212
-struct ATropeognathus_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_212_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_339
+struct ATropeognathus_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_339_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_211
-struct ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_211_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_338
+struct ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_338_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_210
-struct ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_210_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_337
+struct ATropeognathus_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_337_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_209
-struct ATropeognathus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_209_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_336
+struct ATropeognathus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_336_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_208
-struct ATropeognathus_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_208_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_335
+struct ATropeognathus_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_335_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_62
-struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_62_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_72
+struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftStick_Down_K2Node_InputKeyEvent_72_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_207
-struct ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_207_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_334
+struct ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_334_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_206
-struct ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_206_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_333
+struct ATropeognathus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_333_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_61
-struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_61_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_71
+struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_71_Params
 {
 };
 
-// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_60
-struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_60_Params
+// Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_70
+struct ATropeognathus_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_70_Params
 {
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.Latch
 struct ATropeognathus_Character_BP_C_Latch_Params
 {
-	bool                                               BackwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tropeognathus_Character_BP.Tropeognathus_Character_BP_C.LatchStartAnimation

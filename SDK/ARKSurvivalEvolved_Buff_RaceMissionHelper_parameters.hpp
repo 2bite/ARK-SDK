@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.SetSpline
+struct ABuff_RaceMissionHelper_C_SetSpline_Params
+{
+	class AMissionSpline*                              Spline;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               WasSet;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.Tick_UpdatePowerUps
 struct ABuff_RaceMissionHelper_C_Tick_UpdatePowerUps_Params

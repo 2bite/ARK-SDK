@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,9 +83,9 @@ void ACrab_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMovementMo
 // Function Crab_Character_BP.Crab_Character_BP_C.Should Stop Jump Rotation
 // ()
 // Parameters:
-// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ACrab_Character_BP_C::Should_Stop_Jump_Rotation(bool* Return_Value)
+void ACrab_Character_BP_C::Should_Stop_Jump_Rotation(bool* return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.Should Stop Jump Rotation");
 
@@ -97,18 +97,18 @@ void ACrab_Character_BP_C::Should_Stop_Jump_Rotation(bool* Return_Value)
 
 	fn->FunctionFlags = flags;
 
-	if (Return_Value != nullptr)
-		*Return_Value = params.Return_Value;
+	if (return_value != nullptr)
+		*return_value = params.return_value;
 }
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ACrab_Character_BP_C::STATIC_BPShouldCancelDoAttack(int* AttackIndex)
+bool ACrab_Character_BP_C::BPShouldCancelDoAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack");
 
@@ -127,7 +127,7 @@ bool ACrab_Character_BP_C::STATIC_BPShouldCancelDoAttack(int* AttackIndex)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Static, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -136,7 +136,7 @@ bool ACrab_Character_BP_C::STATIC_BPShouldCancelDoAttack(int* AttackIndex)
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ACrab_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ACrab_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -548,15 +548,16 @@ struct FVector ACrab_Character_BP_C::GetClampedLookDir(bool LimitLowerPitch)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.ThrowTrace
-// (Event, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ACrab_Character_BP_C::ThrowTrace()
+void ACrab_Character_BP_C::STATIC_ThrowTrace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.ThrowTrace");
 
 	ACrab_Character_BP_C_ThrowTrace_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -565,7 +566,7 @@ void ACrab_Character_BP_C::ThrowTrace()
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPAdjustDamage
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -575,7 +576,7 @@ void ACrab_Character_BP_C::ThrowTrace()
 // struct FHitResult*             PointHitInfo                   (Parm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ACrab_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
+float ACrab_Character_BP_C::STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.BPAdjustDamage");
 
@@ -784,17 +785,18 @@ void ACrab_Character_BP_C::Throw_Grabbed_Characters()
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.Retrieve Any Grabbable Character
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           FoundCharacter                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ACrab_Character_BP_C::STATIC_Retrieve_Any_Grabbable_Character(bool* FoundCharacter)
+void ACrab_Character_BP_C::Retrieve_Any_Grabbable_Character(bool* FoundCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.Retrieve Any Grabbable Character");
 
 	ACrab_Character_BP_C_Retrieve_Any_Grabbable_Character_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -965,7 +967,7 @@ void ACrab_Character_BP_C::SharedCanAttack(int AttackIndex, bool* CanAttack)
 
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BlueprintCanAttack
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Private, Delegate)
+// (NetRequest, Exec, Native, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -973,7 +975,7 @@ void ACrab_Character_BP_C::SharedCanAttack(int AttackIndex, bool* CanAttack)
 // class AActor**                 OtherTarget                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ACrab_Character_BP_C::STATIC_BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
+bool ACrab_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.BlueprintCanAttack");
 
@@ -984,6 +986,7 @@ bool ACrab_Character_BP_C::STATIC_BlueprintCanAttack(int* AttackIndex, float* Di
 	params.OtherTarget = OtherTarget;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1073,14 +1076,14 @@ void ACrab_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_142
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_156
 // ()
 
-void ACrab_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_142()
+void ACrab_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_156()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_142");
+	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_156");
 
-	ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_142_Params params;
+	ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_156_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1090,14 +1093,14 @@ void ACrab_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_142()
 }
 
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_141
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_155
 // ()
 
-void ACrab_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_141()
+void ACrab_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_155()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_141");
+	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_155");
 
-	ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_141_Params params;
+	ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_155_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1107,14 +1110,14 @@ void ACrab_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_141()
 }
 
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_140
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_154
 // ()
 
-void ACrab_Character_BP_C::InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_140()
+void ACrab_Character_BP_C::InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_154()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_140");
+	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_154");
 
-	ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_140_Params params;
+	ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_154_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1124,14 +1127,14 @@ void ACrab_Character_BP_C::InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_1
 }
 
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_139
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_153
 // ()
 
-void ACrab_Character_BP_C::InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_139()
+void ACrab_Character_BP_C::InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_153()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_139");
+	static auto fn = UObject::FindObject<UFunction>("Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_153");
 
-	ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_139_Params params;
+	ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_153_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_PushedByJumppad.Buff_PushedByJumppad_C.BPNotifyOtherBuffActivated
+// ()
+// Parameters:
+// class APrimalBuff**            OtherBuff                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_PushedByJumppad_C::BPNotifyOtherBuffActivated(class APrimalBuff** OtherBuff)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_PushedByJumppad.Buff_PushedByJumppad_C.BPNotifyOtherBuffActivated");
+
+	ABuff_PushedByJumppad_C_BPNotifyOtherBuffActivated_Params params;
+	params.OtherBuff = OtherBuff;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_PushedByJumppad.Buff_PushedByJumppad_C.BPOnInstigatorMovementModeChangedNotify
 // ()

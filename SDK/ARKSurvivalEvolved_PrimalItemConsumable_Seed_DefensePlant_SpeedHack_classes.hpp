@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Seed_DefensePlant_SpeedHack.PrimalItemConsumable_Seed_DefensePlant_SpeedHack_C
-// 0x0000 (0x0A04 - 0x0A04)
+// 0x0000 (0x0AE4 - 0x0AE4)
 class UPrimalItemConsumable_Seed_DefensePlant_SpeedHack_C : public UPrimalItemConsumable_Seed_DefensePlant_C
 {
 public:

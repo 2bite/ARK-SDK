@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BossTeleporter_Spider_Hard.BossTeleporter_Spider_Hard_C
-// 0x0000 (0x0A20 - 0x0A20)
+// 0x0000 (0x0A30 - 0x0A30)
 class ABossTeleporter_Spider_Hard_C : public ABossTeleporter_Spider_C
 {
 public:

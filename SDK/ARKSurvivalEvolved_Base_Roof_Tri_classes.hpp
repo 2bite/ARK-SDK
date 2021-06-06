@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Base_Roof_Tri.Base_Roof_Tri_C
-// 0x0001 (0x0AC1 - 0x0AC0)
+// 0x0001 (0x0AE9 - 0x0AE8)
 class ABase_Roof_Tri_C : public AStructureBaseBP_C
 {
 public:
-	bool                                               IsGlass;                                                  // 0x0AC0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsGlass;                                                  // 0x0AE8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

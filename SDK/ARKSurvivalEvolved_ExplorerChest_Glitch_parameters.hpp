@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.UnlockGen2ExplorerNote
+struct AExplorerChest_Glitch_C_UnlockGen2ExplorerNote_Params
+{
+};
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.DrawBasicFloatingHUD
 struct AExplorerChest_Glitch_C_DrawBasicFloatingHUD_Params
@@ -57,6 +62,13 @@ struct AExplorerChest_Glitch_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_
 	int*                                               OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool*                                              bFromSweep;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  SweepResult;                                              // (Parm, OutParm, ReferenceParm)
+};
+
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.delay play reaction
+struct AExplorerChest_Glitch_C_delay_play_reaction_Params
+{
+	struct FCompanionReactionData                      reaction;                                                 // (Parm)
+	class APrimalBuff_Companion*                       HLNA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.ExecuteUbergraph_ExplorerChest_Glitch

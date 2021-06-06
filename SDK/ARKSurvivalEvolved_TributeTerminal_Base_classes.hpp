@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TributeTerminal_Base.TributeTerminal_Base_C
-// 0x0000 (0x0DD8 - 0x0DD8)
+// 0x0000 (0x0E10 - 0x0E10)
 class ATributeTerminal_Base_C : public AStructureItemContainerBaseBP_C
 {
 public:

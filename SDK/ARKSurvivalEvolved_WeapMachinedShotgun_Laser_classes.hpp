@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapMachinedShotgun_Laser.WeapMachinedShotgun_Laser_C
-// 0x0020 (0x0DB0 - 0x0D90)
+// 0x0020 (0x0DE8 - 0x0DC8)
 class AWeapMachinedShotgun_Laser_C : public AWeapMachinedShotgun_C
 {
 public:
-	class UShooterLaserBeamComponent*                  FPVLaserBeam;                                             // 0x0D90(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        FirstPersonAttachment;                                    // 0x0D98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UShooterLaserBeamComponent*                  TPVLaserBeam;                                             // 0x0DA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        ThirdPersonAttachment;                                    // 0x0DA8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UShooterLaserBeamComponent*                  FPVLaserBeam;                                             // 0x0DC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        FirstPersonAttachment;                                    // 0x0DD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UShooterLaserBeamComponent*                  TPVLaserBeam;                                             // 0x0DD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        ThirdPersonAttachment;                                    // 0x0DE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

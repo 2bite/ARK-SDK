@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C
-// 0x0020 (0x0590 - 0x0570)
+// 0x0020 (0x05B0 - 0x0590)
 class UDinoTamedInventoryComponent_Beetle_C : public UDinoTamedInventoryComponent_BP_Base_C
 {
 public:
-	TArray<class UClass*>                              CraftablePoo;                                             // 0x0570(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<double>                                     CraftingStartTimes;                                       // 0x0580(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame)
+	TArray<class UClass*>                              CraftablePoo;                                             // 0x0590(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<double>                                     CraftingStartTimes;                                       // 0x05A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame)
 
 	static UClass* StaticClass()
 	{
@@ -29,7 +29,7 @@ public:
 	}
 
 
-	void STATIC_CraftItem(int ItemToCraftIndex);
+	void CraftItem(int ItemToCraftIndex);
 	void BPInventoryRefresh();
 	void BPInitializeInventory();
 	void CheckIfAnythingNewCanBeCrafted();

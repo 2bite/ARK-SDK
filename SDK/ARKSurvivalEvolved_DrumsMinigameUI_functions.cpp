@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -185,12 +185,12 @@ void UDrumsMinigameUI_C::Map_Percent_to_Position(float Percent, float* Distance)
 
 
 // Function DrumsMinigameUI.DrumsMinigameUI_C.Set ProgressBar Color
-// (NetRequest, Exec, Native, Event, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
+// (Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, NetValidate)
 // Parameters:
 // class UProgressBar*            ProgressBar                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            TintColor                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDrumsMinigameUI_C::Set_ProgressBar_Color(class UProgressBar* ProgressBar, const struct FLinearColor& TintColor)
+void UDrumsMinigameUI_C::STATIC_Set_ProgressBar_Color(class UProgressBar* ProgressBar, const struct FLinearColor& TintColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DrumsMinigameUI.DrumsMinigameUI_C.Set ProgressBar Color");
 
@@ -199,7 +199,6 @@ void UDrumsMinigameUI_C::Set_ProgressBar_Color(class UProgressBar* ProgressBar, 
 	params.TintColor = TintColor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

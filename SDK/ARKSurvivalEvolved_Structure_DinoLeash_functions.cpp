@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -249,7 +249,7 @@ void AStructure_DinoLeash_C::BPContainerActivated()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BlueprintDrawPreviewHUD
-// (Exec, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -265,6 +265,7 @@ void AStructure_DinoLeash_C::STATIC_BlueprintDrawPreviewHUD(class AShooterHUD** 
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -318,15 +319,15 @@ void AStructure_DinoLeash_C::TetherDinosInRadius()
 // ()
 // Parameters:
 // float                          EffectRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ForceSet                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           forceSet                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_DinoLeash_C::SetEffectRadius(float EffectRadius, bool ForceSet)
+void AStructure_DinoLeash_C::SetEffectRadius(float EffectRadius, bool forceSet)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.SetEffectRadius");
 
 	AStructure_DinoLeash_C_SetEffectRadius_Params params;
 	params.EffectRadius = EffectRadius;
-	params.ForceSet = ForceSet;
+	params.forceSet = forceSet;
 
 	auto flags = fn->FunctionFlags;
 
@@ -354,7 +355,7 @@ void AStructure_DinoLeash_C::OnRep_EffectRadius()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPClientDoMultiUse
-// (Exec, Event, NetResponse, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const, NetValidate)
+// (NetReliable, Native, NetResponse, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -368,6 +369,7 @@ void AStructure_DinoLeash_C::BPClientDoMultiUse(class APlayerController** ForPC,
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -485,7 +487,7 @@ bool AStructure_DinoLeash_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPGetMultiUseEntries
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -499,7 +501,6 @@ TArray<struct FMultiUseEntry> AStructure_DinoLeash_C::BPGetMultiUseEntries(class
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

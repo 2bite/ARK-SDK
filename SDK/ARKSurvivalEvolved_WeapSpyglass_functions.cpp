@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function WeapSpyglass.WeapSpyglass_C.ForceDisableCameraOverrides
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AWeapSpyglass_C::ForceDisableCameraOverrides()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapSpyglass.WeapSpyglass_C.ForceDisableCameraOverrides");
+
+	AWeapSpyglass_C_ForceDisableCameraOverrides_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function WeapSpyglass.WeapSpyglass_C.BPCanToggleAccessory
 // ()

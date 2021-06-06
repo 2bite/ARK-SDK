@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,18 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.DinoUberpounce
-// (Exec, Native, NetResponse, Static, Private, NetServer, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_AIController_BP_C::STATIC_DinoUberpounce(bool* Success)
+void ADeinonychus_AIController_BP_C::DinoUberpounce(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.DinoUberpounce");
 
 	ADeinonychus_AIController_BP_C_DinoUberpounce_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,16 +35,15 @@ void ADeinonychus_AIController_BP_C::STATIC_DinoUberpounce(bool* Success)
 
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.LocationUberpounce
-// (NetRequest, Native, NetMulticast, Private, NetServer, HasDefaults, NetClient)
+// (NetReliable, NetRequest, Event, Static, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
 
-void ADeinonychus_AIController_BP_C::LocationUberpounce()
+void ADeinonychus_AIController_BP_C::STATIC_LocationUberpounce()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.LocationUberpounce");
 
 	ADeinonychus_AIController_BP_C_LocationUberpounce_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,12 +130,12 @@ void ADeinonychus_AIController_BP_C::Deinonychus_AttackedWhileLatched()
 
 
 // Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.OnUberpounceStateChanged
-// (Net, NetRequest, Exec, Event, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient)
+// (Net, NetReliable, Exec, Native, Static, NetMulticast, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<EUberpounceState>  NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EUberpounceState>  PrevState                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_AIController_BP_C::OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState)
+void ADeinonychus_AIController_BP_C::STATIC_OnUberpounceStateChanged(TEnumAsByte<EUberpounceState> NewState, TEnumAsByte<EUberpounceState> PrevState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_AIController_BP.Deinonychus_AIController_BP_C.OnUberpounceStateChanged");
 
@@ -146,6 +144,7 @@ void ADeinonychus_AIController_BP_C::OnUberpounceStateChanged(TEnumAsByte<EUberp
 	params.PrevState = PrevState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

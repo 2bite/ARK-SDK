@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -85,9 +85,9 @@ bool AScout_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* N
 // Function Scout_Character_BP.Scout_Character_BP_C.ServerIsFiringItemInInventory
 // ()
 // Parameters:
-// bool                           RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AScout_Character_BP_C::ServerIsFiringItemInInventory(bool* RetVal)
+void AScout_Character_BP_C::ServerIsFiringItemInInventory(bool* Retval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.ServerIsFiringItemInInventory");
 
@@ -99,8 +99,8 @@ void AScout_Character_BP_C::ServerIsFiringItemInInventory(bool* RetVal)
 
 	fn->FunctionFlags = flags;
 
-	if (RetVal != nullptr)
-		*RetVal = params.RetVal;
+	if (Retval != nullptr)
+		*Retval = params.Retval;
 }
 
 
@@ -167,7 +167,7 @@ bool AScout_Character_BP_C::BP_InterceptTurnInput(float* AxisValue)
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.Set StatsFromItem
-// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<float>                  Stats                          (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -269,7 +269,7 @@ void AScout_Character_BP_C::ClearExpiredDinoAIData()
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.SetIsFleeingForDino
-// (NetRequest, Event, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APrimalDinoCharacter*    Dino                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsFleeing                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -283,6 +283,7 @@ void AScout_Character_BP_C::SetIsFleeingForDino(class APrimalDinoCharacter* Dino
 	params.IsFleeing = IsFleeing;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -402,7 +403,7 @@ void AScout_Character_BP_C::IsDashing(bool* Result)
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.BPGetHUDElements
-// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -426,7 +427,7 @@ void AScout_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TA
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.ReceiveTick
-// (Net, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -438,7 +439,6 @@ void AScout_Character_BP_C::ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -449,9 +449,9 @@ void AScout_Character_BP_C::ReceiveTick(float* DeltaSeconds)
 // Function Scout_Character_BP.Scout_Character_BP_C.ScoutIsFirstPerson
 // ()
 // Parameters:
-// bool                           RetVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AScout_Character_BP_C::ScoutIsFirstPerson(bool* RetVal)
+void AScout_Character_BP_C::ScoutIsFirstPerson(bool* Retval)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.ScoutIsFirstPerson");
 
@@ -463,8 +463,8 @@ void AScout_Character_BP_C::ScoutIsFirstPerson(bool* RetVal)
 
 	fn->FunctionFlags = flags;
 
-	if (RetVal != nullptr)
-		*RetVal = params.RetVal;
+	if (Retval != nullptr)
+		*Retval = params.Retval;
 }
 
 
@@ -546,7 +546,7 @@ bool AScout_Character_BP_C::BPHandleOnStopFire()
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.Update Target Impact VFX_Implementation
-// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void AScout_Character_BP_C::Update_Target_Impact_VFX_Implementation()
 {
@@ -811,7 +811,7 @@ struct FVector AScout_Character_BP_C::BPGetFPVViewLocation(class APrimalCharacte
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.PrivateTracker Missed
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetRequest, Event, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void AScout_Character_BP_C::STATIC_PrivateTracker_Missed()
 {
@@ -820,7 +820,6 @@ void AScout_Character_BP_C::STATIC_PrivateTracker_Missed()
 	AScout_Character_BP_C_PrivateTracker_Missed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -829,7 +828,7 @@ void AScout_Character_BP_C::STATIC_PrivateTracker_Missed()
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.Dash
-// (NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Native, Event, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Impulse                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -843,6 +842,7 @@ void AScout_Character_BP_C::STATIC_Dash(const struct FVector& Direction, float I
 	params.Impulse = Impulse;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -946,7 +946,7 @@ void AScout_Character_BP_C::ServerIs_Tracked_Target(class AActor* Target, bool* 
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.Tracker Hit Character
-// (NetReliable, Event, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetRequest, Native, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class APrimalCharacter*        HitCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ApplyTracker                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -961,6 +961,7 @@ void AScout_Character_BP_C::Tracker_Hit_Character(class APrimalCharacter* HitCha
 	params.ApplyTracker = ApplyTracker;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -972,7 +973,7 @@ void AScout_Character_BP_C::Tracker_Hit_Character(class APrimalCharacter* HitCha
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.BPAdjustDamage
-// (NetReliable, NetRequest, Exec, NetResponse, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -1022,7 +1023,7 @@ void AScout_Character_BP_C::BP_OnSetDeath()
 
 
 // Function Scout_Character_BP.Scout_Character_BP_C.BPHandleControllerInitiatedAttack
-// (NetReliable, Native, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// (Exec, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1035,7 +1036,6 @@ bool AScout_Character_BP_C::STATIC_BPHandleControllerInitiatedAttack(int* Attack
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1141,14 +1141,14 @@ void AScout_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_120
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_127
 // ()
 
-void AScout_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_120()
+void AScout_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_127()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_120");
+	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_127");
 
-	AScout_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_120_Params params;
+	AScout_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_127_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1158,14 +1158,14 @@ void AScout_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_120()
 }
 
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_119
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_126
 // ()
 
-void AScout_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_119()
+void AScout_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_126()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_119");
+	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_126");
 
-	AScout_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_119_Params params;
+	AScout_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_126_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1175,14 +1175,14 @@ void AScout_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_119()
 }
 
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_118
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_125
 // ()
 
-void AScout_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_118()
+void AScout_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_125()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_118");
+	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_125");
 
-	AScout_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_118_Params params;
+	AScout_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_125_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1192,14 +1192,14 @@ void AScout_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_118()
 }
 
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_117
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_124
 // ()
 
-void AScout_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_117()
+void AScout_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_124()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_117");
+	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_124");
 
-	AScout_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_117_Params params;
+	AScout_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_124_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1209,14 +1209,14 @@ void AScout_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_117()
 }
 
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_116
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_123
 // ()
 
-void AScout_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_116()
+void AScout_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_123()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_116");
+	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_123");
 
-	AScout_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_116_Params params;
+	AScout_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_123_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1226,14 +1226,14 @@ void AScout_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_116()
 }
 
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_115
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_122
 // ()
 
-void AScout_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_115()
+void AScout_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_122()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_115");
+	static auto fn = UObject::FindObject<UFunction>("Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_122");
 
-	AScout_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_115_Params params;
+	AScout_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_122_Params params;
 
 	auto flags = fn->FunctionFlags;
 

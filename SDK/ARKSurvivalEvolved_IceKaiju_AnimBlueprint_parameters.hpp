@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_472
-struct UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_472_Params
+// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_512
+struct UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_512_Params
 {
 };
 
-// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_132
-struct UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_132_Params
+// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_140
+struct UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_140_Params
 {
 };
 
@@ -29,8 +29,8 @@ struct UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Ice
 {
 };
 
-// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2208
-struct UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2208_Params
+// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2192
+struct UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2192_Params
 {
 };
 

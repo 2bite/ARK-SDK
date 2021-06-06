@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SM_AdobeWindow_BP.SM_AdobeWindow_BP_C
-// 0x0000 (0x0B48 - 0x0B48)
+// 0x0000 (0x0B70 - 0x0B70)
 class ASM_AdobeWindow_BP_C : public AWindow_Metal_BP_C
 {
 public:

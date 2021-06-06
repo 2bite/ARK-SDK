@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalInventoryBP_GasCollector.PrimalInventoryBP_GasCollector_C
-// 0x0000 (0x0595 - 0x0595)
+// 0x0000 (0x05B5 - 0x05B5)
 class UPrimalInventoryBP_GasCollector_C : public UPrimalInventoryBP_BaseAutoGenerateItems_C
 {
 public:

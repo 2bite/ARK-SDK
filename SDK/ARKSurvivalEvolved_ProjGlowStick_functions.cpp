@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -149,7 +149,7 @@ void AProjGlowStick_C::IsAttachedToCharacter(bool* Result)
 
 
 // Function ProjGlowStick.ProjGlowStick_C.Get Average Normal Within Radius
-// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -164,6 +164,7 @@ void AProjGlowStick_C::Get_Average_Normal_Within_Radius(const struct FVector& Lo
 	params.Radius = Radius;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

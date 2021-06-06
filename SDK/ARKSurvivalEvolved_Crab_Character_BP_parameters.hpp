@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ struct ACrab_Character_BP_C_BPOnMovementModeChangedNotify_Params
 // Function Crab_Character_BP.Crab_Character_BP_C.Should Stop Jump Rotation
 struct ACrab_Character_BP_C_Should_Stop_Jump_Rotation_Params
 {
-	bool                                               Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Crab_Character_BP.Crab_Character_BP_C.BPShouldCancelDoAttack
@@ -332,23 +332,23 @@ struct ACrab_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_142
-struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_142_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_156
+struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_156_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_141
-struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_141_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_155
+struct ACrab_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_155_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_140
-struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_140_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_154
+struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_154_Params
 {
 };
 
-// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_139
-struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_139_Params
+// Function Crab_Character_BP.Crab_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_153
+struct ACrab_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_153_Params
 {
 };
 

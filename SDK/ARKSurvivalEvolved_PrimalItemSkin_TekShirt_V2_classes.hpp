@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_TekShirt_V2.PrimalItemSkin_TekShirt_V2_C
-// 0x0030 (0x0A30 - 0x0A00)
+// 0x0030 (0x0B10 - 0x0AE0)
 class UPrimalItemSkin_TekShirt_V2_C : public UPrimalItemSkinGeneric_C
 {
 public:
-	struct UObject_FTransform                          TekSuitVFXOffset;                                         // 0x0A00(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct UObject_FTransform                          TekSuitVFXOffset;                                         // 0x0AE0(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void TrySetTeksuitVFXOffset(bool Unequip);
+	void STATIC_TrySetTeksuitVFXOffset(bool Unequip);
 	void ApplyingSkinOntoItem(class UPrimalItem** ToOwnerItem, bool* bIsFirstTime);
 	void RemovedSkinFromItem(class UPrimalItem** FromOwnerItem, bool* bIsFirstTime);
 	void BlueprintEquipped(bool* bIsFromSaveGame);

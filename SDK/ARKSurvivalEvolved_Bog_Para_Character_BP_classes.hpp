@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Bog_Para_Character_BP.Bog_Para_Character_BP_C
-// 0x0000 (0x2389 - 0x2389)
+// 0x0000 (0x2459 - 0x2459)
 class ABog_Para_Character_BP_C : public APara_Character_BP_C
 {
 public:

@@ -1,0 +1,32 @@
+#pragma once
+
+// ARKSurvivalEvolved (329.9) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_MinigunMuzzleFlashEmitter_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function MinigunMuzzleFlashEmitter.MinigunMuzzleFlashEmitter_C.UserConstructionScript
+struct AMinigunMuzzleFlashEmitter_C_UserConstructionScript_Params
+{
+};
+
+// Function MinigunMuzzleFlashEmitter.MinigunMuzzleFlashEmitter_C.ExecuteUbergraph_MinigunMuzzleFlashEmitter
+struct AMinigunMuzzleFlashEmitter_C_ExecuteUbergraph_MinigunMuzzleFlashEmitter_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

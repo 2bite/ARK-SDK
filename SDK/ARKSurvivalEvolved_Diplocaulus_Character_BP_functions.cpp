@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -166,11 +166,11 @@ void ADiplocaulus_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMov
 
 
 // Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.ChangeLandSwimState
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, Static, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            State                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADiplocaulus_Character_BP_C::ChangeLandSwimState(int State)
+void ADiplocaulus_Character_BP_C::STATIC_ChangeLandSwimState(int State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.ChangeLandSwimState");
 
@@ -211,7 +211,7 @@ bool ADiplocaulus_Character_BP_C::BPPreventRiding(class AShooterCharacter** ByPa
 
 
 // Function Diplocaulus_Character_BP.Diplocaulus_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Native, NetMulticast, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

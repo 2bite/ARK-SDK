@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjTekShoulderCannon_Rapid.ProjTekShoulderCannon_Rapid_C
-// 0x0000 (0x07AA - 0x07AA)
+// 0x0000 (0x07B5 - 0x07B5)
 class AProjTekShoulderCannon_Rapid_C : public AProjTekShoulderCannon_Base_C
 {
 public:

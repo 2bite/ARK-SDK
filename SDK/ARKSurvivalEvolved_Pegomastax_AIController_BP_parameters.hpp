@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 // Function Pegomastax_AIController_BP.Pegomastax_AIController_BP_C.UpdateAttackDestinationOffset
 struct APegomastax_AIController_BP_C_UpdateAttackDestinationOffset_Params
 {
-	bool                                               IsInWaitingState;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               isInWaitingState;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Pegomastax_AIController_BP.Pegomastax_AIController_BP_C.UserConstructionScript

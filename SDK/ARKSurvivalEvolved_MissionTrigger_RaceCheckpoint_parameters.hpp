@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -139,6 +139,12 @@ struct AMissionTrigger_RaceCheckpoint_C_DisableCheckpoint_NOW_Params
 // Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.EnableCheckpoint_NOW
 struct AMissionTrigger_RaceCheckpoint_C_EnableCheckpoint_NOW_Params
 {
+};
+
+// Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.CheckpointHitServerReaction
+struct AMissionTrigger_RaceCheckpoint_C_CheckpointHitServerReaction_Params
+{
+	class APrimalCharacter*                            TriggeringActor;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.ExecuteUbergraph_MissionTrigger_RaceCheckpoint

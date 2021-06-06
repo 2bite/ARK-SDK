@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dino_Character_BP_Climber_ForceAllowBoss.Dino_Character_BP_Climber_ForceAllowBoss_C
-// 0x0000 (0x2EC0 - 0x2EC0)
+// 0x0000 (0x2F90 - 0x2F90)
 class ADino_Character_BP_Climber_ForceAllowBoss_C : public ADino_Character_BP_Climber_C
 {
 public:

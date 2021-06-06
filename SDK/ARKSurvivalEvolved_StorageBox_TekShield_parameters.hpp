@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,20 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function StorageBox_TekShield.StorageBox_TekShield_C.CanAttachToExosuit
+struct AStorageBox_TekShield_C_CanAttachToExosuit_Params
+{
+	class AShooterPlayerController**                   ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function StorageBox_TekShield.StorageBox_TekShield_C.CanBeStoredByExosuit
+struct AStorageBox_TekShield_C_CanBeStoredByExosuit_Params
+{
+	class AShooterPlayerController**                   ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.CheckCharactersInsideWhenActive
 struct AStorageBox_TekShield_C_CheckCharactersInsideWhenActive_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -129,8 +129,8 @@ public:
 	void IsActorValidForPVEorIsPVP(class AActor* HitCharacter, bool* IsValid);
 	void IsShielded(class AActor* Actor, bool* IsShielded);
 	void IsWearingProtection(class AActor* Actor, bool* IsWearingProtection);
-	void IsNearbyStructure(int index, float IndexOffset, bool* StructureInBetween);
-	void GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* RetVal);
+	void STATIC_IsNearbyStructure(int index, float IndexOffset, bool* StructureInBetween);
+	void GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* Retval);
 	void UserConstructionScript();
 	void OnExplode(struct FHitResult* Result);
 	void BPProjectileBounced(struct FHitResult* ImpactResult, struct FVector* ImpactVelocity);

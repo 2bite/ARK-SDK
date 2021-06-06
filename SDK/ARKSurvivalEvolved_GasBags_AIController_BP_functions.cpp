@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,9 +33,9 @@ void AGasBags_AIController_BP_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function GasBags_AIController_BP.GasBags_AIController_BP_C.TickCheckDangerLevels
-// (NetReliable, NetRequest, Exec, NetMulticast, Public, DLLImport, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void AGasBags_AIController_BP_C::TickCheckDangerLevels()
+void AGasBags_AIController_BP_C::STATIC_TickCheckDangerLevels()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GasBags_AIController_BP.GasBags_AIController_BP_C.TickCheckDangerLevels");
 

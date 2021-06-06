@@ -1,0 +1,355 @@
+#pragma once
+
+// ARKSurvivalEvolved (329.9) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_TEKHoverSail_AnimBlueprint_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.Compose Mesh Transform Offsets
+struct UTEKHoverSail_AnimBlueprint_C_Compose_Mesh_Transform_Offsets_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.Process Hover IK
+struct UTEKHoverSail_AnimBlueprint_C_Process_Hover_IK_Params
+{
+	struct FRotator                                    New_Target_Offset_Rot;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Delta;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Reset;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.Hover IK
+struct UTEKHoverSail_AnimBlueprint_C_Hover_IK_Params
+{
+	bool                                               resetting;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    new_target_rot_offset;                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.Calculate Mesh Rotation Offset
+struct UTEKHoverSail_AnimBlueprint_C_Calculate_Mesh_Rotation_Offset_Params
+{
+	float                                              Delta;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.Update Root Rotation Offset
+struct UTEKHoverSail_AnimBlueprint_C_Update_Root_Rotation_Offset_Params
+{
+	float                                              delta_time;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2458
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2458_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2457
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2457_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2456
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2456_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2455
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2455_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2454
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2454_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2453
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2453_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2452
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2452_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2451
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2451_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2450
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2450_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2449
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2449_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2448
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2448_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2446
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2446_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2445
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2445_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2443
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2443_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2442
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2442_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2441
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2441_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2440
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2440_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2439
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2439_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2438
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2438_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2437
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2437_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2436
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2436_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2435
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2435_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2434
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2434_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2433
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2433_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2432
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2432_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2431
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2431_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2430
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2430_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2429
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2429_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2428
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2428_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2427
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2427_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2426
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2426_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2425
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2425_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2424
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2424_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2423
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2423_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2422
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2422_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2421
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2421_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2420
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2420_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2419
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2419_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2418
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2418_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2417
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2417_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2416
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2416_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2415
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2415_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2414
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2414_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2413
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2413_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2412
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2412_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2411
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2411_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2410
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2410_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2409
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2409_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_210
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_210_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_209
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_209_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_208
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_208_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_207
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_207_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendListByBool_2656
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendListByBool_2656_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_ApplyAdditive_253
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_ApplyAdditive_253_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendListByBool_2655
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendListByBool_2655_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_206
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_206_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_ModifyBone_588
+struct UTEKHoverSail_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_ModifyBone_588_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.BlueprintUpdateAnimation
+struct UTEKHoverSail_AnimBlueprint_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.BlueprintInitializeAnimation
+struct UTEKHoverSail_AnimBlueprint_C_BlueprintInitializeAnimation_Params
+{
+};
+
+// Function TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C.ExecuteUbergraph_TEKHoverSail_AnimBlueprint
+struct UTEKHoverSail_AnimBlueprint_C_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

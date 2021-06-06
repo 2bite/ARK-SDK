@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.SetDynamicMaterialProperties
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void USKComponent_SkinAttachment_ChibiDino_C::SetDynamicMaterialProperties()
+void USKComponent_SkinAttachment_ChibiDino_C::STATIC_SetDynamicMaterialProperties()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.SetDynamicMaterialProperties");
 
@@ -48,7 +48,7 @@ void USKComponent_SkinAttachment_ChibiDino_C::BPOnComponentDestroyed()
 
 
 // Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.AttachSubMeshes
-// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void USKComponent_SkinAttachment_ChibiDino_C::AttachSubMeshes()
 {
@@ -124,11 +124,11 @@ void USKComponent_SkinAttachment_ChibiDino_C::PlayMontage(class UAnimMontage* Th
 
 
 // Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.UpdateMovement
-// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
+// (NetReliable, Exec, Event, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class ACharacter*              CharacterRef                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void USKComponent_SkinAttachment_ChibiDino_C::STATIC_UpdateMovement(class ACharacter* CharacterRef)
+void USKComponent_SkinAttachment_ChibiDino_C::UpdateMovement(class ACharacter* CharacterRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C.UpdateMovement");
 
@@ -136,7 +136,6 @@ void USKComponent_SkinAttachment_ChibiDino_C::STATIC_UpdateMovement(class AChara
 	params.CharacterRef = CharacterRef;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

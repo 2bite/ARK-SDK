@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,7 +37,7 @@ public:
 	void Sync_Minigame_Widget(double NextTimeOut, float BeatWindow, float BeatTimeOut, float BeatExitWidth, class UTexture2D* BeatWidgetIcon, bool UseDebugMode);
 	void Initialize_HUD_Widget(class ABuff_MammothDrummer_C* MammothDrummerBuff);
 	void Reset_HUD_Widget();
-	void StartClosingWidget(float NewLifespan);
+	void StartClosingWidget(float NewLifeSpan);
 	void DestroySkiffHudWidget();
 	void ExecuteUbergraph_MammothPassengerHUD(int EntryPoint);
 };

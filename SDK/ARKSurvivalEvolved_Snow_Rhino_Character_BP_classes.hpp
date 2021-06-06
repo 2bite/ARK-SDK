@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Snow_Rhino_Character_BP.Snow_Rhino_Character_BP_C
-// 0x0000 (0x21A4 - 0x21A4)
+// 0x0000 (0x2274 - 0x2274)
 class ASnow_Rhino_Character_BP_C : public ARhino_Character_BP_C
 {
 public:

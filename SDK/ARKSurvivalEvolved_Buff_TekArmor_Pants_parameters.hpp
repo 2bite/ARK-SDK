@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,6 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
-
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InstigatorDie
-struct ABuff_TekArmor_Pants_C_InstigatorDie_Params
-{
-};
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.IsPlayerUsingJetpack
 struct ABuff_TekArmor_Pants_C_IsPlayerUsingJetpack_Params
@@ -201,7 +196,7 @@ struct ABuff_TekArmor_Pants_C_SetChargeStartVariables_Params
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Get Default Player Run Speed Mult
 struct ABuff_TekArmor_Pants_C_Get_Default_Player_Run_Speed_Mult_Params
 {
-	float                                              SpeedMult;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              speedMult;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Tick Update Tek Run
@@ -225,7 +220,7 @@ struct ABuff_TekArmor_Pants_C_BuffTickClient_Params
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.SetPreventEquipWeapons
 struct ABuff_TekArmor_Pants_C_SetPreventEquipWeapons_Params
 {
-	bool                                               prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Prevent;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.CalculateDeflectingImpulse
@@ -288,13 +283,13 @@ struct ABuff_TekArmor_Pants_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_77
-struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_77_Params
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_84
+struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_84_Params
 {
 };
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_76
-struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_76_Params
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_83
+struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_83_Params
 {
 };
 

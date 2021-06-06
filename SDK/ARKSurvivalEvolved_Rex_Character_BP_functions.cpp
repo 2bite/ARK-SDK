@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,7 +56,7 @@ struct FName ARex_Character_BP_C::GetSocketForMeleeTraceForHitBlockers(int* Atta
 
 
 // Function Rex_Character_BP.Rex_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintCallable, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -70,6 +70,7 @@ TArray<struct FMultiUseEntry> ARex_Character_BP_C::BPGetMultiUseEntries(class AP
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,13 +84,13 @@ TArray<struct FMultiUseEntry> ARex_Character_BP_C::BPGetMultiUseEntries(class AP
 
 
 // Function Rex_Character_BP.Rex_Character_BP_C.BPTryMultiUse
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Protected, NetServer, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintCallable, Const)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ARex_Character_BP_C::STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
+bool ARex_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Rex_Character_BP.Rex_Character_BP_C.BPTryMultiUse");
 
@@ -98,6 +99,7 @@ bool ARex_Character_BP_C::STATIC_BPTryMultiUse(class APlayerController** ForPC, 
 	params.UseIndex = UseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -152,7 +154,7 @@ void ARex_Character_BP_C::AllowRoarStun(class APrimalCharacter* primalChar, bool
 
 
 // Function Rex_Character_BP.Rex_Character_BP_C.Roar
-// (NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, BlueprintEvent, BlueprintPure, Const, NetValidate)
+// (NetRequest, Native, Static, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintCallable, Const)
 
 void ARex_Character_BP_C::STATIC_Roar()
 {
@@ -161,6 +163,7 @@ void ARex_Character_BP_C::STATIC_Roar()
 	ARex_Character_BP_C_Roar_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -272,14 +275,14 @@ void ARex_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_174
+// Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_188
 // ()
 
-void ARex_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_174()
+void ARex_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_188()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_174");
+	static auto fn = UObject::FindObject<UFunction>("Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_188");
 
-	ARex_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_174_Params params;
+	ARex_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_188_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -289,14 +292,14 @@ void ARex_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_174()
 }
 
 
-// Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_173
+// Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_187
 // ()
 
-void ARex_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_173()
+void ARex_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_187()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_173");
+	static auto fn = UObject::FindObject<UFunction>("Function Rex_Character_BP.Rex_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_187");
 
-	ARex_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_173_Params params;
+	ARex_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_187_Params params;
 
 	auto flags = fn->FunctionFlags;
 

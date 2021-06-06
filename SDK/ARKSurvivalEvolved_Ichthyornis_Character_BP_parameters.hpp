@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -369,7 +369,7 @@ struct AIchthyornis_Character_BP_C_CanStealItem_Params
 // Function Ichthyornis_Character_BP.Ichthyornis_Character_BP_C.DoStealItem
 struct AIchthyornis_Character_BP_C_DoStealItem_Params
 {
-	class APrimalCharacter*                            CharacterToStealFrom;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            characterToStealFrom;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimalItem*                                 itemToSteal;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Success;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

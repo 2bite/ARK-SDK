@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -107,15 +107,15 @@ public:
 
 
 	struct FText Get_HyperdriveValueTextBlock_Text_1();
-	void STATIC_Set_Progress_Bar_Foreground_Color(class UObject* ProgressBarObject, const struct FLinearColor& LinearColor);
+	void Set_Progress_Bar_Foreground_Color(class UObject* ProgressBarObject, const struct FLinearColor& LinearColor);
 	float Get_CosmicPowerBelowProgressBar_Percent_1();
 	struct FText Get_CosmicPowerValueTextBlock_Text_1();
 	float Get_CosmicPowerAboveProgressBar_Percent_1();
 	float Get_HyperdriveProgressBar_Percent_1();
-	struct FText Get_BombsHintText_0();
+	struct FText STATIC_Get_BombsHintText_0();
 	void InitFromSpaceWhale(class ASpaceWhale_Character_BP_C* SpaceWhaleCharBP);
-	void StartClosingWidget(float NewLifespan);
-	void DestroyHudWidget();
+	void StartClosingWidget(float NewLifeSpan);
+	void DestroyHUDWidget();
 	void ResetHudWidget();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void Construct();

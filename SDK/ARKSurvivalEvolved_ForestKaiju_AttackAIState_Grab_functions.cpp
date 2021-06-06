@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -163,7 +163,7 @@ void UForestKaiju_AttackAIState_Grab_C::OnBeginEvent(class UPrimalAIState** InPa
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.VineRetracted
-// (Exec, NetResponse, Static, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<struct FVineTargetData> Targets                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -174,6 +174,7 @@ void UForestKaiju_AttackAIState_Grab_C::STATIC_VineRetracted(TArray<struct FVine
 	UForestKaiju_AttackAIState_Grab_C_VineRetracted_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,7 +227,7 @@ void UForestKaiju_AttackAIState_Grab_C::Debug_Draw_Sphere(const struct FVector& 
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.AnimNotifyGrabAttackSmash
-// (NetRequest, Event, NetResponse, Static, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UForestKaiju_AttackAIState_Grab_C::STATIC_AnimNotifyGrabAttackSmash()
 {
@@ -235,6 +236,7 @@ void UForestKaiju_AttackAIState_Grab_C::STATIC_AnimNotifyGrabAttackSmash()
 	UForestKaiju_AttackAIState_Grab_C_AnimNotifyGrabAttackSmash_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -267,7 +269,7 @@ void UForestKaiju_AttackAIState_Grab_C::DebugDrawLine(const struct FVector& Star
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.SpawnVines
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UForestKaiju_AttackAIState_Grab_C::STATIC_SpawnVines()
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass StructureTurretPlant.StructureTurretPlant_C
-// 0x001D (0x0F65 - 0x0F48)
+// 0x001D (0x0FBD - 0x0FA0)
 class AStructureTurretPlant_C : public APrimalStructureTurretPlant
 {
 public:
-	class UStaticMeshComponent*                        Collision;                                                // 0x0F48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            StasisComponent;                                          // 0x0F50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0F58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxTurretsNearby;                                         // 0x0F60(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bTooManyInRangeInactive;                                  // 0x0F64(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	class UStaticMeshComponent*                        Collision;                                                // 0x0FA0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USphereComponent*                            StasisComponent;                                          // 0x0FA8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TargetingEmitter;                                         // 0x0FB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MaxTurretsNearby;                                         // 0x0FB8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bTooManyInRangeInactive;                                  // 0x0FBC(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32,6 +32,7 @@ public:
 	}
 
 
+	void BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser);
 	void BPPostLoadedFromSaveGame();
 	bool BPCanBeActivated();
 	void Turret_Check_Hard_Limit();

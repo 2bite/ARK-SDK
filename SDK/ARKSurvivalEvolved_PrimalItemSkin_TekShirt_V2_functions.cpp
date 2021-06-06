@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemSkin_TekShirt_V2.PrimalItemSkin_TekShirt_V2_C.TrySetTeksuitVFXOffset
-// ()
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           Unequip                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemSkin_TekShirt_V2_C::TrySetTeksuitVFXOffset(bool Unequip)
+void UPrimalItemSkin_TekShirt_V2_C::STATIC_TrySetTeksuitVFXOffset(bool Unequip)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemSkin_TekShirt_V2.PrimalItemSkin_TekShirt_V2_C.TrySetTeksuitVFXOffset");
 
@@ -25,6 +25,7 @@ void UPrimalItemSkin_TekShirt_V2_C::TrySetTeksuitVFXOffset(bool Unequip)
 	params.Unequip = Unequip;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

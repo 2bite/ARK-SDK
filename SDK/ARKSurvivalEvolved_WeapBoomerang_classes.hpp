@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapBoomerang.WeapBoomerang_C
-// 0x0000 (0x0E88 - 0x0E88)
+// 0x0000 (0x0EC0 - 0x0EC0)
 class AWeapBoomerang_C : public APrimalWeaponBoomerang
 {
 public:

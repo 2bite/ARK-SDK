@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Pillar_Stone.Pillar_Stone_C
-// 0x0000 (0x0AC0 - 0x0AC0)
+// 0x0000 (0x0AE8 - 0x0AE8)
 class APillar_Stone_C : public APillar_Base_SM_C
 {
 public:

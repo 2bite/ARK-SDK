@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void AGriffin_Character_BP_C::UpdateDivingFX()
 
 
 // Function Griffin_Character_BP.Griffin_Character_BP_C.OnDiveSwipe
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetServer, DLLImport, NetValidate)
 
 void AGriffin_Character_BP_C::STATIC_OnDiveSwipe()
 {
@@ -39,6 +39,7 @@ void AGriffin_Character_BP_C::STATIC_OnDiveSwipe()
 	AGriffin_Character_BP_C_OnDiveSwipe_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,7 +171,7 @@ void AGriffin_Character_BP_C::Update_Diving_Effects()
 
 
 // Function Griffin_Character_BP.Griffin_Character_BP_C.CheckGroundForWingFlap
-// (NetReliable, Exec, Native, NetResponse, Public, Private, HasOutParms, NetClient)
+// (Exec, NetResponse, NetMulticast, NetServer, DLLImport, NetValidate)
 
 void AGriffin_Character_BP_C::CheckGroundForWingFlap()
 {
@@ -179,7 +180,6 @@ void AGriffin_Character_BP_C::CheckGroundForWingFlap()
 	AGriffin_Character_BP_C_CheckGroundForWingFlap_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

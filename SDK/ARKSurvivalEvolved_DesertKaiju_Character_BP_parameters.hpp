@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -94,7 +94,7 @@ struct ADesertKaiju_Character_BP_C_InterpSpawnInMICs_Params
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.PreventLocomotion_1
 struct ADesertKaiju_Character_BP_C_PreventLocomotion_1_Params
 {
-	bool                                               prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.MaybeStunDesertKaiju
@@ -275,7 +275,7 @@ struct ADesertKaiju_Character_BP_C_PreventLightningAoEField_Params
 {
 	struct FVector                                     ExplosionLoc;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               OnKaiju;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.FindHUDOffset
@@ -312,7 +312,7 @@ struct ADesertKaiju_Character_BP_C_BPDoAttack_Params
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.PreventLocomotion
 struct ADesertKaiju_Character_BP_C_PreventLocomotion_Params
 {
-	bool                                               prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Update Locomotion
@@ -511,13 +511,13 @@ struct ADesertKaiju_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_122
-struct ADesertKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_122_Params
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_129
+struct ADesertKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_129_Params
 {
 };
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_121
-struct ADesertKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_121_Params
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_128
+struct ADesertKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_128_Params
 {
 };
 
@@ -553,8 +553,8 @@ struct ADesertKaiju_Character_BP_C_Mutli_ExposeNodes_Params
 	bool                                               Expose;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Multi_SetNodeColor
-struct ADesertKaiju_Character_BP_C_Multi_SetNodeColor_Params
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.MULTI_SetNodeColor
+struct ADesertKaiju_Character_BP_C_MULTI_SetNodeColor_Params
 {
 	int                                                Node;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Activated;                                                // (Parm, ZeroConstructor, IsPlainOldData)
@@ -682,28 +682,28 @@ struct ADesertKaiju_Character_BP_C_Server_UpdateRiderLightningStrikeCharges_Para
 struct ADesertKaiju_Character_BP_C_Passenger1DelayedSetInterpSpeed_Params
 {
 	class APrimalCharacter*                            Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               useOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger2DelayedSetInterpSpeed
 struct ADesertKaiju_Character_BP_C_Passenger2DelayedSetInterpSpeed_Params
 {
 	class APrimalCharacter*                            Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               useOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger3DelayedSetInterpSpeed
 struct ADesertKaiju_Character_BP_C_Passenger3DelayedSetInterpSpeed_Params
 {
 	class APrimalCharacter*                            Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               useOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Passenger4DelayedSetInterpSpeed
 struct ADesertKaiju_Character_BP_C_Passenger4DelayedSetInterpSpeed_Params
 {
 	class APrimalCharacter*                            Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               UseOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               useOverride;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Multi_InterpLeftNode

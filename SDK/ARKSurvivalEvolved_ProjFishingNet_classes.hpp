@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -153,13 +153,13 @@ public:
 	}
 
 
-	void Trace_For_Fish_and_Add_Them();
+	void STATIC_Trace_For_Fish_and_Add_Them();
 	void Check_For_Fish_Incrementally();
 	void BPProjectileBounced(struct FHitResult* ImpactResult, struct FVector* ImpactVelocity);
 	void ReceiveActorEndOverlap(class AActor** OtherActor);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit);
-	void ReceiveTick(float* DeltaSeconds);
+	void STATIC_ReceiveTick(float* DeltaSeconds);
 	void ReceiveActorBeginOverlap(class AActor** OtherActor);
 	void UserConstructionScript();
 	void Timeline_0__FinishedFunc();
@@ -173,9 +173,9 @@ public:
 	void BndEvt__StaticMesh2_K2Node_ComponentBoundEvent_313_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, struct FHitResult* SweepResult);
 	void scale_net_on_toss();
 	void BndEvt__StaticMesh3_K2Node_ComponentBoundEvent_458_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, struct FHitResult* SweepResult);
-	void try_catch_fish(class AActor* Fish);
+	void try_catch_fish(class AActor* fish);
 	void Stop_Projectile_on_Clients(const struct FHitResult& Impact);
-	void try_add_fish_to_net(class AActor* Fish);
+	void try_add_fish_to_net(class AActor* fish);
 	void Launch_a_little_faster_initially();
 	void initial_fish_trace();
 	void ExecuteUbergraph_ProjFishingNet(int EntryPoint);

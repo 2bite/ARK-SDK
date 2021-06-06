@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -198,8 +198,8 @@ struct AStego_Character_BP_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function Stego_Character_BP.Stego_Character_BP_C.Dismount
-struct AStego_Character_BP_C_Dismount_Params
+// Function Stego_Character_BP.Stego_Character_BP_C.dismount
+struct AStego_Character_BP_C_dismount_Params
 {
 };
 

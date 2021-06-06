@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Tek_Fab_RIG_AnimBlueprint.Tek_Fab_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Fab_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2366
-struct UTek_Fab_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Fab_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2366_Params
+// Function Tek_Fab_RIG_AnimBlueprint.Tek_Fab_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Fab_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2350
+struct UTek_Fab_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Fab_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2350_Params
 {
 };
 

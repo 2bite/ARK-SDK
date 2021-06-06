@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -99,22 +99,23 @@ public:
 	bool                                               CallFunc_BooleanAND_ReturnValue8;                         // 0x0954(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue9;                         // 0x0955(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue9;                        // 0x0956(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue10;                        // 0x0957(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue10;                       // 0x0958(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue11;                        // 0x0959(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue11;                       // 0x095A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue12;                        // 0x095B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue12;                       // 0x095C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue13;                       // 0x095D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue14;                       // 0x095E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue13;                        // 0x095F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue14;                        // 0x0960(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue15;                       // 0x0961(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue15;                        // 0x0962(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue16;                       // 0x0963(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue5;                          // 0x0964(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue17;                       // 0x0965(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x0966(0x0002) MISSED OFFSET
+	bool                                               CallFunc_BooleanOR_ReturnValue5;                          // 0x0957(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue10;                        // 0x0958(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue10;                       // 0x0959(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue11;                        // 0x095A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue11;                       // 0x095B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue12;                        // 0x095C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue12;                       // 0x095D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue13;                       // 0x095E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue14;                       // 0x095F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue13;                        // 0x0960(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue14;                        // 0x0961(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue15;                       // 0x0962(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue15;                        // 0x0963(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue16;                       // 0x0964(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue6;                          // 0x0965(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue17;                       // 0x0966(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1];                                       // 0x0967(0x0001) MISSED OFFSET
 	float                                              CallFunc_GetAnimAssetPlayerTimeFromEndFraction_ReturnValue3;// 0x0968(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              K2Node_Event_DeltaTimeX;                                  // 0x096C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Less_FloatFloat_ReturnValue3;                    // 0x0970(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -154,28 +155,28 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1218();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1217();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1216();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1215();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1214();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1213();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1212();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1211();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1210();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1209();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1208();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1207();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1206();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1205();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1204();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1203();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1202();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1201();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1200();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1199();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1198();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1197();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1920();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1919();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1918();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1917();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1916();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1915();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1914();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1913();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1912();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1911();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1910();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1909();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1908();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1907();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1906();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1905();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1904();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1903();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1902();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1901();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1900();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVBowWeaponAnimBP_Base_AnimGraphNode_TransitionResult_1899();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void AnimNotify_EnterIdle();
 	void AnimNotify_EnterTargetIdle();

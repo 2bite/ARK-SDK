@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ocean_Basilosaurus_Character_BP.Ocean_Basilosaurus_Character_BP_C
-// 0x0000 (0x21D4 - 0x21D4)
+// 0x0000 (0x22A4 - 0x22A4)
 class AOcean_Basilosaurus_Character_BP_C : public ABasilosaurus_Character_BP_C
 {
 public:

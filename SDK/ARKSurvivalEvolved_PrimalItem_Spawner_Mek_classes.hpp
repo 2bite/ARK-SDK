@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_Spawner_Mek.PrimalItem_Spawner_Mek_C
-// 0x0000 (0x0BF8 - 0x0BF8)
+// 0x0000 (0x0CE8 - 0x0CE8)
 class UPrimalItem_Spawner_Mek_C : public UPrimalItem_DinoSpawner_Base_C
 {
 public:

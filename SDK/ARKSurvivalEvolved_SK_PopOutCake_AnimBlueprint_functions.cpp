@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (320.18) SDK
+// ARKSurvivalEvolved (329.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function SK_PopOutCake_AnimBlueprint.SK_PopOutCake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_PopOutCake_AnimBlueprint_AnimGraphNode_BlendListByBool_5606
+// Function SK_PopOutCake_AnimBlueprint.SK_PopOutCake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_PopOutCake_AnimBlueprint_AnimGraphNode_BlendListByBool_4352
 // ()
 
-void USK_PopOutCake_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_PopOutCake_AnimBlueprint_AnimGraphNode_BlendListByBool_5606()
+void USK_PopOutCake_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_PopOutCake_AnimBlueprint_AnimGraphNode_BlendListByBool_4352()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SK_PopOutCake_AnimBlueprint.SK_PopOutCake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_PopOutCake_AnimBlueprint_AnimGraphNode_BlendListByBool_5606");
+	static auto fn = UObject::FindObject<UFunction>("Function SK_PopOutCake_AnimBlueprint.SK_PopOutCake_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_PopOutCake_AnimBlueprint_AnimGraphNode_BlendListByBool_4352");
 
-	USK_PopOutCake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_PopOutCake_AnimBlueprint_AnimGraphNode_BlendListByBool_5606_Params params;
+	USK_PopOutCake_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_PopOutCake_AnimBlueprint_AnimGraphNode_BlendListByBool_4352_Params params;
 
 	auto flags = fn->FunctionFlags;
 
