@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ public:
 	}
 
 
-	struct FLeaderboardDisplayRow STATIC_BPFormatLeaderboardRow(struct FName* MissionTag, int* index, struct FLeaderboardRow* DatabaseRow);
+	struct FLeaderboardDisplayRow BPFormatLeaderboardRow(struct FName* MissionTag, int* index, struct FLeaderboardRow* DatabaseRow);
 	void SelectIcon(int Place, class UTexture2D** Icon);
 	void ExecuteUbergraph_Leaderboard_Race(int EntryPoint);
 };

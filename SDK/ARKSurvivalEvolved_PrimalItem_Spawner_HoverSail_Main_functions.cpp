@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,7 +47,7 @@ void UPrimalItem_Spawner_HoverSail_Main_C::BlueprintUsed()
 
 
 // Function PrimalItem_Spawner_HoverSail_Main.PrimalItem_Spawner_HoverSail_Main_C.OnDinoSpawned
-// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter**   NewDino                        (Parm, ZeroConstructor, IsPlainOldData)
 

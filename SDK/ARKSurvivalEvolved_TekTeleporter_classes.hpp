@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TekTeleporter.TekTeleporter_C
-// 0x0110 (0x0F20 - 0x0E10)
+// 0x0128 (0x0F38 - 0x0E10)
 class ATekTeleporter_C : public AStructureItemContainerBaseBP_C
 {
 public:
@@ -40,22 +40,25 @@ public:
 	TArray<class APrimalCharacter*>                    CharactersToTeleport;                                     // 0x0E68(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
 	TArray<struct UObject_FTransform>                  TeleportTransforms;                                       // 0x0E78(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class ATekTeleporter_C*                            TargetTeleporter;                                         // 0x0E88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              K2Node_CustomEvent_EffectScale2;                          // 0x0E90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     K2Node_CustomEvent_EffectLoc2;                            // 0x0E94(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    K2Node_CustomEvent_EffectRot2;                            // 0x0EA0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_EffectScale;                           // 0x0EAC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     K2Node_CustomEvent_EffectLoc;                             // 0x0EB0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    K2Node_CustomEvent_EffectRot;                             // 0x0EBC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_Conv_FloatToVector_ReturnValue;                  // 0x0EC8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_Conv_FloatToVector_ReturnValue2;                 // 0x0ED4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAtLocation_ReturnValue;              // 0x0EE0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAtLocation_ReturnValue2;             // 0x0EE8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0EF0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0EF1(0x0003) MISSED OFFSET
-	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue;                 // 0x0EF4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue2;                // 0x0F00(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0F0C(0x0004) MISSED OFFSET
-	TArray<class AActor*>                              CallFunc_SphereOverlapActors_NEW_ActorsToIgnore_RefProperty;// 0x0F10(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
+	float                                              AllowedToBuildZAxisDisplacementThreshold;                 // 0x0E90(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              K2Node_CustomEvent_EffectScale2;                          // 0x0E94(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_EffectLoc2;                            // 0x0E98(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_EffectRot2;                            // 0x0EA4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_EffectScale;                           // 0x0EB0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     K2Node_CustomEvent_EffectLoc;                             // 0x0EB4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    K2Node_CustomEvent_EffectRot;                             // 0x0EC0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_Conv_FloatToVector_ReturnValue;                  // 0x0ECC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_Conv_FloatToVector_ReturnValue2;                 // 0x0ED8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0EE4(0x0004) MISSED OFFSET
+	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAtLocation_ReturnValue;              // 0x0EE8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAtLocation_ReturnValue2;             // 0x0EF0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0EF8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0EF9(0x0003) MISSED OFFSET
+	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue;                 // 0x0EFC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue2;                // 0x0F08(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x0F14(0x0004) MISSED OFFSET
+	TArray<class AActor*>                              CallFunc_SphereOverlapActors_NEW_ActorsToIgnore_RefProperty;// 0x0F18(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
+	TArray<class AActor*>                              CallFunc_SphereTraceSingleForObjects_ActorsToIgnore_RefProperty;// 0x0F28(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
 
 	static UClass* StaticClass()
 	{
@@ -64,6 +67,7 @@ public:
 	}
 
 
+	int BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);
 	void STATIC_DoTeleportBatch();
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	bool BPPreventSpawnForPlayer(class AShooterPlayerController** PC, bool* bCheckCooldownTime, class APrimalStructure** FromStructure);

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Grappled_BAse.Buff_Grappled_Base_C
-// 0x0000 (0x0B68 - 0x0B68)
+// 0x0000 (0x0B80 - 0x0B80)
 class ABuff_Grappled_Base_C : public APrimalBuff_Grappled
 {
 public:

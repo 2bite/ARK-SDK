@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 // Function PrimalItemArmor_SaddleGeneric_Tek_Interface.PrimalItemArmor_SaddleGeneric_Tek_Interface_C.IGet Max Ammo
 struct UPrimalItemArmor_SaddleGeneric_Tek_Interface_C_IGet_Max_Ammo_Params
 {
-	int                                                Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PrimalItemArmor_SaddleGeneric_Tek_Interface.PrimalItemArmor_SaddleGeneric_Tek_Interface_C.ISetElementToMax

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,6 +43,12 @@ struct AMek_Character_BP_C_GetMekHeat_Params
 {
 	float                                              CurrentHeat;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              MaxHeat;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mek_Character_BP.Mek_Character_BP_C.BP_OnCryo
+struct AMek_Character_BP_C_BP_OnCryo_Params
+{
+	class AShooterPlayerController**                   ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mek_Character_BP.Mek_Character_BP_C.GetSocketForMeleeTraceForHitBlockers

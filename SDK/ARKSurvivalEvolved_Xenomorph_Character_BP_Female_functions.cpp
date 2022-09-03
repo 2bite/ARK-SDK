@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -99,7 +99,7 @@ bool AXenomorph_Character_BP_Female_C::ReadyToImpregnate()
 
 
 // Function Xenomorph_Character_BP_Female.Xenomorph_Character_BP_Female_C.GetNewTimeForImpregnate
-// (Native, Static, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -208,7 +208,7 @@ void AXenomorph_Character_BP_Female_C::BPDidClearCarriedCharacter(class APrimalC
 
 
 // Function Xenomorph_Character_BP_Female.Xenomorph_Character_BP_Female_C.BlueprintCanAttack
-// (Net, Native, Event, NetResponse, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -227,7 +227,6 @@ bool AXenomorph_Character_BP_Female_C::BlueprintCanAttack(int* AttackIndex, floa
 	params.OtherTarget = OtherTarget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

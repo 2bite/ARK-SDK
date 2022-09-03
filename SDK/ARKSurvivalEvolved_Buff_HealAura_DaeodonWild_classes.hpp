@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_HealAura_DaeodonWild.Buff_HealAura_DaeodonWild_C
-// 0x0000 (0x0D51 - 0x0D51)
+// 0x0000 (0x0D61 - 0x0D61)
 class ABuff_HealAura_DaeodonWild_C : public ABuff_HealAura_C
 {
 public:

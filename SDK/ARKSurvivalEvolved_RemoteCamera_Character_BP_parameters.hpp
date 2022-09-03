@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,6 +46,12 @@ struct ARemoteCamera_Character_BP_C_GetCameraLocation_Params
 {
 	struct FVector                                     CameraViewPoint;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    CameraRotation;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ServerUnlinkCamera
+struct ARemoteCamera_Character_BP_C_ServerUnlinkCamera_Params
+{
+	int                                                index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.SwitchToCameraAtIndex
@@ -250,7 +256,7 @@ struct ARemoteCamera_Character_BP_C_ReceiveTick_Params
 // Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ScoutIsFirstPerson
 struct ARemoteCamera_Character_BP_C_ScoutIsFirstPerson_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.BPHandleOnStopFire
@@ -370,38 +376,38 @@ struct ARemoteCamera_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_136
-struct ARemoteCamera_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_136_Params
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_146
+struct ARemoteCamera_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_146_Params
 {
 };
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_135
-struct ARemoteCamera_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_135_Params
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_145
+struct ARemoteCamera_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_145_Params
 {
 };
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_134
-struct ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_134_Params
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_144
+struct ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_144_Params
 {
 };
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_133
-struct ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_133_Params
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_143
+struct ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_143_Params
 {
 };
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_132
-struct ARemoteCamera_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_132_Params
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_142
+struct ARemoteCamera_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_142_Params
 {
 };
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_131
-struct ARemoteCamera_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_131_Params
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_141
+struct ARemoteCamera_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_141_Params
 {
 };
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_130
-struct ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_130_Params
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_140
+struct ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_140_Params
 {
 };
 
@@ -647,6 +653,12 @@ struct ARemoteCamera_Character_BP_C_StopPossessingPlayerMovement_Params
 // Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ServerConfirmActivation
 struct ARemoteCamera_Character_BP_C_ServerConfirmActivation_Params
 {
+};
+
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.UnlinkCamera
+struct ARemoteCamera_Character_BP_C_UnlinkCamera_Params
+{
+	int                                                index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ExecuteUbergraph_RemoteCamera_Character_BP

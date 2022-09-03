@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,7 +53,7 @@ void ALiopleurodon_Character_BP_C::BPTimerServer()
 
 
 // Function Liopleurodon_Character_BP.Liopleurodon_Character_BP_C.BlueprintDrawFloatingHUD
-// (Net, NetRequest, Native, Event, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -71,7 +71,6 @@ void ALiopleurodon_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** 
 	params.DrawScale = DrawScale;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

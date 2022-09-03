@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function BossTeleporter.BossTeleporter_C.ManageArenaDisableBuffsForCharacter
+struct ABossTeleporter_C_ManageArenaDisableBuffsForCharacter_Params
+{
+	class APrimalCharacter*                            forCharacter;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BossTeleporter.BossTeleporter_C.BackupCallArenaDidTeleportOnLevelLoaded
+struct ABossTeleporter_C_BackupCallArenaDidTeleportOnLevelLoaded_Params
+{
+};
 
 // Function BossTeleporter.BossTeleporter_C.Do TeleportSound
 struct ABossTeleporter_C_Do_TeleportSound_Params

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -152,7 +152,7 @@ void AStructure_SecurityCamera_C::UpdateEffects()
 
 
 // Function Structure_SecurityCamera.Structure_SecurityCamera_C.BPOverrideDescriptiveName
-// (Net, NetReliable, Native, Event, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -191,7 +191,7 @@ void AStructure_SecurityCamera_C::ClientUpdatePosition()
 
 
 // Function Structure_SecurityCamera.Structure_SecurityCamera_C.BlueprintDrawHUD
-// (NetReliable, NetRequest, NetResponse, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -207,6 +207,7 @@ void AStructure_SecurityCamera_C::BlueprintDrawHUD(class AShooterHUD** HUD, floa
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -543,14 +544,14 @@ void AStructure_SecurityCamera_C::ReceiveDestroyed()
 
 
 // Function Structure_SecurityCamera.Structure_SecurityCamera_C.BPOnStructurePickup
-// (Exec, Native, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass**                 ItemType                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimalItem**            NewlyPickedUpItem              (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsQuickPickup                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_SecurityCamera_C::BPOnStructurePickup(class APlayerController** PlayerController, class UClass** ItemType, class UPrimalItem** NewlyPickedUpItem, bool* bIsQuickPickup)
+void AStructure_SecurityCamera_C::STATIC_BPOnStructurePickup(class APlayerController** PlayerController, class UClass** ItemType, class UPrimalItem** NewlyPickedUpItem, bool* bIsQuickPickup)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_SecurityCamera.Structure_SecurityCamera_C.BPOnStructurePickup");
 
@@ -561,7 +562,6 @@ void AStructure_SecurityCamera_C::BPOnStructurePickup(class APlayerController** 
 	params.bIsQuickPickup = bIsQuickPickup;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -699,26 +699,6 @@ void AStructure_SecurityCamera_C::AddNewCamera(class APrimalStructure* NewStruct
 
 	AStructure_SecurityCamera_C_AddNewCamera_Params params;
 	params.NewStructure = NewStructure;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Structure_SecurityCamera.Structure_SecurityCamera_C.RemoveCamera
-// ()
-// Parameters:
-// class APrimalStructure*        CameraToRemove                 (Parm, ZeroConstructor, IsPlainOldData)
-
-void AStructure_SecurityCamera_C::RemoveCamera(class APrimalStructure* CameraToRemove)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Structure_SecurityCamera.Structure_SecurityCamera_C.RemoveCamera");
-
-	AStructure_SecurityCamera_C_RemoveCamera_Params params;
-	params.CameraToRemove = CameraToRemove;
 
 	auto flags = fn->FunctionFlags;
 
@@ -867,6 +847,43 @@ void AStructure_SecurityCamera_C::ClientCameraActivated()
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_SecurityCamera.Structure_SecurityCamera_C.ClientCameraActivated");
 
 	AStructure_SecurityCamera_C_ClientCameraActivated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_SecurityCamera.Structure_SecurityCamera_C.RemoveCamera
+// ()
+// Parameters:
+// class APrimalStructure*        CameraToRemove                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void AStructure_SecurityCamera_C::RemoveCamera(class APrimalStructure* CameraToRemove)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_SecurityCamera.Structure_SecurityCamera_C.RemoveCamera");
+
+	AStructure_SecurityCamera_C_RemoveCamera_Params params;
+	params.CameraToRemove = CameraToRemove;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_SecurityCamera.Structure_SecurityCamera_C.ClientCameraUnlinked
+// ()
+
+void AStructure_SecurityCamera_C::ClientCameraUnlinked()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_SecurityCamera.Structure_SecurityCamera_C.ClientCameraUnlinked");
+
+	AStructure_SecurityCamera_C_ClientCameraUnlinked_Params params;
 
 	auto flags = fn->FunctionFlags;
 

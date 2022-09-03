@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function StructureItemContainerBaseBP.StructureItemContainerBaseBP_C.BPOnTransferAll
+// ()
+// Parameters:
+// class UPrimalInventoryComponent* toInventory                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void AStructureItemContainerBaseBP_C::BPOnTransferAll(class UPrimalInventoryComponent* toInventory)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StructureItemContainerBaseBP.StructureItemContainerBaseBP_C.BPOnTransferAll");
+
+	AStructureItemContainerBaseBP_C_BPOnTransferAll_Params params;
+	params.toInventory = toInventory;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function StructureItemContainerBaseBP.StructureItemContainerBaseBP_C.UserConstructionScript
 // ()

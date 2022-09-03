@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,16 +12,58 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.UnlockGen2ExplorerNote
-// (NetReliable, Exec, Event, NetResponse, Static, Public, NetServer, HasDefaults, NetClient, NetValidate)
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.Delay play Reaction Function
+// (NetRequest, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
+// Parameters:
+// struct FCompanionReactionData  WithReactionData               (Parm, OutParm, ReferenceParm)
+// class APrimalBuff_Companion*   HLNA                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExplorerChest_Glitch_C::STATIC_UnlockGen2ExplorerNote()
+void AExplorerChest_Glitch_C::Delay_play_Reaction_Function(class APrimalBuff_Companion* HLNA, struct FCompanionReactionData* WithReactionData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.Delay play Reaction Function");
+
+	AExplorerChest_Glitch_C_Delay_play_Reaction_Function_Params params;
+	params.HLNA = HLNA;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (WithReactionData != nullptr)
+		*WithReactionData = params.WithReactionData;
+}
+
+
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.delayed reaction
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
+
+void AExplorerChest_Glitch_C::delayed_reaction()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.delayed reaction");
+
+	AExplorerChest_Glitch_C_delayed_reaction_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.UnlockGen2ExplorerNote
+// (Net, NetReliable, Native, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
+
+void AExplorerChest_Glitch_C::UnlockGen2ExplorerNote()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.UnlockGen2ExplorerNote");
 
 	AExplorerChest_Glitch_C_UnlockGen2ExplorerNote_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,11 +92,11 @@ void AExplorerChest_Glitch_C::DrawBasicFloatingHUD(class AHUD** ForHUD)
 
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA
-// (NetReliable, NetRequest, Exec, NetMulticast, Public, NetServer, HasDefaults, NetClient, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExplorerChest_Glitch_C::PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
+void AExplorerChest_Glitch_C::STATIC_PlayExplorerNoteOnHLNA(class UPrimalItem* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.PlayExplorerNoteOnHLNA");
 

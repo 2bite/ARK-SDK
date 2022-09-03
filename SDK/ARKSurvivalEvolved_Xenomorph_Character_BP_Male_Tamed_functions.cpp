@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -220,9 +220,9 @@ void AXenomorph_Character_BP_Male_Tamed_C::ProcessJump()
 
 
 // Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.Jump Trace
-// (Exec, Native, Event, Static, NetMulticast, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
 
-void AXenomorph_Character_BP_Male_Tamed_C::STATIC_Jump_Trace()
+void AXenomorph_Character_BP_Male_Tamed_C::Jump_Trace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.Jump Trace");
 
@@ -240,9 +240,9 @@ void AXenomorph_Character_BP_Male_Tamed_C::STATIC_Jump_Trace()
 // Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.ShouldStopJumpRotation
 // ()
 // Parameters:
-// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_Male_Tamed_C::ShouldStopJumpRotation(bool* return_value)
+void AXenomorph_Character_BP_Male_Tamed_C::ShouldStopJumpRotation(bool* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP_Male_Tamed.Xenomorph_Character_BP_Male_Tamed_C.ShouldStopJumpRotation");
 
@@ -254,8 +254,8 @@ void AXenomorph_Character_BP_Male_Tamed_C::ShouldStopJumpRotation(bool* return_v
 
 	fn->FunctionFlags = flags;
 
-	if (return_value != nullptr)
-		*return_value = params.return_value;
+	if (Return_Value != nullptr)
+		*Return_Value = params.Return_Value;
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.SetChibiLevels
+struct UPrimalPlayerDataBP_Base_C_SetChibiLevels_Params
+{
+	int*                                               newLevels;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterPlayerController**                   ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.HasGeneralizedAchievementTag
+struct UPrimalPlayerDataBP_Base_C_HasGeneralizedAchievementTag_Params
+{
+	struct FName*                                      Tag;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.GrantGeneralizedAchievementTag
+struct UPrimalPlayerDataBP_Base_C_GrantGeneralizedAchievementTag_Params
+{
+	struct FName*                                      ObtainedAchievementTag;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterPlayerController**                   ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss
 struct UPrimalPlayerDataBP_Base_C_BPForceDefeatedBoss_Params

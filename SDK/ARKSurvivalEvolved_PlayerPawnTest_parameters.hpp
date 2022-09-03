@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,18 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PlayerPawnTest.PlayerPawnTest_C.SetGeneralized Unlocked Achievement Tags
+struct APlayerPawnTest_C_SetGeneralized_Unlocked_Achievement_Tags_Params
+{
+	TArray<struct FName>                               GeneralizedUnlockedAchievementTags;                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function PlayerPawnTest.PlayerPawnTest_C.HasEquipToHideImplant
+struct APlayerPawnTest_C_HasEquipToHideImplant_Params
+{
+	bool                                               ShouldHideImplant;                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function PlayerPawnTest.PlayerPawnTest_C.BPSetupFirstPersonHandsMesh
 struct APlayerPawnTest_C_BPSetupFirstPersonHandsMesh_Params
 {
@@ -22,6 +34,7 @@ struct APlayerPawnTest_C_BPSetupFirstPersonHandsMesh_Params
 // Function PlayerPawnTest.PlayerPawnTest_C.SetupMeshes
 struct APlayerPawnTest_C_SetupMeshes_Params
 {
+	bool                                               bForce;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPUnlockedAllExplorerNotes

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -206,7 +206,8 @@ public:
 	}
 
 
-	void GetNextRotation(const struct FRotator& currentRotation, bool bDecrease, bool Roll, bool Pitch, bool Yaw, struct FRotator* NextRotation);
+	void InitSavedTribeLoggingSettings();
+	void GetNextRotation(const struct FRotator& CurrentRotation, bool bDecrease, bool Roll, bool Pitch, bool Yaw, struct FRotator* NextRotation);
 	void OnRep_CurrentStructureDetectBoxRotation();
 	void OnRep_CurrentTargetDetectBoxRotation();
 	void UpdateAutoDeactivation();
@@ -226,22 +227,22 @@ public:
 	void GetMappedTribeLoggingInteger(int TribeLoggingState, int* TribeLoggingInteger);
 	void BPChangedActorTeam();
 	void ReceiveDestroyed();
-	void Has_Any_PINsSet(bool* Result);
+	void STATIC_Has_Any_PINsSet(bool* Result);
 	void OnRep_ShowAreaVisuals();
 	void UpdateAreaVisualsVisibility();
 	void BPContainerDeactivated();
 	void GetTribeLoggingSettingForTargetType(TEnumAsByte<ETekAlarmTargetTypes> Type, int* Result);
 	void GetTribeLogNameForType(TEnumAsByte<ETekAlarmTargetTypes> Type, class FString* Name);
-	void STATIC_TryTribeLogging(TEnumAsByte<ETekAlarmTargetTypes> Type);
+	void TryTribeLogging(TEnumAsByte<ETekAlarmTargetTypes> Type);
 	void GetNextTribeLoggingSetting(int CurrentSetting, int* NewSetting);
-	void STATIC_GetTribe_Logging_String(const class FString& TypeName, int CooldownInSeconds, class FString* Output);
+	void GetTribe_Logging_String(const class FString& TypeName, int CooldownInSeconds, class FString* Output);
 	void STATIC_HasPendingPINActivation(bool* Result);
 	void GetPINDataByType(TEnumAsByte<ETekAlarmTargetTypes> Type, struct FTekAlarmPINData* Ret);
 	void SetPINCodeInPINData(int pinCode, TEnumAsByte<ETekAlarmTargetTypes> Type);
 	void GetMultiUseTitleWithDelay(float DelaySeconds, const struct FText& Title, class FString* Output);
-	void GetPINDataByPIN(int PIN, struct FTekAlarmPINData* res, int* RetIndex);
+	void GetPINDataByPIN(int PIN, struct FTekAlarmPINData* Res, int* retIndex);
 	void CalcuateDelay(float CurrentDelay, float* NewDelay);
-	void PinCodeFlagsToString(int PinCodesFlag, class FString* Output);
+	void STATIC_PinCodeFlagsToString(int PinCodesFlag, class FString* Output);
 	void Was_Pin_Code_Bit_Triggered(int Bit, bool* Ret, bool* Activated, bool* Deactivated);
 	void IsRelevantPinCode(int pinCode, bool* Ret, bool* IsDeactivation);
 	void IsAreaVisualsLocallyVisible(bool* Result);
@@ -249,16 +250,16 @@ public:
 	void BPContainerActivated();
 	void SetActivateStateToStructure(class APrimalStructure* PrimalStructure, bool toggle, bool NewActivateState, bool Force);
 	void Get_Octree_Data_For_Structure_Detect_Area(float* Radius, struct FVector* Location);
-	void STATIC_Update_Structures_in_Area_to_Goal_State();
+	void Update_Structures_in_Area_to_Goal_State();
 	void Update_Structure_Detect_Sphere();
 	void UpdateStructureDetectBox();
 	void SwitchStructureDetectStyle();
-	void IsActorInBoxArea(class AActor* Actor, class UBoxComponent* BoxComponent, bool* Value);
+	void STATIC_IsActorInBoxArea(class AActor* Actor, class UBoxComponent* BoxComponent, bool* Value);
 	void GetOctreeCheckType(TEnumAsByte<EServerOctreeGroup>* Value);
 	void Get_Octree_Data_ForTarget_Detect_Area(float* Radius, struct FVector* Location);
-	void STATIC_HasFiltered_Target_in_the_Area(bool* TargetLost);
+	void HasFiltered_Target_in_the_Area(bool* TargetLost);
 	bool BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams);
-	bool BPApplyPinCode(class AShooterPlayerController** ForPC, int* appledPinCode, bool* bIsSetting, int* TheCustomIndex);
+	bool STATIC_BPApplyPinCode(class AShooterPlayerController** ForPC, int* appledPinCode, bool* bIsSetting, int* TheCustomIndex);
 	void Get_Detect_Area_Adjust_Speed(float* AdjustSpeed);
 	void ReceiveBeginPlay();
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
@@ -266,8 +267,8 @@ public:
 	void UpdateTargetDetectBox();
 	void BPPlacedStructure(class APlayerController** ForPC);
 	void Switch_Target_Detect_Style();
-	bool STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void MulticastTargetDetectStyleChange();
 	void AdjustTargetDetectBoxDepthX(float Delta);

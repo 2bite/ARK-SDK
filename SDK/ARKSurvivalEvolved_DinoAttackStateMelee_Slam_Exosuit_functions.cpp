@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void UDinoAttackStateMelee_Slam_Exosuit_C::StartAnimationStateEvent(struct FName
 
 
 // Function DinoAttackStateMelee_Slam_Exosuit.DinoAttackStateMelee_Slam_Exosuit_C.BPGetSocketLocation
-// (NetReliable, Exec, Static, NetMulticast, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetClient, BlueprintEvent)
 // Parameters:
 // struct FName                   SocketName                     (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 SocketLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -47,6 +47,7 @@ void UDinoAttackStateMelee_Slam_Exosuit_C::STATIC_BPGetSocketLocation(struct FNa
 	UDinoAttackStateMelee_Slam_Exosuit_C_BPGetSocketLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

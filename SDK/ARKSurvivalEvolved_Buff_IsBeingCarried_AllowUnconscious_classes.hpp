@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_IsBeingCarried_AllowUnconscious.Buff_IsBeingCarried_AllowUnconscious_C
-// 0x0000 (0x096D - 0x096D)
+// 0x0000 (0x0985 - 0x0985)
 class ABuff_IsBeingCarried_AllowUnconscious_C : public ABuff_IsBeingCarried_C
 {
 public:

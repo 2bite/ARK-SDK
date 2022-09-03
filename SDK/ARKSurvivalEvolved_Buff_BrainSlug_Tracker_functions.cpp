@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -105,7 +105,7 @@ void ABuff_BrainSlug_Tracker_C::DrawBuffFloatingHUD(int* BuffIndex, class AShoot
 
 
 // Function Buff_BrainSlug_Tracker.Buff_BrainSlug_Tracker_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -119,7 +119,6 @@ TArray<struct FMultiUseEntry> ABuff_BrainSlug_Tracker_C::STATIC_BPGetMultiUseEnt
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

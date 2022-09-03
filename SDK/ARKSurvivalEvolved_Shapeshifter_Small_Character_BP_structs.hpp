@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,9 +11,9 @@
 #include "ARKSurvivalEvolved_CoreUObject_classes.hpp"
 #include "ARKSurvivalEvolved_Engine_classes.hpp"
 #include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
-#include "ARKSurvivalEvolved_Shapeshifter_Large_PounceData_classes.hpp"
 #include "ARKSurvivalEvolved_SlateCore_classes.hpp"
 #include "ARKSurvivalEvolved_UberpounceData_classes.hpp"
+#include "ARKSurvivalEvolved_Shapeshifter_Large_PounceData_classes.hpp"
 
 namespace sdk
 {

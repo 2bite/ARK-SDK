@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackStateMelee_Tekwyvern_TamingRoll.DinoAttackStateMelee_Tekwyvern_TamingRoll_C.BPOnHitActor
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Static, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // struct FHitResult              HitResult                      (Parm, OutParm, ReferenceParm)
 
@@ -24,7 +24,6 @@ void UDinoAttackStateMelee_Tekwyvern_TamingRoll_C::STATIC_BPOnHitActor(struct FH
 	UDinoAttackStateMelee_Tekwyvern_TamingRoll_C_BPOnHitActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

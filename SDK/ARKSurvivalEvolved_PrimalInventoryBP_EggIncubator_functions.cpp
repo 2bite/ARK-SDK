@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -187,14 +187,14 @@ void UPrimalInventoryBP_EggIncubator_C::ExecuteUbergraph_PrimalInventoryBP_EggIn
 // Function PrimalInventoryBP_EggIncubator.PrimalInventoryBP_EggIncubator_C.OnFertilizedEggRemoved__DelegateSignature
 // ()
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalInventoryBP_EggIncubator_C::OnFertilizedEggRemoved__DelegateSignature(class UPrimalItemConsumable_Egg_C* EggItem)
+void UPrimalInventoryBP_EggIncubator_C::OnFertilizedEggRemoved__DelegateSignature(class UPrimalItemConsumable_Egg_C* eggItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalInventoryBP_EggIncubator.PrimalInventoryBP_EggIncubator_C.OnFertilizedEggRemoved__DelegateSignature");
 
 	UPrimalInventoryBP_EggIncubator_C_OnFertilizedEggRemoved__DelegateSignature_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -207,14 +207,14 @@ void UPrimalInventoryBP_EggIncubator_C::OnFertilizedEggRemoved__DelegateSignatur
 // Function PrimalInventoryBP_EggIncubator.PrimalInventoryBP_EggIncubator_C.OnFertilizedEggAdded__DelegateSignature
 // ()
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalInventoryBP_EggIncubator_C::OnFertilizedEggAdded__DelegateSignature(class UPrimalItemConsumable_Egg_C* EggItem)
+void UPrimalInventoryBP_EggIncubator_C::OnFertilizedEggAdded__DelegateSignature(class UPrimalItemConsumable_Egg_C* eggItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalInventoryBP_EggIncubator.PrimalInventoryBP_EggIncubator_C.OnFertilizedEggAdded__DelegateSignature");
 
 	UPrimalInventoryBP_EggIncubator_C_OnFertilizedEggAdded__DelegateSignature_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 

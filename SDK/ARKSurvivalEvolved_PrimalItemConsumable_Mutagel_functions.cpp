@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,20 +56,19 @@ void UPrimalItemConsumable_Mutagel_C::BPServerHandleItemNetExecCommand(class ASh
 
 
 // Function PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C.find strider
-// (Exec, Native, NetResponse, Static, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// bool                           backup                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Backup                         (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalDinoCharacter*    strider                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemConsumable_Mutagel_C::STATIC_find_strider(bool backup, class APrimalDinoCharacter** strider)
+void UPrimalItemConsumable_Mutagel_C::find_strider(bool Backup, class APrimalDinoCharacter** strider)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C.find strider");
 
 	UPrimalItemConsumable_Mutagel_C_find_strider_Params params;
-	params.backup = backup;
+	params.Backup = Backup;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +123,7 @@ int UPrimalItemConsumable_Mutagel_C::CalculateAmountNeeded()
 
 
 // Function PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C.BPGetItemDescription
-// (Net, Exec, Event, NetResponse, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -141,6 +140,7 @@ class FString UPrimalItemConsumable_Mutagel_C::BPGetItemDescription(class FStrin
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +151,7 @@ class FString UPrimalItemConsumable_Mutagel_C::BPGetItemDescription(class FStrin
 
 
 // Function PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C.BlueprintUsed
-// (NetReliable, NetRequest, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void UPrimalItemConsumable_Mutagel_C::STATIC_BlueprintUsed()
 {
@@ -168,12 +168,12 @@ void UPrimalItemConsumable_Mutagel_C::STATIC_BlueprintUsed()
 
 
 // Function PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C.BPCanUse
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalItemConsumable_Mutagel_C::STATIC_BPCanUse(bool* bIgnoreCooldown)
+bool UPrimalItemConsumable_Mutagel_C::BPCanUse(bool* bIgnoreCooldown)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C.BPCanUse");
 
@@ -181,7 +181,6 @@ bool UPrimalItemConsumable_Mutagel_C::STATIC_BPCanUse(bool* bIgnoreCooldown)
 	params.bIgnoreCooldown = bIgnoreCooldown;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

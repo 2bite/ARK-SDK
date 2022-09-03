@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,8 +30,8 @@ struct ABuff_TekStrider_Shield_C_Is_Ai_Controlled_Params
 	bool                                               NewParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.toggle active on ai
-struct ABuff_TekStrider_Shield_C_toggle_active_on_ai_Params
+// Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.Toggle Active On Ai
+struct ABuff_TekStrider_Shield_C_Toggle_Active_On_Ai_Params
 {
 	bool                                               Activate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };

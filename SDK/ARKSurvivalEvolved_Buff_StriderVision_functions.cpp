@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_StriderVision.Buff_StriderVision_C.GetHudData
-// (NetReliable, Exec, Native, Static, MulticastDelegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 PingWorldLocation              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ProgressBarValue               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -28,7 +28,6 @@ void ABuff_StriderVision_C::STATIC_GetHudData(struct FVector* PingWorldLocation,
 	ABuff_StriderVision_C_GetHudData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,16 +161,16 @@ void ABuff_StriderVision_C::Setup_HUDWidget(class APlayerController* PC)
 }
 
 
-// Function Buff_StriderVision.Buff_StriderVision_C.DestroyHUDWidget
+// Function Buff_StriderVision.Buff_StriderVision_C.DestroyHudWidget
 // ()
 // Parameters:
 // bool                           Bypass                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_StriderVision_C::DestroyHUDWidget(bool Bypass)
+void ABuff_StriderVision_C::DestroyHudWidget(bool Bypass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderVision.Buff_StriderVision_C.DestroyHUDWidget");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderVision.Buff_StriderVision_C.DestroyHudWidget");
 
-	ABuff_StriderVision_C_DestroyHUDWidget_Params params;
+	ABuff_StriderVision_C_DestroyHudWidget_Params params;
 	params.Bypass = Bypass;
 
 	auto flags = fn->FunctionFlags;
@@ -199,14 +198,14 @@ void ABuff_StriderVision_C::Flash_Target()
 }
 
 
-// Function Buff_StriderVision.Buff_StriderVision_C.Highlight latest shared target
+// Function Buff_StriderVision.Buff_StriderVision_C.Highlight Latest Shared Target
 // ()
 
-void ABuff_StriderVision_C::Highlight_latest_shared_target()
+void ABuff_StriderVision_C::Highlight_Latest_Shared_Target()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderVision.Buff_StriderVision_C.Highlight latest shared target");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderVision.Buff_StriderVision_C.Highlight Latest Shared Target");
 
-	ABuff_StriderVision_C_Highlight_latest_shared_target_Params params;
+	ABuff_StriderVision_C_Highlight_Latest_Shared_Target_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -278,15 +277,15 @@ void ABuff_StriderVision_C::Set_All_Components_Render_Custom_Depth(class AActor*
 // Function Buff_StriderVision.Buff_StriderVision_C.Set All Components Custom Depth Stencil Value
 // ()
 // Parameters:
-// int                            stencil_Value                  (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Stencil_Value                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_StriderVision_C::Set_All_Components_Custom_Depth_Stencil_Value(int stencil_Value, class AActor* Actor)
+void ABuff_StriderVision_C::Set_All_Components_Custom_Depth_Stencil_Value(int Stencil_Value, class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderVision.Buff_StriderVision_C.Set All Components Custom Depth Stencil Value");
 
 	ABuff_StriderVision_C_Set_All_Components_Custom_Depth_Stencil_Value_Params params;
-	params.stencil_Value = stencil_Value;
+	params.Stencil_Value = Stencil_Value;
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;

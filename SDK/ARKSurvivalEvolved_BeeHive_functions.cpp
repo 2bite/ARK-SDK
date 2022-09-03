@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BeeHive.BeeHive_C.BlueprintDrawHUD
-// (Net, NetReliable, Exec, NetResponse, Public, Protected, HasDefaults, DLLImport, NetValidate)
+// (NetRequest, Native, Static, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABeeHive_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void ABeeHive_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BeeHive.BeeHive_C.BlueprintDrawHUD");
 
@@ -29,6 +29,7 @@ void ABeeHive_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -189,7 +190,7 @@ bool ABeeHive_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function BeeHive.BeeHive_C.BPGetMultiUseEntries
-// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Protected, HasDefaults, DLLImport, NetValidate)
+// (Exec, Event, NetResponse, Static, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -203,7 +204,6 @@ TArray<struct FMultiUseEntry> ABeeHive_C::STATIC_BPGetMultiUseEntries(class APla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

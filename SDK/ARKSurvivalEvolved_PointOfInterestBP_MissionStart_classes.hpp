@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ public:
 
 	void StartMyMission(class APlayerController* WithPC);
 	bool CanBeViewed(class AActor** ByActor);
-	void STATIC_CanPlayerStartMyMission(class APlayerController* PC, bool* Result);
+	void CanPlayerStartMyMission(class APlayerController* PC, bool* Result);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void UserConstructionScript();

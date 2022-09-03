@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BPUnsetupDinoTameable
+// ()
+
+void ATekWyvern_Character_BP_C::BPUnsetupDinoTameable()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BPUnsetupDinoTameable");
+
+	ATekWyvern_Character_BP_C_BPUnsetupDinoTameable_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BPGetRiderSocket
 // ()
@@ -93,7 +110,7 @@ void ATekWyvern_Character_BP_C::DoTamingRandomAttack()
 
 
 // Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Private, NetServer, NetClient, BlueprintEvent)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -102,7 +119,7 @@ void ATekWyvern_Character_BP_C::DoTamingRandomAttack()
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ATekWyvern_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ATekWyvern_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -350,13 +367,13 @@ bool ATekWyvern_Character_BP_C::OverrideFinalWanderLocation(struct FVector* outV
 
 
 // Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, NetClient, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATekWyvern_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATekWyvern_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BPGetMultiUseEntries");
 
@@ -364,7 +381,6 @@ TArray<struct FMultiUseEntry> ATekWyvern_Character_BP_C::BPGetMultiUseEntries(cl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -378,16 +394,15 @@ TArray<struct FMultiUseEntry> ATekWyvern_Character_BP_C::BPGetMultiUseEntries(cl
 
 
 // Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.UpdateTamingTextOverlay
-// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Event, MulticastDelegate, Public, NetServer, NetClient, BlueprintEvent)
 
-void ATekWyvern_Character_BP_C::STATIC_UpdateTamingTextOverlay()
+void ATekWyvern_Character_BP_C::UpdateTamingTextOverlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.UpdateTamingTextOverlay");
 
 	ATekWyvern_Character_BP_C_UpdateTamingTextOverlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -433,11 +448,11 @@ void ATekWyvern_Character_BP_C::TryAddAffinityAfter_Rolling()
 
 
 // Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.TickBeam
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, NetServer, NetClient, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekWyvern_Character_BP_C::STATIC_TickBeam(float DeltaSeconds)
+void ATekWyvern_Character_BP_C::TickBeam(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.TickBeam");
 
@@ -445,7 +460,6 @@ void ATekWyvern_Character_BP_C::STATIC_TickBeam(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -776,7 +790,7 @@ void ATekWyvern_Character_BP_C::BPNotifySetRider(class AShooterCharacter** Rider
 
 
 // Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetMulticast, MulticastDelegate, Public, NetServer, NetClient, BlueprintEvent)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -794,7 +808,6 @@ void ATekWyvern_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Cus
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

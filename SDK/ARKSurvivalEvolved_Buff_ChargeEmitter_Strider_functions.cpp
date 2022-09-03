@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ChargeEmitter_Strider.Buff_ChargeEmitter_Strider_C.BPGetHUDElements
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -26,6 +26,7 @@ void ABuff_ChargeEmitter_Strider_C::BPGetHUDElements(class APlayerController** F
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,9 +93,9 @@ void ABuff_ChargeEmitter_Strider_C::Get_Current_Charge(float* Current_Charge)
 // bool*                          bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double*                        dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int*                           ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_Strider_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue)
+void ABuff_ChargeEmitter_Strider_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter_Strider.Buff_ChargeEmitter_Strider_C.ChargeVariableEvent");
 
@@ -103,7 +104,7 @@ void ABuff_ChargeEmitter_Strider_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVari
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 

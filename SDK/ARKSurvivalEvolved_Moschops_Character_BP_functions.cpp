@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -269,7 +269,7 @@ float AMoschops_Character_BP_C::BPModifyHarvestingQuantity(float* originalQuanti
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.BPModifyHarvestingWeightsArray
-// (NetRequest, Event, NetResponse, MulticastDelegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<float>                  resourceWeightsIn              (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<class UPrimalItem*>     resourceItems                  (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -317,7 +317,7 @@ void AMoschops_Character_BP_C::Harvest_Multiplier_Level_Up(int UseEntryIndex)
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.MakeUseEntryString
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -366,11 +366,11 @@ bool AMoschops_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.Add Level Up Entries
-// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FMultiUseEntry>  FullEntryList                  (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AMoschops_Character_BP_C::STATIC_Add_Level_Up_Entries(TArray<struct FMultiUseEntry>* FullEntryList)
+void AMoschops_Character_BP_C::Add_Level_Up_Entries(TArray<struct FMultiUseEntry>* FullEntryList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Moschops_Character_BP.Moschops_Character_BP_C.Add Level Up Entries");
 
@@ -389,7 +389,7 @@ void AMoschops_Character_BP_C::STATIC_Add_Level_Up_Entries(TArray<struct FMultiU
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Static, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -417,7 +417,7 @@ TArray<struct FMultiUseEntry> AMoschops_Character_BP_C::STATIC_BPGetMultiUseEntr
 
 
 // Function Moschops_Character_BP.Moschops_Character_BP_C.UserConstructionScript
-// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AMoschops_Character_BP_C::STATIC_UserConstructionScript()
 {

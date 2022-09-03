@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,37 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_HoversailRider.Buff_HoversailRider_C.BPAdjustStatusValueModification
+// ()
+// Parameters:
+// class UPrimalCharacterStatusComponent** ForComponent                   (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InAmount                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 DamageTypeClass                (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bManualModification            (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ABuff_HoversailRider_C::BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_HoversailRider.Buff_HoversailRider_C.BPAdjustStatusValueModification");
+
+	ABuff_HoversailRider_C_BPAdjustStatusValueModification_Params params;
+	params.ForComponent = ForComponent;
+	params.ValueType = ValueType;
+	params.InAmount = InAmount;
+	params.DamageTypeClass = DamageTypeClass;
+	params.bManualModification = bManualModification;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_HoversailRider.Buff_HoversailRider_C.BPPreventAddingOtherBuff
 // ()

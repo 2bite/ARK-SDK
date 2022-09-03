@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -308,12 +308,12 @@ void ABuff_TekArmor_Pants_C::NetSetRunningSpeedModifier(float newModifier)
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.RunDamageActor
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  HitActor                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DidRebound                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::RunDamageActor(class AActor* HitActor, bool* DidRebound)
+void ABuff_TekArmor_Pants_C::STATIC_RunDamageActor(class AActor* HitActor, bool* DidRebound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.RunDamageActor");
 
@@ -321,7 +321,6 @@ void ABuff_TekArmor_Pants_C::RunDamageActor(class AActor* HitActor, bool* DidReb
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -695,11 +694,11 @@ void ABuff_TekArmor_Pants_C::RedirectPlayerVelocity(const struct FVector& newFor
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.BuffTickClient
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Pants_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_TekArmor_Pants_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.BuffTickClient");
 
@@ -707,7 +706,6 @@ void ABuff_TekArmor_Pants_C::STATIC_BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -798,16 +796,15 @@ void ABuff_TekArmor_Pants_C::ClearHitActors()
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace and Damage ForwardPawns
-// (NetRequest, Native, Event, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_TekArmor_Pants_C::Trace_and_Damage_ForwardPawns()
+void ABuff_TekArmor_Pants_C::STATIC_Trace_and_Damage_ForwardPawns()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace and Damage ForwardPawns");
 
 	ABuff_TekArmor_Pants_C_Trace_and_Damage_ForwardPawns_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -842,15 +839,16 @@ void ABuff_TekArmor_Pants_C::GetModifiedForward(float forwardScale, const struct
 
 
 // Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace And Damage Forward StationaryActors
-// (NetReliable, Event, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, MulticastDelegate, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_TekArmor_Pants_C::STATIC_Trace_And_Damage_Forward_StationaryActors()
+void ABuff_TekArmor_Pants_C::Trace_And_Damage_Forward_StationaryActors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.Trace And Damage Forward StationaryActors");
 
 	ABuff_TekArmor_Pants_C_Trace_And_Damage_Forward_StationaryActors_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -936,14 +934,14 @@ void ABuff_TekArmor_Pants_C::UserConstructionScript()
 }
 
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_84
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_89
 // ()
 
-void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_84()
+void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_89()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_84");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_89");
 
-	ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_84_Params params;
+	ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_89_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -953,14 +951,14 @@ void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_84()
 }
 
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_83
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_88
 // ()
 
-void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_83()
+void ABuff_TekArmor_Pants_C::InpActEvt_AltFire_K2Node_InputActionEvent_88()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_83");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_88");
 
-	ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_83_Params params;
+	ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_88_Params params;
 
 	auto flags = fn->FunctionFlags;
 

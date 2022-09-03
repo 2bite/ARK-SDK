@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function WeapCamera.WeapCamera_C.BP_OnReloadNotify
+struct AWeapCamera_C_BP_OnReloadNotify_Params
+{
+};
 
 // Function WeapCamera.WeapCamera_C.BPWeaponZoom
 struct AWeapCamera_C_BPWeaponZoom_Params

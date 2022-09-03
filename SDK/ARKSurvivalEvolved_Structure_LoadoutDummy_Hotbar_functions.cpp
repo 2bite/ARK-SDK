@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void AStructure_LoadoutDummy_Hotbar_C::BPClientDoMultiUse(class APlayerControlle
 
 
 // Function Structure_LoadoutDummy_Hotbar.Structure_LoadoutDummy_Hotbar_C.BPGetMultiUseEntries
-// (NetReliable, MulticastDelegate, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -49,6 +49,7 @@ TArray<struct FMultiUseEntry> AStructure_LoadoutDummy_Hotbar_C::BPGetMultiUseEnt
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,7 +113,7 @@ float AStructure_LoadoutDummy_Hotbar_C::BPAdjustDamage(float* IncomingDamage, st
 
 
 // Function Structure_LoadoutDummy_Hotbar.Structure_LoadoutDummy_Hotbar_C.RefreshNullSlots
-// ()
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AStructure_LoadoutDummy_Hotbar_C::RefreshNullSlots()
 {
@@ -121,6 +122,7 @@ void AStructure_LoadoutDummy_Hotbar_C::RefreshNullSlots()
 	AStructure_LoadoutDummy_Hotbar_C_RefreshNullSlots_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,15 +172,16 @@ void AStructure_LoadoutDummy_Hotbar_C::BPNotifyInventoryItemChange(bool* bIsItem
 
 
 // Function Structure_LoadoutDummy_Hotbar.Structure_LoadoutDummy_Hotbar_C.RefreshItemIcons
-// (NetRequest, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AStructure_LoadoutDummy_Hotbar_C::RefreshItemIcons()
+void AStructure_LoadoutDummy_Hotbar_C::STATIC_RefreshItemIcons()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy_Hotbar.Structure_LoadoutDummy_Hotbar_C.RefreshItemIcons");
 
 	AStructure_LoadoutDummy_Hotbar_C_RefreshItemIcons_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2202
+// Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1982
 // ()
 
-void Uparachute_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2202()
+void Uparachute_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1982()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2202");
+	static auto fn = UObject::FindObject<UFunction>("Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1982");
 
-	Uparachute_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2202_Params params;
+	Uparachute_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1982_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void Uparachute_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph
 }
 
 
-// Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_564
+// Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_576
 // ()
 
-void Uparachute_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_564()
+void Uparachute_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_576()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_564");
+	static auto fn = UObject::FindObject<UFunction>("Function parachute_RIG_AnimBlueprint.parachute_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_576");
 
-	Uparachute_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_564_Params params;
+	Uparachute_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_parachute_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_576_Params params;
 
 	auto flags = fn->FunctionFlags;
 

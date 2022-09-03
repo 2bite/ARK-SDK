@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ExosuitSelfHeal.Buff_ExosuitSelfHeal_C
-// 0x0018 (0x0978 - 0x0960)
+// 0x0018 (0x0990 - 0x0978)
 class ABuff_ExosuitSelfHeal_C : public ABuff_Base_C
 {
 public:
-	class UClass*                                      ItemTypeToRemoveOnBuffActivation;                         // 0x0960(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PercentOfMaxHealthToRestore;                              // 0x0968(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HealthAtBuffStart;                                        // 0x096C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CalculatedHealthPerSecond;                                // 0x0970(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              CurrentFuel;                                              // 0x0974(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ItemTypeToRemoveOnBuffActivation;                         // 0x0978(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              PercentOfMaxHealthToRestore;                              // 0x0980(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HealthAtBuffStart;                                        // 0x0984(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CalculatedHealthPerSecond;                                // 0x0988(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              CurrentFuel;                                              // 0x098C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

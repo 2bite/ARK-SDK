@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -85,7 +85,7 @@ void AProjPlantSpeciesZFruit_C::IsWearingProtection(class AActor* Actor, bool* I
 
 
 // Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.IsNearbyStructure
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          IndexOffset                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -116,9 +116,9 @@ void AProjPlantSpeciesZFruit_C::STATIC_IsNearbyStructure(int index, float IndexO
 // Parameters:
 // struct FVector                 v1                             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 v2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* Retval)
+void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjPlantSpeciesZFruit.ProjPlantSpeciesZFruit_C.GetAngleBetween");
 
@@ -132,8 +132,8 @@ void AProjPlantSpeciesZFruit_C::GetAngleBetween(const struct FVector& v1, const 
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -127,11 +127,11 @@ void ACrystalWyvern_Character_BP_Base_C::DelayClearIsTamingFlyingHigh()
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SetIsTamingFlyingHigh
-// (NetRequest, NetResponse, Static, Protected, Delegate, DLLImport, NetValidate)
+// (NetRequest, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsTamingFlyingHigh             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ACrystalWyvern_Character_BP_Base_C::STATIC_SetIsTamingFlyingHigh(bool IsTamingFlyingHigh)
+void ACrystalWyvern_Character_BP_Base_C::SetIsTamingFlyingHigh(bool IsTamingFlyingHigh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SetIsTamingFlyingHigh");
 
@@ -169,7 +169,7 @@ void ACrystalWyvern_Character_BP_Base_C::BPRemoveCharacterSnapshot(class UPrimal
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPApplyCharacterSnapshot
-// (NetRequest, Exec, Native, Event, NetMulticast, Protected, Delegate, DLLImport, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimalItem**            Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 To                             (Parm, ZeroConstructor, IsPlainOldData)
@@ -363,13 +363,13 @@ bool ACrystalWyvern_Character_BP_Base_C::BPTryMultiUse(class APlayerController**
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPGetMultiUseEntries
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, DLLImport, NetValidate)
+// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ACrystalWyvern_Character_BP_Base_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ACrystalWyvern_Character_BP_Base_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPGetMultiUseEntries");
 
@@ -521,9 +521,9 @@ void ACrystalWyvern_Character_BP_Base_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SpawnNestEgg
-// (NetReliable, Native, Event, NetResponse, Protected, Delegate, DLLImport, NetValidate)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ACrystalWyvern_Character_BP_Base_C::SpawnNestEgg()
+void ACrystalWyvern_Character_BP_Base_C::STATIC_SpawnNestEgg()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.SpawnNestEgg");
 
@@ -767,6 +767,23 @@ void ACrystalWyvern_Character_BP_Base_C::DissolveSkull()
 	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.DissolveSkull");
 
 	ACrystalWyvern_Character_BP_Base_C_DissolveSkull_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPTimerServer
+// ()
+
+void ACrystalWyvern_Character_BP_Base_C::BPTimerServer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPTimerServer");
+
+	ACrystalWyvern_Character_BP_Base_C_BPTimerServer_Params params;
 
 	auto flags = fn->FunctionFlags;
 

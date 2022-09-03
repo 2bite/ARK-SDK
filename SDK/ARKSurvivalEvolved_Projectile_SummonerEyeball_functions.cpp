@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,18 +13,19 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Projectile_SummonerEyeball.Projectile_SummonerEyeball_C.AttemptSpawnTentacles
-// (NetReliable, Exec, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
-// struct FVector                 hitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 HitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjectile_SummonerEyeball_C::STATIC_AttemptSpawnTentacles(const struct FVector& hitLoc)
+void AProjectile_SummonerEyeball_C::AttemptSpawnTentacles(const struct FVector& HitLoc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Projectile_SummonerEyeball.Projectile_SummonerEyeball_C.AttemptSpawnTentacles");
 
 	AProjectile_SummonerEyeball_C_AttemptSpawnTentacles_Params params;
-	params.hitLoc = hitLoc;
+	params.HitLoc = HitLoc;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

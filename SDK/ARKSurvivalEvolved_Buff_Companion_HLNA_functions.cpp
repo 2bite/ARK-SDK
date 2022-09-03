@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,113 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.hard fix missing gen1 explorer notes
+// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
+
+void ABuff_Companion_HLNA_C::hard_fix_missing_gen1_explorer_notes()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.hard fix missing gen1 explorer notes");
+
+	ABuff_Companion_HLNA_C_hard_fix_missing_gen1_explorer_notes_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Get total Glitch Mission Complete Count
+// ()
+// Parameters:
+// class AShooterCharacter*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Count                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_Companion_HLNA_C::Get_total_Glitch_Mission_Complete_Count(class AShooterCharacter* Player, int* Count)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Get total Glitch Mission Complete Count");
+
+	ABuff_Companion_HLNA_C_Get_total_Glitch_Mission_Complete_Count_Params params;
+	params.Player = Player;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Count != nullptr)
+		*Count = params.Count;
+}
+
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Get Glitch Mission Complete Count
+// ()
+// Parameters:
+// struct FName                   MissionTag                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterCharacter*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Count                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_Companion_HLNA_C::Get_Glitch_Mission_Complete_Count(const struct FName& MissionTag, class AShooterCharacter* Player, int* Count)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Get Glitch Mission Complete Count");
+
+	ABuff_Companion_HLNA_C_Get_Glitch_Mission_Complete_Count_Params params;
+	params.MissionTag = MissionTag;
+	params.Player = Player;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Count != nullptr)
+		*Count = params.Count;
+}
+
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Randomly Pick Orbit Location Timer
+// ()
+
+void ABuff_Companion_HLNA_C::Randomly_Pick_Orbit_Location_Timer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Randomly Pick Orbit Location Timer");
+
+	ABuff_Companion_HLNA_C_Randomly_Pick_Orbit_Location_Timer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Should Force Play Post Intro Reactions
+// (NetReliable, NetRequest, Native, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_Companion_HLNA_C::STATIC_Should_Force_Play_Post_Intro_Reactions()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Should Force Play Post Intro Reactions");
+
+	ABuff_Companion_HLNA_C_Should_Force_Play_Post_Intro_Reactions_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.IsPlayerControllingValidPrimalChar
 // ()
@@ -199,13 +306,13 @@ void ABuff_Companion_HLNA_C::pass_players_to_teleport_vfx(TArray<class FString>*
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.UpdateSpawnedBeamParticle
-// (Exec, Native, Event, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UParticleSystem*         ParticleTemplate               (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  EndPointActor                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Offset                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::UpdateSpawnedBeamParticle(class UParticleSystem* ParticleTemplate, class AActor* EndPointActor, const struct FVector& Offset)
+void ABuff_Companion_HLNA_C::STATIC_UpdateSpawnedBeamParticle(class UParticleSystem* ParticleTemplate, class AActor* EndPointActor, const struct FVector& Offset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.UpdateSpawnedBeamParticle");
 
@@ -215,7 +322,6 @@ void ABuff_Companion_HLNA_C::UpdateSpawnedBeamParticle(class UParticleSystem* Pa
 	params.Offset = Offset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -263,15 +369,16 @@ void ABuff_Companion_HLNA_C::unmount_teleporting_players(TArray<class APrimalCha
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Players That They Cant Teleport Unconsious or Dead Dinos
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, Static, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Companion_HLNA_C::Notify_Players_That_They_Cant_Teleport_Unconsious_or_Dead_Dinos()
+void ABuff_Companion_HLNA_C::STATIC_Notify_Players_That_They_Cant_Teleport_Unconsious_or_Dead_Dinos()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Players That They Cant Teleport Unconsious or Dead Dinos");
 
 	ABuff_Companion_HLNA_C_Notify_Players_That_They_Cant_Teleport_Unconsious_or_Dead_Dinos_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -280,9 +387,9 @@ void ABuff_Companion_HLNA_C::Notify_Players_That_They_Cant_Teleport_Unconsious_o
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Players That They Cant Teleport Unconsious Or Dead Players
-// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, Event, Static, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Companion_HLNA_C::Notify_Players_That_They_Cant_Teleport_Unconsious_Or_Dead_Players()
+void ABuff_Companion_HLNA_C::STATIC_Notify_Players_That_They_Cant_Teleport_Unconsious_Or_Dead_Players()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Players That They Cant Teleport Unconsious Or Dead Players");
 
@@ -315,16 +422,15 @@ void ABuff_Companion_HLNA_C::Prevent_Glitch_Use_Sphere_Collision()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Players That They Exceed Final Boss player Count
-// (Net, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, Static, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Companion_HLNA_C::Notify_Players_That_They_Exceed_Final_Boss_player_Count()
+void ABuff_Companion_HLNA_C::STATIC_Notify_Players_That_They_Exceed_Final_Boss_player_Count()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Players That They Exceed Final Boss player Count");
 
 	ABuff_Companion_HLNA_C_Notify_Players_That_They_Exceed_Final_Boss_player_Count_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -333,7 +439,7 @@ void ABuff_Companion_HLNA_C::Notify_Players_That_They_Exceed_Final_Boss_player_C
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.notify players that they exceed final boss tame count
-// (Net, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, NetResponse, Static, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ABuff_Companion_HLNA_C::STATIC_notify_players_that_they_exceed_final_boss_tame_count()
 {
@@ -350,13 +456,13 @@ void ABuff_Companion_HLNA_C::STATIC_notify_players_that_they_exceed_final_boss_t
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.find associated anim texture from localized sound wave pairs
-// (Native, Static, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FLocalizedSoundWaveAnimTexturePairArrays> Array                          (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class FString                  sound_wave_path                (Parm, ZeroConstructor)
 // class FString                  anim_texture_path              (Parm, OutParm, ZeroConstructor)
 
-void ABuff_Companion_HLNA_C::STATIC_find_associated_anim_texture_from_localized_sound_wave_pairs(const class FString& sound_wave_path, TArray<struct FLocalizedSoundWaveAnimTexturePairArrays>* Array, class FString* anim_texture_path)
+void ABuff_Companion_HLNA_C::find_associated_anim_texture_from_localized_sound_wave_pairs(const class FString& sound_wave_path, TArray<struct FLocalizedSoundWaveAnimTexturePairArrays>* Array, class FString* anim_texture_path)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.find associated anim texture from localized sound wave pairs");
 
@@ -468,16 +574,15 @@ void ABuff_Companion_HLNA_C::Show_Post_Intro_Mission_Alert_Message()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Show Post Intro HLNA Target Alert Message
-// (NetReliable, Exec, Native, Event, Static, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Companion_HLNA_C::STATIC_Show_Post_Intro_HLNA_Target_Alert_Message()
+void ABuff_Companion_HLNA_C::Show_Post_Intro_HLNA_Target_Alert_Message()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Show Post Intro HLNA Target Alert Message");
 
 	ABuff_Companion_HLNA_C_Show_Post_Intro_HLNA_Target_Alert_Message_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -486,13 +591,13 @@ void ABuff_Companion_HLNA_C::STATIC_Show_Post_Intro_HLNA_Target_Alert_Message()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Reaction Equals Reaction
-// (NetRequest, Exec, NetResponse, Static, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FCompanionReactionData  reaction_1                     (Parm)
 // struct FCompanionReactionData  reaction_2                     (Parm)
 // bool                           is_equal                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::STATIC_Reaction_Equals_Reaction(const struct FCompanionReactionData& reaction_1, const struct FCompanionReactionData& reaction_2, bool* is_equal)
+void ABuff_Companion_HLNA_C::Reaction_Equals_Reaction(const struct FCompanionReactionData& reaction_1, const struct FCompanionReactionData& reaction_2, bool* is_equal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Reaction Equals Reaction");
 
@@ -501,6 +606,7 @@ void ABuff_Companion_HLNA_C::STATIC_Reaction_Equals_Reaction(const struct FCompa
 	params.reaction_2 = reaction_2;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -512,12 +618,12 @@ void ABuff_Companion_HLNA_C::STATIC_Reaction_Equals_Reaction(const struct FCompa
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.set up aysnc loaded anim texture
-// (NetReliable, Exec, Native, NetMulticast, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UObject*                 InputPin                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Eye_Only                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::set_up_aysnc_loaded_anim_texture(class UObject* InputPin, bool Eye_Only)
+void ABuff_Companion_HLNA_C::STATIC_set_up_aysnc_loaded_anim_texture(class UObject* InputPin, bool Eye_Only)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.set up aysnc loaded anim texture");
 
@@ -526,7 +632,6 @@ void ABuff_Companion_HLNA_C::set_up_aysnc_loaded_anim_texture(class UObject* Inp
 	params.Eye_Only = Eye_Only;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -559,7 +664,7 @@ void ABuff_Companion_HLNA_C::is_player_tpv_and_hlna_is_in_the_way(const struct F
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.force play mission alert
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  Title                          (Parm, ZeroConstructor)
 // class FString                  Label                          (Parm, ZeroConstructor)
@@ -579,7 +684,6 @@ void ABuff_Companion_HLNA_C::force_play_mission_alert(const class FString& Title
 	params.Icon = Icon;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -605,15 +709,16 @@ void ABuff_Companion_HLNA_C::Delay_to_Play_Hlna_Subtitles_Move_Out_Anim()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.create dynamic materials
-// (Exec, Static, NetMulticast, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Companion_HLNA_C::STATIC_create_dynamic_materials()
+void ABuff_Companion_HLNA_C::create_dynamic_materials()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.create dynamic materials");
 
 	ABuff_Companion_HLNA_C_create_dynamic_materials_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -690,15 +795,16 @@ void ABuff_Companion_HLNA_C::is_player_on_mission_and_cant_teleport(class AShoot
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Player That They Cannot Teleport Players On Mission
-// (Net, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Companion_HLNA_C::STATIC_Notify_Player_That_They_Cannot_Teleport_Players_On_Mission()
+void ABuff_Companion_HLNA_C::Notify_Player_That_They_Cannot_Teleport_Players_On_Mission()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Player That They Cannot Teleport Players On Mission");
 
 	ABuff_Companion_HLNA_C_Notify_Player_That_They_Cannot_Teleport_Players_On_Mission_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -782,9 +888,9 @@ void ABuff_Companion_HLNA_C::Awaiting_Set_Of_Initial_Spawn_Intro_Anim_Timer()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Player That They Cannot Teleport Large Dinos To Final Boss
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Companion_HLNA_C::STATIC_Notify_Player_That_They_Cannot_Teleport_Large_Dinos_To_Final_Boss()
+void ABuff_Companion_HLNA_C::Notify_Player_That_They_Cannot_Teleport_Large_Dinos_To_Final_Boss()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Player That They Cannot Teleport Large Dinos To Final Boss");
 
@@ -800,16 +906,15 @@ void ABuff_Companion_HLNA_C::STATIC_Notify_Player_That_They_Cannot_Teleport_Larg
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Player That They Cannot Teleport Players On Seated Structures
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetResponse, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Companion_HLNA_C::STATIC_Notify_Player_That_They_Cannot_Teleport_Players_On_Seated_Structures()
+void ABuff_Companion_HLNA_C::Notify_Player_That_They_Cannot_Teleport_Players_On_Seated_Structures()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Player That They Cannot Teleport Players On Seated Structures");
 
 	ABuff_Companion_HLNA_C_Notify_Player_That_They_Cannot_Teleport_Players_On_Seated_Structures_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -965,15 +1070,16 @@ void ABuff_Companion_HLNA_C::StopCompanionEvent()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.FocusOnRemoteTarget
-// (NetReliable, NetRequest, Exec, NetResponse, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Companion_HLNA_C::FocusOnRemoteTarget()
+void ABuff_Companion_HLNA_C::STATIC_FocusOnRemoteTarget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.FocusOnRemoteTarget");
 
 	ABuff_Companion_HLNA_C_FocusOnRemoteTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1128,15 +1234,16 @@ void ABuff_Companion_HLNA_C::Remove_Cosmetic_HLNA()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.RefreshCompanionColorization
-// (Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Companion_HLNA_C::STATIC_RefreshCompanionColorization()
+void ABuff_Companion_HLNA_C::RefreshCompanionColorization()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.RefreshCompanionColorization");
 
 	ABuff_Companion_HLNA_C_RefreshCompanionColorization_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1145,11 +1252,11 @@ void ABuff_Companion_HLNA_C::STATIC_RefreshCompanionColorization()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.start boss battle
-// (Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UClass*                  InputPin                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::start_boss_battle(class UClass* InputPin)
+void ABuff_Companion_HLNA_C::STATIC_start_boss_battle(class UClass* InputPin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.start boss battle");
 
@@ -1165,30 +1272,13 @@ void ABuff_Companion_HLNA_C::start_boss_battle(class UClass* InputPin)
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.start mission and set reverse teleports
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Companion_HLNA_C::STATIC_start_mission_and_set_reverse_teleports()
+void ABuff_Companion_HLNA_C::start_mission_and_set_reverse_teleports()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.start mission and set reverse teleports");
 
 	ABuff_Companion_HLNA_C_start_mission_and_set_reverse_teleports_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Set Return Teleport Locations
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
-
-void ABuff_Companion_HLNA_C::STATIC_Set_Return_Teleport_Locations()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Set Return Teleport Locations");
-
-	ABuff_Companion_HLNA_C_Set_Return_Teleport_Locations_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1199,14 +1289,31 @@ void ABuff_Companion_HLNA_C::STATIC_Set_Return_Teleport_Locations()
 }
 
 
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Set Return Teleport Locations
+// (NetReliable, NetResponse, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+
+void ABuff_Companion_HLNA_C::Set_Return_Teleport_Locations()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Set Return Teleport Locations");
+
+	ABuff_Companion_HLNA_C_Set_Return_Teleport_Locations_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.BPGetMultiUseEntries
-// (NetReliable, Native, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABuff_Companion_HLNA_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABuff_Companion_HLNA_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.BPGetMultiUseEntries");
 
@@ -1278,14 +1385,14 @@ void ABuff_Companion_HLNA_C::HLNa_Mass_Teleport_Trigger_To_VR_Boss_Battle_Easy()
 }
 
 
-// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.sync mission complete status
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Sync Mission Complete Status
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Companion_HLNA_C::sync_mission_complete_status()
+void ABuff_Companion_HLNA_C::STATIC_Sync_Mission_Complete_Status()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.sync mission complete status");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Sync Mission Complete Status");
 
-	ABuff_Companion_HLNA_C_sync_mission_complete_status_Params params;
+	ABuff_Companion_HLNA_C_Sync_Mission_Complete_Status_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1416,9 +1523,9 @@ void ABuff_Companion_HLNA_C::Randomly_pick_orbit_location()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Player That They Cannot Teleport Fish
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Companion_HLNA_C::Notify_Player_That_They_Cannot_Teleport_Fish()
+void ABuff_Companion_HLNA_C::STATIC_Notify_Player_That_They_Cannot_Teleport_Fish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Notify Player That They Cannot Teleport Fish");
 
@@ -1434,7 +1541,7 @@ void ABuff_Companion_HLNA_C::Notify_Player_That_They_Cannot_Teleport_Fish()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.notify player that they cannot teleport rafts
-// (NetRequest, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Event, NetResponse, Static, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ABuff_Companion_HLNA_C::STATIC_notify_player_that_they_cannot_teleport_rafts()
 {
@@ -1468,12 +1575,12 @@ void ABuff_Companion_HLNA_C::Play_HLNA_Respawn_Anim()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.play spawn anim
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UClass*                  anActorClass                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            AnimToPlay                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::STATIC_play_spawn_anim(class UClass* anActorClass, class UAnimMontage* AnimToPlay)
+void ABuff_Companion_HLNA_C::play_spawn_anim(class UClass* anActorClass, class UAnimMontage* AnimToPlay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.play spawn anim");
 
@@ -1542,15 +1649,15 @@ void ABuff_Companion_HLNA_C::BPAnimNotifyCustomEvent(struct FName* CustomEventNa
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Set All Components Custom Depth Stencil Value
 // ()
 // Parameters:
-// int                            stencil_Value                  (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Stencil_Value                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::Set_All_Components_Custom_Depth_Stencil_Value(int stencil_Value, class AActor* Actor)
+void ABuff_Companion_HLNA_C::Set_All_Components_Custom_Depth_Stencil_Value(int Stencil_Value, class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Set All Components Custom Depth Stencil Value");
 
 	ABuff_Companion_HLNA_C_Set_All_Components_Custom_Depth_Stencil_Value_Params params;
-	params.stencil_Value = stencil_Value;
+	params.Stencil_Value = Stencil_Value;
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
@@ -1717,15 +1824,16 @@ void ABuff_Companion_HLNA_C::NotifyItemCrafted(class UPrimalItem** anItem)
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Keep Eye Hidden For Emotes
-// (NetRequest, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Companion_HLNA_C::STATIC_Keep_Eye_Hidden_For_Emotes()
+void ABuff_Companion_HLNA_C::Keep_Eye_Hidden_For_Emotes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Keep Eye Hidden For Emotes");
 
 	ABuff_Companion_HLNA_C_Keep_Eye_Hidden_For_Emotes_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1734,11 +1842,11 @@ void ABuff_Companion_HLNA_C::STATIC_Keep_Eye_Hidden_For_Emotes()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.BuffTickClient
-// (NetRequest, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_Companion_HLNA_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.BuffTickClient");
 
@@ -1835,7 +1943,7 @@ bool ABuff_Companion_HLNA_C::BPServerHandleNetExecCommand(class APlayerControlle
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Play World Reaction
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Event, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FCompanionReactionData  WithReactionData               (Parm, OutParm, ReferenceParm)
 
@@ -1846,7 +1954,6 @@ void ABuff_Companion_HLNA_C::STATIC_Play_World_Reaction(struct FCompanionReactio
 	ABuff_Companion_HLNA_C_Play_World_Reaction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1909,11 +2016,11 @@ void ABuff_Companion_HLNA_C::Check_Current_Status_of_various_things_to_react_to(
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.BPInventoryItemUsed
-// (Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UObject**                InventoryItemObject            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::BPInventoryItemUsed(class UObject** InventoryItemObject)
+void ABuff_Companion_HLNA_C::STATIC_BPInventoryItemUsed(class UObject** InventoryItemObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.BPInventoryItemUsed");
 
@@ -2085,7 +2192,7 @@ void ABuff_Companion_HLNA_C::FinishedScan()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Play Scan Reactions
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FCompanionReactionData  Post_Scan_Reaction             (Parm)
 // float                          Override_Scan_Duration         (Parm, ZeroConstructor, IsPlainOldData)
@@ -2149,25 +2256,26 @@ void ABuff_Companion_HLNA_C::On_Mass_Teleport_Event_VFX(TEnumAsByte<EMassTelepor
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Find Best Teleport Location
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            selected_coordinate_direction_index (Parm, ZeroConstructor, IsPlainOldData)
 // int                            region_index                   (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       Player_Controller              (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController*       player_controller              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           only_test_if_theres_any_available (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Has_Found_Spot                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::STATIC_Find_Best_Teleport_Location(int selected_coordinate_direction_index, int region_index, class APlayerController* Player_Controller, bool only_test_if_theres_any_available, bool* Has_Found_Spot)
+void ABuff_Companion_HLNA_C::STATIC_Find_Best_Teleport_Location(int selected_coordinate_direction_index, int region_index, class APlayerController* player_controller, bool only_test_if_theres_any_available, bool* Has_Found_Spot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Find Best Teleport Location");
 
 	ABuff_Companion_HLNA_C_Find_Best_Teleport_Location_Params params;
 	params.selected_coordinate_direction_index = selected_coordinate_direction_index;
 	params.region_index = region_index;
-	params.Player_Controller = Player_Controller;
+	params.player_controller = player_controller;
 	params.only_test_if_theres_any_available = only_test_if_theres_any_available;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2205,7 +2313,7 @@ void ABuff_Companion_HLNA_C::NotifyDamage(float* DamageAmount, class UClass** Da
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Set Best Teleport Spot From Sorted Start Points
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<class AActor*>          Array                          (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           able_to_set_spot               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2392,7 +2500,7 @@ void ABuff_Companion_HLNA_C::Tick_UpdateCompanionState(float* DeltaTime)
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.BPTryMultiUse
-// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -2407,6 +2515,7 @@ bool ABuff_Companion_HLNA_C::STATIC_BPTryMultiUse(class APlayerController** ForP
 	params.UseIndex = UseIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2457,7 +2566,7 @@ void ABuff_Companion_HLNA_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.HLNaMassTeleport_Trigger
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ABuff_Companion_HLNA_C::STATIC_HLNaMassTeleport_Trigger()
 {
@@ -2502,11 +2611,11 @@ void ABuff_Companion_HLNA_C::HLNaMassTeleport_Start(int region_index, bool Telep
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.GetTeleportationDestinations
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FTeleportDestination> Destinations                   (Parm, OutParm, ZeroConstructor)
 
-void ABuff_Companion_HLNA_C::GetTeleportationDestinations(TArray<struct FTeleportDestination>* Destinations)
+void ABuff_Companion_HLNA_C::STATIC_GetTeleportationDestinations(TArray<struct FTeleportDestination>* Destinations)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.GetTeleportationDestinations");
 
@@ -2546,7 +2655,7 @@ void ABuff_Companion_HLNA_C::GetLookAtPlayerRotation(struct FRotator* Rotation)
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.GetAnimMoveVelocityAxes
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 VelocityAxes                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -2700,7 +2809,7 @@ void ABuff_Companion_HLNA_C::SetCompactState(bool bNewCompactState)
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.OnCompanionReactionStopped
-// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FCompanionReactionData  StoppedReactionData            (Parm, OutParm, ReferenceParm)
 // int*                           UniqueID                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -2713,7 +2822,6 @@ void ABuff_Companion_HLNA_C::STATIC_OnCompanionReactionStopped(int* UniqueID, st
 	params.UniqueID = UniqueID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2787,7 +2895,7 @@ void ABuff_Companion_HLNA_C::Tick_CompactMode()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.IsCurrentEventMonalogue
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -2948,11 +3056,11 @@ bool ABuff_Companion_HLNA_C::IsCompanionReadyToMonologue()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.ConvertTargetRelOffsetToWorld
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 WorldLocation                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::STATIC_ConvertTargetRelOffsetToWorld(struct FVector* WorldLocation)
+void ABuff_Companion_HLNA_C::ConvertTargetRelOffsetToWorld(struct FVector* WorldLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.ConvertTargetRelOffsetToWorld");
 
@@ -2992,12 +3100,12 @@ void ABuff_Companion_HLNA_C::IsAttachedToCamera_Pure(bool* bResult)
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.UpdateHLNaTargetRelLocFPV
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 WithWorldLocation              (Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::STATIC_UpdateHLNaTargetRelLocFPV(const struct FVector& WithWorldLocation, float DeltaTime)
+void ABuff_Companion_HLNA_C::UpdateHLNaTargetRelLocFPV(const struct FVector& WithWorldLocation, float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.UpdateHLNaTargetRelLocFPV");
 
@@ -3065,7 +3173,7 @@ void ABuff_Companion_HLNA_C::GetScreenPercentageWorldLocation(const struct FVect
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.TickUpdateHLNaEventMovement
-// (Exec, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3131,7 +3239,7 @@ void ABuff_Companion_HLNA_C::CalculateHLNaTargetWorldLocation(float DeltaTime, s
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.OnPlayerDeath
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter**       DiedCharacter                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3171,7 +3279,7 @@ void ABuff_Companion_HLNA_C::Tick_UpdateCompanionTransform(float* DeltaTime)
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.PlayParallelEmoteMontage
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UAnimMontage*            PlayerEmote                    (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -3258,7 +3366,7 @@ void ABuff_Companion_HLNA_C::SoftSetHLNaLocationRelative(const struct FVector& N
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.GetMeshRotationInterpSpeed
-// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          Speed                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -3269,7 +3377,6 @@ void ABuff_Companion_HLNA_C::STATIC_GetMeshRotationInterpSpeed(float* Speed)
 	ABuff_Companion_HLNA_C_GetMeshRotationInterpSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3407,17 +3514,18 @@ bool ABuff_Companion_HLNA_C::IsPlayerADS()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.GetMeshLocationInterpSpeed
-// (Event, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          Speed                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::GetMeshLocationInterpSpeed(float* Speed)
+void ABuff_Companion_HLNA_C::STATIC_GetMeshLocationInterpSpeed(float* Speed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.GetMeshLocationInterpSpeed");
 
 	ABuff_Companion_HLNA_C_GetMeshLocationInterpSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3546,7 +3654,7 @@ void ABuff_Companion_HLNA_C::OnSpawnedForPlayer()
 
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.BPClientDoMultiUse
-// (Exec, Event, NetResponse, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -3989,16 +4097,16 @@ void ABuff_Companion_HLNA_C::Multi_OnMassTeleportEvent(TEnumAsByte<EMassTeleport
 }
 
 
-// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Fresnel Flash
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.fresnel flash
 // ()
 // Parameters:
 // struct FLinearColor            Color                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_C::Fresnel_Flash(const struct FLinearColor& Color)
+void ABuff_Companion_HLNA_C::fresnel_flash(const struct FLinearColor& Color)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Fresnel Flash");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.fresnel flash");
 
-	ABuff_Companion_HLNA_C_Fresnel_Flash_Params params;
+	ABuff_Companion_HLNA_C_fresnel_flash_Params params;
 	params.Color = Color;
 
 	auto flags = fn->FunctionFlags;
@@ -4940,6 +5048,30 @@ void ABuff_Companion_HLNA_C::delay_play_death_line()
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.delay play death line");
 
 	ABuff_Companion_HLNA_C_delay_play_death_line_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.OnActorCustomEvent_Event
+// ()
+// Parameters:
+// struct FName                   EventCustomName                (Parm, ZeroConstructor, IsPlainOldData)
+// class FString                  EventCustomString              (Parm, ZeroConstructor)
+// class AActor*                  InstigatorActor                (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_Companion_HLNA_C::OnActorCustomEvent_Event(const struct FName& EventCustomName, const class FString& EventCustomString, class AActor* InstigatorActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.OnActorCustomEvent_Event");
+
+	ABuff_Companion_HLNA_C_OnActorCustomEvent_Event_Params params;
+	params.EventCustomName = EventCustomName;
+	params.EventCustomString = EventCustomString;
+	params.InstigatorActor = InstigatorActor;
 
 	auto flags = fn->FunctionFlags;
 

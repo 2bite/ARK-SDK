@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,60 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_Encapsulated.Buff_Encapsulated_C.RepauseAnims
+// ()
+
+void ABuff_Encapsulated_C::RepauseAnims()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Encapsulated.Buff_Encapsulated_C.RepauseAnims");
+
+	ABuff_Encapsulated_C_RepauseAnims_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Encapsulated.Buff_Encapsulated_C.BuffTickClient
+// ()
+// Parameters:
+// float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_Encapsulated_C::BuffTickClient(float* DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Encapsulated.Buff_Encapsulated_C.BuffTickClient");
+
+	ABuff_Encapsulated_C_BuffTickClient_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Encapsulated.Buff_Encapsulated_C.RefreshMeshes
+// ()
+
+void ABuff_Encapsulated_C::RefreshMeshes()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Encapsulated.Buff_Encapsulated_C.RefreshMeshes");
+
+	ABuff_Encapsulated_C_RefreshMeshes_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.BPOverrideBuffToGiveOnDeactivation
 // ()
@@ -268,7 +322,7 @@ float ABuff_Encapsulated_C::BuffAdjustDamage(float* Damage, class AController** 
 
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.ApplyDamageToIceShield
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, Public, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsRemoteDamage                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -282,7 +336,6 @@ void ABuff_Encapsulated_C::STATIC_ApplyDamageToIceShield(float Damage, bool IsRe
 	params.IsRemoteDamage = IsRemoteDamage;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -356,7 +409,7 @@ void ABuff_Encapsulated_C::FreezeCharacter(class APrimalCharacter* Character, bo
 
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.BPDeactivated
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
+// (Static, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

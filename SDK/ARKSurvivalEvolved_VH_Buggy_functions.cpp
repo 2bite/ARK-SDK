@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function VH_Buggy.VH_Buggy_C.BPPlayDying
-// (NetRequest, Native, Static, Public, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Public, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
 // class APawn**                  InstigatingPawn                (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AVH_Buggy_C::STATIC_BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
+void AVH_Buggy_C::BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.BPPlayDying");
 
@@ -30,7 +30,6 @@ void AVH_Buggy_C::STATIC_BPPlayDying(float* KillingDamage, class APawn** Instiga
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,14 +57,14 @@ void AVH_Buggy_C::UserConstructionScript()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_70
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_75
 // ()
 
-void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_70()
+void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_75()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_70");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_75");
 
-	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_70_Params params;
+	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_75_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -75,14 +74,14 @@ void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_70()
 }
 
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_69
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_74
 // ()
 
-void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_69()
+void AVH_Buggy_C::InpActEvt_Jump_K2Node_InputActionEvent_74()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_69");
+	static auto fn = UObject::FindObject<UFunction>("Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_74");
 
-	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_69_Params params;
+	AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_74_Params params;
 
 	auto flags = fn->FunctionFlags;
 

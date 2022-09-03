@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,8 +54,8 @@ struct ASpaceWhale_Character_BP_C_BPSetupTamed_Params
 	bool*                                              bWasJustTamed;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.DestroyHUDWidget
-struct ASpaceWhale_Character_BP_C_DestroyHUDWidget_Params
+// Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.DestroyHudWidget
+struct ASpaceWhale_Character_BP_C_DestroyHudWidget_Params
 {
 	bool                                               DestroyNow;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -205,12 +205,6 @@ struct ASpaceWhale_Character_BP_C_BlueprintAnimNotifyCustomEvent_Params
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.ForceFleeTeleport
 struct ASpaceWhale_Character_BP_C_ForceFleeTeleport_Params
 {
-};
-
-// Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.GetDesiredRotation
-struct ASpaceWhale_Character_BP_C_GetDesiredRotation_Params
-{
-	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function SpaceWhale_Character_BP.SpaceWhale_Character_BP_C.UpdateSpeedEffects

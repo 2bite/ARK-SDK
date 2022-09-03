@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapTekBow.WeapTekBow_C.GetAmmoMultiuseEntries
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FMultiUseEntry>  AmmoWheelEntries               (Parm, OutParm, ZeroConstructor)
 
-void AWeapTekBow_C::GetAmmoMultiuseEntries(TArray<struct FMultiUseEntry>* AmmoWheelEntries)
+void AWeapTekBow_C::STATIC_GetAmmoMultiuseEntries(TArray<struct FMultiUseEntry>* AmmoWheelEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.GetAmmoMultiuseEntries");
 
@@ -36,7 +36,7 @@ void AWeapTekBow_C::GetAmmoMultiuseEntries(TArray<struct FMultiUseEntry>* AmmoWh
 
 
 // Function WeapTekBow.WeapTekBow_C.GetHudData
-// (NetReliable, Native, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  AmmoName                       (Parm, OutParm, ZeroConstructor)
 // class UTexture2D*              AmmoIcon                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -47,14 +47,13 @@ void AWeapTekBow_C::GetAmmoMultiuseEntries(TArray<struct FMultiUseEntry>* AmmoWh
 // struct FLinearColor            CurrentAmmoTypeColor           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsAccessoryActive              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekBow_C::GetHudData(class FString* AmmoName, class UTexture2D** AmmoIcon, int* CurrentAmmoCount, int* CurrentAmmoCost, int* AmmoPerClip, int* AmmoTypeIndex, struct FLinearColor* CurrentAmmoTypeColor, bool* IsAccessoryActive)
+void AWeapTekBow_C::STATIC_GetHudData(class FString* AmmoName, class UTexture2D** AmmoIcon, int* CurrentAmmoCount, int* CurrentAmmoCost, int* AmmoPerClip, int* AmmoTypeIndex, struct FLinearColor* CurrentAmmoTypeColor, bool* IsAccessoryActive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.GetHudData");
 
 	AWeapTekBow_C_GetHudData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -201,7 +200,7 @@ void AWeapTekBow_C::StartUnequipEvent()
 
 
 // Function WeapTekBow.WeapTekBow_C.ReceiveDestroyed
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AWeapTekBow_C::STATIC_ReceiveDestroyed()
 {
@@ -236,12 +235,12 @@ void AWeapTekBow_C::OnHideProjectile()
 
 
 // Function WeapTekBow.WeapTekBow_C.SpawnFiredFX
-// (NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 EndLocation                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bWasInstantHit                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekBow_C::STATIC_SpawnFiredFX(const struct FVector& EndLocation, bool bWasInstantHit)
+void AWeapTekBow_C::SpawnFiredFX(const struct FVector& EndLocation, bool bWasInstantHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.SpawnFiredFX");
 
@@ -250,6 +249,7 @@ void AWeapTekBow_C::STATIC_SpawnFiredFX(const struct FVector& EndLocation, bool 
 	params.bWasInstantHit = bWasInstantHit;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -258,12 +258,12 @@ void AWeapTekBow_C::STATIC_SpawnFiredFX(const struct FVector& EndLocation, bool 
 
 
 // Function WeapTekBow.WeapTekBow_C.GetAmmoCountForAmmoType
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int AWeapTekBow_C::STATIC_GetAmmoCountForAmmoType(int index)
+int AWeapTekBow_C::GetAmmoCountForAmmoType(int index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.GetAmmoCountForAmmoType");
 
@@ -271,6 +271,7 @@ int AWeapTekBow_C::STATIC_GetAmmoCountForAmmoType(int index)
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -323,11 +324,11 @@ bool AWeapTekBow_C::BPWeaponCanFire()
 
 
 // Function WeapTekBow.WeapTekBow_C.BPAdjustAmmoPerShot
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int AWeapTekBow_C::STATIC_BPAdjustAmmoPerShot()
+int AWeapTekBow_C::BPAdjustAmmoPerShot()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.BPAdjustAmmoPerShot");
 
@@ -344,7 +345,7 @@ int AWeapTekBow_C::STATIC_BPAdjustAmmoPerShot()
 
 
 // Function WeapTekBow.WeapTekBow_C.UpdateMaxPowerFX
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AWeapTekBow_C::UpdateMaxPowerFX()
 {
@@ -353,7 +354,6 @@ void AWeapTekBow_C::UpdateMaxPowerFX()
 	AWeapTekBow_C_UpdateMaxPowerFX_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -362,11 +362,11 @@ void AWeapTekBow_C::UpdateMaxPowerFX()
 
 
 // Function WeapTekBow.WeapTekBow_C.UpdateArrowVisibility
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekBow_C::UpdateArrowVisibility(float DeltaTime)
+void AWeapTekBow_C::STATIC_UpdateArrowVisibility(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.UpdateArrowVisibility");
 
@@ -383,9 +383,9 @@ void AWeapTekBow_C::UpdateArrowVisibility(float DeltaTime)
 
 
 // Function WeapTekBow.WeapTekBow_C.UpdateArrowMesh
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AWeapTekBow_C::UpdateArrowMesh()
+void AWeapTekBow_C::STATIC_UpdateArrowMesh()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.UpdateArrowMesh");
 
@@ -401,7 +401,7 @@ void AWeapTekBow_C::UpdateArrowMesh()
 
 
 // Function WeapTekBow.WeapTekBow_C.Show Ammo Wheel
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AWeapTekBow_C::STATIC_Show_Ammo_Wheel()
 {
@@ -410,6 +410,7 @@ void AWeapTekBow_C::STATIC_Show_Ammo_Wheel()
 	AWeapTekBow_C_Show_Ammo_Wheel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -418,12 +419,12 @@ void AWeapTekBow_C::STATIC_Show_Ammo_Wheel()
 
 
 // Function WeapTekBow.WeapTekBow_C.SetupProjectileInstantHit
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterProjectile*      Projectile                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HitLocation                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekBow_C::STATIC_SetupProjectileInstantHit(class AShooterProjectile* Projectile, const struct FVector& HitLocation)
+void AWeapTekBow_C::SetupProjectileInstantHit(class AShooterProjectile* Projectile, const struct FVector& HitLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.SetupProjectileInstantHit");
 
@@ -432,7 +433,6 @@ void AWeapTekBow_C::STATIC_SetupProjectileInstantHit(class AShooterProjectile* P
 	params.HitLocation = HitLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -461,17 +461,18 @@ void AWeapTekBow_C::AmmoSelected(int AmmoTypeIndex)
 
 
 // Function WeapTekBow.WeapTekBow_C.GetAmmoWheelEntries
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FCustomWheelEntry> Entries                        (Parm, OutParm, ZeroConstructor)
 
-void AWeapTekBow_C::STATIC_GetAmmoWheelEntries(TArray<struct FCustomWheelEntry>* Entries)
+void AWeapTekBow_C::GetAmmoWheelEntries(TArray<struct FCustomWheelEntry>* Entries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.GetAmmoWheelEntries");
 
 	AWeapTekBow_C_GetAmmoWheelEntries_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -503,11 +504,11 @@ void AWeapTekBow_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function WeapTekBow.WeapTekBow_C.BPOnSpawnedProjectile
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterProjectile**     Projectile                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekBow_C::STATIC_BPOnSpawnedProjectile(class AShooterProjectile** Projectile)
+void AWeapTekBow_C::BPOnSpawnedProjectile(class AShooterProjectile** Projectile)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekBow.WeapTekBow_C.BPOnSpawnedProjectile");
 
@@ -515,6 +516,7 @@ void AWeapTekBow_C::STATIC_BPOnSpawnedProjectile(class AShooterProjectile** Proj
 	params.Projectile = Projectile;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -540,7 +542,7 @@ void AWeapTekBow_C::BPFiredWeapon()
 
 
 // Function WeapTekBow.WeapTekBow_C.BPSelectProjectileToFire
-// (NetRequest, Exec, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UClass*                  ProjectileClassOverride        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class USoundCue*               FireSoundOverride              (Parm, OutParm, ZeroConstructor, IsPlainOldData)

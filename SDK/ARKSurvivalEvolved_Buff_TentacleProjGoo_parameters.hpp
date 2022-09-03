@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_TentacleProjGoo.Buff_TentacleProjGoo_C.BPPreventTekArmorBuffs
+struct ABuff_TentacleProjGoo_C_BPPreventTekArmorBuffs_Params
+{
+	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
 
 // Function Buff_TentacleProjGoo.Buff_TentacleProjGoo_C.BPPreventflight
 struct ABuff_TentacleProjGoo_C_BPPreventflight_Params

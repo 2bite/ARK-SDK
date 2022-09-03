@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_BrainSlugShoulderVisualCient.Buff_BrainSlugShoulderVisualCient_C
-// 0x0014 (0x0974 - 0x0960)
+// 0x0014 (0x098C - 0x0978)
 class ABuff_BrainSlugShoulderVisualCient_C : public ABuff_Base_C
 {
 public:
-	struct FLinearColor                                CrosshairColor;                                           // 0x0960(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              K2Node_Event_DeltaTime;                                   // 0x0970(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FLinearColor                                CrosshairColor;                                           // 0x0978(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              K2Node_Event_DeltaTime;                                   // 0x0988(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

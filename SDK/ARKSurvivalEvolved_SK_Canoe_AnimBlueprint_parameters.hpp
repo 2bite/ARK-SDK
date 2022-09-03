@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,8 +49,8 @@ struct USK_Canoe_AnimBlueprint_C_UpdateSimulatedCanoeTransform_Params
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function SK_Canoe_AnimBlueprint.SK_Canoe_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_Canoe_AnimBlueprint_AnimGraphNode_ModifyBone_924
-struct USK_Canoe_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_Canoe_AnimBlueprint_AnimGraphNode_ModifyBone_924_Params
+// Function SK_Canoe_AnimBlueprint.SK_Canoe_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_Canoe_AnimBlueprint_AnimGraphNode_ModifyBone_936
+struct USK_Canoe_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_Canoe_AnimBlueprint_AnimGraphNode_ModifyBone_936_Params
 {
 };
 

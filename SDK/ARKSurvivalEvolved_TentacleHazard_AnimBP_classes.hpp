@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,11 +71,11 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_604();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3968();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2666();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2665();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3966();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_622();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4040();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2918();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2917();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4038();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_TentacleHazard_AnimBP(int EntryPoint);
 };

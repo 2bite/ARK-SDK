@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapFists_Oar.WeapFists_Oar_C.SendOarInputsToServer
-// (NetRequest, Event, Static, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 
 void AWeapFists_Oar_C::STATIC_SendOarInputsToServer()
 {
@@ -22,6 +22,7 @@ void AWeapFists_Oar_C::STATIC_SendOarInputsToServer()
 	AWeapFists_Oar_C_SendOarInputsToServer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -47,16 +48,15 @@ void AWeapFists_Oar_C::HandleViewModeChange()
 
 
 // Function WeapFists_Oar.WeapFists_Oar_C.InterpToSocket
-// (NetReliable, NetRequest, Native, Event, NetResponse, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 
-void AWeapFists_Oar_C::InterpToSocket()
+void AWeapFists_Oar_C::STATIC_InterpToSocket()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFists_Oar.WeapFists_Oar_C.InterpToSocket");
 
 	AWeapFists_Oar_C_InterpToSocket_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,14 +298,14 @@ void AWeapFists_Oar_C::UserConstructionScript()
 }
 
 
-// Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_302
+// Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_245
 // ()
 
-void AWeapFists_Oar_C::InpActEvt_AltFire_K2Node_InputActionEvent_302()
+void AWeapFists_Oar_C::InpActEvt_AltFire_K2Node_InputActionEvent_245()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_302");
+	static auto fn = UObject::FindObject<UFunction>("Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_245");
 
-	AWeapFists_Oar_C_InpActEvt_AltFire_K2Node_InputActionEvent_302_Params params;
+	AWeapFists_Oar_C_InpActEvt_AltFire_K2Node_InputActionEvent_245_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -315,14 +315,14 @@ void AWeapFists_Oar_C::InpActEvt_AltFire_K2Node_InputActionEvent_302()
 }
 
 
-// Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_301
+// Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_244
 // ()
 
-void AWeapFists_Oar_C::InpActEvt_AltFire_K2Node_InputActionEvent_301()
+void AWeapFists_Oar_C::InpActEvt_AltFire_K2Node_InputActionEvent_244()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_301");
+	static auto fn = UObject::FindObject<UFunction>("Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_244");
 
-	AWeapFists_Oar_C_InpActEvt_AltFire_K2Node_InputActionEvent_301_Params params;
+	AWeapFists_Oar_C_InpActEvt_AltFire_K2Node_InputActionEvent_244_Params params;
 
 	auto flags = fn->FunctionFlags;
 

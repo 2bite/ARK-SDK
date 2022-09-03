@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,7 +60,7 @@ bool ABuff_TekArmor_Helmet_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Buff_TekArmor_Helmet.Buff_TekArmor_Helmet_C.BPGetMultiUseEntries
-// (Exec, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -74,6 +74,7 @@ TArray<struct FMultiUseEntry> ABuff_TekArmor_Helmet_C::STATIC_BPGetMultiUseEntri
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

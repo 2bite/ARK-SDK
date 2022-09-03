@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,9 +41,9 @@ void ABuff_Lamprey_C::GetNumBatteries(int* numBatteries)
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Lamprey_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue)
+void ABuff_Lamprey_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lamprey.Buff_Lamprey_C.Get Charge Variable Interface");
 
@@ -62,8 +62,8 @@ void ABuff_Lamprey_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariable
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (ivalue != nullptr)
-		*ivalue = params.ivalue;
+	if (iValue != nullptr)
+		*iValue = params.iValue;
 }
 
 
@@ -244,7 +244,7 @@ bool ABuff_Lamprey_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function Buff_Lamprey.Buff_Lamprey_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, NetServer, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -271,7 +271,7 @@ TArray<struct FMultiUseEntry> ABuff_Lamprey_C::STATIC_BPGetMultiUseEntries(class
 
 
 // Function Buff_Lamprey.Buff_Lamprey_C.BPSetupForInstigator
-// (NetReliable, NetResponse, Static, MulticastDelegate, NetServer, BlueprintCallable)
+// (NetReliable, NetResponse, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -562,15 +562,15 @@ void ABuff_Lamprey_C::ChargeVariableEventDoubleInterface(TEnumAsByte<E_ChargeVar
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Lamprey_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void ABuff_Lamprey_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lamprey.Buff_Lamprey_C.ChargeVariableEventIntInterface");
 
 	ABuff_Lamprey_C_ChargeVariableEventIntInterface_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -584,15 +584,15 @@ void ABuff_Lamprey_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariab
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Lamprey_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void ABuff_Lamprey_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lamprey.Buff_Lamprey_C.ChargeVariableEventIntMulticastInterface");
 
 	ABuff_Lamprey_C_ChargeVariableEventIntMulticastInterface_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -719,9 +719,9 @@ void ABuff_Lamprey_C::ReceiveBeginPlay()
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           triggerEvent                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           multicastEvent                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Lamprey_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue)
+void ABuff_Lamprey_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lamprey.Buff_Lamprey_C.Set Charge Variable Interface");
 
@@ -733,7 +733,7 @@ void ABuff_Lamprey_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariable
 	params.bBValue = bBValue;
 	params.triggerEvent = triggerEvent;
 	params.multicastEvent = multicastEvent;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -750,9 +750,9 @@ void ABuff_Lamprey_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariable
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Lamprey_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue)
+void ABuff_Lamprey_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lamprey.Buff_Lamprey_C.Charge Variable Event Interface");
 
@@ -761,7 +761,7 @@ void ABuff_Lamprey_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariab
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 

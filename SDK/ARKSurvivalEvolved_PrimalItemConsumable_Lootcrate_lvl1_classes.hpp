@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_Lootcrate_lvl1.PrimalItemConsumable_Lootcrate_lvl1_C
-// 0x0000 (0x0B18 - 0x0B18)
+// 0x0000 (0x0B20 - 0x0B20)
 class UPrimalItemConsumable_Lootcrate_lvl1_C : public UPrimalItemConsumable_Lootcrate_C
 {
 public:

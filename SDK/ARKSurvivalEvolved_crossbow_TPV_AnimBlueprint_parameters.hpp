@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2002
-struct Ucrossbow_TPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2002_Params
+// Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1862
+struct Ucrossbow_TPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1862_Params
 {
 };
 
-// Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2001
-struct Ucrossbow_TPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2001_Params
+// Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1861
+struct Ucrossbow_TPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1861_Params
 {
 };
 

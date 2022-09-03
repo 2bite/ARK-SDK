@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.PlayLinkedCompanionReactionsByExplorerNoteIndex
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           index                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABuff_Companion_HLNA_Gen2_C::STATIC_PlayLinkedCompanionReactionsByExplorerN
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33,14 +34,14 @@ void ABuff_Companion_HLNA_Gen2_C::STATIC_PlayLinkedCompanionReactionsByExplorerN
 
 
 // Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.BPClientHandleNetExecCommand
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_Companion_HLNA_Gen2_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool ABuff_Companion_HLNA_Gen2_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.BPClientHandleNetExecCommand");
 
@@ -49,6 +50,7 @@ bool ABuff_Companion_HLNA_Gen2_C::STATIC_BPClientHandleNetExecCommand(struct FNa
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,12 +64,12 @@ bool ABuff_Companion_HLNA_Gen2_C::STATIC_BPClientHandleNetExecCommand(struct FNa
 
 
 // Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.OnCompanionReactionPlayed
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FCompanionReactionData  PlayedReactionData             (Parm, OutParm, ReferenceParm)
 // int*                           UniqueID                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_Gen2_C::STATIC_OnCompanionReactionPlayed(int* UniqueID, struct FCompanionReactionData* PlayedReactionData)
+void ABuff_Companion_HLNA_Gen2_C::OnCompanionReactionPlayed(int* UniqueID, struct FCompanionReactionData* PlayedReactionData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.OnCompanionReactionPlayed");
 
@@ -87,11 +89,11 @@ void ABuff_Companion_HLNA_Gen2_C::STATIC_OnCompanionReactionPlayed(int* UniqueID
 
 
 // Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.play reaction for explorer note index
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            explorer_note_index            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Companion_HLNA_Gen2_C::STATIC_play_reaction_for_explorer_note_index(int explorer_note_index)
+void ABuff_Companion_HLNA_Gen2_C::play_reaction_for_explorer_note_index(int explorer_note_index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.play reaction for explorer note index");
 
@@ -99,6 +101,7 @@ void ABuff_Companion_HLNA_Gen2_C::STATIC_play_reaction_for_explorer_note_index(i
 	params.explorer_note_index = explorer_note_index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +154,7 @@ void ABuff_Companion_HLNA_Gen2_C::Has_Completed_All_Required_Missions_For_Final_
 
 
 // Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.Check for Nearby Explorer Notes
-// (NetReliable, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABuff_Companion_HLNA_Gen2_C::Check_for_Nearby_Explorer_Notes()
 {
@@ -169,15 +172,16 @@ void ABuff_Companion_HLNA_Gen2_C::Check_for_Nearby_Explorer_Notes()
 
 
 // Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.Check For Nearby Dispatchers
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (Exec, Native, Event, Static, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ABuff_Companion_HLNA_Gen2_C::Check_For_Nearby_Dispatchers()
+void ABuff_Companion_HLNA_Gen2_C::STATIC_Check_For_Nearby_Dispatchers()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Companion_HLNA_Gen2.Buff_Companion_HLNA_Gen2_C.Check For Nearby Dispatchers");
 
 	ABuff_Companion_HLNA_Gen2_C_Check_For_Nearby_Dispatchers_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

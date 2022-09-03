@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,15 +15,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_TentacleProjGoo.Buff_TentacleProjGoo_C
-// 0x0012 (0x0972 - 0x0960)
+// 0x0022 (0x099A - 0x0978)
 class ABuff_TentacleProjGoo_C : public APrimalBuff
 {
 public:
-	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x0960(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0961(0x0007) MISSED OFFSET
-	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x0968(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0970(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_ByteByte_ReturnValue;                 // 0x0971(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TArray<struct FName>                               PreventTekArmorBuffTags;                                  // 0x0978(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x0988(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0989(0x0007) MISSED OFFSET
+	class APrimalCharacter*                            K2Node_DynamicCast_AsPrimalCharacter;                     // 0x0990(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0998(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_ByteByte_ReturnValue;                 // 0x0999(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32,6 +33,7 @@ public:
 	}
 
 
+	TArray<struct FName> BPPreventTekArmorBuffs();
 	bool BPPreventflight();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

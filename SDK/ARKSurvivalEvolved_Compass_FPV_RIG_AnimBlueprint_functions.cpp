@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Compass_FPV_RIG_AnimBlueprint.Compass_FPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Compass_FPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_488
+// Function Compass_FPV_RIG_AnimBlueprint.Compass_FPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Compass_FPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_500
 // ()
 
-void UCompass_FPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Compass_FPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_488()
+void UCompass_FPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Compass_FPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_500()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Compass_FPV_RIG_AnimBlueprint.Compass_FPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Compass_FPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_488");
+	static auto fn = UObject::FindObject<UFunction>("Function Compass_FPV_RIG_AnimBlueprint.Compass_FPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Compass_FPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_500");
 
-	UCompass_FPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Compass_FPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_488_Params params;
+	UCompass_FPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Compass_FPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_500_Params params;
 
 	auto flags = fn->FunctionFlags;
 

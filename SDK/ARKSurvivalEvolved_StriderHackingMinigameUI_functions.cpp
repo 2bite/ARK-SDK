@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,8 +12,30 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.grab beat loc from outside the ui
+// ()
+// Parameters:
+// float                          NewParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UStriderHackingMinigameUI_C::grab_beat_loc_from_outside_the_ui(float* NewParam)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.grab beat loc from outside the ui");
+
+	UStriderHackingMinigameUI_C_grab_beat_loc_from_outside_the_ui_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (NewParam != nullptr)
+		*NewParam = params.NewParam;
+}
+
+
 // Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.On Win
-// (Exec, Event, Static, Delegate, HasOutParms, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, Native, Static, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 
 void UStriderHackingMinigameUI_C::STATIC_On_Win()
 {
@@ -22,6 +44,7 @@ void UStriderHackingMinigameUI_C::STATIC_On_Win()
 	UStriderHackingMinigameUI_C_On_Win_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,7 +124,7 @@ void UStriderHackingMinigameUI_C::On_Beat_Hit_Successfully()
 
 
 // Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.Manage Beat Widgets
-// (NetRequest, Exec, NetResponse, Static, Delegate, HasOutParms, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 
 void UStriderHackingMinigameUI_C::STATIC_Manage_Beat_Widgets()
 {
@@ -110,6 +133,7 @@ void UStriderHackingMinigameUI_C::STATIC_Manage_Beat_Widgets()
 	UStriderHackingMinigameUI_C_Manage_Beat_Widgets_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -135,7 +159,7 @@ void UStriderHackingMinigameUI_C::Reset_Post_Process_Params()
 
 
 // Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.Set Minigame Visual State
-// (NetReliable, Native, Event, NetResponse, Static, Delegate, HasOutParms, HasDefaults, DLLImport, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, Static, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsBeatMissedState              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SetPostProcessColor            (Parm, ZeroConstructor, IsPlainOldData)
@@ -332,7 +356,7 @@ void UStriderHackingMinigameUI_C::Map_Percent_to_Position(float Percent, float* 
 
 
 // Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.Set ProgressBar Color
-// (NetRequest, Exec, Native, Event, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, Exec, Event, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UProgressBar*            ProgressBar                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            TintColor                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -346,7 +370,6 @@ void UStriderHackingMinigameUI_C::Set_ProgressBar_Color(class UProgressBar* Prog
 	params.TintColor = TintColor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -444,7 +467,7 @@ void UStriderHackingMinigameUI_C::Release_Input()
 
 
 // Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.Receive Input
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -456,6 +479,7 @@ void UStriderHackingMinigameUI_C::Receive_Input(bool Success)
 	params.Success = Success;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

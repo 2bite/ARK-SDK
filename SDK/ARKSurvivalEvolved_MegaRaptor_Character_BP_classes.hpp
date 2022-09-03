@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MegaRaptor_Character_BP.MegaRaptor_Character_BP_C
-// 0x000F (0x2638 - 0x2629)
+// 0x000F (0x2668 - 0x2659)
 class AMegaRaptor_Character_BP_C : public ARaptor_Character_BP_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x2629(0x0007) MISSED OFFSET
-	class UDinoCharacterStatusComponent_BP_MegaRaptor_C* DinoCharacterStatus_BP_MegaRaptor_C1;                     // 0x2630(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x2659(0x0007) MISSED OFFSET
+	class UDinoCharacterStatusComponent_BP_MegaRaptor_C* DinoCharacterStatus_BP_MegaRaptor_C1;                     // 0x2660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

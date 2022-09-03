@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_FuelOrAmmo_ExtraBar
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            SlotOffset                     (Parm, ZeroConstructor, IsPlainOldData)
 // int                            SlotSpan                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -45,7 +45,7 @@ void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo_ExtraBar(int SlotOff
 
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_FuelOrAmmo
-// (Native, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            SlotIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            StateIndex                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -68,7 +68,6 @@ void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo(int SlotIndex, int S
 	params.Icon = Icon;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +79,7 @@ void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo(int SlotIndex, int S
 
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_Struggle
-// (Exec, Event, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          StruggleProgressPercent        (Parm, ZeroConstructor, IsPlainOldData)

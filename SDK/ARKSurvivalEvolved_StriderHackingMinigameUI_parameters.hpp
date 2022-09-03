@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.grab beat loc from outside the ui
+struct UStriderHackingMinigameUI_C_grab_beat_loc_from_outside_the_ui_Params
+{
+	float                                              NewParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function StriderHackingMinigameUI.StriderHackingMinigameUI_C.On Win
 struct UStriderHackingMinigameUI_C_On_Win_Params

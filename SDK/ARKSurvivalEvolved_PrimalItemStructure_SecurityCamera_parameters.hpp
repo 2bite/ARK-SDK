@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,40 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetCameraLocation
+struct UPrimalItemStructure_SecurityCamera_C_GetCameraLocation_Params
+{
+	struct FVector                                     CameraViewPoint;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    CameraRotation;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetCameraData
+struct UPrimalItemStructure_SecurityCamera_C_GetCameraData_Params
+{
+	TArray<class APrimalStructure*>                    Cameras;                                                  // (Parm, OutParm, ZeroConstructor)
+	int                                                index;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetConsoleID
+struct UPrimalItemStructure_SecurityCamera_C_GetConsoleID_Params
+{
+	float                                              ID;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.CanAddCamera
+struct UPrimalItemStructure_SecurityCamera_C_CanAddCamera_Params
+{
+	bool                                               Allowed;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetConsoleData
+struct UPrimalItemStructure_SecurityCamera_C_GetConsoleData_Params
+{
+	float                                              ID;                                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class FString                                      Name;                                                     // (Parm, OutParm, ZeroConstructor)
+	bool                                               CanAddCamera;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.SetConsoleDataByID
 struct UPrimalItemStructure_SecurityCamera_C_SetConsoleDataByID_Params

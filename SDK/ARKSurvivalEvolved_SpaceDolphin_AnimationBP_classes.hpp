@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -183,7 +183,7 @@ public:
 	float                                              MovementAnimRateMult;                                     // 0x1AF4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ElevatingOffset;                                          // 0x1AF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsSpinning;                                               // 0x1AFC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsFPV;                                                    // 0x1AFD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               isFPV;                                                    // 0x1AFD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               HasRider;                                                 // 0x1AFE(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               SimulateRider;                                            // 0x1AFF(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CurrentYFlyBlendSpaceCurveValue;                          // 0x1B00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -434,42 +434,42 @@ public:
 	void UpdateMovementAnimRate(float Base, class APrimalDinoCharacter* Dino);
 	void GetFlyingBlendspaceCoords(class APrimalDinoCharacter* ForDino, struct FVector2D* BlendspaceCoords);
 	void BlueprintPlayAnimationEvent(class UAnimMontage** AnimationMontage, float* PlayRate, float* playedAnimLength);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4975();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4974();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4973();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_ApplyAdditive_504();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4972();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4978();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4970();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4969();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4966();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4965();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4964();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4963();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4979();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_RotationOffsetBlendSpace_324();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_SequencePlayer_6604();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_SequencePlayer_6600();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_ModifyBone_990();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4960();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4959();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_SequencePlayer_6589();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_SequencePlayer_6588();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_366();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_365();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4980();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4958();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_364();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4957();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_363();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4956();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_362();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4955();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_361();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4954();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_360();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4953();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4952();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4855();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4854();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4853();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_ApplyAdditive_486();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4852();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4858();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4850();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4849();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4846();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4845();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4844();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4843();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4859();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_RotationOffsetBlendSpace_318();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_SequencePlayer_5902();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_SequencePlayer_5898();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_ModifyBone_864();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4840();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4839();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_SequencePlayer_5887();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_SequencePlayer_5886();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_330();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_329();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4860();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4838();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_328();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4837();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_327();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4836();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_326();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4835();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_325();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4834();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendSpacePlayer_324();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4833();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceDolphin_AnimationBP_AnimGraphNode_BlendListByBool_4832();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_SpaceDolphin_AnimationBP(int EntryPoint);
 };

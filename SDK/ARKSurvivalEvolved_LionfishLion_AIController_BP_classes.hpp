@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,8 +40,8 @@ public:
 	void (float _1, float _2, float* Output);
 	bool is_night();
 	void is_line_of_sight_blocked(bool* NewParam);
-	void Check_if_Viewed_by_Players();
-	void BPNotifyTargetSet();
+	void Check_If_Viewed_By_Players();
+	void STATIC_BPNotifyTargetSet();
 	void UserConstructionScript();
 	void ExecuteUbergraph_LionfishLion_AIController_BP(int EntryPoint);
 };

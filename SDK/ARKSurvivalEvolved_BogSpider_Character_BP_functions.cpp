@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,7 +72,7 @@ void ABogSpider_Character_BP_C::OnClimberFinishedAttaching()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.StoreClimb Trace Socket Offsets
-// (Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::STATIC_StoreClimb_Trace_Socket_Offsets()
 {
@@ -89,21 +89,22 @@ void ABogSpider_Character_BP_C::STATIC_StoreClimb_Trace_Socket_Offsets()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetSpiderClimbingTraceTransform
-// (Exec, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
-// int                            TraceIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            traceIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      TraceTransform                 (Parm, OutParm, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::STATIC_GetSpiderClimbingTraceTransform(int TraceIndex, bool bWorldSpace, struct UObject_FTransform* TraceTransform)
+void ABogSpider_Character_BP_C::STATIC_GetSpiderClimbingTraceTransform(int traceIndex, bool bWorldSpace, struct UObject_FTransform* TraceTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetSpiderClimbingTraceTransform");
 
 	ABogSpider_Character_BP_C_GetSpiderClimbingTraceTransform_Params params;
-	params.TraceIndex = TraceIndex;
+	params.traceIndex = traceIndex;
 	params.bWorldSpace = bWorldSpace;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,11 +122,11 @@ void ABogSpider_Character_BP_C::STATIC_GetSpiderClimbingTraceTransform(int Trace
 // struct FHitResult              Hit                            (Parm, OutParm, ReferenceParm)
 // struct FVector*                TraceStart                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                TraceEnd                       (Parm, ZeroConstructor, IsPlainOldData)
-// int*                           TraceIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           traceIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           TraceRetryNum                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bResult                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::IsClimbingTraceHitResultValid(bool* bValidHit, struct FVector* TraceStart, struct FVector* TraceEnd, int* TraceIndex, int* TraceRetryNum, struct FHitResult* Hit, bool* bResult)
+void ABogSpider_Character_BP_C::IsClimbingTraceHitResultValid(bool* bValidHit, struct FVector* TraceStart, struct FVector* TraceEnd, int* traceIndex, int* TraceRetryNum, struct FHitResult* Hit, bool* bResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.IsClimbingTraceHitResultValid");
 
@@ -133,7 +134,7 @@ void ABogSpider_Character_BP_C::IsClimbingTraceHitResultValid(bool* bValidHit, s
 	params.bValidHit = bValidHit;
 	params.TraceStart = TraceStart;
 	params.TraceEnd = TraceEnd;
-	params.TraceIndex = TraceIndex;
+	params.traceIndex = traceIndex;
 	params.TraceRetryNum = TraceRetryNum;
 
 	auto flags = fn->FunctionFlags;
@@ -322,7 +323,7 @@ void ABogSpider_Character_BP_C::StopAllSpiderCameraShake(class APrimalCharacter*
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.UpdateNonControlledClimber
-// (NetRequest, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::UpdateNonControlledClimber()
 {
@@ -447,11 +448,11 @@ void ABogSpider_Character_BP_C::RefreshSpiderVision()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_CacheWebTracePreviewHits
-// (Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, NetMulticast, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FHitResult>      TraceHits                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABogSpider_Character_BP_C::STATIC_Tick_CacheWebTracePreviewHits(TArray<struct FHitResult>* TraceHits)
+void ABogSpider_Character_BP_C::Tick_CacheWebTracePreviewHits(TArray<struct FHitResult>* TraceHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_CacheWebTracePreviewHits");
 
@@ -498,13 +499,13 @@ struct FVector ABogSpider_Character_BP_C::CalcAirJumpVelocity(const struct FVect
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Native, Event, NetResponse, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABogSpider_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABogSpider_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.BPGetMultiUseEntries");
 
@@ -706,7 +707,7 @@ void ABogSpider_Character_BP_C::BPOnDinoCheat(struct FName* CheatName, bool* bSe
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.BP_OverrideRiderCameraCollisionSweep
-// (NetRequest, Exec, Native, Event, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 SweepStart                     (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 SweepEnd                       (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -719,7 +720,6 @@ struct FHitResult ABogSpider_Character_BP_C::BP_OverrideRiderCameraCollisionSwee
 	ABogSpider_Character_BP_C_BP_OverrideRiderCameraCollisionSweep_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -735,14 +735,14 @@ struct FHitResult ABogSpider_Character_BP_C::BP_OverrideRiderCameraCollisionSwee
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.AdjustClimbTraceTransform
-// (NetReliable, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  WithSocketName                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      WithTraceTransform             (Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct UObject_FTransform      ClimberTransform               (Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct UObject_FTransform      climberTransform               (Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct UObject_FTransform      AdjustedTransform              (Parm, OutParm, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::STATIC_AdjustClimbTraceTransform(struct FName* WithSocketName, struct UObject_FTransform* WithTraceTransform, struct UObject_FTransform* ClimberTransform, struct UObject_FTransform* AdjustedTransform)
+void ABogSpider_Character_BP_C::STATIC_AdjustClimbTraceTransform(struct FName* WithSocketName, struct UObject_FTransform* WithTraceTransform, struct UObject_FTransform* climberTransform, struct UObject_FTransform* AdjustedTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.AdjustClimbTraceTransform");
 
@@ -757,8 +757,8 @@ void ABogSpider_Character_BP_C::STATIC_AdjustClimbTraceTransform(struct FName* W
 
 	if (WithTraceTransform != nullptr)
 		*WithTraceTransform = params.WithTraceTransform;
-	if (ClimberTransform != nullptr)
-		*ClimberTransform = params.ClimberTransform;
+	if (climberTransform != nullptr)
+		*climberTransform = params.climberTransform;
 	if (AdjustedTransform != nullptr)
 		*AdjustedTransform = params.AdjustedTransform;
 }
@@ -792,7 +792,7 @@ void ABogSpider_Character_BP_C::IsRiderLookDirParallelWithClimbUp(const struct F
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetSpiderTransformForEnsnare
-// (NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct UObject_FTransform      Transform                      (Parm, OutParm, IsPlainOldData)
 
@@ -814,7 +814,7 @@ void ABogSpider_Character_BP_C::STATIC_GetSpiderTransformForEnsnare(struct UObje
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.BP_OverrideCarriedCharacterTransform
-// (Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter**       ForCarriedChar                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -968,7 +968,7 @@ void ABogSpider_Character_BP_C::Rotate_Climber_To_TargetClimbingRotation()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.BPDidSetCarriedCharacter
-// (NetReliable, Exec, Event, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter**       PreviousCarriedCharacter       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -980,6 +980,7 @@ void ABogSpider_Character_BP_C::BPDidSetCarriedCharacter(class APrimalCharacter*
 	params.PreviousCarriedCharacter = PreviousCarriedCharacter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1190,14 +1191,14 @@ void ABogSpider_Character_BP_C::ClimberCheckForAboveWalkableGround(bool* Result)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Get Correct Surface Trace OffsetTransforms
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool*                          overrideUseMap                 (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<bool>                   newUseMp                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct UObject_FTransform> offsetTransforms               (Parm, OutParm, ZeroConstructor)
 // TArray<int>                    TraceIndeces                   (Parm, OutParm, ZeroConstructor)
 
-void ABogSpider_Character_BP_C::STATIC_Get_Correct_Surface_Trace_OffsetTransforms(bool* overrideUseMap, TArray<bool>* newUseMp, TArray<struct UObject_FTransform>* offsetTransforms, TArray<int>* TraceIndeces)
+void ABogSpider_Character_BP_C::Get_Correct_Surface_Trace_OffsetTransforms(bool* overrideUseMap, TArray<bool>* newUseMp, TArray<struct UObject_FTransform>* offsetTransforms, TArray<int>* TraceIndeces)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.Get Correct Surface Trace OffsetTransforms");
 
@@ -1582,9 +1583,9 @@ void ABogSpider_Character_BP_C::Replicate_Index_Update_Server_And_Client_Climber
 // TArray<bool>                   traceHitsArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int*                           numValidHits                   (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           numTraces                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           AllowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           allowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing)
+void ABogSpider_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.Check For Prevent Stop Climbing");
 
@@ -1600,8 +1601,8 @@ void ABogSpider_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHit
 
 	if (traceHitsArray != nullptr)
 		*traceHitsArray = params.traceHitsArray;
-	if (AllowClimbing != nullptr)
-		*AllowClimbing = params.AllowClimbing;
+	if (allowClimbing != nullptr)
+		*allowClimbing = params.allowClimbing;
 }
 
 
@@ -1609,9 +1610,9 @@ void ABogSpider_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHit
 // ()
 // Parameters:
 // bool*                          isForRetry                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          traceDist                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          TraceDist                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::GetCorrectSurfaceTraceDistance(bool* isForRetry, float* traceDist)
+void ABogSpider_Character_BP_C::GetCorrectSurfaceTraceDistance(bool* isForRetry, float* TraceDist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetCorrectSurfaceTraceDistance");
 
@@ -1624,8 +1625,8 @@ void ABogSpider_Character_BP_C::GetCorrectSurfaceTraceDistance(bool* isForRetry,
 
 	fn->FunctionFlags = flags;
 
-	if (traceDist != nullptr)
-		*traceDist = params.traceDist;
+	if (TraceDist != nullptr)
+		*TraceDist = params.TraceDist;
 }
 
 
@@ -1770,7 +1771,7 @@ void ABogSpider_Character_BP_C::FireQuickWebs_Single(const struct FVector& WithH
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.DoWebSearch_Both
-// (NetReliable, Exec, Native, Static, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FRotator                ViewRot                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFoundAny                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1810,14 +1811,14 @@ void ABogSpider_Character_BP_C::STATIC_DoWebSearch_Both(const struct FRotator& V
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.DoWebSearch_Single
-// (Exec, Event, NetResponse, Static, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FRotator                ViewRot                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFoundHit                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 FoundHitLoc                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  FoundHitActor                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::STATIC_DoWebSearch_Single(const struct FRotator& ViewRot, bool* bFoundHit, struct FVector* FoundHitLoc, class AActor** FoundHitActor)
+void ABogSpider_Character_BP_C::DoWebSearch_Single(const struct FRotator& ViewRot, bool* bFoundHit, struct FVector* FoundHitLoc, class AActor** FoundHitActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.DoWebSearch_Single");
 
@@ -2017,7 +2018,7 @@ void ABogSpider_Character_BP_C::IsSpiderBloodHangry(bool* bResult)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.InterceptRiderEmoteAnim
-// (Exec, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Exec, Event, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UAnimMontage**           EmoteAnim                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -2164,7 +2165,7 @@ void ABogSpider_Character_BP_C::ReleaseEnsnaredChar()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.OnBioGrappledCharBreakWeb
-// (NetRequest, Native, NetResponse, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        BreakingChar                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2185,11 +2186,11 @@ void ABogSpider_Character_BP_C::OnBioGrappledCharBreakWeb(class APrimalCharacter
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.SetEnsnaredCharRef
-// (NetReliable, Native, Event, NetResponse, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Static, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        NewCharRef                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::SetEnsnaredCharRef(class APrimalCharacter* NewCharRef)
+void ABogSpider_Character_BP_C::STATIC_SetEnsnaredCharRef(class APrimalCharacter* NewCharRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.SetEnsnaredCharRef");
 
@@ -2341,7 +2342,7 @@ void ABogSpider_Character_BP_C::ResetMeshRotation()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.BPOverrideCameraViewTarget
-// (NetReliable, NetRequest, Native, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, Event, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CurrentCameraMode              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                DesiredCameraLocation          (Parm, ZeroConstructor, IsPlainOldData)
@@ -2586,7 +2587,7 @@ void ABogSpider_Character_BP_C::OnWebTetherBroken(bool bIsLeft, struct FGrappleT
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_ManageSpiderSounds
-// (NetRequest, Native, Event, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Exec, NetResponse, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::Tick_ManageSpiderSounds()
 {
@@ -2595,7 +2596,6 @@ void ABogSpider_Character_BP_C::Tick_ManageSpiderSounds()
 	ABogSpider_Character_BP_C_Tick_ManageSpiderSounds_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2632,11 +2632,11 @@ void ABogSpider_Character_BP_C::RotateDirToTargetWithLimit(const struct FVector&
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.CheckForInstantHarvestDeadEnsnaredChar
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Native, Static, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        forChar                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::CheckForInstantHarvestDeadEnsnaredChar(class APrimalCharacter* forChar)
+void ABogSpider_Character_BP_C::STATIC_CheckForInstantHarvestDeadEnsnaredChar(class APrimalCharacter* forChar)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.CheckForInstantHarvestDeadEnsnaredChar");
 
@@ -3112,7 +3112,7 @@ void ABogSpider_Character_BP_C::OnBioGrappleReleased(class APrimalCharacter* Rel
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.OnBioGrappledChar
-// (NetRequest, Exec, Static, NetMulticast, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Event, Static, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        GrappledChar                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3304,7 +3304,7 @@ void ABogSpider_Character_BP_C::CanHardLand(bool* bResult)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_TraceForLandingImpact
-// (Exec, Event, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::Tick_TraceForLandingImpact()
 {
@@ -3313,6 +3313,7 @@ void ABogSpider_Character_BP_C::Tick_TraceForLandingImpact()
 	ABogSpider_Character_BP_C_Tick_TraceForLandingImpact_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3525,7 +3526,7 @@ void ABogSpider_Character_BP_C::RotateCharControlRotationTowardsSpider(class APr
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.IsValidBioGrappleTarget
-// (NetReliable, Native, Event, Static, NetMulticast, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, NetResponse, Static, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        ForGrappleTarget               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bForStart                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -3542,7 +3543,6 @@ void ABogSpider_Character_BP_C::STATIC_IsValidBioGrappleTarget(class APrimalChar
 	params.bPreventTraces = bPreventTraces;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3657,7 +3657,7 @@ void ABogSpider_Character_BP_C::BPDoAttack(int* AttackIndex)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.CanDoBioGrapple
-// (NetReliable, Exec, Event, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           bForStart                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bResult                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -3670,6 +3670,7 @@ void ABogSpider_Character_BP_C::CanDoBioGrapple(bool bForStart, bool* bResult)
 	params.bForStart = bForStart;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3701,7 +3702,7 @@ void ABogSpider_Character_BP_C::UpdatePullingBioGrappledCharVars(bool bPulling)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.WebShootybangBioGrapple
-// (NetReliable, NetRequest, Native, Static, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Event, Static, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor*                  TryBioGrappleActor             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -3714,7 +3715,6 @@ void ABogSpider_Character_BP_C::STATIC_WebShootybangBioGrapple(class AActor* Try
 	params.TryBioGrappleActor = TryBioGrappleActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3778,15 +3778,15 @@ void ABogSpider_Character_BP_C::IsWebSprinting_Pure(bool* Result)
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetBitmaskAsString
 // ()
 // Parameters:
-// int                            Bitmask                        (Parm, ZeroConstructor, IsPlainOldData)
+// int                            bitMask                        (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  String                         (Parm, OutParm, ZeroConstructor)
 
-void ABogSpider_Character_BP_C::GetBitmaskAsString(int Bitmask, class FString* String)
+void ABogSpider_Character_BP_C::GetBitmaskAsString(int bitMask, class FString* String)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetBitmaskAsString");
 
 	ABogSpider_Character_BP_C_GetBitmaskAsString_Params params;
-	params.Bitmask = Bitmask;
+	params.bitMask = bitMask;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3892,7 +3892,7 @@ void ABogSpider_Character_BP_C::DestroyWebAnchors()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.SetupCosmeticsForRider
-// (NetRequest, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Exec, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::SetupCosmeticsForRider()
 {
@@ -3901,6 +3901,7 @@ void ABogSpider_Character_BP_C::SetupCosmeticsForRider()
 	ABogSpider_Character_BP_C_SetupCosmeticsForRider_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3909,7 +3910,7 @@ void ABogSpider_Character_BP_C::SetupCosmeticsForRider()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_ManageWebs
-// (NetReliable, NetRequest, Exec, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::Tick_ManageWebs()
 {
@@ -3968,7 +3969,7 @@ void ABogSpider_Character_BP_C::SetWantsToWallStick(bool bWantsToStick)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_TraceForStickableWall
-// (NetReliable, NetRequest, Event, Static, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::STATIC_Tick_TraceForStickableWall()
 {
@@ -3977,6 +3978,7 @@ void ABogSpider_Character_BP_C::STATIC_Tick_TraceForStickableWall()
 	ABogSpider_Character_BP_C_Tick_TraceForStickableWall_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4007,14 +4009,14 @@ void ABogSpider_Character_BP_C::GetIgnoreWebHitRadius(float* Radius)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ABogSpider_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
@@ -4142,7 +4144,7 @@ void ABogSpider_Character_BP_C::Tick_UpdateSpiderStamina()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.DoGrapplePullJump
-// (Exec, Event, Static, NetMulticast, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::STATIC_DoGrapplePullJump()
 {
@@ -4151,6 +4153,7 @@ void ABogSpider_Character_BP_C::STATIC_DoGrapplePullJump()
 	ABogSpider_Character_BP_C_DoGrapplePullJump_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4260,7 +4263,7 @@ void ABogSpider_Character_BP_C::OnRiderMountNotify(class APrimalCharacter* Rider
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.AllowPlayMontage
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UAnimMontage**           AnimMontage                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -4273,6 +4276,7 @@ bool ABogSpider_Character_BP_C::AllowPlayMontage(class UAnimMontage** AnimMontag
 	params.AnimMontage = AnimMontage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4324,7 +4328,7 @@ void ABogSpider_Character_BP_C::TickUpdateEnsnaredChar()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_StuckToWall
-// (Exec, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::STATIC_Tick_StuckToWall()
 {
@@ -4440,7 +4444,7 @@ void ABogSpider_Character_BP_C::CanStickToWall(bool bNotifyOfInsufficientStamina
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.ReceiveHit
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimitiveComponent**    MyComp                         (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 Other                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -4833,7 +4837,7 @@ void ABogSpider_Character_BP_C::OnTakeOff()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.WebTrace
-// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 TraceStart                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 TraceEnd                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -4872,7 +4876,7 @@ void ABogSpider_Character_BP_C::WebTrace(const struct FVector& TraceStart, const
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.TraceForBioGrappleTargetInLookDir
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              snarableCharHit                (Parm, OutParm)
@@ -4969,7 +4973,7 @@ bool ABogSpider_Character_BP_C::CanJumpInternal()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.ReceiveTick
-// (Exec, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -4990,7 +4994,7 @@ void ABogSpider_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_UpdateSpiderTargetRotation
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::STATIC_Tick_UpdateSpiderTargetRotation()
 {
@@ -5048,7 +5052,7 @@ void ABogSpider_Character_BP_C::InterpSpiderMesh(float DeltaTime)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.SoftSetSpiderWorldLocation
-// (NetReliable, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 NewWorldLocation               (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -5060,6 +5064,7 @@ void ABogSpider_Character_BP_C::SoftSetSpiderWorldLocation(const struct FVector&
 	params.NewWorldLocation = NewWorldLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5114,17 +5119,17 @@ void ABogSpider_Character_BP_C::BPOnMovementModeChangedNotify(TEnumAsByte<EMovem
 // Parameters:
 // struct FVector                 LocationA                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 LocationB                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                WithViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                withViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           A                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::GetClosestLocationToScreenCenter(const struct FVector& LocationA, const struct FVector& LocationB, const struct FRotator& WithViewRot, bool* A)
+void ABogSpider_Character_BP_C::GetClosestLocationToScreenCenter(const struct FVector& LocationA, const struct FVector& LocationB, const struct FRotator& withViewRot, bool* A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetClosestLocationToScreenCenter");
 
 	ABogSpider_Character_BP_C_GetClosestLocationToScreenCenter_Params params;
 	params.LocationA = LocationA;
 	params.LocationB = LocationB;
-	params.WithViewRot = WithViewRot;
+	params.withViewRot = withViewRot;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5138,7 +5143,7 @@ void ABogSpider_Character_BP_C::GetClosestLocationToScreenCenter(const struct FV
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.IsValidStickToWallHit
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FHitResult              Hit                            (Parm, OutParm, ReferenceParm)
 // bool                           bPreventConfirmTraces          (Parm, ZeroConstructor, IsPlainOldData)
@@ -5215,7 +5220,7 @@ bool ABogSpider_Character_BP_C::BP_InterceptMoveRight(float* AxisValue)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.TryStickingToWall
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 AtLocation                     (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -5241,7 +5246,7 @@ void ABogSpider_Character_BP_C::TryStickingToWall(struct FVector* AtLocation, bo
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.TryEnsnareChar
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (Event, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Char                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -5265,7 +5270,7 @@ void ABogSpider_Character_BP_C::STATIC_TryEnsnareChar(class APrimalCharacter* Ch
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.TickBioGrapple
-// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::STATIC_TickBioGrapple()
 {
@@ -5274,7 +5279,6 @@ void ABogSpider_Character_BP_C::STATIC_TickBioGrapple()
 	ABogSpider_Character_BP_C_TickBioGrapple_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5424,7 +5428,7 @@ void ABogSpider_Character_BP_C::ReduceSpiderStamina(float Stamina)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.DoLifeSteal
-// (NetReliable, Native, Static, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        FromChar                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -5436,7 +5440,6 @@ void ABogSpider_Character_BP_C::STATIC_DoLifeSteal(class APrimalCharacter* FromC
 	params.FromChar = FromChar;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5503,7 +5506,7 @@ class UClass* ABogSpider_Character_BP_C::GetGrappledBuffClassOverride()
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.UpdateGrappledVars
-// (Event, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::UpdateGrappledVars()
 {
@@ -5512,6 +5515,7 @@ void ABogSpider_Character_BP_C::UpdateGrappledVars()
 	ABogSpider_Character_BP_C_UpdateGrappledVars_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5583,7 +5587,7 @@ float ABogSpider_Character_BP_C::BPModifyFOV(float* FOVIn)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.IsWeb Trace Hit Valid
-// (NetReliable, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FHitResult              ForHit                         (Parm)
 // bool                           bAllowHitPullableChars         (Parm, ZeroConstructor, IsPlainOldData)
@@ -5599,6 +5603,7 @@ void ABogSpider_Character_BP_C::STATIC_IsWeb_Trace_Hit_Valid(const struct FHitRe
 	params.bAllowHitPullableChars = bAllowHitPullableChars;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5612,7 +5617,7 @@ void ABogSpider_Character_BP_C::STATIC_IsWeb_Trace_Hit_Valid(const struct FHitRe
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.WebShootybang
-// (Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           shootOne                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 hitA                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -5628,7 +5633,6 @@ void ABogSpider_Character_BP_C::STATIC_WebShootybang(bool shootOne, const struct
 	params.hitB = hitB;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5637,7 +5641,7 @@ void ABogSpider_Character_BP_C::STATIC_WebShootybang(bool shootOne, const struct
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.ConfirmWebTraceHit
-// (Static, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 HitLocation                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bUpdateAimedChars              (Parm, ZeroConstructor, IsPlainOldData)
@@ -5655,6 +5659,7 @@ void ABogSpider_Character_BP_C::STATIC_ConfirmWebTraceHit(const struct FVector& 
 	params.bAllowHitPullableChars = bAllowHitPullableChars;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5668,7 +5673,7 @@ void ABogSpider_Character_BP_C::STATIC_ConfirmWebTraceHit(const struct FVector& 
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.ProcessWebTraceHits
-// (NetRequest, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FRotator                WithViewRotation               (Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              centerHit                      (Parm)
@@ -5689,6 +5694,7 @@ void ABogSpider_Character_BP_C::STATIC_ProcessWebTraceHits(const struct FRotator
 	params.RightHit = RightHit;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5704,25 +5710,24 @@ void ABogSpider_Character_BP_C::STATIC_ProcessWebTraceHits(const struct FRotator
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.SearchForAllGrapplePoints
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
-// struct FRotator                WithViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                withViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bUseCachedAnchorHits           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFoundAny                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              foundHit_Center                (Parm, OutParm)
 // struct FHitResult              foundHit_Left                  (Parm, OutParm)
 // struct FHitResult              foundHit_Right                 (Parm, OutParm)
 
-void ABogSpider_Character_BP_C::STATIC_SearchForAllGrapplePoints(const struct FRotator& WithViewRot, bool bUseCachedAnchorHits, bool* bFoundAny, struct FHitResult* foundHit_Center, struct FHitResult* foundHit_Left, struct FHitResult* foundHit_Right)
+void ABogSpider_Character_BP_C::SearchForAllGrapplePoints(const struct FRotator& withViewRot, bool bUseCachedAnchorHits, bool* bFoundAny, struct FHitResult* foundHit_Center, struct FHitResult* foundHit_Left, struct FHitResult* foundHit_Right)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.SearchForAllGrapplePoints");
 
 	ABogSpider_Character_BP_C_SearchForAllGrapplePoints_Params params;
-	params.WithViewRot = WithViewRot;
+	params.withViewRot = withViewRot;
 	params.bUseCachedAnchorHits = bUseCachedAnchorHits;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5848,7 +5853,7 @@ bool ABogSpider_Character_BP_C::BPPreventFallDamage(float* FallDamageAmount, str
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.DoJumpDetach
-// (NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABogSpider_Character_BP_C::STATIC_DoJumpDetach()
 {
@@ -5857,7 +5862,6 @@ void ABogSpider_Character_BP_C::STATIC_DoJumpDetach()
 	ABogSpider_Character_BP_C_DoJumpDetach_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5886,13 +5890,13 @@ void ABogSpider_Character_BP_C::UpdateGrappleBuffRef(bool bAddIfNotFound)
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.DetachBothWebs
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           bIsJumpDetach                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bPreventAnim                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           detachedAny                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::STATIC_DetachBothWebs(bool bIsJumpDetach, bool bPreventAnim, bool* detachedAny)
+void ABogSpider_Character_BP_C::DetachBothWebs(bool bIsJumpDetach, bool bPreventAnim, bool* detachedAny)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.DetachBothWebs");
 
@@ -5901,7 +5905,6 @@ void ABogSpider_Character_BP_C::STATIC_DetachBothWebs(bool bIsJumpDetach, bool b
 	params.bPreventAnim = bPreventAnim;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5983,7 +5986,7 @@ void ABogSpider_Character_BP_C::CanDoWebTraces(bool bRequireStamina, bool bNotif
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.Tick_UpdateGrapplePointPreviews
-// (NetReliable, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -5995,7 +5998,6 @@ void ABogSpider_Character_BP_C::STATIC_Tick_UpdateGrapplePointPreviews(float Del
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -6004,7 +6006,7 @@ void ABogSpider_Character_BP_C::STATIC_Tick_UpdateGrapplePointPreviews(float Del
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.CreateWebGrappleTether
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FHitResult              FromHit                        (Parm)
 // bool                           bLeft                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -6021,6 +6023,7 @@ void ABogSpider_Character_BP_C::CreateWebGrappleTether(const struct FHitResult& 
 	params.bPreventNetSync = bPreventNetSync;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -6032,24 +6035,25 @@ void ABogSpider_Character_BP_C::CreateWebGrappleTether(const struct FHitResult& 
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.SearchInDirForValidGrapplePoint
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
-// struct FRotator                WithViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                withViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          traceDir                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bWantsCenter                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFoundAny                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              retHit                         (Parm, OutParm)
 
-void ABogSpider_Character_BP_C::STATIC_SearchInDirForValidGrapplePoint(const struct FRotator& WithViewRot, float traceDir, bool bWantsCenter, bool* bFoundAny, struct FHitResult* retHit)
+void ABogSpider_Character_BP_C::STATIC_SearchInDirForValidGrapplePoint(const struct FRotator& withViewRot, float traceDir, bool bWantsCenter, bool* bFoundAny, struct FHitResult* retHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.SearchInDirForValidGrapplePoint");
 
 	ABogSpider_Character_BP_C_SearchInDirForValidGrapplePoint_Params params;
-	params.WithViewRot = WithViewRot;
+	params.withViewRot = withViewRot;
 	params.traceDir = traceDir;
 	params.bWantsCenter = bWantsCenter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -6063,24 +6067,23 @@ void ABogSpider_Character_BP_C::STATIC_SearchInDirForValidGrapplePoint(const str
 
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.TraceForWebHit
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
-// struct FRotator                WithViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                withViewRot                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bCenterTrace                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              foundHit                       (Parm, OutParm)
 // float                          foundHitValue                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_Character_BP_C::STATIC_TraceForWebHit(const struct FRotator& WithViewRot, bool bCenterTrace, bool* bSuccess, struct FHitResult* foundHit, float* foundHitValue)
+void ABogSpider_Character_BP_C::STATIC_TraceForWebHit(const struct FRotator& withViewRot, bool bCenterTrace, bool* bSuccess, struct FHitResult* foundHit, float* foundHitValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_Character_BP.BogSpider_Character_BP_C.TraceForWebHit");
 
 	ABogSpider_Character_BP_C_TraceForWebHit_Params params;
-	params.WithViewRot = WithViewRot;
+	params.withViewRot = withViewRot;
 	params.bCenterTrace = bCenterTrace;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

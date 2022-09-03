@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function DinoTamedInventoryComponent_TekStrider.DinoTamedInventoryComponent_TekStrider_C.BPPreventEquipItem
+struct UDinoTamedInventoryComponent_TekStrider_C_BPPreventEquipItem_Params
+{
+	class UPrimalItem**                                theItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function DinoTamedInventoryComponent_TekStrider.DinoTamedInventoryComponent_TekStrider_C.ExecuteUbergraph_DinoTamedInventoryComponent_TekStrider
 struct UDinoTamedInventoryComponent_TekStrider_C_ExecuteUbergraph_DinoTamedInventoryComponent_TekStrider_Params

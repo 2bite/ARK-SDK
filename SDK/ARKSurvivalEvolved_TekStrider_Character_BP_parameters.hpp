@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,13 +21,21 @@ struct ATekStrider_Character_BP_C_Get_Charge_Variable_Interface_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.GetNumBatteries
 struct ATekStrider_Character_BP_C_GetNumBatteries_Params
 {
 	int                                                numBatteries;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPOnDinoCheat
+struct ATekStrider_Character_BP_C_BPOnDinoCheat_Params
+{
+	struct FName*                                      CheatName;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bSetValue;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Restrict Transmitter VFX
@@ -123,6 +131,7 @@ struct ATekStrider_Character_BP_C_Force_Destroy_Strider_Params
 struct ATekStrider_Character_BP_C_affinity_per_hack_calculation_Params
 {
 	float                                              Taming_speed_multiplier;                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               for_detecting_affinity;                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 	bool                                               in_grace_period;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              time_until_grace_period_ends;                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -338,8 +347,8 @@ struct ATekStrider_Character_BP_C_BlueprintGetAttackWeight_Params
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.combined can attack
 struct ATekStrider_Character_BP_C_combined_can_attack_Params
 {
-	int                                                Attack_Index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              DIst;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Attack_index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Dist;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              attack_range_offset;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               can_attack;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -361,8 +370,8 @@ struct ATekStrider_Character_BP_C_BlueprintCanAttack_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function TekStrider_Character_BP.TekStrider_Character_BP_C.Print String Manual
-struct ATekStrider_Character_BP_C_Print_String_Manual_Params
+// Function TekStrider_Character_BP.TekStrider_Character_BP_C.print string manual
+struct ATekStrider_Character_BP_C_print_string_manual_Params
 {
 	class FString                                      String;                                                   // (Parm, ZeroConstructor)
 };
@@ -557,7 +566,7 @@ struct ATekStrider_Character_BP_C_Has_Mutagel_Ready_Params
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Has Required Mutagel
 struct ATekStrider_Character_BP_C_Has_Required_Mutagel_Params
 {
-	class UObject*                                     Player_Controller;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     player_controller;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 	int                                                Mutagel_Player_Has;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                Mutagel_Required;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -665,8 +674,8 @@ struct ATekStrider_Character_BP_C_hacking_success_Params
 {
 };
 
-// Function TekStrider_Character_BP.TekStrider_Character_BP_C.sync mission complete status
-struct ATekStrider_Character_BP_C_sync_mission_complete_status_Params
+// Function TekStrider_Character_BP.TekStrider_Character_BP_C.Sync Mission Complete Status
+struct ATekStrider_Character_BP_C_Sync_Mission_Complete_Status_Params
 {
 	class AShooterCharacter*                           Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -1014,14 +1023,14 @@ struct ATekStrider_Character_BP_C_ChargeVariableEventDoubleInterface_Params
 struct ATekStrider_Character_BP_C_ChargeVariableEventIntInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.ChargeVariableEventIntMulticastInterface
 struct ATekStrider_Character_BP_C_ChargeVariableEventIntMulticastInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.OnAttachmentBuffAdded
@@ -1103,7 +1112,7 @@ struct ATekStrider_Character_BP_C_Charge_Variable_Event_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Charge Variable Event Trigger Multicast Interface
@@ -1131,7 +1140,7 @@ struct ATekStrider_Character_BP_C_Set_Charge_Variable_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               triggerEvent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               multicastEvent;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.RandomizeUntamedStart

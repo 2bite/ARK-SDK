@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,7 +73,7 @@ void ABuff_AttachedToBeam_C::BPSetupForInstigator(class AActor** ForInstigator)
 
 
 // Function Buff_AttachedToBeam.Buff_AttachedToBeam_C.DoStruggle
-// (NetReliable, NetRequest, Native, NetResponse, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, BlueprintEvent)
 
 void ABuff_AttachedToBeam_C::DoStruggle()
 {

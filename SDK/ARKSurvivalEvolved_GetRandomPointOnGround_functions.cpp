@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GetRandomPointOnGround.GetRandomPointOnGround_C.ReceiveExecute
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetReliable, Event, Static, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UGetRandomPointOnGround_C::STATIC_ReceiveExecute(class AActor** OwnerActor)
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

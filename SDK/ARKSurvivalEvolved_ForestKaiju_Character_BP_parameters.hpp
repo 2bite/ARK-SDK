@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -676,23 +676,23 @@ struct AForestKaiju_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_176
-struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_176_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_186
+struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_186_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_175
-struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_175_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_185
+struct AForestKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_185_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_174
-struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_174_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184
+struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_184_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_173
-struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_173_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_183
+struct AForestKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_183_Params
 {
 };
 
@@ -718,8 +718,8 @@ struct AForestKaiju_Character_BP_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.MULTI_SetNodeColor
-struct AForestKaiju_Character_BP_C_MULTI_SetNodeColor_Params
+// Function ForestKaiju_Character_BP.ForestKaiju_Character_BP_C.Multi_SetNodeColor
+struct AForestKaiju_Character_BP_C_Multi_SetNodeColor_Params
 {
 	int                                                Node;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Alpha;                                                    // (Parm, ZeroConstructor, IsPlainOldData)

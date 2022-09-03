@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -139,9 +139,9 @@ class APrimalCharacter* ABuff_RemoteCameraVision_C::BPOverrideTalkerCharacter()
 // Function Buff_RemoteCameraVision.Buff_RemoteCameraVision_C.IsLocalCamera
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_RemoteCameraVision_C::IsLocalCamera(bool* Retval)
+void ABuff_RemoteCameraVision_C::IsLocalCamera(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_RemoteCameraVision.Buff_RemoteCameraVision_C.IsLocalCamera");
 
@@ -153,8 +153,8 @@ void ABuff_RemoteCameraVision_C::IsLocalCamera(bool* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 

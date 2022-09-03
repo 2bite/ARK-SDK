@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Tek_Portal_RIG_AnimBlueprint.Tek_Portal_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Portal_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2680
+// Function Tek_Portal_RIG_AnimBlueprint.Tek_Portal_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Portal_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2932
 // ()
 
-void UTek_Portal_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Portal_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2680()
+void UTek_Portal_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Portal_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2932()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tek_Portal_RIG_AnimBlueprint.Tek_Portal_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Portal_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2680");
+	static auto fn = UObject::FindObject<UFunction>("Function Tek_Portal_RIG_AnimBlueprint.Tek_Portal_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Portal_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2932");
 
-	UTek_Portal_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Portal_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2680_Params params;
+	UTek_Portal_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_Portal_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2932_Params params;
 
 	auto flags = fn->FunctionFlags;
 

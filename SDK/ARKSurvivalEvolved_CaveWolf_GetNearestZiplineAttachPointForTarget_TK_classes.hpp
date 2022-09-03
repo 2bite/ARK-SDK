@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,7 +37,7 @@ public:
 	}
 
 
-	void FindAttachLocation(struct FVector* GroundLocation, struct FVector* AttachLocation);
+	void STATIC_FindAttachLocation(struct FVector* GroundLocation, struct FVector* AttachLocation);
 	void ReceiveExecute(class AActor** OwnerActor);
 	void ExecuteUbergraph_CaveWolf_GetNearestZiplineAttachPointForTarget_TK(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -111,7 +111,7 @@ public:
 
 
 	struct FLinearColor Get_RepairPanel_BrushColor_1();
-	struct FText Get_SkiffModeSubStatusTextBlock_Text_1();
+	struct FText STATIC_Get_SkiffModeSubStatusTextBlock_Text_1();
 	struct FText Get_RepairLabelTextBlock_Text_1();
 	void WidgetBoolToVisibilty(class UObject* TargetWidget, bool IsVisible, bool UseHiddenInsteadOfCollapsed);
 	void UpdateRepairProgressBarsPercentAndForegroundColor();
@@ -131,12 +131,12 @@ public:
 	void DimGaugesAndNeedlesOnBool(bool Bool);
 	void OnShowExtendedInfoKeyPressed();
 	struct FText STATIC_Get_RepairValueTextBlock_Text_1();
-	struct FText Get_AltFuelValueTextBlock_Text_1();
+	struct FText STATIC_Get_AltFuelValueTextBlock_Text_1();
 	struct FSlateBrush Get_AltFuelIcon_Brush_1();
-	struct FText Get_SkiffModeValueTextBlock_Text_1();
-	struct FText Get_AltitudeValueTextBlock_Text_1();
-	struct FText Get_AltitudeLabelTextBlock_Text_1();
-	struct FText Get_Debug_Text_0();
+	struct FText STATIC_Get_SkiffModeValueTextBlock_Text_1();
+	struct FText STATIC_Get_AltitudeValueTextBlock_Text_1();
+	struct FText STATIC_Get_AltitudeLabelTextBlock_Text_1();
+	struct FText STATIC_Get_Debug_Text_0();
 	struct FText Get_FuelReserveTextBlock_Text_1();
 	void STATIC_Set_Progress_Bar_Fill_And_Background_Colors(class UProgressBar* ProgressBar, const struct FLinearColor& LinearColor, struct FProgressBarStyle* ProgressBarStyle);
 	struct FText Get_CurrentElementValueTextBlock_Text_1();
@@ -144,7 +144,7 @@ public:
 	struct FLinearColor Get_Crosshair_ColorAndOpacity_1();
 	struct FLinearColor Get_CameraLockIcon_ColorAndOpacity_1();
 	struct FText Get_FuelConsumptionRateValueTextBlock_Text_1();
-	struct FText Get_ElementFuelValueTextBlock_Text_1();
+	struct FText STATIC_Get_ElementFuelValueTextBlock_Text_1();
 	void InitFromSkiff(class ATekHoverSkiff_Character_BP_C* FromSkiff);
 	void StartClosingWidget(float NewLifeSpan);
 	void DestroySkiffHudWidget();

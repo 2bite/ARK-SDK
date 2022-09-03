@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function StructureTurretPlant.StructureTurretPlant_C.BPOnDemolish
-// (NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetResponse, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void AStructureTurretPlant_C::BPOnDemolish(class APlayerController** ForPC, clas
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,13 +91,13 @@ void AStructureTurretPlant_C::Turret_Check_Hard_Limit()
 
 
 // Function StructureTurretPlant.StructureTurretPlant_C.BlueprintDrawHUD
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructureTurretPlant_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void AStructureTurretPlant_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTurretPlant.StructureTurretPlant_C.BlueprintDrawHUD");
 

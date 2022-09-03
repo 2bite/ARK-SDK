@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,60 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.WithdrawAmount
+struct ABP_DedicatedStorage_C_WithdrawAmount_Params
+{
+	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                amount;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPOnTransferAll
+struct ABP_DedicatedStorage_C_BPOnTransferAll_Params
+{
+	class UPrimalInventoryComponent**                  toInventory;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.UpdateItemCount
+struct ABP_DedicatedStorage_C_UpdateItemCount_Params
+{
+};
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPPostLoadedFromSaveGame
+struct ABP_DedicatedStorage_C_BPPostLoadedFromSaveGame_Params
+{
+};
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPClientDoMultiUse
+struct ABP_DedicatedStorage_C_BPClientDoMultiUse_Params
+{
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               ClientUseIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.AddTopAndBottomMenuEntries
+struct ABP_DedicatedStorage_C_AddTopAndBottomMenuEntries_Params
+{
+	TArray<struct FMultiUseEntry>                      Entries;                                                  // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.OnRep_TopAndBottomRotation
+struct ABP_DedicatedStorage_C_OnRep_TopAndBottomRotation_Params
+{
+};
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.OnRep_HideTopAndBottom
+struct ABP_DedicatedStorage_C_OnRep_HideTopAndBottom_Params
+{
+};
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.CanMakeDeposit
+struct ABP_DedicatedStorage_C_CanMakeDeposit_Params
+{
+	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.IsPlayerControllerValid
 struct ABP_DedicatedStorage_C_IsPlayerControllerValid_Params

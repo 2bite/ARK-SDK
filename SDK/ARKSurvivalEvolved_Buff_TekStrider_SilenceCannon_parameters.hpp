@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -64,7 +64,7 @@ struct ABuff_TekStrider_SilenceCannon_C_IsDinoInCone__Params
 {
 	class APrimalCharacter*                            Dino;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FHitResult>                          hit_result;                                               // (Parm, OutParm, ZeroConstructor, ReferenceParm)
-	bool                                               isInCone;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInCone;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekStrider_SilenceCannon.Buff_TekStrider_SilenceCannon_C.Get Cone Forward

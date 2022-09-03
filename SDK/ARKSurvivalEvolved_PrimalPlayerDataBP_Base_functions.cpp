@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,81 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.SetChibiLevels
+// ()
+// Parameters:
+// int*                           newLevels                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalPlayerDataBP_Base_C::SetChibiLevels(int* newLevels, class AShooterPlayerController** ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.SetChibiLevels");
+
+	UPrimalPlayerDataBP_Base_C_SetChibiLevels_Params params;
+	params.newLevels = newLevels;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.HasGeneralizedAchievementTag
+// ()
+// Parameters:
+// struct FName*                  Tag                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPrimalPlayerDataBP_Base_C::HasGeneralizedAchievementTag(struct FName* Tag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.HasGeneralizedAchievementTag");
+
+	UPrimalPlayerDataBP_Base_C_HasGeneralizedAchievementTag_Params params;
+	params.Tag = Tag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.GrantGeneralizedAchievementTag
+// ()
+// Parameters:
+// struct FName*                  ObtainedAchievementTag         (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalPlayerDataBP_Base_C::GrantGeneralizedAchievementTag(struct FName* ObtainedAchievementTag, class AShooterPlayerController** ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.GrantGeneralizedAchievementTag");
+
+	UPrimalPlayerDataBP_Base_C_GrantGeneralizedAchievementTag_Params params;
+	params.ObtainedAchievementTag = ObtainedAchievementTag;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss
-// (NetRequest, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           DifficultyIndex                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName*                  BossName                       (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalPlayerDataBP_Base_C::BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController)
+void UPrimalPlayerDataBP_Base_C::STATIC_BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPForceDefeatedBoss");
 
@@ -29,7 +96,6 @@ void UPrimalPlayerDataBP_Base_C::BPForceDefeatedBoss(int* DifficultyIndex, struc
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

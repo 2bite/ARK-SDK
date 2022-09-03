@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_TaxidermyDermis.PrimalItem_TaxidermyDermis_C.BPInitIconMaterial
-// (Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void UPrimalItem_TaxidermyDermis_C::BPInitIconMaterial()
 {

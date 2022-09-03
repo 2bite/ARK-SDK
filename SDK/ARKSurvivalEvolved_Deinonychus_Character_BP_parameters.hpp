@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,127 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsUsingZipline
+struct ADeinonychus_Character_BP_C_IsUsingZipline_Params
+{
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Is Playing Latched Jump Anim Public
+struct ADeinonychus_Character_BP_C_Is_Playing_Latched_Jump_Anim_Public_Params
+{
+	float                                              TimeFromEndToConsiderFinished;                            // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.CanUpdateRotation
+struct ADeinonychus_Character_BP_C_CanUpdateRotation_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.updateRotation
+struct ADeinonychus_Character_BP_C_updateRotation_Params
+{
+	float                                              DeltaSeconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetUberpounceTraceStartingLocation
+struct ADeinonychus_Character_BP_C_GetUberpounceTraceStartingLocation_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateErrorTolerance
+struct ADeinonychus_Character_BP_C_UpdateErrorTolerance_Params
+{
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidUberpounceTargetingData
+struct ADeinonychus_Character_BP_C_IsValidUberpounceTargetingData_Params
+{
+	struct FUberpounceData                             TargetingData;                                            // (Parm)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.MultiRequestJumpFn
+struct ADeinonychus_Character_BP_C_MultiRequestJumpFn_Params
+{
+	struct FVector                                     Velocity;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.CanContinueUberpounce
+struct ADeinonychus_Character_BP_C_CanContinueUberpounce_Params
+{
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetDelayBeforeLatchAfterLatchedJump
+struct ADeinonychus_Character_BP_C_GetDelayBeforeLatchAfterLatchedJump_Params
+{
+	float                                              LatchedJumpTimeToAutoLatch;                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.JumpFromUberpounce
+struct ADeinonychus_Character_BP_C_JumpFromUberpounce_Params
+{
+	float                                              JumpStrength;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsPlayingLatchedJumpAnim
+struct ADeinonychus_Character_BP_C_IsPlayingLatchedJumpAnim_Params
+{
+	float                                              TimeFromEndToConsiderFinished;                            // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetTargetFOV
+struct ADeinonychus_Character_BP_C_GetTargetFOV_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerEndUberpounceFn
+struct ADeinonychus_Character_BP_C_ServerEndUberpounceFn_Params
+{
+	struct FVector                                     Velocity;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                MontageToPlayOnNonZeroVelocity;                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TickSetRotation
+struct ADeinonychus_Character_BP_C_TickSetRotation_Params
+{
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateRotationForUberpounce
+struct ADeinonychus_Character_BP_C_UpdateRotationForUberpounce_Params
+{
+	float                                              PercentDistanceToTarget;                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    TargetRotation;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetFallingLatchingAngles
+struct ADeinonychus_Character_BP_C_GetFallingLatchingAngles_Params
+{
+	TArray<float>                                      FallingLatchingAngles;                                    // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidUberpounceDataForLatching
+struct ADeinonychus_Character_BP_C_IsValidUberpounceDataForLatching_Params
+{
+	struct FUberpounceData                             Data;                                                     // (Parm)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidDirectionForLatchingSurfaceTrace
+struct ADeinonychus_Character_BP_C_IsValidDirectionForLatchingSurfaceTrace_Params
+{
+	struct FVector                                     Direction;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPRemovedAsPassenger
 struct ADeinonychus_Character_BP_C_BPRemovedAsPassenger_Params
@@ -45,14 +166,14 @@ struct ADeinonychus_Character_BP_C_OnNonInstanceJumpOffWallInput_Params
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetLatchJumpSpeedThresholdForRotate
 struct ADeinonychus_Character_BP_C_GetLatchJumpSpeedThresholdForRotate_Params
 {
-	float                                              res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              Res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.SpawnUberJumpFX
 struct ADeinonychus_Character_BP_C_SpawnUberJumpFX_Params
 {
 	TArray<struct FName>                               Attach_Point_Names;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
-	class UParticleSystem*                             FX_to_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             FX_To_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    Rotation;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -269,8 +390,8 @@ struct ADeinonychus_Character_BP_C_Get_Uberpounce_Position_Offset_Curves_Params
 	class UCurveFloat*                                 RetXYMult;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Has Latchable Surface In Front
-struct ADeinonychus_Character_BP_C_Has_Latchable_Surface_In_Front_Params
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Has Latchable SurfaceWhileFalling
+struct ADeinonychus_Character_BP_C_Has_Latchable_SurfaceWhileFalling_Params
 {
 	bool                                               RetSucccess;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FUberpounceData                             RetResultUberpounceData;                                  // (Parm, OutParm)
@@ -347,7 +468,7 @@ struct ADeinonychus_Character_BP_C_OnDeinonychusLatchedAttack_Params
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.AllowSurfaceNormalForUberpounce
 struct ADeinonychus_Character_BP_C_AllowSurfaceNormalForUberpounce_Params
 {
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -390,6 +511,7 @@ struct ADeinonychus_Character_BP_C_LatchedJump_Params
 	float                                              JumpStrength;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsLatchedAutoJump;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     WallHugDirection;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DirectionOverride;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsNonAuthoritativeClient
@@ -444,6 +566,7 @@ struct ADeinonychus_Character_BP_C_IsValidGeoTypeForUberpounce_Params
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         HitComponent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               RetIsFoliage;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPAdjustAttackIndex
@@ -654,7 +777,7 @@ struct ADeinonychus_Character_BP_C_GetDebugString_Params
 struct ADeinonychus_Character_BP_C_Get_RotationAndLocation_for_UberpounceOnSurface_Params
 {
 	struct FVector                                     Location;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         HitComponent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     DeinonychusLocation;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    retRotation;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -666,13 +789,14 @@ struct ADeinonychus_Character_BP_C_Get_RotationAndLocation_for_UberpounceOnSurfa
 struct ADeinonychus_Character_BP_C_IsValidGeoLocationForUberpounce_Params
 {
 	struct FVector                                     Location;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     DeinonychusLocation;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    DeinonychusRotation;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         HitComponent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsGround;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFoliage;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BP_InterceptTurnInput
@@ -853,13 +977,13 @@ struct ADeinonychus_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_357
-struct ADeinonychus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_357_Params
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_249
+struct ADeinonychus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_249_Params
 {
 };
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_356
-struct ADeinonychus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_356_Params
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_248
+struct ADeinonychus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_248_Params
 {
 };
 
@@ -944,6 +1068,8 @@ struct ADeinonychus_Character_BP_C_MultiUpdateCurrentDataLocation_Params
 struct ADeinonychus_Character_BP_C_ServerStartUberpounceFromFalling_Params
 {
 	struct FUberpounceData                             Data;                                                     // (Parm)
+	struct FVector                                     Location;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    Rotation;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.MultiStartUberpounceFromFalling
@@ -1002,9 +1128,9 @@ struct ADeinonychus_Character_BP_C_MULTI_ApplyAtCliffTopVelocity_Params
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.MULTI_TargetDodgedUberPounce
 struct ADeinonychus_Character_BP_C_MULTI_TargetDodgedUberPounce_Params
 {
-	struct FVector                                     newTargetLocation;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     NewTargetLocation;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    NewTargetRotation;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	class APrimalCharacter*                            oldTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            OldTarget;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPUnstasis
@@ -1032,20 +1158,42 @@ struct ADeinonychus_Character_BP_C_ServerSetLocDuringLatchedJump_Params
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Client_CallServerMulticast_JumpFX
 struct ADeinonychus_Character_BP_C_Client_CallServerMulticast_JumpFX_Params
 {
-	class UParticleSystem*                             FX_to_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             FX_To_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FName>                               Attach_Point_Names;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Multicast_JumpFX
 struct ADeinonychus_Character_BP_C_Multicast_JumpFX_Params
 {
-	class UParticleSystem*                             FX_to_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem*                             FX_To_Spawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FName>                               Attach_Point_Names;                                       // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.SpawnLocalClinetSuperJumpFX
 struct ADeinonychus_Character_BP_C_SpawnLocalClinetSuperJumpFX_Params
 {
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerSlideInputPressed
+struct ADeinonychus_Character_BP_C_ServerSlideInputPressed_Params
+{
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerSlideInputReleased
+struct ADeinonychus_Character_BP_C_ServerSlideInputReleased_Params
+{
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TimeOutUberpounceRequest
+struct ADeinonychus_Character_BP_C_TimeOutUberpounceRequest_Params
+{
+};
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerUpdateTransformDuringLatchedJump
+struct ADeinonychus_Character_BP_C_ServerUpdateTransformDuringLatchedJump_Params
+{
+	struct FVector                                     L;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    R;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ExecuteUbergraph_Deinonychus_Character_BP

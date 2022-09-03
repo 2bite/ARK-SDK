@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ public:
 	bool                                               bRefreshingNullSlots;                                     // 0x0E20(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0E21(0x0007) MISSED OFFSET
 	TArray<struct FHotbarIconStruct>                   ItemIcons;                                                // 0x0E28(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance)
-	class AStructure_LoadoutDummy_C*                   ServerDummy;                                              // 0x0E38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class AStructure_TaxidermyBase_C*                  ServerDummy;                                              // 0x0E38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	struct FVector2D                                   BeginPlayAmortizationRange;                               // 0x0E40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                Temp_int_Loop_Counter_Variable;                           // 0x0E48(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0E4C(0x0004) MISSED OFFSET
@@ -74,7 +74,7 @@ public:
 	void RefreshNullSlots();
 	void RemoveAllItems();
 	void BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem);
-	void RefreshItemIcons();
+	void STATIC_RefreshItemIcons();
 	void UserConstructionScript();
 	void Multi_SetSlotImages();
 	void ReceiveBeginPlay();

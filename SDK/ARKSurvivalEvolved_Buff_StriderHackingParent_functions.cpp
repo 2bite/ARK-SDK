@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,88 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Look Out for Timeout
+// ()
+
+void ABuff_StriderHackingParent_C::Look_Out_for_Timeout()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Look Out for Timeout");
+
+	ABuff_StriderHackingParent_C_Look_Out_for_Timeout_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Fallback
+// ()
+
+void ABuff_StriderHackingParent_C::Fallback()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Fallback");
+
+	ABuff_StriderHackingParent_C_Fallback_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Update Buff Timer server logic
+// ()
+// Parameters:
+// bool                           Success                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           from_player_trigger            (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_StriderHackingParent_C::Update_Buff_Timer_server_logic(bool Success, bool from_player_trigger)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Update Buff Timer server logic");
+
+	ABuff_StriderHackingParent_C_Update_Buff_Timer_server_logic_Params params;
+	params.Success = Success;
+	params.from_player_trigger = from_player_trigger;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Play Weapon Montage server logic
+// ()
+// Parameters:
+// bool                           Success                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           isnt_from_player_input         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Started                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_StriderHackingParent_C::Play_Weapon_Montage_server_logic(bool Success, bool isnt_from_player_input, bool* Started)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Play Weapon Montage server logic");
+
+	ABuff_StriderHackingParent_C_Play_Weapon_Montage_server_logic_Params params;
+	params.Success = Success;
+	params.isnt_from_player_input = isnt_from_player_input;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Started != nullptr)
+		*Started = params.Started;
+}
+
 
 // Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Recieved Input
 // ()

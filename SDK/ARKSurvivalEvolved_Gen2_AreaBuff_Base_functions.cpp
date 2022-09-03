@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,15 +47,16 @@ void AGen2_AreaBuff_Base_C::SetInSPZ()
 
 
 // Function Gen2_AreaBuff_Base.Gen2_AreaBuff_Base_C.CheckOverhang
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void AGen2_AreaBuff_Base_C::STATIC_CheckOverhang()
+void AGen2_AreaBuff_Base_C::CheckOverhang()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gen2_AreaBuff_Base.Gen2_AreaBuff_Base_C.CheckOverhang");
 
 	AGen2_AreaBuff_Base_C_CheckOverhang_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,30 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function TekTransmitter_Strider.TekTransmitter_Strider_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Native, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetResponse, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void ATekTransmitter_Strider_C::ReceiveBeginPlay()
+void ATekTransmitter_Strider_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekTransmitter_Strider.TekTransmitter_Strider_C.ReceiveBeginPlay");
 
 	ATekTransmitter_Strider_C_ReceiveBeginPlay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TekTransmitter_Strider.TekTransmitter_Strider_C.BPContainerDeactivated
+// (NetReliable, Native, NetResponse, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+
+void ATekTransmitter_Strider_C::STATIC_BPContainerDeactivated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TekTransmitter_Strider.TekTransmitter_Strider_C.BPContainerDeactivated");
+
+	ATekTransmitter_Strider_C_BPContainerDeactivated_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -30,27 +47,10 @@ void ATekTransmitter_Strider_C::ReceiveBeginPlay()
 }
 
 
-// Function TekTransmitter_Strider.TekTransmitter_Strider_C.BPContainerDeactivated
-// (NetReliable, Exec, Event, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
-
-void ATekTransmitter_Strider_C::BPContainerDeactivated()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TekTransmitter_Strider.TekTransmitter_Strider_C.BPContainerDeactivated");
-
-	ATekTransmitter_Strider_C_BPContainerDeactivated_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function TekTransmitter_Strider.TekTransmitter_Strider_C.BPContainerActivated
-// (NetReliable, NetRequest, Native, Event, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void ATekTransmitter_Strider_C::BPContainerActivated()
+void ATekTransmitter_Strider_C::STATIC_BPContainerActivated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekTransmitter_Strider.TekTransmitter_Strider_C.BPContainerActivated");
 

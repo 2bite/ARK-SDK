@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Crab_Character_BP_Summoned.Crab_Character_BP_Summoned_C
-// 0x0000 (0x27D8 - 0x27D8)
+// 0x0000 (0x27F8 - 0x27F8)
 class ACrab_Character_BP_Summoned_C : public ACrab_Character_BP_C
 {
 public:

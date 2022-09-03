@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,13 +57,13 @@ void ABase_Pipe_Flex_C::IsAllowedToRefreshConnections(class APlayerController* F
 
 
 // Function Base_Pipe_Flex.Base_Pipe_Flex_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Event, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, NetMulticast, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABase_Pipe_Flex_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABase_Pipe_Flex_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Base_Pipe_Flex.Base_Pipe_Flex_C.BPGetMultiUseEntries");
 
@@ -71,6 +71,7 @@ TArray<struct FMultiUseEntry> ABase_Pipe_Flex_C::BPGetMultiUseEntries(class APla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,7 +172,7 @@ class FString ABase_Pipe_Flex_C::BPOverrideCantBuildReasonString(int* CantBuildR
 
 
 // Function Base_Pipe_Flex.Base_Pipe_Flex_C.AddSplineMeshComponents
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           UsePreviewMaterial             (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -183,7 +184,6 @@ void ABase_Pipe_Flex_C::AddSplineMeshComponents(bool UsePreviewMaterial)
 	params.UsePreviewMaterial = UsePreviewMaterial;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass TEKHoverSail_AnimBlueprint.TEKHoverSail_AnimBlueprint_C
-// 0x174D (0x1A8D - 0x0340)
+// 0x1755 (0x1A95 - 0x0340)
 class UTEKHoverSail_AnimBlueprint_C : public UAnimInstance
 {
 public:
@@ -127,7 +127,7 @@ public:
 	struct FAnimNode_ConvertLocalToComponentSpace      AnimGraphNode_LocalToComponentSpace_DAB6C6884312BE94869F25ABAB7EF35B;// 0x1610(0x0028)
 	struct FAnimNode_ConvertComponentToLocalSpace      AnimGraphNode_ComponentToLocalSpace_D8FBE1704564695BE61B40977FD0EF67;// 0x1638(0x0028)
 	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_329736D342C4E87E2D66E78AAAB03CF1;// 0x1660(0x0028)
-	bool                                               Sail_Is_Open;                                             // 0x1688(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               sail_is_open;                                             // 0x1688(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x1689(0x0003) MISSED OFFSET
 	float                                              VerticalAnimBlendInterpSpeed;                             // 0x168C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     MovementAnimBlendAxes;                                    // 0x1690(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -228,211 +228,213 @@ public:
 	unsigned char                                      UnknownData08[0x2];                                       // 0x180A(0x0002) MISSED OFFSET
 	float                                              CallFunc_SelectFloat_ReturnValue;                         // 0x180C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_SelectFloat_ReturnValue2;                        // 0x1810(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue4;                  // 0x1814(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue9;                        // 0x1815(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x2];                                       // 0x1816(0x0002) MISSED OFFSET
-	float                                              CallFunc_BreakVector_X2;                                  // 0x1818(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Y2;                                  // 0x181C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Z2;                                  // 0x1820(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue3;                           // 0x1824(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue5;                  // 0x1828(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x3];                                       // 0x1829(0x0003) MISSED OFFSET
-	float                                              CallFunc_Subtract_FloatFloat_ReturnValue;                 // 0x182C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue4;                           // 0x1830(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue3;                        // 0x1814(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue4;                  // 0x1818(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue9;                        // 0x1819(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x2];                                       // 0x181A(0x0002) MISSED OFFSET
+	float                                              CallFunc_BreakVector_X2;                                  // 0x181C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Y2;                                  // 0x1820(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Z2;                                  // 0x1824(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue3;                           // 0x1828(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue4;                           // 0x182C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Subtract_FloatFloat_ReturnValue;                 // 0x1830(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_FClamp_ReturnValue;                              // 0x1834(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue6;                  // 0x1838(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue10;                       // 0x1839(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue2;                          // 0x183A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue3;                          // 0x183B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_X3;                                  // 0x183C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Y3;                                  // 0x1840(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Z3;                                  // 0x1844(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue5;                           // 0x1848(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue7;                  // 0x184C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x3];                                       // 0x184D(0x0003) MISSED OFFSET
-	float                                              CallFunc_Subtract_FloatFloat_ReturnValue2;                // 0x1850(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue11;                       // 0x1854(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x3];                                       // 0x1855(0x0003) MISSED OFFSET
-	float                                              CallFunc_MapRange_ReturnValue6;                           // 0x1858(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_X4;                                  // 0x185C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Y4;                                  // 0x1860(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Z4;                                  // 0x1864(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Multiply_FloatFloat_ReturnValue2;                // 0x1868(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue7;                           // 0x186C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Multiply_FloatFloat_ReturnValue3;                // 0x1870(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue8;                           // 0x1874(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue4;                          // 0x1878(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue5;                          // 0x1879(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue8;                  // 0x187A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue9;                  // 0x187B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue12;                       // 0x187C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue13;                       // 0x187D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue6;                          // 0x187E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue7;                          // 0x187F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue10;                 // 0x1880(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue14;                       // 0x1881(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x2];                                       // 0x1882(0x0002) MISSED OFFSET
-	float                                              CallFunc_BreakVector_X5;                                  // 0x1884(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Y5;                                  // 0x1888(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Z5;                                  // 0x188C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Multiply_FloatFloat_ReturnValue4;                // 0x1890(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue9;                           // 0x1894(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue10;                          // 0x1898(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_NearlyEqual_FloatFloat_ReturnValue2;             // 0x189C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x3];                                       // 0x189D(0x0003) MISSED OFFSET
-	float                                              CallFunc_SelectFloat_ReturnValue3;                        // 0x18A0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue5;                  // 0x1838(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue6;                  // 0x1839(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue10;                       // 0x183A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue2;                          // 0x183B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue3;                          // 0x183C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x3];                                       // 0x183D(0x0003) MISSED OFFSET
+	float                                              CallFunc_BreakVector_X3;                                  // 0x1840(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Y3;                                  // 0x1844(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Z3;                                  // 0x1848(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue5;                           // 0x184C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue7;                  // 0x1850(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x3];                                       // 0x1851(0x0003) MISSED OFFSET
+	float                                              CallFunc_Subtract_FloatFloat_ReturnValue2;                // 0x1854(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue11;                       // 0x1858(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x3];                                       // 0x1859(0x0003) MISSED OFFSET
+	float                                              CallFunc_MapRange_ReturnValue6;                           // 0x185C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_X4;                                  // 0x1860(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Y4;                                  // 0x1864(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Z4;                                  // 0x1868(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Multiply_FloatFloat_ReturnValue2;                // 0x186C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue7;                           // 0x1870(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Multiply_FloatFloat_ReturnValue3;                // 0x1874(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue8;                           // 0x1878(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue4;                          // 0x187C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue5;                          // 0x187D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue8;                  // 0x187E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue9;                  // 0x187F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue12;                       // 0x1880(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue13;                       // 0x1881(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue6;                          // 0x1882(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue7;                          // 0x1883(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue10;                 // 0x1884(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue14;                       // 0x1885(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x2];                                       // 0x1886(0x0002) MISSED OFFSET
+	float                                              CallFunc_BreakVector_X5;                                  // 0x1888(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Y5;                                  // 0x188C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Z5;                                  // 0x1890(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Multiply_FloatFloat_ReturnValue4;                // 0x1894(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue9;                           // 0x1898(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue10;                          // 0x189C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_NearlyEqual_FloatFloat_ReturnValue2;             // 0x18A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x3];                                       // 0x18A1(0x0003) MISSED OFFSET
 	float                                              CallFunc_SelectFloat_ReturnValue4;                        // 0x18A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_Event_DeltaTimeX;                                  // 0x18A8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x4];                                       // 0x18AC(0x0004) MISSED OFFSET
-	class APawn*                                       CallFunc_TryGetPawnOwner_ReturnValue;                     // 0x18B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class ATekHoverSail_Character_BP_C*                K2Node_DynamicCast_AsTekHoverSail_Character_BP_C;         // 0x18B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x18C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x3];                                       // 0x18C1(0x0003) MISSED OFFSET
-	float                                              CallFunc_BreakVector_X6;                                  // 0x18C4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Y6;                                  // 0x18C8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Z6;                                  // 0x18CC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Divide_FloatFloat_ReturnValue;                   // 0x18D0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x18D4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue15;                       // 0x18D5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue16;                       // 0x18D6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue6;                         // 0x18D7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue8;                          // 0x18D8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue9;                          // 0x18D9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue11;                 // 0x18DA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue17;                       // 0x18DB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Abs_ReturnValue;                                 // 0x18DC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Greater_FloatFloat_ReturnValue;                  // 0x18E0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData17[0x3];                                       // 0x18E1(0x0003) MISSED OFFSET
-	float                                              CallFunc_SelectFloat_ReturnValue5;                        // 0x18E4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Divide_FloatFloat_ReturnValue2;                  // 0x18E8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_SelectFloat_ReturnValue6;                        // 0x18EC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Abs_ReturnValue2;                                // 0x18F0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Greater_FloatFloat_ReturnValue2;                 // 0x18F4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue18;                       // 0x18F5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x2];                                       // 0x18F6(0x0002) MISSED OFFSET
-	float                                              CallFunc_SelectFloat_ReturnValue7;                        // 0x18F8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue;                // 0x18FC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_FloatFloat_ReturnValue;                     // 0x18FD(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue12;                 // 0x18FE(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue19;                       // 0x18FF(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue10;                         // 0x1900(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Is_Near_Ground_not_pure_ReturnValue;             // 0x1901(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue20;                       // 0x1902(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue21;                       // 0x1903(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue7;                         // 0x1904(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue8;                         // 0x1905(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue13;                 // 0x1906(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue22;                       // 0x1907(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue2;               // 0x1908(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_FloatFloat_ReturnValue2;                    // 0x1909(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue23;                       // 0x190A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	TEnumAsByte<ENetRole>                              CallFunc_GetRole_ReturnValue;                             // 0x190B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue11;                         // 0x190C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_ByteByte_ReturnValue;                 // 0x190D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData19[0x2];                                       // 0x190E(0x0002) MISSED OFFSET
-	struct FVector                                     CallFunc_GetActorForwardVector_ReturnValue;               // 0x1910(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData20[0x4];                                       // 0x191C(0x0004) MISSED OFFSET
-	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x1920(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_TimeSince_Network_ReturnValue;                   // 0x1928(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_FloatFloat_ReturnValue3;                    // 0x192C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData21[0x3];                                       // 0x192D(0x0003) MISSED OFFSET
-	double                                             CallFunc_Conv_FloatToDouble_ReturnValue;                  // 0x1930(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue9;                         // 0x1938(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData22[0x3];                                       // 0x1939(0x0003) MISSED OFFSET
-	struct FVector                                     CallFunc_GetActorRightVector_ReturnValue;                 // 0x193C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Dot_VectorVector_ReturnValue;                    // 0x1948(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_GetMaxAcceleration_ReturnValue;                  // 0x194C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Greater_FloatFloat_ReturnValue3;                 // 0x1950(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData23[0x3];                                       // 0x1951(0x0003) MISSED OFFSET
-	struct FVector                                     CallFunc_SelectVector_ReturnValue;                        // 0x1954(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_SelectFloat_ReturnValue8;                        // 0x1960(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Dot_VectorVector_ReturnValue2;                   // 0x1964(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Dot_VectorVector_ReturnValue3;                   // 0x1968(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Divide_FloatFloat_ReturnValue3;                  // 0x196C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Divide_FloatFloat_ReturnValue4;                  // 0x1970(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_FClamp_ReturnValue2;                             // 0x1974(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_FClamp_ReturnValue3;                             // 0x1978(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_SelectFloat_ReturnValue9;                        // 0x197C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue2;                        // 0x1980(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue3;               // 0x1988(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData24[0x3];                                       // 0x1989(0x0003) MISSED OFFSET
-	float                                              CallFunc_TimeSince_Network_ReturnValue2;                  // 0x198C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue4;               // 0x1990(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData25[0x3];                                       // 0x1991(0x0003) MISSED OFFSET
-	float                                              CallFunc_Subtract_FloatFloat_ReturnValue3;                // 0x1994(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Subtract_FloatFloat_ReturnValue4;                // 0x1998(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_FInterpTo_ReturnValue;                           // 0x199C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue12;                         // 0x19A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue13;                         // 0x19A1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData26[0x2];                                       // 0x19A2(0x0002) MISSED OFFSET
-	float                                              CallFunc_Subtract_FloatFloat_ReturnValue5;                // 0x19A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Subtract_FloatFloat_ReturnValue6;                // 0x19A8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue10;                        // 0x19AC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue11;                        // 0x19AD(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue5;               // 0x19AE(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue6;               // 0x19AF(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue24;                       // 0x19B0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue14;                 // 0x19B1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue12;                        // 0x19B2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_is_cliff_diving_ReturnValue;                     // 0x19B3(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue15;                 // 0x19B4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue25;                       // 0x19B5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData27[0x2];                                       // 0x19B6(0x0002) MISSED OFFSET
-	struct FRotator                                    CallFunc_GetAimOffsets_RootRotOffset;                     // 0x19B8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_GetAimOffsets_TheRootYawSpeed;                   // 0x19C4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_GetAimOffsets_RootLocOffset;                     // 0x19C8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FRotator                                    CallFunc_GetAimOffsets_ReturnValue;                       // 0x19D4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue26;                       // 0x19E0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue13;                        // 0x19E1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue16;                 // 0x19E2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue17;                 // 0x19E3(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_SignOfFloat_ReturnValue;                         // 0x19E4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue14;                         // 0x19E8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData28[0x3];                                       // 0x19E9(0x0003) MISSED OFFSET
-	float                                              CallFunc_Multiply_FloatFloat_ReturnValue5;                // 0x19EC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_SelectFloat_ReturnValue10;                       // 0x19F0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Lerp_ReturnValue;                                // 0x19F4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_SelectVector_ReturnValue2;                       // 0x19F8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_X7;                                  // 0x1A04(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Y7;                                  // 0x1A08(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Z7;                                  // 0x1A0C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_SelectFloat_ReturnValue11;                       // 0x1A10(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_FInterpTo_ReturnValue2;                          // 0x1A14(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_FClamp_ReturnValue4;                             // 0x1A18(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_MakeVector_ReturnValue;                          // 0x1A1C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue18;                 // 0x1A28(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData29[0x3];                                       // 0x1A29(0x0003) MISSED OFFSET
-	struct FVector                                     CallFunc_Multiply_VectorFloat_ReturnValue;                // 0x1A2C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue27;                       // 0x1A38(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData30[0x3];                                       // 0x1A39(0x0003) MISSED OFFSET
-	float                                              CallFunc_SelectFloat_ReturnValue12;                       // 0x1A3C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Is_Near_Ground_not_pure_ReturnValue2;            // 0x1A40(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue14;                        // 0x1A41(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue28;                       // 0x1A42(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue15;                        // 0x1A43(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue16;                        // 0x1A44(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue29;                       // 0x1A45(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue30;                       // 0x1A46(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue17;                        // 0x1A47(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsPassengerSeatAvailable_ReturnValue;            // 0x1A48(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue31;                       // 0x1A49(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue32;                       // 0x1A4A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue33;                       // 0x1A4B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue34;                       // 0x1A4C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x1A4D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x1A4E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue3;                            // 0x1A4F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue4;                            // 0x1A50(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData31[0x3];                                       // 0x1A51(0x0003) MISSED OFFSET
-	struct FVector                                     CallFunc_K2_GetComponentLocation_ReturnValue;             // 0x1A54(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_GetSocketLocation_ReturnValue;                   // 0x1A60(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData32[0x4];                                       // 0x1A6C(0x0004) MISSED OFFSET
-	class UAnimInstance*                               CallFunc_GetAnimInstance_ReturnValue;                     // 0x1A70(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue5;                            // 0x1A78(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData33[0x7];                                       // 0x1A79(0x0007) MISSED OFFSET
-	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue3;                        // 0x1A80(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_TimeSince_ReturnValue;                           // 0x1A88(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_FloatFloat_ReturnValue4;                    // 0x1A8C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue5;                        // 0x18A8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue6;                        // 0x18AC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_Event_DeltaTimeX;                                  // 0x18B0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x4];                                       // 0x18B4(0x0004) MISSED OFFSET
+	class APawn*                                       CallFunc_TryGetPawnOwner_ReturnValue;                     // 0x18B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class ATekHoverSail_Character_BP_C*                K2Node_DynamicCast_AsTekHoverSail_Character_BP_C;         // 0x18C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x18C8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x3];                                       // 0x18C9(0x0003) MISSED OFFSET
+	float                                              CallFunc_BreakVector_X6;                                  // 0x18CC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Y6;                                  // 0x18D0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Z6;                                  // 0x18D4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Divide_FloatFloat_ReturnValue;                   // 0x18D8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x18DC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue15;                       // 0x18DD(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue16;                       // 0x18DE(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue6;                         // 0x18DF(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue8;                          // 0x18E0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue9;                          // 0x18E1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue11;                 // 0x18E2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue17;                       // 0x18E3(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Abs_ReturnValue;                                 // 0x18E4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Greater_FloatFloat_ReturnValue;                  // 0x18E8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData17[0x3];                                       // 0x18E9(0x0003) MISSED OFFSET
+	float                                              CallFunc_SelectFloat_ReturnValue7;                        // 0x18EC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Divide_FloatFloat_ReturnValue2;                  // 0x18F0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue8;                        // 0x18F4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Abs_ReturnValue2;                                // 0x18F8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Greater_FloatFloat_ReturnValue2;                 // 0x18FC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue18;                       // 0x18FD(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData18[0x2];                                       // 0x18FE(0x0002) MISSED OFFSET
+	float                                              CallFunc_SelectFloat_ReturnValue9;                        // 0x1900(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue;                // 0x1904(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_FloatFloat_ReturnValue;                     // 0x1905(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue12;                 // 0x1906(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue19;                       // 0x1907(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue10;                         // 0x1908(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Is_Near_Ground_not_pure_ReturnValue;             // 0x1909(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue20;                       // 0x190A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue21;                       // 0x190B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue7;                         // 0x190C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue8;                         // 0x190D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue13;                 // 0x190E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue22;                       // 0x190F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue2;               // 0x1910(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_FloatFloat_ReturnValue2;                    // 0x1911(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue23;                       // 0x1912(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<ENetRole>                              CallFunc_GetRole_ReturnValue;                             // 0x1913(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue11;                         // 0x1914(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_ByteByte_ReturnValue;                 // 0x1915(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData19[0x2];                                       // 0x1916(0x0002) MISSED OFFSET
+	struct FVector                                     CallFunc_GetActorForwardVector_ReturnValue;               // 0x1918(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData20[0x4];                                       // 0x1924(0x0004) MISSED OFFSET
+	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x1928(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_TimeSince_Network_ReturnValue;                   // 0x1930(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_FloatFloat_ReturnValue3;                    // 0x1934(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData21[0x3];                                       // 0x1935(0x0003) MISSED OFFSET
+	double                                             CallFunc_Conv_FloatToDouble_ReturnValue;                  // 0x1938(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue9;                         // 0x1940(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData22[0x3];                                       // 0x1941(0x0003) MISSED OFFSET
+	struct FVector                                     CallFunc_GetActorRightVector_ReturnValue;                 // 0x1944(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Dot_VectorVector_ReturnValue;                    // 0x1950(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_GetMaxAcceleration_ReturnValue;                  // 0x1954(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Greater_FloatFloat_ReturnValue3;                 // 0x1958(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData23[0x3];                                       // 0x1959(0x0003) MISSED OFFSET
+	struct FVector                                     CallFunc_SelectVector_ReturnValue;                        // 0x195C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue10;                       // 0x1968(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Dot_VectorVector_ReturnValue2;                   // 0x196C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Dot_VectorVector_ReturnValue3;                   // 0x1970(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Divide_FloatFloat_ReturnValue3;                  // 0x1974(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Divide_FloatFloat_ReturnValue4;                  // 0x1978(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_FClamp_ReturnValue2;                             // 0x197C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_FClamp_ReturnValue3;                             // 0x1980(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue11;                       // 0x1984(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue2;                        // 0x1988(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue3;               // 0x1990(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData24[0x3];                                       // 0x1991(0x0003) MISSED OFFSET
+	float                                              CallFunc_TimeSince_Network_ReturnValue2;                  // 0x1994(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue4;               // 0x1998(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData25[0x3];                                       // 0x1999(0x0003) MISSED OFFSET
+	float                                              CallFunc_Subtract_FloatFloat_ReturnValue3;                // 0x199C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Subtract_FloatFloat_ReturnValue4;                // 0x19A0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_FInterpTo_ReturnValue;                           // 0x19A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue12;                         // 0x19A8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue13;                         // 0x19A9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData26[0x2];                                       // 0x19AA(0x0002) MISSED OFFSET
+	float                                              CallFunc_Subtract_FloatFloat_ReturnValue5;                // 0x19AC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Subtract_FloatFloat_ReturnValue6;                // 0x19B0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue10;                        // 0x19B4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue11;                        // 0x19B5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue5;               // 0x19B6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue6;               // 0x19B7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue24;                       // 0x19B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue14;                 // 0x19B9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue12;                        // 0x19BA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_is_cliff_diving_ReturnValue;                     // 0x19BB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue15;                 // 0x19BC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue25;                       // 0x19BD(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData27[0x2];                                       // 0x19BE(0x0002) MISSED OFFSET
+	struct FRotator                                    CallFunc_GetAimOffsets_RootRotOffset;                     // 0x19C0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_GetAimOffsets_TheRootYawSpeed;                   // 0x19CC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_GetAimOffsets_RootLocOffset;                     // 0x19D0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FRotator                                    CallFunc_GetAimOffsets_ReturnValue;                       // 0x19DC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue26;                       // 0x19E8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue13;                        // 0x19E9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue16;                 // 0x19EA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue17;                 // 0x19EB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SignOfFloat_ReturnValue;                         // 0x19EC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue14;                         // 0x19F0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData28[0x3];                                       // 0x19F1(0x0003) MISSED OFFSET
+	float                                              CallFunc_Multiply_FloatFloat_ReturnValue5;                // 0x19F4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue12;                       // 0x19F8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Lerp_ReturnValue;                                // 0x19FC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_SelectVector_ReturnValue2;                       // 0x1A00(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_X7;                                  // 0x1A0C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Y7;                                  // 0x1A10(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Z7;                                  // 0x1A14(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue13;                       // 0x1A18(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_FInterpTo_ReturnValue2;                          // 0x1A1C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_FClamp_ReturnValue4;                             // 0x1A20(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_MakeVector_ReturnValue;                          // 0x1A24(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue18;                 // 0x1A30(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData29[0x3];                                       // 0x1A31(0x0003) MISSED OFFSET
+	struct FVector                                     CallFunc_Multiply_VectorFloat_ReturnValue;                // 0x1A34(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue27;                       // 0x1A40(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData30[0x3];                                       // 0x1A41(0x0003) MISSED OFFSET
+	float                                              CallFunc_SelectFloat_ReturnValue14;                       // 0x1A44(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Is_Near_Ground_not_pure_ReturnValue2;            // 0x1A48(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue14;                        // 0x1A49(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue28;                       // 0x1A4A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue15;                        // 0x1A4B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue16;                        // 0x1A4C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue29;                       // 0x1A4D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue30;                       // 0x1A4E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue17;                        // 0x1A4F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsPassengerSeatAvailable_ReturnValue;            // 0x1A50(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue31;                       // 0x1A51(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue32;                       // 0x1A52(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue33;                       // 0x1A53(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue34;                       // 0x1A54(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x1A55(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x1A56(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue3;                            // 0x1A57(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue4;                            // 0x1A58(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData31[0x3];                                       // 0x1A59(0x0003) MISSED OFFSET
+	struct FVector                                     CallFunc_K2_GetComponentLocation_ReturnValue;             // 0x1A5C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_GetSocketLocation_ReturnValue;                   // 0x1A68(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData32[0x4];                                       // 0x1A74(0x0004) MISSED OFFSET
+	class UAnimInstance*                               CallFunc_GetAnimInstance_ReturnValue;                     // 0x1A78(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue5;                            // 0x1A80(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData33[0x7];                                       // 0x1A81(0x0007) MISSED OFFSET
+	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue3;                        // 0x1A88(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_TimeSince_ReturnValue;                           // 0x1A90(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_FloatFloat_ReturnValue4;                    // 0x1A94(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -441,68 +443,68 @@ public:
 	}
 
 
-	void STATIC_Compose_Mesh_Transform_Offsets();
+	void STATIC_compose_mesh_transform_offsets();
 	void Process_Hover_IK(const struct FRotator& New_Target_Offset_Rot, float Delta, bool Reset);
 	void Hover_IK(bool* resetting, struct FRotator* new_target_rot_offset);
 	void Calculate_Mesh_Rotation_Offset(float Delta);
 	void Update_Root_Rotation_Offset(float delta_time);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2458();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2457();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2456();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2455();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2454();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2453();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2452();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2451();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2450();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2449();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2448();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2446();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2445();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2443();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2442();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2441();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2440();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2439();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2438();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2437();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2436();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2435();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2434();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2433();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2432();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2431();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2430();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2429();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2428();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2427();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2426();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2425();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2424();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2423();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2422();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2421();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2420();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2419();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2418();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2417();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2416();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2415();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2414();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2413();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2412();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2411();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2410();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2409();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_210();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_209();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_208();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_207();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendListByBool_2656();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_ApplyAdditive_253();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendListByBool_2655();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_206();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_ModifyBone_588();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2238();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2237();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2236();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2235();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2234();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2233();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2232();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2231();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2230();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2229();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2228();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2226();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2225();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2223();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2222();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2221();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2220();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2219();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2218();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2217();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2216();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2215();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2214();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2213();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2212();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2211();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2210();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2209();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2208();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2207();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2206();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2205();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2204();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2203();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2202();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2201();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2200();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2199();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2198();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2197();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2196();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2195();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2194();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2193();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2192();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2191();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2190();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_TransitionResult_2189();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_222();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_221();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_220();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_219();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendListByBool_2880();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_ApplyAdditive_289();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendListByBool_2879();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_BlendSpacePlayer_218();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TEKHoverSail_AnimBlueprint_AnimGraphNode_ModifyBone_612();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void BlueprintInitializeAnimation();
 	void ExecuteUbergraph_TEKHoverSail_AnimBlueprint(int EntryPoint);

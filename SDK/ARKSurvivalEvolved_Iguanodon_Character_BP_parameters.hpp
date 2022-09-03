@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -167,7 +167,7 @@ struct AIguanodon_Character_BP_C_ClientSetBipedState_Params
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.GetDefaultDino
 struct AIguanodon_Character_BP_C_GetDefaultDino_Params
 {
-	class AIguanodon_Character_BP_C*                   ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AIguanodon_Character_BP_C*                   Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.UserConstructionScript

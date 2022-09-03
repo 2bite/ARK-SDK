@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,11 +37,11 @@ void ADroppedItem_Mutagen_C::SpawnItem(class AActor* Manager, class AActor** Spa
 
 
 // Function DroppedItem_Mutagen.DroppedItem_Mutagen_C.UnlockExplorerNote
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADroppedItem_Mutagen_C::STATIC_UnlockExplorerNote(class UObject* Object)
+void ADroppedItem_Mutagen_C::UnlockExplorerNote(class UObject* Object)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_Mutagen.DroppedItem_Mutagen_C.UnlockExplorerNote");
 
@@ -211,6 +211,23 @@ void ADroppedItem_Mutagen_C::AdjustableSpawnDelayChanged()
 	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_Mutagen.DroppedItem_Mutagen_C.AdjustableSpawnDelayChanged");
 
 	ADroppedItem_Mutagen_C_AdjustableSpawnDelayChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function DroppedItem_Mutagen.DroppedItem_Mutagen_C.CheckForFallThrough
+// ()
+
+void ADroppedItem_Mutagen_C::CheckForFallThrough()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function DroppedItem_Mutagen.DroppedItem_Mutagen_C.CheckForFallThrough");
+
+	ADroppedItem_Mutagen_C_CheckForFallThrough_Params params;
 
 	auto flags = fn->FunctionFlags;
 

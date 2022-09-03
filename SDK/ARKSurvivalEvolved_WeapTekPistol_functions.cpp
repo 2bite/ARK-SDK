@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,9 +30,9 @@ void AWeapTekPistol_C::ReceiveDestroyed()
 
 
 // Function WeapTekPistol.WeapTekPistol_C.UpdateBeamSounds
-// (NetRequest, Event, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AWeapTekPistol_C::STATIC_UpdateBeamSounds()
+void AWeapTekPistol_C::UpdateBeamSounds()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekPistol.WeapTekPistol_C.UpdateBeamSounds");
 
@@ -47,9 +47,9 @@ void AWeapTekPistol_C::STATIC_UpdateBeamSounds()
 
 
 // Function WeapTekPistol.WeapTekPistol_C.UpdateMaterials
-// (Exec, Event, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AWeapTekPistol_C::STATIC_UpdateMaterials()
+void AWeapTekPistol_C::UpdateMaterials()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekPistol.WeapTekPistol_C.UpdateMaterials");
 
@@ -248,7 +248,7 @@ void AWeapTekPistol_C::SetFireModeOnItem(int Mode)
 
 
 // Function WeapTekPistol.WeapTekPistol_C.GetFireModeFromItem
-// (Native, Event, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -287,7 +287,7 @@ void AWeapTekPistol_C::BPAppliedPrimalItemToWeapon()
 
 
 // Function WeapTekPistol.WeapTekPistol_C.SelectBuff
-// (Exec, Native, Event, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -389,9 +389,9 @@ int AWeapTekPistol_C::BPWeaponDealDamage(int* DamageAmount, class UClass** Damag
 
 
 // Function WeapTekPistol.WeapTekPistol_C.ApplyBeamTarget
-// (NetReliable, NetRequest, NetResponse, Static, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AWeapTekPistol_C::STATIC_ApplyBeamTarget()
+void AWeapTekPistol_C::ApplyBeamTarget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekPistol.WeapTekPistol_C.ApplyBeamTarget");
 
@@ -406,11 +406,11 @@ void AWeapTekPistol_C::STATIC_ApplyBeamTarget()
 
 
 // Function WeapTekPistol.WeapTekPistol_C.BPPostSpawnMuzzleEffect
-// (NetReliable, NetRequest, Exec, NetResponse, Static, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UParticleSystemComponent** NewMuzzlePSC                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekPistol_C::STATIC_BPPostSpawnMuzzleEffect(class UParticleSystemComponent** NewMuzzlePSC)
+void AWeapTekPistol_C::BPPostSpawnMuzzleEffect(class UParticleSystemComponent** NewMuzzlePSC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekPistol.WeapTekPistol_C.BPPostSpawnMuzzleEffect");
 
@@ -418,6 +418,7 @@ void AWeapTekPistol_C::STATIC_BPPostSpawnMuzzleEffect(class UParticleSystemCompo
 	params.NewMuzzlePSC = NewMuzzlePSC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -426,11 +427,11 @@ void AWeapTekPistol_C::STATIC_BPPostSpawnMuzzleEffect(class UParticleSystemCompo
 
 
 // Function WeapTekPistol.WeapTekPistol_C.GetFireModeData
-// (NetReliable, NetRequest, Native, NetResponse, Static, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FTekPistolFireMode_Beam Item                           (Parm, OutParm)
 
-void AWeapTekPistol_C::STATIC_GetFireModeData(struct FTekPistolFireMode_Beam* Item)
+void AWeapTekPistol_C::GetFireModeData(struct FTekPistolFireMode_Beam* Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekPistol.WeapTekPistol_C.GetFireModeData");
 
@@ -469,11 +470,11 @@ void AWeapTekPistol_C::UpdateBeamTarget(const struct FVector& BeamTarget)
 
 
 // Function WeapTekPistol.WeapTekPistol_C.ReceiveTick
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekPistol_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void AWeapTekPistol_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekPistol.WeapTekPistol_C.ReceiveTick");
 
@@ -524,7 +525,7 @@ void AWeapTekPistol_C::BPOnBurstStarted()
 
 
 // Function WeapTekPistol.WeapTekPistol_C.UpdateFireMode
-// (NetReliable, Exec, Event, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AWeapTekPistol_C::UpdateFireMode()
 {
@@ -558,14 +559,14 @@ void AWeapTekPistol_C::StartSecondaryActionEvent()
 
 
 // Function WeapTekPistol.WeapTekPistol_C.BPSpawnImpactEffects
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FHitResult              Impact                         (Parm, OutParm, ReferenceParm)
 // struct FVector                 ShootDir                       (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // bool*                          bIsEntryHit                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         WeaponMaxRange                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapTekPistol_C::BPSpawnImpactEffects(bool* bIsEntryHit, float* WeaponMaxRange, struct FHitResult* Impact, struct FVector* ShootDir)
+void AWeapTekPistol_C::STATIC_BPSpawnImpactEffects(bool* bIsEntryHit, float* WeaponMaxRange, struct FHitResult* Impact, struct FVector* ShootDir)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekPistol.WeapTekPistol_C.BPSpawnImpactEffects");
 

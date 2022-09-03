@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,6 +40,47 @@ void AStructureMinigunBP_C::GetHudData(class UPrimalInventoryComponent** Invento
 		*AmmoItemTemplates = params.AmmoItemTemplates;
 	if (LowAmmoWarningAmount != nullptr)
 		*LowAmmoWarningAmount = params.LowAmmoWarningAmount;
+}
+
+
+// Function StructureMinigunBP.StructureMinigunBP_C.BPGetDamageMultiplier
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AStructureMinigunBP_C::BPGetDamageMultiplier()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StructureMinigunBP.StructureMinigunBP_C.BPGetDamageMultiplier");
+
+	AStructureMinigunBP_C_BPGetDamageMultiplier_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function StructureMinigunBP.StructureMinigunBP_C.UpdateItemStats
+// ()
+// Parameters:
+// class UPrimalItem*             newItem                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void AStructureMinigunBP_C::UpdateItemStats(class UPrimalItem* newItem)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StructureMinigunBP.StructureMinigunBP_C.UpdateItemStats");
+
+	AStructureMinigunBP_C_UpdateItemStats_Params params;
+	params.newItem = newItem;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -151,19 +192,18 @@ void AStructureMinigunBP_C::BPSetPlayerConstructor(class APlayerController** PC)
 
 
 // Function StructureMinigunBP.StructureMinigunBP_C.PlacementInitialization
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport)
+// (Exec, Event, NetResponse, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// class AShooterWeapon*          ConstructorWeapon              (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterWeapon*          constructorWeapon              (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructureMinigunBP_C::STATIC_PlacementInitialization(class AShooterWeapon* ConstructorWeapon)
+void AStructureMinigunBP_C::PlacementInitialization(class AShooterWeapon* constructorWeapon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureMinigunBP.StructureMinigunBP_C.PlacementInitialization");
 
 	AStructureMinigunBP_C_PlacementInitialization_Params params;
-	params.ConstructorWeapon = ConstructorWeapon;
+	params.constructorWeapon = constructorWeapon;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,7 +234,7 @@ void AStructureMinigunBP_C::PlacementTickActions(bool* reachedDestination)
 
 
 // Function StructureMinigunBP.StructureMinigunBP_C.UpdateCustomItemData
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport)
+// (NetReliable, Exec, Native, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             self2                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -206,6 +246,7 @@ void AStructureMinigunBP_C::STATIC_UpdateCustomItemData(class UPrimalItem* self2
 	params.self2 = self2;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -214,7 +255,7 @@ void AStructureMinigunBP_C::STATIC_UpdateCustomItemData(class UPrimalItem* self2
 
 
 // Function StructureMinigunBP.StructureMinigunBP_C.UpdateMaterials
-// (Net, NetReliable, NetRequest, Exec, Event, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AStructureMinigunBP_C::UpdateMaterials()
 {
@@ -231,16 +272,15 @@ void AStructureMinigunBP_C::UpdateMaterials()
 
 
 // Function StructureMinigunBP.StructureMinigunBP_C.BPFiredWeapon
-// (NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport)
+// (NetReliable, Exec, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AStructureMinigunBP_C::BPFiredWeapon()
+void AStructureMinigunBP_C::STATIC_BPFiredWeapon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureMinigunBP.StructureMinigunBP_C.BPFiredWeapon");
 
 	AStructureMinigunBP_C_BPFiredWeapon_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -312,9 +352,9 @@ void AStructureMinigunBP_C::Is_First_Person_View(bool* Result)
 // Function StructureMinigunBP.StructureMinigunBP_C.Is Client or SinglePlayer
 // ()
 // Parameters:
-// bool                           res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AStructureMinigunBP_C::Is_Client_or_SinglePlayer(bool* res)
+void AStructureMinigunBP_C::Is_Client_or_SinglePlayer(bool* Res)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureMinigunBP.StructureMinigunBP_C.Is Client or SinglePlayer");
 
@@ -326,13 +366,13 @@ void AStructureMinigunBP_C::Is_Client_or_SinglePlayer(bool* res)
 
 	fn->FunctionFlags = flags;
 
-	if (res != nullptr)
-		*res = params.res;
+	if (Res != nullptr)
+		*Res = params.Res;
 }
 
 
 // Function StructureMinigunBP.StructureMinigunBP_C.BPGetInfoFromConsumedItemForPlacedStructure
-// (Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport)
+// (Native, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem**            ItemToConsumed                 (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -344,6 +384,7 @@ void AStructureMinigunBP_C::BPGetInfoFromConsumedItemForPlacedStructure(class UP
 	params.ItemToConsumed = ItemToConsumed;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -395,13 +436,13 @@ bool AStructureMinigunBP_C::BPCanFire()
 
 
 // Function StructureMinigunBP.StructureMinigunBP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructureMinigunBP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructureMinigunBP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureMinigunBP.StructureMinigunBP_C.BPGetMultiUseEntries");
 
@@ -409,7 +450,6 @@ TArray<struct FMultiUseEntry> AStructureMinigunBP_C::STATIC_BPGetMultiUseEntries
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -507,14 +547,14 @@ void AStructureMinigunBP_C::TickSpinSpeed(float DeltaTime)
 // Function StructureMinigunBP.StructureMinigunBP_C.BPApplyCustomDurabilityOnPickup
 // ()
 // Parameters:
-// class UPrimalItem**            pickedup                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItem**            PickedUp                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructureMinigunBP_C::BPApplyCustomDurabilityOnPickup(class UPrimalItem** pickedup)
+void AStructureMinigunBP_C::BPApplyCustomDurabilityOnPickup(class UPrimalItem** PickedUp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureMinigunBP.StructureMinigunBP_C.BPApplyCustomDurabilityOnPickup");
 
 	AStructureMinigunBP_C_BPApplyCustomDurabilityOnPickup_Params params;
-	params.pickedup = pickedup;
+	params.PickedUp = PickedUp;
 
 	auto flags = fn->FunctionFlags;
 

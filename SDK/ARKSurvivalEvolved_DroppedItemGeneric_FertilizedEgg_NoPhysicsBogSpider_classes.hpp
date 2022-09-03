@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void UserConstructionScript();
 	void ExecuteUbergraph_DroppedItemGeneric_FertilizedEgg_NoPhysicsBogSpider(int EntryPoint);
 };

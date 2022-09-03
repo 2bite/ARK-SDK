@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620
+// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_638
 // ()
 
-void URaft_Anim_BP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620()
+void URaft_Anim_BP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_638()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620");
+	static auto fn = UObject::FindObject<UFunction>("Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_638");
 
-	URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_620_Params params;
+	URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_ModifyBone_638_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void URaft_Anim_BP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_A
 }
 
 
-// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2678
+// Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2930
 // ()
 
-void URaft_Anim_BP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2678()
+void URaft_Anim_BP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2930()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2678");
+	static auto fn = UObject::FindObject<UFunction>("Function Raft_Anim_BP.Raft_Anim_BP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2930");
 
-	URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2678_Params params;
+	URaft_Anim_BP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Raft_Anim_BP_AnimGraphNode_BlendListByBool_2930_Params params;
 
 	auto flags = fn->FunctionFlags;
 

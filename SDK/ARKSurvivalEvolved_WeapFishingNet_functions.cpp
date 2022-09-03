@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -266,7 +266,7 @@ void AWeapFishingNet_C::FishStruggle()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.spawn vfx at location where cable intersects with water
-// (NetRequest, Exec, Native, NetResponse, Private, Protected, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void AWeapFishingNet_C::spawn_vfx_at_location_where_cable_intersects_with_water()
 {
@@ -275,7 +275,6 @@ void AWeapFishingNet_C::spawn_vfx_at_location_where_cable_intersects_with_water(
 	AWeapFishingNet_C_spawn_vfx_at_location_where_cable_intersects_with_water_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -607,7 +606,7 @@ void AWeapFishingNet_C::Kill_all_fish_in_net()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.Send Caught Fish Message to Player
-// (Net, Exec, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void AWeapFishingNet_C::Send_Caught_Fish_Message_to_Player()
 {
@@ -643,14 +642,14 @@ void AWeapFishingNet_C::Fully_Catch_Fish_In_Net()
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Remove Buff And Reset Anim
 // ()
 // Parameters:
-// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Cancel_Cast_Remove_Buff_And_Reset_Anim(bool caught_success)
+void AWeapFishingNet_C::Cancel_Cast_Remove_Buff_And_Reset_Anim(bool Caught_Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Remove Buff And Reset Anim");
 
 	AWeapFishingNet_C_Cancel_Cast_Remove_Buff_And_Reset_Anim_Params params;
-	params.caught_success = caught_success;
+	params.Caught_Success = Caught_Success;
 
 	auto flags = fn->FunctionFlags;
 
@@ -678,15 +677,16 @@ void AWeapFishingNet_C::Cancel_Cast_Destroy_Cable_Components()
 
 
 // Function WeapFishingNet.WeapFishingNet_C.cancel cast destroy net projectile
-// (NetRequest, Exec, Event, Static, NetMulticast, Private, Protected, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void AWeapFishingNet_C::STATIC_cancel_cast_destroy_net_projectile()
+void AWeapFishingNet_C::cancel_cast_destroy_net_projectile()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.cancel cast destroy net projectile");
 
 	AWeapFishingNet_C_cancel_cast_destroy_net_projectile_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -878,14 +878,14 @@ void AWeapFishingNet_C::Give_Fish_Rewards()
 // Function WeapFishingNet.WeapFishingNet_C.Set Fish Position To Normal Offset
 // ()
 // Parameters:
-// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Set_Fish_Position_To_Normal_Offset(bool caught_success)
+void AWeapFishingNet_C::Set_Fish_Position_To_Normal_Offset(bool Caught_Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Set Fish Position To Normal Offset");
 
 	AWeapFishingNet_C_Set_Fish_Position_To_Normal_Offset_Params params;
-	params.caught_success = caught_success;
+	params.Caught_Success = Caught_Success;
 
 	auto flags = fn->FunctionFlags;
 
@@ -989,14 +989,14 @@ struct FVector AWeapFishingNet_C::Reel_Velocity(const struct FVector& Weapon_Loc
 
 
 // Function WeapFishingNet.WeapFishingNet_C.BPAnimNotifyCustomEvent
-// (NetRequest, Event, NetMulticast, Private, Protected, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AWeapFishingNet_C::STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.BPAnimNotifyCustomEvent");
 
@@ -1007,6 +1007,7 @@ void AWeapFishingNet_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, c
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1096,12 +1097,12 @@ void AWeapFishingNet_C::On_Fish_Released(class APrimalDinoCharacter* fish)
 
 
 // Function WeapFishingNet.WeapFishingNet_C.release fish
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Private, Protected, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UObject*                 fish                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           pulled_completely_up           (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::STATIC_release_fish(class UObject* fish, bool pulled_completely_up)
+void AWeapFishingNet_C::release_fish(class UObject* fish, bool pulled_completely_up)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.release fish");
 
@@ -1110,6 +1111,7 @@ void AWeapFishingNet_C::STATIC_release_fish(class UObject* fish, bool pulled_com
 	params.pulled_completely_up = pulled_completely_up;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1455,15 +1457,15 @@ void AWeapFishingNet_C::Timeline_0__UpdateFunc()
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast
 // ()
 // Parameters:
-// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Force_Reset_Has_Caught_Any_Fish (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Cancel_Cast(bool caught_success, bool Force_Reset_Has_Caught_Any_Fish)
+void AWeapFishingNet_C::Cancel_Cast(bool Caught_Success, bool Force_Reset_Has_Caught_Any_Fish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Cancel Cast");
 
 	AWeapFishingNet_C_Cancel_Cast_Params params;
-	params.caught_success = caught_success;
+	params.Caught_Success = Caught_Success;
 	params.Force_Reset_Has_Caught_Any_Fish = Force_Reset_Has_Caught_Any_Fish;
 
 	auto flags = fn->FunctionFlags;
@@ -1551,14 +1553,14 @@ void AWeapFishingNet_C::Projectile_net_collided_with_fish(class APrimalDinoChara
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Events
 // ()
 // Parameters:
-// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::Cancel_Cast_Events(bool caught_success)
+void AWeapFishingNet_C::Cancel_Cast_Events(bool Caught_Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Events");
 
 	AWeapFishingNet_C_Cancel_Cast_Events_Params params;
-	params.caught_success = caught_success;
+	params.Caught_Success = Caught_Success;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1860,15 +1862,15 @@ void AWeapFishingNet_C::multicast_release_fish()
 // Function WeapFishingNet.WeapFishingNet_C.client request cancel cast
 // ()
 // Parameters:
-// bool                           caught_success                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Caught_Success                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Reset_Has_Caught_Any_FIsh      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapFishingNet_C::client_request_cancel_cast(bool caught_success, bool Reset_Has_Caught_Any_FIsh)
+void AWeapFishingNet_C::client_request_cancel_cast(bool Caught_Success, bool Reset_Has_Caught_Any_FIsh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapFishingNet.WeapFishingNet_C.client request cancel cast");
 
 	AWeapFishingNet_C_client_request_cancel_cast_Params params;
-	params.caught_success = caught_success;
+	params.Caught_Success = Caught_Success;
 	params.Reset_Has_Caught_Any_FIsh = Reset_Has_Caught_Any_FIsh;
 
 	auto flags = fn->FunctionFlags;

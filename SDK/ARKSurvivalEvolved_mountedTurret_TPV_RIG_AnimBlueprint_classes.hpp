@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,12 +57,12 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_168();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_630();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_629();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_628();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_627();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_626();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_186();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_648();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_647();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_646();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_645();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_644();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_mountedTurret_TPV_RIG_AnimBlueprint(int EntryPoint);
 };

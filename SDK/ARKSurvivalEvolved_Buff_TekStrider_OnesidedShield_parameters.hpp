@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,8 +44,8 @@ struct ABuff_TekStrider_OnesidedShield_C_Restrict_Doubletap_Activate_Params
 {
 };
 
-// Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.toggle active on ai
-struct ABuff_TekStrider_OnesidedShield_C_toggle_active_on_ai_Params
+// Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.Toggle Active On Ai
+struct ABuff_TekStrider_OnesidedShield_C_Toggle_Active_On_Ai_Params
 {
 	bool                                               Active;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };

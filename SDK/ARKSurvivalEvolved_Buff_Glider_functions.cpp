@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,31 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_Glider.Buff_Glider_C.GetGliderInactiveMeshTargetRotVals
+// ()
+// Parameters:
+// struct FRotator                Rot                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          InterpSpeed                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_Glider_C::GetGliderInactiveMeshTargetRotVals(struct FRotator* Rot, float* InterpSpeed)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.GetGliderInactiveMeshTargetRotVals");
+
+	ABuff_Glider_C_GetGliderInactiveMeshTargetRotVals_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Rot != nullptr)
+		*Rot = params.Rot;
+	if (InterpSpeed != nullptr)
+		*InterpSpeed = params.InterpSpeed;
+}
+
 
 // Function Buff_Glider.Buff_Glider_C.ServerTick_UpdateHighestZ
 // ()
@@ -283,7 +308,7 @@ float ABuff_Glider_C::BP_ModifyCharacterFOV(float* inFOV)
 
 
 // Function Buff_Glider.Buff_Glider_C.ServerTick_GlideFalling
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, NetServer, BlueprintCallable)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 
 void ABuff_Glider_C::STATIC_ServerTick_GlideFalling()
 {
@@ -292,7 +317,6 @@ void ABuff_Glider_C::STATIC_ServerTick_GlideFalling()
 	ABuff_Glider_C_ServerTick_GlideFalling_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -482,17 +506,17 @@ float ABuff_Glider_C::BuffAdjustDamage(float* Damage, class AController** EventI
 // Function Buff_Glider.Buff_Glider_C.AreRotatorsNearlyEqual
 // ()
 // Parameters:
-// struct FRotator                RotA                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                rotA                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                RotB                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Error                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Glider_C::AreRotatorsNearlyEqual(const struct FRotator& RotA, const struct FRotator& RotB, float Error, bool* Result)
+void ABuff_Glider_C::AreRotatorsNearlyEqual(const struct FRotator& rotA, const struct FRotator& RotB, float Error, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.AreRotatorsNearlyEqual");
 
 	ABuff_Glider_C_AreRotatorsNearlyEqual_Params params;
-	params.RotA = RotA;
+	params.rotA = rotA;
 	params.RotB = RotB;
 	params.Error = Error;
 
@@ -508,7 +532,7 @@ void ABuff_Glider_C::AreRotatorsNearlyEqual(const struct FRotator& RotA, const s
 
 
 // Function Buff_Glider.Buff_Glider_C.ServerTick_UpdateGlideVelocity
-// (NetRequest, Static, NetMulticast, MulticastDelegate, NetServer, BlueprintCallable)
+// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 
 void ABuff_Glider_C::STATIC_ServerTick_UpdateGlideVelocity()
 {
@@ -517,6 +541,7 @@ void ABuff_Glider_C::STATIC_ServerTick_UpdateGlideVelocity()
 	ABuff_Glider_C_ServerTick_UpdateGlideVelocity_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,7 +567,7 @@ void ABuff_Glider_C::UpdateGliderByState_NonDedicated()
 
 
 // Function Buff_Glider.Buff_Glider_C.UpdateGliderByState_ServerAndClient
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, NetServer, BlueprintCallable)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 
 void ABuff_Glider_C::STATIC_UpdateGliderByState_ServerAndClient()
 {
@@ -551,6 +576,7 @@ void ABuff_Glider_C::STATIC_UpdateGliderByState_ServerAndClient()
 	ABuff_Glider_C_UpdateGliderByState_ServerAndClient_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -559,7 +585,7 @@ void ABuff_Glider_C::STATIC_UpdateGliderByState_ServerAndClient()
 
 
 // Function Buff_Glider.Buff_Glider_C.UpdateGliderByState_Server
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, BlueprintCallable)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 
 void ABuff_Glider_C::STATIC_UpdateGliderByState_Server()
 {
@@ -639,9 +665,9 @@ void ABuff_Glider_C::GetGlideSpeedRatio_Pure(float* Result)
 // Function Buff_Glider.Buff_Glider_C.GetDefaultOwningPlayer
 // ()
 // Parameters:
-// class AShooterCharacter*       ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AShooterCharacter*       Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Glider_C::GetDefaultOwningPlayer(class AShooterCharacter** ref)
+void ABuff_Glider_C::GetDefaultOwningPlayer(class AShooterCharacter** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.GetDefaultOwningPlayer");
 
@@ -653,8 +679,8 @@ void ABuff_Glider_C::GetDefaultOwningPlayer(class AShooterCharacter** ref)
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -866,7 +892,7 @@ void ABuff_Glider_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Glider.Buff_Glider_C.ServerTick_UpdateGlidingRotation
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, BlueprintCallable)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 
 void ABuff_Glider_C::STATIC_ServerTick_UpdateGlidingRotation()
 {
@@ -940,14 +966,14 @@ void ABuff_Glider_C::UserConstructionScript()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_99
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_104
 // ()
 
-void ABuff_Glider_C::InpActEvt_Jump_K2Node_InputActionEvent_99()
+void ABuff_Glider_C::InpActEvt_Jump_K2Node_InputActionEvent_104()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_99");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_104");
 
-	ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_99_Params params;
+	ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_104_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -957,14 +983,14 @@ void ABuff_Glider_C::InpActEvt_Jump_K2Node_InputActionEvent_99()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_98
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_103
 // ()
 
-void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_98()
+void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_103()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_98");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_103");
 
-	ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_98_Params params;
+	ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_103_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -974,14 +1000,14 @@ void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_98()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_97
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_102
 // ()
 
-void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_97()
+void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_102()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_97");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_102");
 
-	ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_97_Params params;
+	ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_102_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -991,14 +1017,14 @@ void ABuff_Glider_C::InpActEvt_Run_K2Node_InputActionEvent_97()
 }
 
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_96
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_101
 // ()
 
-void ABuff_Glider_C::InpActEvt_RunToggle_K2Node_InputActionEvent_96()
+void ABuff_Glider_C::InpActEvt_RunToggle_K2Node_InputActionEvent_101()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_96");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_101");
 
-	ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_96_Params params;
+	ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_101_Params params;
 
 	auto flags = fn->FunctionFlags;
 

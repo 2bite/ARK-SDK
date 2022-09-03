@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,9 +57,9 @@ void ATekHoverSail_Character_BP_C::Clear_Trick_Hint_Text()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Add Trick Hint Text
-// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::STATIC_Add_Trick_Hint_Text()
+void ATekHoverSail_Character_BP_C::Add_Trick_Hint_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Add Trick Hint Text");
 
@@ -97,9 +97,9 @@ void ATekHoverSail_Character_BP_C::BPOnRefreshColorization(TArray<struct FLinear
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Holds Trick Button - direction variant
-// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::STATIC_Client_Holds_Trick_Button___direction_variant()
+void ATekHoverSail_Character_BP_C::Client_Holds_Trick_Button___direction_variant()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Holds Trick Button - direction variant");
 
@@ -178,7 +178,7 @@ void ATekHoverSail_Character_BP_C::ClearTrickActivationText()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Add Trick Activation Text
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ATekHoverSail_Character_BP_C::STATIC_Add_Trick_Activation_Text()
 {
@@ -213,7 +213,7 @@ void ATekHoverSail_Character_BP_C::ResetAccumulatedTricks()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Add To Accumulated Trick
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            TrickIndexToAdd                (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -225,7 +225,6 @@ void ATekHoverSail_Character_BP_C::STATIC_Add_To_Accumulated_Trick(int TrickInde
 	params.TrickIndexToAdd = TrickIndexToAdd;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -551,15 +550,16 @@ void ATekHoverSail_Character_BP_C::BPNotifyAddPassenger(class APrimalCharacter**
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Halt Hoversail
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::Client_Halt_Hoversail()
+void ATekHoverSail_Character_BP_C::STATIC_Client_Halt_Hoversail()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Halt Hoversail");
 
 	ATekHoverSail_Character_BP_C_Client_Halt_Hoversail_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -725,16 +725,15 @@ bool ATekHoverSail_Character_BP_C::is_player_holding_drift()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Presses Held Drift Button
-// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::Client_Presses_Held_Drift_Button()
+void ATekHoverSail_Character_BP_C::STATIC_Client_Presses_Held_Drift_Button()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Presses Held Drift Button");
 
 	ATekHoverSail_Character_BP_C_Client_Presses_Held_Drift_Button_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -743,15 +742,16 @@ void ATekHoverSail_Character_BP_C::Client_Presses_Held_Drift_Button()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Releases Held Drift Button
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::Client_Releases_Held_Drift_Button()
+void ATekHoverSail_Character_BP_C::STATIC_Client_Releases_Held_Drift_Button()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Releases Held Drift Button");
 
 	ATekHoverSail_Character_BP_C_Client_Releases_Held_Drift_Button_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -918,16 +918,15 @@ void ATekHoverSail_Character_BP_C::Allowed_Time_After_Stopping_Drift_To_Be_Able_
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.client releases trick button
-// (NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::STATIC_client_releases_trick_button()
+void ATekHoverSail_Character_BP_C::client_releases_trick_button()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.client releases trick button");
 
 	ATekHoverSail_Character_BP_C_client_releases_trick_button_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -936,16 +935,15 @@ void ATekHoverSail_Character_BP_C::STATIC_client_releases_trick_button()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.client holds trick button
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::STATIC_client_holds_trick_button()
+void ATekHoverSail_Character_BP_C::client_holds_trick_button()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.client holds trick button");
 
 	ATekHoverSail_Character_BP_C_client_holds_trick_button_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -988,16 +986,15 @@ void ATekHoverSail_Character_BP_C::Client_Holds_camera_button()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Presses FreeSpin Button
-// (Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::STATIC_Client_Presses_FreeSpin_Button()
+void ATekHoverSail_Character_BP_C::Client_Presses_FreeSpin_Button()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Presses FreeSpin Button");
 
 	ATekHoverSail_Character_BP_C_Client_Presses_FreeSpin_Button_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1006,13 +1003,30 @@ void ATekHoverSail_Character_BP_C::STATIC_Client_Presses_FreeSpin_Button()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Releases FreeSpin Button
-// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::STATIC_Client_Releases_FreeSpin_Button()
+void ATekHoverSail_Character_BP_C::Client_Releases_FreeSpin_Button()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Releases FreeSpin Button");
 
 	ATekHoverSail_Character_BP_C_Client_Releases_FreeSpin_Button_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.client releases spin button
+// (Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+
+void ATekHoverSail_Character_BP_C::client_releases_spin_button()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.client releases spin button");
+
+	ATekHoverSail_Character_BP_C_client_releases_spin_button_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1023,33 +1037,17 @@ void ATekHoverSail_Character_BP_C::STATIC_Client_Releases_FreeSpin_Button()
 }
 
 
-// Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.client releases spin button
-// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-
-void ATekHoverSail_Character_BP_C::STATIC_client_releases_spin_button()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.client releases spin button");
-
-	ATekHoverSail_Character_BP_C_client_releases_spin_button_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Holds Spin Button
-// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::STATIC_Client_Holds_Spin_Button()
+void ATekHoverSail_Character_BP_C::Client_Holds_Spin_Button()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Client Holds Spin Button");
 
 	ATekHoverSail_Character_BP_C_Client_Holds_Spin_Button_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1150,14 +1148,14 @@ void ATekHoverSail_Character_BP_C::Recharge_Aerial_Boost()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekHoverSail_Character_BP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ATekHoverSail_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
@@ -1168,7 +1166,6 @@ void ATekHoverSail_Character_BP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct 
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1629,11 +1626,11 @@ void ATekHoverSail_Character_BP_C::Reset_Hold_Right()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.RidingTick
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekHoverSail_Character_BP_C::RidingTick(float* DeltaSeconds)
+void ATekHoverSail_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.RidingTick");
 
@@ -1811,15 +1808,16 @@ void ATekHoverSail_Character_BP_C::GetHoverSlopeDeltaRatio(bool bAdjustWithMax, 
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.DoHoverSlopeCheck
-// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ATekHoverSail_Character_BP_C::DoHoverSlopeCheck()
+void ATekHoverSail_Character_BP_C::STATIC_DoHoverSlopeCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.DoHoverSlopeCheck");
 
 	ATekHoverSail_Character_BP_C_DoHoverSlopeCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1941,7 +1939,7 @@ bool ATekHoverSail_Character_BP_C::BPAcknowledgeServerCorrection(float* TimeStam
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPOnStopJump
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1963,11 +1961,11 @@ bool ATekHoverSail_Character_BP_C::STATIC_BPOnStopJump()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPOnStartJump
-// (NetRequest, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATekHoverSail_Character_BP_C::BPOnStartJump()
+bool ATekHoverSail_Character_BP_C::STATIC_BPOnStartJump()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPOnStartJump");
 
@@ -2026,7 +2024,7 @@ void ATekHoverSail_Character_BP_C::CalculateTotalAlternateFuel(float* TotalAltFu
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.GetRepairModeHudMessage
-// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, NetResponse, Static, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  Message                        (Parm, OutParm, ZeroConstructor)
 // struct FLinearColor            Color                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2217,13 +2215,13 @@ void ATekHoverSail_Character_BP_C::CanSkiffUseRepairMode(bool bForStart, bool* b
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPTryMultiUse
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATekHoverSail_Character_BP_C::STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
+bool ATekHoverSail_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPTryMultiUse");
 
@@ -2267,7 +2265,7 @@ void ATekHoverSail_Character_BP_C::Get_Repair_Mode_Hud_Message_PURE(class FStrin
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BlueprintDrawFloatingHUD
-// (NetReliable, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetMulticast, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -2293,7 +2291,7 @@ void ATekHoverSail_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** 
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Static, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -2307,6 +2305,7 @@ TArray<struct FMultiUseEntry> ATekHoverSail_Character_BP_C::STATIC_BPGetMultiUse
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2388,14 +2387,14 @@ void ATekHoverSail_Character_BP_C::BlueprintPlayDying(float* KillingDamage, clas
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPServerHandleNetExecCommand
-// (NetReliable, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ATekHoverSail_Character_BP_C::BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
+bool ATekHoverSail_Character_BP_C::STATIC_BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPServerHandleNetExecCommand");
 
@@ -2737,16 +2736,16 @@ void ATekHoverSail_Character_BP_C::BP_OnSetRunning(bool* bNewIsRunning)
 // ()
 // Parameters:
 // float                          InputAxisVal                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRight                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bright                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bShouldIntercept               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekHoverSail_Character_BP_C::OnReceiveSkiff2dMovementInput(float InputAxisVal, bool bRight, bool* bShouldIntercept)
+void ATekHoverSail_Character_BP_C::OnReceiveSkiff2dMovementInput(float InputAxisVal, bool bright, bool* bShouldIntercept)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.OnReceiveSkiff2dMovementInput");
 
 	ATekHoverSail_Character_BP_C_OnReceiveSkiff2dMovementInput_Params params;
 	params.InputAxisVal = InputAxisVal;
-	params.bRight = bRight;
+	params.bright = bright;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3069,9 +3068,9 @@ void ATekHoverSail_Character_BP_C::ResetSkiffInputs()
 // ()
 // Parameters:
 // struct FName                   ForSocketName                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          traceDist                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          TraceDist                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekHoverSail_Character_BP_C::GetEnvironmentalParticleTraceDistance(const struct FName& ForSocketName, float* traceDist)
+void ATekHoverSail_Character_BP_C::GetEnvironmentalParticleTraceDistance(const struct FName& ForSocketName, float* TraceDist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.GetEnvironmentalParticleTraceDistance");
 
@@ -3084,8 +3083,8 @@ void ATekHoverSail_Character_BP_C::GetEnvironmentalParticleTraceDistance(const s
 
 	fn->FunctionFlags = flags;
 
-	if (traceDist != nullptr)
-		*traceDist = params.traceDist;
+	if (TraceDist != nullptr)
+		*TraceDist = params.TraceDist;
 }
 
 
@@ -3107,7 +3106,7 @@ void ATekHoverSail_Character_BP_C::ReceiveDestroyed()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.Tick_ManageHoverGroundFX
-// (NetRequest, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, Public, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ATekHoverSail_Character_BP_C::Tick_ManageHoverGroundFX()
 {
@@ -3116,7 +3115,6 @@ void ATekHoverSail_Character_BP_C::Tick_ManageHoverGroundFX()
 	ATekHoverSail_Character_BP_C_Tick_ManageHoverGroundFX_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3324,12 +3322,12 @@ void ATekHoverSail_Character_BP_C::Tick_ManageFuel()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPGetHUDElements
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ATekHoverSail_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ATekHoverSail_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPGetHUDElements");
 
@@ -3337,6 +3335,7 @@ void ATekHoverSail_Character_BP_C::STATIC_BPGetHUDElements(class APlayerControll
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3760,7 +3759,7 @@ void ATekHoverSail_Character_BP_C::BPOnSetFlight(bool* bFly)
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.ReceiveHit
-// (NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, NetMulticast, Public, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimitiveComponent**    MyComp                         (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 Other                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -3771,7 +3770,7 @@ void ATekHoverSail_Character_BP_C::BPOnSetFlight(bool* bFly)
 // struct FVector*                NormalImpulse                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              Hit                            (Parm, OutParm, ReferenceParm)
 
-void ATekHoverSail_Character_BP_C::STATIC_ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit)
+void ATekHoverSail_Character_BP_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.ReceiveHit");
 
@@ -3797,7 +3796,7 @@ void ATekHoverSail_Character_BP_C::STATIC_ReceiveHit(class UPrimitiveComponent**
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.DoSkiffHoverTraces
-// (NetReliable, NetResponse, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           bForceTraces                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3809,6 +3808,7 @@ void ATekHoverSail_Character_BP_C::DoSkiffHoverTraces(bool bForceTraces)
 	params.bForceTraces = bForceTraces;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3948,7 +3948,7 @@ float ATekHoverSail_Character_BP_C::BP_GetCustomModifier_RotationRate()
 
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.BPOverrideFlyingVelocity
-// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, NetMulticast, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 InitialVelocity                (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 Gravity                        (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -3963,7 +3963,6 @@ struct FVector ATekHoverSail_Character_BP_C::BPOverrideFlyingVelocity(float* Del
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4855,15 +4854,15 @@ void ATekHoverSail_Character_BP_C::on_start_aerial_boost()
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.ServerSyncMovementValues
 // ()
 // Parameters:
-// float                          synced_right                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Synced_Right                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Synced_Fwd                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekHoverSail_Character_BP_C::ServerSyncMovementValues(float synced_right, float Synced_Fwd)
+void ATekHoverSail_Character_BP_C::ServerSyncMovementValues(float Synced_Right, float Synced_Fwd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.ServerSyncMovementValues");
 
 	ATekHoverSail_Character_BP_C_ServerSyncMovementValues_Params params;
-	params.synced_right = synced_right;
+	params.Synced_Right = Synced_Right;
 	params.Synced_Fwd = Synced_Fwd;
 
 	auto flags = fn->FunctionFlags;

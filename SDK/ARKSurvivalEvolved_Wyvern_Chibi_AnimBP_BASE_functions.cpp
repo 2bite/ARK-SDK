@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4338
+// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5750
 // ()
 
-void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4338()
+void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5750()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4338");
+	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5750");
 
-	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4338_Params params;
+	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5750_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wy
 }
 
 
-// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4337
+// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5749
 // ()
 
-void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4337()
+void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5749()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4337");
+	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5749");
 
-	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4337_Params params;
+	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5749_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -46,14 +46,14 @@ void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wy
 }
 
 
-// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4336
+// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5748
 // ()
 
-void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4336()
+void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5748()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4336");
+	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5748");
 
-	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_4336_Params params;
+	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_BlendListByBool_5748_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -63,14 +63,14 @@ void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wy
 }
 
 
-// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_6016
+// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_7148
 // ()
 
-void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_6016()
+void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_7148()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_6016");
+	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_7148");
 
-	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_6016_Params params;
+	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_7148_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -80,14 +80,14 @@ void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wy
 }
 
 
-// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_6015
+// Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_7147
 // ()
 
-void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_6015()
+void UWyvern_Chibi_AnimBP_BASE_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_7147()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_6015");
+	static auto fn = UObject::FindObject<UFunction>("Function Wyvern_Chibi_AnimBP_BASE.Wyvern_Chibi_AnimBP_BASE_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_7147");
 
-	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_6015_Params params;
+	UWyvern_Chibi_AnimBP_BASE_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Wyvern_Chibi_AnimBP_BASE_AnimGraphNode_SequencePlayer_7147_Params params;
 
 	auto flags = fn->FunctionFlags;
 

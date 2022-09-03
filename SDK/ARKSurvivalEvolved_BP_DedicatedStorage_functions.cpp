@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,186 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.WithdrawAmount
+// ()
+// Parameters:
+// class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// int                            amount                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_DedicatedStorage_C::WithdrawAmount(class APlayerController* PC, int amount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.WithdrawAmount");
+
+	ABP_DedicatedStorage_C_WithdrawAmount_Params params;
+	params.PC = PC;
+	params.amount = amount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPOnTransferAll
+// ()
+// Parameters:
+// class UPrimalInventoryComponent** toInventory                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_DedicatedStorage_C::BPOnTransferAll(class UPrimalInventoryComponent** toInventory)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPOnTransferAll");
+
+	ABP_DedicatedStorage_C_BPOnTransferAll_Params params;
+	params.toInventory = toInventory;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.UpdateItemCount
+// ()
+
+void ABP_DedicatedStorage_C::UpdateItemCount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.UpdateItemCount");
+
+	ABP_DedicatedStorage_C_UpdateItemCount_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPPostLoadedFromSaveGame
+// ()
+
+void ABP_DedicatedStorage_C::BPPostLoadedFromSaveGame()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPPostLoadedFromSaveGame");
+
+	ABP_DedicatedStorage_C_BPPostLoadedFromSaveGame_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPClientDoMultiUse
+// ()
+// Parameters:
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_DedicatedStorage_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPClientDoMultiUse");
+
+	ABP_DedicatedStorage_C_BPClientDoMultiUse_Params params;
+	params.ForPC = ForPC;
+	params.ClientUseIndex = ClientUseIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.AddTopAndBottomMenuEntries
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// Parameters:
+// TArray<struct FMultiUseEntry>  Entries                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void ABP_DedicatedStorage_C::AddTopAndBottomMenuEntries(TArray<struct FMultiUseEntry>* Entries)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.AddTopAndBottomMenuEntries");
+
+	ABP_DedicatedStorage_C_AddTopAndBottomMenuEntries_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Entries != nullptr)
+		*Entries = params.Entries;
+}
+
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.OnRep_TopAndBottomRotation
+// ()
+
+void ABP_DedicatedStorage_C::OnRep_TopAndBottomRotation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.OnRep_TopAndBottomRotation");
+
+	ABP_DedicatedStorage_C_OnRep_TopAndBottomRotation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.OnRep_HideTopAndBottom
+// ()
+
+void ABP_DedicatedStorage_C::OnRep_HideTopAndBottom()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.OnRep_HideTopAndBottom");
+
+	ABP_DedicatedStorage_C_OnRep_HideTopAndBottom_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DedicatedStorage.BP_DedicatedStorage_C.CanMakeDeposit
+// ()
+// Parameters:
+// class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_DedicatedStorage_C::CanMakeDeposit(class APlayerController* PC, class APrimalCharacter* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DedicatedStorage.BP_DedicatedStorage_C.CanMakeDeposit");
+
+	ABP_DedicatedStorage_C_CanMakeDeposit_Params params;
+	params.PC = PC;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.IsPlayerControllerValid
 // ()
@@ -388,7 +568,7 @@ bool ABP_DedicatedStorage_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BP_DedicatedStorage.BP_DedicatedStorage_C.BPGetMultiUseEntries
-// (NetRequest, Exec, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function PrimalItem_WeaponMinigun.PrimalItem_WeaponMinigun_C.BPTributeItemDownloaded
+struct UPrimalItem_WeaponMinigun_C_BPTributeItemDownloaded_Params
+{
+	class UObject**                                    ContextObject;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function PrimalItem_WeaponMinigun.PrimalItem_WeaponMinigun_C.ExecuteUbergraph_PrimalItem_WeaponMinigun
 struct UPrimalItem_WeaponMinigun_C_ExecuteUbergraph_PrimalItem_WeaponMinigun_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.Try To Add  Resource from first trace
+struct ABuff_TekStrider_Harvester_C_Try_To_Add__Resource_from_first_trace_Params
+{
+	class UPrimitiveComponent*                         hit_component;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FOverlappedFoliageElement>           Resources;                                                // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	struct FVector                                     impact_point;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.clamp angle
 struct ABuff_TekStrider_Harvester_C_clamp_angle_Params
@@ -58,6 +66,7 @@ struct ABuff_TekStrider_Harvester_C_GetOwnerStriderLinkedDediStorageSelectedItem
 struct ABuff_TekStrider_Harvester_C_ShouldHarvestFoliage_Params
 {
 	struct FOverlappedFoliageElement                   CheckFoliage;                                             // (Parm)
+	struct FVector                                     override_harvest_loc;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bResult;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

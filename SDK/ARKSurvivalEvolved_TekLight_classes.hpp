@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 	class UStaticMeshComponent*                        StaticMesh1;                                              // 0x0E10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UPrimalInventoryBP_TekLight_C*               PrimalInventoryBP_TekLight_C1;                            // 0x0E18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UChildActorComponent*                        ActivatedEmitter;                                         // 0x0E20(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                LightIntensityLevel;                                      // 0x0E28(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	int                                                LightIntensityLevel;                                      // 0x0E28(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	int                                                CycleLightIntensityLevel_MultiUseIndex;                   // 0x0E2C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              LightIntensity_Default;                                   // 0x0E30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              LightIntensityMult_Medium;                                // 0x0E34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -43,11 +43,12 @@ public:
 	}
 
 
-	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
+	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	void GetLampLight(class ULightComponent** Light);
 	void Get_Next_Cycled_LightIntensity_Level(int* nextLevel);
 	void SetLampLightIntensity(int intensityLevel);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPRefreshedStructureColors();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

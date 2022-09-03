@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,7 +77,7 @@ void ABuff_Thornmail_Parent_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Thornmail_Parent.Buff_Thornmail_Parent_C.Do Damage Over TimeFn
-// (NetRequest, Native, Event, NetResponse, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // double                         LastDotTime                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -89,7 +89,6 @@ void ABuff_Thornmail_Parent_C::Do_Damage_Over_TimeFn(double LastDotTime)
 	params.LastDotTime = LastDotTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,7 +97,7 @@ void ABuff_Thornmail_Parent_C::Do_Damage_Over_TimeFn(double LastDotTime)
 
 
 // Function Buff_Thornmail_Parent.Buff_Thornmail_Parent_C.BPAdjustStatusValueModification
-// (NetReliable, NetRequest, Exec, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Event, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimalCharacterStatusComponent** ForComponent                   (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -107,7 +106,7 @@ void ABuff_Thornmail_Parent_C::Do_Damage_Over_TimeFn(double LastDotTime)
 // bool*                          bManualModification            (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABuff_Thornmail_Parent_C::STATIC_BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
+float ABuff_Thornmail_Parent_C::BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Thornmail_Parent.Buff_Thornmail_Parent_C.BPAdjustStatusValueModification");
 

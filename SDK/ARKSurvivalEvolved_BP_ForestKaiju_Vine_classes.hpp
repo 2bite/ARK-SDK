@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,13 +79,13 @@ public:
 	}
 
 
-	void STATIC_VineCollisionCheck(const struct FVector& Start, const struct FVector& End, class ACharacter* ActorToIgnore, class ACharacter* OtherActorToIgnore, bool* Ret);
+	void VineCollisionCheck(const struct FVector& Start, const struct FVector& End, class ACharacter* ActorToIgnore, class ACharacter* OtherActorToIgnore, bool* Ret);
 	void OnRep_EndVineLocation();
 	void TargetDataContainsTarget(class APrimalCharacter* Target, bool* Result);
 	void Get_Current_Vine_End_Location(struct FVector* EndPosition);
-	void GetVineTargets(const struct FVector& Location);
+	void STATIC_GetVineTargets(const struct FVector& Location);
 	void STATIC_UpdateVines();
-	void STATIC_InitVines();
+	void InitVines();
 	void ReceiveBeginPlay();
 	void GetAIState(class UForestKaiju_AttackAIState_Grab_C** State);
 	void ReceiveTick(float* DeltaSeconds);

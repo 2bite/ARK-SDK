@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -284,7 +284,7 @@ bool AChalico_Character_BP_C::BPPreventRiding(class AShooterCharacter** ByPawn, 
 
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -398,7 +398,7 @@ void AChalico_Character_BP_C::CanSitDown(bool* canSit)
 
 
 // Function Chalico_Character_BP.Chalico_Character_BP_C.Look for Chalicos
-// (NetReliable, Native, NetResponse, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AChalico_Character_BP_C::Look_for_Chalicos()
 {
@@ -407,7 +407,6 @@ void AChalico_Character_BP_C::Look_for_Chalicos()
 	AChalico_Character_BP_C_Look_for_Chalicos_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

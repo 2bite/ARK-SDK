@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -186,7 +186,7 @@ public:
 	void UpdateSimCanoeLocationTargets(float DeltaTime);
 	void UpdateValidCanoeOwnerRef(bool* bResult);
 	void UpdateSimulatedCanoeTransform(float DeltaTime);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_Canoe_AnimBlueprint_AnimGraphNode_ModifyBone_924();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SK_Canoe_AnimBlueprint_AnimGraphNode_ModifyBone_936();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void BlueprintInitializeAnimation();
 	void ExecuteUbergraph_SK_Canoe_AnimBlueprint(int EntryPoint);

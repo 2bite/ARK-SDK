@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,10 +52,10 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP_AnimGraphNode_TransitionResult_3138();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP_AnimGraphNode_TransitionResult_3137();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP_AnimGraphNode_TransitionResult_3136();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP_AnimGraphNode_TransitionResult_3135();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP_AnimGraphNode_TransitionResult_2502();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP_AnimGraphNode_TransitionResult_2501();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP_AnimGraphNode_TransitionResult_2500();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP_AnimGraphNode_TransitionResult_2499();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_SpaceWhale_Turret_TPV_Skeleton_AnimBP(int EntryPoint);
 };

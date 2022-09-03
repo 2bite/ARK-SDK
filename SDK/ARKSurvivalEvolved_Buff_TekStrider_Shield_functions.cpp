@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,20 +68,19 @@ void ABuff_TekStrider_Shield_C::Is_Ai_Controlled(bool* NewParam)
 }
 
 
-// Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.toggle active on ai
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.Toggle Active On Ai
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Activate                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Shield_C::toggle_active_on_ai(bool Activate)
+void ABuff_TekStrider_Shield_C::STATIC_Toggle_Active_On_Ai(bool Activate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.toggle active on ai");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.Toggle Active On Ai");
 
-	ABuff_TekStrider_Shield_C_toggle_active_on_ai_Params params;
+	ABuff_TekStrider_Shield_C_Toggle_Active_On_Ai_Params params;
 	params.Activate = Activate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,12 +109,12 @@ void ABuff_TekStrider_Shield_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.BPGetHUDElements
-// (NetReliable, NetRequest, Exec, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_TekStrider_Shield_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABuff_TekStrider_Shield_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.BPGetHUDElements");
 
@@ -123,6 +122,7 @@ void ABuff_TekStrider_Shield_C::BPGetHUDElements(class APlayerController** ForPC
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -230,16 +230,15 @@ void ABuff_TekStrider_Shield_C::deactivate_shield()
 
 
 // Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.Trigger
-// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ABuff_TekStrider_Shield_C::STATIC_Trigger()
+void ABuff_TekStrider_Shield_C::Trigger()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.Trigger");
 
 	ABuff_TekStrider_Shield_C_Trigger_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -248,14 +247,14 @@ void ABuff_TekStrider_Shield_C::STATIC_Trigger()
 
 
 // Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.ReceiveAnyDamage
-// (Net, NetReliable, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         Damage                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UDamageType**            DamageType                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AController**            InstigatedBy                   (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Shield_C::ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
+void ABuff_TekStrider_Shield_C::STATIC_ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.ReceiveAnyDamage");
 
@@ -311,7 +310,7 @@ void ABuff_TekStrider_Shield_C::UpdateShieldedCharacters()
 
 
 // Function Buff_TekStrider_Shield.Buff_TekStrider_Shield_C.BPSetupForInstigator
-// (Static, NetMulticast, MulticastDelegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 

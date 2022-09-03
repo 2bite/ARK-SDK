@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_Furniture_WoodTable.PrimalItemStructure_Furniture_WoodTable_C
-// 0x0000 (0x0AE0 - 0x0AE0)
+// 0x0000 (0x0AE8 - 0x0AE8)
 class UPrimalItemStructure_Furniture_WoodTable_C : public UPrimalItemStructureGeneric_C
 {
 public:

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,43 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.PackMemberDied
+// ()
+// Parameters:
+// class ADino_Character_BP_Pack_C* DeadDino                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADino_Character_BP_Pack_C::PackMemberDied(class ADino_Character_BP_Pack_C* DeadDino)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.PackMemberDied");
+
+	ADino_Character_BP_Pack_C_PackMemberDied_Params params;
+	params.DeadDino = DeadDino;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.BP_OnSetDeath
+// ()
+
+void ADino_Character_BP_Pack_C::BP_OnSetDeath()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.BP_OnSetDeath");
+
+	ADino_Character_BP_Pack_C_BP_OnSetDeath_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.Get RadiusToJoinPack
 // ()

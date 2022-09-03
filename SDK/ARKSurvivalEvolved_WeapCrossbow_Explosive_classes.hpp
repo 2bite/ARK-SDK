@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapCrossbow_Explosive.WeapCrossbow_Explosive_C
-// 0x0008 (0x0E60 - 0x0E58)
+// 0x0008 (0x0E58 - 0x0E50)
 class AWeapCrossbow_Explosive_C : public AWeapCrossbow_C
 {
 public:
-	class UStaticMeshComponent*                        ArrowMesh1P;                                              // 0x0E58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        ArrowMesh1P;                                              // 0x0E50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

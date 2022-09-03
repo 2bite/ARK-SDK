@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,7 +74,7 @@ struct ATherizino_Character_BP_C_BlueprintCanAttack_Params
 // Function Therizino_Character_BP.Therizino_Character_BP_C.SetClawAttackAnimByMovement
 struct ATherizino_Character_BP_C_SetClawAttackAnimByMovement_Params
 {
-	int                                                Attack_Index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Attack_index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Therizino_Character_BP.Therizino_Character_BP_C.BlueprintCanRiderAttack

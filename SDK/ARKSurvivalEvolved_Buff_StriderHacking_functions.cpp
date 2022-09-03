@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,28 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_StriderHacking.Buff_StriderHacking_C.Update Buff Timer server logic
+// ()
+// Parameters:
+// bool*                          Success                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          from_player_trigger            (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_StriderHacking_C::Update_Buff_Timer_server_logic(bool* Success, bool* from_player_trigger)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_StriderHacking.Buff_StriderHacking_C.Update Buff Timer server logic");
+
+	ABuff_StriderHacking_C_Update_Buff_Timer_server_logic_Params params;
+	params.Success = Success;
+	params.from_player_trigger = from_player_trigger;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_StriderHacking.Buff_StriderHacking_C.UpdateBuffTimer
 // ()

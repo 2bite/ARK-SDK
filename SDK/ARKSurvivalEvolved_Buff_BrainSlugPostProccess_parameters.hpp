@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_BrainSlugPostProccess.Buff_BrainSlugPostProccess_C.BPInstigatorReceivedKillingDamage
+struct ABuff_BrainSlugPostProccess_C_BPInstigatorReceivedKillingDamage_Params
+{
+};
 
 // Function Buff_BrainSlugPostProccess.Buff_BrainSlugPostProccess_C.InterceptInstigatorPlayerEmoteAnim
 struct ABuff_BrainSlugPostProccess_C_InterceptInstigatorPlayerEmoteAnim_Params

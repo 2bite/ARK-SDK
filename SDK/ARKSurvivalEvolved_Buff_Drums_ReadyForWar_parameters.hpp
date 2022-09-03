@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,19 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.BPCanBeCarried
+struct ABuff_Drums_ReadyForWar_C_BPCanBeCarried_Params
+{
+	class APrimalCharacter**                           ByCarrier;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.BPInterceptUseAction
+struct ABuff_Drums_ReadyForWar_C_BPInterceptUseAction_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.BPDeactivated
 struct ABuff_Drums_ReadyForWar_C_BPDeactivated_Params
 {
@@ -22,6 +35,16 @@ struct ABuff_Drums_ReadyForWar_C_BPDeactivated_Params
 
 // Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.UserConstructionScript
 struct ABuff_Drums_ReadyForWar_C_UserConstructionScript_Params
+{
+};
+
+// Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.AllowDismount
+struct ABuff_Drums_ReadyForWar_C_AllowDismount_Params
+{
+};
+
+// Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.PreventDismount
+struct ABuff_Drums_ReadyForWar_C_PreventDismount_Params
 {
 };
 

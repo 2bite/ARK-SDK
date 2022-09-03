@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -465,6 +465,11 @@ struct AMissionType_Race_C_BPOnPlayerRemovedFromMission_Params
 	class AShooterPlayerController**                   Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool*                                              bFromMissionCompleteEvent;                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool*                                              bLastPhaseSuccess;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MissionType_Race.MissionType_Race_C.ServerAddConsolePlayer
+struct AMissionType_Race_C_ServerAddConsolePlayer_Params
+{
 };
 
 // Function MissionType_Race.MissionType_Race_C.ExecuteUbergraph_MissionType_Race

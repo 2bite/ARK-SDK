@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,7 +74,7 @@ void ABuff_FoliageTrap_C::ReceiveBeginPlay()
 
 
 // Function Buff_FoliageTrap.Buff_FoliageTrap_C.CheckFoliageForTrap
-// (NetRequest, Native, Event, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UClass*                  HarvestComponentClass          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 AtLoc                          (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)

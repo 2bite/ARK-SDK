@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_614
-struct Ucannon_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_614_Params
+// Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_632
+struct Ucannon_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_632_Params
 {
 };
 
-// Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_613
-struct Ucannon_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_613_Params
+// Function cannon_TPV_RIG_AnimBlueprint.cannon_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_631
+struct Ucannon_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_cannon_TPV_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_631_Params
 {
 };
 

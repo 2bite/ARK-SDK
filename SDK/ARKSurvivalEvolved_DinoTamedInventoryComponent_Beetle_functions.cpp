@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.CraftItem
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            ItemToCraftIndex               (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UDinoTamedInventoryComponent_Beetle_C::CraftItem(int ItemToCraftIndex)
 	params.ItemToCraftIndex = ItemToCraftIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,7 +135,7 @@ void UDinoTamedInventoryComponent_Beetle_C::UnsetAll()
 
 
 // Function DinoTamedInventoryComponent_Beetle.DinoTamedInventoryComponent_Beetle_C.HasEnoughResources
-// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            IndexClassToCheck              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           hasEnough                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)

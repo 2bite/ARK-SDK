@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,7 +71,7 @@ struct ATent_BP_C_PeriodicDamage_Params
 // Function Tent_BP.Tent_BP_C.BPApplyCustomDurabilityOnPickup
 struct ATent_BP_C_BPApplyCustomDurabilityOnPickup_Params
 {
-	class UPrimalItem**                                pickedup;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItem**                                PickedUp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tent_BP.Tent_BP_C.ExecuteUbergraph_Tent_BP

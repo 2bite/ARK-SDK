@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CamoGasCloud.CamoGasCloud_C
-// 0x0003 (0x0963 - 0x0960)
+// 0x0003 (0x097B - 0x0978)
 class ACamoGasCloud_C : public ABuff_PoisonTrap_C
 {
 public:
-	bool                                               drainStaminaAffectsDinos;                                 // 0x0960(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               drainStaminaAffectsBigDinos;                              // 0x0961(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               drainStaminaAffectsTamedDinos;                            // 0x0962(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               drainStaminaAffectsDinos;                                 // 0x0978(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               drainStaminaAffectsBigDinos;                              // 0x0979(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               drainStaminaAffectsTamedDinos;                            // 0x097A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

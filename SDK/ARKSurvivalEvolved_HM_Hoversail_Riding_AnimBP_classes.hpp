@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass HM_Hoversail_Riding_AnimBP.HM_Hoversail_Riding_AnimBP_C
-// 0x1284 (0x15C4 - 0x0340)
+// 0x128C (0x15CC - 0x0340)
 class UHM_Hoversail_Riding_AnimBP_C : public UAnimInstance
 {
 public:
@@ -118,7 +118,7 @@ public:
 	struct FAnimNode_ConvertComponentToLocalSpace      AnimGraphNode_ComponentToLocalSpace_29C9D14C47DB072E7C8E0EB58041BC95;// 0x12E0(0x0028)
 	struct FAnimNode_ConvertLocalToComponentSpace      AnimGraphNode_LocalToComponentSpace_56671E4447CBEE69B7735BB18A16FF45;// 0x1308(0x0028)
 	struct FAnimNode_ModifyBones                       AnimGraphNode_ModifyBones_AC1EF99D49EEAB8FC54FA8A63DD89D6D;// 0x1330(0x0040)
-	bool                                               Sail_Is_Open;                                             // 0x1370(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               sail_is_open;                                             // 0x1370(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x1371(0x0003) MISSED OFFSET
 	struct FVector                                     MovementAnimBlendAxes;                                    // 0x1374(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              VerticalAnimBlendInterpSpeed;                             // 0x1380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -246,53 +246,55 @@ public:
 	bool                                               CallFunc_NearlyEqual_FloatFloat_ReturnValue;              // 0x150C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x3];                                       // 0x150D(0x0003) MISSED OFFSET
 	float                                              CallFunc_SelectFloat_ReturnValue2;                        // 0x1510(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue8;                          // 0x1514(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue9;                          // 0x1515(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue;                // 0x1516(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_FloatFloat_ReturnValue;                     // 0x1517(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue17;                 // 0x1518(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue30;                       // 0x1519(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x2];                                       // 0x151A(0x0002) MISSED OFFSET
-	float                                              CallFunc_BreakVector_X3;                                  // 0x151C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Y3;                                  // 0x1520(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Z3;                                  // 0x1524(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue2;               // 0x1528(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x3];                                       // 0x1529(0x0003) MISSED OFFSET
-	float                                              CallFunc_MapRange_ReturnValue5;                           // 0x152C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Subtract_FloatFloat_ReturnValue2;                // 0x1530(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue6;                           // 0x1534(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_FloatFloat_ReturnValue2;                    // 0x1538(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_DoubleDouble_ReturnValue18;                 // 0x1539(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x2];                                       // 0x153A(0x0002) MISSED OFFSET
-	float                                              CallFunc_BreakVector_X4;                                  // 0x153C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Y4;                                  // 0x1540(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_BreakVector_Z4;                                  // 0x1544(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Multiply_FloatFloat_ReturnValue2;                // 0x1548(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Multiply_FloatFloat_ReturnValue3;                // 0x154C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue7;                           // 0x1550(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_MapRange_ReturnValue8;                           // 0x1554(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue31;                       // 0x1558(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue10;                         // 0x1559(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x2];                                       // 0x155A(0x0002) MISSED OFFSET
-	float                                              K2Node_Event_DeltaTimeX;                                  // 0x155C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class APawn*                                       CallFunc_TryGetPawnOwner_ReturnValue;                     // 0x1560(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x1568(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x1570(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x3];                                       // 0x1571(0x0003) MISSED OFFSET
-	struct FVector                                     CallFunc_K2_GetComponentLocation_ReturnValue;             // 0x1574(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_GetSocketLocation_ReturnValue;                   // 0x1580(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x158C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x158D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x158E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x1];                                       // 0x158F(0x0001) MISSED OFFSET
-	class UAnimInstance*                               CallFunc_GetAnimInstance_ReturnValue;                     // 0x1590(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue3;                            // 0x1598(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData17[0x7];                                       // 0x1599(0x0007) MISSED OFFSET
-	class UTEKHoverSail_AnimBlueprint_C*               K2Node_DynamicCast_AsTEKHoverSail_AnimBlueprint_C;        // 0x15A0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x15A8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData18[0x3];                                       // 0x15A9(0x0003) MISSED OFFSET
-	struct FRotator                                    CallFunc_SelectRotator_ReturnValue;                       // 0x15AC(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FVector                                     CallFunc_SelectVector_ReturnValue;                        // 0x15B8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_SelectFloat_ReturnValue3;                        // 0x1514(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue8;                          // 0x1518(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue9;                          // 0x1519(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue;                // 0x151A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_FloatFloat_ReturnValue;                     // 0x151B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue17;                 // 0x151C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue30;                       // 0x151D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x2];                                       // 0x151E(0x0002) MISSED OFFSET
+	float                                              CallFunc_BreakVector_X3;                                  // 0x1520(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Y3;                                  // 0x1524(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Z3;                                  // 0x1528(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue2;               // 0x152C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x3];                                       // 0x152D(0x0003) MISSED OFFSET
+	float                                              CallFunc_MapRange_ReturnValue5;                           // 0x1530(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Subtract_FloatFloat_ReturnValue2;                // 0x1534(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue6;                           // 0x1538(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_FloatFloat_ReturnValue2;                    // 0x153C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_DoubleDouble_ReturnValue18;                 // 0x153D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x2];                                       // 0x153E(0x0002) MISSED OFFSET
+	float                                              CallFunc_BreakVector_X4;                                  // 0x1540(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Y4;                                  // 0x1544(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_BreakVector_Z4;                                  // 0x1548(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Multiply_FloatFloat_ReturnValue2;                // 0x154C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Multiply_FloatFloat_ReturnValue3;                // 0x1550(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue7;                           // 0x1554(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_MapRange_ReturnValue8;                           // 0x1558(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue31;                       // 0x155C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue10;                         // 0x155D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x2];                                       // 0x155E(0x0002) MISSED OFFSET
+	float                                              K2Node_Event_DeltaTimeX;                                  // 0x1560(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x4];                                       // 0x1564(0x0004) MISSED OFFSET
+	class APawn*                                       CallFunc_TryGetPawnOwner_ReturnValue;                     // 0x1568(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x1570(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x1578(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x3];                                       // 0x1579(0x0003) MISSED OFFSET
+	struct FVector                                     CallFunc_K2_GetComponentLocation_ReturnValue;             // 0x157C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_GetSocketLocation_ReturnValue;                   // 0x1588(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x1594(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x1595(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x1596(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData17[0x1];                                       // 0x1597(0x0001) MISSED OFFSET
+	class UAnimInstance*                               CallFunc_GetAnimInstance_ReturnValue;                     // 0x1598(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue3;                            // 0x15A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData18[0x7];                                       // 0x15A1(0x0007) MISSED OFFSET
+	class UTEKHoverSail_AnimBlueprint_C*               K2Node_DynamicCast_AsTEKHoverSail_AnimBlueprint_C;        // 0x15A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x15B0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData19[0x3];                                       // 0x15B1(0x0003) MISSED OFFSET
+	struct FRotator                                    CallFunc_SelectRotator_ReturnValue;                       // 0x15B4(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     CallFunc_SelectVector_ReturnValue;                        // 0x15C0(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -301,72 +303,71 @@ public:
 	}
 
 
-	void STATIC_Compose_Mesh_Transform_Offsets();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2346();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2345();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2344();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2343();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2342();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2341();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2340();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2339();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2338();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2337();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2336();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2334();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2333();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2331();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2330();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2329();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2328();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2327();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2326();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2325();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2324();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2323();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2322();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2321();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2320();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2319();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2318();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2317();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2316();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2315();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2314();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2313();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2312();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2311();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2310();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2309();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2308();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2307();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2306();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2305();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2304();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2303();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2302();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2301();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2300();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2299();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2298();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2297();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3854();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3853();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3852();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendSpacePlayer_200();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3851();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendSpacePlayer_199();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3850();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3849();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3848();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3847();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendSpacePlayer_198();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3846();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendSpacePlayer_197();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3845();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3844();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendListByBool_2652();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3843();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2126();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2125();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2124();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2123();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2122();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2121();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2120();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2119();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2118();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2117();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2116();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2114();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2113();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2111();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2110();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2109();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2108();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2107();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2106();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2105();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2104();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2103();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2102();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2101();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2100();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2099();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2098();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2097();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2096();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2095();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2094();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2093();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2092();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2091();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2090();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2089();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2088();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2087();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2086();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2085();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2084();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2083();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2082();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2081();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2080();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2079();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2078();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_TransitionResult_2077();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3898();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3897();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3896();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendSpacePlayer_212();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3895();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendSpacePlayer_211();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3894();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3893();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3892();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3891();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendSpacePlayer_210();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3890();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendSpacePlayer_209();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3889();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3888();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_BlendListByBool_2876();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_HM_Hoversail_Riding_AnimBP_AnimGraphNode_SequencePlayer_3887();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_HM_Hoversail_Riding_AnimBP(int EntryPoint);
 };

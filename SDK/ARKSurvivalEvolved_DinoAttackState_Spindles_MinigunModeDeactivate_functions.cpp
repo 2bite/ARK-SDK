@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,14 +30,14 @@ void UDinoAttackState_Spindles_MinigunModeDeactivate_C::OnEndEvent()
 
 
 // Function DinoAttackState_Spindles_MinigunModeDeactivate.DinoAttackState_Spindles_MinigunModeDeactivate_C.BPCanAttack
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         attackRangeOffset              (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 OtherTarget                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDinoAttackState_Spindles_MinigunModeDeactivate_C::STATIC_BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
+bool UDinoAttackState_Spindles_MinigunModeDeactivate_C::BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackState_Spindles_MinigunModeDeactivate.DinoAttackState_Spindles_MinigunModeDeactivate_C.BPCanAttack");
 
@@ -47,7 +47,6 @@ bool UDinoAttackState_Spindles_MinigunModeDeactivate_C::STATIC_BPCanAttack(float
 	params.OtherTarget = OtherTarget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

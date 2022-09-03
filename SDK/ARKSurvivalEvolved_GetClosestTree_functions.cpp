@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GetClosestTree.GetClosestTree_C.GetClosestTree
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AllowPrev                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UStaticMeshComponent*    treeComp                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UGetClosestTree_C::GetClosestTree(class AActor* OwnerActor, bool AllowPrev, int* ItemIndex, class UStaticMeshComponent** treeComp)
+void UGetClosestTree_C::STATIC_GetClosestTree(class AActor* OwnerActor, bool AllowPrev, int* ItemIndex, class UStaticMeshComponent** treeComp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GetClosestTree.GetClosestTree_C.GetClosestTree");
 
@@ -29,6 +29,7 @@ void UGetClosestTree_C::GetClosestTree(class AActor* OwnerActor, bool AllowPrev,
 	params.AllowPrev = AllowPrev;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,7 +43,7 @@ void UGetClosestTree_C::GetClosestTree(class AActor* OwnerActor, bool AllowPrev,
 
 
 // Function GetClosestTree.GetClosestTree_C.GetPointOnTreeSurface
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     treeComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 origPoint                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -50,7 +51,7 @@ void UGetClosestTree_C::GetClosestTree(class AActor* OwnerActor, bool AllowPrev,
 // class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UGetClosestTree_C::STATIC_GetPointOnTreeSurface(class UPrimitiveComponent* treeComp, const struct FVector& origPoint, int ItemIndex, class AActor* OwnerActor, struct FVector* Ret)
+void UGetClosestTree_C::GetPointOnTreeSurface(class UPrimitiveComponent* treeComp, const struct FVector& origPoint, int ItemIndex, class AActor* OwnerActor, struct FVector* Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GetClosestTree.GetClosestTree_C.GetPointOnTreeSurface");
 
@@ -61,6 +62,7 @@ void UGetClosestTree_C::STATIC_GetPointOnTreeSurface(class UPrimitiveComponent* 
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,7 +74,7 @@ void UGetClosestTree_C::STATIC_GetPointOnTreeSurface(class UPrimitiveComponent* 
 
 
 // Function GetClosestTree.GetClosestTree_C.ReceiveExecute
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,6 +86,7 @@ void UGetClosestTree_C::STATIC_ReceiveExecute(class AActor** OwnerActor)
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

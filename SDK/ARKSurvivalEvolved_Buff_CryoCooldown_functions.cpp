@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,14 +67,14 @@ void ABuff_CryoCooldown_C::ReceiveBeginPlay()
 
 
 // Function Buff_CryoCooldown.Buff_CryoCooldown_C.BPDrawBuffStatusHUD
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, HasDefaults, DLLImport, BlueprintPure)
+// (Exec, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_CryoCooldown_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_CryoCooldown_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CryoCooldown.Buff_CryoCooldown_C.BPDrawBuffStatusHUD");
 
@@ -85,7 +85,6 @@ void ABuff_CryoCooldown_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, f
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

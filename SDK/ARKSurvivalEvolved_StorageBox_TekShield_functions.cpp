@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -173,7 +173,7 @@ void AStorageBox_TekShield_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* C
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPImpactEffect
-// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FHitResult              HitRes                         (Parm, OutParm, ReferenceParm)
 // struct FVector                 ShootDirection                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -186,6 +186,7 @@ bool AStorageBox_TekShield_C::BPImpactEffect(struct FHitResult* HitRes, struct F
 	AStorageBox_TekShield_C_BPImpactEffect_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -201,7 +202,7 @@ bool AStorageBox_TekShield_C::BPImpactEffect(struct FHitResult* HitRes, struct F
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPHitEffect
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DamageTaken                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
@@ -226,6 +227,7 @@ void AStorageBox_TekShield_C::BPHitEffect(float* DamageTaken, class APawn** Pawn
 	params.HitNormal = HitNormal;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -434,7 +436,7 @@ bool AStorageBox_TekShield_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function StorageBox_TekShield.StorageBox_TekShield_C.BPGetMultiUseEntries
-// (NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

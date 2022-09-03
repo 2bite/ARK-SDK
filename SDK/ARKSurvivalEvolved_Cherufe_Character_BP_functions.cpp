@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,7 +133,7 @@ float ACherufe_Character_BP_C::BP_GetCustomModifier_MaxSpeed()
 
 
 // Function Cherufe_Character_BP.Cherufe_Character_BP_C.UpdateTargetingAndAiming
-// (NetReliable, NetRequest, Native, Event, Static, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -145,7 +145,6 @@ void ACherufe_Character_BP_C::STATIC_UpdateTargetingAndAiming(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -351,7 +350,7 @@ void ACherufe_Character_BP_C::CheckRaining(bool* ThisCharacterIsOpenToSkyAndItIs
 
 
 // Function Cherufe_Character_BP.Cherufe_Character_BP_C.SpawnNestEgg
-// (NetReliable, NetRequest, Static, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ACherufe_Character_BP_C::STATIC_SpawnNestEgg()
 {
@@ -360,6 +359,7 @@ void ACherufe_Character_BP_C::STATIC_SpawnNestEgg()
 	ACherufe_Character_BP_C_SpawnNestEgg_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -524,7 +524,7 @@ void ACherufe_Character_BP_C::OnRep_IsProjectileTargeting()
 
 
 // Function Cherufe_Character_BP.Cherufe_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -542,6 +542,7 @@ void ACherufe_Character_BP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct FName
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -550,7 +551,7 @@ void ACherufe_Character_BP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct FName
 
 
 // Function Cherufe_Character_BP.Cherufe_Character_BP_C.SpawnVentProjectiles
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ACherufe_Character_BP_C::STATIC_SpawnVentProjectiles()
 {
@@ -797,13 +798,13 @@ bool ACherufe_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Cherufe_Character_BP.Cherufe_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ACherufe_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ACherufe_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Cherufe_Character_BP.Cherufe_Character_BP_C.BPGetMultiUseEntries");
 
@@ -847,7 +848,7 @@ void ACherufe_Character_BP_C::ProjectileTrySubtractFood(bool* Success)
 
 
 // Function Cherufe_Character_BP.Cherufe_Character_BP_C.BPGetHUDElements
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -860,6 +861,7 @@ void ACherufe_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController** 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

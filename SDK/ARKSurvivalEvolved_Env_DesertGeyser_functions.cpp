@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Env_DesertGeyser.Env_DesertGeyser_C.IsCharacterInGeyser
-// (NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEnv_DesertGeyser_C::IsCharacterInGeyser(class APrimalCharacter* Character, bool* return_value)
+void AEnv_DesertGeyser_C::STATIC_IsCharacterInGeyser(class APrimalCharacter* Character, bool* Return_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Env_DesertGeyser.Env_DesertGeyser_C.IsCharacterInGeyser");
 
@@ -26,13 +26,14 @@ void AEnv_DesertGeyser_C::IsCharacterInGeyser(class APrimalCharacter* Character,
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (return_value != nullptr)
-		*return_value = params.return_value;
+	if (Return_Value != nullptr)
+		*Return_Value = params.Return_Value;
 }
 
 

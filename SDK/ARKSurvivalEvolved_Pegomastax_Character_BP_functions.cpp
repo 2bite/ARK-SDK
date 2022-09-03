@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BPClientHandleNetExecCommand
-// (Net, NetReliable, Exec, Static, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APegomastax_Character_BP_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool APegomastax_Character_BP_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BPClientHandleNetExecCommand");
 
@@ -29,6 +29,7 @@ bool APegomastax_Character_BP_C::STATIC_BPClientHandleNetExecCommand(struct FNam
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -219,11 +220,11 @@ void APegomastax_Character_BP_C::ClearSecondaryAnims()
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.PostAttackActions
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           stoleItem                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void APegomastax_Character_BP_C::STATIC_PostAttackActions(bool stoleItem)
+void APegomastax_Character_BP_C::PostAttackActions(bool stoleItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.PostAttackActions");
 
@@ -231,7 +232,6 @@ void APegomastax_Character_BP_C::STATIC_PostAttackActions(bool stoleItem)
 	params.stoleItem = stoleItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,7 +542,7 @@ void APegomastax_Character_BP_C::Get_NumPegosInGroup(int* maxExtraItems)
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.IsValidItemForTaming
-// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class UPrimalItem*             PrimalItem                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -667,7 +667,7 @@ bool APegomastax_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -681,7 +681,6 @@ TArray<struct FMultiUseEntry> APegomastax_Character_BP_C::BPGetMultiUseEntries(c
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -852,7 +851,7 @@ bool APegomastax_Character_BP_C::BPShouldForceFlee()
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.Do StealItem
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APrimalCharacter*        characterToStealFrom           (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimalItem*             itemToSteal                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -869,6 +868,7 @@ void APegomastax_Character_BP_C::STATIC_Do_StealItem(class APrimalCharacter* cha
 	params.ConsumeItem = ConsumeItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -904,7 +904,7 @@ void APegomastax_Character_BP_C::Steal_from_Character(class APrimalCharacter* Ch
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BlueprintAdjustOutputDamage
-// (Exec, Native, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -1026,7 +1026,7 @@ float APegomastax_Character_BP_C::BPModifyHarvestingQuantity(float* originalQuan
 
 
 // Function Pegomastax_Character_BP.Pegomastax_Character_BP_C.BlueprintCanAttack
-// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Distance                       (Parm, ZeroConstructor, IsPlainOldData)

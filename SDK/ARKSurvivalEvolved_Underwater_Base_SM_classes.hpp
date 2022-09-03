@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 
 	bool BPPreventPlacingStructureOntoMe(class APlayerController** PC, class APrimalStructure** ForNewStructure, struct FHitResult* ForHitResult);
 	bool BPForceConsideredEnemyFoundation(class APlayerController** PC, class APrimalStructure** ForNewStructure, struct FVector* TestAtLocation);
-	void ChangedCompartmentFloodState();
+	void STATIC_ChangedCompartmentFloodState();
 	void UserConstructionScript();
 	void ExecuteUbergraph_Underwater_Base_SM(int EntryPoint);
 };

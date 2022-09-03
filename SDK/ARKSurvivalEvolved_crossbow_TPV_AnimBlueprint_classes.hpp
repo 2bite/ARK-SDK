@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,8 +51,8 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2002();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2001();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1862();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1861();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void AnimNotify_HideFire();
 	void AnimNotify_ShowFire();

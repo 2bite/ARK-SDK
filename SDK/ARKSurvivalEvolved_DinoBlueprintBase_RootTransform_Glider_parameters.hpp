@@ -1,0 +1,321 @@
+#pragma once
+
+// ARKSurvivalEvolved (332.8) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_DinoBlueprintBase_RootTransform_Glider_classes.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.PassengerUpdateAnim
+struct UDinoBlueprintBase_RootTransform_Glider_C_PassengerUpdateAnim_Params
+{
+	class APrimalDinoCharacter*                        CarryingDino;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.UpdateAnimFromShooterChar
+struct UDinoBlueprintBase_RootTransform_Glider_C_UpdateAnimFromShooterChar_Params
+{
+	class AShooterCharacter*                           ShooterChar;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               HasBuffFromPawnOwner;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.BlueprintPlayAnimationEvent
+struct UDinoBlueprintBase_RootTransform_Glider_C_BlueprintPlayAnimationEvent_Params
+{
+	class UAnimMontage**                               AnimationMontage;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             PlayRate;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              playedAnimLength;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7434
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7434_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9107
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9107_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_ModifyBone_1056
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_ModifyBone_1056_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7433
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7433_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_RotationOffsetBlendSpace_462
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_RotationOffsetBlendSpace_462_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7432
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7432_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7431
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7431_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9105
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9105_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7430
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7430_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7429
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7429_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9104
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9104_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9103
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9103_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7428
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7428_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9102
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9102_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7427
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7427_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7426
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7426_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_ApplyAdditive_696
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_ApplyAdditive_696_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7425
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7425_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7424
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7424_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7423
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7423_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9097
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9097_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7422
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7422_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7421
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7421_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9096
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9096_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9095
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9095_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_ApplyAdditive_695
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_ApplyAdditive_695_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7420
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7420_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7419
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7419_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7418
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7418_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7417
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7417_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7416
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7416_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7415
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7415_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByInt_48
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByInt_48_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9088
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9088_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9087
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9087_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9086
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9086_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9085
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9085_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7414
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7414_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9084
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9084_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7413
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7413_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7412
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7412_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9083
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9083_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9082
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9082_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7411
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7411_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9081
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9081_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7410
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7410_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9080
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9080_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9079
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequencePlayer_9079_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7409
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7409_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequenceEvaluator_24
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequenceEvaluator_24_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequenceEvaluator_23
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_SequenceEvaluator_23_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7408
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7408_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7407
+struct UDinoBlueprintBase_RootTransform_Glider_C_EvaluateGraphExposedInputs_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_AnimGraphNode_BlendListByBool_7407_Params
+{
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.BlueprintUpdateAnimation
+struct UDinoBlueprintBase_RootTransform_Glider_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DinoBlueprintBase_RootTransform_Glider.DinoBlueprintBase_RootTransform_Glider_C.ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider
+struct UDinoBlueprintBase_RootTransform_Glider_C_ExecuteUbergraph_DinoBlueprintBase_RootTransform_Glider_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

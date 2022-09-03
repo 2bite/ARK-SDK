@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_AoE_FoliageTrap_Fertile01.Buff_AoE_FoliageTrap_Fertile01_C
-// 0x0000 (0x0970 - 0x0970)
+// 0x0000 (0x0988 - 0x0988)
 class ABuff_AoE_FoliageTrap_Fertile01_C : public ABuff_Base_AoE_WithDelay_C
 {
 public:

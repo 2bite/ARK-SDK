@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_ScoutVision.Buff_ScoutVision_C.BPSetupForInstigator
+struct ABuff_ScoutVision_C_BPSetupForInstigator_Params
+{
+	class AActor**                                     ForInstigator;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPGetDebugInfoString
 struct ABuff_ScoutVision_C_BPGetDebugInfoString_Params
@@ -34,7 +40,7 @@ struct ABuff_ScoutVision_C_ReceiveBeginPlay_Params
 // Function Buff_ScoutVision.Buff_ScoutVision_C.IsLocalScout
 struct ABuff_ScoutVision_C_IsLocalScout_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ScoutVision.Buff_ScoutVision_C.BPIsValidUnStasisCaster

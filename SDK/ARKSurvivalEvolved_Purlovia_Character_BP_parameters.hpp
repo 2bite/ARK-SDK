@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ struct APurlovia_Character_BP_C_BPIsHidden_Params
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.UpdateCollisions
 struct APurlovia_Character_BP_C_UpdateCollisions_Params
 {
-	bool                                               buried;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Buried;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.CanUnburyNormal
@@ -93,11 +93,11 @@ struct APurlovia_Character_BP_C_BlueprintAdjustOutputDamage_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Purlovia_Character_BP.Purlovia_Character_BP_C.IsBuryAttack
-struct APurlovia_Character_BP_C_IsBuryAttack_Params
+// Function Purlovia_Character_BP.Purlovia_Character_BP_C.isBuryAttack
+struct APurlovia_Character_BP_C_isBuryAttack_Params
 {
 	int                                                AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsBuryAttack;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isBuryAttack;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Purlovia_Character_BP.Purlovia_Character_BP_C.BPDoAttack

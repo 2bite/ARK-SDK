@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,24 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.UpdateDinoMatOverrides
+// (Exec, Native, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+
+void AStructure_TaxidermyBase_C::UpdateDinoMatOverrides()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.UpdateDinoMatOverrides");
+
+	AStructure_TaxidermyBase_C_UpdateDinoMatOverrides_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.OnContainerRenamed
 // ()
@@ -140,7 +158,7 @@ void AStructure_TaxidermyBase_C::SetTextRendererColor()
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.CreateSnapshot
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Use_Default_Snapshot_Mat       (Parm, ZeroConstructor, IsPlainOldData)
@@ -160,7 +178,6 @@ void AStructure_TaxidermyBase_C::STATIC_CreateSnapshot(class APlayerController* 
 	params.KeepPreviousSnapshot = KeepPreviousSnapshot;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,13 +248,13 @@ bool AStructure_TaxidermyBase_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Event, NetResponse, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructure_TaxidermyBase_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructure_TaxidermyBase_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPGetMultiUseEntries");
 
@@ -245,6 +262,7 @@ TArray<struct FMultiUseEntry> AStructure_TaxidermyBase_C::BPGetMultiUseEntries(c
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,11 +293,11 @@ void AStructure_TaxidermyBase_C::RemoveSnapshot()
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ApplySnapshot
-// (Native, Static, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             Snapshot                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TaxidermyBase_C::STATIC_ApplySnapshot(class UPrimalItem* Snapshot)
+void AStructure_TaxidermyBase_C::ApplySnapshot(class UPrimalItem* Snapshot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.ApplySnapshot");
 
@@ -296,13 +314,13 @@ void AStructure_TaxidermyBase_C::STATIC_ApplySnapshot(class UPrimalItem* Snapsho
 
 
 // Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPNotifyInventoryItemChange
-// (NetRequest, NetResponse, Static, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool*                          bIsItemAdd                     (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimalItem**            theItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bEquipItem                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TaxidermyBase_C::STATIC_BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem)
+void AStructure_TaxidermyBase_C::BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TaxidermyBase.Structure_TaxidermyBase_C.BPNotifyInventoryItemChange");
 
@@ -312,6 +330,7 @@ void AStructure_TaxidermyBase_C::STATIC_BPNotifyInventoryItemChange(bool* bIsIte
 	params.bEquipItem = bEquipItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

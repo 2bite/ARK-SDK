@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,50 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function PlayerPawnTest.PlayerPawnTest_C.SetGeneralized Unlocked Achievement Tags
+// ()
+// Parameters:
+// TArray<struct FName>           GeneralizedUnlockedAchievementTags (Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void APlayerPawnTest_C::SetGeneralized_Unlocked_Achievement_Tags(TArray<struct FName>* GeneralizedUnlockedAchievementTags)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.SetGeneralized Unlocked Achievement Tags");
+
+	APlayerPawnTest_C_SetGeneralized_Unlocked_Achievement_Tags_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (GeneralizedUnlockedAchievementTags != nullptr)
+		*GeneralizedUnlockedAchievementTags = params.GeneralizedUnlockedAchievementTags;
+}
+
+
+// Function PlayerPawnTest.PlayerPawnTest_C.HasEquipToHideImplant
+// ()
+// Parameters:
+// bool                           ShouldHideImplant              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void APlayerPawnTest_C::HasEquipToHideImplant(bool* ShouldHideImplant)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.HasEquipToHideImplant");
+
+	APlayerPawnTest_C_HasEquipToHideImplant_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ShouldHideImplant != nullptr)
+		*ShouldHideImplant = params.ShouldHideImplant;
+}
+
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPSetupFirstPersonHandsMesh
 // ()
@@ -31,12 +75,15 @@ void APlayerPawnTest_C::BPSetupFirstPersonHandsMesh()
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetupMeshes
 // ()
+// Parameters:
+// bool                           bForce                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerPawnTest_C::SetupMeshes()
+void APlayerPawnTest_C::SetupMeshes(bool bForce)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.SetupMeshes");
 
 	APlayerPawnTest_C_SetupMeshes_Params params;
+	params.bForce = bForce;
 
 	auto flags = fn->FunctionFlags;
 
@@ -376,15 +423,16 @@ void APlayerPawnTest_C::InitHairRestDistance()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetLastTransforms
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void APlayerPawnTest_C::STATIC_SetLastTransforms()
+void APlayerPawnTest_C::SetLastTransforms()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.SetLastTransforms");
 
 	APlayerPawnTest_C_SetLastTransforms_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -427,9 +475,9 @@ void APlayerPawnTest_C::Setup_Collision_Volumes()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
+void APlayerPawnTest_C::SetupNewHairstyle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.SetupNewHairstyle");
 
@@ -444,16 +492,15 @@ void APlayerPawnTest_C::STATIC_SetupNewHairstyle()
 
 
 // Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void APlayerPawnTest_C::STATIC_UpdateHair()
+void APlayerPawnTest_C::UpdateHair()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerPawnTest.PlayerPawnTest_C.UpdateHair");
 
 	APlayerPawnTest_C_UpdateHair_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

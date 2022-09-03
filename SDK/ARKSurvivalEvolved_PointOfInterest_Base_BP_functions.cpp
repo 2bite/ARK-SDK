@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,9 +34,9 @@ struct FPointOfInterestData APointOfInterest_Base_BP_C::GetPointOfInterestData()
 
 
 // Function PointOfInterest_Base_BP.PointOfInterest_Base_BP_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void APointOfInterest_Base_BP_C::UserConstructionScript()
+void APointOfInterest_Base_BP_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PointOfInterest_Base_BP.PointOfInterest_Base_BP_C.UserConstructionScript");
 

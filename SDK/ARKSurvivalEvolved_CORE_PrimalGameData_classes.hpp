@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CORE_PrimalGameData.CORE_PrimalGameData_C
-// 0x0020 (0x20A0 - 0x2080)
+// 0x0020 (0x20B8 - 0x2098)
 class UCORE_PrimalGameData_C : public UPrimalGameData
 {
 public:
-	TArray<struct FHairMetaData>                       FemaleHairStylesMetaDatas;                                // 0x2080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FHairMetaData>                       MaleHairStylesMetaDatas;                                  // 0x2090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FHairMetaData>                       FemaleHairStylesMetaDatas;                                // 0x2098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FHairMetaData>                       MaleHairStylesMetaDatas;                                  // 0x20A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

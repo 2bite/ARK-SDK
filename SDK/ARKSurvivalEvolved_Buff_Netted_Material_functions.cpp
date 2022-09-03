@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,31 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_Netted_Material.Buff_Netted_Material_C.BPCustomAllowAddBuff
+// ()
+// Parameters:
+// class APrimalCharacter**       forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_Netted_Material_C::BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Netted_Material.Buff_Netted_Material_C.BPCustomAllowAddBuff");
+
+	ABuff_Netted_Material_C_BPCustomAllowAddBuff_Params params;
+	params.forCharacter = forCharacter;
+	params.DamageCauser = DamageCauser;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_Netted_Material.Buff_Netted_Material_C.DrawBuffFloatingHUD
 // ()
@@ -269,7 +294,7 @@ float ABuff_Netted_Material_C::BPAdjustDamage_Ex(float* Damage, class AControlle
 
 
 // Function Buff_Netted_Material.Buff_Netted_Material_C.BPGetHUDElements
-// (NetRequest, Native, Event, NetResponse, NetMulticast, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -282,7 +307,6 @@ void ABuff_Netted_Material_C::BPGetHUDElements(class APlayerController** ForPC, 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -314,15 +338,16 @@ void ABuff_Netted_Material_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Netted_Material.Buff_Netted_Material_C.TryCuttingRope
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_Netted_Material_C::STATIC_TryCuttingRope()
+void ABuff_Netted_Material_C::TryCuttingRope()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Netted_Material.Buff_Netted_Material_C.TryCuttingRope");
 
 	ABuff_Netted_Material_C_TryCuttingRope_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -451,11 +476,11 @@ void ABuff_Netted_Material_C::FadeOutNet()
 
 
 // Function Buff_Netted_Material.Buff_Netted_Material_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Event, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Netted_Material_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_Netted_Material_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Netted_Material.Buff_Netted_Material_C.BPSetupForInstigator");
 
@@ -463,6 +488,7 @@ void ABuff_Netted_Material_C::BPSetupForInstigator(class AActor** ForInstigator)
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

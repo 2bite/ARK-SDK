@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function rockDrake_TekSaddle_Jaw_RIG_AnimBP.rockDrake_TekSaddle_Jaw_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_rockDrake_TekSaddle_Jaw_RIG_AnimBP_AnimGraphNode_BlendListByBool_2456
+// Function rockDrake_TekSaddle_Jaw_RIG_AnimBP.rockDrake_TekSaddle_Jaw_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_rockDrake_TekSaddle_Jaw_RIG_AnimBP_AnimGraphNode_BlendListByBool_2624
 // ()
 
-void UrockDrake_TekSaddle_Jaw_RIG_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_rockDrake_TekSaddle_Jaw_RIG_AnimBP_AnimGraphNode_BlendListByBool_2456()
+void UrockDrake_TekSaddle_Jaw_RIG_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_rockDrake_TekSaddle_Jaw_RIG_AnimBP_AnimGraphNode_BlendListByBool_2624()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function rockDrake_TekSaddle_Jaw_RIG_AnimBP.rockDrake_TekSaddle_Jaw_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_rockDrake_TekSaddle_Jaw_RIG_AnimBP_AnimGraphNode_BlendListByBool_2456");
+	static auto fn = UObject::FindObject<UFunction>("Function rockDrake_TekSaddle_Jaw_RIG_AnimBP.rockDrake_TekSaddle_Jaw_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_rockDrake_TekSaddle_Jaw_RIG_AnimBP_AnimGraphNode_BlendListByBool_2624");
 
-	UrockDrake_TekSaddle_Jaw_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_rockDrake_TekSaddle_Jaw_RIG_AnimBP_AnimGraphNode_BlendListByBool_2456_Params params;
+	UrockDrake_TekSaddle_Jaw_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_rockDrake_TekSaddle_Jaw_RIG_AnimBP_AnimGraphNode_BlendListByBool_2624_Params params;
 
 	auto flags = fn->FunctionFlags;
 

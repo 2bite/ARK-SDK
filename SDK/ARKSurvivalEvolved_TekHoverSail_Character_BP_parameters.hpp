@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -821,7 +821,7 @@ struct ATekHoverSail_Character_BP_C_BP_OnSetRunning_Params
 struct ATekHoverSail_Character_BP_C_OnReceiveSkiff2dMovementInput_Params
 {
 	float                                              InputAxisVal;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bRight;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bright;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bShouldIntercept;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -920,7 +920,7 @@ struct ATekHoverSail_Character_BP_C_ResetSkiffInputs_Params
 struct ATekHoverSail_Character_BP_C_GetEnvironmentalParticleTraceDistance_Params
 {
 	struct FName                                       ForSocketName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              traceDist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              TraceDist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.ReceiveDestroyed
@@ -1453,7 +1453,7 @@ struct ATekHoverSail_Character_BP_C_on_start_aerial_boost_Params
 // Function TekHoverSail_Character_BP.TekHoverSail_Character_BP_C.ServerSyncMovementValues
 struct ATekHoverSail_Character_BP_C_ServerSyncMovementValues_Params
 {
-	float                                              synced_right;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Synced_Right;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Synced_Fwd;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

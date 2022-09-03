@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 	bool BPCopyCustomSettingsFromTurret(class APrimalStructureTurret** FromTurret);
 	bool BPTurretPreventsTargeting(class APrimalCharacter** PotentialTarget);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void BPPostLoadedFromSaveGame();

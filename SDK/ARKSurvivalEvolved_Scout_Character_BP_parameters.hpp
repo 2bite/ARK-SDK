@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ struct AScout_Character_BP_C_BP_PreventMovementMode_Params
 // Function Scout_Character_BP.Scout_Character_BP_C.ServerIsFiringItemInInventory
 struct AScout_Character_BP_C_ServerIsFiringItemInInventory_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Scout_Character_BP.Scout_Character_BP_C.ServerIsUsingTrackerBeam
@@ -144,7 +144,7 @@ struct AScout_Character_BP_C_ReceiveTick_Params
 // Function Scout_Character_BP.Scout_Character_BP_C.ScoutIsFirstPerson
 struct AScout_Character_BP_C_ScoutIsFirstPerson_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Scout_Character_BP.Scout_Character_BP_C.InitBeamVFX
@@ -349,33 +349,33 @@ struct AScout_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_127
-struct AScout_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_127_Params
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_132
+struct AScout_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_132_Params
 {
 };
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_126
-struct AScout_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_126_Params
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_131
+struct AScout_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_131_Params
 {
 };
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_125
-struct AScout_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_125_Params
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_130
+struct AScout_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_130_Params
 {
 };
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_124
-struct AScout_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_124_Params
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_129
+struct AScout_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_129_Params
 {
 };
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_123
-struct AScout_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_123_Params
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_128
+struct AScout_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_128_Params
 {
 };
 
-// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_122
-struct AScout_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_122_Params
+// Function Scout_Character_BP.Scout_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_127
+struct AScout_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_127_Params
 {
 };
 

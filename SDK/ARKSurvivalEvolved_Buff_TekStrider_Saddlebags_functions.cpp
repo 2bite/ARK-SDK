@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,12 +33,12 @@ void ABuff_TekStrider_Saddlebags_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_TekStrider_Saddlebags.Buff_TekStrider_Saddlebags_C.BPGetHUDElements
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_TekStrider_Saddlebags_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABuff_TekStrider_Saddlebags_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Saddlebags.Buff_TekStrider_Saddlebags_C.BPGetHUDElements");
 
@@ -46,6 +46,7 @@ void ABuff_TekStrider_Saddlebags_C::BPGetHUDElements(class APlayerController** F
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,13 +120,13 @@ bool ABuff_TekStrider_Saddlebags_C::BPTryMultiUse(class APlayerController** ForP
 
 
 // Function Buff_TekStrider_Saddlebags.Buff_TekStrider_Saddlebags_C.BPGetMultiUseEntries
-// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, NetValidate)
+// (Native, Event, MulticastDelegate, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABuff_TekStrider_Saddlebags_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABuff_TekStrider_Saddlebags_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Saddlebags.Buff_TekStrider_Saddlebags_C.BPGetMultiUseEntries");
 
@@ -133,6 +134,7 @@ TArray<struct FMultiUseEntry> ABuff_TekStrider_Saddlebags_C::STATIC_BPGetMultiUs
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,11 +219,11 @@ void ABuff_TekStrider_Saddlebags_C::Buff_Tick_Server_Logic()
 
 
 // Function Buff_TekStrider_Saddlebags.Buff_TekStrider_Saddlebags_C.BPSetupForInstigator
-// (NetRequest, Exec, MulticastDelegate, Public, Private, NetServer, NetClient, NetValidate)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Saddlebags_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_TekStrider_Saddlebags_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Saddlebags.Buff_TekStrider_Saddlebags_C.BPSetupForInstigator");
 
@@ -229,6 +231,7 @@ void ABuff_TekStrider_Saddlebags_C::BPSetupForInstigator(class AActor** ForInsti
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

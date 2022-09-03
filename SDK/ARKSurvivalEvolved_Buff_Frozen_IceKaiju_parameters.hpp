@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.RepauseAnims
+struct ABuff_Frozen_IceKaiju_C_RepauseAnims_Params
+{
+};
+
+// Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.RefreshMeshes
+struct ABuff_Frozen_IceKaiju_C_RefreshMeshes_Params
+{
+};
 
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BPCheckPreventInput
 struct ABuff_Frozen_IceKaiju_C_BPCheckPreventInput_Params

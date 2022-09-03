@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Volcano_Trike_Character_BP.Volcano_Trike_Character_BP_C
-// 0x0000 (0x2983 - 0x2983)
+// 0x0000 (0x29A3 - 0x29A3)
 class AVolcano_Trike_Character_BP_C : public ATrike_Character_BP_C
 {
 public:

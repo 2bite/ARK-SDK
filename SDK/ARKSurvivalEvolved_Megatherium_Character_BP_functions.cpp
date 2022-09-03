@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -109,7 +109,7 @@ void AMegatherium_Character_BP_C::BPOnAnimPlayedNotify(class UAnimMontage** Anim
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BPGetMultiUseEntries
-// (Native, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -248,7 +248,7 @@ void AMegatherium_Character_BP_C::BPDoAttack(int* AttackIndex)
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintCanRiderAttack
-// (NetReliable, NetRequest, Static, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Static, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -261,6 +261,7 @@ bool AMegatherium_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackInde
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -333,7 +334,7 @@ void AMegatherium_Character_BP_C::OnNewTarget()
 
 
 // Function Megatherium_Character_BP.Megatherium_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Exec, Native, Event, Static, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -352,7 +353,6 @@ float AMegatherium_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Attac
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

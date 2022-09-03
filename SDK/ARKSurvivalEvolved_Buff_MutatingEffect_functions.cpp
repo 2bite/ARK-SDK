@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,7 +70,7 @@ void ABuff_MutatingEffect_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_MutatingEffect.Buff_MutatingEffect_C.BPSetupForInstigator
-// (Exec, Native, Static, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -82,7 +82,6 @@ void ABuff_MutatingEffect_C::STATIC_BPSetupForInstigator(class AActor** ForInsti
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

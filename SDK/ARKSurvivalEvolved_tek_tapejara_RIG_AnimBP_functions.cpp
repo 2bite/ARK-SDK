@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function tek_tapejara_RIG_AnimBP.tek_tapejara_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2674
+// Function tek_tapejara_RIG_AnimBP.tek_tapejara_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2926
 // ()
 
-void Utek_tapejara_RIG_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2674()
+void Utek_tapejara_RIG_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2926()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function tek_tapejara_RIG_AnimBP.tek_tapejara_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2674");
+	static auto fn = UObject::FindObject<UFunction>("Function tek_tapejara_RIG_AnimBP.tek_tapejara_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2926");
 
-	Utek_tapejara_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2674_Params params;
+	Utek_tapejara_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_tapejara_RIG_AnimBP_AnimGraphNode_BlendListByBool_2926_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,10 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SleepingBag.SleepingBag_C
-// 0x0000 (0x0F50 - 0x0F50)
+// 0x0004 (0x0F54 - 0x0F50)
 class ASleepingBag_C : public ABedBaseBP_C
 {
 public:
+	float                                              AllowedToBuildZAxisDisplacementLimit;                     // 0x0F50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,6 +28,7 @@ public:
 	}
 
 
+	int BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);
 	void UserConstructionScript();
 	void ExecuteUbergraph_SleepingBag(int EntryPoint);
 };

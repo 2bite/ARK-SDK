@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3438,6 +3438,18 @@ enum class ETwitterRequestMethod : uint8_t
 };
 
 
+// Enum Engine.RendererSettings.EDefaultBackBufferPixelFormat
+enum class EDefaultBackBufferPixelFormat : uint8_t
+{
+	EDefaultBackBufferPixelFormat__DBBPF_B8G8R8A8 = 0,
+	EDefaultBackBufferPixelFormat__DBBPF_A16B16G16R16_DEPRECATED = 1,
+	EDefaultBackBufferPixelFormat__DBBPF_FloatRGB_DEPRECATED = 2,
+	EDefaultBackBufferPixelFormat__DBBPF_FloatRGBA = 3,
+	EDefaultBackBufferPixelFormat__DBBPF_A2B10G10R10 = 4,
+	EDefaultBackBufferPixelFormat__DBBPF_MAX = 5
+};
+
+
 // Enum Engine.RendererSettings.EUIScalingRule
 enum class EUIScalingRule : uint8_t
 {
@@ -3721,7 +3733,7 @@ struct FMultiUseEntry
 	float                                              DefaultEntryActivationTimer;                              // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class USoundBase*                                  ActivationSound;                                          // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                UseInventoryButtonStyleOverrideIndex;                     // 0x0040(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	int                                                AdditionalButtonsIndex;                                   // 0x0044(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Engine.Actor.BPMapCheckEntry
@@ -6727,7 +6739,7 @@ struct FLayerActorStats
 struct FExpressionOutput
 {
 	class FString                                      OutputName;                                               // 0x0000(0x0010) (ZeroConstructor)
-	int                                                Mask;                                                     // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                mask;                                                     // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskR;                                                    // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskG;                                                    // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskB;                                                    // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
@@ -6743,7 +6755,7 @@ struct FExpressionInput
 	int                                                OutputIndex;                                              // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	class FString                                      InputName;                                                // 0x0010(0x0010) (ZeroConstructor)
-	int                                                Mask;                                                     // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                mask;                                                     // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskR;                                                    // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskG;                                                    // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskB;                                                    // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
@@ -6807,7 +6819,7 @@ struct FMaterialInput
 	int                                                OutputIndex;                                              // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	class FString                                      InputName;                                                // 0x0010(0x0010) (ZeroConstructor)
-	int                                                Mask;                                                     // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                mask;                                                     // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskR;                                                    // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskG;                                                    // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MaskB;                                                    // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
@@ -6958,6 +6970,27 @@ struct FCollectionScalarParameter : public FCollectionParameterBase
 struct FCollectionVectorParameter : public FCollectionParameterBase
 {
 	struct FLinearColor                                DefaultValue;                                             // 0x0018(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.MountedDLCManager.MountedDLCInfo
+// 0x0058
+struct FMountedDLCInfo
+{
+	class FString                                      Name;                                                     // 0x0000(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class FString                                      Path;                                                     // 0x0010(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class FString                                      ID;                                                       // 0x0020(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class FString                                      ProductId;                                                // 0x0030(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	unsigned char                                      bAutoMount : 1;                                           // 0x0040(0x0001) (Config, GlobalConfig)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+	class FString                                      StoreProductIdOverride;                                   // 0x0048(0x0010) (ZeroConstructor, Config, GlobalConfig)
+};
+
+// ScriptStruct Engine.MountedDLCManager.MountedDLCMapInfo
+// 0x0020
+struct FMountedDLCMapInfo
+{
+	class FString                                      ID;                                                       // 0x0000(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	class FString                                      Map;                                                      // 0x0010(0x0010) (ZeroConstructor, Config, GlobalConfig)
 };
 
 // ScriptStruct Engine.NavCollision.NavCollisionCylinder
@@ -8026,7 +8059,7 @@ struct FNetViewer
 	class APlayerController*                           InViewer;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Viewer;                                                   // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     ViewLocation;                                             // 0x0010(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ViewDir;                                                  // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     viewDir;                                                  // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.BlueprintGeneratedClass.BlueprintDebugData

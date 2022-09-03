@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_512
+// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_524
 // ()
 
-void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_512()
+void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_524()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_512");
+	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_524");
 
-	UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_512_Params params;
+	UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_524_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceK
 }
 
 
-// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_140
+// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_152
 // ()
 
-void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_140()
+void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_152()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_140");
+	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_152");
 
-	UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_140_Params params;
+	UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_152_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -46,14 +46,14 @@ void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceK
 }
 
 
-// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_70
+// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_78
 // ()
 
-void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_70()
+void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_78()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_70");
+	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_78");
 
-	UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_70_Params params;
+	UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_78_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -63,14 +63,14 @@ void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceK
 }
 
 
-// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2192
+// Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2360
 // ()
 
-void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2192()
+void UIceKaiju_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2360()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2192");
+	static auto fn = UObject::FindObject<UFunction>("Function IceKaiju_AnimBlueprint.IceKaiju_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2360");
 
-	UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2192_Params params;
+	UIceKaiju_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2360_Params params;
 
 	auto flags = fn->FunctionFlags;
 

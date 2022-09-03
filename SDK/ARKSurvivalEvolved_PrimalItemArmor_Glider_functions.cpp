@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,11 +74,11 @@ void UPrimalItemArmor_Glider_C::BlueprintUnequipped()
 
 
 // Function PrimalItemArmor_Glider.PrimalItemArmor_Glider_C.BlueprintEquipped
-// ()
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // bool*                          bIsFromSaveGame                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemArmor_Glider_C::BlueprintEquipped(bool* bIsFromSaveGame)
+void UPrimalItemArmor_Glider_C::STATIC_BlueprintEquipped(bool* bIsFromSaveGame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Glider.PrimalItemArmor_Glider_C.BlueprintEquipped");
 
@@ -86,6 +86,7 @@ void UPrimalItemArmor_Glider_C::BlueprintEquipped(bool* bIsFromSaveGame)
 	params.bIsFromSaveGame = bIsFromSaveGame;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

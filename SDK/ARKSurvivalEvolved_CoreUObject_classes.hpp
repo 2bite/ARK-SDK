@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,11 +73,6 @@ public:
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.Object");
 		return ptr;
-	}
-
-	inline void ProcessEvent(class UFunction* function, void* parms)
-	{
-		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 59)(this, function, parms);
 	}
 
 
@@ -225,11 +220,6 @@ public:
 		return ptr;
 	}
 
-	inline UObject* CreateDefaultObject()
-	{
-		return GetVFunction<UObject*(*)(UClass*)>(this, 59)(this);
-	}
-
 };
 
 
@@ -306,11 +296,11 @@ public:
 
 
 // Class CoreUObject.LinkerLoad
-// 0x04B0 (0x0670 - 0x01C0)
+// 0x04C0 (0x0680 - 0x01C0)
 class ULinkerLoad : public ULinker
 {
 public:
-	unsigned char                                      UnknownData00[0x4B0];                                     // 0x01C0(0x04B0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4C0];                                     // 0x01C0(0x04C0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -322,11 +312,11 @@ public:
 
 
 // Class CoreUObject.LinkerSave
-// 0x0118 (0x02D8 - 0x01C0)
+// 0x0128 (0x02E8 - 0x01C0)
 class ULinkerSave : public ULinker
 {
 public:
-	unsigned char                                      UnknownData00[0x118];                                     // 0x01C0(0x0118) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x128];                                     // 0x01C0(0x0128) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

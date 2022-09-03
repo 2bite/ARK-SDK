@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_MegatheriumSit.Buff_MegatheriumSit_C
-// 0x0000 (0x0968 - 0x0968)
+// 0x0000 (0x0980 - 0x0980)
 class ABuff_MegatheriumSit_C : public ABuff_ChalicoSit_C
 {
 public:

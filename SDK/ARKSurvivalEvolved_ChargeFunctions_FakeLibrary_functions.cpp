@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Buff Create Charge Manager No Instigator Library
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class APrimalBuff*             Buff                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -28,6 +28,7 @@ void UChargeFunctions_FakeLibrary_C::STATIC_Buff_Create_Charge_Manager_No_Instig
 	params.managerClass = managerClass;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -237,7 +238,7 @@ void UChargeFunctions_FakeLibrary_C::Buff_Create_Charge_Manager_Library(class AP
 
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.Structure Create Charge Manager Library
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class APrimalStructure*        Structure                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -252,6 +253,7 @@ void UChargeFunctions_FakeLibrary_C::STATIC_Structure_Create_Charge_Manager_Libr
 	params.managerClass = managerClass;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -321,7 +323,7 @@ void UChargeFunctions_FakeLibrary_C::ChargeVariableEventLibrary(TEnumAsByte<E_Ch
 
 
 // Function ChargeFunctions_FakeLibrary.ChargeFunctions_FakeLibrary_C.CharacterCreateChargeManagerLibrary
-// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (Exec, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        CharacterOwner                 (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  managerClass                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -336,7 +338,6 @@ void UChargeFunctions_FakeLibrary_C::CharacterCreateChargeManagerLibrary(class A
 	params.managerClass = managerClass;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

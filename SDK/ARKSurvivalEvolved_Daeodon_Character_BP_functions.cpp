@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,11 +62,11 @@ void ADaeodon_Character_BP_C::IsAlly(int otherTargetingTeam, bool* isSameTeamOrA
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.TryTrigger Attack
-// (NetReliable, Native, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADaeodon_Character_BP_C::STATIC_TryTrigger_Attack(int AttackIndex)
+void ADaeodon_Character_BP_C::TryTrigger_Attack(int AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Daeodon_Character_BP.Daeodon_Character_BP_C.TryTrigger Attack");
 
@@ -74,7 +74,6 @@ void ADaeodon_Character_BP_C::STATIC_TryTrigger_Attack(int AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,12 +108,12 @@ void ADaeodon_Character_BP_C::ReceiveAnyDamage(float* Damage, class UDamageType*
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.SendNetExecCommandToCharacter
-// (NetReliable, Exec, Event, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADaeodon_Character_BP_C::STATIC_SendNetExecCommandToCharacter(class AShooterCharacter* Character, const struct FName& CommandName)
+void ADaeodon_Character_BP_C::SendNetExecCommandToCharacter(class AShooterCharacter* Character, const struct FName& CommandName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Daeodon_Character_BP.Daeodon_Character_BP_C.SendNetExecCommandToCharacter");
 
@@ -401,13 +400,13 @@ void ADaeodon_Character_BP_C::Toggle_Passive_Healing()
 
 
 // Function Daeodon_Character_BP.Daeodon_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ADaeodon_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ADaeodon_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Daeodon_Character_BP.Daeodon_Character_BP_C.BPGetMultiUseEntries");
 

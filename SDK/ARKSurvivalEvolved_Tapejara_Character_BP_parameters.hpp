@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.StopMovementFn
+struct ATapejara_Character_BP_C_StopMovementFn_Params
+{
+};
+
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.ShouldTryLatch
+struct ATapejara_Character_BP_C_ShouldTryLatch_Params
+{
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               LandOnFailureToLatch;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.BPOverrideGetAttackAnimationIndex
 struct ATapejara_Character_BP_C_BPOverrideGetAttackAnimationIndex_Params
@@ -139,23 +151,23 @@ struct ATapejara_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_168
-struct ATapejara_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_168_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_178
+struct ATapejara_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_178_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_167
-struct ATapejara_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_167_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177
+struct ATapejara_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_166
-struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_166_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_176
+struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_176_Params
 {
 };
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_165
-struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_165_Params
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_175
+struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_175_Params
 {
 };
 
@@ -163,6 +175,8 @@ struct ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_165_
 struct ATapejara_Character_BP_C_Latch_Params
 {
 	bool                                               backwardsLatching;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               TryLatch;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               LandOnFailureToLatch;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.ReceiveTick
@@ -250,6 +264,11 @@ struct ATapejara_Character_BP_C_LocalFaceLatchingObject_Params
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.StartedJump
 struct ATapejara_Character_BP_C_StartedJump_Params
+{
+};
+
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.MoveDuringUnlatching
+struct ATapejara_Character_BP_C_MoveDuringUnlatching_Params
 {
 };
 

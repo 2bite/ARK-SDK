@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -484,12 +484,12 @@ void ASummoner_Character_BP_C::RefreshMinionAggro()
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.AttemptDodgeAttack
-// (Event, NetMulticast, NetServer, NetClient, NetValidate)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASummoner_Character_BP_C::AttemptDodgeAttack(int index, bool* Success)
+void ASummoner_Character_BP_C::STATIC_AttemptDodgeAttack(int index, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.AttemptDodgeAttack");
 
@@ -497,6 +497,7 @@ void ASummoner_Character_BP_C::AttemptDodgeAttack(int index, bool* Success)
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -508,11 +509,11 @@ void ASummoner_Character_BP_C::AttemptDodgeAttack(int index, bool* Success)
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.ToggleCanScreamTeleport
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, NetServer, NetClient, NetValidate)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           CanScreamTeleport              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASummoner_Character_BP_C::ToggleCanScreamTeleport(bool CanScreamTeleport)
+void ASummoner_Character_BP_C::STATIC_ToggleCanScreamTeleport(bool CanScreamTeleport)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.ToggleCanScreamTeleport");
 
@@ -520,7 +521,6 @@ void ASummoner_Character_BP_C::ToggleCanScreamTeleport(bool CanScreamTeleport)
 	params.CanScreamTeleport = CanScreamTeleport;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -549,7 +549,7 @@ void ASummoner_Character_BP_C::BPDoAttack(int* AttackIndex)
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.ScreamTeleport
-// (NetRequest, Exec, NetResponse, NetMulticast, NetServer, NetClient, NetValidate)
+// (MulticastDelegate, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Return                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -634,11 +634,11 @@ void ASummoner_Character_BP_C::BPNotifyBumpedByPawn(class APrimalCharacter** ByP
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.GetRandomMinionsToSpawn
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, NetServer, NetClient, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            amount                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASummoner_Character_BP_C::STATIC_GetRandomMinionsToSpawn(int amount)
+void ASummoner_Character_BP_C::GetRandomMinionsToSpawn(int amount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.GetRandomMinionsToSpawn");
 
@@ -646,6 +646,7 @@ void ASummoner_Character_BP_C::STATIC_GetRandomMinionsToSpawn(int amount)
 	params.amount = amount;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -700,14 +701,14 @@ void ASummoner_Character_BP_C::ToggleHealthRegen(bool Enabled)
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.SpawnParticlesAtAttackSockets
-// (NetReliable, NetServer, NetClient, NetValidate)
+// (NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // class UParticleSystem*         particle                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Scale                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SpawnAttached                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASummoner_Character_BP_C::SpawnParticlesAtAttackSockets(int AttackIndex, class UParticleSystem* particle, const struct FVector& Scale, bool SpawnAttached)
+void ASummoner_Character_BP_C::STATIC_SpawnParticlesAtAttackSockets(int AttackIndex, class UParticleSystem* particle, const struct FVector& Scale, bool SpawnAttached)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.SpawnParticlesAtAttackSockets");
 
@@ -718,6 +719,7 @@ void ASummoner_Character_BP_C::SpawnParticlesAtAttackSockets(int AttackIndex, cl
 	params.SpawnAttached = SpawnAttached;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -928,16 +930,15 @@ void ASummoner_Character_BP_C::OnRep_bIsDodging()
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.SummonerServerTick
-// (Native, Static, NetServer, NetClient, NetValidate)
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ASummoner_Character_BP_C::STATIC_SummonerServerTick()
+void ASummoner_Character_BP_C::SummonerServerTick()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.SummonerServerTick");
 
 	ASummoner_Character_BP_C_SummonerServerTick_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -963,19 +964,18 @@ void ASummoner_Character_BP_C::OnRep_bIsStunned()
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.GetLocationLeastPlayerLookingAt
-// (NetRequest, Native, Event, Static, NetServer, NetClient, NetValidate)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 retLocation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASummoner_Character_BP_C::STATIC_GetLocationLeastPlayerLookingAt(struct FVector* retLocation, bool* Success)
+void ASummoner_Character_BP_C::GetLocationLeastPlayerLookingAt(struct FVector* retLocation, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.GetLocationLeastPlayerLookingAt");
 
 	ASummoner_Character_BP_C_GetLocationLeastPlayerLookingAt_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1006,7 +1006,7 @@ void ASummoner_Character_BP_C::TickingShield()
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.BPAdjustDamage
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, NetServer, NetClient, NetValidate)
+// (NetRequest, Exec, Public, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -1029,7 +1029,6 @@ float ASummoner_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDa
 	params.PointHitInfo = PointHitInfo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1040,15 +1039,16 @@ float ASummoner_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDa
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.OnRep_bShieldOn
-// (NetReliable, NetRequest, Static, NetMulticast, NetServer, NetClient, NetValidate)
+// (NetRequest, Native, Event, Public, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ASummoner_Character_BP_C::STATIC_OnRep_bShieldOn()
+void ASummoner_Character_BP_C::OnRep_bShieldOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.OnRep_bShieldOn");
 
 	ASummoner_Character_BP_C_OnRep_bShieldOn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1144,13 +1144,13 @@ void ASummoner_Character_BP_C::IsBeingAimedAt(bool* Aimed)
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.FireCircleTumor
-// (NetRequest, NetResponse, Static, NetMulticast, NetServer, NetClient, NetValidate)
+// (NetReliable, Native, Event, NetResponse, Public, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  DinoClass                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASummoner_Character_BP_C::STATIC_FireCircleTumor(const struct FVector& Loc, int index, class UClass* DinoClass)
+void ASummoner_Character_BP_C::FireCircleTumor(const struct FVector& Loc, int index, class UClass* DinoClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.FireCircleTumor");
 
@@ -1160,6 +1160,7 @@ void ASummoner_Character_BP_C::STATIC_FireCircleTumor(const struct FVector& Loc,
 	params.DinoClass = DinoClass;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1168,7 +1169,7 @@ void ASummoner_Character_BP_C::STATIC_FireCircleTumor(const struct FVector& Loc,
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.FireLineTumor
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, NetClient, NetValidate)
+// (NetReliable, Exec, Event, Static, Public, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -1184,7 +1185,6 @@ void ASummoner_Character_BP_C::STATIC_FireLineTumor(const struct FVector& Loc, i
 	params.DinoClass = DinoClass;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1371,7 +1371,7 @@ void ASummoner_Character_BP_C::Get_Closest_PointIndex_on_Spline(int* index)
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.TickSearchLight
-// (NetReliable, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetClient, NetValidate)
+// (Event, Public, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1383,7 +1383,6 @@ void ASummoner_Character_BP_C::TickSearchLight(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1522,15 +1521,16 @@ void ASummoner_Character_BP_C::OverrideRandomWanderLocation(struct FVector* orig
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.SpawnTumor
-// (NetReliable, NetRequest, Event, Public, Private, Protected, Delegate, NetClient, NetValidate)
+// (Exec, Native, NetResponse, Static, Public, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ASummoner_Character_BP_C::SpawnTumor()
+void ASummoner_Character_BP_C::STATIC_SpawnTumor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.SpawnTumor");
 
 	ASummoner_Character_BP_C_SpawnTumor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1539,13 +1539,13 @@ void ASummoner_Character_BP_C::SpawnTumor()
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.SpawnAMinionAtLocation
-// (Static, Public, Private, Protected, Delegate, NetClient, NetValidate)
+// (Native, Event, NetMulticast, Public, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 SpawnLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  DinoClass                      (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalDinoCharacter*    SpawnedMinion                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASummoner_Character_BP_C::STATIC_SpawnAMinionAtLocation(const struct FVector& SpawnLocation, class UClass* DinoClass, class APrimalDinoCharacter** SpawnedMinion)
+void ASummoner_Character_BP_C::SpawnAMinionAtLocation(const struct FVector& SpawnLocation, class UClass* DinoClass, class APrimalDinoCharacter** SpawnedMinion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.SpawnAMinionAtLocation");
 
@@ -1554,6 +1554,7 @@ void ASummoner_Character_BP_C::STATIC_SpawnAMinionAtLocation(const struct FVecto
 	params.DinoClass = DinoClass;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1565,15 +1566,16 @@ void ASummoner_Character_BP_C::STATIC_SpawnAMinionAtLocation(const struct FVecto
 
 
 // Function Summoner_Character_BP.Summoner_Character_BP_C.SpawnProjectiles
-// (Exec, NetResponse, Static, Public, Private, Protected, Delegate, NetClient, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ASummoner_Character_BP_C::STATIC_SpawnProjectiles()
+void ASummoner_Character_BP_C::SpawnProjectiles()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Summoner_Character_BP.Summoner_Character_BP_C.SpawnProjectiles");
 
 	ASummoner_Character_BP_C_SpawnProjectiles_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

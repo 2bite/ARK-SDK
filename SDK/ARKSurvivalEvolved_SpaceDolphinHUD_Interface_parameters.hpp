@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,7 +18,7 @@ namespace sdk
 struct USpaceDolphinHUD_Interface_C_GetHudData_Params
 {
 	bool                                               HasSaddle;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsFPV;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isFPV;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               HideHUDinFPV;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                LaserLevel;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                MaxLaserLevel;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

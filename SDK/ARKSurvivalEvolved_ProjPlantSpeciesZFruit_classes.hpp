@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 	class AShooterCharacter*                           ShooterCharacter;                                         // 0x0698(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bUseQuickFire;                                            // 0x06A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x7];                                       // 0x06A1(0x0007) MISSED OFFSET
-	class UClass*                                      chargeBuff;                                               // 0x06A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ChargeBuff;                                               // 0x06A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UParticleSystem*                             ChargeEmitter;                                            // 0x06B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue;                 // 0x06B8(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x4];                                       // 0x06C4(0x0004) MISSED OFFSET
@@ -130,7 +130,7 @@ public:
 	void IsShielded(class AActor* Actor, bool* IsShielded);
 	void IsWearingProtection(class AActor* Actor, bool* IsWearingProtection);
 	void STATIC_IsNearbyStructure(int index, float IndexOffset, bool* StructureInBetween);
-	void GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* Retval);
+	void GetAngleBetween(const struct FVector& v1, const struct FVector& v2, float* retVal);
 	void UserConstructionScript();
 	void OnExplode(struct FHitResult* Result);
 	void BPProjectileBounced(struct FHitResult* ImpactResult, struct FVector* ImpactVelocity);

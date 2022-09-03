@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Sheep_Character_BP_Aberrant.Sheep_Character_BP_Aberrant_C
-// 0x0000 (0x22E8 - 0x22E8)
+// 0x0000 (0x2308 - 0x2308)
 class ASheep_Character_BP_Aberrant_C : public ASheep_Character_BP_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ public:
 	float                                              K2Node_CustomEvent_Delay;                                 // 0x0FAC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x0FB0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData12[0x3];                                       // 0x0FB1(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_Duration;                              // 0x0FB4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_duration;                              // 0x0FB4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FWeaponAnim                                 K2Node_MakeStruct_WeaponAnim;                             // 0x0FB8(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayWeaponAnimationEx_ReturnValue;               // 0x0FC8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
@@ -91,7 +91,7 @@ public:
 
 
 	void BPHandleMeleeAttack();
-	void BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void BPLostController();
 	void ReceiveTick(float* DeltaSeconds);
 	void IsColorized(const struct FLinearColor& currColor, bool* Result);

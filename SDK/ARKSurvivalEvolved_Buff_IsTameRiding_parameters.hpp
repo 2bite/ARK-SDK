@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,13 +70,13 @@ struct ABuff_IsTameRiding_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_140
-struct ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_140_Params
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_150
+struct ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_150_Params
 {
 };
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_139
-struct ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_139_Params
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_149
+struct ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_149_Params
 {
 };
 

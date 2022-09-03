@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -336,7 +336,7 @@ struct AShapeshifter_Small_Character_BP_C_GetTarget_Params
 struct AShapeshifter_Small_Character_BP_C_TargetHasElement_Params
 {
 	class AShooterCharacter*                           Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.DisableBegging

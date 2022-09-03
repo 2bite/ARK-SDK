@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,22 +15,22 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C
-// 0x0028 (0x29F0 - 0x29C8)
+// 0x0028 (0x2A10 - 0x29E8)
 class AXenomorph_Character_BP_Male_C : public AXenomorph_Character_BP_C
 {
 public:
-	float                                              OffspringExtraBabyMaxScale;                               // 0x29C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x29CC(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          AdultMaterialOverride;                                    // 0x29D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               CallFunc_EqualEqual_BoolBool_ReturnValue;                 // 0x29D8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x29D9(0x0003) MISSED OFFSET
-	float                                              K2Node_CustomEvent_DelayTime;                             // 0x29DC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_DoAttack_ReturnValue;                            // 0x29E0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x29E1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x29E2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x29E3(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x29E4(0x0004) MISSED OFFSET
-	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAttached_ReturnValue;                // 0x29E8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              OffspringExtraBabyMaxScale;                               // 0x29E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x29EC(0x0004) MISSED OFFSET
+	class UMaterialInterface*                          AdultMaterialOverride;                                    // 0x29F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               CallFunc_EqualEqual_BoolBool_ReturnValue;                 // 0x29F8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x29F9(0x0003) MISSED OFFSET
+	float                                              K2Node_CustomEvent_DelayTime;                             // 0x29FC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_DoAttack_ReturnValue;                            // 0x2A00(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x2A01(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x2A02(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x2A03(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x2A04(0x0004) MISSED OFFSET
+	class UParticleSystemComponent*                    CallFunc_SpawnEmitterAttached_ReturnValue;                // 0x2A08(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

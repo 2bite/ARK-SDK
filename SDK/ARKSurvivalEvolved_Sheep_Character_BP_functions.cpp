@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,7 +59,7 @@ bool ASheep_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Sheep_Character_BP.Sheep_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

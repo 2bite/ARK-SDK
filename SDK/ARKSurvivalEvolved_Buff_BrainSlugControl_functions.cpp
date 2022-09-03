@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,49 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.BPPreventRidingInstigator
+// ()
+// Parameters:
+// class APrimalCharacter**       ForPawn                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_BrainSlugControl_C::BPPreventRidingInstigator(class APrimalCharacter** ForPawn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.BPPreventRidingInstigator");
+
+	ABuff_BrainSlugControl_C_BPPreventRidingInstigator_Params params;
+	params.ForPawn = ForPawn;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.DinoInstigatorReceivedRider
+// ()
+// Parameters:
+// class AShooterCharacter**      Rider                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_BrainSlugControl_C::DinoInstigatorReceivedRider(class AShooterCharacter** Rider)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.DinoInstigatorReceivedRider");
+
+	ABuff_BrainSlugControl_C_DinoInstigatorReceivedRider_Params params;
+	params.Rider = Rider;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.BPInstigatorDied
 // ()
@@ -86,7 +129,7 @@ void ABuff_BrainSlugControl_C::BPUnstasis()
 
 
 // Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.BuffTickClient
-// (Exec, Event, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, NetClient, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -251,9 +294,9 @@ int ABuff_BrainSlugControl_C::BPForceDinoNameTargetingTeamOverride(class AShoote
 
 
 // Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.EndBrainControlEffects
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, NetClient, BlueprintEvent)
 
-void ABuff_BrainSlugControl_C::STATIC_EndBrainControlEffects()
+void ABuff_BrainSlugControl_C::EndBrainControlEffects()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.EndBrainControlEffects");
 
@@ -368,7 +411,7 @@ bool ABuff_BrainSlugControl_C::BPPreventFirstPerson()
 
 
 // Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.BPGetHUDElements
-// (NetReliable, NetRequest, Native, Event, Static, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, Event, Static, MulticastDelegate, Private, NetClient, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -418,7 +461,7 @@ bool ABuff_BrainSlugControl_C::BPTryMultiUse(class APlayerController** ForPC, in
 
 
 // Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.BPGetMultiUseEntries
-// (Native, Static, NetMulticast, MulticastDelegate, Public, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, NetClient, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -432,7 +475,6 @@ TArray<struct FMultiUseEntry> ABuff_BrainSlugControl_C::STATIC_BPGetMultiUseEntr
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

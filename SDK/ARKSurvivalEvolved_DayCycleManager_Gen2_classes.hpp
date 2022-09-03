@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -80,25 +80,25 @@ public:
 	bool                                               CallFunc_EqualEqual_IntInt_ReturnValue2;                  // 0x0799(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_IntInt_ReturnValue3;                  // 0x079A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_IntInt_ReturnValue4;                  // 0x079B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                CallFunc_Array_Length_ReturnValue;                        // 0x079C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsStandalone_ReturnValue;                        // 0x07A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsLowMemPlatform_ReturnValue;                    // 0x07A1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x2];                                       // 0x07A2(0x0002) MISSED OFFSET
-	int                                                K2Node_CustomEvent_Index3;                                // 0x07A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                K2Node_CustomEvent_Index2;                                // 0x07A8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                Temp_int_Loop_Counter_Variable;                           // 0x079C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                CallFunc_Array_Length_ReturnValue;                        // 0x07A0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FName                                       CallFunc_Array_Get_Item;                                  // 0x07A4(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Less_IntInt_ReturnValue;                         // 0x07AC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x3];                                       // 0x07AD(0x0003) MISSED OFFSET
-	int                                                Temp_int_Loop_Counter_Variable;                           // 0x07B0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_IntInt_ReturnValue2;                        // 0x07B4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x07B5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x2];                                       // 0x07B6(0x0002) MISSED OFFSET
-	struct FName                                       CallFunc_Array_Get_Item;                                  // 0x07B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x07C0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x4];                                       // 0x07C4(0x0004) MISSED OFFSET
-	class ULevelStreaming*                             CallFunc_GetStreamingLevel_ReturnValue;                   // 0x07C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsLevelLoaded_ReturnValue;                       // 0x07D0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x3];                                       // 0x07D1(0x0003) MISSED OFFSET
-	int                                                K2Node_CustomEvent_Index;                                 // 0x07D4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x3];                                       // 0x07AD(0x0003) MISSED OFFSET
+	class ULevelStreaming*                             CallFunc_GetStreamingLevel_ReturnValue;                   // 0x07B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsLevelLoaded_ReturnValue;                       // 0x07B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x3];                                       // 0x07B9(0x0003) MISSED OFFSET
+	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x07BC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsStandalone_ReturnValue;                        // 0x07C0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsLowMemPlatform_ReturnValue;                    // 0x07C1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x2];                                       // 0x07C2(0x0002) MISSED OFFSET
+	int                                                K2Node_CustomEvent_Index3;                                // 0x07C4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                K2Node_CustomEvent_Index2;                                // 0x07C8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_IntInt_ReturnValue2;                        // 0x07CC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x07CD(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x2];                                       // 0x07CE(0x0002) MISSED OFFSET
+	int                                                K2Node_CustomEvent_Index;                                 // 0x07D0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x4];                                       // 0x07D4(0x0004) MISSED OFFSET
 	class ULevelStreaming*                             CallFunc_GetStreamingLevel_ReturnValue2;                  // 0x07D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsLevelLoaded_ReturnValue2;                      // 0x07E0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x07E1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -144,12 +144,12 @@ public:
 	bool BPAllowSpawningCrate(class UClass** CrateType);
 	void SetupBackdropWarpMesh();
 	void OnRep_WarpState();
-	void STATIC_DebugPrintWarpState(const class FString& WarpState);
+	void DebugPrintWarpState(const class FString& WarpState);
 	void SaveSkyboxInfo();
 	void PlayWarpMatinee(int index, float TimeLeft);
 	void LoadWarpBackdrop(bool Load);
 	void LoadAsteroids(int index);
-	void STATIC_UnloadAsteroids();
+	void UnloadAsteroids();
 	void GetShipRootFromBackdropLevel();
 	void UpdateSublevels();
 	void ShouldLoadSublevels(bool* NewParam);
@@ -158,7 +158,7 @@ public:
 	void SetupSkyboxTables();
 	void BPOnDCMCheat(struct FName* CheatName, float* Value);
 	void ClientInitializeHazards();
-	void SetupSpaceHazards();
+	void STATIC_SetupSpaceHazards();
 	void GetRockwellStormLocations(TArray<struct FVector>* Locations);
 	void GetEdenStormLocations(TArray<struct FVector>* Locations);
 	void CompareWeatherLocation(const struct FVector& StormLocaiton, const struct FVector& LocationToCompare, float StormBaseRadius, bool* InStormRadius);

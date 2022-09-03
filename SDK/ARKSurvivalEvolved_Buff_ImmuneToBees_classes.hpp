@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ImmuneToBees.Buff_ImmuneToBees_C
-// 0x0010 (0x0970 - 0x0960)
+// 0x0010 (0x0988 - 0x0978)
 class ABuff_ImmuneToBees_C : public ABuff_Base_C
 {
 public:
-	TArray<class UClass*>                              ClassesImmuneTo;                                          // 0x0960(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UClass*>                              ClassesImmuneTo;                                          // 0x0978(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

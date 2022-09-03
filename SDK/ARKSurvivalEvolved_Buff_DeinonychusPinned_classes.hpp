@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_DeinonychusPinned.Buff_DeinonychusPinned_C
-// 0x000C (0x0A30 - 0x0A24)
+// 0x000C (0x0A48 - 0x0A3C)
 class ABuff_DeinonychusPinned_C : public ABuff_Pinned_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0A24(0x0004) MISSED OFFSET
-	class UClass*                                      DebuffClass_1;                                            // 0x0A28(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0A3C(0x0004) MISSED OFFSET
+	class UClass*                                      DebuffClass_1;                                            // 0x0A40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

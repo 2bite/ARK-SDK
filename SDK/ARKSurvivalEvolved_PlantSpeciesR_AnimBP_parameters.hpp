@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,13 +22,13 @@ struct UPlantSpeciesR_AnimBP_C_BlueprintPlayAnimationEvent_Params
 	float                                              playedAnimLength;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function PlantSpeciesR_AnimBP.PlantSpeciesR_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PlantSpeciesR_AnimBP_AnimGraphNode_BlendListByBool_2658
-struct UPlantSpeciesR_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PlantSpeciesR_AnimBP_AnimGraphNode_BlendListByBool_2658_Params
+// Function PlantSpeciesR_AnimBP.PlantSpeciesR_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PlantSpeciesR_AnimBP_AnimGraphNode_BlendListByBool_2910
+struct UPlantSpeciesR_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PlantSpeciesR_AnimBP_AnimGraphNode_BlendListByBool_2910_Params
 {
 };
 
-// Function PlantSpeciesR_AnimBP.PlantSpeciesR_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PlantSpeciesR_AnimBP_AnimGraphNode_ModifyBone_600
-struct UPlantSpeciesR_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PlantSpeciesR_AnimBP_AnimGraphNode_ModifyBone_600_Params
+// Function PlantSpeciesR_AnimBP.PlantSpeciesR_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PlantSpeciesR_AnimBP_AnimGraphNode_ModifyBone_618
+struct UPlantSpeciesR_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PlantSpeciesR_AnimBP_AnimGraphNode_ModifyBone_618_Params
 {
 };
 

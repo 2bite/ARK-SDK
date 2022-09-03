@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,12 +55,12 @@ bool AVenusFlyTrap_BP_C::BPPreventCharacterBasing(class AActor** OtherActor, cla
 
 
 // Function VenusFlyTrap_BP.VenusFlyTrap_BP_C.ValidLOSTarget
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           RetValid                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retValid                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AVenusFlyTrap_BP_C::STATIC_ValidLOSTarget(class AActor* Target, bool* RetValid)
+void AVenusFlyTrap_BP_C::STATIC_ValidLOSTarget(class AActor* Target, bool* retValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VenusFlyTrap_BP.VenusFlyTrap_BP_C.ValidLOSTarget");
 
@@ -68,13 +68,14 @@ void AVenusFlyTrap_BP_C::STATIC_ValidLOSTarget(class AActor* Target, bool* RetVa
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (RetValid != nullptr)
-		*RetValid = params.RetValid;
+	if (retValid != nullptr)
+		*retValid = params.retValid;
 }
 
 
@@ -359,7 +360,7 @@ bool AVenusFlyTrap_BP_C::BPImpactEffect(struct FHitResult* HitRes, struct FVecto
 
 
 // Function VenusFlyTrap_BP.VenusFlyTrap_BP_C.BPReleasedPlayer
-// (NetReliable, NetRequest, Exec, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterCharacter**      ReleasedChar                   (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           AtSeatNumber                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -426,7 +427,7 @@ void AVenusFlyTrap_BP_C::BPSeatedPlayer(class AShooterCharacter** SeatedChar, in
 
 
 // Function VenusFlyTrap_BP.VenusFlyTrap_BP_C.CanAttack
-// (NetReliable, NetRequest, Native, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, NetValidate)
+// (Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           bCanAttack                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,48 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.StopMovementFn
+// ()
+
+void ATapejara_Character_BP_C::StopMovementFn()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.StopMovementFn");
+
+	ATapejara_Character_BP_C_StopMovementFn_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.ShouldTryLatch
+// ()
+// Parameters:
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           LandOnFailureToLatch           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ATapejara_Character_BP_C::ShouldTryLatch(bool* Ret, bool* LandOnFailureToLatch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.ShouldTryLatch");
+
+	ATapejara_Character_BP_C_ShouldTryLatch_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+	if (LandOnFailureToLatch != nullptr)
+		*LandOnFailureToLatch = params.LandOnFailureToLatch;
+}
+
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.BPOverrideGetAttackAnimationIndex
 // ()
@@ -292,7 +334,7 @@ void ATapejara_Character_BP_C::Controller_Follow_ActorRotation(float DeltaSecond
 
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.ReferenceLatchingObjects
-// (NetRequest, Native, NetResponse, Private, Protected, NetClient, BlueprintCallable, Const)
+// (Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ATapejara_Character_BP_C::ReferenceLatchingObjects()
 {
@@ -310,7 +352,7 @@ void ATapejara_Character_BP_C::ReferenceLatchingObjects()
 
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.LineTrace
-// (Exec, Event, NetResponse, Static, Private, Protected, NetClient, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMeshComponent*          Mesh                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -334,6 +376,7 @@ void ATapejara_Character_BP_C::STATIC_LineTrace(class UMeshComponent* Mesh, cons
 	params.BackwardLatching = BackwardLatching;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -388,7 +431,7 @@ void ATapejara_Character_BP_C::ProcessLatching(float DeltaSeconds)
 
 
 // Function Tapejara_Character_BP.Tapejara_Character_BP_C.TryLatch
-// (Exec, Native, Event, NetMulticast, Private, Protected, NetClient, BlueprintCallable, Const)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Offset                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           backwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
@@ -427,14 +470,14 @@ void ATapejara_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_168
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_178
 // ()
 
-void ATapejara_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_168()
+void ATapejara_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_178()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_168");
+	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_178");
 
-	ATapejara_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_168_Params params;
+	ATapejara_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_178_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -444,14 +487,14 @@ void ATapejara_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_168()
 }
 
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_167
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177
 // ()
 
-void ATapejara_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_167()
+void ATapejara_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_167");
+	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177");
 
-	ATapejara_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_167_Params params;
+	ATapejara_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_177_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -461,14 +504,14 @@ void ATapejara_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActi
 }
 
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_166
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_176
 // ()
 
-void ATapejara_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_166()
+void ATapejara_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_176()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_166");
+	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_176");
 
-	ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_166_Params params;
+	ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_176_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -478,14 +521,14 @@ void ATapejara_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_166()
 }
 
 
-// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_165
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_175
 // ()
 
-void ATapejara_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_165()
+void ATapejara_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_175()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_165");
+	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_175");
 
-	ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_165_Params params;
+	ATapejara_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_175_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -499,13 +542,17 @@ void ATapejara_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_165()
 // ()
 // Parameters:
 // bool                           backwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           TryLatch                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           LandOnFailureToLatch           (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATapejara_Character_BP_C::Latch(bool backwardsLatching)
+void ATapejara_Character_BP_C::Latch(bool backwardsLatching, bool TryLatch, bool LandOnFailureToLatch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.Latch");
 
 	ATapejara_Character_BP_C_Latch_Params params;
 	params.backwardsLatching = backwardsLatching;
+	params.TryLatch = TryLatch;
+	params.LandOnFailureToLatch = LandOnFailureToLatch;
 
 	auto flags = fn->FunctionFlags;
 
@@ -795,6 +842,23 @@ void ATapejara_Character_BP_C::StartedJump()
 	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.StartedJump");
 
 	ATapejara_Character_BP_C_StartedJump_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Tapejara_Character_BP.Tapejara_Character_BP_C.MoveDuringUnlatching
+// ()
+
+void ATapejara_Character_BP_C::MoveDuringUnlatching()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Tapejara_Character_BP.Tapejara_Character_BP_C.MoveDuringUnlatching");
+
+	ATapejara_Character_BP_C_MoveDuringUnlatching_Params params;
 
 	auto flags = fn->FunctionFlags;
 

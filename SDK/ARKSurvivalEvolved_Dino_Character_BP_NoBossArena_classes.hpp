@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dino_Character_BP_NoBossArena.Dino_Character_BP_NoBossArena_C
-// 0x0000 (0x2268 - 0x2268)
+// 0x0000 (0x2288 - 0x2288)
 class ADino_Character_BP_NoBossArena_C : public ADino_Character_BP_C
 {
 public:

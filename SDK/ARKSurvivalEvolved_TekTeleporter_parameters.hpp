@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function TekTeleporter.TekTeleporter_C.BPIsAllowedToBuildEx
+struct ATekTeleporter_C_BPIsAllowedToBuildEx_Params
+{
+	struct FPlacementData                              OutPlacementData;                                         // (Parm, OutParm, ReferenceParm)
+	int*                                               CurrentAllowedReason;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APlayerController**                          PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bFinalPlacement;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bChoosingRotation;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function TekTeleporter.TekTeleporter_C.DoTeleportBatch
 struct ATekTeleporter_C_DoTeleportBatch_Params

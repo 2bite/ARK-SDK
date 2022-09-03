@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -88,9 +88,9 @@ void ASpino_Character_BP_C::BPDoAttack(int* AttackIndex)
 // ()
 // Parameters:
 // bool                           isBiped                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           canSwitch                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           CanSwitch                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpino_Character_BP_C::CanSwitchStances(bool isBiped, bool* canSwitch)
+void ASpino_Character_BP_C::CanSwitchStances(bool isBiped, bool* CanSwitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Spino_Character_BP.Spino_Character_BP_C.CanSwitchStances");
 
@@ -103,8 +103,8 @@ void ASpino_Character_BP_C::CanSwitchStances(bool isBiped, bool* canSwitch)
 
 	fn->FunctionFlags = flags;
 
-	if (canSwitch != nullptr)
-		*canSwitch = params.canSwitch;
+	if (CanSwitch != nullptr)
+		*CanSwitch = params.CanSwitch;
 }
 
 

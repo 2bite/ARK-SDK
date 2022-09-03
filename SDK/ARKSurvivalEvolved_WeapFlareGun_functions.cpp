@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function WeapFlareGun.WeapFlareGun_C.BPWeaponCanFire
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AWeapFlareGun_C::BPWeaponCanFire()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapFlareGun.WeapFlareGun_C.BPWeaponCanFire");
+
+	AWeapFlareGun_C_BPWeaponCanFire_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function WeapFlareGun.WeapFlareGun_C.UserConstructionScript
 // ()

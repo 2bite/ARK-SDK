@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function Tek_JumpPad_AnimBluePrint.Tek_JumpPad_AnimBluePrint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_920
-struct UTek_JumpPad_AnimBluePrint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_920_Params
+// Function Tek_JumpPad_AnimBluePrint.Tek_JumpPad_AnimBluePrint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_932
+struct UTek_JumpPad_AnimBluePrint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Tek_JumpPad_AnimBluePrint_AnimGraphNode_ModifyBone_932_Params
 {
 };
 

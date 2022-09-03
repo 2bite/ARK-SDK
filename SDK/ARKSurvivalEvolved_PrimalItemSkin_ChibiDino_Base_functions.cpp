@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,7 +100,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::Get_XPRequired_for_PreviousLevel(float* X
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.BPGetCustomInventoryWidgetText
-// (Native, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Net, Exec, NetResponse, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -111,7 +111,6 @@ class FString UPrimalItemSkin_ChibiDino_Base_C::STATIC_BPGetCustomInventoryWidge
 	UPrimalItemSkin_ChibiDino_Base_C_BPGetCustomInventoryWidgetText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,11 +190,11 @@ void UPrimalItemSkin_ChibiDino_Base_C::BPClientHandleItemNetExecCommand(struct F
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.RefreshLevelData
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Exec, Event, NetResponse, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        forChar                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemSkin_ChibiDino_Base_C::STATIC_RefreshLevelData(class APrimalCharacter* forChar)
+void UPrimalItemSkin_ChibiDino_Base_C::RefreshLevelData(class APrimalCharacter* forChar)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.RefreshLevelData");
 
@@ -203,7 +202,6 @@ void UPrimalItemSkin_ChibiDino_Base_C::STATIC_RefreshLevelData(class APrimalChar
 	params.forChar = forChar;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,7 +210,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::STATIC_RefreshLevelData(class APrimalChar
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.AddXP
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          XPAmount                       (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        forChar                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -226,6 +224,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::STATIC_AddXP(float XPAmount, class APrima
 	params.forChar = forChar;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -258,7 +257,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::BPEquippedItemOnXPEarning(class APrimalCh
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.BPInitFromItemNetInfo
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void UPrimalItemSkin_ChibiDino_Base_C::STATIC_BPInitFromItemNetInfo()
 {
@@ -267,7 +266,6 @@ void UPrimalItemSkin_ChibiDino_Base_C::STATIC_BPInitFromItemNetInfo()
 	UPrimalItemSkin_ChibiDino_Base_C_BPInitFromItemNetInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -276,7 +274,7 @@ void UPrimalItemSkin_ChibiDino_Base_C::STATIC_BPInitFromItemNetInfo()
 
 
 // Function PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C.BPGetItemDescription
-// (NetReliable, NetRequest, Event, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -293,6 +291,7 @@ class FString UPrimalItemSkin_ChibiDino_Base_C::BPGetItemDescription(class FStri
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -172,7 +172,7 @@ struct ADesertKaiju_Character_BP_C_UpdateLightningTargetVFXLocation_Params
 	struct FVector                                     WorldLocation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    WorldRotation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  HitResult;                                                // (Parm)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.FindClosestSocketName
@@ -390,7 +390,7 @@ struct ADesertKaiju_Character_BP_C_LightningTrace_Params
 {
 	bool                                               FireLightning;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ValidTarget;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     hitLoc;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitLoc;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               HitActor;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     HitNormal;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               SuccessFiredLightning;                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -511,13 +511,13 @@ struct ADesertKaiju_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_129
-struct ADesertKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_129_Params
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_134
+struct ADesertKaiju_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_134_Params
 {
 };
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_128
-struct ADesertKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_128_Params
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_133
+struct ADesertKaiju_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_133_Params
 {
 };
 
@@ -553,8 +553,8 @@ struct ADesertKaiju_Character_BP_C_Mutli_ExposeNodes_Params
 	bool                                               Expose;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.MULTI_SetNodeColor
-struct ADesertKaiju_Character_BP_C_MULTI_SetNodeColor_Params
+// Function DesertKaiju_Character_BP.DesertKaiju_Character_BP_C.Multi_SetNodeColor
+struct ADesertKaiju_Character_BP_C_Multi_SetNodeColor_Params
 {
 	int                                                Node;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Activated;                                                // (Parm, ZeroConstructor, IsPlainOldData)

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,8 +79,8 @@ struct ABuff_TekStrider_Machinegun_C_Wild_Dino_Deactivate_Params
 {
 };
 
-// Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.Can Fire
-struct ABuff_TekStrider_Machinegun_C_Can_Fire_Params
+// Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.can fire
+struct ABuff_TekStrider_Machinegun_C_can_fire_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };

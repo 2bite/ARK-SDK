@@ -1,0 +1,56 @@
+// ARKSurvivalEvolved (332.8) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_Grenade_Infested_ExplosionEmitter_parameters.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Functions
+//---------------------------------------------------------------------------
+
+// Function Grenade_Infested_ExplosionEmitter.Grenade_Infested_ExplosionEmitter_C.UserConstructionScript
+// ()
+
+void AGrenade_Infested_ExplosionEmitter_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Grenade_Infested_ExplosionEmitter.Grenade_Infested_ExplosionEmitter_C.UserConstructionScript");
+
+	AGrenade_Infested_ExplosionEmitter_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Grenade_Infested_ExplosionEmitter.Grenade_Infested_ExplosionEmitter_C.ExecuteUbergraph_Grenade_Infested_ExplosionEmitter
+// ()
+// Parameters:
+// int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void AGrenade_Infested_ExplosionEmitter_C::ExecuteUbergraph_Grenade_Infested_ExplosionEmitter(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Grenade_Infested_ExplosionEmitter.Grenade_Infested_ExplosionEmitter_C.ExecuteUbergraph_Grenade_Infested_ExplosionEmitter");
+
+	AGrenade_Infested_ExplosionEmitter_C_ExecuteUbergraph_Grenade_Infested_ExplosionEmitter_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

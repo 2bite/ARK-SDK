@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function BossArenaManager.BossArenaManager_C.ManageArenaEnableBuffsForCharacter
+struct ABossArenaManager_C_ManageArenaEnableBuffsForCharacter_Params
+{
+	class APrimalCharacter*                            forChar;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function BossArenaManager.BossArenaManager_C.SpawnedBoss
 struct ABossArenaManager_C_SpawnedBoss_Params

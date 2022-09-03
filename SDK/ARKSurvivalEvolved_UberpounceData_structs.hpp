@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // UserDefinedStruct UberpounceData.UberpounceData
-// 0x0029
+// 0x002A
 struct FUberpounceData
 {
 	struct FName                                       Socket_2_5083A12F491F7162FEFFF2A97F18030D;                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -25,6 +25,7 @@ struct FUberpounceData
 	struct FRotator                                    WorldGeoRotation_16_C8BC5C724F99806264418FBB303F78E9;     // 0x0014(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class APrimalCharacter*                            Character_15_A587DB6C415808C1555C65BE528C7559;            // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EUberpounceType>                       Type_23_2964764F48C642C4AF1E538ACB43EA6E;                 // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               TargetIsFoliage_25_8AA213034D7796CBEA4920B67FBDB774;      // 0x0029(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

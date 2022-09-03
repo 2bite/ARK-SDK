@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_LightningAoETamed.Buff_LightningAoETamed_C.ReceiveEndPlay
+// ()
+// Parameters:
+// TEnumAsByte<EEndPlayReason>*   EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_LightningAoETamed_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_LightningAoETamed.Buff_LightningAoETamed_C.ReceiveEndPlay");
+
+	ABuff_LightningAoETamed_C_ReceiveEndPlay_Params params;
+	params.EndPlayReason = EndPlayReason;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_LightningAoETamed.Buff_LightningAoETamed_C.MaybeRotate
 // ()

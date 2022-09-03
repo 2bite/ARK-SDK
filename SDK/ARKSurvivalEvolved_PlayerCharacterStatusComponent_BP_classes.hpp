@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,10 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PlayerCharacterStatusComponent_BP.PlayerCharacterStatusComponent_BP_C
-// 0x0000 (0x1090 - 0x1090)
+// 0x0020 (0x10B0 - 0x1090)
 class UPlayerCharacterStatusComponent_BP_C : public UPrimalPlayerStatusComponent
 {
 public:
+	TArray<struct FName>                               GeneralizedAchievementTags_GrantedExtraPlayerLevels_Fname;// 0x1090(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<int>                                        GeneralizedAchievementTags_GrantedExtraPlayerLevels_Value;// 0x10A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

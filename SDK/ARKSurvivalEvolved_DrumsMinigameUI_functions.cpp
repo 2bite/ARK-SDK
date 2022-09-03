@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -185,7 +185,7 @@ void UDrumsMinigameUI_C::Map_Percent_to_Position(float Percent, float* Distance)
 
 
 // Function DrumsMinigameUI.DrumsMinigameUI_C.Set ProgressBar Color
-// (Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, NetValidate)
+// (NetRequest, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UProgressBar*            ProgressBar                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            TintColor                      (Parm, ZeroConstructor, IsPlainOldData)

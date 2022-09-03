@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function SK_MiniGun_TPV_Turret_RIG_AnimBlueprint.SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_164
+// Function SK_MiniGun_TPV_Turret_RIG_AnimBlueprint.SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_182
 // ()
 
-void USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_164()
+void USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_182()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SK_MiniGun_TPV_Turret_RIG_AnimBlueprint.SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_164");
+	static auto fn = UObject::FindObject<UFunction>("Function SK_MiniGun_TPV_Turret_RIG_AnimBlueprint.SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_182");
 
-	USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_164_Params params;
+	USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_182_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_Exec
 }
 
 
-// Function SK_MiniGun_TPV_Turret_RIG_AnimBlueprint.SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_3935
+// Function SK_MiniGun_TPV_Turret_RIG_AnimBlueprint.SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4007
 // ()
 
-void USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_3935()
+void USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4007()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SK_MiniGun_TPV_Turret_RIG_AnimBlueprint.SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_3935");
+	static auto fn = UObject::FindObject<UFunction>("Function SK_MiniGun_TPV_Turret_RIG_AnimBlueprint.SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4007");
 
-	USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_3935_Params params;
+	USK_MiniGun_TPV_Turret_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_MiniGun_TPV_Turret_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4007_Params params;
 
 	auto flags = fn->FunctionFlags;
 

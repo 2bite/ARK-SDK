@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,6 +74,11 @@ struct ADroppedItem_Mutagen_C_itemPickedUp_Params
 
 // Function DroppedItem_Mutagen.DroppedItem_Mutagen_C.AdjustableSpawnDelayChanged
 struct ADroppedItem_Mutagen_C_AdjustableSpawnDelayChanged_Params
+{
+};
+
+// Function DroppedItem_Mutagen.DroppedItem_Mutagen_C.CheckForFallThrough
+struct ADroppedItem_Mutagen_C_CheckForFallThrough_Params
 {
 };
 

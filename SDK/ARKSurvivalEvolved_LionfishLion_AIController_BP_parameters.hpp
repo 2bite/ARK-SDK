@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,8 +46,8 @@ struct ALionfishLion_AIController_BP_C_is_line_of_sight_blocked_Params
 	bool                                               NewParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.Check if Viewed by Players
-struct ALionfishLion_AIController_BP_C_Check_if_Viewed_by_Players_Params
+// Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.Check If Viewed By Players
+struct ALionfishLion_AIController_BP_C_Check_If_Viewed_By_Players_Params
 {
 };
 

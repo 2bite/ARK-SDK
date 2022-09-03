@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Monkey_Character_BP.Monkey_Character_BP_C
-// 0x0008 (0x2270 - 0x2268)
+// 0x0008 (0x2290 - 0x2288)
 class AMonkey_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Monkey_C*   DinoCharacterStatus_BP_Monkey_C1;                         // 0x2268(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Monkey_C*   DinoCharacterStatus_BP_Monkey_C1;                         // 0x2288(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

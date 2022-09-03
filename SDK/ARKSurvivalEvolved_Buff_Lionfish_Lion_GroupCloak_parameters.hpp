@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,19 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.BPSetupForInstigator
+struct ABuff_Lionfish_Lion_GroupCloak_C_BPSetupForInstigator_Params
+{
+	class AActor**                                     ForInstigator;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.Has passed default weapon check
+struct ABuff_Lionfish_Lion_GroupCloak_C_Has_passed_default_weapon_check_Params
+{
+	class AShooterCharacter*                           Passenger;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               passed_check;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.Set Cloak Transition Value
 struct ABuff_Lionfish_Lion_GroupCloak_C_Set_Cloak_Transition_Value_Params

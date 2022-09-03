@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapRifleTracerRound.WeapRifleTracerRound_C
-// 0x0004 (0x0DCC - 0x0DC8)
+// 0x0004 (0x0DC4 - 0x0DC0)
 class AWeapRifleTracerRound_C : public AShooterWeapon_Instant
 {
 public:
-	int                                                RoundsFiredFromClip;                                      // 0x0DC8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                RoundsFiredFromClip;                                      // 0x0DC0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

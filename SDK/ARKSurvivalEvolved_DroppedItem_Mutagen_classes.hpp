@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DroppedItem_Mutagen.DroppedItem_Mutagen_C
-// 0x0058 (0x0760 - 0x0708)
+// 0x0081 (0x0789 - 0x0708)
 class ADroppedItem_Mutagen_C : public ADroppedItemGeneric_C
 {
 public:
@@ -33,8 +33,17 @@ public:
 	int                                                MutagenExploererNoteIndex;                                // 0x0748(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsUnlockingNote;                                          // 0x074C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x074D(0x0003) MISSED OFFSET
-	class AActor*                                      K2Node_Event_Item;                                        // 0x0750(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class APlayerController*                           K2Node_Event_ByPC;                                        // 0x0758(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FVector                                     SpawnLoc;                                                 // 0x0750(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              FallThroughDistance;                                      // 0x075C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class AActor*                                      K2Node_Event_Item;                                        // 0x0760(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APlayerController*                           K2Node_Event_ByPC;                                        // 0x0768(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	TEnumAsByte<ENetworkModeResult>                    CallFunc_IsRunningOnServer_OutNetworkMode;                // 0x0770(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0771(0x0003) MISSED OFFSET
+	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue;                 // 0x0774(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_SwitchEnum_CmpSuccess;                             // 0x0780(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0781(0x0003) MISSED OFFSET
+	float                                              CallFunc_VectorDistance_ReturnValue;                      // 0x0784(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Greater_FloatFloat_ReturnValue;                  // 0x0788(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -44,7 +53,7 @@ public:
 
 
 	void SpawnItem(class AActor* Manager, class AActor** SpawnedItem);
-	void STATIC_UnlockExplorerNote(class UObject* Object);
+	void UnlockExplorerNote(class UObject* Object);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPOnItemPickedUp(class APlayerController** ByPC, class UPrimalItem** InventoryItem);
@@ -53,6 +62,7 @@ public:
 	void UserConstructionScript();
 	void itemPickedUp(class AActor* Item, class APlayerController* ByPC);
 	void AdjustableSpawnDelayChanged();
+	void CheckForFallThrough();
 	void ExecuteUbergraph_DroppedItem_Mutagen(int EntryPoint);
 };
 

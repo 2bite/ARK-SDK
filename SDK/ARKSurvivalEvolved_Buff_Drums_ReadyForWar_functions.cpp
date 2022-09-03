@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,50 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.BPCanBeCarried
+// ()
+// Parameters:
+// class APrimalCharacter**       ByCarrier                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_Drums_ReadyForWar_C::BPCanBeCarried(class APrimalCharacter** ByCarrier)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.BPCanBeCarried");
+
+	ABuff_Drums_ReadyForWar_C_BPCanBeCarried_Params params;
+	params.ByCarrier = ByCarrier;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.BPInterceptUseAction
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_Drums_ReadyForWar_C::BPInterceptUseAction()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.BPInterceptUseAction");
+
+	ABuff_Drums_ReadyForWar_C_BPInterceptUseAction_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.BPDeactivated
 // ()
@@ -40,6 +84,40 @@ void ABuff_Drums_ReadyForWar_C::UserConstructionScript()
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.UserConstructionScript");
 
 	ABuff_Drums_ReadyForWar_C_UserConstructionScript_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.AllowDismount
+// ()
+
+void ABuff_Drums_ReadyForWar_C::AllowDismount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.AllowDismount");
+
+	ABuff_Drums_ReadyForWar_C_AllowDismount_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.PreventDismount
+// ()
+
+void ABuff_Drums_ReadyForWar_C::PreventDismount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Drums_ReadyForWar.Buff_Drums_ReadyForWar_C.PreventDismount");
+
+	ABuff_Drums_ReadyForWar_C_PreventDismount_Params params;
 
 	auto flags = fn->FunctionFlags;
 

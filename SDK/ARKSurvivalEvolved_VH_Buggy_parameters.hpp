@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,13 +28,13 @@ struct AVH_Buggy_C_UserConstructionScript_Params
 {
 };
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_70
-struct AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_70_Params
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_75
+struct AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_75_Params
 {
 };
 
-// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_69
-struct AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_69_Params
+// Function VH_Buggy.VH_Buggy_C.InpActEvt_Jump_K2Node_InputActionEvent_74
+struct AVH_Buggy_C_InpActEvt_Jump_K2Node_InputActionEvent_74_Params
 {
 };
 

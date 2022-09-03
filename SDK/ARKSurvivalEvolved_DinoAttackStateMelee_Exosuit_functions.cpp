@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackStateMelee_Exosuit.DinoAttackStateMelee_Exosuit_C.BPGetSocketLocation
-// (Exec, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetClient, BlueprintEvent)
 // Parameters:
 // struct FName                   SocketName                     (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 SocketLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateMelee_Exosuit_C::BPGetSocketLocation(struct FName* SocketName, struct FVector* SocketLocation)
+void UDinoAttackStateMelee_Exosuit_C::STATIC_BPGetSocketLocation(struct FName* SocketName, struct FVector* SocketLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateMelee_Exosuit.DinoAttackStateMelee_Exosuit_C.BPGetSocketLocation");
 

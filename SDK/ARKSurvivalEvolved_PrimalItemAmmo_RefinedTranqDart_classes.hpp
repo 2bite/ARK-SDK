@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemAmmo_RefinedTranqDart.PrimalItemAmmo_RefinedTranqDart_C
-// 0x0000 (0x0AE0 - 0x0AE0)
+// 0x0000 (0x0AE8 - 0x0AE8)
 class UPrimalItemAmmo_RefinedTranqDart_C : public UPrimalItemAmmo_TranqDart_C
 {
 public:

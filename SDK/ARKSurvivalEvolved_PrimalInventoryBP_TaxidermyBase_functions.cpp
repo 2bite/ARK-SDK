@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,30 +12,37 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPInitializeInventory
-// ()
+// Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPPreventEquipItem
+// (Exec, Native, NetResponse, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
+// Parameters:
+// class UPrimalItem**            theItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UPrimalInventoryBP_TaxidermyBase_C::BPInitializeInventory()
+bool UPrimalInventoryBP_TaxidermyBase_C::BPPreventEquipItem(class UPrimalItem** theItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPInitializeInventory");
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPPreventEquipItem");
 
-	UPrimalInventoryBP_TaxidermyBase_C_BPInitializeInventory_Params params;
+	UPrimalInventoryBP_TaxidermyBase_C_BPPreventEquipItem_Params params;
+	params.theItem = theItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
 // Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPPreventEquipItemType
-// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<EPrimalEquipmentType>* equipmentType                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalInventoryBP_TaxidermyBase_C::BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType)
+bool UPrimalInventoryBP_TaxidermyBase_C::STATIC_BPPreventEquipItemType(TEnumAsByte<EPrimalEquipmentType>* equipmentType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalInventoryBP_TaxidermyBase.PrimalInventoryBP_TaxidermyBase_C.BPPreventEquipItemType");
 
@@ -43,7 +50,6 @@ bool UPrimalInventoryBP_TaxidermyBase_C::BPPreventEquipItemType(TEnumAsByte<EPri
 	params.equipmentType = equipmentType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

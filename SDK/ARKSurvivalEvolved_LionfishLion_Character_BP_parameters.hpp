@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,6 +34,21 @@ struct ALionfishLion_Character_BP_C_GetHudData_Params
 	float                                              LeapCooldown;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             LastLeapTime;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              LeapPercent;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Keep Checking if the Fish Has Spawned
+struct ALionfishLion_Character_BP_C_Keep_Checking_if_the_Fish_Has_Spawned_Params
+{
+};
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.try feed shadowman on delay
+struct ALionfishLion_Character_BP_C_try_feed_shadowman_on_delay_Params
+{
+};
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Shortly After Falling Asleep Prevent Affinity Reset
+struct ALionfishLion_Character_BP_C_Shortly_After_Falling_Asleep_Prevent_Affinity_Reset_Params
+{
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPPlayDying
@@ -313,6 +328,7 @@ struct ALionfishLion_Character_BP_C_feed_Params
 	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Fish_Weight;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               cheat_debug_bypass;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fallback;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.bite slash vfx
@@ -352,8 +368,8 @@ struct ALionfishLion_Character_BP_C_BPOverrideHurtAnim_Params
 	class UAnimMontage*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Print String Manual
-struct ALionfishLion_Character_BP_C_Print_String_Manual_Params
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.print string manual
+struct ALionfishLion_Character_BP_C_print_string_manual_Params
 {
 	class FString                                      In_String;                                                // (Parm, ZeroConstructor)
 };
@@ -415,12 +431,12 @@ struct ALionfishLion_Character_BP_C_Restrict_Was_Seen_Requests_Params
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.someone has line of sight to lion
 struct ALionfishLion_Character_BP_C_someone_has_line_of_sight_to_lion_Params
 {
-	class AShooterPlayerController*                    Player_Controller;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterPlayerController*                    player_controller;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               NewParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Check if Viewed by Players
-struct ALionfishLion_Character_BP_C_Check_if_Viewed_by_Players_Params
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Check If Viewed By Players
+struct ALionfishLion_Character_BP_C_Check_If_Viewed_By_Players_Params
 {
 };
 
@@ -684,8 +700,8 @@ struct ALionfishLion_Character_BP_C_Is_Valid_Teleport_Target__Params
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.set final location and rotation after teleport
 struct ALionfishLion_Character_BP_C_set_final_location_and_rotation_after_teleport_Params
 {
-	struct FVector                                     start_loc;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     End_Loc;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Start_Loc;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     end_loc;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               turn_around;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -738,7 +754,7 @@ struct ALionfishLion_Character_BP_C_get_appropriate_extra_distance_to_land_behin
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.request release charge teleport
 struct ALionfishLion_Character_BP_C_request_release_charge_teleport_Params
 {
-	bool                                               is_quick_tap_teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Is_Quick_Tap_Teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Sort Selected Teleport Targets By Distance From Center
@@ -773,7 +789,7 @@ struct ALionfishLion_Character_BP_C_Teleport_Stop_Params
 struct ALionfishLion_Character_BP_C_Start_Teleport_Params
 {
 	float                                              Teleport_Strength_Percentage;                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               is_quick_tap_teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Is_Quick_Tap_Teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Get Teleport Character Octree Overlap Radius
@@ -782,10 +798,10 @@ struct ALionfishLion_Character_BP_C_Get_Teleport_Character_Octree_Overlap_Radius
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Mid Teleport
-struct ALionfishLion_Character_BP_C_Is_Mid_Teleport_Params
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.is mid teleport
+struct ALionfishLion_Character_BP_C_is_mid_teleport_Params
 {
-	bool                                               Is_Mid_Teleport;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               is_mid_teleport;                                          // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Teleport Cooldown Active
@@ -995,21 +1011,13 @@ struct ALionfishLion_Character_BP_C_BPOnStartJump_Params
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Update Right Swipe Attack Anim Priorities
 struct ALionfishLion_Character_BP_C_Update_Right_Swipe_Attack_Anim_Priorities_Params
 {
-	int                                                Attack_Index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Attack_index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Update Bite Attack Anim Priorities
 struct ALionfishLion_Character_BP_C_Update_Bite_Attack_Anim_Priorities_Params
 {
-	int                                                Attack_Index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Valid Big Spacebar Leap Target
-struct ALionfishLion_Character_BP_C_Is_Valid_Big_Spacebar_Leap_Target_Params
-{
-	class APrimalCharacter*                            Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               is_hud_elem_check;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               can_target;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                Attack_index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.RidingTick
@@ -1025,12 +1033,6 @@ struct ALionfishLion_Character_BP_C_BPModifyDesiredRotation_Params
 	struct FRotator                                    InDesiredRotation;                                        // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	struct FRotator                                    OutDesiredRotation;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Get Big Spacebar Leap Character Octree Overlap Radius
-struct ALionfishLion_Character_BP_C_Get_Big_Spacebar_Leap_Character_Octree_Overlap_Radius_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPGetCrosshairLocation
@@ -1171,7 +1173,7 @@ struct ALionfishLion_Character_BP_C_Big_Spacebar_Leap_Tick_Params
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Get Default Dino
 struct ALionfishLion_Character_BP_C_Get_Default_Dino_Params
 {
-	class ALionfishLion_Character_BP_C*                ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ALionfishLion_Character_BP_C*                Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.remove carry buff from prey
@@ -1463,16 +1465,6 @@ struct ALionfishLion_Character_BP_C_Fall_Asleep_Params
 	bool                                               Triggered_By_Multiuse;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPCharacterSleeped
-struct ALionfishLion_Character_BP_C_BPCharacterSleeped_Params
-{
-};
-
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPCharacterUnsleeped
-struct ALionfishLion_Character_BP_C_BPCharacterUnsleeped_Params
-{
-};
-
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Sleep Deprived
 struct ALionfishLion_Character_BP_C_Is_Sleep_Deprived_Params
 {
@@ -1532,7 +1524,7 @@ struct ALionfishLion_Character_BP_C_BP_OnTargetedByTamedOrder_Params
 struct ALionfishLion_Character_BP_C_Add_Rider_to_Camo_Fade_Queue_Params
 {
 	class AShooterCharacter*                           Rider;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               enterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               EnterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bInstant;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -1552,7 +1544,7 @@ struct ALionfishLion_Character_BP_C_BPNotifyIfPassengerLaunchShoulderMount_Param
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Activate Rider Camo Particles
 struct ALionfishLion_Character_BP_C_Activate_Rider_Camo_Particles_Params
 {
-	bool                                               enterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               EnterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class AShooterCharacter*                           specificRider;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -1827,6 +1819,16 @@ struct ALionfishLion_Character_BP_C_Timeline_1__UpdateFunc_Params
 {
 };
 
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Timeline_2__FinishedFunc
+struct ALionfishLion_Character_BP_C_Timeline_2__FinishedFunc_Params
+{
+};
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Timeline_2__UpdateFunc
+struct ALionfishLion_Character_BP_C_Timeline_2__UpdateFunc_Params
+{
+};
+
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.stealth anim timeline__FinishedFunc
 struct ALionfishLion_Character_BP_C_stealth_anim_timeline__FinishedFunc_Params
 {
@@ -2042,7 +2044,7 @@ struct ALionfishLion_Character_BP_C_multicast_on_killed_dino_with_max_combo_atta
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.ServerSyncMovementValues
 struct ALionfishLion_Character_BP_C_ServerSyncMovementValues_Params
 {
-	float                                              synced_right;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Synced_Right;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.client start charge teleport
@@ -2054,13 +2056,13 @@ struct ALionfishLion_Character_BP_C_client_start_charge_teleport_Params
 struct ALionfishLion_Character_BP_C_client_end_charge_teleport_Params
 {
 	bool                                               is_max_combo_Teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               is_quick_tap_teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Is_Quick_Tap_Teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.multicast started teleport 2
 struct ALionfishLion_Character_BP_C_multicast_started_teleport_2_Params
 {
-	bool                                               is_quick_tap_teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Is_Quick_Tap_Teleport;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Teleport_Target_Count;                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -2084,8 +2086,8 @@ struct ALionfishLion_Character_BP_C_soft_cancel_teleport_on_failing_to_get_targe
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.teleport attack to position
 struct ALionfishLion_Character_BP_C_teleport_attack_to_position_Params
 {
-	struct FVector                                     start_loc;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     End_Loc;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Start_Loc;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     end_loc;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               probably_final_teleport;                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               turn_around;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -2163,6 +2165,13 @@ struct ALionfishLion_Character_BP_C_OnActorCustomEvent_Event_Params
 	struct FName                                       EventCustomName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	class FString                                      EventCustomString;                                        // (Parm, ZeroConstructor)
 	class AActor*                                      InstigatorActor;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.lerp rot to next tele loc
+struct ALionfishLion_Character_BP_C_lerp_rot_to_next_tele_loc_Params
+{
+	float                                              new_yaw;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              prev_yaw;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.activate max combo Big Spacebar Leap particle

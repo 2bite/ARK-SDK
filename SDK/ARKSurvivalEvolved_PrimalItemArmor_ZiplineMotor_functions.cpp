@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.GetGasolineValueFromItem
-// (NetReliable, Native, Static, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (Event, NetResponse, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class UPrimalItem*             TargetItem                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // float                          Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-bool UPrimalItemArmor_ZiplineMotor_C::STATIC_GetGasolineValueFromItem(class UPrimalItem* TargetItem, float* Value)
+bool UPrimalItemArmor_ZiplineMotor_C::GetGasolineValueFromItem(class UPrimalItem* TargetItem, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.GetGasolineValueFromItem");
 
@@ -27,7 +27,6 @@ bool UPrimalItemArmor_ZiplineMotor_C::STATIC_GetGasolineValueFromItem(class UPri
 	params.TargetItem = TargetItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -41,17 +40,18 @@ bool UPrimalItemArmor_ZiplineMotor_C::STATIC_GetGasolineValueFromItem(class UPri
 
 
 // Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.BPGetCustomInventoryWidgetText
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintCallable)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItemArmor_ZiplineMotor_C::BPGetCustomInventoryWidgetText()
+class FString UPrimalItemArmor_ZiplineMotor_C::STATIC_BPGetCustomInventoryWidgetText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.BPGetCustomInventoryWidgetText");
 
 	UPrimalItemArmor_ZiplineMotor_C_BPGetCustomInventoryWidgetText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,18 +62,17 @@ class FString UPrimalItemArmor_ZiplineMotor_C::BPGetCustomInventoryWidgetText()
 
 
 // Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.BPGetSkinnedCustomInventoryWidgetText
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintCallable)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItemArmor_ZiplineMotor_C::BPGetSkinnedCustomInventoryWidgetText()
+class FString UPrimalItemArmor_ZiplineMotor_C::STATIC_BPGetSkinnedCustomInventoryWidgetText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.BPGetSkinnedCustomInventoryWidgetText");
 
 	UPrimalItemArmor_ZiplineMotor_C_BPGetSkinnedCustomInventoryWidgetText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,12 +83,12 @@ class FString UPrimalItemArmor_ZiplineMotor_C::BPGetSkinnedCustomInventoryWidget
 
 
 // Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.SetGasolineDescription
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemArmor_ZiplineMotor_C::STATIC_SetGasolineDescription(class UPrimalItem* Item, float Value)
+void UPrimalItemArmor_ZiplineMotor_C::SetGasolineDescription(class UPrimalItem* Item, float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.SetGasolineDescription");
 
@@ -98,7 +97,6 @@ void UPrimalItemArmor_ZiplineMotor_C::STATIC_SetGasolineDescription(class UPrima
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +122,7 @@ void UPrimalItemArmor_ZiplineMotor_C::BPInitFromItemNetInfo()
 
 
 // Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.RemovedSkinFromItem
-// (NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class UPrimalItem**            FromOwnerItem                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsFirstTime                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -168,7 +166,7 @@ void UPrimalItemArmor_ZiplineMotor_C::SkinEquippedBlueprintTick(class UPrimalIte
 
 
 // Function PrimalItemArmor_ZiplineMotor.PrimalItemArmor_ZiplineMotor_C.ApplyingSkinOntoItem
-// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class UPrimalItem**            ToOwnerItem                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bIsFirstTime                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -182,7 +180,6 @@ void UPrimalItemArmor_ZiplineMotor_C::STATIC_ApplyingSkinOntoItem(class UPrimalI
 	params.bIsFirstTime = bIsFirstTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

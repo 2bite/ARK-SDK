@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CaveWolf_Character_BP_Summoned.CaveWolf_Character_BP_Summoned_C
-// 0x0000 (0x2908 - 0x2908)
+// 0x0000 (0x2928 - 0x2928)
 class ACaveWolf_Character_BP_Summoned_C : public ACaveWolf_Character_BP_C
 {
 public:

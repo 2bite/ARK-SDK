@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,7 +57,7 @@ void ABuff_TekWyvernTameRiding_C::GetTimeBasedAlpha(float* Alpha)
 
 
 // Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.GetBuffDescription
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -68,7 +68,6 @@ struct FStatusValueModifierDescription ABuff_TekWyvernTameRiding_C::STATIC_GetBu
 	ABuff_TekWyvernTameRiding_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,14 +130,14 @@ void ABuff_TekWyvernTameRiding_C::GetActiveTameState(class APrimalDinoCharacter*
 
 
 // Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.BPDrawBuffStatusHUD
-// (NetRequest, Native, Static, Public, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Event, Protected, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         YPos                           (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         ScaleMult                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekWyvernTameRiding_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
+void ABuff_TekWyvernTameRiding_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.BPDrawBuffStatusHUD");
 
@@ -149,7 +148,6 @@ void ABuff_TekWyvernTameRiding_C::STATIC_BPDrawBuffStatusHUD(class AShooterHUD**
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,14 +215,14 @@ void ABuff_TekWyvernTameRiding_C::UserConstructionScript()
 }
 
 
-// Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_390
+// Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_410
 // ()
 
-void ABuff_TekWyvernTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_390()
+void ABuff_TekWyvernTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_410()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_390");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_410");
 
-	ABuff_TekWyvernTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_390_Params params;
+	ABuff_TekWyvernTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_410_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -234,14 +232,14 @@ void ABuff_TekWyvernTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_390()
 }
 
 
-// Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_389
+// Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_409
 // ()
 
-void ABuff_TekWyvernTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_389()
+void ABuff_TekWyvernTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_409()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_389");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekWyvernTameRiding.Buff_TekWyvernTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_409");
 
-	ABuff_TekWyvernTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_389_Params params;
+	ABuff_TekWyvernTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_409_Params params;
 
 	auto flags = fn->FunctionFlags;
 

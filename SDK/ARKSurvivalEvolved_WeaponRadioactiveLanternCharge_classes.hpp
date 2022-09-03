@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -63,7 +63,7 @@ public:
 	unsigned char                                      UnknownData06[0x2];                                       // 0x0EEE(0x0002) MISSED OFFSET
 	float                                              maxCameraShakeWhileTargeting;                             // 0x0EF0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                maxTargetsForCameraShake;                                 // 0x0EF4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              maxLightIntensity;                                        // 0x0EF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxLightIntensity;                                        // 0x0EF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FLinearColor                                ChargeColor;                                              // 0x0EFC(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isFlickering;                                             // 0x0F0C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x3];                                       // 0x0F0D(0x0003) MISSED OFFSET
@@ -140,7 +140,7 @@ public:
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x1050(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x1051(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData20[0x6];                                       // 0x1052(0x0006) MISSED OFFSET
-	class APrimalCharacter*                            K2Node_CustomEvent_character;                             // 0x1058(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APrimalCharacter*                            K2Node_CustomEvent_Character;                             // 0x1058(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AShooterCharacter*                           CallFunc_GetPawnOwner_ReturnValue;                        // 0x1060(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x1068(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x1070(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -276,7 +276,7 @@ public:
 
 
 	void GetNumBatteries(int* numBatteries);
-	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue);
+	void Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue);
 	void RemoveAllBeamsServer();
 	void IsFreeBeamForActor(class AActor* forActor, bool* isFreeBeam);
 	void BPPrefireAction();
@@ -289,7 +289,7 @@ public:
 	bool BPSecondaryAction();
 	void GetLightMultiplier(float* lightMultiplier);
 	void BPWaitingForPlacement();
-	void STATIC_CheckIfFireStopped(bool* NewParam);
+	void CheckIfFireStopped(bool* NewParam);
 	void UpdateLightEffects();
 	void Update_MaterialsAndParticles(bool* couldUpdateMaterial);
 	void DisableFiringEffects();
@@ -320,19 +320,19 @@ public:
 	void LightFlickerTimeline__UpdateFunc();
 	void LightTurnOffTimeline__FinishedFunc();
 	void LightTurnOffTimeline__UpdateFunc();
-	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue);
+	void Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue);
 	void Charge_Variable_Event_Trigger_Multicast_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iVariable);
 	void Interface_Check_for_Batteries_and_Update_Multicast();
 	void Charge_Variable_Event_Double_MulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
 	void ChargeVariableEventDoubleInterface(TEnumAsByte<E_ChargeVariableNames> variableType, double dValue);
-	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
-	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue);
+	void ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
+	void ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue);
 	void ReceiveBeginPlay();
 	void OnNewActorAffected_Multicast(class AActor* actorAffected);
 	void DestroyBeamForTarget_Multicast(class APrimalCharacter* Character);
 	void PlayLanternCameraShake();
 	void CreateChargeManager();
-	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue);
+	void Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue);
 	void FiringBeamLogic();
 	void OnStartFiring();
 	void ChargeVariableEvent_Boolean(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue);

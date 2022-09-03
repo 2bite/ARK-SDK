@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function FishBasket.FishBasket_C.BPIsAllowedToBuild
+struct AFishBasket_C_BPIsAllowedToBuild_Params
+{
+	struct FPlacementData                              OutPlacementData;                                         // (Parm, OutParm, ReferenceParm)
+	int*                                               CurrentAllowedReason;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function FishBasket.FishBasket_C.ReceiveBeginPlay
 struct AFishBasket_C_ReceiveBeginPlay_Params

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void UExosuitHUD_C::SetupDynamicMaterial()
 
 
 // Function ExosuitHUD.ExosuitHUD_C.SyncHUDWidget
-// (Native, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Private, NetServer, HasOutParms, NetClient, BlueprintEvent)
 // Parameters:
 // class FString                  ModeString                     (Parm, ZeroConstructor)
 // class FString                  RepairRequirementsString       (Parm, ZeroConstructor)
@@ -43,7 +43,7 @@ void UExosuitHUD_C::SetupDynamicMaterial()
 // int                            CurrentMode                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          HUDModeTextFadeOutTimeMultiplier (Parm, ZeroConstructor, IsPlainOldData)
 
-void UExosuitHUD_C::SyncHUDWidget(const class FString& ModeString, const class FString& RepairRequirementsString, float BeamAvailabilityPercent, float BeamPressAndHoldPercent, bool bUsesChestBeam, bool bCanUseChestBeam, int ChestBeamState, class APrimalStructure* LastAimedStructure, int CurrentMode, float HUDModeTextFadeOutTimeMultiplier)
+void UExosuitHUD_C::STATIC_SyncHUDWidget(const class FString& ModeString, const class FString& RepairRequirementsString, float BeamAvailabilityPercent, float BeamPressAndHoldPercent, bool bUsesChestBeam, bool bCanUseChestBeam, int ChestBeamState, class APrimalStructure* LastAimedStructure, int CurrentMode, float HUDModeTextFadeOutTimeMultiplier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ExosuitHUD.ExosuitHUD_C.SyncHUDWidget");
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3916,13 +3916,15 @@ bool AActor::BPGetMultiUseCenterText(class APlayerController* ForPC, int UseInde
 // Function Engine.Actor.BPGetExtraSpecialBlueprintInt
 // ()
 // Parameters:
+// int                            toCheck                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int AActor::BPGetExtraSpecialBlueprintInt()
+int AActor::BPGetExtraSpecialBlueprintInt(int toCheck)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.BPGetExtraSpecialBlueprintInt");
 
 	AActor_BPGetExtraSpecialBlueprintInt_Params params;
+	params.toCheck = toCheck;
 
 	auto flags = fn->FunctionFlags;
 
@@ -15505,6 +15507,31 @@ bool ACharacter::CanJump()
 }
 
 
+// Function Engine.Character.BPValidateStoredClientRotationInput
+// ()
+// Parameters:
+// float                          TimeSinceLastMove              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                ClientRotation                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FRotator ACharacter::BPValidateStoredClientRotationInput(float TimeSinceLastMove, const struct FRotator& ClientRotation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.Character.BPValidateStoredClientRotationInput");
+
+	ACharacter_BPValidateStoredClientRotationInput_Params params;
+	params.TimeSinceLastMove = TimeSinceLastMove;
+	params.ClientRotation = ClientRotation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.Character.BPOverrideCharacterSound
 // ()
 // Parameters:
@@ -18003,13 +18030,15 @@ void UCheatManager::DestroyPawns(class UClass* aClass)
 // ()
 // Parameters:
 // class UClass*                  aClass                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCheatManager::DestroyAll(class UClass* aClass)
+void UCheatManager::DestroyAll(class UClass* aClass, bool bExactMatch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CheatManager.DestroyAll");
 
 	UCheatManager_DestroyAll_Params params;
 	params.aClass = aClass;
+	params.bExactMatch = bExactMatch;
 
 	auto flags = fn->FunctionFlags;
 
@@ -26412,6 +26441,28 @@ bool UInstancedStaticMeshComponent::RemoveInstance(int InstanceIndex, const stru
 }
 
 
+// Function Engine.InstancedStaticMeshComponent.MulticastShowInstances
+// ()
+// Parameters:
+// TArray<int>                    Indices                        (ConstParm, Parm, ZeroConstructor)
+// bool                           bMarkRenderStateDirty          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UInstancedStaticMeshComponent::MulticastShowInstances(TArray<int> Indices, bool bMarkRenderStateDirty)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.InstancedStaticMeshComponent.MulticastShowInstances");
+
+	UInstancedStaticMeshComponent_MulticastShowInstances_Params params;
+	params.Indices = Indices;
+	params.bMarkRenderStateDirty = bMarkRenderStateDirty;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.InstancedStaticMeshComponent.MulticastShowInstance
 // ()
 // Parameters:
@@ -27252,10 +27303,10 @@ void UCapsuleComponent::SetCapsuleHalfHeight(float HalfHeight, bool bUpdateOverl
 // Function Engine.CapsuleComponent.GetUnscaledCapsuleSize
 // ()
 // Parameters:
-// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          outRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UCapsuleComponent::GetUnscaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
+void UCapsuleComponent::GetUnscaledCapsuleSize(float* outRadius, float* OutHalfHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CapsuleComponent.GetUnscaledCapsuleSize");
 
@@ -27267,8 +27318,8 @@ void UCapsuleComponent::GetUnscaledCapsuleSize(float* OutRadius, float* OutHalfH
 
 	fn->FunctionFlags = flags;
 
-	if (OutRadius != nullptr)
-		*OutRadius = params.OutRadius;
+	if (outRadius != nullptr)
+		*outRadius = params.outRadius;
 	if (OutHalfHeight != nullptr)
 		*OutHalfHeight = params.OutHalfHeight;
 }
@@ -27340,10 +27391,10 @@ float UCapsuleComponent::GetShapeScale()
 // Function Engine.CapsuleComponent.GetScaledCapsuleSize
 // ()
 // Parameters:
-// float                          OutRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          outRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          OutHalfHeight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UCapsuleComponent::GetScaledCapsuleSize(float* OutRadius, float* OutHalfHeight)
+void UCapsuleComponent::GetScaledCapsuleSize(float* outRadius, float* OutHalfHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CapsuleComponent.GetScaledCapsuleSize");
 
@@ -27355,8 +27406,8 @@ void UCapsuleComponent::GetScaledCapsuleSize(float* OutRadius, float* OutHalfHei
 
 	fn->FunctionFlags = flags;
 
-	if (OutRadius != nullptr)
-		*OutRadius = params.OutRadius;
+	if (outRadius != nullptr)
+		*outRadius = params.outRadius;
 	if (OutHalfHeight != nullptr)
 		*OutHalfHeight = params.OutHalfHeight;
 }
@@ -35010,6 +35061,31 @@ float UKismetMathLibrary::Percent_FloatFloat(float A, float B)
 }
 
 
+// Function Engine.KismetMathLibrary.Percent_DoubleDouble
+// ()
+// Parameters:
+// double                         A                              (Parm, ZeroConstructor, IsPlainOldData)
+// double                         B                              (Parm, ZeroConstructor, IsPlainOldData)
+// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+double UKismetMathLibrary::Percent_DoubleDouble(double A, double B)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Percent_DoubleDouble");
+
+	UKismetMathLibrary_Percent_DoubleDouble_Params params;
+	params.A = A;
+	params.B = B;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.KismetMathLibrary.Percent_ByteByte
 // ()
 // Parameters:
@@ -35962,6 +36038,56 @@ float UKismetMathLibrary::Multiply_FloatFloat(float A, float B)
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_FloatFloat");
 
 	UKismetMathLibrary_Multiply_FloatFloat_Params params;
+	params.A = A;
+	params.B = B;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.Multiply_DoubleFloat
+// ()
+// Parameters:
+// double                         A                              (Parm, ZeroConstructor, IsPlainOldData)
+// float                          B                              (Parm, ZeroConstructor, IsPlainOldData)
+// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+double UKismetMathLibrary::Multiply_DoubleFloat(double A, float B)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_DoubleFloat");
+
+	UKismetMathLibrary_Multiply_DoubleFloat_Params params;
+	params.A = A;
+	params.B = B;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.Multiply_DoubleDouble
+// ()
+// Parameters:
+// double                         A                              (Parm, ZeroConstructor, IsPlainOldData)
+// double                         B                              (Parm, ZeroConstructor, IsPlainOldData)
+// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+double UKismetMathLibrary::Multiply_DoubleDouble(double A, double B)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_DoubleDouble");
+
+	UKismetMathLibrary_Multiply_DoubleDouble_Params params;
 	params.A = A;
 	params.B = B;
 
@@ -39611,6 +39737,56 @@ float UKismetMathLibrary::Divide_FloatFloat(float A, float B)
 }
 
 
+// Function Engine.KismetMathLibrary.Divide_DoubleFloat
+// ()
+// Parameters:
+// double                         A                              (Parm, ZeroConstructor, IsPlainOldData)
+// float                          B                              (Parm, ZeroConstructor, IsPlainOldData)
+// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+double UKismetMathLibrary::Divide_DoubleFloat(double A, float B)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Divide_DoubleFloat");
+
+	UKismetMathLibrary_Divide_DoubleFloat_Params params;
+	params.A = A;
+	params.B = B;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetMathLibrary.Divide_DoubleDouble
+// ()
+// Parameters:
+// double                         A                              (Parm, ZeroConstructor, IsPlainOldData)
+// double                         B                              (Parm, ZeroConstructor, IsPlainOldData)
+// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+double UKismetMathLibrary::Divide_DoubleDouble(double A, double B)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Divide_DoubleDouble");
+
+	UKismetMathLibrary_Divide_DoubleDouble_Params params;
+	params.A = A;
+	params.B = B;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.KismetMathLibrary.Divide_ByteByte
 // ()
 // Parameters:
@@ -41801,16 +41977,16 @@ struct FColor UKismetRenderingLibrary::ReadRenderTargetPixel(class UObject* Worl
 // ()
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class FString                  FileName                       (Parm, ZeroConstructor)
+// class FString                  filename                       (Parm, ZeroConstructor)
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTexture2D* UKismetRenderingLibrary::ImportFileAsTexture2D(class UObject* WorldContextObject, const class FString& FileName)
+class UTexture2D* UKismetRenderingLibrary::ImportFileAsTexture2D(class UObject* WorldContextObject, const class FString& filename)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetRenderingLibrary.ImportFileAsTexture2D");
 
 	UKismetRenderingLibrary_ImportFileAsTexture2D_Params params;
 	params.WorldContextObject = WorldContextObject;
-	params.FileName = FileName;
+	params.filename = filename;
 
 	auto flags = fn->FunctionFlags;
 
@@ -41828,9 +42004,9 @@ class UTexture2D* UKismetRenderingLibrary::ImportFileAsTexture2D(class UObject* 
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  FilePath                       (Parm, ZeroConstructor)
-// class FString                  FileName                       (Parm, ZeroConstructor)
+// class FString                  filename                       (Parm, ZeroConstructor)
 
-void UKismetRenderingLibrary::ExportTexture2D(class UObject* WorldContextObject, class UTexture2D* Texture, const class FString& FilePath, const class FString& FileName)
+void UKismetRenderingLibrary::ExportTexture2D(class UObject* WorldContextObject, class UTexture2D* Texture, const class FString& FilePath, const class FString& filename)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetRenderingLibrary.ExportTexture2D");
 
@@ -41838,7 +42014,7 @@ void UKismetRenderingLibrary::ExportTexture2D(class UObject* WorldContextObject,
 	params.WorldContextObject = WorldContextObject;
 	params.Texture = Texture;
 	params.FilePath = FilePath;
-	params.FileName = FileName;
+	params.filename = filename;
 
 	auto flags = fn->FunctionFlags;
 
@@ -41854,9 +42030,9 @@ void UKismetRenderingLibrary::ExportTexture2D(class UObject* WorldContextObject,
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class UTextureRenderTarget2D*  TextureRenderTarget            (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  FilePath                       (Parm, ZeroConstructor)
-// class FString                  FileName                       (Parm, ZeroConstructor)
+// class FString                  filename                       (Parm, ZeroConstructor)
 
-void UKismetRenderingLibrary::ExportRenderTarget(class UObject* WorldContextObject, class UTextureRenderTarget2D* TextureRenderTarget, const class FString& FilePath, const class FString& FileName)
+void UKismetRenderingLibrary::ExportRenderTarget(class UObject* WorldContextObject, class UTextureRenderTarget2D* TextureRenderTarget, const class FString& FilePath, const class FString& filename)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetRenderingLibrary.ExportRenderTarget");
 
@@ -41864,7 +42040,7 @@ void UKismetRenderingLibrary::ExportRenderTarget(class UObject* WorldContextObje
 	params.WorldContextObject = WorldContextObject;
 	params.TextureRenderTarget = TextureRenderTarget;
 	params.FilePath = FilePath;
-	params.FileName = FileName;
+	params.filename = filename;
 
 	auto flags = fn->FunctionFlags;
 
@@ -42955,6 +43131,29 @@ float UKismetStringLibrary::Conv_StringToFloat(const class FString& InString)
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.Conv_StringToFloat");
 
 	UKismetStringLibrary_Conv_StringToFloat_Params params;
+	params.InString = InString;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.KismetStringLibrary.Conv_StringToDouble
+// ()
+// Parameters:
+// class FString                  InString                       (Parm, ZeroConstructor)
+// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+double UKismetStringLibrary::Conv_StringToDouble(const class FString& InString)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.Conv_StringToDouble");
+
+	UKismetStringLibrary_Conv_StringToDouble_Params params;
 	params.InString = InString;
 
 	auto flags = fn->FunctionFlags;

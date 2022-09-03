@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_BrainSlug_HumanControl.Buff_BrainSlug_HumanControl_C.BPInterceptUseAction
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_BrainSlug_HumanControl_C::BPInterceptUseAction()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_BrainSlug_HumanControl.Buff_BrainSlug_HumanControl_C.BPInterceptUseAction");
+
+	ABuff_BrainSlug_HumanControl_C_BPInterceptUseAction_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_BrainSlug_HumanControl.Buff_BrainSlug_HumanControl_C.BPPreventTekArmorBuffs
 // ()
@@ -153,7 +174,7 @@ bool ABuff_BrainSlug_HumanControl_C::BPTryMultiUse(class APlayerController** For
 
 
 // Function Buff_BrainSlug_HumanControl.Buff_BrainSlug_HumanControl_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Event, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -167,6 +188,7 @@ TArray<struct FMultiUseEntry> ABuff_BrainSlug_HumanControl_C::BPGetMultiUseEntri
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

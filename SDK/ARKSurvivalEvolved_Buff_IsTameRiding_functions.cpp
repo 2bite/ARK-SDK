@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ void ABuff_IsTameRiding_C::GetTimeBasedAlpha(float* Alpha)
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.GetBuffDescription
-// (NetRequest, Exec, Native, Event, Static, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, Static, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -109,7 +109,7 @@ void ABuff_IsTameRiding_C::GetActiveTameState(class APrimalDinoCharacter* MyRidi
 
 
 // Function Buff_IsTameRiding.Buff_IsTameRiding_C.BPDrawBuffStatusHUD
-// (Net, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, Event, NetMulticast, Public, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -127,6 +127,7 @@ void ABuff_IsTameRiding_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* X
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,14 +195,14 @@ void ABuff_IsTameRiding_C::UserConstructionScript()
 }
 
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_140
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_150
 // ()
 
-void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_140()
+void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_150()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_140");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Jump_K2Node_InputActionEvent_150");
 
-	ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_140_Params params;
+	ABuff_IsTameRiding_C_InpActEvt_Jump_K2Node_InputActionEvent_150_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -211,14 +212,14 @@ void ABuff_IsTameRiding_C::InpActEvt_Jump_K2Node_InputActionEvent_140()
 }
 
 
-// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_139
+// Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_149
 // ()
 
-void ABuff_IsTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_139()
+void ABuff_IsTameRiding_C::InpActEvt_Use_K2Node_InputActionEvent_149()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_139");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_IsTameRiding.Buff_IsTameRiding_C.InpActEvt_Use_K2Node_InputActionEvent_149");
 
-	ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_139_Params params;
+	ABuff_IsTameRiding_C_InpActEvt_Use_K2Node_InputActionEvent_149_Params params;
 
 	auto flags = fn->FunctionFlags;
 

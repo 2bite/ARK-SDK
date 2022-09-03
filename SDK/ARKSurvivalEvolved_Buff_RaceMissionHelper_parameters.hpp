@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.BPInstigatorSleeped
+struct ABuff_RaceMissionHelper_C_BPInstigatorSleeped_Params
+{
+	bool*                                              bIsSleeped;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.SetSpline
 struct ABuff_RaceMissionHelper_C_SetSpline_Params
@@ -166,6 +172,11 @@ struct ABuff_RaceMissionHelper_C_DestroyDino_Params
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.TeleportBackToStart
 struct ABuff_RaceMissionHelper_C_TeleportBackToStart_Params
+{
+};
+
+// Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.ServerClaimConsolePlayer
+struct ABuff_RaceMissionHelper_C_ServerClaimConsolePlayer_Params
 {
 };
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function chainsaw_TPV_RIG_AnimBlueprint.chainsaw_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4046
+// Function chainsaw_TPV_RIG_AnimBlueprint.chainsaw_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4118
 // ()
 
-void Uchainsaw_TPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4046()
+void Uchainsaw_TPV_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4118()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function chainsaw_TPV_RIG_AnimBlueprint.chainsaw_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4046");
+	static auto fn = UObject::FindObject<UFunction>("Function chainsaw_TPV_RIG_AnimBlueprint.chainsaw_TPV_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4118");
 
-	Uchainsaw_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4046_Params params;
+	Uchainsaw_TPV_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_chainsaw_TPV_RIG_AnimBlueprint_AnimGraphNode_SequencePlayer_4118_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,11 +57,11 @@ void ABuff_Female_LFL_Maxcombo_Parent_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Female_LFL_Maxcombo_Parent.Buff_Female_LFL_Maxcombo_Parent_C.Do Damage Over TimeFn
-// (NetReliable, NetRequest, NetResponse, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // double                         LastDotTime                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Female_LFL_Maxcombo_Parent_C::Do_Damage_Over_TimeFn(double LastDotTime)
+void ABuff_Female_LFL_Maxcombo_Parent_C::STATIC_Do_Damage_Over_TimeFn(double LastDotTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Female_LFL_Maxcombo_Parent.Buff_Female_LFL_Maxcombo_Parent_C.Do Damage Over TimeFn");
 
@@ -69,6 +69,7 @@ void ABuff_Female_LFL_Maxcombo_Parent_C::Do_Damage_Over_TimeFn(double LastDotTim
 	params.LastDotTime = LastDotTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +78,7 @@ void ABuff_Female_LFL_Maxcombo_Parent_C::Do_Damage_Over_TimeFn(double LastDotTim
 
 
 // Function Buff_Female_LFL_Maxcombo_Parent.Buff_Female_LFL_Maxcombo_Parent_C.BPAdjustStatusValueModification
-// (Event, NetResponse, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimalCharacterStatusComponent** ForComponent                   (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -98,6 +99,7 @@ float ABuff_Female_LFL_Maxcombo_Parent_C::BPAdjustStatusValueModification(class 
 	params.bManualModification = bManualModification;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

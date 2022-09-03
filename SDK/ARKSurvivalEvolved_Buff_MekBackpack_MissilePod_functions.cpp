@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetBackpackSaveData
-// (NetRequest, Event, Static, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
@@ -24,6 +24,7 @@ void ABuff_MekBackpack_MissilePod_C::STATIC_GetBackpackSaveData(struct FMekBackp
 	ABuff_MekBackpack_MissilePod_C_GetBackpackSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,7 +121,7 @@ void ABuff_MekBackpack_MissilePod_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.OnRep_MissilePodMalfunctioned
-// (Exec, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ABuff_MekBackpack_MissilePod_C::STATIC_OnRep_MissilePodMalfunctioned()
 {
@@ -129,6 +130,7 @@ void ABuff_MekBackpack_MissilePod_C::STATIC_OnRep_MissilePodMalfunctioned()
 	ABuff_MekBackpack_MissilePod_C_OnRep_MissilePodMalfunctioned_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -207,7 +209,7 @@ void ABuff_MekBackpack_MissilePod_C::GetCurrentAmmo(int* AmmoQuantity)
 
 
 // Function Buff_MekBackpack_MissilePod.Buff_MekBackpack_MissilePod_C.GetFireDirection
-// (NetRequest, Exec, Native, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Direction                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,12 +100,12 @@ bool UPrimalItem_DinoSpawner_Base_C::BPCanUse(bool* bIgnoreCooldown)
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.GetDinoColorizationData
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           HasAnyColorData                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TArray<unsigned char>          ColorData                      (Parm, OutParm, ZeroConstructor)
 
-void UPrimalItem_DinoSpawner_Base_C::STATIC_GetDinoColorizationData(bool* HasAnyColorData, TArray<unsigned char>* ColorData)
+void UPrimalItem_DinoSpawner_Base_C::GetDinoColorizationData(bool* HasAnyColorData, TArray<unsigned char>* ColorData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.GetDinoColorizationData");
 
@@ -143,7 +143,7 @@ void UPrimalItem_DinoSpawner_Base_C::PreDinoSpawned()
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.CopyDinoStatsFromDino
-// (NetReliable, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, NetMulticast, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalCharacterStatusComponent* StatusComp                     (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    StatOffsets                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -170,7 +170,7 @@ void UPrimalItem_DinoSpawner_Base_C::CopyDinoStatsFromDino(class UPrimalCharacte
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.GetStatDisplayString
-// (Native, NetResponse, NetMulticast, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<EPrimalCharacterStatusValue> Stat                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -189,7 +189,6 @@ void UPrimalItem_DinoSpawner_Base_C::GetStatDisplayString(TEnumAsByte<EPrimalCha
 	params.StatConvertMapIndex = StatConvertMapIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,14 +204,14 @@ void UPrimalItem_DinoSpawner_Base_C::GetStatDisplayString(TEnumAsByte<EPrimalCha
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.GetDinoStat
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<EPrimalCharacterStatusValue> statType                       (Parm, ZeroConstructor, IsPlainOldData)
 // int                            NumDinoLevels                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            StatMapIndexUsed               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_DinoSpawner_Base_C::GetDinoStat(TEnumAsByte<EPrimalCharacterStatusValue> statType, int* NumDinoLevels, int* StatMapIndexUsed, bool* Success)
+void UPrimalItem_DinoSpawner_Base_C::STATIC_GetDinoStat(TEnumAsByte<EPrimalCharacterStatusValue> statType, int* NumDinoLevels, int* StatMapIndexUsed, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.GetDinoStat");
 
@@ -236,7 +235,7 @@ void UPrimalItem_DinoSpawner_Base_C::GetDinoStat(TEnumAsByte<EPrimalCharacterSta
 
 
 // Function PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C.BPGetItemDescription
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)

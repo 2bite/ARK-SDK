@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass SKComponent_SkinAttachment_ChibiDino.SKComponent_SkinAttachment_ChibiDino_C
-// 0x0208 (0x0E18 - 0x0C10)
+// 0x0218 (0x0E28 - 0x0C10)
 class USKComponent_SkinAttachment_ChibiDino_C : public USkeletalMeshComponent
 {
 public:
@@ -74,25 +74,33 @@ public:
 	TArray<struct FChibiScalarMaterialProperties>      ScalarParameters;                                         // 0x0D90(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FChibiVectorMaterialProperties>      VectorParameters;                                         // 0x0DA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FChibiTextureMaterialProperties>     TextureParameters;                                        // 0x0DB0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class AActor*                                      CallFunc_GetOwner_ReturnValue;                            // 0x0DC0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x0DC8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x7];                                       // 0x0DC9(0x0007) MISSED OFFSET
-	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x0DD0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x0DD8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x7];                                       // 0x0DD9(0x0007) MISSED OFFSET
-	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x0DE0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0DE8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x0DE9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0DEA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsTimeSince_ReturnValue;                         // 0x0DEB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x0DEC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue;                           // 0x0DED(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue2;                          // 0x0DEE(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanOR_ReturnValue3;                          // 0x0DEF(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Array_Set_Item_RefProperty;                      // 0x0DF0(0x0004) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
-	float                                              CallFunc_Array_Set_Item2_RefProperty;                     // 0x0DF4(0x0004) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
-	TArray<class AActor*>                              CallFunc_LineTraceSingle_NEW_ActorsToIgnore_RefProperty;  // 0x0DF8(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
-	TArray<class AActor*>                              CallFunc_LineTraceSingle_NEW_ActorsToIgnore2_RefProperty; // 0x0E08(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
+	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x0DC0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x0DC1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x6];                                       // 0x0DC2(0x0006) MISSED OFFSET
+	class AActor*                                      CallFunc_GetOwner_ReturnValue;                            // 0x0DC8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x0DD0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x7];                                       // 0x0DD1(0x0007) MISSED OFFSET
+	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x0DD8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x0DE0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x7];                                       // 0x0DE1(0x0007) MISSED OFFSET
+	class AShooterCharacter*                           K2Node_DynamicCast_AsShooterCharacter;                    // 0x0DE8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x0DF0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsFirstPerson_ReturnValue;                       // 0x0DF1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsLocallyControlled_ReturnValue;                 // 0x0DF2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue;                           // 0x0DF3(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x0DF4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue2;                          // 0x0DF5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue2;                         // 0x0DF6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue2;                        // 0x0DF7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue3;                         // 0x0DF8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsTimeSince_ReturnValue;                         // 0x0DF9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue4;                         // 0x0DFA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue3;                          // 0x0DFB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Array_Set_Item_RefProperty;                      // 0x0DFC(0x0004) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
+	float                                              CallFunc_Array_Set_Item2_RefProperty;                     // 0x0E00(0x0004) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x4];                                       // 0x0E04(0x0004) MISSED OFFSET
+	TArray<class AActor*>                              CallFunc_LineTraceSingle_NEW_ActorsToIgnore_RefProperty;  // 0x0E08(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
+	TArray<class AActor*>                              CallFunc_LineTraceSingle_NEW_ActorsToIgnore2_RefProperty; // 0x0E18(0x0010) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm)
 
 	static UClass* StaticClass()
 	{
@@ -101,13 +109,13 @@ public:
 	}
 
 
-	void STATIC_SetDynamicMaterialProperties();
+	void SetDynamicMaterialProperties();
 	void BPOnComponentDestroyed();
-	void AttachSubMeshes();
+	void STATIC_AttachSubMeshes();
 	void BPOnComponentTick(float* DeltaTime);
 	void LevelUp();
 	void PlayMontage(class UAnimMontage* TheAnimMontage, class USoundBase* ExtraSound);
-	void UpdateMovement(class ACharacter* CharacterRef);
+	void STATIC_UpdateMovement(class ACharacter* CharacterRef);
 	void PlayEmote(int EmoteIndex);
 	void CheckEmotes(class AShooterCharacter* Character);
 	void UpdateInterpolation(class ACharacter* Character);

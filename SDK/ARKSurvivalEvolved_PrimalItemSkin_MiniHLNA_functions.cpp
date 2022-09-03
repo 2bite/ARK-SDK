@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ void UPrimalItemSkin_MiniHLNA_C::hide_skin()
 
 
 // Function PrimalItemSkin_MiniHLNA.PrimalItemSkin_MiniHLNA_C.BPGetItemDescription
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, NetClient, NetValidate)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)

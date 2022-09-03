@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,422 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsUsingZipline
+// ()
+// Parameters:
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::IsUsingZipline(bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsUsingZipline");
+
+	ADeinonychus_Character_BP_C_IsUsingZipline_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Is Playing Latched Jump Anim Public
+// ()
+// Parameters:
+// float                          TimeFromEndToConsiderFinished  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::Is_Playing_Latched_Jump_Anim_Public(float TimeFromEndToConsiderFinished, bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Is Playing Latched Jump Anim Public");
+
+	ADeinonychus_Character_BP_C_Is_Playing_Latched_Jump_Anim_Public_Params params;
+	params.TimeFromEndToConsiderFinished = TimeFromEndToConsiderFinished;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.CanUpdateRotation
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ADeinonychus_Character_BP_C::CanUpdateRotation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.CanUpdateRotation");
+
+	ADeinonychus_Character_BP_C_CanUpdateRotation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.updateRotation
+// ()
+// Parameters:
+// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::updateRotation(float DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.updateRotation");
+
+	ADeinonychus_Character_BP_C_updateRotation_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetUberpounceTraceStartingLocation
+// ()
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector ADeinonychus_Character_BP_C::GetUberpounceTraceStartingLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetUberpounceTraceStartingLocation");
+
+	ADeinonychus_Character_BP_C_GetUberpounceTraceStartingLocation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateErrorTolerance
+// ()
+
+void ADeinonychus_Character_BP_C::UpdateErrorTolerance()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateErrorTolerance");
+
+	ADeinonychus_Character_BP_C_UpdateErrorTolerance_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidUberpounceTargetingData
+// ()
+// Parameters:
+// struct FUberpounceData         TargetingData                  (Parm)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::IsValidUberpounceTargetingData(const struct FUberpounceData& TargetingData, bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidUberpounceTargetingData");
+
+	ADeinonychus_Character_BP_C_IsValidUberpounceTargetingData_Params params;
+	params.TargetingData = TargetingData;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.MultiRequestJumpFn
+// ()
+// Parameters:
+// struct FVector                 Velocity                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::MultiRequestJumpFn(const struct FVector& Velocity)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.MultiRequestJumpFn");
+
+	ADeinonychus_Character_BP_C_MultiRequestJumpFn_Params params;
+	params.Velocity = Velocity;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.CanContinueUberpounce
+// (NetRequest, NetResponse, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
+// Parameters:
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::CanContinueUberpounce(bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.CanContinueUberpounce");
+
+	ADeinonychus_Character_BP_C_CanContinueUberpounce_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetDelayBeforeLatchAfterLatchedJump
+// ()
+// Parameters:
+// float                          LatchedJumpTimeToAutoLatch     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::GetDelayBeforeLatchAfterLatchedJump(float* LatchedJumpTimeToAutoLatch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetDelayBeforeLatchAfterLatchedJump");
+
+	ADeinonychus_Character_BP_C_GetDelayBeforeLatchAfterLatchedJump_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (LatchedJumpTimeToAutoLatch != nullptr)
+		*LatchedJumpTimeToAutoLatch = params.LatchedJumpTimeToAutoLatch;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.JumpFromUberpounce
+// ()
+// Parameters:
+// float                          JumpStrength                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::JumpFromUberpounce(float JumpStrength)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.JumpFromUberpounce");
+
+	ADeinonychus_Character_BP_C_JumpFromUberpounce_Params params;
+	params.JumpStrength = JumpStrength;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsPlayingLatchedJumpAnim
+// ()
+// Parameters:
+// float                          TimeFromEndToConsiderFinished  (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::IsPlayingLatchedJumpAnim(float TimeFromEndToConsiderFinished, bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsPlayingLatchedJumpAnim");
+
+	ADeinonychus_Character_BP_C_IsPlayingLatchedJumpAnim_Params params;
+	params.TimeFromEndToConsiderFinished = TimeFromEndToConsiderFinished;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetTargetFOV
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ADeinonychus_Character_BP_C::GetTargetFOV()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetTargetFOV");
+
+	ADeinonychus_Character_BP_C_GetTargetFOV_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerEndUberpounceFn
+// ()
+// Parameters:
+// struct FVector                 Velocity                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            MontageToPlayOnNonZeroVelocity (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::ServerEndUberpounceFn(const struct FVector& Velocity, class UAnimMontage* MontageToPlayOnNonZeroVelocity)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerEndUberpounceFn");
+
+	ADeinonychus_Character_BP_C_ServerEndUberpounceFn_Params params;
+	params.Velocity = Velocity;
+	params.MontageToPlayOnNonZeroVelocity = MontageToPlayOnNonZeroVelocity;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TickSetRotation
+// (NetReliable, Event, Static, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::STATIC_TickSetRotation(float DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TickSetRotation");
+
+	ADeinonychus_Character_BP_C_TickSetRotation_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateRotationForUberpounce
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
+// Parameters:
+// float                          PercentDistanceToTarget        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                TargetRotation                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::STATIC_UpdateRotationForUberpounce(float PercentDistanceToTarget, const struct FRotator& TargetRotation, bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateRotationForUberpounce");
+
+	ADeinonychus_Character_BP_C_UpdateRotationForUberpounce_Params params;
+	params.PercentDistanceToTarget = PercentDistanceToTarget;
+	params.TargetRotation = TargetRotation;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetFallingLatchingAngles
+// ()
+// Parameters:
+// TArray<float>                  FallingLatchingAngles          (Parm, OutParm, ZeroConstructor)
+
+void ADeinonychus_Character_BP_C::GetFallingLatchingAngles(TArray<float>* FallingLatchingAngles)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetFallingLatchingAngles");
+
+	ADeinonychus_Character_BP_C_GetFallingLatchingAngles_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (FallingLatchingAngles != nullptr)
+		*FallingLatchingAngles = params.FallingLatchingAngles;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidUberpounceDataForLatching
+// ()
+// Parameters:
+// struct FUberpounceData         Data                           (Parm)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::IsValidUberpounceDataForLatching(const struct FUberpounceData& Data, bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidUberpounceDataForLatching");
+
+	ADeinonychus_Character_BP_C_IsValidUberpounceDataForLatching_Params params;
+	params.Data = Data;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidDirectionForLatchingSurfaceTrace
+// ()
+// Parameters:
+// struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ADeinonychus_Character_BP_C::IsValidDirectionForLatchingSurfaceTrace(const struct FVector& Direction)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidDirectionForLatchingSurfaceTrace");
+
+	ADeinonychus_Character_BP_C_IsValidDirectionForLatchingSurfaceTrace_Params params;
+	params.Direction = Direction;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPRemovedAsPassenger
 // ()
@@ -106,9 +522,9 @@ void ADeinonychus_Character_BP_C::OnNonInstanceJumpOffWallInput(float HoldTime)
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetLatchJumpSpeedThresholdForRotate
 // ()
 // Parameters:
-// float                          res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          Res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::GetLatchJumpSpeedThresholdForRotate(float* res)
+void ADeinonychus_Character_BP_C::GetLatchJumpSpeedThresholdForRotate(float* Res)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetLatchJumpSpeedThresholdForRotate");
 
@@ -120,8 +536,8 @@ void ADeinonychus_Character_BP_C::GetLatchJumpSpeedThresholdForRotate(float* res
 
 	fn->FunctionFlags = flags;
 
-	if (res != nullptr)
-		*res = params.res;
+	if (Res != nullptr)
+		*Res = params.Res;
 }
 
 
@@ -129,15 +545,15 @@ void ADeinonychus_Character_BP_C::GetLatchJumpSpeedThresholdForRotate(float* res
 // ()
 // Parameters:
 // TArray<struct FName>           Attach_Point_Names             (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UParticleSystem*         FX_to_Spawn                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystem*         FX_To_Spawn                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::SpawnUberJumpFX(class UParticleSystem* FX_to_Spawn, const struct FRotator& Rotation, TArray<struct FName>* Attach_Point_Names)
+void ADeinonychus_Character_BP_C::SpawnUberJumpFX(class UParticleSystem* FX_To_Spawn, const struct FRotator& Rotation, TArray<struct FName>* Attach_Point_Names)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.SpawnUberJumpFX");
 
 	ADeinonychus_Character_BP_C_SpawnUberJumpFX_Params params;
-	params.FX_to_Spawn = FX_to_Spawn;
+	params.FX_To_Spawn = FX_To_Spawn;
 	params.Rotation = Rotation;
 
 	auto flags = fn->FunctionFlags;
@@ -262,7 +678,7 @@ void ADeinonychus_Character_BP_C::CalcCurrentJump_Hold_Time(float* Result)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ClearOutOfRangeData
-// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetResponse, NetMulticast, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
 void ADeinonychus_Character_BP_C::ClearOutOfRangeData()
 {
@@ -323,9 +739,9 @@ void ADeinonychus_Character_BP_C::GetUberpounceMaxRange(float* Ret)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateTickThrottles
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
-void ADeinonychus_Character_BP_C::UpdateTickThrottles()
+void ADeinonychus_Character_BP_C::STATIC_UpdateTickThrottles()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateTickThrottles");
 
@@ -358,7 +774,7 @@ void ADeinonychus_Character_BP_C::BPTimerNonDedicated()
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Throttled TickFn
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 
 void ADeinonychus_Character_BP_C::Throttled_TickFn()
 {
@@ -392,7 +808,7 @@ void ADeinonychus_Character_BP_C::BPTimerServer()
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.On Uberpounce AttachedToLocation
-// (NetReliable, Native, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
 void ADeinonychus_Character_BP_C::On_Uberpounce_AttachedToLocation()
 {
@@ -524,7 +940,7 @@ void ADeinonychus_Character_BP_C::GetInitialAnimationForUberpounce(bool QuickUbe
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Los
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -543,6 +959,7 @@ void ADeinonychus_Character_BP_C::STATIC_Los(const struct FVector& Start, const 
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -692,15 +1109,16 @@ void ADeinonychus_Character_BP_C::UberpounceCollisionCheck(bool* RetHitSomething
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.SpawnNestEgg
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
-void ADeinonychus_Character_BP_C::SpawnNestEgg()
+void ADeinonychus_Character_BP_C::STATIC_SpawnNestEgg()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.SpawnNestEgg");
 
 	ADeinonychus_Character_BP_C_SpawnNestEgg_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -733,14 +1151,14 @@ void ADeinonychus_Character_BP_C::GetUberpounceLocationOffsetForSocket(const str
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TerrainCheck
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           HitSomething                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::STATIC_TerrainCheck(const struct FVector& Start, const struct FVector& End, float Radius, bool* HitSomething)
+void ADeinonychus_Character_BP_C::TerrainCheck(const struct FVector& Start, const struct FVector& End, float Radius, bool* HitSomething)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TerrainCheck");
 
@@ -880,19 +1298,20 @@ void ADeinonychus_Character_BP_C::Get_Uberpounce_Position_Offset_Curves(class UC
 }
 
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Has Latchable Surface In Front
-// (Exec, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Has Latchable SurfaceWhileFalling
+// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           RetSucccess                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FUberpounceData         RetResultUberpounceData        (Parm, OutParm)
 
-void ADeinonychus_Character_BP_C::STATIC_Has_Latchable_Surface_In_Front(bool* RetSucccess, struct FUberpounceData* RetResultUberpounceData)
+void ADeinonychus_Character_BP_C::Has_Latchable_SurfaceWhileFalling(bool* RetSucccess, struct FUberpounceData* RetResultUberpounceData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Has Latchable Surface In Front");
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Has Latchable SurfaceWhileFalling");
 
-	ADeinonychus_Character_BP_C_Has_Latchable_Surface_In_Front_Params params;
+	ADeinonychus_Character_BP_C_Has_Latchable_SurfaceWhileFalling_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1103,11 +1522,11 @@ void ADeinonychus_Character_BP_C::JumpPressedAndHeldFn()
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.CheckForFallingLatchFn
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           AutoJumpAfterLatch             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::CheckForFallingLatchFn(bool AutoJumpAfterLatch)
+void ADeinonychus_Character_BP_C::STATIC_CheckForFallingLatchFn(bool AutoJumpAfterLatch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.CheckForFallingLatchFn");
 
@@ -1142,15 +1561,15 @@ void ADeinonychus_Character_BP_C::OnDeinonychusLatchedAttack()
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.AllowSurfaceNormalForUberpounce
 // ()
 // Parameters:
-// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& surfaceNormal, bool* Ret)
+void ADeinonychus_Character_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& SurfaceNormal, bool* Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.AllowSurfaceNormalForUberpounce");
 
 	ADeinonychus_Character_BP_C_AllowSurfaceNormalForUberpounce_Params params;
-	params.surfaceNormal = surfaceNormal;
+	params.SurfaceNormal = SurfaceNormal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1164,7 +1583,7 @@ void ADeinonychus_Character_BP_C::AllowSurfaceNormalForUberpounce(const struct F
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TryAIBufferedUberpounce
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
 void ADeinonychus_Character_BP_C::TryAIBufferedUberpounce()
 {
@@ -1173,7 +1592,6 @@ void ADeinonychus_Character_BP_C::TryAIBufferedUberpounce()
 	ADeinonychus_Character_BP_C_TryAIBufferedUberpounce_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1279,8 +1697,9 @@ void ADeinonychus_Character_BP_C::SetUberpounceState(TEnumAsByte<EUberpounceStat
 // float                          JumpStrength                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsLatchedAutoJump              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 WallHugDirection               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 DirectionOverride              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::LatchedJump(float JumpStrength, bool IsLatchedAutoJump, const struct FVector& WallHugDirection)
+void ADeinonychus_Character_BP_C::LatchedJump(float JumpStrength, bool IsLatchedAutoJump, const struct FVector& WallHugDirection, const struct FVector& DirectionOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.LatchedJump");
 
@@ -1288,6 +1707,7 @@ void ADeinonychus_Character_BP_C::LatchedJump(float JumpStrength, bool IsLatched
 	params.JumpStrength = JumpStrength;
 	params.IsLatchedAutoJump = IsLatchedAutoJump;
 	params.WallHugDirection = WallHugDirection;
+	params.DirectionOverride = DirectionOverride;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1379,16 +1799,15 @@ void ADeinonychus_Character_BP_C::StartUberpounceFromFalling(const struct FUberp
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ClearQueuedData
-// (NetReliable, NetRequest, Native, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
-void ADeinonychus_Character_BP_C::ClearQueuedData()
+void ADeinonychus_Character_BP_C::STATIC_ClearQueuedData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ClearQueuedData");
 
 	ADeinonychus_Character_BP_C_ClearQueuedData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1397,7 +1816,7 @@ void ADeinonychus_Character_BP_C::ClearQueuedData()
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.on Jump Input Released
-// (Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // bool                           QueryOnly                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           PounceOnly                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -1406,7 +1825,7 @@ void ADeinonychus_Character_BP_C::ClearQueuedData()
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        RaptorPounceTarget             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::on_Jump_Input_Released(bool QueryOnly, bool PounceOnly, bool QueryOnlyOnGroundTarget, struct FUberpounceData* UberpounceData, bool* Result, class APrimalCharacter** RaptorPounceTarget)
+void ADeinonychus_Character_BP_C::STATIC_on_Jump_Input_Released(bool QueryOnly, bool PounceOnly, bool QueryOnlyOnGroundTarget, struct FUberpounceData* UberpounceData, bool* Result, class APrimalCharacter** RaptorPounceTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.on Jump Input Released");
 
@@ -1459,8 +1878,9 @@ bool ADeinonychus_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackI
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     HitComponent                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           RetIsFoliage                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::IsValidGeoTypeForUberpounce(class AActor* Actor, class UPrimitiveComponent* HitComponent, bool* Result)
+void ADeinonychus_Character_BP_C::IsValidGeoTypeForUberpounce(class AActor* Actor, class UPrimitiveComponent* HitComponent, bool* Result, bool* RetIsFoliage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidGeoTypeForUberpounce");
 
@@ -1476,6 +1896,8 @@ void ADeinonychus_Character_BP_C::IsValidGeoTypeForUberpounce(class AActor* Acto
 
 	if (Result != nullptr)
 		*Result = params.Result;
+	if (RetIsFoliage != nullptr)
+		*RetIsFoliage = params.RetIsFoliage;
 }
 
 
@@ -1525,9 +1947,9 @@ void ADeinonychus_Character_BP_C::CanTryUberpounce(bool* Result)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ResetMeshRelativeLocation
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
-void ADeinonychus_Character_BP_C::ResetMeshRelativeLocation()
+void ADeinonychus_Character_BP_C::STATIC_ResetMeshRelativeLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ResetMeshRelativeLocation");
 
@@ -1585,7 +2007,7 @@ void ADeinonychus_Character_BP_C::BP_OnJumpPressed()
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UberpounceFanTrace
-// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // TArray<float>                  FanAngles                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -1593,7 +2015,7 @@ void ADeinonychus_Character_BP_C::BP_OnJumpPressed()
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FUberpounceData         ResultData                     (Parm, OutParm)
 
-void ADeinonychus_Character_BP_C::STATIC_UberpounceFanTrace(const struct FVector& Direction, const struct FVector& Start, const struct FRotator& Rotation, TArray<float>* FanAngles, struct FUberpounceData* ResultData)
+void ADeinonychus_Character_BP_C::UberpounceFanTrace(const struct FVector& Direction, const struct FVector& Start, const struct FRotator& Rotation, TArray<float>* FanAngles, struct FUberpounceData* ResultData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UberpounceFanTrace");
 
@@ -1616,7 +2038,7 @@ void ADeinonychus_Character_BP_C::STATIC_UberpounceFanTrace(const struct FVector
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.OnError
-// (NetReliable, NetRequest, Event, Static, Public, Protected, Delegate, NetClient, BlueprintCallable, Const)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class FString                  Msg                            (Parm, ZeroConstructor)
 
@@ -1636,7 +2058,7 @@ void ADeinonychus_Character_BP_C::STATIC_OnError(const class FString& Msg)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ComputeBufferedUberpounce
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FUberpounceData         CurrentUberpounceData          (Parm)
 // struct FVector                 PreviousUberpounceStartLocation (Parm, ZeroConstructor, IsPlainOldData)
@@ -1652,7 +2074,6 @@ void ADeinonychus_Character_BP_C::STATIC_ComputeBufferedUberpounce(const struct 
 	params.PreviousUberpounceStartLocation = PreviousUberpounceStartLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1666,13 +2087,13 @@ void ADeinonychus_Character_BP_C::STATIC_ComputeBufferedUberpounce(const struct 
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPOnDinoCheat
-// (Net, NetRequest, NetResponse, Static, Public, Protected, Delegate, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FName*                  CheatName                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bSetValue                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::STATIC_BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value)
+void ADeinonychus_Character_BP_C::BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPOnDinoCheat");
 
@@ -1718,7 +2139,7 @@ void ADeinonychus_Character_BP_C::IsUberpounceDataNearlyEqual(const struct FUber
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.RidingTick
-// (Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1787,7 +2208,7 @@ bool ADeinonychus_Character_BP_C::CanJumpInternal()
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BP_OnJumpReleased
-// (NetRequest, Event, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Event, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
 void ADeinonychus_Character_BP_C::STATIC_BP_OnJumpReleased()
 {
@@ -1826,7 +2247,7 @@ void ADeinonychus_Character_BP_C::OnLanded(struct FHitResult* Hit)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C. Uberpounce Trace
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -1938,12 +2359,12 @@ void ADeinonychus_Character_BP_C::GetCurrentSocketLevel(class APrimalCharacter* 
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Get Socket Level
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, Const)
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class FString                  SocketName                     (Parm, ZeroConstructor)
 // int                            OutLevel                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::Get_Socket_Level(const class FString& SocketName, int* OutLevel)
+void ADeinonychus_Character_BP_C::STATIC_Get_Socket_Level(const class FString& SocketName, int* OutLevel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Get Socket Level");
 
@@ -1951,7 +2372,6 @@ void ADeinonychus_Character_BP_C::Get_Socket_Level(const class FString& SocketNa
 	params.SocketName = SocketName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1984,13 +2404,13 @@ bool ADeinonychus_Character_BP_C::EnableTurnToFaceRotation()
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.FindScreenEdgeLocation
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, Const)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 WorldLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 // float                          EdgeMarginPct                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               ScreenPosition                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::FindScreenEdgeLocation(const struct FVector& WorldLocation, float EdgeMarginPct, struct FVector2D* ScreenPosition)
+void ADeinonychus_Character_BP_C::STATIC_FindScreenEdgeLocation(const struct FVector& WorldLocation, float EdgeMarginPct, struct FVector2D* ScreenPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.FindScreenEdgeLocation");
 
@@ -1999,7 +2419,6 @@ void ADeinonychus_Character_BP_C::FindScreenEdgeLocation(const struct FVector& W
 	params.EdgeMarginPct = EdgeMarginPct;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2011,7 +2430,7 @@ void ADeinonychus_Character_BP_C::FindScreenEdgeLocation(const struct FVector& W
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetBleed HUDData for Character
-// (Net, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -2024,7 +2443,7 @@ void ADeinonychus_Character_BP_C::FindScreenEdgeLocation(const struct FVector& W
 // struct FLinearColor            TextColor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::STATIC_GetBleed_HUDData_for_Character(class APrimalCharacter* Character, int index, struct FVector2D* WorldLocToScreenLoc, struct FVector2D* ScreenLoc, float* ProgressBar, class FString* RetBuffCountString, class FString* DinoName, float* Scale, struct FLinearColor* TextColor, bool* Result)
+void ADeinonychus_Character_BP_C::GetBleed_HUDData_for_Character(class APrimalCharacter* Character, int index, struct FVector2D* WorldLocToScreenLoc, struct FVector2D* ScreenLoc, float* ProgressBar, class FString* RetBuffCountString, class FString* DinoName, float* Scale, struct FLinearColor* TextColor, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetBleed HUDData for Character");
 
@@ -2119,18 +2538,17 @@ void ADeinonychus_Character_BP_C::AddBleed(class APrimalCharacter* Instigator)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetDebugString
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, Const)
+// (Net, Event, NetResponse, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class FString                  Output                         (Parm, OutParm, ZeroConstructor)
 
-void ADeinonychus_Character_BP_C::STATIC_GetDebugString(class FString* Output)
+void ADeinonychus_Character_BP_C::GetDebugString(class FString* Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.GetDebugString");
 
 	ADeinonychus_Character_BP_C_GetDebugString_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2142,27 +2560,28 @@ void ADeinonychus_Character_BP_C::STATIC_GetDebugString(class FString* Output)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Get RotationAndLocation for UberpounceOnSurface
-// (NetRequest, NetResponse, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     HitComponent                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 DeinonychusLocation            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                retRotation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 retLocation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::STATIC_Get_RotationAndLocation_for_UberpounceOnSurface(const struct FVector& Location, const struct FVector& surfaceNormal, class UPrimitiveComponent* HitComponent, const struct FVector& DeinonychusLocation, struct FRotator* retRotation, struct FVector* retLocation, bool* Success)
+void ADeinonychus_Character_BP_C::Get_RotationAndLocation_for_UberpounceOnSurface(const struct FVector& Location, const struct FVector& SurfaceNormal, class UPrimitiveComponent* HitComponent, const struct FVector& DeinonychusLocation, struct FRotator* retRotation, struct FVector* retLocation, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Get RotationAndLocation for UberpounceOnSurface");
 
 	ADeinonychus_Character_BP_C_Get_RotationAndLocation_for_UberpounceOnSurface_Params params;
 	params.Location = Location;
-	params.surfaceNormal = surfaceNormal;
+	params.SurfaceNormal = SurfaceNormal;
 	params.HitComponent = HitComponent;
 	params.DeinonychusLocation = DeinonychusLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2181,21 +2600,22 @@ void ADeinonychus_Character_BP_C::STATIC_Get_RotationAndLocation_for_UberpounceO
 // ()
 // Parameters:
 // struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 DeinonychusLocation            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                DeinonychusRotation            (Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     HitComponent                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsGround                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsFoliage                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::IsValidGeoLocationForUberpounce(const struct FVector& Location, const struct FVector& surfaceNormal, class AActor* Actor, const struct FVector& DeinonychusLocation, const struct FRotator& DeinonychusRotation, class UPrimitiveComponent* HitComponent, bool* Result, bool* IsGround)
+void ADeinonychus_Character_BP_C::IsValidGeoLocationForUberpounce(const struct FVector& Location, const struct FVector& SurfaceNormal, class AActor* Actor, const struct FVector& DeinonychusLocation, const struct FRotator& DeinonychusRotation, class UPrimitiveComponent* HitComponent, bool* Result, bool* IsGround, bool* IsFoliage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.IsValidGeoLocationForUberpounce");
 
 	ADeinonychus_Character_BP_C_IsValidGeoLocationForUberpounce_Params params;
 	params.Location = Location;
-	params.surfaceNormal = surfaceNormal;
+	params.SurfaceNormal = SurfaceNormal;
 	params.Actor = Actor;
 	params.DeinonychusLocation = DeinonychusLocation;
 	params.DeinonychusRotation = DeinonychusRotation;
@@ -2211,6 +2631,8 @@ void ADeinonychus_Character_BP_C::IsValidGeoLocationForUberpounce(const struct F
 		*Result = params.Result;
 	if (IsGround != nullptr)
 		*IsGround = params.IsGround;
+	if (IsFoliage != nullptr)
+		*IsFoliage = params.IsFoliage;
 }
 
 
@@ -2463,12 +2885,12 @@ void ADeinonychus_Character_BP_C::BPNotifyClearRider(class AShooterCharacter** R
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPGetHUDElements
-// (NetReliable, NetRequest, Native, Event, NetResponse, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, Static, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ADeinonychus_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ADeinonychus_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BPGetHUDElements");
 
@@ -2488,12 +2910,12 @@ void ADeinonychus_Character_BP_C::BPGetHUDElements(class APlayerController** For
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.EndUberpounce
-// (NetRequest, Native, Event, NetResponse, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, Event, NetMulticast, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FVector                 Velocity                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            MontageToPlayOnNonZeroVelocity (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::STATIC_EndUberpounce(const struct FVector& Velocity, class UAnimMontage* MontageToPlayOnNonZeroVelocity)
+void ADeinonychus_Character_BP_C::EndUberpounce(const struct FVector& Velocity, class UAnimMontage* MontageToPlayOnNonZeroVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.EndUberpounce");
 
@@ -2557,13 +2979,33 @@ bool ADeinonychus_Character_BP_C::BP_InterceptMoveRight(float* AxisValue)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateUberpounceFn
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Event, NetResponse, Delegate, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ADeinonychus_Character_BP_C::STATIC_UpdateUberpounceFn()
+void ADeinonychus_Character_BP_C::UpdateUberpounceFn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateUberpounceFn");
 
 	ADeinonychus_Character_BP_C_UpdateUberpounceFn_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.StartUberPounce
+// (Native, Static, NetMulticast, Delegate, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
+// Parameters:
+// struct FUberpounceData         Data                           (Parm)
+
+void ADeinonychus_Character_BP_C::STATIC_StartUberPounce(const struct FUberpounceData& Data)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.StartUberPounce");
+
+	ADeinonychus_Character_BP_C_StartUberPounce_Params params;
+	params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -2574,28 +3016,8 @@ void ADeinonychus_Character_BP_C::STATIC_UpdateUberpounceFn()
 }
 
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.StartUberPounce
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintCallable, Const)
-// Parameters:
-// struct FUberpounceData         Data                           (Parm)
-
-void ADeinonychus_Character_BP_C::StartUberPounce(const struct FUberpounceData& Data)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.StartUberPounce");
-
-	ADeinonychus_Character_BP_C_StartUberPounce_Params params;
-	params.Data = Data;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Find BestUberpounce Socket on Character
-// (NetRequest, Exec, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StartTrace                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -2639,7 +3061,7 @@ void ADeinonychus_Character_BP_C::STATIC_Find_BestUberpounce_Socket_on_Character
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.UpdateUberPounceTargetingFn
-// (NetReliable, NetRequest, Native, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintCallable, Const)
+// (Event, NetResponse, Delegate, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ADeinonychus_Character_BP_C::UpdateUberPounceTargetingFn()
 {
@@ -2648,7 +3070,6 @@ void ADeinonychus_Character_BP_C::UpdateUberPounceTargetingFn()
 	ADeinonychus_Character_BP_C_UpdateUberPounceTargetingFn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2746,14 +3167,14 @@ bool ADeinonychus_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintCallable, Const)
+// (Exec, Public, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ADeinonychus_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
@@ -2764,7 +3185,6 @@ void ADeinonychus_Character_BP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct F
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2789,14 +3209,14 @@ void ADeinonychus_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_357
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_249
 // ()
 
-void ADeinonychus_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_357()
+void ADeinonychus_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_249()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_357");
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_249");
 
-	ADeinonychus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_357_Params params;
+	ADeinonychus_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_249_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2806,14 +3226,14 @@ void ADeinonychus_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_357()
 }
 
 
-// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_356
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_248
 // ()
 
-void ADeinonychus_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_356()
+void ADeinonychus_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_248()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_356");
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_248");
 
-	ADeinonychus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_356_Params params;
+	ADeinonychus_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_248_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3080,13 +3500,17 @@ void ADeinonychus_Character_BP_C::MultiUpdateCurrentDataLocation(const struct FV
 // ()
 // Parameters:
 // struct FUberpounceData         Data                           (Parm)
+// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::ServerStartUberpounceFromFalling(const struct FUberpounceData& Data)
+void ADeinonychus_Character_BP_C::ServerStartUberpounceFromFalling(const struct FUberpounceData& Data, const struct FVector& Location, const struct FRotator& Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerStartUberpounceFromFalling");
 
 	ADeinonychus_Character_BP_C_ServerStartUberpounceFromFalling_Params params;
 	params.Data = Data;
+	params.Location = Location;
+	params.Rotation = Rotation;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3278,18 +3702,18 @@ void ADeinonychus_Character_BP_C::MULTI_ApplyAtCliffTopVelocity()
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.MULTI_TargetDodgedUberPounce
 // ()
 // Parameters:
-// struct FVector                 newTargetLocation              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NewTargetLocation              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                NewTargetRotation              (Parm, ZeroConstructor, IsPlainOldData)
-// class APrimalCharacter*        oldTarget                      (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        OldTarget                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ADeinonychus_Character_BP_C::MULTI_TargetDodgedUberPounce(const struct FVector& newTargetLocation, const struct FRotator& NewTargetRotation, class APrimalCharacter* oldTarget)
+void ADeinonychus_Character_BP_C::MULTI_TargetDodgedUberPounce(const struct FVector& NewTargetLocation, const struct FRotator& NewTargetRotation, class APrimalCharacter* OldTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.MULTI_TargetDodgedUberPounce");
 
 	ADeinonychus_Character_BP_C_MULTI_TargetDodgedUberPounce_Params params;
-	params.newTargetLocation = newTargetLocation;
+	params.NewTargetLocation = NewTargetLocation;
 	params.NewTargetRotation = NewTargetRotation;
-	params.oldTarget = oldTarget;
+	params.OldTarget = OldTarget;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3376,15 +3800,15 @@ void ADeinonychus_Character_BP_C::ServerSetLocDuringLatchedJump(const struct FVe
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Client_CallServerMulticast_JumpFX
 // ()
 // Parameters:
-// class UParticleSystem*         FX_to_Spawn                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystem*         FX_To_Spawn                    (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Attach_Point_Names             (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ADeinonychus_Character_BP_C::Client_CallServerMulticast_JumpFX(class UParticleSystem* FX_to_Spawn, TArray<struct FName>* Attach_Point_Names)
+void ADeinonychus_Character_BP_C::Client_CallServerMulticast_JumpFX(class UParticleSystem* FX_To_Spawn, TArray<struct FName>* Attach_Point_Names)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Client_CallServerMulticast_JumpFX");
 
 	ADeinonychus_Character_BP_C_Client_CallServerMulticast_JumpFX_Params params;
-	params.FX_to_Spawn = FX_to_Spawn;
+	params.FX_To_Spawn = FX_To_Spawn;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3400,15 +3824,15 @@ void ADeinonychus_Character_BP_C::Client_CallServerMulticast_JumpFX(class UParti
 // Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Multicast_JumpFX
 // ()
 // Parameters:
-// class UParticleSystem*         FX_to_Spawn                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystem*         FX_To_Spawn                    (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Attach_Point_Names             (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ADeinonychus_Character_BP_C::Multicast_JumpFX(class UParticleSystem* FX_to_Spawn, TArray<struct FName>* Attach_Point_Names)
+void ADeinonychus_Character_BP_C::Multicast_JumpFX(class UParticleSystem* FX_To_Spawn, TArray<struct FName>* Attach_Point_Names)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.Multicast_JumpFX");
 
 	ADeinonychus_Character_BP_C_Multicast_JumpFX_Params params;
-	params.FX_to_Spawn = FX_to_Spawn;
+	params.FX_To_Spawn = FX_To_Spawn;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3429,6 +3853,79 @@ void ADeinonychus_Character_BP_C::SpawnLocalClinetSuperJumpFX()
 	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.SpawnLocalClinetSuperJumpFX");
 
 	ADeinonychus_Character_BP_C_SpawnLocalClinetSuperJumpFX_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerSlideInputPressed
+// ()
+
+void ADeinonychus_Character_BP_C::ServerSlideInputPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerSlideInputPressed");
+
+	ADeinonychus_Character_BP_C_ServerSlideInputPressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerSlideInputReleased
+// ()
+
+void ADeinonychus_Character_BP_C::ServerSlideInputReleased()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerSlideInputReleased");
+
+	ADeinonychus_Character_BP_C_ServerSlideInputReleased_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TimeOutUberpounceRequest
+// ()
+
+void ADeinonychus_Character_BP_C::TimeOutUberpounceRequest()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.TimeOutUberpounceRequest");
+
+	ADeinonychus_Character_BP_C_TimeOutUberpounceRequest_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerUpdateTransformDuringLatchedJump
+// ()
+// Parameters:
+// struct FVector                 L                              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                R                              (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADeinonychus_Character_BP_C::ServerUpdateTransformDuringLatchedJump(const struct FVector& L, const struct FRotator& R)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Deinonychus_Character_BP.Deinonychus_Character_BP_C.ServerUpdateTransformDuringLatchedJump");
+
+	ADeinonychus_Character_BP_C_ServerUpdateTransformDuringLatchedJump_Params params;
+	params.L = L;
+	params.R = R;
 
 	auto flags = fn->FunctionFlags;
 

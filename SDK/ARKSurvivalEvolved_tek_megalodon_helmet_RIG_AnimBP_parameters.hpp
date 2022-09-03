@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function tek_megalodon_helmet_RIG_AnimBP.tek_megalodon_helmet_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2668
-struct Utek_megalodon_helmet_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2668_Params
+// Function tek_megalodon_helmet_RIG_AnimBP.tek_megalodon_helmet_RIG_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2920
+struct Utek_megalodon_helmet_RIG_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2920_Params
 {
 };
 

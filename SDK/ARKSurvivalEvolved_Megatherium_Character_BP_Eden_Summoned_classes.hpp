@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Megatherium_Character_BP_Eden_Summoned.Megatherium_Character_BP_Eden_Summoned_C
-// 0x0000 (0x2331 - 0x2331)
+// 0x0000 (0x2351 - 0x2351)
 class AMegatherium_Character_BP_Eden_Summoned_C : public AMegatherium_Character_BP_Eden_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_WeaponTripwireC4.PrimalItem_WeaponTripwireC4_C
-// 0x0000 (0x0AE0 - 0x0AE0)
+// 0x0000 (0x0AE8 - 0x0AE8)
 class UPrimalItem_WeaponTripwireC4_C : public UPrimalItemWeaponGenericAmmolessConsumeSelf_C
 {
 public:

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.BPGetMaxAmmo
+// ()
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UPrimalItemArmor_Base_Tek_C::BPGetMaxAmmo()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.BPGetMaxAmmo");
+
+	UPrimalItemArmor_Base_Tek_C_BPGetMaxAmmo_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.IsInfiniteAmmo
 // ()
@@ -79,12 +100,12 @@ void UPrimalItemArmor_Base_Tek_C::RemovedSkinFromItem(class UPrimalItem** FromOw
 
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetInternalMapRestrictedTekArmorBuff
-// (NetRequest, Event, NetResponse, NetMulticast, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterCharacter*       OwningPlayer                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  TekArmorBuff                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemArmor_Base_Tek_C::GetInternalMapRestrictedTekArmorBuff(class AShooterCharacter* OwningPlayer, class UClass** TekArmorBuff)
+void UPrimalItemArmor_Base_Tek_C::STATIC_GetInternalMapRestrictedTekArmorBuff(class AShooterCharacter* OwningPlayer, class UClass** TekArmorBuff)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetInternalMapRestrictedTekArmorBuff");
 

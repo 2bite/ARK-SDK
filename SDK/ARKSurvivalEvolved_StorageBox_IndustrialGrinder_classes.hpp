@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,13 +37,13 @@ public:
 	void GrindAllItems(class APlayerController* ForPC);
 	void IsValidForGrindingAll(bool* IsValid);
 	void BPPreGetMultiUseEntries(class APlayerController** ForPC);
-	void STATIC_HasCraftingRequirementsGreaterThanOne(class UPrimalItem* InItem, bool* TRUE);
+	void HasCraftingRequirementsGreaterThanOne(class UPrimalItem* InItem, bool* TRUE);
 	void GetReplacementItem(class UClass* InItemClass, class UClass** OutItemClass);
 	void IsValidGrindingItem(class UPrimalItem* ItemToCheck, bool* IsValid);
 	void GrindItem(class UPrimalItem* ItemToGrind, class AShooterPlayerController* ForPC, bool grindStack, bool MuteSound);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void ExecuteUbergraph_StorageBox_IndustrialGrinder(int EntryPoint);
 };

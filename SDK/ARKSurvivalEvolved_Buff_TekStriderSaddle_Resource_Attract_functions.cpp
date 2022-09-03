@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_TekStriderSaddle_Resource_Attract.Buff_TekStriderSaddle_Resource_Attract_C.create material on mining drill
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, NetClient, NetValidate)
+// (NetRequest, NetMulticast, MulticastDelegate, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ABuff_TekStriderSaddle_Resource_Attract_C::create_material_on_mining_drill()
 {
@@ -22,7 +22,6 @@ void ABuff_TekStriderSaddle_Resource_Attract_C::create_material_on_mining_drill(
 	ABuff_TekStriderSaddle_Resource_Attract_C_create_material_on_mining_drill_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

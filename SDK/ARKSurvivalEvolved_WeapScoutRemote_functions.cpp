@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetDebugInfoString
-// (NetRequest, Event, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString AWeapScoutRemote_C::STATIC_BPGetDebugInfoString()
+class FString AWeapScoutRemote_C::BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScoutRemote.WeapScoutRemote_C.BPGetDebugInfoString");
 
 	AWeapScoutRemote_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,17 +56,18 @@ bool AWeapScoutRemote_C::AllowTargeting()
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetTargetingTooltipInfoLabel
-// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText AWeapScoutRemote_C::STATIC_BPGetTargetingTooltipInfoLabel()
+struct FText AWeapScoutRemote_C::BPGetTargetingTooltipInfoLabel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScoutRemote.WeapScoutRemote_C.BPGetTargetingTooltipInfoLabel");
 
 	AWeapScoutRemote_C_BPGetTargetingTooltipInfoLabel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -292,7 +294,7 @@ void AWeapScoutRemote_C::BPOnStopTargeting(bool* bFromGamepadLeft)
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -304,7 +306,6 @@ void AWeapScoutRemote_C::STATIC_ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -546,17 +547,18 @@ void AWeapScoutRemote_C::Scout_Launched(class AScout_Character_BP_C* Scout)
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPGetActorForTargetingTooltip
-// (NetReliable, Exec, Event, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* AWeapScoutRemote_C::BPGetActorForTargetingTooltip()
+class AActor* AWeapScoutRemote_C::STATIC_BPGetActorForTargetingTooltip()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapScoutRemote.WeapScoutRemote_C.BPGetActorForTargetingTooltip");
 
 	AWeapScoutRemote_C_BPGetActorForTargetingTooltip_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -567,7 +569,7 @@ class AActor* AWeapScoutRemote_C::BPGetActorForTargetingTooltip()
 
 
 // Function WeapScoutRemote.WeapScoutRemote_C.BPWeaponCanFire
-// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Event, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -578,7 +580,6 @@ bool AWeapScoutRemote_C::STATIC_BPWeaponCanFire()
 	AWeapScoutRemote_C_BPWeaponCanFire_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

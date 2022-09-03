@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,128 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetCameraLocation
+// ()
+// Parameters:
+// struct FVector                 CameraViewPoint                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                CameraRotation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemStructure_SecurityCamera_C::GetCameraLocation(struct FVector* CameraViewPoint, struct FRotator* CameraRotation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetCameraLocation");
+
+	UPrimalItemStructure_SecurityCamera_C_GetCameraLocation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CameraViewPoint != nullptr)
+		*CameraViewPoint = params.CameraViewPoint;
+	if (CameraRotation != nullptr)
+		*CameraRotation = params.CameraRotation;
+}
+
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetCameraData
+// ()
+// Parameters:
+// TArray<class APrimalStructure*> Cameras                        (Parm, OutParm, ZeroConstructor)
+// int                            index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemStructure_SecurityCamera_C::GetCameraData(TArray<class APrimalStructure*>* Cameras, int* index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetCameraData");
+
+	UPrimalItemStructure_SecurityCamera_C_GetCameraData_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Cameras != nullptr)
+		*Cameras = params.Cameras;
+	if (index != nullptr)
+		*index = params.index;
+}
+
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetConsoleID
+// ()
+// Parameters:
+// float                          ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemStructure_SecurityCamera_C::GetConsoleID(float* ID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetConsoleID");
+
+	UPrimalItemStructure_SecurityCamera_C_GetConsoleID_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ID != nullptr)
+		*ID = params.ID;
+}
+
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.CanAddCamera
+// ()
+// Parameters:
+// bool                           Allowed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemStructure_SecurityCamera_C::CanAddCamera(bool* Allowed)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.CanAddCamera");
+
+	UPrimalItemStructure_SecurityCamera_C_CanAddCamera_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Allowed != nullptr)
+		*Allowed = params.Allowed;
+}
+
+
+// Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetConsoleData
+// ()
+// Parameters:
+// float                          ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class FString                  Name                           (Parm, OutParm, ZeroConstructor)
+// bool                           CanAddCamera                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItemStructure_SecurityCamera_C::GetConsoleData(float* ID, class FString* Name, bool* CanAddCamera)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.GetConsoleData");
+
+	UPrimalItemStructure_SecurityCamera_C_GetConsoleData_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ID != nullptr)
+		*ID = params.ID;
+	if (Name != nullptr)
+		*Name = params.Name;
+	if (CanAddCamera != nullptr)
+		*CanAddCamera = params.CanAddCamera;
+}
+
 
 // Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.SetConsoleDataByID
 // ()
@@ -33,11 +155,11 @@ void UPrimalItemStructure_SecurityCamera_C::SetConsoleDataByID(float ConsoleID)
 
 
 // Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.SetCameraName
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  Name                           (Parm, ZeroConstructor)
 
-void UPrimalItemStructure_SecurityCamera_C::SetCameraName(const class FString& Name)
+void UPrimalItemStructure_SecurityCamera_C::STATIC_SetCameraName(const class FString& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.SetCameraName");
 
@@ -45,7 +167,6 @@ void UPrimalItemStructure_SecurityCamera_C::SetCameraName(const class FString& N
 	params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +175,7 @@ void UPrimalItemStructure_SecurityCamera_C::SetCameraName(const class FString& N
 
 
 // Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.RetrieveConsoleData
-// (Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, Static, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          outConsoleID                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 OutLocation                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -62,13 +183,14 @@ void UPrimalItemStructure_SecurityCamera_C::SetCameraName(const class FString& N
 // class FString                  outCameraName                  (Parm, OutParm, ZeroConstructor)
 // class FString                  outConsoleName                 (Parm, OutParm, ZeroConstructor)
 
-void UPrimalItemStructure_SecurityCamera_C::RetrieveConsoleData(float* outConsoleID, struct FVector* OutLocation, bool* outAllowedToAdd, class FString* outCameraName, class FString* outConsoleName)
+void UPrimalItemStructure_SecurityCamera_C::STATIC_RetrieveConsoleData(float* outConsoleID, struct FVector* OutLocation, bool* outAllowedToAdd, class FString* outCameraName, class FString* outConsoleName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.RetrieveConsoleData");
 
 	UPrimalItemStructure_SecurityCamera_C_RetrieveConsoleData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,12 +210,12 @@ void UPrimalItemStructure_SecurityCamera_C::RetrieveConsoleData(float* outConsol
 
 
 // Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.Set Console Data
-// (NetReliable, Exec, Native, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalStructure*        Console                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemStructure_SecurityCamera_C::STATIC_Set_Console_Data(class APrimalStructure* Console, bool* Changed)
+void UPrimalItemStructure_SecurityCamera_C::Set_Console_Data(class APrimalStructure* Console, bool* Changed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.Set Console Data");
 
@@ -101,7 +223,6 @@ void UPrimalItemStructure_SecurityCamera_C::STATIC_Set_Console_Data(class APrima
 	params.Console = Console;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,9 +275,9 @@ void UPrimalItemStructure_SecurityCamera_C::BPServerVerifyStructurePlacementData
 
 
 // Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.VerifyConsoleData
-// (Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void UPrimalItemStructure_SecurityCamera_C::STATIC_VerifyConsoleData()
+void UPrimalItemStructure_SecurityCamera_C::VerifyConsoleData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.VerifyConsoleData");
 
@@ -220,7 +341,7 @@ class UTexture2D* UPrimalItemStructure_SecurityCamera_C::BPGetItemIcon(class ASh
 
 
 // Function PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C.BPGetItemDescription
-// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -237,7 +358,6 @@ class FString UPrimalItemStructure_SecurityCamera_C::BPGetItemDescription(class 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

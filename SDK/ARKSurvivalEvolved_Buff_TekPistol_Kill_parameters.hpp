@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 // Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.Public Calculate Damage Multiplier
 struct ABuff_TekPistol_Kill_C_Public_Calculate_Damage_Multiplier_Params
 {
-	float                                              Mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.CalculateImpactScale
@@ -29,7 +29,7 @@ struct ABuff_TekPistol_Kill_C_CalculateImpactScale_Params
 // Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.CalculateDamageMultiplier
 struct ABuff_TekPistol_Kill_C_CalculateDamageMultiplier_Params
 {
-	float                                              Mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.BPAdjustDamage_Ex

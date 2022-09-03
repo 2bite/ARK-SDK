@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,13 +17,20 @@ namespace sdk
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.safely release carried character
 struct ATekHoverSkiff_Character_BP_C_safely_release_carried_character_Params
 {
+	bool                                               skip_clearing_call;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalCharacter*                            overridden_set_character;                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.Get Closest Beam Location Not Blocked
 struct ATekHoverSkiff_Character_BP_C_Get_Closest_Beam_Location_Not_Blocked_Params
 {
 	struct FVector                                     End;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Offset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Location;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Did_Hit;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               line_trace_hit;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               box_trace_hit;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               keep_momentum_upon_release;                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.ModifySkiffHorizontalInputs
@@ -426,7 +433,7 @@ struct ATekHoverSkiff_Character_BP_C_CanActivateBeamCamera_Params
 struct ATekHoverSkiff_Character_BP_C_OnReceiveSkiff2dMovementInput_Params
 {
 	float                                              InputAxisVal;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bRight;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bright;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bShouldIntercept;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -576,7 +583,7 @@ struct ATekHoverSkiff_Character_BP_C_GetCurrentBeamChar_Pure_Params
 struct ATekHoverSkiff_Character_BP_C_GetEnvironmentalParticleTraceDistance_Params
 {
 	struct FName                                       ForSocketName;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              traceDist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              TraceDist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekHoverSkiff_Character_BP.TekHoverSkiff_Character_BP_C.ReceiveDestroyed

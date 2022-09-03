@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -248,7 +248,7 @@ public:
 
 	void OnRep_bToggleUnstasis();
 	bool BPPreventCharacterBasing(class AActor** OtherActor, class UPrimitiveComponent** BasedOnComponent);
-	void STATIC_ValidLOSTarget(class AActor* Target, bool* RetValid);
+	void STATIC_ValidLOSTarget(class AActor* Target, bool* retValid);
 	void get_anim_index(int* AnimIndex);
 	void Can_Target_WakeSelf(class APrimalCharacter* Character, bool* bValidTarget);
 	void BPHitEffect(float* DamageTaken, class APawn** PawnInstigator, class AActor** DamageCauser, bool* bIsLocalPath, class UPrimitiveComponent** HitComponent, struct FVector* DamageLoc, struct FRotator* HitNormal, struct FDamageEvent* DamageEvent);

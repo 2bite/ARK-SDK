@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ struct AXenomorph_Character_BP_C_Get_Charge_Variable_Interface_Params
 	float                                              fValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bBValue;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.HasSelfBuried
@@ -331,23 +331,23 @@ struct AXenomorph_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_76
-struct AXenomorph_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_76_Params
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_81
+struct AXenomorph_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_81_Params
 {
 };
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Reload_K2Node_InputActionEvent_75
-struct AXenomorph_Character_BP_C_InpActEvt_Reload_K2Node_InputActionEvent_75_Params
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Reload_K2Node_InputActionEvent_80
+struct AXenomorph_Character_BP_C_InpActEvt_Reload_K2Node_InputActionEvent_80_Params
 {
 };
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_74
-struct AXenomorph_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_74_Params
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_79
+struct AXenomorph_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_79_Params
 {
 };
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_73
-struct AXenomorph_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_73_Params
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_78
+struct AXenomorph_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_78_Params
 {
 };
 
@@ -402,14 +402,14 @@ struct AXenomorph_Character_BP_C_ChargeVariableEventDoubleInterface_Params
 struct AXenomorph_Character_BP_C_ChargeVariableEventIntInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.ChargeVariableEventIntMulticastInterface
 struct AXenomorph_Character_BP_C_ChargeVariableEventIntMulticastInterface_Params
 {
 	TEnumAsByte<E_ChargeVariableNames>                 variableType;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.ReceiveBeginPlay
@@ -420,7 +420,7 @@ struct AXenomorph_Character_BP_C_ReceiveBeginPlay_Params
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.StartAcidSpray
 struct AXenomorph_Character_BP_C_StartAcidSpray_Params
 {
-	struct FVector                                     hitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     HitDir;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       HitBone;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -428,7 +428,7 @@ struct AXenomorph_Character_BP_C_StartAcidSpray_Params
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Server_StartAcidSpray
 struct AXenomorph_Character_BP_C_Server_StartAcidSpray_Params
 {
-	struct FVector                                     hitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     HitDir;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       HitBone;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -612,7 +612,7 @@ struct AXenomorph_Character_BP_C_Charge_Variable_Event_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              fValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	double                                             dValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Set Charge Variable Interface
@@ -625,7 +625,7 @@ struct AXenomorph_Character_BP_C_Set_Charge_Variable_Interface_Params
 	bool                                               bBValue;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               triggerEvent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               multicastEvent;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ivalue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                iValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.PlayGroundParticleVFX

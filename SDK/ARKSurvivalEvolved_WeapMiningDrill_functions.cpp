@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,7 +106,7 @@ void AWeapMiningDrill_C::BPSpawnHarvestEffects(TArray<struct FVector>* Impacts)
 
 
 // Function WeapMiningDrill.WeapMiningDrill_C.CalculateTargetPosition
-// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -117,7 +117,6 @@ struct FVector AWeapMiningDrill_C::STATIC_CalculateTargetPosition()
 	AWeapMiningDrill_C_CalculateTargetPosition_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,12 +178,12 @@ int AWeapMiningDrill_C::BPWeaponDealDamage(int* DamageAmount, class UClass** Dam
 
 
 // Function WeapMiningDrill.WeapMiningDrill_C.BPPreFireEvent
-// (NetRequest, Native, NetMulticast, Public, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector*                Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                ShootDir                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapMiningDrill_C::BPPreFireEvent(struct FVector* Origin, struct FVector* ShootDir)
+void AWeapMiningDrill_C::STATIC_BPPreFireEvent(struct FVector* Origin, struct FVector* ShootDir)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapMiningDrill.WeapMiningDrill_C.BPPreFireEvent");
 
@@ -193,7 +192,6 @@ void AWeapMiningDrill_C::BPPreFireEvent(struct FVector* Origin, struct FVector* 
 	params.ShootDir = ShootDir;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

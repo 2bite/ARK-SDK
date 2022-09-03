@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_MulticraftItem_BeetlePoop_Large.PrimalItemConsumable_MulticraftItem_BeetlePoop_Large_C
-// 0x0000 (0x0AE0 - 0x0AE0)
+// 0x0000 (0x0AE8 - 0x0AE8)
 class UPrimalItemConsumable_MulticraftItem_BeetlePoop_Large_C : public UPrimalItemConsumable_MulticraftItem_Base_C
 {
 public:

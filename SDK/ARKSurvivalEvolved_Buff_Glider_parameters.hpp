@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_Glider.Buff_Glider_C.GetGliderInactiveMeshTargetRotVals
+struct ABuff_Glider_C_GetGliderInactiveMeshTargetRotVals_Params
+{
+	struct FRotator                                    Rot;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              InterpSpeed;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_Glider.Buff_Glider_C.ServerTick_UpdateHighestZ
 struct ABuff_Glider_C_ServerTick_UpdateHighestZ_Params
@@ -154,7 +161,7 @@ struct ABuff_Glider_C_BuffAdjustDamage_Params
 // Function Buff_Glider.Buff_Glider_C.AreRotatorsNearlyEqual
 struct ABuff_Glider_C_AreRotatorsNearlyEqual_Params
 {
-	struct FRotator                                    RotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    RotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Error;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -200,7 +207,7 @@ struct ABuff_Glider_C_GetGlideSpeedRatio_Pure_Params
 // Function Buff_Glider.Buff_Glider_C.GetDefaultOwningPlayer
 struct ABuff_Glider_C_GetDefaultOwningPlayer_Params
 {
-	class AShooterCharacter*                           ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Glider.Buff_Glider_C.IsPlayerGrounded
@@ -286,23 +293,23 @@ struct ABuff_Glider_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_99
-struct ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_99_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Jump_K2Node_InputActionEvent_104
+struct ABuff_Glider_C_InpActEvt_Jump_K2Node_InputActionEvent_104_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_98
-struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_98_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_103
+struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_103_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_97
-struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_97_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_Run_K2Node_InputActionEvent_102
+struct ABuff_Glider_C_InpActEvt_Run_K2Node_InputActionEvent_102_Params
 {
 };
 
-// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_96
-struct ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_96_Params
+// Function Buff_Glider.Buff_Glider_C.InpActEvt_RunToggle_K2Node_InputActionEvent_101
+struct ABuff_Glider_C_InpActEvt_RunToggle_K2Node_InputActionEvent_101_Params
 {
 };
 

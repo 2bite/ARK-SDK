@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,7 +60,7 @@ bool ADoor_Tek_Base_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIn
 
 
 // Function Door_Tek_Base.Door_Tek_Base_C.BPGetMultiUseEntries
-// (Native, NetResponse, Static, NetMulticast, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, Static, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -74,7 +74,6 @@ TArray<struct FMultiUseEntry> ADoor_Tek_Base_C::STATIC_BPGetMultiUseEntries(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

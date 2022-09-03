@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,9 +59,9 @@ void ABuff_ChargeStun_AoE_C::Can_Stun_Character(class APrimalCharacter* characte
 // Function Buff_ChargeStun_AoE.Buff_ChargeStun_AoE_C.Get WeaponCharge Buff
 // ()
 // Parameters:
-// class ABuff_ChargeEmitter_C*   chargeBuff                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ABuff_ChargeEmitter_C*   ChargeBuff                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeStun_AoE_C::Get_WeaponCharge_Buff(class ABuff_ChargeEmitter_C** chargeBuff)
+void ABuff_ChargeStun_AoE_C::Get_WeaponCharge_Buff(class ABuff_ChargeEmitter_C** ChargeBuff)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeStun_AoE.Buff_ChargeStun_AoE_C.Get WeaponCharge Buff");
 
@@ -73,8 +73,8 @@ void ABuff_ChargeStun_AoE_C::Get_WeaponCharge_Buff(class ABuff_ChargeEmitter_C**
 
 	fn->FunctionFlags = flags;
 
-	if (chargeBuff != nullptr)
-		*chargeBuff = params.chargeBuff;
+	if (ChargeBuff != nullptr)
+		*ChargeBuff = params.ChargeBuff;
 }
 
 

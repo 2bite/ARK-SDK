@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,13 +62,13 @@ bool ABP_Wire_Flex_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABP_Wire_Flex_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABP_Wire_Flex_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wire_Flex.BP_Wire_Flex_C.BPGetMultiUseEntries");
 
@@ -76,6 +76,7 @@ TArray<struct FMultiUseEntry> ABP_Wire_Flex_C::STATIC_BPGetMultiUseEntries(class
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,11 +112,11 @@ void ABP_Wire_Flex_C::LinkWires(TArray<class APrimalStructure*>* Connections)
 
 
 // Function BP_Wire_Flex.BP_Wire_Flex_C.AddSplineMeshComponents
-// (Native, Event, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           UsePreviewMaterial             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Wire_Flex_C::STATIC_AddSplineMeshComponents(bool UsePreviewMaterial)
+void ABP_Wire_Flex_C::AddSplineMeshComponents(bool UsePreviewMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Wire_Flex.BP_Wire_Flex_C.AddSplineMeshComponents");
 

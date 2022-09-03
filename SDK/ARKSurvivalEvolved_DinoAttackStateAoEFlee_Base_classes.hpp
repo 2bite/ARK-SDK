@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DinoAttackStateAoEFlee_Base.DinoAttackStateAoEFlee_Base_C
-// 0x0011 (0x0069 - 0x0058)
+// 0x0012 (0x006A - 0x0058)
 class UDinoAttackStateAoEFlee_Base_C : public UPrimalAIState
 {
 public:
 	class UClass*                                      FrightenCooldownBuffClass;                                // 0x0058(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      FrightenBuffToApply;                                      // 0x0060(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               DontApplyToEnemyTamesOnPVEServer;                         // 0x0068(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bShouldFrightenMounted;                                   // 0x0069(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

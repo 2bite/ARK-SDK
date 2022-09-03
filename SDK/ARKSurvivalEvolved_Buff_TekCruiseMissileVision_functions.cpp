@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,18 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPGetDebugInfoString
-// (Net, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Net, NetRequest, NetResponse, Public, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ABuff_TekCruiseMissileVision_C::STATIC_BPGetDebugInfoString()
+class FString ABuff_TekCruiseMissileVision_C::BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPGetDebugInfoString");
 
 	ABuff_TekCruiseMissileVision_C_BPGetDebugInfoString_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,9 +74,9 @@ void ABuff_TekCruiseMissileVision_C::ReceiveBeginPlay()
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* Retval)
+void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.IsLocalScout");
 
@@ -89,8 +88,8 @@ void ABuff_TekCruiseMissileVision_C::IsLocalScout(bool* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -185,7 +184,7 @@ void ABuff_TekCruiseMissileVision_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_TekCruiseMissileVision.Buff_TekCruiseMissileVision_C.BPDrawBuffStatusHUD
-// (NetRequest, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Event, NetResponse, Public, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         XPos                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -203,6 +202,7 @@ void ABuff_TekCruiseMissileVision_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD
 	params.ScaleMult = ScaleMult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

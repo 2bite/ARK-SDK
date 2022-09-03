@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,7 +50,7 @@ void ABuff_MekBackpack_Shield_C::PlayShieldSound(int SoundIndex)
 
 
 // Function Buff_MekBackpack_Shield.Buff_MekBackpack_Shield_C.GetBackpackSaveData
-// (NetReliable, NetRequest, Event, Static, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FMekBackpackData        Data                           (Parm, OutParm)
 
@@ -61,6 +61,7 @@ void ABuff_MekBackpack_Shield_C::STATIC_GetBackpackSaveData(struct FMekBackpackD
 	ABuff_MekBackpack_Shield_C_GetBackpackSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

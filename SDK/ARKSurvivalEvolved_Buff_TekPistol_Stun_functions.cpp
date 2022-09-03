@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,11 +57,11 @@ void ABuff_TekPistol_Stun_C::CanApplyToTarget(class APrimalCharacter* Target, bo
 
 
 // Function Buff_TekPistol_Stun.Buff_TekPistol_Stun_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekPistol_Stun_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_TekPistol_Stun_C::BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekPistol_Stun.Buff_TekPistol_Stun_C.BPSetupForInstigator");
 
@@ -69,7 +69,6 @@ void ABuff_TekPistol_Stun_C::STATIC_BPSetupForInstigator(class AActor** ForInsti
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -122,17 +121,18 @@ class UClass* ABuff_TekPistol_Stun_C::GetPointCustomData()
 
 
 // Function Buff_TekPistol_Stun.Buff_TekPistol_Stun_C.GetPointOfInterestData
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FPointOfInterestData    ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPointOfInterestData ABuff_TekPistol_Stun_C::STATIC_GetPointOfInterestData()
+struct FPointOfInterestData ABuff_TekPistol_Stun_C::GetPointOfInterestData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekPistol_Stun.Buff_TekPistol_Stun_C.GetPointOfInterestData");
 
 	ABuff_TekPistol_Stun_C_GetPointOfInterestData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

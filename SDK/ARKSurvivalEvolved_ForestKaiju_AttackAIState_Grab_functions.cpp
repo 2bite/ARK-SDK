@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -163,7 +163,7 @@ void UForestKaiju_AttackAIState_Grab_C::OnBeginEvent(class UPrimalAIState** InPa
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.VineRetracted
-// (Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FVineTargetData> Targets                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -227,9 +227,9 @@ void UForestKaiju_AttackAIState_Grab_C::Debug_Draw_Sphere(const struct FVector& 
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.AnimNotifyGrabAttackSmash
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void UForestKaiju_AttackAIState_Grab_C::STATIC_AnimNotifyGrabAttackSmash()
+void UForestKaiju_AttackAIState_Grab_C::AnimNotifyGrabAttackSmash()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.AnimNotifyGrabAttackSmash");
 
@@ -269,7 +269,7 @@ void UForestKaiju_AttackAIState_Grab_C::DebugDrawLine(const struct FVector& Star
 
 
 // Function ForestKaiju_AttackAIState_Grab.ForestKaiju_AttackAIState_Grab_C.SpawnVines
-// (Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Net, Native, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void UForestKaiju_AttackAIState_Grab_C::STATIC_SpawnVines()
 {

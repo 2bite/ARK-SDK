@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,18 +35,17 @@ void ABuff_TekGrenadeLauncherHelper_C::BPClientDoMultiUse(class APlayerControlle
 
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.Generate Slot Wheel Entries
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FCustomWheelEntry> Entries                        (Parm, OutParm, ZeroConstructor)
 
-void ABuff_TekGrenadeLauncherHelper_C::Generate_Slot_Wheel_Entries(TArray<struct FCustomWheelEntry>* Entries)
+void ABuff_TekGrenadeLauncherHelper_C::STATIC_Generate_Slot_Wheel_Entries(TArray<struct FCustomWheelEntry>* Entries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.Generate Slot Wheel Entries");
 
 	ABuff_TekGrenadeLauncherHelper_C_Generate_Slot_Wheel_Entries_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,18 +203,17 @@ void ABuff_TekGrenadeLauncherHelper_C::AmmoNameToType(const struct FName& AmmoTy
 
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.GenerateAmmoWheelEntries
-// (Exec, Native, Event, NetMulticast, Public, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FCustomWheelEntry> AmmoEntries                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_TekGrenadeLauncherHelper_C::GenerateAmmoWheelEntries(TArray<struct FCustomWheelEntry>* AmmoEntries)
+void ABuff_TekGrenadeLauncherHelper_C::STATIC_GenerateAmmoWheelEntries(TArray<struct FCustomWheelEntry>* AmmoEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.GenerateAmmoWheelEntries");
 
 	ABuff_TekGrenadeLauncherHelper_C_GenerateAmmoWheelEntries_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,18 +225,17 @@ void ABuff_TekGrenadeLauncherHelper_C::GenerateAmmoWheelEntries(TArray<struct FC
 
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.Generate Slot Wheel EntriesMU
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FMultiUseEntry>  MuEntries                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABuff_TekGrenadeLauncherHelper_C::Generate_Slot_Wheel_EntriesMU(TArray<struct FMultiUseEntry>* MuEntries)
+void ABuff_TekGrenadeLauncherHelper_C::STATIC_Generate_Slot_Wheel_EntriesMU(TArray<struct FMultiUseEntry>* MuEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.Generate Slot Wheel EntriesMU");
 
 	ABuff_TekGrenadeLauncherHelper_C_Generate_Slot_Wheel_EntriesMU_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -318,15 +315,16 @@ void ABuff_TekGrenadeLauncherHelper_C::GetValidAmmoTypes(TArray<class UClass*>* 
 
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.SyncHUDElementSlots
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Native, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ABuff_TekGrenadeLauncherHelper_C::STATIC_SyncHUDElementSlots()
+void ABuff_TekGrenadeLauncherHelper_C::SyncHUDElementSlots()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.SyncHUDElementSlots");
 
 	ABuff_TekGrenadeLauncherHelper_C_SyncHUDElementSlots_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -352,12 +350,12 @@ void ABuff_TekGrenadeLauncherHelper_C::ReceiveBeginPlay()
 
 
 // Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.BPGetHUDElements
-// (Event, Public, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_TekGrenadeLauncherHelper_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABuff_TekGrenadeLauncherHelper_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekGrenadeLauncherHelper.Buff_TekGrenadeLauncherHelper_C.BPGetHUDElements");
 

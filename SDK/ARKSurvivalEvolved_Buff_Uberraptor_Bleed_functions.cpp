@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,31 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.BPCustomAllowAddBuff
+// ()
+// Parameters:
+// class APrimalCharacter**       forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_Uberraptor_Bleed_C::BPCustomAllowAddBuff(class APrimalCharacter** forCharacter, class AActor** DamageCauser)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.BPCustomAllowAddBuff");
+
+	ABuff_Uberraptor_Bleed_C_BPCustomAllowAddBuff_Params params;
+	params.forCharacter = forCharacter;
+	params.DamageCauser = DamageCauser;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.CalculateDoTDamage
 // ()
@@ -57,7 +82,7 @@ void ABuff_Uberraptor_Bleed_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.Do Damage Over TimeFn
-// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // double                         LastDotTime                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -69,6 +94,7 @@ void ABuff_Uberraptor_Bleed_C::STATIC_Do_Damage_Over_TimeFn(double LastDotTime)
 	params.LastDotTime = LastDotTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +103,7 @@ void ABuff_Uberraptor_Bleed_C::STATIC_Do_Damage_Over_TimeFn(double LastDotTime)
 
 
 // Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.BPAdjustStatusValueModification
-// (NetReliable, NetRequest, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Net, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalCharacterStatusComponent** ForComponent                   (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -86,7 +112,7 @@ void ABuff_Uberraptor_Bleed_C::STATIC_Do_Damage_Over_TimeFn(double LastDotTime)
 // bool*                          bManualModification            (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABuff_Uberraptor_Bleed_C::BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
+float ABuff_Uberraptor_Bleed_C::STATIC_BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Uberraptor_Bleed.Buff_Uberraptor_Bleed_C.BPAdjustStatusValueModification");
 
@@ -98,6 +124,7 @@ float ABuff_Uberraptor_Bleed_C::BPAdjustStatusValueModification(class UPrimalCha
 	params.bManualModification = bManualModification;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

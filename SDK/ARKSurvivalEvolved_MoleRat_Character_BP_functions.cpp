@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.ChargeEndedAlterRotation
-// (NetRequest, Event, NetMulticast, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void AMoleRat_Character_BP_C::ChargeEndedAlterRotation()
 {
@@ -166,15 +166,15 @@ void AMoleRat_Character_BP_C::BPOnEndCharging()
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.GiveAffinity
 // ()
 // Parameters:
-// class APrimalCharacter*        Tamer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        tamer                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           wasTamed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMoleRat_Character_BP_C::GiveAffinity(class APrimalCharacter* Tamer, bool* wasTamed)
+void AMoleRat_Character_BP_C::GiveAffinity(class APrimalCharacter* tamer, bool* wasTamed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MoleRat_Character_BP.MoleRat_Character_BP_C.GiveAffinity");
 
 	AMoleRat_Character_BP_C_GiveAffinity_Params params;
-	params.Tamer = Tamer;
+	params.tamer = tamer;
 
 	auto flags = fn->FunctionFlags;
 
@@ -274,7 +274,7 @@ void AMoleRat_Character_BP_C::CanDamageActor(class AActor* Target, bool* TargetC
 
 
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.Handle Hit Pawns
-// (Event, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FHitResult>      HitTargets                     (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -287,6 +287,7 @@ void AMoleRat_Character_BP_C::Handle_Hit_Pawns(float DeltaTime, TArray<struct FH
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,12 +299,12 @@ void AMoleRat_Character_BP_C::Handle_Hit_Pawns(float DeltaTime, TArray<struct FH
 
 
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.HandleHitStatic
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FHitResult>      HitTargets                     (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMoleRat_Character_BP_C::HandleHitStatic(float DeltaTime, TArray<struct FHitResult>* HitTargets)
+void AMoleRat_Character_BP_C::STATIC_HandleHitStatic(float DeltaTime, TArray<struct FHitResult>* HitTargets)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MoleRat_Character_BP.MoleRat_Character_BP_C.HandleHitStatic");
 
@@ -311,7 +312,6 @@ void AMoleRat_Character_BP_C::HandleHitStatic(float DeltaTime, TArray<struct FHi
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -382,16 +382,16 @@ void AMoleRat_Character_BP_C::BPNotifyClearPassenger(class APrimalCharacter** Pa
 
 
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.NotifyPassengersIsCharging
-// (NetReliable, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
-// bool                           IsCharging                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           isCharging                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMoleRat_Character_BP_C::NotifyPassengersIsCharging(bool IsCharging)
+void AMoleRat_Character_BP_C::NotifyPassengersIsCharging(bool isCharging)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MoleRat_Character_BP.MoleRat_Character_BP_C.NotifyPassengersIsCharging");
 
 	AMoleRat_Character_BP_C_NotifyPassengersIsCharging_Params params;
-	params.IsCharging = IsCharging;
+	params.isCharging = isCharging;
 
 	auto flags = fn->FunctionFlags;
 
@@ -429,10 +429,10 @@ void AMoleRat_Character_BP_C::CanUseGemAttack(bool* CanUseGemAttack)
 // float                          CurrentValue                   (Parm, ZeroConstructor, IsPlainOldData)
 // float                          MinValue                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          MaxValue                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          VelocityAlpha                  (Parm, ZeroConstructor, IsPlainOldData)
+// float                          velocityAlpha                  (Parm, ZeroConstructor, IsPlainOldData)
 // float                          scaledValue                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMoleRat_Character_BP_C::GetChargeValueScaled(float CurrentValue, float MinValue, float MaxValue, float VelocityAlpha, float* scaledValue)
+void AMoleRat_Character_BP_C::GetChargeValueScaled(float CurrentValue, float MinValue, float MaxValue, float velocityAlpha, float* scaledValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MoleRat_Character_BP.MoleRat_Character_BP_C.GetChargeValueScaled");
 
@@ -440,7 +440,7 @@ void AMoleRat_Character_BP_C::GetChargeValueScaled(float CurrentValue, float Min
 	params.CurrentValue = CurrentValue;
 	params.MinValue = MinValue;
 	params.MaxValue = MaxValue;
-	params.VelocityAlpha = VelocityAlpha;
+	params.velocityAlpha = velocityAlpha;
 
 	auto flags = fn->FunctionFlags;
 
@@ -454,14 +454,14 @@ void AMoleRat_Character_BP_C::GetChargeValueScaled(float CurrentValue, float Min
 
 
 // Function MoleRat_Character_BP.MoleRat_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (Exec, NetResponse, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AMoleRat_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AMoleRat_Character_BP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MoleRat_Character_BP.MoleRat_Character_BP_C.BlueprintAnimNotifyCustomEvent");
 
@@ -472,6 +472,7 @@ void AMoleRat_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custo
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

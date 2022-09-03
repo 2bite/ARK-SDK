@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,7 +54,7 @@ struct ABuff_RemoteCameraVision_C_BPOverrideTalkerCharacter_Params
 // Function Buff_RemoteCameraVision.Buff_RemoteCameraVision_C.IsLocalCamera
 struct ABuff_RemoteCameraVision_C_IsLocalCamera_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_RemoteCameraVision.Buff_RemoteCameraVision_C.PossessionChangePending

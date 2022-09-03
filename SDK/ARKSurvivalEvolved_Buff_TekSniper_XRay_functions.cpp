@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,11 +57,11 @@ void ABuff_TekSniper_XRay_C::BPDeactivated(class AActor** ForInstigator)
 
 
 // Function Buff_TekSniper_XRay.Buff_TekSniper_XRay_C.BuffTickClient
-// (Exec, Native, Static, Public, Delegate, HasDefaults, DLLImport, BlueprintPure)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekSniper_XRay_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_TekSniper_XRay_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekSniper_XRay.Buff_TekSniper_XRay_C.BuffTickClient");
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function BP_OverseerText_EX.BP_OverseerText_EX_C.ConstructionProcess
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABP_OverseerText_EX_C::ConstructionProcess()
+void ABP_OverseerText_EX_C::STATIC_ConstructionProcess()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OverseerText_EX.BP_OverseerText_EX_C.ConstructionProcess");
 

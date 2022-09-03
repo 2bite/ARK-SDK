@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,15 +36,16 @@ bool UPrimalItemConsumable_SweetVeggieCake_C::BPCanUse(bool* bIgnoreCooldown)
 
 
 // Function PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C.BPPreUseItem
-// (NetReliable, Event, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, Public, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void UPrimalItemConsumable_SweetVeggieCake_C::STATIC_BPPreUseItem()
+void UPrimalItemConsumable_SweetVeggieCake_C::BPPreUseItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C.BPPreUseItem");
 
 	UPrimalItemConsumable_SweetVeggieCake_C_BPPreUseItem_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

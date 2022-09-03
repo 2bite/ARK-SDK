@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.BPDeactivated
-// (NetReliable, NetRequest, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void ABuff_TekArmor_ShoulderCannon_C::BPDeactivated(class AActor** ForInstigator
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.ClampFireTransform
-// (NetReliable, NetRequest, Event, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct UObject_FTransform      InTransform                    (Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct UObject_FTransform      ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -112,11 +112,11 @@ void ABuff_TekArmor_ShoulderCannon_C::UpdateSound(int ModeIndex)
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.IsAllowedToFire
-// (Native, NetResponse, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Allowed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_ShoulderCannon_C::IsAllowedToFire(bool* Allowed)
+void ABuff_TekArmor_ShoulderCannon_C::STATIC_IsAllowedToFire(bool* Allowed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.IsAllowedToFire");
 
@@ -135,7 +135,7 @@ void ABuff_TekArmor_ShoulderCannon_C::IsAllowedToFire(bool* Allowed)
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.UpdateTarget
-// (Static, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -265,7 +265,7 @@ bool ABuff_TekArmor_ShoulderCannon_C::CanAimAtTarget(class AActor* Target)
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.Update Fire Mode
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABuff_TekArmor_ShoulderCannon_C::Update_Fire_Mode()
 {
@@ -274,7 +274,6 @@ void ABuff_TekArmor_ShoulderCannon_C::Update_Fire_Mode()
 	ABuff_TekArmor_ShoulderCannon_C_Update_Fire_Mode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -377,7 +376,7 @@ bool ABuff_TekArmor_ShoulderCannon_C::IsValidTarget(class APrimalCharacter* Targ
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.TryFire Weapon
-// (NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct UObject_FTransform      AimTransform                   (Parm, IsPlainOldData)
 
@@ -445,7 +444,7 @@ bool ABuff_TekArmor_ShoulderCannon_C::BPTryMultiUse(class APlayerController** Fo
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.BPGetMultiUseEntries
-// (Native, Event, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -459,7 +458,6 @@ TArray<struct FMultiUseEntry> ABuff_TekArmor_ShoulderCannon_C::STATIC_BPGetMulti
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -497,12 +495,12 @@ void ABuff_TekArmor_ShoulderCannon_C::BPGetHUDElements(class APlayerController**
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.ApplyAccuracy
-// (NetResponse, Static, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct UObject_FTransform      InTransform                    (Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct UObject_FTransform      ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct UObject_FTransform ABuff_TekArmor_ShoulderCannon_C::STATIC_ApplyAccuracy(struct UObject_FTransform* InTransform)
+struct UObject_FTransform ABuff_TekArmor_ShoulderCannon_C::ApplyAccuracy(struct UObject_FTransform* InTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.ApplyAccuracy");
 
@@ -566,11 +564,11 @@ void ABuff_TekArmor_ShoulderCannon_C::IsElectricalStormActive(bool* Return)
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.Update Weapon Firing
-// (NetReliable, Exec, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_ShoulderCannon_C::STATIC_Update_Weapon_Firing(float DeltaSeconds)
+void ABuff_TekArmor_ShoulderCannon_C::Update_Weapon_Firing(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.Update Weapon Firing");
 
@@ -578,6 +576,7 @@ void ABuff_TekArmor_ShoulderCannon_C::STATIC_Update_Weapon_Firing(float DeltaSec
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -586,11 +585,11 @@ void ABuff_TekArmor_ShoulderCannon_C::STATIC_Update_Weapon_Firing(float DeltaSec
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_ShoulderCannon_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_TekArmor_ShoulderCannon_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.BPSetupForInstigator");
 
@@ -598,7 +597,6 @@ void ABuff_TekArmor_ShoulderCannon_C::BPSetupForInstigator(class AActor** ForIns
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -628,11 +626,11 @@ struct FVector ABuff_TekArmor_ShoulderCannon_C::GetTargetPos()
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.Update Weapon Position
-// (Exec, Event, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_ShoulderCannon_C::Update_Weapon_Position(float DeltaSeconds)
+void ABuff_TekArmor_ShoulderCannon_C::STATIC_Update_Weapon_Position(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.Update Weapon Position");
 
@@ -640,6 +638,7 @@ void ABuff_TekArmor_ShoulderCannon_C::Update_Weapon_Position(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -648,7 +647,7 @@ void ABuff_TekArmor_ShoulderCannon_C::Update_Weapon_Position(float DeltaSeconds)
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.UpdateWeaponAim
-// (NetReliable, Exec, Native, Static, NetMulticast, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -660,7 +659,6 @@ void ABuff_TekArmor_ShoulderCannon_C::STATIC_UpdateWeaponAim(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -689,11 +687,11 @@ void ABuff_TekArmor_ShoulderCannon_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.BuffTickClient
-// (Exec, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_ShoulderCannon_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_TekArmor_ShoulderCannon_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_ShoulderCannon.Buff_TekArmor_ShoulderCannon_C.BuffTickClient");
 
@@ -701,6 +699,7 @@ void ABuff_TekArmor_ShoulderCannon_C::STATIC_BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

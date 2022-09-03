@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,17 +56,17 @@ void UPrimalItemConsumable_Mutagen_C::BPServerHandleItemNetExecCommand(class ASh
 
 
 // Function PrimalItemConsumable_Mutagen.PrimalItemConsumable_Mutagen_C.find strider
-// (NetRequest, Event, Static, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, Static, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// bool                           backup                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Backup                         (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalDinoCharacter*    strider                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemConsumable_Mutagen_C::STATIC_find_strider(bool backup, class APrimalDinoCharacter** strider)
+void UPrimalItemConsumable_Mutagen_C::STATIC_find_strider(bool Backup, class APrimalDinoCharacter** strider)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_Mutagen.PrimalItemConsumable_Mutagen_C.find strider");
 
 	UPrimalItemConsumable_Mutagen_C_find_strider_Params params;
-	params.backup = backup;
+	params.Backup = Backup;
 
 	auto flags = fn->FunctionFlags;
 
@@ -123,7 +123,7 @@ int UPrimalItemConsumable_Mutagen_C::CalculateAmountNeeded()
 
 
 // Function PrimalItemConsumable_Mutagen.PrimalItemConsumable_Mutagen_C.BPGetItemDescription
-// (Net, NetRequest, Native, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -151,9 +151,9 @@ class FString UPrimalItemConsumable_Mutagen_C::BPGetItemDescription(class FStrin
 
 
 // Function PrimalItemConsumable_Mutagen.PrimalItemConsumable_Mutagen_C.BlueprintUsed
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, NetMulticast, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void UPrimalItemConsumable_Mutagen_C::BlueprintUsed()
+void UPrimalItemConsumable_Mutagen_C::STATIC_BlueprintUsed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_Mutagen.PrimalItemConsumable_Mutagen_C.BlueprintUsed");
 
@@ -169,7 +169,7 @@ void UPrimalItemConsumable_Mutagen_C::BlueprintUsed()
 
 
 // Function PrimalItemConsumable_Mutagen.PrimalItemConsumable_Mutagen_C.BPCanUse
-// (NetRequest, Exec, Native, Static, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

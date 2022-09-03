@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,10 +30,10 @@ public:
 	}
 
 
-	void STATIC_BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber);
+	void BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber);
 	void ReceiveBeginPlay();
 	bool BPAllowSeating(class AShooterPlayerController** ForPC);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void ExecuteUbergraph_TekBed_Strider(int EntryPoint);
 };

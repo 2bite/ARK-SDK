@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_166
+// Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_184
 // ()
 
-void UTPV_MinigunTurret_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_166()
+void UTPV_MinigunTurret_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_184()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_166");
+	static auto fn = UObject::FindObject<UFunction>("Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_184");
 
-	UTPV_MinigunTurret_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_166_Params params;
+	UTPV_MinigunTurret_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_184_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void UTPV_MinigunTurret_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TP
 }
 
 
-// Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_3939
+// Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_4011
 // ()
 
-void UTPV_MinigunTurret_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_3939()
+void UTPV_MinigunTurret_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_4011()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_3939");
+	static auto fn = UObject::FindObject<UFunction>("Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_4011");
 
-	UTPV_MinigunTurret_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_3939_Params params;
+	UTPV_MinigunTurret_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_4011_Params params;
 
 	auto flags = fn->FunctionFlags;
 

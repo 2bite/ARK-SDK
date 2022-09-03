@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitter_Foliage_FlashBang.Buff_ChargeEmitter_Foliage_FlashBang_C
-// 0x0000 (0x0B80 - 0x0B80)
+// 0x0000 (0x0B98 - 0x0B98)
 class ABuff_ChargeEmitter_Foliage_FlashBang_C : public ABuff_ChargeEmitter_Foliage_C
 {
 public:

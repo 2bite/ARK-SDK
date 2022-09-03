@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -129,9 +129,9 @@ struct AZipline_Anchor_C_IsZiplineBlocked_Params
 	class APrimalCharacter*                            primalChar;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              StartEndOffset;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              AttachOffset;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     overrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              overrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     OverrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     OverrideStartLocation;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              OverrideFindLocationDistance;                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     overrideFindLocationDirection;                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               DontUseLineOfSightCheck;                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  HitResult;                                                // (Parm, OutParm)
 	bool                                               HitReturn;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

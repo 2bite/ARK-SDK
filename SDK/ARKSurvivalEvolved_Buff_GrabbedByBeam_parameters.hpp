@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,7 +37,7 @@ struct ABuff_GrabbedByBeam_C_GetOwnerDragWeight_Params
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.GetMaxProgress
 struct ABuff_GrabbedByBeam_C_GetMaxProgress_Params
 {
-	float                                              maxProgress;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxProgress;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_GrabbedByBeam.Buff_GrabbedByBeam_C.Calculate Progress

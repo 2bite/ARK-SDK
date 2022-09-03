@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,15 +15,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalBuff_SummonerDinoCountDown.PrimalBuff_SummonerDinoCountDown_C
-// 0x001C (0x0A38 - 0x0A1C)
+// 0x001C (0x0A50 - 0x0A34)
 class APrimalBuff_SummonerDinoCountDown_C : public APrimalBuff_ChangeMaterialScalarParamOverTime_C
 {
 public:
-	float                                              ImmobilizeTime;                                           // 0x0A1C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USkeletalMeshComponent*                      SummonedSkelMeshComp;                                     // 0x0A20(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bUseSummonedSkelMesh;                                     // 0x0A28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0A29(0x0007) MISSED OFFSET
-	class APrimalCharacter*                            K2Node_CustomEvent_character;                             // 0x0A30(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              ImmobilizeTime;                                           // 0x0A34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USkeletalMeshComponent*                      SummonedSkelMeshComp;                                     // 0x0A38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bUseSummonedSkelMesh;                                     // 0x0A40(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0A41(0x0007) MISSED OFFSET
+	class APrimalCharacter*                            K2Node_CustomEvent_Character;                             // 0x0A48(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

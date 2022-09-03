@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,31 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Look Out for Timeout
+struct ABuff_StriderHackingParent_C_Look_Out_for_Timeout_Params
+{
+};
+
+// Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Fallback
+struct ABuff_StriderHackingParent_C_Fallback_Params
+{
+};
+
+// Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Update Buff Timer server logic
+struct ABuff_StriderHackingParent_C_Update_Buff_Timer_server_logic_Params
+{
+	bool                                               Success;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               from_player_trigger;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Play Weapon Montage server logic
+struct ABuff_StriderHackingParent_C_Play_Weapon_Montage_server_logic_Params
+{
+	bool                                               Success;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               isnt_from_player_input;                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Started;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_StriderHackingParent.Buff_StriderHackingParent_C.Recieved Input
 struct ABuff_StriderHackingParent_C_Recieved_Input_Params

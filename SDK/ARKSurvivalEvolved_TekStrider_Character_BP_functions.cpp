@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,9 +19,9 @@ namespace sdk
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue)
+void ATekStrider_Character_BP_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.Get Charge Variable Interface");
 
@@ -40,8 +40,8 @@ void ATekStrider_Character_BP_C::Get_Charge_Variable_Interface(TEnumAsByte<E_Cha
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (ivalue != nullptr)
-		*ivalue = params.ivalue;
+	if (iValue != nullptr)
+		*iValue = params.iValue;
 }
 
 
@@ -64,6 +64,31 @@ void ATekStrider_Character_BP_C::GetNumBatteries(int* numBatteries)
 
 	if (numBatteries != nullptr)
 		*numBatteries = params.numBatteries;
+}
+
+
+// Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPOnDinoCheat
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// Parameters:
+// struct FName*                  CheatName                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bSetValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ATekStrider_Character_BP_C::STATIC_BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPOnDinoCheat");
+
+	ATekStrider_Character_BP_C_BPOnDinoCheat_Params params;
+	params.CheatName = CheatName;
+	params.bSetValue = bSetValue;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -150,7 +175,7 @@ void ATekStrider_Character_BP_C::Get_Number_Of_Missions_Required_To_Tame_This_St
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.release right click
-// (NetReliable, Native, Event, NetResponse, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Event, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
 void ATekStrider_Character_BP_C::release_right_click()
 {
@@ -159,7 +184,6 @@ void ATekStrider_Character_BP_C::release_right_click()
 	ATekStrider_Character_BP_C_release_right_click_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,16 +209,15 @@ void ATekStrider_Character_BP_C::Timeout_Check_for_Still_Holding_Right_Click()
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.update shield item durability based on health
-// (NetRequest, Native, Static, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (Exec, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void ATekStrider_Character_BP_C::STATIC_update_shield_item_durability_based_on_health()
+void ATekStrider_Character_BP_C::update_shield_item_durability_based_on_health()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.update shield item durability based on health");
 
 	ATekStrider_Character_BP_C_update_shield_item_durability_based_on_health_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,7 +277,7 @@ void ATekStrider_Character_BP_C::ResetLinkedDediStorageRepVars()
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.MakeDediStorageTitleString
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (Net, NetReliable, Event, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  BoxName                        (Parm, ZeroConstructor)
 // class UClass*                  ItemType                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -263,7 +286,7 @@ void ATekStrider_Character_BP_C::ResetLinkedDediStorageRepVars()
 // float                          DistanceToBox                  (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ATekStrider_Character_BP_C::STATIC_MakeDediStorageTitleString(const class FString& BoxName, class UClass* ItemType, class AShooterPlayerController* ForShooterPC, int ItemCount, float DistanceToBox)
+class FString ATekStrider_Character_BP_C::MakeDediStorageTitleString(const class FString& BoxName, class UClass* ItemType, class AShooterPlayerController* ForShooterPC, int ItemCount, float DistanceToBox)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.MakeDediStorageTitleString");
 
@@ -275,7 +298,6 @@ class FString ATekStrider_Character_BP_C::STATIC_MakeDediStorageTitleString(cons
 	params.DistanceToBox = DistanceToBox;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -371,18 +393,20 @@ void ATekStrider_Character_BP_C::Force_Destroy_Strider()
 // ()
 // Parameters:
 // float                          Taming_speed_multiplier        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           for_detecting_affinity         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // bool                           in_grace_period                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          time_until_grace_period_ends   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          time_until_no_more_affinity    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          affinity_gained_before_taming_mult (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-float ATekStrider_Character_BP_C::affinity_per_hack_calculation(float Taming_speed_multiplier, bool* in_grace_period, float* time_until_grace_period_ends, float* time_until_no_more_affinity, float* affinity_gained_before_taming_mult)
+float ATekStrider_Character_BP_C::affinity_per_hack_calculation(float Taming_speed_multiplier, bool for_detecting_affinity, bool* in_grace_period, float* time_until_grace_period_ends, float* time_until_no_more_affinity, float* affinity_gained_before_taming_mult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.affinity per hack calculation");
 
 	ATekStrider_Character_BP_C_affinity_per_hack_calculation_Params params;
 	params.Taming_speed_multiplier = Taming_speed_multiplier;
+	params.for_detecting_affinity = for_detecting_affinity;
 
 	auto flags = fn->FunctionFlags;
 
@@ -764,13 +788,13 @@ void ATekStrider_Character_BP_C::TryDoDediStorageHarvestTransferMultiUse(class A
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.ClientDoDediStorageHarvestTransferMultiUse
-// (NetReliable, Native, Event, Static, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::STATIC_ClientDoDediStorageHarvestTransferMultiUse(class APlayerController* ForPC, int ClientUseIndex, bool* bSuccess)
+void ATekStrider_Character_BP_C::ClientDoDediStorageHarvestTransferMultiUse(class APlayerController* ForPC, int ClientUseIndex, bool* bSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.ClientDoDediStorageHarvestTransferMultiUse");
 
@@ -791,7 +815,7 @@ void ATekStrider_Character_BP_C::STATIC_ClientDoDediStorageHarvestTransferMultiU
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.GetDediStorageHarvestTransferMultiUseEntries
-// (NetReliable, Native, NetResponse, Static, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // TArray<struct FMultiUseEntry>  AppendToEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AShooterPlayerController* ForShooterPC                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -804,7 +828,6 @@ void ATekStrider_Character_BP_C::STATIC_GetDediStorageHarvestTransferMultiUseEnt
 	params.ForShooterPC = ForShooterPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -944,7 +967,7 @@ void ATekStrider_Character_BP_C::SetLinkedDediStorage(class ABP_DedicatedStorage
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Change Filter to Only Dinos
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
 void ATekStrider_Character_BP_C::Change_Filter_to_Only_Dinos()
 {
@@ -962,7 +985,7 @@ void ATekStrider_Character_BP_C::Change_Filter_to_Only_Dinos()
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Change Filter to Only Humans
-// (NetReliable, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
 void ATekStrider_Character_BP_C::Change_Filter_to_Only_Humans()
 {
@@ -971,6 +994,7 @@ void ATekStrider_Character_BP_C::Change_Filter_to_Only_Humans()
 	ATekStrider_Character_BP_C_Change_Filter_to_Only_Humans_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -979,7 +1003,7 @@ void ATekStrider_Character_BP_C::Change_Filter_to_Only_Humans()
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Change Filter to Both Dinos And Humans
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
 void ATekStrider_Character_BP_C::Change_Filter_to_Both_Dinos_And_Humans()
 {
@@ -1064,7 +1088,7 @@ void ATekStrider_Character_BP_C::determine_and_request_appropriate_melee_attack(
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.BlueprintGetAttackWeight
-// (Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (Exec, Native, Event, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         inputWeight                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -1096,20 +1120,20 @@ float ATekStrider_Character_BP_C::STATIC_BlueprintGetAttackWeight(int* AttackInd
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.combined can attack
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
-// int                            Attack_Index                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DIst                           (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Attack_index                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Dist                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          attack_range_offset            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           can_attack                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::STATIC_combined_can_attack(int Attack_Index, float DIst, float attack_range_offset, bool* can_attack)
+void ATekStrider_Character_BP_C::STATIC_combined_can_attack(int Attack_index, float Dist, float attack_range_offset, bool* can_attack)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.combined can attack");
 
 	ATekStrider_Character_BP_C_combined_can_attack_Params params;
-	params.Attack_Index = Attack_Index;
-	params.DIst = DIst;
+	params.Attack_index = Attack_index;
+	params.Dist = Dist;
 	params.attack_range_offset = attack_range_offset;
 
 	auto flags = fn->FunctionFlags;
@@ -1176,16 +1200,16 @@ bool ATekStrider_Character_BP_C::BlueprintCanAttack(int* AttackIndex, float* Dis
 }
 
 
-// Function TekStrider_Character_BP.TekStrider_Character_BP_C.Print String Manual
+// Function TekStrider_Character_BP.TekStrider_Character_BP_C.print string manual
 // ()
 // Parameters:
 // class FString                  String                         (Parm, ZeroConstructor)
 
-void ATekStrider_Character_BP_C::Print_String_Manual(const class FString& String)
+void ATekStrider_Character_BP_C::print_string_manual(const class FString& String)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.Print String Manual");
+	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.print string manual");
 
-	ATekStrider_Character_BP_C_Print_String_Manual_Params params;
+	ATekStrider_Character_BP_C_print_string_manual_Params params;
 	params.String = String;
 
 	auto flags = fn->FunctionFlags;
@@ -1565,9 +1589,9 @@ void ATekStrider_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Cu
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.tick events
-// (NetRequest, Native, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void ATekStrider_Character_BP_C::tick_events()
+void ATekStrider_Character_BP_C::STATIC_tick_events()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.tick events");
 
@@ -1813,17 +1837,17 @@ void ATekStrider_Character_BP_C::Has_Mutagel_Ready()
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Has Required Mutagel
 // ()
 // Parameters:
-// class UObject*                 Player_Controller              (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 player_controller              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // int                            Mutagel_Player_Has             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Mutagel_Required               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-bool ATekStrider_Character_BP_C::Has_Required_Mutagel(class UObject* Player_Controller, int* Mutagel_Player_Has, int* Mutagel_Required)
+bool ATekStrider_Character_BP_C::Has_Required_Mutagel(class UObject* player_controller, int* Mutagel_Player_Has, int* Mutagel_Required)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.Has Required Mutagel");
 
 	ATekStrider_Character_BP_C_Has_Required_Mutagel_Params params;
-	params.Player_Controller = Player_Controller;
+	params.player_controller = player_controller;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1969,7 +1993,7 @@ float ATekStrider_Character_BP_C::BP_GetCustomModifier_RotationRate()
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Is Looking At Specific Hack Interaction Point
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class AShooterCharacter*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Is_Looking_at                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2122,9 +2146,9 @@ void ATekStrider_Character_BP_C::on_hacking_hit_success()
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.on hacking hit fail
-// (NetReliable, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void ATekStrider_Character_BP_C::STATIC_on_hacking_hit_fail()
+void ATekStrider_Character_BP_C::on_hacking_hit_fail()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.on hacking hit fail");
 
@@ -2182,16 +2206,16 @@ void ATekStrider_Character_BP_C::hacking_success()
 }
 
 
-// Function TekStrider_Character_BP.TekStrider_Character_BP_C.sync mission complete status
+// Function TekStrider_Character_BP.TekStrider_Character_BP_C.Sync Mission Complete Status
 // ()
 // Parameters:
 // class AShooterCharacter*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::sync_mission_complete_status(class AShooterCharacter* Player)
+void ATekStrider_Character_BP_C::Sync_Mission_Complete_Status(class AShooterCharacter* Player)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.sync mission complete status");
+	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.Sync Mission Complete Status");
 
-	ATekStrider_Character_BP_C_sync_mission_complete_status_Params params;
+	ATekStrider_Character_BP_C_Sync_Mission_Complete_Status_Params params;
 	params.Player = Player;
 
 	auto flags = fn->FunctionFlags;
@@ -2351,7 +2375,7 @@ int ATekStrider_Character_BP_C::BPOverrideGetAttackAnimationIndex(int* AttackInd
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Spawn Tek Transmitter
-// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, NetValidate)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FVector                 NewParam                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                NewParam1                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -2373,12 +2397,12 @@ void ATekStrider_Character_BP_C::Spawn_Tek_Transmitter(const struct FVector& New
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPClientDoMultiUse
-// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void ATekStrider_Character_BP_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPClientDoMultiUse");
 
@@ -2387,7 +2411,6 @@ void ATekStrider_Character_BP_C::STATIC_BPClientDoMultiUse(class APlayerControll
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2421,7 +2444,7 @@ bool ATekStrider_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -2449,7 +2472,7 @@ TArray<struct FMultiUseEntry> ATekStrider_Character_BP_C::BPGetMultiUseEntries(c
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.Spawn Bed
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, NetValidate)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FVector                 NewParam                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                NewParam1                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -2472,7 +2495,7 @@ void ATekStrider_Character_BP_C::Spawn_Bed(const struct FVector& NewParam, const
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPServerHandleNetExecCommand
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -2488,6 +2511,7 @@ bool ATekStrider_Character_BP_C::STATIC_BPServerHandleNetExecCommand(class APlay
 	params.CommandName = CommandName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2501,7 +2525,7 @@ bool ATekStrider_Character_BP_C::STATIC_BPServerHandleNetExecCommand(class APlay
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.InterceptInputEvent
-// (NetReliable, NetRequest, Exec, Native, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class FString*                 InputName                      (Parm, ZeroConstructor)
 
@@ -2641,7 +2665,7 @@ bool ATekStrider_Character_BP_C::BP_InterceptMoveRight(float* AxisValue)
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPGetHUDElements
-// (NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -2654,6 +2678,7 @@ void ATekStrider_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2759,7 +2784,7 @@ void ATekStrider_Character_BP_C::Update_Max_Charge()
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPNotifyLevelUp
-// (NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int*                           ExtraCharacterLevel            (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3056,7 +3081,7 @@ float ATekStrider_Character_BP_C::BPGetCrosshairAlpha()
 
 
 // Function TekStrider_Character_BP.TekStrider_Character_BP_C.BPDoAttack
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3068,7 +3093,6 @@ void ATekStrider_Character_BP_C::BPDoAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3331,15 +3355,15 @@ void ATekStrider_Character_BP_C::ChargeVariableEventDoubleInterface(TEnumAsByte<
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void ATekStrider_Character_BP_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.ChargeVariableEventIntInterface");
 
 	ATekStrider_Character_BP_C_ChargeVariableEventIntInterface_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3353,15 +3377,15 @@ void ATekStrider_Character_BP_C::ChargeVariableEventIntInterface(TEnumAsByte<E_C
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void ATekStrider_Character_BP_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.ChargeVariableEventIntMulticastInterface");
 
 	ATekStrider_Character_BP_C_ChargeVariableEventIntMulticastInterface_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3612,9 +3636,9 @@ void ATekStrider_Character_BP_C::DestroyChargeBuff_Multicast()
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue)
+void ATekStrider_Character_BP_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.Charge Variable Event Interface");
 
@@ -3623,7 +3647,7 @@ void ATekStrider_Character_BP_C::Charge_Variable_Event_Interface(TEnumAsByte<E_C
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3688,9 +3712,9 @@ void ATekStrider_Character_BP_C::Interface_Check_for_Batteries_and_Update_Multic
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           triggerEvent                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           multicastEvent                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekStrider_Character_BP_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue)
+void ATekStrider_Character_BP_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekStrider_Character_BP.TekStrider_Character_BP_C.Set Charge Variable Interface");
 
@@ -3702,7 +3726,7 @@ void ATekStrider_Character_BP_C::Set_Charge_Variable_Interface(TEnumAsByte<E_Cha
 	params.bBValue = bBValue;
 	params.triggerEvent = triggerEvent;
 	params.multicastEvent = multicastEvent;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 

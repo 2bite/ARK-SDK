@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.Sruggle
-// (Exec, Event, NetResponse, Public, HasDefaults, DLLImport, NetValidate)
+// (Net, NetRequest, Event, Static, MulticastDelegate, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent)
 
-void ABuff_CarriedTarget_C::Sruggle()
+void ABuff_CarriedTarget_C::STATIC_Sruggle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CarriedTarget.Buff_CarriedTarget_C.Sruggle");
 
@@ -67,17 +67,18 @@ void ABuff_CarriedTarget_C::SetIsHostileBuff(bool NewSetting)
 
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.GetBuffDescription
-// (NetRequest, NetResponse, MulticastDelegate, NetClient, DLLImport, NetValidate)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_CarriedTarget_C::GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_CarriedTarget_C::STATIC_GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_CarriedTarget.Buff_CarriedTarget_C.GetBuffDescription");
 
 	ABuff_CarriedTarget_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -148,7 +149,7 @@ void ABuff_CarriedTarget_C::BPActivated(class AActor** ForInstigator)
 
 
 // Function Buff_CarriedTarget.Buff_CarriedTarget_C.BPGetHUDElements
-// (NetReliable, NetRequest, Static, MulticastDelegate, NetClient, DLLImport, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -161,6 +162,7 @@ void ABuff_CarriedTarget_C::STATIC_BPGetHUDElements(class APlayerController** Fo
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

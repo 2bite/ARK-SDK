@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 	int                                                Temp_int_Loop_Counter_Variable;                           // 0x0B94(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x0B98(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x0B9C(0x0004) MISSED OFFSET
-	struct UObject_FTransform                          K2Node_CustomEvent_transform;                             // 0x0BA0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
+	struct UObject_FTransform                          K2Node_CustomEvent_Transform;                             // 0x0BA0(0x0030) (Transient, DuplicateTransient, IsPlainOldData)
 	int                                                K2Node_CustomEvent_AnimIndex;                             // 0x0BD0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_IntInt_ReturnValue;                   // 0x0BD4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x0BD5(0x0003) MISSED OFFSET
@@ -88,9 +88,9 @@ public:
 
 
 	void RefreshIdleAudio();
-	void STATIC_BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser);
+	void BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser);
 	void ClearLastHitRot();
-	void STATIC_FillHarvestHealth();
+	void FillHarvestHealth();
 	void OnRep_HarvestHealth();
 	void PlayHarvestVFX(const struct UObject_FTransform& Transform);
 	void SetPlantEmissivePercent(float NewEmissiveVal);
@@ -98,7 +98,7 @@ public:
 	void SetHarvestClassColor();
 	void BPUpdatedHealth(bool* bDoReplication);
 	void FindOrCreateDynamicMaterials(TArray<class UMaterialInstanceDynamic*>* DynamicMaterials);
-	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
+	float STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	void UserConstructionScript();
 	void Timeline_UpdateMatZHeight__FinishedFunc();

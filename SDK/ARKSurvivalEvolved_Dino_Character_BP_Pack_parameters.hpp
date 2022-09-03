@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.PackMemberDied
+struct ADino_Character_BP_Pack_C_PackMemberDied_Params
+{
+	class ADino_Character_BP_Pack_C*                   DeadDino;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.BP_OnSetDeath
+struct ADino_Character_BP_Pack_C_BP_OnSetDeath_Params
+{
+};
 
 // Function Dino_Character_BP_Pack.Dino_Character_BP_Pack_C.Get RadiusToJoinPack
 struct ADino_Character_BP_Pack_C_Get_RadiusToJoinPack_Params

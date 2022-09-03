@@ -1,15 +1,15 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "ARKSurvivalEvolved_Basic.hpp"
-#include "ARKSurvivalEvolved_E_StegoBackplateMode_classes.hpp"
 #include "ARKSurvivalEvolved_Buff_Base_classes.hpp"
 #include "ARKSurvivalEvolved_ShooterGame_classes.hpp"
+#include "ARKSurvivalEvolved_E_StegoBackplateMode_classes.hpp"
 
 namespace sdk
 {

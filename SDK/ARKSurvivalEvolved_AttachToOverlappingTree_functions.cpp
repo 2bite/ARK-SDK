@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function AttachToOverlappingTree.AttachToOverlappingTree_C.ReceiveExecute
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetReliable, Static, MulticastDelegate, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 

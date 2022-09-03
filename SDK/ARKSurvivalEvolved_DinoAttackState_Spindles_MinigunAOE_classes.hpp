@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -91,10 +91,10 @@ public:
 
 
 	void IsDebugMode(bool* Ret);
-	bool STATIC_BPShouldEndAttack();
+	bool BPShouldEndAttack();
 	void GetDamageForSpine(class APrimalCharacter** Target, float* Damage);
 	void FireGuaranteedHitSpine();
-	bool BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
+	bool STATIC_BPCanAttack(float* Distance, float* attackRangeOffset, class AActor** OtherTarget);
 	void OnEndEvent();
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	void STATIC_Get_Spine_Start_and_End_Position(struct FVector* Start, struct FVector* End, struct FVector* VFXStart, struct FVector* VFXEnd);

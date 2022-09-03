@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,15 +61,15 @@ void AWeapHarpoon_Net_C::Remote_Set_Crosshair_Color(const struct FLinearColor& I
 
 
 // Function WeapHarpoon_Net.WeapHarpoon_Net_C.GetHudData
-// (Exec, NetResponse, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UClass*                  ProjectileClass                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 SocketLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 FireDirection                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          AimedTargetCheckRadius         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           IsFPV                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           isFPV                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AWeapHarpoon_Net_C::GetHudData(class UClass** ProjectileClass, struct FVector* SocketLocation, struct FVector* FireDirection, float* AimedTargetCheckRadius, bool* IsFPV)
+void AWeapHarpoon_Net_C::STATIC_GetHudData(class UClass** ProjectileClass, struct FVector* SocketLocation, struct FVector* FireDirection, float* AimedTargetCheckRadius, bool* isFPV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapHarpoon_Net.WeapHarpoon_Net_C.GetHudData");
 
@@ -89,8 +89,8 @@ void AWeapHarpoon_Net_C::GetHudData(class UClass** ProjectileClass, struct FVect
 		*FireDirection = params.FireDirection;
 	if (AimedTargetCheckRadius != nullptr)
 		*AimedTargetCheckRadius = params.AimedTargetCheckRadius;
-	if (IsFPV != nullptr)
-		*IsFPV = params.IsFPV;
+	if (isFPV != nullptr)
+		*isFPV = params.isFPV;
 }
 
 

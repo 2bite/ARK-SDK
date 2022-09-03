@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,8 +12,25 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Buff_BrainSlugPostProccess.Buff_BrainSlugPostProccess_C.BPInstigatorReceivedKillingDamage
+// ()
+
+void ABuff_BrainSlugPostProccess_C::BPInstigatorReceivedKillingDamage()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_BrainSlugPostProccess.Buff_BrainSlugPostProccess_C.BPInstigatorReceivedKillingDamage");
+
+	ABuff_BrainSlugPostProccess_C_BPInstigatorReceivedKillingDamage_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Buff_BrainSlugPostProccess.Buff_BrainSlugPostProccess_C.InterceptInstigatorPlayerEmoteAnim
-// (NetRequest, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, NetClient, BlueprintEvent)
 // Parameters:
 // class UAnimMontage**           EmoteAnim                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

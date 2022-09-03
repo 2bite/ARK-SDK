@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -81,12 +81,12 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2598();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2597();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2596();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2595();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2594();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2593();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2388();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2387();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2386();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2385();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2384();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_TransitionResult_2383();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base_AnimGraphNode_LayeredBoneBlend_130();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_FPVPlacerWeaponAnimBP_Base(int EntryPoint);

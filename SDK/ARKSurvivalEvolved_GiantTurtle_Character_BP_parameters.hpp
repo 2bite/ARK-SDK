@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,8 +90,8 @@ struct AGiantTurtle_Character_BP_C_ReceiveDestroyed_Params
 {
 };
 
-// Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.DestroyHUDWidget
-struct AGiantTurtle_Character_BP_C_DestroyHUDWidget_Params
+// Function GiantTurtle_Character_BP.GiantTurtle_Character_BP_C.DestroyHudWidget
+struct AGiantTurtle_Character_BP_C_DestroyHudWidget_Params
 {
 	bool                                               DestroyNow;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };

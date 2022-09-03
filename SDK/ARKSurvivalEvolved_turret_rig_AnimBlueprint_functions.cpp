@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_618
+// Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_636
 // ()
 
-void Uturret_rig_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_618()
+void Uturret_rig_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_636()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_618");
+	static auto fn = UObject::FindObject<UFunction>("Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_636");
 
-	Uturret_rig_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_618_Params params;
+	Uturret_rig_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_636_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void Uturret_rig_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_tu
 }
 
 
-// Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_617
+// Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_635
 // ()
 
-void Uturret_rig_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_617()
+void Uturret_rig_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_635()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_617");
+	static auto fn = UObject::FindObject<UFunction>("Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_635");
 
-	Uturret_rig_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_617_Params params;
+	Uturret_rig_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_635_Params params;
 
 	auto flags = fn->FunctionFlags;
 

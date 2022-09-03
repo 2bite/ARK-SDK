@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BPUnsetupDinoTameable
+struct ATekWyvern_Character_BP_C_BPUnsetupDinoTameable_Params
+{
+};
 
 // Function TekWyvern_Character_BP.TekWyvern_Character_BP_C.BPGetRiderSocket
 struct ATekWyvern_Character_BP_C_BPGetRiderSocket_Params

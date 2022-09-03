@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2002
+// Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1862
 // ()
 
-void Ucrossbow_TPV_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2002()
+void Ucrossbow_TPV_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1862()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2002");
+	static auto fn = UObject::FindObject<UFunction>("Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1862");
 
-	Ucrossbow_TPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2002_Params params;
+	Ucrossbow_TPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1862_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void Ucrossbow_TPV_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_
 }
 
 
-// Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2001
+// Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1861
 // ()
 
-void Ucrossbow_TPV_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2001()
+void Ucrossbow_TPV_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1861()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2001");
+	static auto fn = UObject::FindObject<UFunction>("Function crossbow_TPV_AnimBlueprint.crossbow_TPV_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1861");
 
-	Ucrossbow_TPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_2001_Params params;
+	Ucrossbow_TPV_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_crossbow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1861_Params params;
 
 	auto flags = fn->FunctionFlags;
 

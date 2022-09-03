@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function WeapSword_Tek.WeapSword_Tek_C.OnRep_HideWeapon
+// ()
+
+void AWeapSword_Tek_C::OnRep_HideWeapon()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapSword_Tek.WeapSword_Tek_C.OnRep_HideWeapon");
+
+	AWeapSword_Tek_C_OnRep_HideWeapon_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function WeapSword_Tek.WeapSword_Tek_C.AppliedDamageToTarget
 // ()

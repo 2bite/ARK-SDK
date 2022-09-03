@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,15 +67,16 @@ void ABuff_TekStrider_Radar_C::Interval_Share_Server_Target_to_Rider()
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Trigger Held
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, NetValidate)
+// (Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ABuff_TekStrider_Radar_C::Trigger_Held()
+void ABuff_TekStrider_Radar_C::STATIC_Trigger_Held()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Trigger Held");
 
 	ABuff_TekStrider_Radar_C_Trigger_Held_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,14 +252,14 @@ void ABuff_TekStrider_Radar_C::clear_rider(class AShooterCharacter** prev_rider)
 }
 
 
-// Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Highlight latest shared target
+// Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Highlight Latest Shared Target
 // ()
 
-void ABuff_TekStrider_Radar_C::Highlight_latest_shared_target()
+void ABuff_TekStrider_Radar_C::Highlight_Latest_Shared_Target()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Highlight latest shared target");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Highlight Latest Shared Target");
 
-	ABuff_TekStrider_Radar_C_Highlight_latest_shared_target_Params params;
+	ABuff_TekStrider_Radar_C_Highlight_Latest_Shared_Target_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -303,7 +304,7 @@ void ABuff_TekStrider_Radar_C::Restrict_Sharing_Target_Info()
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Update Shared Target Location
-// (NetRequest, Exec, Native, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ABuff_TekStrider_Radar_C::Update_Shared_Target_Location()
 {
@@ -312,7 +313,6 @@ void ABuff_TekStrider_Radar_C::Update_Shared_Target_Location()
 	ABuff_TekStrider_Radar_C_Update_Shared_Target_Location_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -452,16 +452,15 @@ void ABuff_TekStrider_Radar_C::SetActorStencilValue(class AActor* Actor, int Val
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Lowered Rate Of Updating Screenspace Loc Of Radar Hud Elems
-// (Exec, Native, Event, NetResponse, Static, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ABuff_TekStrider_Radar_C::STATIC_Lowered_Rate_Of_Updating_Screenspace_Loc_Of_Radar_Hud_Elems()
+void ABuff_TekStrider_Radar_C::Lowered_Rate_Of_Updating_Screenspace_Loc_Of_Radar_Hud_Elems()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Lowered Rate Of Updating Screenspace Loc Of Radar Hud Elems");
 
 	ABuff_TekStrider_Radar_C_Lowered_Rate_Of_Updating_Screenspace_Loc_Of_Radar_Hud_Elems_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -470,9 +469,9 @@ void ABuff_TekStrider_Radar_C::STATIC_Lowered_Rate_Of_Updating_Screenspace_Loc_O
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.update radar
-// (Net, Native, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void ABuff_TekStrider_Radar_C::update_radar()
+void ABuff_TekStrider_Radar_C::STATIC_update_radar()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.update radar");
 
@@ -487,17 +486,17 @@ void ABuff_TekStrider_Radar_C::update_radar()
 }
 
 
-// Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Can Fire
+// Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.can fire
 // ()
 // Parameters:
 // bool                           from_animbp                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Radar_C::Can_Fire(bool from_animbp, bool* Result)
+void ABuff_TekStrider_Radar_C::can_fire(bool from_animbp, bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Can Fire");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.can fire");
 
-	ABuff_TekStrider_Radar_C_Can_Fire_Params params;
+	ABuff_TekStrider_Radar_C_can_fire_Params params;
 	params.from_animbp = from_animbp;
 
 	auto flags = fn->FunctionFlags;
@@ -512,11 +511,11 @@ void ABuff_TekStrider_Radar_C::Can_Fire(bool from_animbp, bool* Result)
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.BuffTickClient
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Radar_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_TekStrider_Radar_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.BuffTickClient");
 
@@ -524,7 +523,6 @@ void ABuff_TekStrider_Radar_C::STATIC_BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -687,7 +685,7 @@ void ABuff_TekStrider_Radar_C::Get_Nearby_Enemies(TArray<struct FVector>* Locati
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Notify Player About Alert
-// (Net, NetReliable, Native, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -708,7 +706,7 @@ void ABuff_TekStrider_Radar_C::STATIC_Notify_Player_About_Alert(class AShooterCh
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.BPGetHUDElements
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -721,6 +719,7 @@ void ABuff_TekStrider_Radar_C::STATIC_BPGetHUDElements(class APlayerController**
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -732,13 +731,13 @@ void ABuff_TekStrider_Radar_C::STATIC_BPGetHUDElements(class APlayerController**
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Is Dino in Cone?
-// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Dino                           (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHitResult>      Hits                           (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           isInCone                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsInCone                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Radar_C::STATIC_Is_Dino_in_Cone_(class APrimalCharacter* Dino, TArray<struct FHitResult>* Hits, bool* isInCone)
+void ABuff_TekStrider_Radar_C::STATIC_Is_Dino_in_Cone_(class APrimalCharacter* Dino, TArray<struct FHitResult>* Hits, bool* IsInCone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Is Dino in Cone?");
 
@@ -746,7 +745,6 @@ void ABuff_TekStrider_Radar_C::STATIC_Is_Dino_in_Cone_(class APrimalCharacter* D
 	params.Dino = Dino;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -754,8 +752,8 @@ void ABuff_TekStrider_Radar_C::STATIC_Is_Dino_in_Cone_(class APrimalCharacter* D
 
 	if (Hits != nullptr)
 		*Hits = params.Hits;
-	if (isInCone != nullptr)
-		*isInCone = params.isInCone;
+	if (IsInCone != nullptr)
+		*IsInCone = params.IsInCone;
 }
 
 
@@ -838,11 +836,11 @@ void ABuff_TekStrider_Radar_C::Trigger()
 
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.BPSetupForInstigator
-// (Exec, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Radar_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_TekStrider_Radar_C::BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.BPSetupForInstigator");
 
@@ -850,6 +848,7 @@ void ABuff_TekStrider_Radar_C::STATIC_BPSetupForInstigator(class AActor** ForIns
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

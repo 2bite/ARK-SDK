@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -114,7 +114,7 @@ void ABuff_InsideMekShield_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_InsideMekShield.Buff_InsideMekShield_C.GetBuffDescription
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 

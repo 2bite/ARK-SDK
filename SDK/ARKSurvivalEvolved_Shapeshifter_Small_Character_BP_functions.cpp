@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPOverrideMutationLabels
-// (Net, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool*                          male                           (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString AShapeshifter_Small_Character_BP_C::STATIC_BPOverrideMutationLabels(bool* male)
+class FString AShapeshifter_Small_Character_BP_C::BPOverrideMutationLabels(bool* male)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPOverrideMutationLabels");
 
@@ -56,16 +56,15 @@ void AShapeshifter_Small_Character_BP_C::BPNotifyLevelUp(int* ExtraCharacterLeve
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.GetBiglyStats
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Static, MulticastDelegate, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AShapeshifter_Small_Character_BP_C::GetBiglyStats()
+void AShapeshifter_Small_Character_BP_C::STATIC_GetBiglyStats()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.GetBiglyStats");
 
 	AShapeshifter_Small_Character_BP_C_GetBiglyStats_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +73,7 @@ void AShapeshifter_Small_Character_BP_C::GetBiglyStats()
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPGetStatusNameString
-// (Native, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Static, MulticastDelegate, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -118,7 +117,7 @@ void AShapeshifter_Small_Character_BP_C::UpdateBiglyStatsCache(class APrimalChar
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPBecameNewBaby
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter**   Parent                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -130,6 +129,7 @@ void AShapeshifter_Small_Character_BP_C::STATIC_BPBecameNewBaby(class APrimalDin
 	params.Parent = Parent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +138,7 @@ void AShapeshifter_Small_Character_BP_C::STATIC_BPBecameNewBaby(class APrimalDin
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.DoMate
-// (Net, NetRequest, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter**   WithMate                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -282,7 +282,7 @@ void AShapeshifter_Small_Character_BP_C::BP_OnSetDeath()
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.Spawn Bigly Fn
-// (NetReliable, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AShapeshifter_Small_Character_BP_C::STATIC_Spawn_Bigly_Fn()
 {
@@ -417,7 +417,7 @@ bool AShapeshifter_Small_Character_BP_C::BPCanMountOnCharacter(class APrimalChar
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPGetMultiUseEntries
-// (Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -467,7 +467,7 @@ bool AShapeshifter_Small_Character_BP_C::AllowPlayMontage(class UAnimMontage** A
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPOverrideTamingDescriptionLabel
-// (Net, NetReliable, NetRequest, Native, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FSlateColor             TextColor                      (Parm, OutParm, ReferenceParm)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -479,7 +479,6 @@ class FString AShapeshifter_Small_Character_BP_C::BPOverrideTamingDescriptionLab
 	AShapeshifter_Small_Character_BP_C_BPOverrideTamingDescriptionLabel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -691,7 +690,7 @@ void AShapeshifter_Small_Character_BP_C::CalculateTransformationCountRequiredFor
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.UnTransform
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int                            TransformationCount            (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalDinoCharacter*    Bigly                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -738,7 +737,7 @@ void AShapeshifter_Small_Character_BP_C::Calculate_Current_Element_Count_Require
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPDinoTooltipCustomTorpidityProgressBar
-// (Net, Event, NetResponse, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           overrideTorpidityProgressBarIfActive (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          progressPercent                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -769,7 +768,7 @@ bool AShapeshifter_Small_Character_BP_C::BPDinoTooltipCustomTorpidityProgressBar
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPDinoTooltipCustomTamingProgressBar
-// (Native, Event, NetResponse, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           overrideTamingProgressBarIfActive (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          progressPercent                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1064,12 +1063,12 @@ void AShapeshifter_Small_Character_BP_C::GetTarget(class AActor** Target)
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.TargetHasElement
-// (Net, NetReliable, Exec, NetResponse, Static, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Net, NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter*       Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Small_Character_BP_C::STATIC_TargetHasElement(class AShooterCharacter* Target, bool* res)
+void AShapeshifter_Small_Character_BP_C::STATIC_TargetHasElement(class AShooterCharacter* Target, bool* Res)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.TargetHasElement");
 
@@ -1077,13 +1076,14 @@ void AShapeshifter_Small_Character_BP_C::STATIC_TargetHasElement(class AShooterC
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (res != nullptr)
-		*res = params.res;
+	if (Res != nullptr)
+		*Res = params.Res;
 }
 
 
@@ -1105,7 +1105,7 @@ void AShapeshifter_Small_Character_BP_C::DisableBegging()
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.SetTarget
-// (Net, Exec, Native, NetResponse, Static, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Net, NetReliable, NetResponse, Static, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1117,7 +1117,6 @@ void AShapeshifter_Small_Character_BP_C::STATIC_SetTarget(class AActor* Target)
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1126,7 +1125,7 @@ void AShapeshifter_Small_Character_BP_C::STATIC_SetTarget(class AActor* Target)
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.No Controller RequestMountTransform to Bigly
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Public, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void AShapeshifter_Small_Character_BP_C::STATIC_No_Controller_RequestMountTransform_to_Bigly()
 {
@@ -1235,16 +1234,15 @@ void AShapeshifter_Small_Character_BP_C::TryPounce()
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPOnClearMountedDino
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void AShapeshifter_Small_Character_BP_C::STATIC_BPOnClearMountedDino()
+void AShapeshifter_Small_Character_BP_C::BPOnClearMountedDino()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPOnClearMountedDino");
 
 	AShapeshifter_Small_Character_BP_C_BPOnClearMountedDino_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1307,11 +1305,11 @@ void AShapeshifter_Small_Character_BP_C::TryBegFn()
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.ReceiveTick
-// (Net, NetReliable, NetRequest, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Small_Character_BP_C::ReceiveTick(float* DeltaSeconds)
+void AShapeshifter_Small_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.ReceiveTick");
 
@@ -1319,6 +1317,7 @@ void AShapeshifter_Small_Character_BP_C::ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1344,7 +1343,7 @@ void AShapeshifter_Small_Character_BP_C::ReceiveBeginPlay()
 
 
 // Function Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C.BPServerHandleNetExecCommand
-// (NetReliable, NetResponse, Static, MulticastDelegate, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)

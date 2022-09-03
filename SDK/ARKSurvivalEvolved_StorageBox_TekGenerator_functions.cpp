@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,31 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.GetStructureChainStarts
+// ()
+// Parameters:
+// TArray<class APrimalStructure*> AllStructures                  (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class APrimalStructure*> OutStartStructures             (Parm, OutParm, ZeroConstructor)
+
+void AStorageBox_TekGenerator_C::GetStructureChainStarts(TArray<class APrimalStructure*>* AllStructures, TArray<class APrimalStructure*>* OutStartStructures)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.GetStructureChainStarts");
+
+	AStorageBox_TekGenerator_C_GetStructureChainStarts_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (AllStructures != nullptr)
+		*AllStructures = params.AllStructures;
+	if (OutStartStructures != nullptr)
+		*OutStartStructures = params.OutStartStructures;
+}
+
 
 // Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.ReceiveDestroyed
 // ()
@@ -318,13 +343,13 @@ bool AStorageBox_TekGenerator_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.BPGetMultiUseEntries
-// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, MulticastDelegate, Public, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStorageBox_TekGenerator_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStorageBox_TekGenerator_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.BPGetMultiUseEntries");
 
@@ -332,7 +357,6 @@ TArray<struct FMultiUseEntry> AStorageBox_TekGenerator_C::STATIC_BPGetMultiUseEn
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

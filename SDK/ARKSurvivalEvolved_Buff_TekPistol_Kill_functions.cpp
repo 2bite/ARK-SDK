@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.Public Calculate Damage Multiplier
 // ()
 // Parameters:
-// float                          Mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekPistol_Kill_C::Public_Calculate_Damage_Multiplier(float* Mult)
+void ABuff_TekPistol_Kill_C::Public_Calculate_Damage_Multiplier(float* mult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.Public Calculate Damage Multiplier");
 
@@ -29,8 +29,8 @@ void ABuff_TekPistol_Kill_C::Public_Calculate_Damage_Multiplier(float* Mult)
 
 	fn->FunctionFlags = flags;
 
-	if (Mult != nullptr)
-		*Mult = params.Mult;
+	if (mult != nullptr)
+		*mult = params.mult;
 }
 
 
@@ -59,9 +59,9 @@ void ABuff_TekPistol_Kill_C::CalculateImpactScale(float* ImpactScale)
 // Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.CalculateDamageMultiplier
 // ()
 // Parameters:
-// float                          Mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekPistol_Kill_C::CalculateDamageMultiplier(float* Mult)
+void ABuff_TekPistol_Kill_C::CalculateDamageMultiplier(float* mult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.CalculateDamageMultiplier");
 
@@ -73,8 +73,8 @@ void ABuff_TekPistol_Kill_C::CalculateDamageMultiplier(float* Mult)
 
 	fn->FunctionFlags = flags;
 
-	if (Mult != nullptr)
-		*Mult = params.Mult;
+	if (mult != nullptr)
+		*mult = params.mult;
 }
 
 
@@ -139,11 +139,11 @@ void ABuff_TekPistol_Kill_C::CanApplyToTarget(class APrimalCharacter* Target, bo
 
 
 // Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.BPSetupForInstigator
-// (NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekPistol_Kill_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_TekPistol_Kill_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.BPSetupForInstigator");
 
@@ -151,6 +151,7 @@ void ABuff_TekPistol_Kill_C::BPSetupForInstigator(class AActor** ForInstigator)
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,18 +204,17 @@ class UClass* ABuff_TekPistol_Kill_C::GetPointCustomData()
 
 
 // Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.GetPointOfInterestData
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FPointOfInterestData    ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPointOfInterestData ABuff_TekPistol_Kill_C::GetPointOfInterestData()
+struct FPointOfInterestData ABuff_TekPistol_Kill_C::STATIC_GetPointOfInterestData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekPistol_Kill.Buff_TekPistol_Kill_C.GetPointOfInterestData");
 
 	ABuff_TekPistol_Kill_C_GetPointOfInterestData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

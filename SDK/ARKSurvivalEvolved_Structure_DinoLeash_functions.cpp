@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -249,7 +249,7 @@ void AStructure_DinoLeash_C::BPContainerActivated()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BlueprintDrawPreviewHUD
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, Static, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -265,7 +265,6 @@ void AStructure_DinoLeash_C::STATIC_BlueprintDrawPreviewHUD(class AShooterHUD** 
 	params.CenterY = CenterY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -355,12 +354,12 @@ void AStructure_DinoLeash_C::OnRep_EffectRadius()
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPClientDoMultiUse
-// (NetReliable, Native, NetResponse, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_DinoLeash_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void AStructure_DinoLeash_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_DinoLeash.Structure_DinoLeash_C.BPClientDoMultiUse");
 
@@ -487,7 +486,7 @@ bool AStructure_DinoLeash_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function Structure_DinoLeash.Structure_DinoLeash_C.BPGetMultiUseEntries
-// (Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Net, NetReliable, Native, Event, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -501,6 +500,7 @@ TArray<struct FMultiUseEntry> AStructure_DinoLeash_C::BPGetMultiUseEntries(class
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

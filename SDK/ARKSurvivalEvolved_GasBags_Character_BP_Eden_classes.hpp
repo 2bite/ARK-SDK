@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass GasBags_Character_BP_Eden.GasBags_Character_BP_Eden_C
-// 0x0000 (0x336C - 0x336C)
+// 0x0000 (0x338C - 0x338C)
 class AGasBags_Character_BP_Eden_C : public AGasBags_Character_BP_C
 {
 public:

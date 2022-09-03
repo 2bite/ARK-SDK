@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass HM_Hoversail_Riding_AnimBP_HF.HM_Hoversail_Riding_AnimBP_HF_C
-// 0x0004 (0x15C8 - 0x15C4)
+// 0x0004 (0x15D0 - 0x15CC)
 class UHM_Hoversail_Riding_AnimBP_HF_C : public UHM_Hoversail_Riding_AnimBP_C
 {
 public:
-	float                                              K2Node_Event_DeltaTimeX;                                  // 0x15C4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_Event_DeltaTimeX;                                  // 0x15CC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

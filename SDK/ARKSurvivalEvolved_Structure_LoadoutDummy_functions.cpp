@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,228 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.BPServerHandleNetExecCommand
+// ()
+// Parameters:
+// class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AStructure_LoadoutDummy_C::BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.BPServerHandleNetExecCommand");
+
+	AStructure_LoadoutDummy_C_BPServerHandleNetExecCommand_Params params;
+	params.FromPC = FromPC;
+	params.CommandName = CommandName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ExecParams != nullptr)
+		*ExecParams = params.ExecParams;
+
+	return params.ReturnValue;
+}
+
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.UpdateInventorySize
+// ()
+
+void AStructure_LoadoutDummy_C::UpdateInventorySize()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.UpdateInventorySize");
+
+	AStructure_LoadoutDummy_C_UpdateInventorySize_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.GetCurrentlyUsedHotbarSlots
+// ()
+// Parameters:
+// int                            OutUsedSlots                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AStructure_LoadoutDummy_C::GetCurrentlyUsedHotbarSlots(int* OutUsedSlots)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.GetCurrentlyUsedHotbarSlots");
+
+	AStructure_LoadoutDummy_C_GetCurrentlyUsedHotbarSlots_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutUsedSlots != nullptr)
+		*OutUsedSlots = params.OutUsedSlots;
+}
+
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.OnRep_CurrentMaxInventoryItems
+// ()
+
+void AStructure_LoadoutDummy_C::OnRep_CurrentMaxInventoryItems()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.OnRep_CurrentMaxInventoryItems");
+
+	AStructure_LoadoutDummy_C_OnRep_CurrentMaxInventoryItems_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddItemSafe
+// ()
+// Parameters:
+// class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalInventoryComponent* toInventory                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalInventoryComponent* FromInventory                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterCharacter*       OwningPlayer                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bDontStack                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalInventoryComponent* AnotherFallbackInventory       (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItem*             InsertAfterItem                (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItem*             OutItem                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           bAddedToTarget                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AStructure_LoadoutDummy_C::AddItemSafe(class UPrimalItem* Item, class UPrimalInventoryComponent* toInventory, class UPrimalInventoryComponent* FromInventory, class AShooterCharacter* OwningPlayer, bool bDontStack, class UPrimalInventoryComponent* AnotherFallbackInventory, class UPrimalItem* InsertAfterItem, class UPrimalItem** OutItem, bool* bAddedToTarget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddItemSafe");
+
+	AStructure_LoadoutDummy_C_AddItemSafe_Params params;
+	params.Item = Item;
+	params.toInventory = toInventory;
+	params.FromInventory = FromInventory;
+	params.OwningPlayer = OwningPlayer;
+	params.bDontStack = bDontStack;
+	params.AnotherFallbackInventory = AnotherFallbackInventory;
+	params.InsertAfterItem = InsertAfterItem;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutItem != nullptr)
+		*OutItem = params.OutItem;
+	if (bAddedToTarget != nullptr)
+		*bAddedToTarget = params.bAddedToTarget;
+}
+
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddAndEquipItem
+// ()
+// Parameters:
+// class UPrimalItem*             Item                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalInventoryComponent* toInventory                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalInventoryComponent* FromInventory                  (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AStructure_LoadoutDummy_C::AddAndEquipItem(class UPrimalItem* Item, class UPrimalInventoryComponent* toInventory, class UPrimalInventoryComponent* FromInventory, class APlayerController* ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddAndEquipItem");
+
+	AStructure_LoadoutDummy_C_AddAndEquipItem_Params params;
+	params.Item = Item;
+	params.toInventory = toInventory;
+	params.FromInventory = FromInventory;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddToOverflowDroppedInventory
+// ()
+// Parameters:
+// class UPrimalItem*             anItem                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItem*             newItem                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AStructure_LoadoutDummy_C::AddToOverflowDroppedInventory(class UPrimalItem* anItem, class UPrimalItem** newItem)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddToOverflowDroppedInventory");
+
+	AStructure_LoadoutDummy_C_AddToOverflowDroppedInventory_Params params;
+	params.anItem = anItem;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (newItem != nullptr)
+		*newItem = params.newItem;
+}
+
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.BPNotifyInventoryItemChange
+// ()
+// Parameters:
+// bool*                          bIsItemAdd                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItem**            theItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bEquipItem                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void AStructure_LoadoutDummy_C::BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.BPNotifyInventoryItemChange");
+
+	AStructure_LoadoutDummy_C_BPNotifyInventoryItemChange_Params params;
+	params.bIsItemAdd = bIsItemAdd;
+	params.theItem = theItem;
+	params.bEquipItem = bEquipItem;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.IsControllerValid
+// ()
+// Parameters:
+// class APlayerController*       Controller                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void AStructure_LoadoutDummy_C::IsControllerValid(class APlayerController* Controller, bool* Ret)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.IsControllerValid");
+
+	AStructure_LoadoutDummy_C_IsControllerValid_Params params;
+	params.Controller = Controller;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Ret != nullptr)
+		*Ret = params.Ret;
+}
+
 
 // Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.SetHotbarCurrentHealth
 // ()
@@ -145,7 +367,7 @@ void AStructure_LoadoutDummy_C::OnRep_HotbarID()
 
 
 // Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.CreateHotbarStructure
-// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -269,13 +491,15 @@ void AStructure_LoadoutDummy_C::Swap_Everything(class APlayerController* PC)
 // ()
 // Parameters:
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bIncludingHotbar               (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_LoadoutDummy_C::Swap_All_Inventory(class APlayerController* PC)
+void AStructure_LoadoutDummy_C::Swap_All_Inventory(class APlayerController* PC, bool bIncludingHotbar)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.Swap All Inventory");
 
 	AStructure_LoadoutDummy_C_Swap_All_Inventory_Params params;
 	params.PC = PC;
+	params.bIncludingHotbar = bIncludingHotbar;
 
 	auto flags = fn->FunctionFlags;
 
@@ -289,8 +513,9 @@ void AStructure_LoadoutDummy_C::Swap_All_Inventory(class APlayerController* PC)
 // ()
 // Parameters:
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UPrimalItem*>     CachedCharacterItems           (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AStructure_LoadoutDummy_C::Swap_All_Hotbar(class APlayerController* PC)
+void AStructure_LoadoutDummy_C::Swap_All_Hotbar(class APlayerController* PC, TArray<class UPrimalItem*>* CachedCharacterItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.Swap All Hotbar");
 
@@ -302,6 +527,9 @@ void AStructure_LoadoutDummy_C::Swap_All_Hotbar(class APlayerController* PC)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	if (CachedCharacterItems != nullptr)
+		*CachedCharacterItems = params.CachedCharacterItems;
 }
 
 
@@ -431,13 +659,13 @@ bool AStructure_LoadoutDummy_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructure_LoadoutDummy_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructure_LoadoutDummy_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.BPGetMultiUseEntries");
 

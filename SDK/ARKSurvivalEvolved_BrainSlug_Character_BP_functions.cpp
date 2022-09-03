@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,12 +72,82 @@ void ABrainSlug_Character_BP_C::GetHudData(class APrimalCharacter* TargetChar, b
 }
 
 
+// Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BP_OverrideTargetingLocation
+// ()
+// Parameters:
+// class AActor**                 Attacker                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector ABrainSlug_Character_BP_C::BP_OverrideTargetingLocation(class AActor** Attacker)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BP_OverrideTargetingLocation");
+
+	ABrainSlug_Character_BP_C_BP_OverrideTargetingLocation_Params params;
+	params.Attacker = Attacker;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPGetTargetingDesirability
+// ()
+// Parameters:
+// class AActor**                 Attacker                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ABrainSlug_Character_BP_C::BPGetTargetingDesirability(class AActor** Attacker)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPGetTargetingDesirability");
+
+	ABrainSlug_Character_BP_C_BPGetTargetingDesirability_Params params;
+	params.Attacker = Attacker;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.IsPlayerOnMission
+// ()
+// Parameters:
+// class APawn*                   OverrideCharacterToTest        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsOnMission                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABrainSlug_Character_BP_C::IsPlayerOnMission(class APawn* OverrideCharacterToTest, bool* IsOnMission)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.IsPlayerOnMission");
+
+	ABrainSlug_Character_BP_C_IsPlayerOnMission_Params params;
+	params.OverrideCharacterToTest = OverrideCharacterToTest;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (IsOnMission != nullptr)
+		*IsOnMission = params.IsOnMission;
+}
+
+
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.GetBrainSlugAimDirection
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ABrainSlug_Character_BP_C::GetBrainSlugAimDirection()
+struct FVector ABrainSlug_Character_BP_C::STATIC_GetBrainSlugAimDirection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.GetBrainSlugAimDirection");
 
@@ -581,7 +651,7 @@ struct FRotator ABrainSlug_Character_BP_C::BPModifyAimOffsetNoTarget(struct FRot
 
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -590,7 +660,7 @@ struct FRotator ABrainSlug_Character_BP_C::BPModifyAimOffsetNoTarget(struct FRot
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABrainSlug_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float ABrainSlug_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -764,12 +834,12 @@ bool ABrainSlug_Character_BP_C::BPPreventFirstPerson()
 
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPGetHUDElements
-// (NetRequest, Exec, Native, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABrainSlug_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABrainSlug_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPGetHUDElements");
 
@@ -789,7 +859,7 @@ void ABrainSlug_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC
 
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPNewDoorInteractionDrawHUD
-// (Exec, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
+// (Native, NetMulticast, MulticastDelegate, Private, NetClient, BlueprintEvent)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D*              DoorDescriptionLoc             (Parm, ZeroConstructor, IsPlainOldData)
@@ -803,6 +873,7 @@ void ABrainSlug_Character_BP_C::BPNewDoorInteractionDrawHUD(class AShooterHUD** 
 	params.DoorDescriptionLoc = DoorDescriptionLoc;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -894,12 +965,12 @@ void ABrainSlug_Character_BP_C::StartBrainSlugAttachment(class APrimalCharacter*
 
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.FindViableBrainJumpTargetFromControlRot
-// (NetReliable, Exec, Native, NetMulticast, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Static, MulticastDelegate, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // class AController*             Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        ViableTarget                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABrainSlug_Character_BP_C::FindViableBrainJumpTargetFromControlRot(class AController* Controller, class APrimalCharacter** ViableTarget)
+void ABrainSlug_Character_BP_C::STATIC_FindViableBrainJumpTargetFromControlRot(class AController* Controller, class APrimalCharacter** ViableTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.FindViableBrainJumpTargetFromControlRot");
 
@@ -1052,17 +1123,18 @@ void ABrainSlug_Character_BP_C::BPCharacterSleeped()
 
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.Get Aim Adjusted Throwing Dir
-// (Exec, Event, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // struct FRotator                AdjustedThrowingDir            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABrainSlug_Character_BP_C::STATIC_Get_Aim_Adjusted_Throwing_Dir(struct FRotator* AdjustedThrowingDir)
+void ABrainSlug_Character_BP_C::Get_Aim_Adjusted_Throwing_Dir(struct FRotator* AdjustedThrowingDir)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.Get Aim Adjusted Throwing Dir");
 
 	ABrainSlug_Character_BP_C_Get_Aim_Adjusted_Throwing_Dir_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1156,16 +1228,15 @@ void ABrainSlug_Character_BP_C::BP_OnSetDeath()
 
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPTimerServer
-// (NetRequest, Native, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
+// ()
 
-void ABrainSlug_Character_BP_C::STATIC_BPTimerServer()
+void ABrainSlug_Character_BP_C::BPTimerServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPTimerServer");
 
 	ABrainSlug_Character_BP_C_BPTimerServer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1291,7 +1362,7 @@ bool ABrainSlug_Character_BP_C::BPHandleControllerInitiatedAttack(int* AttackInd
 
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.IsAllowedToControl
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, NetClient, BlueprintEvent)
 // Parameters:
 // class APrimalCharacter*        TestChar                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Allowed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1305,6 +1376,7 @@ void ABrainSlug_Character_BP_C::STATIC_IsAllowedToControl(class APrimalCharacter
 	params.TestChar = TestChar;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1421,7 +1493,7 @@ bool ABrainSlug_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Native, Event, NetResponse, NetMulticast, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, NetMulticast, Private, NetClient, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1435,7 +1507,6 @@ TArray<struct FMultiUseEntry> ABrainSlug_Character_BP_C::BPGetMultiUseEntries(cl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1955,6 +2026,26 @@ void ABrainSlug_Character_BP_C::Timer_TryUpdateComponentVisibility()
 	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.Timer_TryUpdateComponentVisibility");
 
 	ABrainSlug_Character_BP_C_Timer_TryUpdateComponentVisibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.AttemptBrainControl
+// ()
+// Parameters:
+// class APrimalCharacter*        TargetChar                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABrainSlug_Character_BP_C::AttemptBrainControl(class APrimalCharacter* TargetChar)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.AttemptBrainControl");
+
+	ABrainSlug_Character_BP_C_AttemptBrainControl_Params params;
+	params.TargetChar = TargetChar;
 
 	auto flags = fn->FunctionFlags;
 

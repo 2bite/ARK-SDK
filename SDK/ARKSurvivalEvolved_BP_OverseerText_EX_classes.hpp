@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -142,7 +142,7 @@ public:
 	}
 
 
-	void ConstructionProcess();
+	void STATIC_ConstructionProcess();
 	void InitializeGlyphs(TArray<class FString>* FormattedText);
 	void SplitEveryOtherLine(const class FString& Line, class FString* StartingText, class FString* OffsetText);
 	void Convert_To_Base(int Num, int Base, class FString* converted);

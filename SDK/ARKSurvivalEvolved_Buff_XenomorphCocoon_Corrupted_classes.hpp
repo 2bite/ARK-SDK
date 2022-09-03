@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_XenomorphCocoon_Corrupted.Buff_XenomorphCocoon_Corrupted_C
-// 0x0000 (0x0972 - 0x0972)
+// 0x0000 (0x098A - 0x098A)
 class ABuff_XenomorphCocoon_Corrupted_C : public ABuff_XenomorphCocoon_C
 {
 public:

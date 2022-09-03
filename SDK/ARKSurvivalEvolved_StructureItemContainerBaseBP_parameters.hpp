@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function StructureItemContainerBaseBP.StructureItemContainerBaseBP_C.BPOnTransferAll
+struct AStructureItemContainerBaseBP_C_BPOnTransferAll_Params
+{
+	class UPrimalInventoryComponent*                   toInventory;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function StructureItemContainerBaseBP.StructureItemContainerBaseBP_C.UserConstructionScript
 struct AStructureItemContainerBaseBP_C_UserConstructionScript_Params

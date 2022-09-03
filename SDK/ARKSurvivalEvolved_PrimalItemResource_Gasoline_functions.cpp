@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.CheckForGasolineData
-// (Exec, Native, Event, NetResponse, Static, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, MulticastDelegate, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             DestinationItem                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SupportsDragOn                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemResource_Gasoline_C::STATIC_CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn)
+void UPrimalItemResource_Gasoline_C::CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.CheckForGasolineData");
 
@@ -38,7 +38,7 @@ void UPrimalItemResource_Gasoline_C::STATIC_CheckForGasolineData(class UPrimalIt
 
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.RefillGasoline
-// (Exec, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, MulticastDelegate, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             DestinationItem                (Parm, ZeroConstructor, IsPlainOldData)
 

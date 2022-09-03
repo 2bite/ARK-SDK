@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,6 +30,27 @@ struct ABrainSlug_Character_BP_C_GetHudData_Params
 	class FString                                      InvalidTargetString_PreventHUD;                           // (Parm, OutParm, ZeroConstructor)
 	struct FHUDElement                                 HUDElementTemplate;                                       // (Parm, OutParm)
 	float                                              BrainJumpTargetCheckDistance;                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BP_OverrideTargetingLocation
+struct ABrainSlug_Character_BP_C_BP_OverrideTargetingLocation_Params
+{
+	class AActor**                                     Attacker;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BPGetTargetingDesirability
+struct ABrainSlug_Character_BP_C_BPGetTargetingDesirability_Params
+{
+	class AActor**                                     Attacker;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.IsPlayerOnMission
+struct ABrainSlug_Character_BP_C_IsPlayerOnMission_Params
+{
+	class APawn*                                       OverrideCharacterToTest;                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsOnMission;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.GetBrainSlugAimDirection
@@ -599,6 +620,12 @@ struct ABrainSlug_Character_BP_C_SetupHarvestingBag_Params
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.Timer_TryUpdateComponentVisibility
 struct ABrainSlug_Character_BP_C_Timer_TryUpdateComponentVisibility_Params
 {
+};
+
+// Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.AttemptBrainControl
+struct ABrainSlug_Character_BP_C_AttemptBrainControl_Params
+{
+	class APrimalCharacter*                            TargetChar;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BrainSlug_Character_BP.BrainSlug_Character_BP_C.BP_OnJumpReleased

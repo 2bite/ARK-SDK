@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapSpear_Santiago.WeapSpear_Santiago_C
-// 0x0000 (0x0EB8 - 0x0EB8)
+// 0x0000 (0x0EB0 - 0x0EB0)
 class AWeapSpear_Santiago_C : public AWeapSpear_C
 {
 public:

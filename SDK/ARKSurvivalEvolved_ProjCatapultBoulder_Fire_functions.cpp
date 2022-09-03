@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjCatapultBoulder_Fire.ProjCatapultBoulder_Fire_C.OnExplode
-// (NetReliable, Native, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FHitResult              Result                         (Parm, OutParm, ReferenceParm)
 
-void AProjCatapultBoulder_Fire_C::OnExplode(struct FHitResult* Result)
+void AProjCatapultBoulder_Fire_C::STATIC_OnExplode(struct FHitResult* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjCatapultBoulder_Fire.ProjCatapultBoulder_Fire_C.OnExplode");
 

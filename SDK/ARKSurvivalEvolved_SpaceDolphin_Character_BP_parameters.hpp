@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,7 +18,7 @@ namespace sdk
 struct ASpaceDolphin_Character_BP_C_GetHudData_Params
 {
 	bool                                               HasSaddle;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsFPV;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isFPV;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               HideHUDinFPV;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                LaserLevel;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                MaxLaserLevel;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -35,6 +35,21 @@ struct ASpaceDolphin_Character_BP_C_GetHudData_Params
 	float                                              CannonCooldownPercent;                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              EchoOrChaffCooldownPercent;                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsSubmerged;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPClientHandleNetExecCommand
+struct ASpaceDolphin_Character_BP_C_BPClientHandleNetExecCommand_Params
+{
+	struct FName*                                      CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBPNetExecParams                            ExecParams;                                               // (Parm, OutParm, ReferenceParm)
+	class APlayerController**                          ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.CheckVelocityError
+struct ASpaceDolphin_Character_BP_C_CheckVelocityError_Params
+{
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPForceCameraStyle
@@ -254,13 +269,13 @@ struct ASpaceDolphin_Character_BP_C_Update_Materials_Params
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Is FPV Public
 struct ASpaceDolphin_Character_BP_C_Is_FPV_Public_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.IsFPV
-struct ASpaceDolphin_Character_BP_C_IsFPV_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.isFPV
+struct ASpaceDolphin_Character_BP_C_isFPV_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     CameraLoc;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -291,6 +306,7 @@ struct ASpaceDolphin_Character_BP_C_UpdateBarrelRoll_Params
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetLaserDamage
 struct ASpaceDolphin_Character_BP_C_GetLaserDamage_Params
 {
+	class AActor*                                      HitActor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -550,7 +566,7 @@ struct ASpaceDolphin_Character_BP_C_BP_PreventMovementMode_Params
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.CanBarrelRoll
 struct ASpaceDolphin_Character_BP_C_CanBarrelRoll_Params
 {
-	bool                                               res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.IsDoingBarrelRoll
@@ -751,6 +767,7 @@ struct ASpaceDolphin_Character_BP_C_FireLasers_Params
 	struct FVector                                     Dir;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Loc;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       Socket;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Start;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetSaddleColor
@@ -1431,58 +1448,58 @@ struct ASpaceDolphin_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_348
-struct ASpaceDolphin_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_348_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_232
+struct ASpaceDolphin_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_232_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_347
-struct ASpaceDolphin_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_347_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_231
+struct ASpaceDolphin_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_231_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_346
-struct ASpaceDolphin_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_346_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_230
+struct ASpaceDolphin_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_230_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_345
-struct ASpaceDolphin_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_345_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_229
+struct ASpaceDolphin_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_229_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_344
-struct ASpaceDolphin_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_344_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_228
+struct ASpaceDolphin_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_228_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_343
-struct ASpaceDolphin_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_343_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_227
+struct ASpaceDolphin_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_227_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_342
-struct ASpaceDolphin_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_342_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_226
+struct ASpaceDolphin_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_226_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_74
-struct ASpaceDolphin_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_74_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_66
+struct ASpaceDolphin_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_66_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_73
-struct ASpaceDolphin_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_73_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_65
+struct ASpaceDolphin_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_65_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCam_K2Node_InputActionEvent_341
-struct ASpaceDolphin_Character_BP_C_InpActEvt_OrbitCam_K2Node_InputActionEvent_341_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCam_K2Node_InputActionEvent_225
+struct ASpaceDolphin_Character_BP_C_InpActEvt_OrbitCam_K2Node_InputActionEvent_225_Params
 {
 };
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_340
-struct ASpaceDolphin_Character_BP_C_InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_340_Params
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_224
+struct ASpaceDolphin_Character_BP_C_InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_224_Params
 {
 };
 
@@ -1738,6 +1755,7 @@ struct ASpaceDolphin_Character_BP_C_MultiThrusterVFXBoost_Params
 struct ASpaceDolphin_Character_BP_C_ServerRequestFireLasers_Params
 {
 	struct FVector                                     CameraHitLoc;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              CustomTimeDilation;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.ClientSpawnLaserFireFX
@@ -1761,6 +1779,7 @@ struct ASpaceDolphin_Character_BP_C_ServerFireChargedLaser_Params
 	struct FVector                                     Dir;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     Loc;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              CustomTimeDilation;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.TickChargedLaserFX
@@ -1978,6 +1997,11 @@ struct ASpaceDolphin_Character_BP_C_MultiSaddleActivationText_Params
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.UpdateLoopingEvent
 struct ASpaceDolphin_Character_BP_C_UpdateLoopingEvent_Params
+{
+};
+
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.StopMovementImmediately
+struct ASpaceDolphin_Character_BP_C_StopMovementImmediately_Params
 {
 };
 

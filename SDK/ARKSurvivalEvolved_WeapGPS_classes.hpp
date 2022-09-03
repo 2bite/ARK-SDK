@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapGPS.WeapGPS_C
-// 0x0008 (0x1040 - 0x1038)
+// 0x0008 (0x1038 - 0x1030)
 class AWeapGPS_C : public APrimalWeaponGPS
 {
 public:
-	class UPointLightComponent*                        PointLight1;                                              // 0x1038(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPointLightComponent*                        PointLight1;                                              // 0x1030(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

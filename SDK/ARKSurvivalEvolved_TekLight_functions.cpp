@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,13 +12,42 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function TekLight.TekLight_C.BPClientDoMultiUse
+// Function TekLight.TekLight_C.BPServerHandleNetExecCommand
 // ()
+// Parameters:
+// class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ATekLight_C::BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TekLight.TekLight_C.BPServerHandleNetExecCommand");
+
+	ATekLight_C_BPServerHandleNetExecCommand_Params params;
+	params.FromPC = FromPC;
+	params.CommandName = CommandName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ExecParams != nullptr)
+		*ExecParams = params.ExecParams;
+
+	return params.ReturnValue;
+}
+
+
+// Function TekLight.TekLight_C.BPClientDoMultiUse
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekLight_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void ATekLight_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekLight.TekLight_C.BPClientDoMultiUse");
 
@@ -99,13 +128,13 @@ void ATekLight_C::SetLampLightIntensity(int intensityLevel)
 
 
 // Function TekLight.TekLight_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATekLight_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATekLight_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekLight.TekLight_C.BPGetMultiUseEntries");
 
@@ -113,7 +142,6 @@ TArray<struct FMultiUseEntry> ATekLight_C::BPGetMultiUseEntries(class APlayerCon
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

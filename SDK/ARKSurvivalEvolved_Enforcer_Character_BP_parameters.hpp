@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -199,14 +199,14 @@ struct AEnforcer_Character_BP_C_SweepTestBlinkClimbPoint_Params
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.IsSurfaceNormalClimbable
 struct AEnforcer_Character_BP_C_IsSurfaceNormalClimbable_Params
 {
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ShouldClimb;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.GetCustomSurfaceTraceDistance
 struct AEnforcer_Character_BP_C_GetCustomSurfaceTraceDistance_Params
 {
-	int*                                               TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              customDistance;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -247,7 +247,7 @@ struct AEnforcer_Character_BP_C_BlinkCooldownToString_Params
 	double                                             LastUsedTime;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Cooldown;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	class FString                                      ReadyString;                                              // (Parm, ZeroConstructor)
-	class FString                                      return_value;                                             // (Parm, OutParm, ZeroConstructor)
+	class FString                                      Return_Value;                                             // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPGrabDebugSnapshot
@@ -348,7 +348,7 @@ struct AEnforcer_Character_BP_C_GetClimbingMoveDirFromRotation_Params
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.Can Receive Climbing Input Strafe
 struct AEnforcer_Character_BP_C_Can_Receive_Climbing_Input_Strafe_Params
 {
-	bool                                               return_value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Return_Value;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.ReceiveBeginPlay
@@ -369,7 +369,7 @@ struct AEnforcer_Character_BP_C_Check_For_Prevent_Stop_Climbing_Params
 	TArray<bool>                                       traceHitsArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int*                                               numValidHits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               numTraces;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.GetCurrentCameraLoc
@@ -423,7 +423,7 @@ struct AEnforcer_Character_BP_C_Update_Blink_Target_VFX_Location_Params
 	struct FVector                                     WorldLocation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    WorldRotation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  HitResult;                                                // (Parm)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Enforcer_Character_BP.Enforcer_Character_BP_C.BPHandleControllerInitiatedAttack

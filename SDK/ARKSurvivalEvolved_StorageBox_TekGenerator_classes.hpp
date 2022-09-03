@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -111,6 +111,7 @@ public:
 	}
 
 
+	void GetStructureChainStarts(TArray<class APrimalStructure*>* AllStructures, TArray<class APrimalStructure*>* OutStartStructures);
 	void ReceiveDestroyed();
 	void PowerGeneratorBuiltNearbyPoweredStructure(class APrimalStructureItemContainer** PoweredStructure);
 	void BPChangedActorTeam();
@@ -126,7 +127,7 @@ public:
 	bool BPOverrideAllowStructureAccess(class AShooterPlayerController** ForPC, bool* bIsAccessAllowed, bool* bForInventoryOnly);
 	void GetDesiredRadiusMultiplier(int IncrementAmount, float* OutRadiusMultiplier);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPPostInitializeComponents();
 	void BPPostSetStructureCollisionChannels();
 	void SetShieldActive(bool bActive);

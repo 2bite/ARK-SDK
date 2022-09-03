@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Cherufe_Character_BP_Summoned.Cherufe_Character_BP_Summoned_C
-// 0x0000 (0x2B88 - 0x2B88)
+// 0x0000 (0x2BB8 - 0x2BB8)
 class ACherufe_Character_BP_Summoned_C : public ACherufe_Character_BP_C
 {
 public:

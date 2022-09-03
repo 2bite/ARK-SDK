@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_ParaSaddle_Launch.PrimalItemArmor_ParaSaddle_Launch_C
-// 0x0000 (0x0AE0 - 0x0AE0)
+// 0x0000 (0x0AE8 - 0x0AE8)
 class UPrimalItemArmor_ParaSaddle_Launch_C : public UPrimalItemSkinGeneric_C
 {
 public:

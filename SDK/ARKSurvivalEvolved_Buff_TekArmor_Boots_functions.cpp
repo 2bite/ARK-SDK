@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,9 +33,9 @@ void ABuff_TekArmor_Boots_C::OnRep_IsParticleActive()
 // ()
 // Parameters:
 // bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 surfaceNormal                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 SurfaceNormal                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Boots_C::IsOnSteepSlope(bool* Ret, struct FVector* surfaceNormal)
+void ABuff_TekArmor_Boots_C::IsOnSteepSlope(bool* Ret, struct FVector* SurfaceNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Boots.Buff_TekArmor_Boots_C.IsOnSteepSlope");
 
@@ -49,8 +49,8 @@ void ABuff_TekArmor_Boots_C::IsOnSteepSlope(bool* Ret, struct FVector* surfaceNo
 
 	if (Ret != nullptr)
 		*Ret = params.Ret;
-	if (surfaceNormal != nullptr)
-		*surfaceNormal = params.surfaceNormal;
+	if (SurfaceNormal != nullptr)
+		*SurfaceNormal = params.SurfaceNormal;
 }
 
 

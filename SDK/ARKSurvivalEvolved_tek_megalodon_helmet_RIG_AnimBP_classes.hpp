@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,7 +53,7 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2668();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP_AnimGraphNode_BlendListByBool_2920();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_tek_megalodon_helmet_RIG_AnimBP(int EntryPoint);
 };

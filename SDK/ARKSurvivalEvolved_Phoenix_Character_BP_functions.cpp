@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -221,7 +221,7 @@ bool APhoenix_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.SetAnimsWeightForAttack
-// (NetRequest, Exec, Private, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -233,6 +233,7 @@ void APhoenix_Character_BP_C::SetAnimsWeightForAttack(int AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -292,7 +293,7 @@ void APhoenix_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, 
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, NetResponse, Private, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -306,6 +307,7 @@ TArray<struct FMultiUseEntry> APhoenix_Character_BP_C::BPGetMultiUseEntries(clas
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -388,7 +390,7 @@ void APhoenix_Character_BP_C::Is_In_Water(bool* currentlyOnWater)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.CanAshStayOnLocation
-// (NetReliable, Native, Static, Private, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
+// (NetRequest, Event, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           canAshStay                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -399,7 +401,6 @@ void APhoenix_Character_BP_C::STATIC_CanAshStayOnLocation(bool* canAshStay)
 	APhoenix_Character_BP_C_CanAshStayOnLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -411,7 +412,7 @@ void APhoenix_Character_BP_C::STATIC_CanAshStayOnLocation(bool* canAshStay)
 
 
 // Function Phoenix_Character_BP.Phoenix_Character_BP_C.Calculate BuryMeshTransform
-// (Exec, Native, Event, Static, Private, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           rise                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      buryMeshTransform              (Parm, OutParm, IsPlainOldData)
@@ -424,7 +425,6 @@ void APhoenix_Character_BP_C::STATIC_Calculate_BuryMeshTransform(bool rise, stru
 	params.rise = rise;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

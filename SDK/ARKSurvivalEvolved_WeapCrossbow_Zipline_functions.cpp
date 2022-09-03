@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.ZiplineObstructionTrace
-// (NetReliable, Exec, NetResponse, Static, Public, Protected, NetServer, BlueprintCallable)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Hit                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -26,6 +26,7 @@ void AWeapCrossbow_Zipline_C::STATIC_ZiplineObstructionTrace(const struct FVecto
 	params.Start = Start;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -122,15 +123,16 @@ void AWeapCrossbow_Zipline_C::Get_ZipProjectile_Default_Object(class AProjZiplin
 
 
 // Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.Update Preview Cable
-// (NetReliable, Exec, Event, NetMulticast, Public, Protected, NetServer, BlueprintCallable)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void AWeapCrossbow_Zipline_C::Update_Preview_Cable()
+void AWeapCrossbow_Zipline_C::STATIC_Update_Preview_Cable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapCrossbow_Zipline.WeapCrossbow_Zipline_C.Update Preview Cable");
 
 	AWeapCrossbow_Zipline_C_Update_Preview_Cable_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

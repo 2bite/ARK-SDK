@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.GetScoutStats
-// (NetReliable, NetRequest, Static, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<float>                  Stats                          (Parm, OutParm, ZeroConstructor)
 
-void UPrimalItem_WeaponScoutRemote_C::STATIC_GetScoutStats(TArray<float>* Stats)
+void UPrimalItem_WeaponScoutRemote_C::GetScoutStats(TArray<float>* Stats)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.GetScoutStats");
 
 	UPrimalItem_WeaponScoutRemote_C_GetScoutStats_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,11 +84,11 @@ class FString UPrimalItem_WeaponScoutRemote_C::BPGetItemName(class FString* Item
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.SetScoutCharacterStatusValues
-// (NetReliable, Event, Static, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<float>                  Stats                          (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UPrimalItem_WeaponScoutRemote_C::STATIC_SetScoutCharacterStatusValues(TArray<float>* Stats)
+void UPrimalItem_WeaponScoutRemote_C::SetScoutCharacterStatusValues(TArray<float>* Stats)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.SetScoutCharacterStatusValues");
 
@@ -122,7 +123,7 @@ void UPrimalItem_WeaponScoutRemote_C::OnRep_ScoutStats()
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.BPGetItemDescription
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
@@ -200,18 +201,19 @@ void UPrimalItem_WeaponScoutRemote_C::BlueprintUnequipped()
 
 
 // Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.Can FireWeapon
-// (NetReliable, Event, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EScoutRemoteReturnCode> FailReason                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_WeaponScoutRemote_C::Can_FireWeapon(bool* Result, TEnumAsByte<EScoutRemoteReturnCode>* FailReason)
+void UPrimalItem_WeaponScoutRemote_C::STATIC_Can_FireWeapon(bool* Result, TEnumAsByte<EScoutRemoteReturnCode>* FailReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C.Can FireWeapon");
 
 	UPrimalItem_WeaponScoutRemote_C_Can_FireWeapon_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

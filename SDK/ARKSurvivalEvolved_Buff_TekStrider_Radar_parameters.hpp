@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -85,8 +85,8 @@ struct ABuff_TekStrider_Radar_C_clear_rider_Params
 	class AShooterCharacter**                          prev_rider;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Highlight latest shared target
-struct ABuff_TekStrider_Radar_C_Highlight_latest_shared_target_Params
+// Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Highlight Latest Shared Target
+struct ABuff_TekStrider_Radar_C_Highlight_Latest_Shared_Target_Params
 {
 };
 
@@ -155,8 +155,8 @@ struct ABuff_TekStrider_Radar_C_update_radar_Params
 {
 };
 
-// Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Can Fire
-struct ABuff_TekStrider_Radar_C_Can_Fire_Params
+// Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.can fire
+struct ABuff_TekStrider_Radar_C_can_fire_Params
 {
 	bool                                               from_animbp;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -232,7 +232,7 @@ struct ABuff_TekStrider_Radar_C_Is_Dino_in_Cone__Params
 {
 	class APrimalCharacter*                            Dino;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FHitResult>                          Hits;                                                     // (Parm, OutParm, ZeroConstructor, ReferenceParm)
-	bool                                               isInCone;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInCone;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekStrider_Radar.Buff_TekStrider_Radar_C.Get Cone Forward

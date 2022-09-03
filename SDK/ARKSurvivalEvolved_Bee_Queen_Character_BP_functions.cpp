@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -154,13 +154,13 @@ void ABee_Queen_Character_BP_C::AddBeeReference(class APrimalDinoCharacter* BeeR
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPTryMultiUse
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, NetValidate)
+// (NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABee_Queen_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
+bool ABee_Queen_Character_BP_C::STATIC_BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPTryMultiUse");
 
@@ -169,7 +169,6 @@ bool ABee_Queen_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 	params.UseIndex = UseIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,13 +179,13 @@ bool ABee_Queen_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ABee_Queen_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ABee_Queen_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.BPGetMultiUseEntries");
 
@@ -297,18 +296,19 @@ void ABee_Queen_Character_BP_C::OnRep_bIsHidden()
 
 
 // Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.SearchTreesForValidHiveSpawnLocation
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, NetValidate)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           succeeded                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct UObject_FTransform      Transform                      (Parm, OutParm, IsPlainOldData)
 
-void ABee_Queen_Character_BP_C::STATIC_SearchTreesForValidHiveSpawnLocation(bool* succeeded, struct UObject_FTransform* Transform)
+void ABee_Queen_Character_BP_C::SearchTreesForValidHiveSpawnLocation(bool* succeeded, struct UObject_FTransform* Transform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Bee_Queen_Character_BP.Bee_Queen_Character_BP_C.SearchTreesForValidHiveSpawnLocation");
 
 	ABee_Queen_Character_BP_C_SearchTreesForValidHiveSpawnLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

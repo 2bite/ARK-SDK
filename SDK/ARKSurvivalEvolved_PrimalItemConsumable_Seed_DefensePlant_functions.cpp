@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemConsumable_Seed_DefensePlant.PrimalItemConsumable_Seed_DefensePlant_C.BPAllowRemoteAddToInventory
-// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalInventoryComponent** invComp                        (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ByPC                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -30,7 +30,6 @@ bool UPrimalItemConsumable_Seed_DefensePlant_C::STATIC_BPAllowRemoteAddToInvento
 	params.bRequestedByPlayer = bRequestedByPlayer;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

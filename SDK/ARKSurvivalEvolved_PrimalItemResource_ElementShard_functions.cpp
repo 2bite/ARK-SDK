@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function PrimalItemResource_ElementShard.PrimalItemResource_ElementShard_C.RefillElementShard
-// (NetReliable, Event, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, MulticastDelegate, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             DestinationItem                (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -33,7 +33,7 @@ void UPrimalItemResource_ElementShard_C::RefillElementShard(class UPrimalItem* D
 
 
 // Function PrimalItemResource_ElementShard.PrimalItemResource_ElementShard_C.CheckForElementShardData
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, MulticastDelegate, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimalItem*             DestinationItem                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SupportsDragOnto               (Parm, OutParm, ZeroConstructor, IsPlainOldData)

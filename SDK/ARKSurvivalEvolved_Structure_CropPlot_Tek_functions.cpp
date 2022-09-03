@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,9 +50,9 @@ void AStructure_CropPlot_Tek_C::BPInventoryItemUsed(class UObject** InventoryIte
 
 
 // Function Structure_CropPlot_Tek.Structure_CropPlot_Tek_C.CheckInstantGrow
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AStructure_CropPlot_Tek_C::CheckInstantGrow()
+void AStructure_CropPlot_Tek_C::STATIC_CheckInstantGrow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_CropPlot_Tek.Structure_CropPlot_Tek_C.CheckInstantGrow");
 

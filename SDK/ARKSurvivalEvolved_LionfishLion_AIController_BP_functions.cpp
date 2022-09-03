@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,7 +100,7 @@ bool ALionfishLion_AIController_BP_C::is_night()
 
 
 // Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.is line of sight blocked
-// (NetReliable, NetRequest, Exec, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           NewParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -111,6 +111,7 @@ void ALionfishLion_AIController_BP_C::is_line_of_sight_blocked(bool* NewParam)
 	ALionfishLion_AIController_BP_C_is_line_of_sight_blocked_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,14 +122,14 @@ void ALionfishLion_AIController_BP_C::is_line_of_sight_blocked(bool* NewParam)
 }
 
 
-// Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.Check if Viewed by Players
-// (NetRequest, Native, Event, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.Check If Viewed By Players
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 
-void ALionfishLion_AIController_BP_C::Check_if_Viewed_by_Players()
+void ALionfishLion_AIController_BP_C::Check_If_Viewed_By_Players()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.Check if Viewed by Players");
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.Check If Viewed By Players");
 
-	ALionfishLion_AIController_BP_C_Check_if_Viewed_by_Players_Params params;
+	ALionfishLion_AIController_BP_C_Check_If_Viewed_By_Players_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -140,9 +141,9 @@ void ALionfishLion_AIController_BP_C::Check_if_Viewed_by_Players()
 
 
 // Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.BPNotifyTargetSet
-// (Event, NetResponse, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 
-void ALionfishLion_AIController_BP_C::BPNotifyTargetSet()
+void ALionfishLion_AIController_BP_C::STATIC_BPNotifyTargetSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_AIController_BP.LionfishLion_AIController_BP_C.BPNotifyTargetSet");
 

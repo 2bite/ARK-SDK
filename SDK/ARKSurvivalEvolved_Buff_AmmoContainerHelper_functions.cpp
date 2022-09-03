@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -153,7 +153,7 @@ void ABuff_AmmoContainerHelper_C::CalculateWidgetLocation(int SlotIndex, int Num
 
 
 // Function Buff_AmmoContainerHelper.Buff_AmmoContainerHelper_C.GetAmmoInfo
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, MulticastDelegate, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<class UClass*>          AmmoTypeList                   (Parm, OutParm, ZeroConstructor)
 // TArray<int>                    AmmoCountList                  (Parm, OutParm, ZeroConstructor)
@@ -181,16 +181,15 @@ void ABuff_AmmoContainerHelper_C::GetAmmoInfo(TArray<class UClass*>* AmmoTypeLis
 
 
 // Function Buff_AmmoContainerHelper.Buff_AmmoContainerHelper_C.SyncHUDElements
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_AmmoContainerHelper_C::STATIC_SyncHUDElements()
+void ABuff_AmmoContainerHelper_C::SyncHUDElements()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_AmmoContainerHelper.Buff_AmmoContainerHelper_C.SyncHUDElements");
 
 	ABuff_AmmoContainerHelper_C_SyncHUDElements_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

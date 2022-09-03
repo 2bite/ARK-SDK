@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemArmor_TekShirt_Gen2.PrimalItemArmor_TekShirt_Gen2_C
-// 0x0030 (0x0C40 - 0x0C10)
+// 0x0038 (0x0C50 - 0x0C18)
 class UPrimalItemArmor_TekShirt_Gen2_C : public UPrimalItemArmor_TekShirt_C
 {
 public:
-	struct UObject_FTransform                          TekSuitVFXOffset;                                         // 0x0C10(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0C18(0x0008) MISSED OFFSET
+	struct UObject_FTransform                          TekSuitVFXOffset;                                         // 0x0C20(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

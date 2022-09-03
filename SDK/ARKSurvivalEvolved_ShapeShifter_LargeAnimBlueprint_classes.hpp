@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -241,9 +241,9 @@ public:
 	bool                                               CallFunc_BooleanAND_ReturnValue5;                         // 0x18D2(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Greater_IntInt_ReturnValue;                      // 0x18D3(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Is_Super_Uberpounce_Ret;                         // 0x18D4(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Has_Latchable_Surface_In_Front_RetSucccess;      // 0x18D5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Has_Latchable_SurfaceWhileFalling_RetSucccess;   // 0x18D5(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData29[0x2];                                       // 0x18D6(0x0002) MISSED OFFSET
-	struct FUberpounceData                             CallFunc_Has_Latchable_Surface_In_Front_RetResultUberpounceData;// 0x18D8(0x0030) (Transient, DuplicateTransient)
+	struct FUberpounceData                             CallFunc_Has_Latchable_SurfaceWhileFalling_RetResultUberpounceData;// 0x18D8(0x0030) (Transient, DuplicateTransient)
 	bool                                               CallFunc_BooleanAND_ReturnValue6;                         // 0x1908(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanOR_ReturnValue3;                          // 0x1909(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue7;                         // 0x190A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -411,43 +411,43 @@ public:
 	void IsRecentelyLatched(bool* Ret);
 	void IsFallingFromRecentLatch(bool* Ret);
 	void BlueprintPlayAnimationEvent(class UAnimMontage** AnimationMontage, float* PlayRate, float* playedAnimLength);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7466();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_ModifyBone_1052();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5927();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5926();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5925();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7465();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7464();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5924();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5923();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7461();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5922();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5921();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7460();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7459();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5920();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5919();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5918();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_ModifyBone_1051();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5917();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7340();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_ModifyBone_950();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5897();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5896();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5895();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7339();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7338();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5894();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5893();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7335();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5892();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5891();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7334();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7333();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5890();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5889();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5888();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_ModifyBone_949();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5887();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_GroundBones_338();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_GroundBones_337();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5916();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5928();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_364();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5915();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5914();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7456();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7455();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5913();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5886();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5898();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_358();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5885();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5884();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7330();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7329();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5883();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequenceEvaluator_10();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByEnum_42();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5912();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5911();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7447();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7446();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7445();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7444();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByEnum_36();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5882();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_BlendListByBool_5881();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7321();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7320();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7319();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint_AnimGraphNode_SequencePlayer_7318();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_ShapeShifter_LargeAnimBlueprint(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 // Function Projectile_SummonerEyeball.Projectile_SummonerEyeball_C.AttemptSpawnTentacles
 struct AProjectile_SummonerEyeball_C_AttemptSpawnTentacles_Params
 {
-	struct FVector                                     hitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Projectile_SummonerEyeball.Projectile_SummonerEyeball_C.UserConstructionScript

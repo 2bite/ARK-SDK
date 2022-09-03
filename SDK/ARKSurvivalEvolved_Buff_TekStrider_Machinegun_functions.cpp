@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,14 +50,14 @@ void ABuff_TekStrider_Machinegun_C::Disable_Awaiting_Player_Loc()
 
 
 // Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.BPServerHandleNetExecCommand
-// (NetRequest, Native, Event, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_TekStrider_Machinegun_C::BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
+bool ABuff_TekStrider_Machinegun_C::STATIC_BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.BPServerHandleNetExecCommand");
 
@@ -80,7 +80,7 @@ bool ABuff_TekStrider_Machinegun_C::BPServerHandleNetExecCommand(class APlayerCo
 
 
 // Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.fire shots
-// (NetReliable, Native, Event, Static, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Native, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           hit_something                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  hit_target                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -109,7 +109,7 @@ void ABuff_TekStrider_Machinegun_C::STATIC_fire_shots(bool hit_something, class 
 
 
 // Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.BuffTickServer
-// (NetResponse, Static, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Event, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -129,7 +129,7 @@ void ABuff_TekStrider_Machinegun_C::STATIC_BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.BPGetHUDElements
-// (Net, NetReliable, NetRequest, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -227,16 +227,16 @@ void ABuff_TekStrider_Machinegun_C::Wild_Dino_Deactivate()
 }
 
 
-// Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.Can Fire
-// (NetReliable, Native, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.can fire
+// (Native, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_TekStrider_Machinegun_C::Can_Fire()
+bool ABuff_TekStrider_Machinegun_C::can_fire()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.Can Fire");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.can fire");
 
-	ABuff_TekStrider_Machinegun_C_Can_Fire_Params params;
+	ABuff_TekStrider_Machinegun_C_can_fire_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -272,7 +272,7 @@ void ABuff_TekStrider_Machinegun_C::spawn_shot_vfx(bool hit_something, const str
 
 
 // Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.trace for blocking stuff between here and target
-// (Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -360,7 +360,7 @@ void ABuff_TekStrider_Machinegun_C::Get_Beam_Origin_and_End(struct FVector* Orig
 
 
 // Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.GetBeamImpact
-// (NetRequest, Exec, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 BeamStart                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 BeamEnd                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -434,11 +434,11 @@ void ABuff_TekStrider_Machinegun_C::Update_Beam_Impact_Location()
 
 
 // Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Machinegun_C::BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_TekStrider_Machinegun_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Machinegun.Buff_TekStrider_Machinegun_C.BPSetupForInstigator");
 
@@ -446,6 +446,7 @@ void ABuff_TekStrider_Machinegun_C::BPSetupForInstigator(class AActor** ForInsti
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

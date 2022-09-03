@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1211,6 +1211,31 @@ void APrimalDinoAIController::BPSetupFindTarget()
 }
 
 
+// Function ShooterGame.PrimalDinoAIController.BPOverrideLandingLocation
+// ()
+// Parameters:
+// float                          outRadius                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector APrimalDinoAIController::BPOverrideLandingLocation(float* outRadius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoAIController.BPOverrideLandingLocation");
+
+	APrimalDinoAIController_BPOverrideLandingLocation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (outRadius != nullptr)
+		*outRadius = params.outRadius;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalDinoAIController.BPOverrideIgnoredByWildDino
 // ()
 // Parameters:
@@ -1945,6 +1970,52 @@ struct FLinearColor UPrimalGameData::GetColorForDefinition(int DefinitionIndex)
 
 	UPrimalGameData_GetColorForDefinition_Params params;
 	params.DefinitionIndex = DefinitionIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalGameData.GetBuffsForBitmask
+// ()
+// Parameters:
+// int                            mask                           (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UClass*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class UClass*> UPrimalGameData::GetBuffsForBitmask(int mask)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalGameData.GetBuffsForBitmask");
+
+	UPrimalGameData_GetBuffsForBitmask_Params params;
+	params.mask = mask;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalGameData.GetBitmaskForBuffs
+// ()
+// Parameters:
+// TArray<class APrimalBuff*>     ActiveBuffs                    (Parm, ZeroConstructor)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UPrimalGameData::GetBitmaskForBuffs(TArray<class APrimalBuff*> ActiveBuffs)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalGameData.GetBitmaskForBuffs");
+
+	UPrimalGameData_GetBitmaskForBuffs_Params params;
+	params.ActiveBuffs = ActiveBuffs;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4447,6 +4518,27 @@ bool UPrimalItem::CanFullyCraft()
 }
 
 
+// Function ShooterGame.PrimalItem.CanEquipWeapon
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPrimalItem::CanEquipWeapon()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalItem.CanEquipWeapon");
+
+	UPrimalItem_CanEquipWeapon_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalItem.CanDrop
 // ()
 // Parameters:
@@ -4888,6 +4980,26 @@ void UPrimalItem::BPOverrideCraftingConsumption(int AmountToConsume)
 }
 
 
+// Function ShooterGame.PrimalItem.BPOnLocalUse
+// ()
+// Parameters:
+// class AShooterCharacter*       forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItem::BPOnLocalUse(class AShooterCharacter* forCharacter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalItem.BPOnLocalUse");
+
+	UPrimalItem_BPOnLocalUse_Params params;
+	params.forCharacter = forCharacter;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalItem.BPOnItemConsumed
 // ()
 // Parameters:
@@ -5103,6 +5215,27 @@ class FString UPrimalItem::BPGetSkinnedCustomInventoryWidgetText()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalItem.BPGetSkinnedCustomInventoryWidgetText");
 
 	UPrimalItem_BPGetSkinnedCustomInventoryWidgetText_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalItem.BPGetMaxAmmo
+// ()
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UPrimalItem::BPGetMaxAmmo()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalItem.BPGetMaxAmmo");
+
+	UPrimalItem_BPGetMaxAmmo_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -8743,6 +8876,32 @@ void UPrimalInventoryComponent::TransferItemToInventory(class UPrimalInventoryCo
 }
 
 
+// Function ShooterGame.PrimalInventoryComponent.TransferAllItemsToInventoryWithFilter
+// ()
+// Parameters:
+// class UPrimalInventoryComponent* toInventory                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TArray<class UClass*>          OfItemClasses                  (Parm, ZeroConstructor)
+// TArray<class UClass*>          IgnoreItemClasses              (Parm, ZeroConstructor)
+// bool                           bAllowSubclasses               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalInventoryComponent::TransferAllItemsToInventoryWithFilter(class UPrimalInventoryComponent* toInventory, TArray<class UClass*> OfItemClasses, TArray<class UClass*> IgnoreItemClasses, bool bAllowSubclasses)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalInventoryComponent.TransferAllItemsToInventoryWithFilter");
+
+	UPrimalInventoryComponent_TransferAllItemsToInventoryWithFilter_Params params;
+	params.toInventory = toInventory;
+	params.OfItemClasses = OfItemClasses;
+	params.IgnoreItemClasses = IgnoreItemClasses;
+	params.bAllowSubclasses = bAllowSubclasses;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalInventoryComponent.TransferAllItemsToInventory
 // ()
 // Parameters:
@@ -10616,6 +10775,26 @@ float UPrimalInventoryComponent::BPOverrideItemMinimumUseInterval(class UPrimalI
 }
 
 
+// Function ShooterGame.PrimalInventoryComponent.BPOnTransferAll
+// ()
+// Parameters:
+// class UPrimalInventoryComponent* toInventory                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UPrimalInventoryComponent::BPOnTransferAll(class UPrimalInventoryComponent* toInventory)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalInventoryComponent.BPOnTransferAll");
+
+	UPrimalInventoryComponent_BPOnTransferAll_Params params;
+	params.toInventory = toInventory;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalInventoryComponent.BPNotifyItemRemoved
 // ()
 // Parameters:
@@ -11313,6 +11492,28 @@ bool UPrimalPlayerData::SetPlayerHexagonCount(int NewHexagonCount)
 }
 
 
+// Function ShooterGame.PrimalPlayerData.SetChibiLevels
+// ()
+// Parameters:
+// int                            newLevels                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerController* ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalPlayerData::SetChibiLevels(int newLevels, class AShooterPlayerController* ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalPlayerData.SetChibiLevels");
+
+	UPrimalPlayerData_SetChibiLevels_Params params;
+	params.newLevels = newLevels;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalPlayerData.SavePlayerData
 // ()
 // Parameters:
@@ -11372,6 +11573,51 @@ bool UPrimalPlayerData::HasUnlockedAllExplorerNotes()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalPlayerData.HasGeneralizedAchievementTag
+// ()
+// Parameters:
+// struct FName                   Tag                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPrimalPlayerData::HasGeneralizedAchievementTag(const struct FName& Tag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalPlayerData.HasGeneralizedAchievementTag");
+
+	UPrimalPlayerData_HasGeneralizedAchievementTag_Params params;
+	params.Tag = Tag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalPlayerData.GrantGeneralizedAchievementTag
+// ()
+// Parameters:
+// struct FName                   ObtainedAchievementTag         (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerController* ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalPlayerData::GrantGeneralizedAchievementTag(const struct FName& ObtainedAchievementTag, class AShooterPlayerController* ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalPlayerData.GrantGeneralizedAchievementTag");
+
+	UPrimalPlayerData_GrantGeneralizedAchievementTag_Params params;
+	params.ObtainedAchievementTag = ObtainedAchievementTag;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -13153,13 +13399,15 @@ bool AShooterPlayerState::AddToTribe(const struct FTribeData& MyNewTribe, bool b
 // Function ShooterGame.ShooterPlayerController.WritePNTScreenshot
 // ()
 // Parameters:
+// class FString                  filename                       (Parm, ZeroConstructor)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString AShooterPlayerController::WritePNTScreenshot()
+class FString AShooterPlayerController::WritePNTScreenshot(const class FString& filename)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.WritePNTScreenshot");
 
 	AShooterPlayerController_WritePNTScreenshot_Params params;
+	params.filename = filename;
 
 	auto flags = fn->FunctionFlags;
 
@@ -13225,6 +13473,26 @@ void AShooterPlayerController::UnlockEmote(const struct FName& EmoteName)
 
 	AShooterPlayerController_UnlockEmote_Params params;
 	params.EmoteName = EmoteName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterPlayerController.UndermeshSphere
+// ()
+// Parameters:
+// int                            Radius                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AShooterPlayerController::UndermeshSphere(int Radius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.UndermeshSphere");
+
+	AShooterPlayerController_UndermeshSphere_Params params;
+	params.Radius = Radius;
 
 	auto flags = fn->FunctionFlags;
 
@@ -14303,15 +14571,12 @@ void AShooterPlayerController::ServerSuicide()
 
 // Function ShooterGame.ShooterPlayerController.ServerSuccessfullyLoggedIntoVivox
 // ()
-// Parameters:
-// class FString                  LoginSessionUserUri            (Parm, ZeroConstructor)
 
-void AShooterPlayerController::ServerSuccessfullyLoggedIntoVivox(const class FString& LoginSessionUserUri)
+void AShooterPlayerController::ServerSuccessfullyLoggedIntoVivox()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.ServerSuccessfullyLoggedIntoVivox");
 
 	AShooterPlayerController_ServerSuccessfullyLoggedIntoVivox_Params params;
-	params.LoginSessionUserUri = LoginSessionUserUri;
 
 	auto flags = fn->FunctionFlags;
 
@@ -18120,6 +18385,35 @@ class AShooterHUD* AShooterPlayerController::GetShooterHUD()
 }
 
 
+// Function ShooterGame.ShooterPlayerController.GetPlayerViewPointNoModifiers
+// ()
+// Parameters:
+// struct FVector                 out_Location                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                out_Rotation                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ForAiming                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bNoTPVAim                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AShooterPlayerController::GetPlayerViewPointNoModifiers(bool ForAiming, bool bNoTPVAim, struct FVector* out_Location, struct FRotator* out_Rotation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.GetPlayerViewPointNoModifiers");
+
+	AShooterPlayerController_GetPlayerViewPointNoModifiers_Params params;
+	params.ForAiming = ForAiming;
+	params.bNoTPVAim = bNoTPVAim;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (out_Location != nullptr)
+		*out_Location = params.out_Location;
+	if (out_Rotation != nullptr)
+		*out_Rotation = params.out_Rotation;
+}
+
+
 // Function ShooterGame.ShooterPlayerController.GetPlayerCharacterName
 // ()
 // Parameters:
@@ -18577,6 +18871,26 @@ void AShooterPlayerController::EnvQA()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.EnvQA");
 
 	AShooterPlayerController_EnvQA_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterPlayerController.EnforcementHighlight
+// ()
+// Parameters:
+// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void AShooterPlayerController::EnforcementHighlight(bool bEnable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.EnforcementHighlight");
+
+	AShooterPlayerController_EnforcementHighlight_Params params;
+	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
 
@@ -21024,20 +21338,18 @@ void AShooterPlayerController::ClientLoadArkItems(class UPrimalInventoryComponen
 // Function ShooterGame.ShooterPlayerController.ClientJoinVivoxChannel
 // ()
 // Parameters:
-// class FString                  LoginSessionUserUri            (Parm, ZeroConstructor)
 // class FString                  ChannelName                    (Parm, ZeroConstructor)
 // int                            AtlasChannelTypeAsInt          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            AttenuationModelAsInt32        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxDistance                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          MinDistance                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Rolloff                        (Parm, ZeroConstructor, IsPlainOldData)
+// int                            MaxDistance                    (Parm, ZeroConstructor, IsPlainOldData)
+// int                            MinDistance                    (Parm, ZeroConstructor, IsPlainOldData)
+// double                         Rolloff                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AShooterPlayerController::ClientJoinVivoxChannel(const class FString& LoginSessionUserUri, const class FString& ChannelName, int AtlasChannelTypeAsInt, int AttenuationModelAsInt32, float MaxDistance, float MinDistance, float Rolloff)
+void AShooterPlayerController::ClientJoinVivoxChannel(const class FString& ChannelName, int AtlasChannelTypeAsInt, int AttenuationModelAsInt32, int MaxDistance, int MinDistance, double Rolloff)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.ClientJoinVivoxChannel");
 
 	AShooterPlayerController_ClientJoinVivoxChannel_Params params;
-	params.LoginSessionUserUri = LoginSessionUserUri;
 	params.ChannelName = ChannelName;
 	params.AtlasChannelTypeAsInt = AtlasChannelTypeAsInt;
 	params.AttenuationModelAsInt32 = AttenuationModelAsInt32;
@@ -21207,6 +21519,26 @@ void AShooterPlayerController::ClientEndReceivingTribeLog()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.ClientEndReceivingTribeLog");
 
 	AShooterPlayerController_ClientEndReceivingTribeLog_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterPlayerController.ClientDrawUndermeshSphere
+// ()
+// Parameters:
+// int                            Radius                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AShooterPlayerController::ClientDrawUndermeshSphere(int Radius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerController.ClientDrawUndermeshSphere");
+
+	AShooterPlayerController_ClientDrawUndermeshSphere_Params params;
+	params.Radius = Radius;
 
 	auto flags = fn->FunctionFlags;
 
@@ -33537,6 +33869,27 @@ int APrimalStructure::BPGetStructureID(class APrimalStructure* PrimalStructure)
 }
 
 
+// Function ShooterGame.PrimalStructure.BPGetSnapPoints
+// ()
+// Parameters:
+// TArray<struct FPrimalStructureSnapPoint> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FPrimalStructureSnapPoint> APrimalStructure::BPGetSnapPoints()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructure.BPGetSnapPoints");
+
+	APrimalStructure_BPGetSnapPoints_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalStructure.BPGetInfoFromConsumedItemForPlacedStructure
 // ()
 // Parameters:
@@ -33744,14 +34097,14 @@ void APrimalStructure::BPBeginPreview()
 // Function ShooterGame.PrimalStructure.BPApplyCustomDurabilityOnPickup
 // ()
 // Parameters:
-// class UPrimalItem*             pickedup                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItem*             PickedUp                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void APrimalStructure::BPApplyCustomDurabilityOnPickup(class UPrimalItem* pickedup)
+void APrimalStructure::BPApplyCustomDurabilityOnPickup(class UPrimalItem* PickedUp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructure.BPApplyCustomDurabilityOnPickup");
 
 	APrimalStructure_BPApplyCustomDurabilityOnPickup_Params params;
-	params.pickedup = pickedup;
+	params.PickedUp = PickedUp;
 
 	auto flags = fn->FunctionFlags;
 
@@ -34800,6 +35153,29 @@ bool APrimalStructureItemContainer::AllowToggleActivation(class AShooterPlayerCo
 }
 
 
+// Function ShooterGame.PrimalStructureItemContainer.AdjustNetDestructionTime
+// ()
+// Parameters:
+// float                          Delta                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalStructureItemContainer::AdjustNetDestructionTime(float Delta)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructureItemContainer.AdjustNetDestructionTime");
+
+	APrimalStructureItemContainer_AdjustNetDestructionTime_Params params;
+	params.Delta = Delta;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalStructureItemContainer.AddToValidatedByPinCodePlayerControllers
 // ()
 // Parameters:
@@ -35721,9 +36097,10 @@ class ADroppedItemMission* AMissionType::SpawnMissionItem(class UClass* AnItemCl
 // float                          AIRangeMultiplier              (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ColorSet                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDoLosCheck                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bDoOverlapCheck                (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class APrimalDinoCharacter*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<class APrimalDinoCharacter*> AMissionType::SpawnMissionDinoGroupExtended(int NumDinos, float SpawnRadius, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, TArray<struct FDinoSetup> DinoSetups, TEnumAsByte<ESpawnPattern> Pattern, class AShooterPlayerController* OwnerPlayerController, float DebugDrawDuration, bool bApplyRotationToSpawnOffset, class UBehaviorTree* OverrideMissionBehaviorTree, bool bRandomizeDinos, bool bDontWander, bool bTargetingIgnoredByWildDinos, bool bTargetingIgnoreWildDinos, float AIRangeMultiplier, class UClass* ColorSet, bool bDoLosCheck)
+TArray<class APrimalDinoCharacter*> AMissionType::SpawnMissionDinoGroupExtended(int NumDinos, float SpawnRadius, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, TArray<struct FDinoSetup> DinoSetups, TEnumAsByte<ESpawnPattern> Pattern, class AShooterPlayerController* OwnerPlayerController, float DebugDrawDuration, bool bApplyRotationToSpawnOffset, class UBehaviorTree* OverrideMissionBehaviorTree, bool bRandomizeDinos, bool bDontWander, bool bTargetingIgnoredByWildDinos, bool bTargetingIgnoreWildDinos, float AIRangeMultiplier, class UClass* ColorSet, bool bDoLosCheck, bool bDoOverlapCheck)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.MissionType.SpawnMissionDinoGroupExtended");
 
@@ -35745,6 +36122,7 @@ TArray<class APrimalDinoCharacter*> AMissionType::SpawnMissionDinoGroupExtended(
 	params.AIRangeMultiplier = AIRangeMultiplier;
 	params.ColorSet = ColorSet;
 	params.bDoLosCheck = bDoLosCheck;
+	params.bDoOverlapCheck = bDoOverlapCheck;
 
 	auto flags = fn->FunctionFlags;
 
@@ -35821,9 +36199,10 @@ TArray<class APrimalDinoCharacter*> AMissionType::SpawnMissionDinoGroup(int NumD
 // float                          AIRangeMultiplier              (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ColorSet                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDoLosCheck                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bDoOverlapCheck                (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalDinoCharacter*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class APrimalDinoCharacter* AMissionType::SpawnMissionDino(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, const struct FDinoSetup& DinoSetup, class AShooterPlayerController* OwnerPlayerController, float DebugDrawDuration, bool bApplyRotationToSpawnOffset, class UBehaviorTree* OverrideMissionBehaviorTree, bool bDontWander, bool bTargetingIgnoredByWildDinos, bool bTargetingIgnoreWildDinos, float AIRangeMultiplier, class UClass* ColorSet, bool bDoLosCheck)
+class APrimalDinoCharacter* AMissionType::SpawnMissionDino(const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, const struct FDinoSetup& DinoSetup, class AShooterPlayerController* OwnerPlayerController, float DebugDrawDuration, bool bApplyRotationToSpawnOffset, class UBehaviorTree* OverrideMissionBehaviorTree, bool bDontWander, bool bTargetingIgnoredByWildDinos, bool bTargetingIgnoreWildDinos, float AIRangeMultiplier, class UClass* ColorSet, bool bDoLosCheck, bool bDoOverlapCheck)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.MissionType.SpawnMissionDino");
 
@@ -35841,6 +36220,7 @@ class APrimalDinoCharacter* AMissionType::SpawnMissionDino(const struct FVector&
 	params.AIRangeMultiplier = AIRangeMultiplier;
 	params.ColorSet = ColorSet;
 	params.bDoLosCheck = bDoLosCheck;
+	params.bDoOverlapCheck = bDoOverlapCheck;
 
 	auto flags = fn->FunctionFlags;
 
@@ -42420,6 +42800,28 @@ void APrimalBuff::SetupForInstigator()
 }
 
 
+// Function ShooterGame.PrimalBuff.SetGestationMonitoringTarget
+// ()
+// Parameters:
+// class APrimalDinoCharacter*    forTarget                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalBuff::SetGestationMonitoringTarget(class APrimalDinoCharacter* forTarget, bool bEnable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.SetGestationMonitoringTarget");
+
+	APrimalBuff_SetGestationMonitoringTarget_Params params;
+	params.forTarget = forTarget;
+	params.bEnable = bEnable;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalBuff.SetBuffCauser
 // ()
 // Parameters:
@@ -43155,6 +43557,27 @@ struct FRotator APrimalBuff::GetForcedBuffAimOverride(bool bIsWeaponAim)
 }
 
 
+// Function ShooterGame.PrimalBuff.GetEnabledGestationMonitoringTargets
+// ()
+// Parameters:
+// TArray<class APrimalDinoCharacter*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class APrimalDinoCharacter*> APrimalBuff::GetEnabledGestationMonitoringTargets()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.GetEnabledGestationMonitoringTargets");
+
+	APrimalBuff_GetEnabledGestationMonitoringTargets_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalBuff.GetDebugInfoString
 // ()
 // Parameters:
@@ -43761,6 +44184,29 @@ bool APrimalBuff::BPPreventRunning()
 }
 
 
+// Function ShooterGame.PrimalBuff.BPPreventRidingInstigator
+// ()
+// Parameters:
+// class APrimalCharacter*        ForPawn                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalBuff::BPPreventRidingInstigator(class APrimalCharacter* ForPawn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.BPPreventRidingInstigator");
+
+	APrimalBuff_BPPreventRidingInstigator_Params params;
+	params.ForPawn = ForPawn;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalBuff.BPPreventOnStartJump
 // ()
 // Parameters:
@@ -44201,6 +44647,28 @@ class UClass* APrimalBuff::BPOverrideBuffToGiveOnDeactivation()
 }
 
 
+// Function ShooterGame.PrimalBuff.BPOnPreventedFiringDisabledWeapon
+// ()
+// Parameters:
+// class AShooterWeapon*          weapon                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   PreventingTag                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalBuff::BPOnPreventedFiringDisabledWeapon(class AShooterWeapon* weapon, const struct FName& PreventingTag)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.BPOnPreventedFiringDisabledWeapon");
+
+	APrimalBuff_BPOnPreventedFiringDisabledWeapon_Params params;
+	params.weapon = weapon;
+	params.PreventingTag = PreventingTag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalBuff.BPOnOwnerMassTeleportEvent
 // ()
 // Parameters:
@@ -44408,6 +44876,31 @@ TArray<struct FBoneModifier> APrimalBuff::BPModifyPlayerBoneModifiers(TArray<str
 
 	APrimalBuff_BPModifyPlayerBoneModifiers_Params params;
 	params.InBoneModifiers = InBoneModifiers;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalBuff.BPModifyArmorValue
+// ()
+// Parameters:
+// class UPrimalItem*             ForItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BaseArmorValue                 (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APrimalBuff::BPModifyArmorValue(class UPrimalItem* ForItem, float BaseArmorValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.BPModifyArmorValue");
+
+	APrimalBuff_BPModifyArmorValue_Params params;
+	params.ForItem = ForItem;
+	params.BaseArmorValue = BaseArmorValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -44736,6 +45229,27 @@ void APrimalBuff::BPHandleOnStartAltFire(bool bFromGamepad)
 }
 
 
+// Function ShooterGame.PrimalBuff.BPGetPlayerFootStepSound
+// ()
+// Parameters:
+// class USoundCue*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class USoundCue* APrimalBuff::BPGetPlayerFootStepSound()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.BPGetPlayerFootStepSound");
+
+	APrimalBuff_BPGetPlayerFootStepSound_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalBuff.BPGetMoveAnimRate
 // ()
 // Parameters:
@@ -44839,6 +45353,27 @@ class FString APrimalBuff::BPGetDebugInfoString()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.BPGetDebugInfoString");
 
 	APrimalBuff_BPGetDebugInfoString_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalBuff.BPGetCrosshairColor
+// ()
+// Parameters:
+// struct FColor                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FColor APrimalBuff::BPGetCrosshairColor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff.BPGetCrosshairColor");
+
+	APrimalBuff_BPGetCrosshairColor_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -47223,6 +47758,33 @@ bool APrimalBuff_Companion::CanPlayCompanionReaction(const struct FCompanionReac
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalBuff_Companion.BPServerside_IsPerMapExplorerNoteUnlocked
+// ()
+// Parameters:
+// int                            ExplorerNoteIndex              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CouldDetermine                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           HasPlayerUnlockedNote          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void APrimalBuff_Companion::BPServerside_IsPerMapExplorerNoteUnlocked(int ExplorerNoteIndex, bool* CouldDetermine, bool* HasPlayerUnlockedNote)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalBuff_Companion.BPServerside_IsPerMapExplorerNoteUnlocked");
+
+	APrimalBuff_Companion_BPServerside_IsPerMapExplorerNoteUnlocked_Params params;
+	params.ExplorerNoteIndex = ExplorerNoteIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (CouldDetermine != nullptr)
+		*CouldDetermine = params.CouldDetermine;
+	if (HasPlayerUnlockedNote != nullptr)
+		*HasPlayerUnlockedNote = params.HasPlayerUnlockedNote;
 }
 
 
@@ -51323,6 +51885,27 @@ bool APrimalCharacter::IsOwningClient()
 }
 
 
+// Function ShooterGame.PrimalCharacter.IsOnSeatingStructure
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalCharacter::IsOnSeatingStructure()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.IsOnSeatingStructure");
+
+	APrimalCharacter_IsOnSeatingStructure_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalCharacter.IsMoving
 // ()
 // Parameters:
@@ -51545,6 +52128,27 @@ bool APrimalCharacter::IsFirstPerson()
 }
 
 
+// Function ShooterGame.PrimalCharacter.IsDeadOrDying
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalCharacter::IsDeadOrDying()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.IsDeadOrDying");
+
+	APrimalCharacter_IsDeadOrDying_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalCharacter.IsDamageOccludedByStructures
 // ()
 // Parameters:
@@ -51630,6 +52234,48 @@ bool APrimalCharacter::IsBlockedByShield(const struct FHitResult& HitInfo, const
 	params.HitInfo = HitInfo;
 	params.ShotDirection = ShotDirection;
 	params.bBlockAllPointDamage = bBlockAllPointDamage;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacter.IsBeingDestroyed
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalCharacter::IsBeingDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.IsBeingDestroyed");
+
+	APrimalCharacter_IsBeingDestroyed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacter.IsBaby
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalCharacter::IsBaby()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.IsBaby");
+
+	APrimalCharacter_IsBaby_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -51773,6 +52419,29 @@ bool APrimalCharacter::HasCryoSickness()
 }
 
 
+// Function ShooterGame.PrimalCharacter.HasBuffWithCustomTags
+// ()
+// Parameters:
+// TArray<struct FName>           customTags                     (Parm, ZeroConstructor)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalCharacter::HasBuffWithCustomTags(TArray<struct FName> customTags)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.HasBuffWithCustomTags");
+
+	APrimalCharacter_HasBuffWithCustomTags_Params params;
+	params.customTags = customTags;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalCharacter.HasBuffWithCustomTag
 // ()
 // Parameters:
@@ -51816,6 +52485,33 @@ bool APrimalCharacter::HasBuff(class UClass* BuffClass, bool useExactMatch)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacter.HasAnyBuffWithDisabledWeaponTag
+// ()
+// Parameters:
+// struct FName                   Tag                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class APrimalBuff*             FoundBuff                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalCharacter::HasAnyBuffWithDisabledWeaponTag(const struct FName& Tag, class APrimalBuff** FoundBuff)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.HasAnyBuffWithDisabledWeaponTag");
+
+	APrimalCharacter_HasAnyBuffWithDisabledWeaponTag_Params params;
+	params.Tag = Tag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (FoundBuff != nullptr)
+		*FoundBuff = params.FoundBuff;
 
 	return params.ReturnValue;
 }
@@ -52053,6 +52749,48 @@ TEnumAsByte<EPhysicalSurface> APrimalCharacter::GetPhysMatTypeFromHit(const stru
 
 	APrimalCharacter_GetPhysMatTypeFromHit_Params params;
 	params.FromHit = FromHit;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacter.GetPaintingTexture
+// ()
+// Parameters:
+// class UPaintingTexture*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UPaintingTexture* APrimalCharacter::GetPaintingTexture()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.GetPaintingTexture");
+
+	APrimalCharacter_GetPaintingTexture_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacter.GetPaintingMesh
+// ()
+// Parameters:
+// class UMeshComponent*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UMeshComponent* APrimalCharacter::GetPaintingMesh()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.GetPaintingMesh");
+
+	APrimalCharacter_GetPaintingMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -53318,6 +54056,23 @@ void APrimalCharacter::EnableBodiesGravity()
 }
 
 
+// Function ShooterGame.PrimalCharacter.EmitPoop
+// ()
+
+void APrimalCharacter::EmitPoop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.EmitPoop");
+
+	APrimalCharacter_EmitPoop_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalCharacter.DoSetRagdollPhysics
 // ()
 
@@ -53509,6 +54264,31 @@ class UActorComponent* APrimalCharacter::CreateSnapshotComponent(class AActor* F
 	params.Template = Template;
 	params.Tag = Tag;
 	params.Name = Name;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacter.ConsumeProjectileImpact
+// ()
+// Parameters:
+// class AShooterProjectile*      theProjectile                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              HitResult                      (ConstParm, Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalCharacter::ConsumeProjectileImpact(class AShooterProjectile* theProjectile, const struct FHitResult& HitResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.ConsumeProjectileImpact");
+
+	APrimalCharacter_ConsumeProjectileImpact_Params params;
+	params.theProjectile = theProjectile;
+	params.HitResult = HitResult;
 
 	auto flags = fn->FunctionFlags;
 
@@ -55173,6 +55953,33 @@ bool APrimalCharacter::BPIsConscious()
 }
 
 
+// Function ShooterGame.PrimalCharacter.BPIsBlockedByShield
+// ()
+// Parameters:
+// struct FHitResult              HitInfo                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector                 ShotDirection                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           bBlockAllPointDamage           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalCharacter::BPIsBlockedByShield(const struct FHitResult& HitInfo, const struct FVector& ShotDirection, bool bBlockAllPointDamage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.BPIsBlockedByShield");
+
+	APrimalCharacter_BPIsBlockedByShield_Params params;
+	params.HitInfo = HitInfo;
+	params.ShotDirection = ShotDirection;
+	params.bBlockAllPointDamage = bBlockAllPointDamage;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalCharacter.BPIsBasedOnDynamicActor
 // ()
 // Parameters:
@@ -55492,6 +56299,48 @@ class FString APrimalCharacter::BPGetDebugInfoString()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.BPGetDebugInfoString");
 
 	APrimalCharacter_BPGetDebugInfoString_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacter.BPGetArmorDurabilityDecreaseMultiplier
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APrimalCharacter::BPGetArmorDurabilityDecreaseMultiplier()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.BPGetArmorDurabilityDecreaseMultiplier");
+
+	APrimalCharacter_BPGetArmorDurabilityDecreaseMultiplier_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacter.BPGetApproachRadius
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APrimalCharacter::BPGetApproachRadius()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.BPGetApproachRadius");
+
+	APrimalCharacter_BPGetApproachRadius_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -56042,6 +56891,23 @@ void APrimalCharacter::BP_OnZoomOut()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.BP_OnZoomOut");
 
 	APrimalCharacter_BP_OnZoomOut_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalCharacter.BP_OnZoomInOrbitCam
+// ()
+
+void APrimalCharacter::BP_OnZoomInOrbitCam()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacter.BP_OnZoomInOrbitCam");
+
+	APrimalCharacter_BP_OnZoomInOrbitCam_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -57380,6 +58246,26 @@ void APrimalDinoCharacter::SetImprintPlayer(class AShooterCharacter* forChar)
 }
 
 
+// Function ShooterGame.PrimalDinoCharacter.SetGestationData
+// ()
+// Parameters:
+// struct FUnreplicatedEggData    GestationData                  (ConstParm, Parm, OutParm, ReferenceParm)
+
+void APrimalDinoCharacter::SetGestationData(const struct FUnreplicatedEggData& GestationData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.SetGestationData");
+
+	APrimalDinoCharacter_SetGestationData_Params params;
+	params.GestationData = GestationData;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalDinoCharacter.SetForceDisableClientGravitySim
 // ()
 // Parameters:
@@ -57405,14 +58291,16 @@ void APrimalDinoCharacter::SetForceDisableClientGravitySim(bool bForceDisable)
 // Parameters:
 // bool                           bFly                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bCancelForceLand               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           SkipAnimsPreventInputCheck     (Parm, ZeroConstructor, IsPlainOldData)
 
-void APrimalDinoCharacter::SetFlight(bool bFly, bool bCancelForceLand)
+void APrimalDinoCharacter::SetFlight(bool bFly, bool bCancelForceLand, bool SkipAnimsPreventInputCheck)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.SetFlight");
 
 	APrimalDinoCharacter_SetFlight_Params params;
 	params.bFly = bFly;
 	params.bCancelForceLand = bCancelForceLand;
+	params.SkipAnimsPreventInputCheck = SkipAnimsPreventInputCheck;
 
 	auto flags = fn->FunctionFlags;
 
@@ -57840,6 +58728,48 @@ void APrimalDinoCharacter::ResetBrainComponent()
 }
 
 
+// Function ShooterGame.PrimalDinoCharacter.RequestTerminateEmbryo
+// ()
+// Parameters:
+// class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalDinoCharacter::RequestTerminateEmbryo(class APlayerController* ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.RequestTerminateEmbryo");
+
+	APrimalDinoCharacter_RequestTerminateEmbryo_Params params;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.RequestDisplayEmbryoData
+// ()
+// Parameters:
+// class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalDinoCharacter::RequestDisplayEmbryoData(class APlayerController* ForPC, bool bEnable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.RequestDisplayEmbryoData");
+
+	APrimalDinoCharacter_RequestDisplayEmbryoData_Params params;
+	params.ForPC = ForPC;
+	params.bEnable = bEnable;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalDinoCharacter.RemovePassenger
 // ()
 // Parameters:
@@ -58018,6 +58948,27 @@ void APrimalDinoCharacter::ProcessOrderAttackTarget(class AActor* TheTarget, boo
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.PreventShowingDinoTooltip
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalDinoCharacter::PreventShowingDinoTooltip()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.PreventShowingDinoTooltip");
+
+	APrimalDinoCharacter_PreventShowingDinoTooltip_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -58441,6 +59392,23 @@ void APrimalDinoCharacter::NotifyFlyerLanded__DelegateSignature(class APrimalDin
 }
 
 
+// Function ShooterGame.PrimalDinoCharacter.NotifyClientsEmbryoTerminated
+// ()
+
+void APrimalDinoCharacter::NotifyClientsEmbryoTerminated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.NotifyClientsEmbryoTerminated");
+
+	APrimalDinoCharacter_NotifyClientsEmbryoTerminated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalDinoCharacter.NotifyClearRider__DelegateSignature
 // ()
 // Parameters:
@@ -58717,6 +59685,27 @@ bool APrimalDinoCharacter::IsInTekShield()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.IsInTekShield");
 
 	APrimalDinoCharacter_IsInTekShield_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.IsInFlyerPreventionVolume
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalDinoCharacter::IsInFlyerPreventionVolume()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.IsInFlyerPreventionVolume");
+
+	APrimalDinoCharacter_IsInFlyerPreventionVolume_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -59033,6 +60022,27 @@ bool APrimalDinoCharacter::HasSelfBuried()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.HasSelfBuried");
 
 	APrimalDinoCharacter_HasSelfBuried_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.HasOfflineRider
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalDinoCharacter::HasOfflineRider()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.HasOfflineRider");
+
+	APrimalDinoCharacter_HasOfflineRider_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -59404,6 +60414,28 @@ class USkeletalMeshComponent* APrimalDinoCharacter::GetSaddleMeshComponent()
 }
 
 
+// Function ShooterGame.PrimalDinoCharacter.GetSaddleActorComponents
+// ()
+// Parameters:
+// TArray<class UActorComponent*> OutMeshes                      (Parm, OutParm, ZeroConstructor)
+
+void APrimalDinoCharacter::GetSaddleActorComponents(TArray<class UActorComponent*>* OutMeshes)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.GetSaddleActorComponents");
+
+	APrimalDinoCharacter_GetSaddleActorComponents_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutMeshes != nullptr)
+		*OutMeshes = params.OutMeshes;
+}
+
+
 // Function ShooterGame.PrimalDinoCharacter.GetRootYawSpeed
 // ()
 // Parameters:
@@ -59646,6 +60678,28 @@ float APrimalDinoCharacter::GetGestationTimeRemaining()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.GetGestationData
+// ()
+// Parameters:
+// struct FUnreplicatedEggData    GestationData                  (Parm, OutParm)
+
+void APrimalDinoCharacter::GetGestationData(struct FUnreplicatedEggData* GestationData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.GetGestationData");
+
+	APrimalDinoCharacter_GetGestationData_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (GestationData != nullptr)
+		*GestationData = params.GestationData;
 }
 
 
@@ -61683,6 +62737,35 @@ float APrimalDinoCharacter::BPSetSimulatedInterpRollOverride()
 }
 
 
+// Function ShooterGame.PrimalDinoCharacter.BPSetInitialAimOffsetTargets
+// ()
+// Parameters:
+// struct FVector                 TargetRootLoc                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                TargetAimRot                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 OutTargetRootLoc               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                OutTargetAimRot                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void APrimalDinoCharacter::BPSetInitialAimOffsetTargets(const struct FVector& TargetRootLoc, const struct FRotator& TargetAimRot, struct FVector* OutTargetRootLoc, struct FRotator* OutTargetAimRot)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.BPSetInitialAimOffsetTargets");
+
+	APrimalDinoCharacter_BPSetInitialAimOffsetTargets_Params params;
+	params.TargetRootLoc = TargetRootLoc;
+	params.TargetAimRot = TargetAimRot;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutTargetRootLoc != nullptr)
+		*OutTargetRootLoc = params.OutTargetRootLoc;
+	if (OutTargetAimRot != nullptr)
+		*OutTargetAimRot = params.OutTargetAimRot;
+}
+
+
 // Function ShooterGame.PrimalDinoCharacter.BPSetForcedAggro
 // ()
 // Parameters:
@@ -61825,6 +62908,28 @@ bool APrimalDinoCharacter::BPPreventOrderAllowed(class APrimalCharacter* FromCha
 }
 
 
+// Function ShooterGame.PrimalDinoCharacter.BPPrepareForLaunchFromShoulder
+// ()
+// Parameters:
+// struct FVector                 viewLoc                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 viewDir                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void APrimalDinoCharacter::BPPrepareForLaunchFromShoulder(const struct FVector& viewLoc, const struct FVector& viewDir)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.BPPrepareForLaunchFromShoulder");
+
+	APrimalDinoCharacter_BPPrepareForLaunchFromShoulder_Params params;
+	params.viewLoc = viewLoc;
+	params.viewDir = viewDir;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalDinoCharacter.BPOverrideTamingDescriptionLabel
 // ()
 // Parameters:
@@ -61935,6 +63040,27 @@ bool APrimalDinoCharacter::BPOverrideMoveToOrder(const struct FVector& MoveToLoc
 	APrimalDinoCharacter_BPOverrideMoveToOrder_Params params;
 	params.MoveToLocation = MoveToLocation;
 	params.OrderingPlayer = OrderingPlayer;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.BPOverrideIsSubmergedForWaterTargeting
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalDinoCharacter::BPOverrideIsSubmergedForWaterTargeting()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.BPOverrideIsSubmergedForWaterTargeting");
+
+	APrimalDinoCharacter_BPOverrideIsSubmergedForWaterTargeting_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -62254,6 +63380,26 @@ void APrimalDinoCharacter::BPOnDinoStartled(class UAnimMontage* StartledAnimPlay
 	APrimalDinoCharacter_BPOnDinoStartled_Params params;
 	params.StartledAnimPlayed = StartledAnimPlayed;
 	params.bFromAIController = bFromAIController;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.BPOnDinoFiredProjectile
+// ()
+// Parameters:
+// class AShooterProjectile*      Projectile                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalDinoCharacter::BPOnDinoFiredProjectile(class AShooterProjectile* Projectile)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.BPOnDinoFiredProjectile");
+
+	APrimalDinoCharacter_BPOnDinoFiredProjectile_Params params;
+	params.Projectile = Projectile;
 
 	auto flags = fn->FunctionFlags;
 
@@ -62953,6 +64099,31 @@ float APrimalDinoCharacter::BPGetTargetingDesirability(class AActor* Attacker)
 
 	APrimalDinoCharacter_BPGetTargetingDesirability_Params params;
 	params.Attacker = Attacker;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.BPGetRidingMultiUseEntries
+// ()
+// Parameters:
+// class APlayerController*       ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FMultiUseEntry>  MultiUseEntries                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FMultiUseEntry> APrimalDinoCharacter::BPGetRidingMultiUseEntries(class APlayerController* ForPC, TArray<struct FMultiUseEntry> MultiUseEntries)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.BPGetRidingMultiUseEntries");
+
+	APrimalDinoCharacter_BPGetRidingMultiUseEntries_Params params;
+	params.ForPC = ForPC;
+	params.MultiUseEntries = MultiUseEntries;
 
 	auto flags = fn->FunctionFlags;
 
@@ -63851,6 +65022,29 @@ bool APrimalDinoCharacter::BPCanMountOnCharacter(class APrimalCharacter* Charact
 
 	APrimalDinoCharacter_BPCanMountOnCharacter_Params params;
 	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.BPCanLand
+// ()
+// Parameters:
+// bool                           CanLand                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool APrimalDinoCharacter::BPCanLand(bool CanLand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.BPCanLand");
+
+	APrimalDinoCharacter_BPCanLand_Params params;
+	params.CanLand = CanLand;
 
 	auto flags = fn->FunctionFlags;
 
@@ -64862,6 +66056,23 @@ void APrimalDinoCharacter::BlueprintDrawFloatingHUD(class AShooterHUD* HUD, floa
 	params.CenterX = CenterX;
 	params.CenterY = CenterY;
 	params.DrawScale = DrawScale;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalDinoCharacter.BlueprintDestroyActor
+// ()
+
+void APrimalDinoCharacter::BlueprintDestroyActor()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalDinoCharacter.BlueprintDestroyActor");
+
+	APrimalDinoCharacter_BlueprintDestroyActor_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -66325,6 +67536,28 @@ void AShooterCharacter::ServerReleaseGrapHookCable(bool bReleasing)
 
 	AShooterCharacter_ServerReleaseGrapHookCable_Params params;
 	params.bReleasing = bReleasing;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCharacter.ServerPrepareMountedDinoForLaunch
+// ()
+// Parameters:
+// struct FVector                 viewLoc                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 viewDir                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void AShooterCharacter::ServerPrepareMountedDinoForLaunch(const struct FVector& viewLoc, const struct FVector& viewDir)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCharacter.ServerPrepareMountedDinoForLaunch");
+
+	AShooterCharacter_ServerPrepareMountedDinoForLaunch_Params params;
+	params.viewLoc = viewLoc;
+	params.viewDir = viewDir;
 
 	auto flags = fn->FunctionFlags;
 
@@ -69376,6 +70609,46 @@ void UPrimalCharacterStatusComponent::RescaleAllStats()
 }
 
 
+// Function ShooterGame.PrimalCharacterStatusComponent.RemoveStatusValueModifierByInstigator
+// ()
+// Parameters:
+// class AActor*                  Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalCharacterStatusComponent::RemoveStatusValueModifierByInstigator(class AActor* Instigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacterStatusComponent.RemoveStatusValueModifierByInstigator");
+
+	UPrimalCharacterStatusComponent_RemoveStatusValueModifierByInstigator_Params params;
+	params.Instigator = Instigator;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalCharacterStatusComponent.RemoveStatusValueModifierByIndex
+// ()
+// Parameters:
+// int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalCharacterStatusComponent::RemoveStatusValueModifierByIndex(int index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacterStatusComponent.RemoveStatusValueModifierByIndex");
+
+	UPrimalCharacterStatusComponent_RemoveStatusValueModifierByIndex_Params params;
+	params.index = index;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalCharacterStatusComponent.OnRep_ReplicatedExperiencePoints
 // ()
 
@@ -69555,6 +70828,27 @@ bool UPrimalCharacterStatusComponent::IsAtMaxLevel()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacterStatusComponent.IsAtMaxLevel");
 
 	UPrimalCharacterStatusComponent_IsAtMaxLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.PrimalCharacterStatusComponent.IsAtMaxExperience
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPrimalCharacterStatusComponent::IsAtMaxExperience()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacterStatusComponent.IsAtMaxExperience");
+
+	UPrimalCharacterStatusComponent_IsAtMaxExperience_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -70300,8 +71594,9 @@ float UPrimalCharacterStatusComponent::BPAdjustStatusValueModification(TEnumAsBy
 // TEnumAsByte<EPrimalCharacterStatusValue> StopAtValueNearMax             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bMakeUntameable                (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ScaleValueByCharacterDamageType (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalCharacterStatusComponent::AddStatusValueModifier(TEnumAsByte<EPrimalCharacterStatusValue> ValueType, float amount, float Speed, bool bContinueOnUnchangedValue, bool bSetValue, int StatusValueModifierDescriptionIndex, bool bResetExistingModifierDescriptionIndex, float LimitExistingModifierDescriptionToMaxAmount, bool bSetAdditionalValue, TEnumAsByte<EPrimalCharacterStatusValue> StopAtValueNearMax, bool bMakeUntameable, class UClass* ScaleValueByCharacterDamageType)
+void UPrimalCharacterStatusComponent::AddStatusValueModifier(TEnumAsByte<EPrimalCharacterStatusValue> ValueType, float amount, float Speed, bool bContinueOnUnchangedValue, bool bSetValue, int StatusValueModifierDescriptionIndex, bool bResetExistingModifierDescriptionIndex, float LimitExistingModifierDescriptionToMaxAmount, bool bSetAdditionalValue, TEnumAsByte<EPrimalCharacterStatusValue> StopAtValueNearMax, bool bMakeUntameable, class UClass* ScaleValueByCharacterDamageType, class AActor* Instigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalCharacterStatusComponent.AddStatusValueModifier");
 
@@ -70318,6 +71613,7 @@ void UPrimalCharacterStatusComponent::AddStatusValueModifier(TEnumAsByte<EPrimal
 	params.StopAtValueNearMax = StopAtValueNearMax;
 	params.bMakeUntameable = bMakeUntameable;
 	params.ScaleValueByCharacterDamageType = ScaleValueByCharacterDamageType;
+	params.Instigator = Instigator;
 
 	auto flags = fn->FunctionFlags;
 
@@ -75043,6 +76339,23 @@ void APrimalStructureBearTrap::BPNotifyImmobilizedCharacterIsDeadOrInConscious(b
 }
 
 
+// Function ShooterGame.PrimalStructureBearTrap.BPDie
+// ()
+
+void APrimalStructureBearTrap::BPDie()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructureBearTrap.BPDie");
+
+	APrimalStructureBearTrap_BPDie_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalStructureDoor.OnRep_DoorOpenState
 // ()
 // Parameters:
@@ -76532,6 +77845,27 @@ void APrimalStructureTurretBallista::ClientsFireProjectile(const struct FVector&
 }
 
 
+// Function ShooterGame.PrimalStructureTurretBallista.BPGetDamageMultiplier
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float APrimalStructureTurretBallista::BPGetDamageMultiplier()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructureTurretBallista.BPGetDamageMultiplier");
+
+	APrimalStructureTurretBallista_BPGetDamageMultiplier_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalStructureTurretBallista.BPFiredWeapon
 // ()
 
@@ -76821,6 +78155,23 @@ void APrimalStructureUnderwaterBase::ChangedCompartmentFloodState()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructureUnderwaterBase.ChangedCompartmentFloodState");
 
 	APrimalStructureUnderwaterBase_ChangedCompartmentFloodState_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalStructureUnderwaterBase.BPRefreshFloodState
+// ()
+
+void APrimalStructureUnderwaterBase::BPRefreshFloodState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalStructureUnderwaterBase.BPRefreshFloodState");
+
+	APrimalStructureUnderwaterBase_BPRefreshFloodState_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -80654,6 +82005,23 @@ void UUI_MainMenu::TotalConversionSelected(class UWidget* theWidget)
 }
 
 
+// Function ShooterGame.UI_MainMenu.HandleDLCInstalledEvent
+// ()
+
+void UUI_MainMenu::HandleDLCInstalledEvent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.UI_MainMenu.HandleDLCInstalledEvent");
+
+	UUI_MainMenu_HandleDLCInstalledEvent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.UI_MapMarkersEntry.OnTextCommitted
 // ()
 // Parameters:
@@ -81360,6 +82728,40 @@ void UPrimalWorldBuffCustomImplement::BuffStackDecrease(int newStackCount)
 
 	UPrimalWorldBuffCustomImplement_BuffStackDecrease_Params params;
 	params.newStackCount = newStackCount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalWorldBuffData.UnsuspendWorldBuffs
+// ()
+
+void UPrimalWorldBuffData::UnsuspendWorldBuffs()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalWorldBuffData.UnsuspendWorldBuffs");
+
+	UPrimalWorldBuffData_UnsuspendWorldBuffs_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.PrimalWorldBuffData.SuspendWorldBuffs
+// ()
+
+void UPrimalWorldBuffData::SuspendWorldBuffs()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalWorldBuffData.SuspendWorldBuffs");
+
+	UPrimalWorldBuffData_SuspendWorldBuffs_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -82188,6 +83590,26 @@ void UShooterCheatManager::UnbanPlayer(const class FString& PlayerSteamName)
 }
 
 
+// Function ShooterGame.ShooterCheatManager.TTC
+// ()
+// Parameters:
+// class FString                  DinoID                         (Parm, ZeroConstructor)
+
+void UShooterCheatManager::TTC(const class FString& DinoID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.TTC");
+
+	UShooterCheatManager_TTC_Params params;
+	params.DinoID = DinoID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.TribeStructureAudit
 // ()
 // Parameters:
@@ -82406,6 +83828,23 @@ void UShooterCheatManager::ToggleGun()
 }
 
 
+// Function ShooterGame.ShooterCheatManager.ToggleFreezeStatusValues
+// ()
+
+void UShooterCheatManager::ToggleFreezeStatusValues()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ToggleFreezeStatusValues");
+
+	UShooterCheatManager_ToggleFreezeStatusValues_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.ToggleDamageNumbers
 // ()
 
@@ -82534,6 +83973,26 @@ void UShooterCheatManager::TeleportToPlayer(int64_t PlayerId)
 }
 
 
+// Function ShooterGame.ShooterCheatManager.TeleportToCreature
+// ()
+// Parameters:
+// class FString                  DinoID                         (Parm, ZeroConstructor)
+
+void UShooterCheatManager::TeleportToCreature(const class FString& DinoID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.TeleportToCreature");
+
+	UShooterCheatManager_TeleportToCreature_Params params;
+	params.DinoID = DinoID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.TeleportToActorLocation
 // ()
 // Parameters:
@@ -82605,6 +84064,70 @@ void UShooterCheatManager::TeleportPlayerIDToMe(int64_t PlayerId)
 
 	UShooterCheatManager_TeleportPlayerIDToMe_Params params;
 	params.PlayerId = PlayerId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.TeleportCreatureToMe
+// ()
+// Parameters:
+// class FString                  DinoID                         (Parm, ZeroConstructor)
+
+void UShooterCheatManager::TeleportCreatureToMe(const class FString& DinoID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.TeleportCreatureToMe");
+
+	UShooterCheatManager_TeleportCreatureToMe_Params params;
+	params.DinoID = DinoID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.TCTM
+// ()
+// Parameters:
+// class FString                  DinoID                         (Parm, ZeroConstructor)
+
+void UShooterCheatManager::TCTM(const class FString& DinoID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.TCTM");
+
+	UShooterCheatManager_TCTM_Params params;
+	params.DinoID = DinoID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.TameAOE
+// ()
+// Parameters:
+// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          affinity                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          effectiveness                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::TameAOE(float Radius, float affinity, float effectiveness)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.TameAOE");
+
+	UShooterCheatManager_TameAOE_Params params;
+	params.Radius = Radius;
+	params.affinity = affinity;
+	params.effectiveness = effectiveness;
 
 	auto flags = fn->FunctionFlags;
 
@@ -83758,6 +85281,23 @@ void UShooterCheatManager::SetBabyAge(float AgeValue)
 }
 
 
+// Function ShooterGame.ShooterCheatManager.SetAllAvailableMissionsComplete
+// ()
+
+void UShooterCheatManager::SetAllAvailableMissionsComplete()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.SetAllAvailableMissionsComplete");
+
+	UShooterCheatManager_SetAllAvailableMissionsComplete_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.SetActiveMissionDebugFlags
 // ()
 // Parameters:
@@ -84007,6 +85547,23 @@ void UShooterCheatManager::ResetLiveTuningOverloads()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ResetLiveTuningOverloads");
 
 	UShooterCheatManager_ResetLiveTuningOverloads_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ResetLeaderboards
+// ()
+
+void UShooterCheatManager::ResetLeaderboards()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ResetLeaderboards");
+
+	UShooterCheatManager_ResetLeaderboards_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -84300,6 +85857,30 @@ void UShooterCheatManager::ReassertColorization()
 }
 
 
+// Function ShooterGame.ShooterCheatManager.RainMonkeys
+// ()
+// Parameters:
+// int                            NumberActors                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          SpreadAmount                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ZOffset                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::RainMonkeys(int NumberActors, float SpreadAmount, float ZOffset)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.RainMonkeys");
+
+	UShooterCheatManager_RainMonkeys_Params params;
+	params.NumberActors = NumberActors;
+	params.SpreadAmount = SpreadAmount;
+	params.ZOffset = ZOffset;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.RainDinos
 // ()
 // Parameters:
@@ -84423,6 +86004,23 @@ void UShooterCheatManager::PlayerCommand(const class FString& TheCommand)
 
 	UShooterCheatManager_PlayerCommand_Params params;
 	params.TheCommand = TheCommand;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.pgosweep
+// ()
+
+void UShooterCheatManager::pgosweep()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.pgosweep");
+
+	UShooterCheatManager_pgosweep_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -84591,6 +86189,23 @@ void UShooterCheatManager::LvlUp(int64_t PlayerId, int16_t Level)
 }
 
 
+// Function ShooterGame.ShooterCheatManager.LogStackTrace
+// ()
+
+void UShooterCheatManager::LogStackTrace()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.LogStackTrace");
+
+	UShooterCheatManager_LogStackTrace_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.LMA
 // ()
 
@@ -84667,6 +86282,40 @@ void UShooterCheatManager::ListDinos()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ListDinos");
 
 	UShooterCheatManager_ListDinos_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ListAllPlayerBuffs
+// ()
+
+void UShooterCheatManager::ListAllPlayerBuffs()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ListAllPlayerBuffs");
+
+	UShooterCheatManager_ListAllPlayerBuffs_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ListAllItems
+// ()
+
+void UShooterCheatManager::ListAllItems()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ListAllItems");
+
+	UShooterCheatManager_ListAllItems_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -84845,8 +86494,9 @@ void UShooterCheatManager::KillPlayer(int64_t PlayerId)
 // struct FName                   Category                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            TribeId                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           destroyOnly                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UShooterCheatManager::KillAOETribe(const struct FName& Category, float Radius, int TribeId)
+void UShooterCheatManager::KillAOETribe(const struct FName& Category, float Radius, int TribeId, bool destroyOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.KillAOETribe");
 
@@ -84854,6 +86504,7 @@ void UShooterCheatManager::KillAOETribe(const struct FName& Category, float Radi
 	params.Category = Category;
 	params.Radius = Radius;
 	params.TribeId = TribeId;
+	params.destroyOnly = destroyOnly;
 
 	auto flags = fn->FunctionFlags;
 
@@ -84947,14 +86598,14 @@ void UShooterCheatManager::JoinTribe(int64_t PlayerId, int TribeTeamID)
 // Function ShooterGame.ShooterCheatManager.IsUndermesh
 // ()
 // Parameters:
-// float                          DebugDrawSeconds               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          debugDrawSeconds               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UShooterCheatManager::IsUndermesh(float DebugDrawSeconds)
+void UShooterCheatManager::IsUndermesh(float debugDrawSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.IsUndermesh");
 
 	UShooterCheatManager_IsUndermesh_Params params;
-	params.DebugDrawSeconds = DebugDrawSeconds;
+	params.debugDrawSeconds = debugDrawSeconds;
 
 	auto flags = fn->FunctionFlags;
 
@@ -85127,6 +86778,46 @@ void UShooterCheatManager::HatchEgg()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.HatchEgg");
 
 	UShooterCheatManager_HatchEgg_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.GTIPL
+// ()
+// Parameters:
+// int                            TribeId                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::GTIPL(int TribeId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GTIPL");
+
+	UShooterCheatManager_GTIPL_Params params;
+	params.TribeId = TribeId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.GTIDPL
+// ()
+// Parameters:
+// int                            TribeId                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::GTIDPL(int TribeId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GTIDPL");
+
+	UShooterCheatManager_GTIDPL_Params params;
+	params.TribeId = TribeId;
 
 	auto flags = fn->FunctionFlags;
 
@@ -85318,6 +87009,26 @@ void UShooterCheatManager::GiveResources()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GiveResources");
 
 	UShooterCheatManager_GiveResources_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.GiveMaxLevel
+// ()
+// Parameters:
+// int                            PlayerId                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::GiveMaxLevel(int PlayerId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GiveMaxLevel");
+
+	UShooterCheatManager_GiveMaxLevel_Params params;
+	params.PlayerId = PlayerId;
 
 	auto flags = fn->FunctionFlags;
 
@@ -85672,6 +87383,47 @@ void UShooterCheatManager::GiveCreativeMode()
 }
 
 
+// Function ShooterGame.ShooterCheatManager.GiveBossItems
+// ()
+
+void UShooterCheatManager::GiveBossItems()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GiveBossItems");
+
+	UShooterCheatManager_GiveBossItems_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.GiveBossEngrams
+// ()
+// Parameters:
+// int                            PlayerId                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   BossName                       (Parm, ZeroConstructor, IsPlainOldData)
+// int8_t                         difficulty                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::GiveBossEngrams(int PlayerId, const struct FName& BossName, int8_t difficulty)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GiveBossEngrams");
+
+	UShooterCheatManager_GiveBossEngrams_Params params;
+	params.PlayerId = PlayerId;
+	params.BossName = BossName;
+	params.difficulty = difficulty;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.GiveArmorSet
 // ()
 // Parameters:
@@ -85774,6 +87526,26 @@ void UShooterCheatManager::GetTribeIdPlayerList(int TribeId)
 }
 
 
+// Function ShooterGame.ShooterCheatManager.GetTribe
+// ()
+// Parameters:
+// int                            TribeId                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::GetTribe(int TribeId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GetTribe");
+
+	UShooterCheatManager_GetTribe_Params params;
+	params.TribeId = TribeId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.GetSteamIDForPlayerID
 // ()
 // Parameters:
@@ -85859,6 +87631,74 @@ void UShooterCheatManager::GetChat()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GetChat");
 
 	UShooterCheatManager_GetChat_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.GetAllTamesNumber
+// ()
+
+void UShooterCheatManager::GetAllTamesNumber()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GetAllTamesNumber");
+
+	UShooterCheatManager_GetAllTamesNumber_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.GetAllStructuresNumber
+// ()
+
+void UShooterCheatManager::GetAllStructuresNumber()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GetAllStructuresNumber");
+
+	UShooterCheatManager_GetAllStructuresNumber_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.GetAllNumbers
+// ()
+
+void UShooterCheatManager::GetAllNumbers()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GetAllNumbers");
+
+	UShooterCheatManager_GetAllNumbers_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.GetAllItemsNumber
+// ()
+
+void UShooterCheatManager::GetAllItemsNumber()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.GetAllItemsNumber");
+
+	UShooterCheatManager_GetAllItemsNumber_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -86220,14 +88060,16 @@ void UShooterCheatManager::ForceGiveBuff(const struct FName& BuffBlueprintPath, 
 // Function ShooterGame.ShooterCheatManager.ForceEnableMeshCheckingOnMe
 // ()
 // Parameters:
-// bool                           bEnableChecking                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bEnableKillChecking            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bEnableTeleportingChecking     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UShooterCheatManager::ForceEnableMeshCheckingOnMe(bool bEnableChecking)
+void UShooterCheatManager::ForceEnableMeshCheckingOnMe(bool bEnableKillChecking, bool bEnableTeleportingChecking)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ForceEnableMeshCheckingOnMe");
 
 	UShooterCheatManager_ForceEnableMeshCheckingOnMe_Params params;
-	params.bEnableChecking = bEnableChecking;
+	params.bEnableKillChecking = bEnableKillChecking;
+	params.bEnableTeleportingChecking = bEnableTeleportingChecking;
 
 	auto flags = fn->FunctionFlags;
 
@@ -86282,6 +88124,82 @@ void UShooterCheatManager::FindMutagenDrops()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.FindMutagenDrops");
 
 	UShooterCheatManager_FindMutagenDrops_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.FEMCOM
+// ()
+// Parameters:
+// bool                           bEnableKillChecking            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bEnableTeleportingChecking     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::FEMCOM(bool bEnableKillChecking, bool bEnableTeleportingChecking)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.FEMCOM");
+
+	UShooterCheatManager_FEMCOM_Params params;
+	params.bEnableKillChecking = bEnableKillChecking;
+	params.bEnableTeleportingChecking = bEnableTeleportingChecking;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ExportTargetPlayerData
+// ()
+
+void UShooterCheatManager::ExportTargetPlayerData()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ExportTargetPlayerData");
+
+	UShooterCheatManager_ExportTargetPlayerData_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ExportPlayerData
+// ()
+// Parameters:
+// int64_t                        PlayerId                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::ExportPlayerData(int64_t PlayerId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ExportPlayerData");
+
+	UShooterCheatManager_ExportPlayerData_Params params;
+	params.PlayerId = PlayerId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ExportCurrentPlayerData
+// ()
+
+void UShooterCheatManager::ExportCurrentPlayerData()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.ExportCurrentPlayerData");
+
+	UShooterCheatManager_ExportCurrentPlayerData_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -86455,6 +88373,46 @@ void UShooterCheatManager::DrawDebugBoxForVolumes(float Duration, int VolumeClas
 	params.bDebugAllVolumeClasses = bDebugAllVolumeClasses;
 	params.bDrawSolidBox = bDrawSolidBox;
 	params.LineThickness = LineThickness;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.DrainWater
+// ()
+// Parameters:
+// float                          HowMuch                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::DrainWater(float HowMuch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.DrainWater");
+
+	UShooterCheatManager_DrainWater_Params params;
+	params.HowMuch = HowMuch;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.DrainFood
+// ()
+// Parameters:
+// float                          HowMuch                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::DrainFood(float HowMuch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.DrainFood");
+
+	UShooterCheatManager_DrainFood_Params params;
+	params.HowMuch = HowMuch;
 
 	auto flags = fn->FunctionFlags;
 
@@ -86683,13 +88641,15 @@ void UShooterCheatManager::DestroyWildDinos()
 // ()
 // Parameters:
 // class FString                  ClassName                      (Parm, ZeroConstructor)
+// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UShooterCheatManager::DestroyWildDinoClasses(const class FString& ClassName)
+void UShooterCheatManager::DestroyWildDinoClasses(const class FString& ClassName, bool bExactMatch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.DestroyWildDinoClasses");
 
 	UShooterCheatManager_DestroyWildDinoClasses_Params params;
 	params.ClassName = ClassName;
+	params.bExactMatch = bExactMatch;
 
 	auto flags = fn->FunctionFlags;
 
@@ -86873,6 +88833,57 @@ void UShooterCheatManager::DestroyStructures()
 }
 
 
+// Function ShooterGame.ShooterCheatManager.DestroyMyTarget4
+// ()
+
+void UShooterCheatManager::DestroyMyTarget4()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.DestroyMyTarget4");
+
+	UShooterCheatManager_DestroyMyTarget4_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.DestroyMyTarget3
+// ()
+
+void UShooterCheatManager::DestroyMyTarget3()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.DestroyMyTarget3");
+
+	UShooterCheatManager_DestroyMyTarget3_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.DestroyMyTarget2
+// ()
+
+void UShooterCheatManager::DestroyMyTarget2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.DestroyMyTarget2");
+
+	UShooterCheatManager_DestroyMyTarget2_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.DestroyMyTarget
 // ()
 
@@ -86929,6 +88940,28 @@ void UShooterCheatManager::DestroyFoliage(float Radius, bool PutFoliageResources
 }
 
 
+// Function ShooterGame.ShooterCheatManager.DestroyAOE
+// ()
+// Parameters:
+// struct FName                   Category                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::DestroyAOE(const struct FName& Category, float Radius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.DestroyAOE");
+
+	UShooterCheatManager_DestroyAOE_Params params;
+	params.Category = Category;
+	params.Radius = Radius;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.DestroyAllTames
 // ()
 
@@ -86967,13 +89000,15 @@ void UShooterCheatManager::DestroyAllEnemies()
 // ()
 // Parameters:
 // class FString                  ClassName                      (Parm, ZeroConstructor)
+// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UShooterCheatManager::DestroyActors(const class FString& ClassName)
+void UShooterCheatManager::DestroyActors(const class FString& ClassName, bool bExactMatch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.DestroyActors");
 
 	UShooterCheatManager_DestroyActors_Params params;
 	params.ClassName = ClassName;
+	params.bExactMatch = bExactMatch;
 
 	auto flags = fn->FunctionFlags;
 
@@ -87159,6 +89194,63 @@ void UShooterCheatManager::DCMSet(const struct FName& Cheat, float val)
 	UShooterCheatManager_DCMSet_Params params;
 	params.Cheat = Cheat;
 	params.val = val;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.CryoMyTarget
+// ()
+
+void UShooterCheatManager::CryoMyTarget()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.CryoMyTarget");
+
+	UShooterCheatManager_CryoMyTarget_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.CryoAOE
+// ()
+// Parameters:
+// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::CryoAOE(float Radius)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.CryoAOE");
+
+	UShooterCheatManager_CryoAOE_Params params;
+	params.Radius = Radius;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.Cryo
+// ()
+// Parameters:
+// class FString                  DinoID                         (Parm, ZeroConstructor)
+
+void UShooterCheatManager::Cryo(const class FString& DinoID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.Cryo");
+
+	UShooterCheatManager_Cryo_Params params;
+	params.DinoID = DinoID;
 
 	auto flags = fn->FunctionFlags;
 
@@ -87494,6 +89586,48 @@ void UShooterCheatManager::AddEquipmentDurability(float durability)
 
 	UShooterCheatManager_AddEquipmentDurability_Params params;
 	params.durability = durability;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.AddChibiExpToPlayer
+// ()
+// Parameters:
+// int64_t                        PlayerId                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          HowMuch                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::AddChibiExpToPlayer(int64_t PlayerId, float HowMuch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.AddChibiExpToPlayer");
+
+	UShooterCheatManager_AddChibiExpToPlayer_Params params;
+	params.PlayerId = PlayerId;
+	params.HowMuch = HowMuch;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.AddChibiExp
+// ()
+// Parameters:
+// float                          HowMuch                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UShooterCheatManager::AddChibiExp(float HowMuch)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterCheatManager.AddChibiExp");
+
+	UShooterCheatManager_AddChibiExp_Params params;
+	params.HowMuch = HowMuch;
 
 	auto flags = fn->FunctionFlags;
 
@@ -89517,6 +91651,28 @@ void AShooterGameMode::ForceRepopulateFoliageAtPoint(const struct FVector& AtPoi
 	params.TriggeredByTeamID = TriggeredByTeamID;
 	params.bCheckAreaAroundEachIndividualFoliage = bCheckAreaAroundEachIndividualFoliage;
 	params.RadiusAroundEachIndivitualFoliageToCheck = RadiusAroundEachIndivitualFoliageToCheck;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterGameMode.ForceRepopulateAllHarvestElements
+// ()
+// Parameters:
+// struct FVector                 AtPoint                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          MaxRangeFromPoint              (Parm, ZeroConstructor, IsPlainOldData)
+
+void AShooterGameMode::ForceRepopulateAllHarvestElements(const struct FVector& AtPoint, float MaxRangeFromPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterGameMode.ForceRepopulateAllHarvestElements");
+
+	AShooterGameMode_ForceRepopulateAllHarvestElements_Params params;
+	params.AtPoint = AtPoint;
+	params.MaxRangeFromPoint = MaxRangeFromPoint;
 
 	auto flags = fn->FunctionFlags;
 
@@ -93451,6 +95607,27 @@ void AShooterPlayerCameraManager::GetCameraAimViewPoint(struct FVector* OutCamLo
 }
 
 
+// Function ShooterGame.ShooterPlayerCameraManager.GetCahcedCameraStyle
+// ()
+// Parameters:
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName AShooterPlayerCameraManager::GetCahcedCameraStyle()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterPlayerCameraManager.GetCahcedCameraStyle");
+
+	AShooterPlayerCameraManager_GetCahcedCameraStyle_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.ShooterPlayerCameraManager.GetBlendableFromMIC
 // ()
 // Parameters:
@@ -93573,6 +95750,40 @@ void AShooterWeapon::StopSecondaryActionEvent()
 }
 
 
+// Function ShooterGame.ShooterWeapon.StopFire
+// ()
+
+void AShooterWeapon::StopFire()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterWeapon.StopFire");
+
+	AShooterWeapon_StopFire_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterWeapon.StopAltFire
+// ()
+
+void AShooterWeapon::StopAltFire()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterWeapon.StopAltFire");
+
+	AShooterWeapon_StopAltFire_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterWeapon.StartUnequipEvent
 // ()
 
@@ -93615,6 +95826,43 @@ void AShooterWeapon::StartSecondaryActionEvent()
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterWeapon.StartSecondaryActionEvent");
 
 	AShooterWeapon_StartSecondaryActionEvent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterWeapon.StartFire
+// ()
+// Parameters:
+// bool                           bFromGamepad                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void AShooterWeapon::StartFire(bool bFromGamepad)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterWeapon.StartFire");
+
+	AShooterWeapon_StartFire_Params params;
+	params.bFromGamepad = bFromGamepad;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.ShooterWeapon.StartAltFire
+// ()
+
+void AShooterWeapon::StartAltFire()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterWeapon.StartAltFire");
+
+	AShooterWeapon_StartAltFire_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -95742,6 +97990,27 @@ bool AShooterWeapon::BPCanToggleAccessory()
 }
 
 
+// Function ShooterGame.ShooterWeapon.BPCanMeleeAttack
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AShooterWeapon::BPCanMeleeAttack()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterWeapon.BPCanMeleeAttack");
+
+	AShooterWeapon_BPCanMeleeAttack_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.ShooterWeapon.BPCanEquip
 // ()
 // Parameters:
@@ -96322,6 +98591,23 @@ void AShooterProjectile::SpawnImpactEffect(const struct FHitResult& Impact)
 }
 
 
+// Function ShooterGame.ShooterProjectile.RestartProjectileMovement
+// ()
+
+void AShooterProjectile::RestartProjectileMovement()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterProjectile.RestartProjectileMovement");
+
+	AShooterProjectile_RestartProjectileMovement_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.ShooterProjectile.Reset
 // ()
 
@@ -96574,12 +98860,15 @@ void AShooterProjectile::Explode(const struct FHitResult& Impact)
 
 // Function ShooterGame.ShooterProjectile.DisableAndDestroy
 // ()
+// Parameters:
+// bool                           forceOnClient                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void AShooterProjectile::DisableAndDestroy()
+void AShooterProjectile::DisableAndDestroy(bool forceOnClient)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.ShooterProjectile.DisableAndDestroy");
 
 	AShooterProjectile_DisableAndDestroy_Params params;
+	params.forceOnClient = forceOnClient;
 
 	auto flags = fn->FunctionFlags;
 
@@ -96967,6 +99256,26 @@ void APrimalProjectileArrow::PickUpCheck()
 }
 
 
+// Function ShooterGame.PrimalProjectileArrow.PickedUp
+// ()
+// Parameters:
+// class AShooterCharacter*       ByCharacter                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalProjectileArrow::PickedUp(class AShooterCharacter* ByCharacter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalProjectileArrow.PickedUp");
+
+	APrimalProjectileArrow_PickedUp_Params params;
+	params.ByCharacter = ByCharacter;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.VictoryCore.VTraceSphereBP_IgnoreActorsArray
 // ()
 // Parameters:
@@ -97152,6 +99461,61 @@ bool UVictoryCore::VTraceSingleBP(class UWorld* TheWorld, const struct FVector& 
 
 	if (OutHit != nullptr)
 		*OutHit = params.OutHit;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.VictoryCore.VTraceShapeMultiBP
+// ()
+// Parameters:
+// class UWorld*                  TheWorld                       (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FHitResult>      OutHits                        (Parm, OutParm, ZeroConstructor)
+// struct FVector                 Start                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector                 End                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TArray<class AActor*>          ExtraIgnoreActors              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class AActor*                  InIgnoreActor                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ShapeRadius                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ShapeHalfHeight                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ShapeBoxExtent                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator                ShapeRotation                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ECollisionChannel> Channel                        (Parm, ZeroConstructor, IsPlainOldData)
+// int                            CollisionGroups                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bReturnPhysMaterial            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bTraceComplex                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   TraceTag                       (Parm, ZeroConstructor, IsPlainOldData)
+// float                          DebugDrawDuration              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UVictoryCore::VTraceShapeMultiBP(class UWorld* TheWorld, const struct FVector& Start, const struct FVector& End, TArray<class AActor*> ExtraIgnoreActors, class AActor* InIgnoreActor, float ShapeRadius, float ShapeHalfHeight, const struct FVector& ShapeBoxExtent, const struct FRotator& ShapeRotation, TEnumAsByte<ECollisionChannel> Channel, int CollisionGroups, bool bReturnPhysMaterial, bool bTraceComplex, const struct FName& TraceTag, float DebugDrawDuration, TArray<struct FHitResult>* OutHits)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.VTraceShapeMultiBP");
+
+	UVictoryCore_VTraceShapeMultiBP_Params params;
+	params.TheWorld = TheWorld;
+	params.Start = Start;
+	params.End = End;
+	params.ExtraIgnoreActors = ExtraIgnoreActors;
+	params.InIgnoreActor = InIgnoreActor;
+	params.ShapeRadius = ShapeRadius;
+	params.ShapeHalfHeight = ShapeHalfHeight;
+	params.ShapeBoxExtent = ShapeBoxExtent;
+	params.ShapeRotation = ShapeRotation;
+	params.Channel = Channel;
+	params.CollisionGroups = CollisionGroups;
+	params.bReturnPhysMaterial = bReturnPhysMaterial;
+	params.bTraceComplex = bTraceComplex;
+	params.TraceTag = TraceTag;
+	params.DebugDrawDuration = DebugDrawDuration;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutHits != nullptr)
+		*OutHits = params.OutHits;
 
 	return params.ReturnValue;
 }
@@ -101280,6 +103644,23 @@ struct FHitResult UVictoryCore::MakeHitResult(const struct FVector& Location, co
 }
 
 
+// Function ShooterGame.VictoryCore.LogStackTrace
+// ()
+
+void UVictoryCore::LogStackTrace()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.LogStackTrace");
+
+	UVictoryCore_LogStackTrace_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.VictoryCore.LeadTargetPosition
 // ()
 // Parameters:
@@ -101480,17 +103861,17 @@ bool UVictoryCore::IsUWPBuild()
 // bool                           bOverlapping                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UActorComponent*         CheckSevenResult               (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           DebugDraw                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DebugDrawSeconds               (Parm, ZeroConstructor, IsPlainOldData)
+// float                          debugDrawSeconds               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UVictoryCore::IsUndermesh(class APrimalCharacter* Character, bool DebugDraw, float DebugDrawSeconds, struct FVector* CheckSevenHitLocation, bool* bOverlapping, class UActorComponent** CheckSevenResult)
+bool UVictoryCore::IsUndermesh(class APrimalCharacter* Character, bool DebugDraw, float debugDrawSeconds, struct FVector* CheckSevenHitLocation, bool* bOverlapping, class UActorComponent** CheckSevenResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.IsUndermesh");
 
 	UVictoryCore_IsUndermesh_Params params;
 	params.Character = Character;
 	params.DebugDraw = DebugDraw;
-	params.DebugDrawSeconds = DebugDrawSeconds;
+	params.debugDrawSeconds = debugDrawSeconds;
 
 	auto flags = fn->FunctionFlags;
 
@@ -102307,6 +104688,29 @@ int UVictoryCore::IsChildOfClasses(class UClass* childClass, TArray<class UClass
 	UVictoryCore_IsChildOfClasses_Params params;
 	params.childClass = childClass;
 	params.ParentClassesArray = ParentClassesArray;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.VictoryCore.IsBrainControllingDinoAttached
+// ()
+// Parameters:
+// class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UVictoryCore::IsBrainControllingDinoAttached(class APrimalCharacter* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.IsBrainControllingDinoAttached");
+
+	UVictoryCore_IsBrainControllingDinoAttached_Params params;
+	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
 
@@ -104946,6 +107350,27 @@ class UClass* UVictoryCore::GenerateRandomLootItem(TEnumAsByte<ELootItemType> Lo
 }
 
 
+// Function ShooterGame.VictoryCore.Generate_UUID
+// ()
+// Parameters:
+// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+class FString UVictoryCore::Generate_UUID()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.Generate_UUID");
+
+	UVictoryCore_Generate_UUID_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ShooterGame.VictoryCore.FuseChunkedFString
 // ()
 // Parameters:
@@ -105476,6 +107901,63 @@ void UVictoryCore::DestroyAllCharactersWithinMissionTileVolumes(class UWorld* Th
 	params.TheWorld = TheWorld;
 	params.bOnlyCheckForDeadCharacters = bOnlyCheckForDeadCharacters;
 	params.ForceOnTileStreamVolumeCustomTag = ForceOnTileStreamVolumeCustomTag;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.VictoryCore.DeferredSpawnAndFireProjectile_Start
+// ()
+// Parameters:
+// struct FVector                 Origin                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ShootDir                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  ProjectileClass                (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct UObject_FTransform      SpawnTransform                 (Parm, OutParm, IsPlainOldData)
+// bool                           bNoCollisionFail               (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterProjectile*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AShooterProjectile* UVictoryCore::DeferredSpawnAndFireProjectile_Start(const struct FVector& Origin, const struct FVector& ShootDir, class UClass* ProjectileClass, class APrimalCharacter* forCharacter, bool bNoCollisionFail, struct UObject_FTransform* SpawnTransform)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.DeferredSpawnAndFireProjectile_Start");
+
+	UVictoryCore_DeferredSpawnAndFireProjectile_Start_Params params;
+	params.Origin = Origin;
+	params.ShootDir = ShootDir;
+	params.ProjectileClass = ProjectileClass;
+	params.forCharacter = forCharacter;
+	params.bNoCollisionFail = bNoCollisionFail;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (SpawnTransform != nullptr)
+		*SpawnTransform = params.SpawnTransform;
+
+	return params.ReturnValue;
+}
+
+
+// Function ShooterGame.VictoryCore.DeferredSpawnAndFireProjectile_Finish
+// ()
+// Parameters:
+// class AShooterProjectile*      theProjectile                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct UObject_FTransform      SpawnTransform                 (Parm, IsPlainOldData)
+
+void UVictoryCore::DeferredSpawnAndFireProjectile_Finish(class AShooterProjectile* theProjectile, const struct UObject_FTransform& SpawnTransform)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.DeferredSpawnAndFireProjectile_Finish");
+
+	UVictoryCore_DeferredSpawnAndFireProjectile_Finish_Params params;
+	params.theProjectile = theProjectile;
+	params.SpawnTransform = SpawnTransform;
 
 	auto flags = fn->FunctionFlags;
 
@@ -106244,9 +108726,11 @@ bool UVictoryCore::CanTeleport(class APrimalDinoCharacter* Target)
 // float                          DebugDrawDuration              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDoLosCheck                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDoExtraSafetyChecks           (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalCharacter*        spawningCharacter              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bDoOverlapCheck                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UVictoryCore::CanSpawnCustomDino(class UWorld* World, const struct FVector& PlayerLocation, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, const struct FDinoSetup& DinoSetup, float DebugDrawDuration, bool bDoLosCheck, bool bDoExtraSafetyChecks, struct FVector* OutCalculatedSpawnLocation)
+bool UVictoryCore::CanSpawnCustomDino(class UWorld* World, const struct FVector& PlayerLocation, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, const struct FDinoSetup& DinoSetup, float DebugDrawDuration, bool bDoLosCheck, bool bDoExtraSafetyChecks, class APrimalCharacter* spawningCharacter, bool bDoOverlapCheck, struct FVector* OutCalculatedSpawnLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.CanSpawnCustomDino");
 
@@ -106259,6 +108743,8 @@ bool UVictoryCore::CanSpawnCustomDino(class UWorld* World, const struct FVector&
 	params.DebugDrawDuration = DebugDrawDuration;
 	params.bDoLosCheck = bDoLosCheck;
 	params.bDoExtraSafetyChecks = bDoExtraSafetyChecks;
+	params.spawningCharacter = spawningCharacter;
+	params.bDoOverlapCheck = bDoOverlapCheck;
 
 	auto flags = fn->FunctionFlags;
 
@@ -107103,8 +109589,9 @@ void UVictoryCore::AddToActorList(class UWorld* ForWorld, int ActorListNum, clas
 // class UWorld*                  ForWorld                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SearchCustomTag                (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  ActorToAdd                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           createListIfMissing            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UVictoryCore::AddActorToCustomActorList(class UWorld* ForWorld, const struct FName& SearchCustomTag, class AActor* ActorToAdd)
+void UVictoryCore::AddActorToCustomActorList(class UWorld* ForWorld, const struct FName& SearchCustomTag, class AActor* ActorToAdd, bool createListIfMissing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.VictoryCore.AddActorToCustomActorList");
 
@@ -107112,6 +109599,7 @@ void UVictoryCore::AddActorToCustomActorList(class UWorld* ForWorld, const struc
 	params.ForWorld = ForWorld;
 	params.SearchCustomTag = SearchCustomTag;
 	params.ActorToAdd = ActorToAdd;
+	params.createListIfMissing = createListIfMissing;
 
 	auto flags = fn->FunctionFlags;
 
@@ -109197,6 +111685,26 @@ void APrimalWeaponGrenade::HideGrenade()
 }
 
 
+// Function ShooterGame.PrimalWeaponGrenade.DoFireProjectileCustom
+// ()
+// Parameters:
+// bool                           bExplodeInHand                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void APrimalWeaponGrenade::DoFireProjectileCustom(bool bExplodeInHand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.PrimalWeaponGrenade.DoFireProjectileCustom");
+
+	APrimalWeaponGrenade_DoFireProjectileCustom_Params params;
+	params.bExplodeInHand = bExplodeInHand;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ShooterGame.PrimalWeaponGrenade.BPGetProjectileSpeed
 // ()
 // Parameters:
@@ -109326,6 +111834,78 @@ void UStatWidget::ClickedButton(class UWidget* clickedWidget)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.StructurePaintingComponent.UnloadExtraPaintingComponent
+// ()
+
+void UStructurePaintingComponent::UnloadExtraPaintingComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.StructurePaintingComponent.UnloadExtraPaintingComponent");
+
+	UStructurePaintingComponent_UnloadExtraPaintingComponent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.StructurePaintingComponent.TryPaintExtraPaintingComponent
+// ()
+
+void UStructurePaintingComponent::TryPaintExtraPaintingComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.StructurePaintingComponent.TryPaintExtraPaintingComponent");
+
+	UStructurePaintingComponent_TryPaintExtraPaintingComponent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.StructurePaintingComponent.OnPaintingTextureSet__DelegateSignature
+// ()
+
+void UStructurePaintingComponent::OnPaintingTextureSet__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.StructurePaintingComponent.OnPaintingTextureSet__DelegateSignature");
+
+	UStructurePaintingComponent_OnPaintingTextureSet__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ShooterGame.StructurePaintingComponent.HasPaintingTexture
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UStructurePaintingComponent::HasPaintingTexture()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ShooterGame.StructurePaintingComponent.HasPaintingTexture");
+
+	UStructurePaintingComponent_HasPaintingTexture_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 

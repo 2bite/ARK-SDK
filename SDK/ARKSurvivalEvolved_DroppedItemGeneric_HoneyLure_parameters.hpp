@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,20 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C.OverrideDinoPreventAttract
+struct ADroppedItemGeneric_HoneyLure_C_OverrideDinoPreventAttract_Params
+{
+	class APrimalDinoCharacter*                        Dino;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Prevent;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C.OverrideDinoDoAttackOnConsume
+struct ADroppedItemGeneric_HoneyLure_C_OverrideDinoDoAttackOnConsume_Params
+{
+	class APrimalDinoCharacter*                        Dino;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Override;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C.IsDinoInConsumeRange
 struct ADroppedItemGeneric_HoneyLure_C_IsDinoInConsumeRange_Params

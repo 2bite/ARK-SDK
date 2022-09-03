@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,8 +69,8 @@ struct USpaceWhaleHUD_C_StartClosingWidget_Params
 	float                                              NewLifeSpan;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function SpaceWhaleHUD.SpaceWhaleHUD_C.DestroyHUDWidget
-struct USpaceWhaleHUD_C_DestroyHUDWidget_Params
+// Function SpaceWhaleHUD.SpaceWhaleHUD_C.DestroyHudWidget
+struct USpaceWhaleHUD_C_DestroyHudWidget_Params
 {
 };
 

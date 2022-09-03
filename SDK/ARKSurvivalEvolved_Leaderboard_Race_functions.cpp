@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Leaderboard_Race.Leaderboard_Race_C.BPFormatLeaderboardRow
-// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // struct FName*                  MissionTag                     (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           index                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLeaderboardRow         DatabaseRow                    (Parm, OutParm, ReferenceParm)
 // struct FLeaderboardDisplayRow  ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FLeaderboardDisplayRow ULeaderboard_Race_C::STATIC_BPFormatLeaderboardRow(struct FName* MissionTag, int* index, struct FLeaderboardRow* DatabaseRow)
+struct FLeaderboardDisplayRow ULeaderboard_Race_C::BPFormatLeaderboardRow(struct FName* MissionTag, int* index, struct FLeaderboardRow* DatabaseRow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Leaderboard_Race.Leaderboard_Race_C.BPFormatLeaderboardRow");
 

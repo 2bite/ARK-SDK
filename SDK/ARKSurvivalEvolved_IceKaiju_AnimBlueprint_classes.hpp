@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,10 +76,10 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_512();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_140();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_70();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2192();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_ModifyBone_524();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_RotationOffsetBlendSpace_152();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_MultiFabrik_Dinos_78();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_IceKaiju_AnimBlueprint_AnimGraphNode_BlendListByBool_2360();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void BlueprintInitializeAnimation();
 	void SetIKStrengthTarget(float Strength);

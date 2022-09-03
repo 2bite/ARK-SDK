@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Thornmail_Poison_Boosted.Buff_Thornmail_Poison_Boosted_C
-// 0x0000 (0x0984 - 0x0984)
+// 0x0000 (0x099C - 0x099C)
 class ABuff_Thornmail_Poison_Boosted_C : public ABuff_Thornmail_Poison_C
 {
 public:

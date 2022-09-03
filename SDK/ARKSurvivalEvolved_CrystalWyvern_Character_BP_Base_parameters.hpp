@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -239,6 +239,11 @@ struct ACrystalWyvern_Character_BP_Base_C_ReceiveBeginPlay_Params
 
 // Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.DissolveSkull
 struct ACrystalWyvern_Character_BP_Base_C_DissolveSkull_Params
+{
+};
+
+// Function CrystalWyvern_Character_BP_Base.CrystalWyvern_Character_BP_Base_C.BPTimerServer
+struct ACrystalWyvern_Character_BP_Base_C_BPTimerServer_Params
 {
 };
 

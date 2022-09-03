@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemConsumable_TekCanteenRefill.PrimalItemConsumable_TekCanteenRefill_C
-// 0x0000 (0x0B70 - 0x0B70)
+// 0x0000 (0x0B78 - 0x0B78)
 class UPrimalItemConsumable_TekCanteenRefill_C : public UPrimalItemConsumable_TekCanteenCraftable_C
 {
 public:

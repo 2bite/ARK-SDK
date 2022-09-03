@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.Delay play Reaction Function
+struct AExplorerChest_Glitch_C_Delay_play_Reaction_Function_Params
+{
+	struct FCompanionReactionData                      WithReactionData;                                         // (Parm, OutParm, ReferenceParm)
+	class APrimalBuff_Companion*                       HLNA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.delayed reaction
+struct AExplorerChest_Glitch_C_delayed_reaction_Params
+{
+};
 
 // Function ExplorerChest_Glitch.ExplorerChest_Glitch_C.UnlockGen2ExplorerNote
 struct AExplorerChest_Glitch_C_UnlockGen2ExplorerNote_Params

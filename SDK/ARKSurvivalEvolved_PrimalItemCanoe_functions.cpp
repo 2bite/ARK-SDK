@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,18 +12,18 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetItemIcon
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// Function PrimalItemCanoe.PrimalItemCanoe_C.BPCanUse
+// ()
 // Parameters:
-// class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTexture2D* UPrimalItemCanoe_C::STATIC_BPGetItemIcon(class AShooterPlayerController** ForPC)
+bool UPrimalItemCanoe_C::BPCanUse(bool* bIgnoreCooldown)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetItemIcon");
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemCanoe.PrimalItemCanoe_C.BPCanUse");
 
-	UPrimalItemCanoe_C_BPGetItemIcon_Params params;
-	params.ForPC = ForPC;
+	UPrimalItemCanoe_C_BPCanUse_Params params;
+	params.bIgnoreCooldown = bIgnoreCooldown;
 
 	auto flags = fn->FunctionFlags;
 
@@ -35,8 +35,32 @@ class UTexture2D* UPrimalItemCanoe_C::STATIC_BPGetItemIcon(class AShooterPlayerC
 }
 
 
+// Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetItemIcon
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
+// Parameters:
+// class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture2D* UPrimalItemCanoe_C::BPGetItemIcon(class AShooterPlayerController** ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetItemIcon");
+
+	UPrimalItemCanoe_C_BPGetItemIcon_Params params;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetCustomIconMaterialParent
-// (NetReliable, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UMaterialInterface*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,16 +81,15 @@ class UMaterialInterface* UPrimalItemCanoe_C::BPGetCustomIconMaterialParent()
 
 
 // Function PrimalItemCanoe.PrimalItemCanoe_C.SetColors
-// (NetReliable, NetRequest, Native, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Static, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void UPrimalItemCanoe_C::SetColors()
+void UPrimalItemCanoe_C::STATIC_SetColors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemCanoe.PrimalItemCanoe_C.SetColors");
 
 	UPrimalItemCanoe_C_SetColors_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,13 +115,13 @@ void UPrimalItemCanoe_C::BPInitIconMaterial()
 
 
 // Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetItemName
-// (NetReliable, Event, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString*                 ItemNameIn                     (Parm, ZeroConstructor)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItemCanoe_C::BPGetItemName(class FString* ItemNameIn, class AShooterPlayerController** ForPC)
+class FString UPrimalItemCanoe_C::STATIC_BPGetItemName(class FString* ItemNameIn, class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetItemName");
 
@@ -117,17 +140,18 @@ class FString UPrimalItemCanoe_C::BPGetItemName(class FString* ItemNameIn, class
 
 
 // Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetCustomDurabilityText
-// (Exec, Event, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Static, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItemCanoe_C::BPGetCustomDurabilityText()
+class FString UPrimalItemCanoe_C::STATIC_BPGetCustomDurabilityText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetCustomDurabilityText");
 
 	UPrimalItemCanoe_C_BPGetCustomDurabilityText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,17 +162,18 @@ class FString UPrimalItemCanoe_C::BPGetCustomDurabilityText()
 
 
 // Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetItemDurabilityPercentage
-// (NetRequest, Exec, Event, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UPrimalItemCanoe_C::BPGetItemDurabilityPercentage()
+float UPrimalItemCanoe_C::STATIC_BPGetItemDurabilityPercentage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemCanoe.PrimalItemCanoe_C.BPGetItemDurabilityPercentage");
 
 	UPrimalItemCanoe_C_BPGetItemDurabilityPercentage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

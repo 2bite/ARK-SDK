@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -204,7 +204,7 @@ struct AWeapFishingNet_C_Fully_Catch_Fish_In_Net_Params
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Remove Buff And Reset Anim
 struct AWeapFishingNet_C_Cancel_Cast_Remove_Buff_And_Reset_Anim_Params
 {
-	bool                                               caught_success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Caught_Success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Destroy Cable Components
@@ -280,7 +280,7 @@ struct AWeapFishingNet_C_Give_Fish_Rewards_Params
 // Function WeapFishingNet.WeapFishingNet_C.Set Fish Position To Normal Offset
 struct AWeapFishingNet_C_Set_Fish_Position_To_Normal_Offset_Params
 {
-	bool                                               caught_success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Caught_Success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingNet.WeapFishingNet_C.Get Initial Fish Location Offset
@@ -454,7 +454,7 @@ struct AWeapFishingNet_C_Timeline_0__UpdateFunc_Params
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast
 struct AWeapFishingNet_C_Cancel_Cast_Params
 {
-	bool                                               caught_success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Caught_Success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Force_Reset_Has_Caught_Any_Fish;                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -483,7 +483,7 @@ struct AWeapFishingNet_C_Projectile_net_collided_with_fish_Params
 // Function WeapFishingNet.WeapFishingNet_C.Cancel Cast Events
 struct AWeapFishingNet_C_Cancel_Cast_Events_Params
 {
-	bool                                               caught_success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Caught_Success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingNet.WeapFishingNet_C.fully catch fish
@@ -575,7 +575,7 @@ struct AWeapFishingNet_C_multicast_release_fish_Params
 // Function WeapFishingNet.WeapFishingNet_C.client request cancel cast
 struct AWeapFishingNet_C_client_request_cancel_cast_Params
 {
-	bool                                               caught_success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Caught_Success;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Reset_Has_Caught_Any_FIsh;                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

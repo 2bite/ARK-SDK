@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.PlaySoundForPlayersOnMission
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Native, Static, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class USoundBase*              Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void AMissionTypeBlueprintBase_C::STATIC_PlaySoundForPlayersOnMission(class USou
 	params.Sound = Sound;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -33,7 +34,7 @@ void AMissionTypeBlueprintBase_C::STATIC_PlaySoundForPlayersOnMission(class USou
 
 
 // Function MissionTypeBlueprintBase.MissionTypeBlueprintBase_C.BPStaticIsPlayerEligibleForMission
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Static, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      Controller                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter**      PlayerPawn                     (Parm, ZeroConstructor, IsPlainOldData)

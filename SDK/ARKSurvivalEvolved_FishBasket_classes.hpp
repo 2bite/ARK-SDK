@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,10 +37,11 @@ public:
 	}
 
 
+	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void ReceiveBeginPlay();
-	void STATIC_TrapFish(class APrimalDinoCharacter* TrapFish, class APlayerController* ForPC);
+	void TrapFish(class APrimalDinoCharacter* TrapFish, class APlayerController* ForPC);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void UserConstructionScript();
 	void NetCapturedCreature();
 	void ExecuteUbergraph_FishBasket(int EntryPoint);

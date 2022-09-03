@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,12 +76,12 @@ void AFeedingTroughBaseBP_C::OnRep_ShowArea()
 
 
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPClientDoMultiUse
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void AFeedingTroughBaseBP_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void AFeedingTroughBaseBP_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPClientDoMultiUse");
 
@@ -99,13 +99,13 @@ void AFeedingTroughBaseBP_C::BPClientDoMultiUse(class APlayerController** ForPC,
 
 
 // Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPGetMultiUseEntries
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AFeedingTroughBaseBP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AFeedingTroughBaseBP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FeedingTroughBaseBP.FeedingTroughBaseBP_C.BPGetMultiUseEntries");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,9 +36,9 @@ public:
 	}
 
 
-	class FString STATIC_BPGetDebugInfoString();
+	class FString BPGetDebugInfoString();
 	void GetRandomVectorOnCircle(float MinRadius, float MaxRadius, struct FVector* RandomVector);
-	bool BPShouldEndAttack();
+	bool STATIC_BPShouldEndAttack();
 	void OnEndEvent();
 	void OnBeginEvent(class UPrimalAIState** InParentState);
 	bool OnCanUseStateEvent();

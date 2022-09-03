@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,9 +34,9 @@ bool AWeapTekRifle_C::ForceDisableCameraOverrides()
 
 
 // Function WeapTekRifle.WeapTekRifle_C.BPAppliedPrimalItemToWeapon
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
+void AWeapTekRifle_C::STATIC_BPAppliedPrimalItemToWeapon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekRifle.WeapTekRifle_C.BPAppliedPrimalItemToWeapon");
 
@@ -52,15 +52,16 @@ void AWeapTekRifle_C::BPAppliedPrimalItemToWeapon()
 
 
 // Function WeapTekRifle.WeapTekRifle_C.ReceiveDestroyed
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AWeapTekRifle_C::ReceiveDestroyed()
+void AWeapTekRifle_C::STATIC_ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapTekRifle.WeapTekRifle_C.ReceiveDestroyed");
 
 	AWeapTekRifle_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

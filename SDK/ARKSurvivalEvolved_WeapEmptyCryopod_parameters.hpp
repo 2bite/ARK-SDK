@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function WeapEmptyCryopod.WeapEmptyCryopod_C.DoFireProjectileCustom
+struct AWeapEmptyCryopod_C_DoFireProjectileCustom_Params
+{
+	bool*                                              bExplodeInHand;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.GetContainedDinoClass
 struct AWeapEmptyCryopod_C_GetContainedDinoClass_Params

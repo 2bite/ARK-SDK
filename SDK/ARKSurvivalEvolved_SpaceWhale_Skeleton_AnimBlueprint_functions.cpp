@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SpaceWhale_Skeleton_AnimBlueprint.SpaceWhale_Skeleton_AnimBlueprint_C.GetFlyingBlendspaceCoords
-// (Exec, Native, Static, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter**   ForDino                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               BlendspaceCoords               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -26,7 +26,6 @@ void USpaceWhale_Skeleton_AnimBlueprint_C::STATIC_GetFlyingBlendspaceCoords(clas
 	params.ForDino = ForDino;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,43 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BossTeleporter.BossTeleporter_C.ManageArenaDisableBuffsForCharacter
+// ()
+// Parameters:
+// class APrimalCharacter*        forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABossTeleporter_C::ManageArenaDisableBuffsForCharacter(class APrimalCharacter* forCharacter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BossTeleporter.BossTeleporter_C.ManageArenaDisableBuffsForCharacter");
+
+	ABossTeleporter_C_ManageArenaDisableBuffsForCharacter_Params params;
+	params.forCharacter = forCharacter;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BossTeleporter.BossTeleporter_C.BackupCallArenaDidTeleportOnLevelLoaded
+// ()
+
+void ABossTeleporter_C::BackupCallArenaDidTeleportOnLevelLoaded()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BossTeleporter.BossTeleporter_C.BackupCallArenaDidTeleportOnLevelLoaded");
+
+	ABossTeleporter_C_BackupCallArenaDidTeleportOnLevelLoaded_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function BossTeleporter.BossTeleporter_C.Do TeleportSound
 // ()
@@ -30,11 +67,11 @@ void ABossTeleporter_C::Do_TeleportSound()
 
 
 // Function BossTeleporter.BossTeleporter_C.BuffTickClient
-// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Net, NetReliable, Exec, Native, Event, Static, Public, Private, HasOutParms, NetClient, BlueprintEvent)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABossTeleporter_C::BuffTickClient(float* DeltaTime)
+void ABossTeleporter_C::STATIC_BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BossTeleporter.BossTeleporter_C.BuffTickClient");
 

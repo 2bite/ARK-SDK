@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function WeapFishingRod.WeapFishingRod_C.ResolveSoftReferences
+struct AWeapFishingRod_C_ResolveSoftReferences_Params
+{
+};
 
 // Function WeapFishingRod.WeapFishingRod_C.ReceiveEndPlay
 struct AWeapFishingRod_C_ReceiveEndPlay_Params
@@ -121,7 +126,7 @@ struct AWeapFishingRod_C_OnRGKeySuccess_Params
 // Function WeapFishingRod.WeapFishingRod_C.TugFishingCable
 struct AWeapFishingRod_C_TugFishingCable_Params
 {
-	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.GetReelingGameDuration
@@ -318,13 +323,13 @@ struct AWeapFishingRod_C_ServerEndFishing_Params
 // Function WeapFishingRod.WeapFishingRod_C.ServerTugCable
 struct AWeapFishingRod_C_ServerTugCable_Params
 {
-	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.TugCableEvent
 struct AWeapFishingRod_C_TugCableEvent_Params
 {
-	int                                                RemainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                remainingMoves;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapFishingRod.WeapFishingRod_C.StartFishingEventMulti

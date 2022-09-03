@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,7 +70,7 @@ void ABuff_LionfishLionHelper_C::ReceiveBeginPlay()
 
 
 // Function Buff_LionfishLionHelper.Buff_LionfishLionHelper_C.BPGetHUDElements
-// (NetReliable, Event, Static, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,7 +16,7 @@ namespace sdk
 // ()
 // Parameters:
 // bool                           HasSaddle                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           IsFPV                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           isFPV                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           HideHUDinFPV                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            LaserLevel                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            MaxLaserLevel                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -34,7 +34,7 @@ namespace sdk
 // float                          EchoOrChaffCooldownPercent     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSubmerged                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void USpaceDolphinHUD_Interface_C::GetHudData(bool* HasSaddle, bool* IsFPV, bool* HideHUDinFPV, int* LaserLevel, int* MaxLaserLevel, float* LaserDowngradeTime, float* LaserDowngradeTimerRemaining, bool* IsLaserDowngradeTimerActive, double* LastLaserLevelChangedTime, class UPrimalInventoryComponent** InventoryComponent, class UClass** SaddleFuelItem, class UClass** FlakCannonAmmoItem, bool* IsUsingSuperFlight, bool* IsUsingSuperFlightBoost, float* FuelPercent, float* CannonCooldownPercent, float* EchoOrChaffCooldownPercent, bool* IsSubmerged)
+void USpaceDolphinHUD_Interface_C::GetHudData(bool* HasSaddle, bool* isFPV, bool* HideHUDinFPV, int* LaserLevel, int* MaxLaserLevel, float* LaserDowngradeTime, float* LaserDowngradeTimerRemaining, bool* IsLaserDowngradeTimerActive, double* LastLaserLevelChangedTime, class UPrimalInventoryComponent** InventoryComponent, class UClass** SaddleFuelItem, class UClass** FlakCannonAmmoItem, bool* IsUsingSuperFlight, bool* IsUsingSuperFlightBoost, float* FuelPercent, float* CannonCooldownPercent, float* EchoOrChaffCooldownPercent, bool* IsSubmerged)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphinHUD_Interface.SpaceDolphinHUD_Interface_C.GetHudData");
 
@@ -48,8 +48,8 @@ void USpaceDolphinHUD_Interface_C::GetHudData(bool* HasSaddle, bool* IsFPV, bool
 
 	if (HasSaddle != nullptr)
 		*HasSaddle = params.HasSaddle;
-	if (IsFPV != nullptr)
-		*IsFPV = params.IsFPV;
+	if (isFPV != nullptr)
+		*isFPV = params.isFPV;
 	if (HideHUDinFPV != nullptr)
 		*HideHUDinFPV = params.HideHUDinFPV;
 	if (LaserLevel != nullptr)

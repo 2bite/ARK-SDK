@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,7 +100,7 @@ void APrimalBuff_SummonerDinoCountDown_C::Suicide()
 
 
 // Function PrimalBuff_SummonerDinoCountDown.PrimalBuff_SummonerDinoCountDown_C.BPSetupForInstigator
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -112,6 +112,7 @@ void APrimalBuff_SummonerDinoCountDown_C::BPSetupForInstigator(class AActor** Fo
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

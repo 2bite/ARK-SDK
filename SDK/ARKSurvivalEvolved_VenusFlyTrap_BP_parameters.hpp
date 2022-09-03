@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ struct AVenusFlyTrap_BP_C_BPPreventCharacterBasing_Params
 struct AVenusFlyTrap_BP_C_ValidLOSTarget_Params
 {
 	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               RetValid;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retValid;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function VenusFlyTrap_BP.VenusFlyTrap_BP_C.get anim index

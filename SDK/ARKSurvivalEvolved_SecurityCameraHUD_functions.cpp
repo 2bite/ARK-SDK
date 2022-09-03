@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function SecurityCameraHUD.SecurityCameraHUD_C.OnControllerButtonPressed
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (Parm, IsPlainOldData)
 // struct FControllerEvent*       ControllerEvent                (Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply USecurityCameraHUD_C::STATIC_OnControllerButtonPressed(struct FGeometry* MyGeometry, struct FControllerEvent* ControllerEvent)
+struct FEventReply USecurityCameraHUD_C::OnControllerButtonPressed(struct FGeometry* MyGeometry, struct FControllerEvent* ControllerEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SecurityCameraHUD.SecurityCameraHUD_C.OnControllerButtonPressed");
 
@@ -28,7 +28,6 @@ struct FEventReply USecurityCameraHUD_C::STATIC_OnControllerButtonPressed(struct
 	params.ControllerEvent = ControllerEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +38,7 @@ struct FEventReply USecurityCameraHUD_C::STATIC_OnControllerButtonPressed(struct
 
 
 // Function SecurityCameraHUD.SecurityCameraHUD_C.SetInputControlsRichText
-// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           IsCameraListShowing            (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,7 +79,7 @@ void USecurityCameraHUD_C::SelectItemAtIndex(int index)
 
 
 // Function SecurityCameraHUD.SecurityCameraHUD_C.Update Camera HUD Info
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void USecurityCameraHUD_C::Update_Camera_HUD_Info()
 {
@@ -135,13 +134,13 @@ void USecurityCameraHUD_C::HideListPanel()
 
 
 // Function SecurityCameraHUD.SecurityCameraHUD_C.OnKeyUp
-// (NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (Parm, IsPlainOldData)
 // struct FKeyboardEvent*         InKeyboardEvent                (Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply USecurityCameraHUD_C::OnKeyUp(struct FGeometry* MyGeometry, struct FKeyboardEvent* InKeyboardEvent)
+struct FEventReply USecurityCameraHUD_C::STATIC_OnKeyUp(struct FGeometry* MyGeometry, struct FKeyboardEvent* InKeyboardEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SecurityCameraHUD.SecurityCameraHUD_C.OnKeyUp");
 
@@ -150,6 +149,7 @@ struct FEventReply USecurityCameraHUD_C::OnKeyUp(struct FGeometry* MyGeometry, s
 	params.InKeyboardEvent = InKeyboardEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -177,7 +177,7 @@ void USecurityCameraHUD_C::ShowListPanel()
 
 
 // Function SecurityCameraHUD.SecurityCameraHUD_C.InitFromCamera
-// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class ARemoteCamera_Character_BP_C* FromCamera                     (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  CameraName                     (Parm, ZeroConstructor)
@@ -249,6 +249,23 @@ void USecurityCameraHUD_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime
 	USecurityCameraHUD_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function SecurityCameraHUD.SecurityCameraHUD_C.ResetHUDWidgetAlreadyInViewport
+// ()
+
+void USecurityCameraHUD_C::ResetHUDWidgetAlreadyInViewport()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SecurityCameraHUD.SecurityCameraHUD_C.ResetHUDWidgetAlreadyInViewport");
+
+	USecurityCameraHUD_C_ResetHUDWidgetAlreadyInViewport_Params params;
 
 	auto flags = fn->FunctionFlags;
 

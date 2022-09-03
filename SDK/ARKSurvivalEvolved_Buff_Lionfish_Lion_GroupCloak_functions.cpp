@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,50 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.BPSetupForInstigator
+// ()
+// Parameters:
+// class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_Lionfish_Lion_GroupCloak_C::BPSetupForInstigator(class AActor** ForInstigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.BPSetupForInstigator");
+
+	ABuff_Lionfish_Lion_GroupCloak_C_BPSetupForInstigator_Params params;
+	params.ForInstigator = ForInstigator;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.Has passed default weapon check
+// ()
+// Parameters:
+// class AShooterCharacter*       Passenger                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           passed_check                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_Lionfish_Lion_GroupCloak_C::Has_passed_default_weapon_check(class AShooterCharacter* Passenger, bool* passed_check)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.Has passed default weapon check");
+
+	ABuff_Lionfish_Lion_GroupCloak_C_Has_passed_default_weapon_check_Params params;
+	params.Passenger = Passenger;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (passed_check != nullptr)
+		*passed_check = params.passed_check;
+}
+
 
 // Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.Set Cloak Transition Value
 // ()
@@ -124,7 +168,7 @@ void ABuff_Lionfish_Lion_GroupCloak_C::deactivate_cloak_mat_on_rider()
 
 
 // Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.set up attached cloak meshes
-// (NetRequest, NetResponse, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UObject*                 parent_dino_mesh               (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent*  current_cloaking_mesh_comp     (Parm, ZeroConstructor, IsPlainOldData)
@@ -140,6 +184,7 @@ void ABuff_Lionfish_Lion_GroupCloak_C::set_up_attached_cloak_meshes(class UObjec
 	params.current_cloaking_mesh_comp = current_cloaking_mesh_comp;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,7 +272,7 @@ void ABuff_Lionfish_Lion_GroupCloak_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason
 
 
 // Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.get saddle
-// (NetReliable, NetRequest, Event, Static, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent*  NewParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -240,6 +285,7 @@ void ABuff_Lionfish_Lion_GroupCloak_C::STATIC_get_saddle(class APrimalCharacter*
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,7 +297,7 @@ void ABuff_Lionfish_Lion_GroupCloak_C::STATIC_get_saddle(class APrimalCharacter*
 
 
 // Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.set fade on components
-// (NetRequest, Exec, Native, NetResponse, Static, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor*                  Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETimelineDirection> Direction                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -261,7 +307,7 @@ void ABuff_Lionfish_Lion_GroupCloak_C::STATIC_get_saddle(class APrimalCharacter*
 // bool                           is_main_mesh                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Skip_LFL_Transition            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Lionfish_Lion_GroupCloak_C::STATIC_set_fade_on_components(class AActor* Character, TEnumAsByte<ETimelineDirection> Direction, float Cloak_Transition, float dissolve_amount, class USkeletalMeshComponent* Component, bool is_main_mesh, bool Skip_LFL_Transition)
+void ABuff_Lionfish_Lion_GroupCloak_C::set_fade_on_components(class AActor* Character, TEnumAsByte<ETimelineDirection> Direction, float Cloak_Transition, float dissolve_amount, class USkeletalMeshComponent* Component, bool is_main_mesh, bool Skip_LFL_Transition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.set fade on components");
 
@@ -275,7 +321,6 @@ void ABuff_Lionfish_Lion_GroupCloak_C::STATIC_set_fade_on_components(class AActo
 	params.Skip_LFL_Transition = Skip_LFL_Transition;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,7 +392,7 @@ bool ABuff_Lionfish_Lion_GroupCloak_C::HideBuffFromHUD()
 
 
 // Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.Lfl Is Valid And Cloaked solo
-// (NetReliable, Native, NetResponse, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    InputPin                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -371,13 +416,13 @@ bool ABuff_Lionfish_Lion_GroupCloak_C::Lfl_Is_Valid_And_Cloaked_solo(class APrim
 
 
 // Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.lfl is valid and cloaked
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Native, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    InputPin                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // bool                           deactivated_from_mate_boost    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-bool ABuff_Lionfish_Lion_GroupCloak_C::lfl_is_valid_and_cloaked(class APrimalDinoCharacter* InputPin, bool* deactivated_from_mate_boost)
+bool ABuff_Lionfish_Lion_GroupCloak_C::STATIC_lfl_is_valid_and_cloaked(class APrimalDinoCharacter* InputPin, bool* deactivated_from_mate_boost)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.lfl is valid and cloaked");
 
@@ -385,6 +430,7 @@ bool ABuff_Lionfish_Lion_GroupCloak_C::lfl_is_valid_and_cloaked(class APrimalDin
 	params.InputPin = InputPin;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -398,7 +444,7 @@ bool ABuff_Lionfish_Lion_GroupCloak_C::lfl_is_valid_and_cloaked(class APrimalDin
 
 
 // Function Buff_Lionfish_Lion_GroupCloak.Buff_Lionfish_Lion_GroupCloak_C.add buff to character
-// (Static, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (Native, Event, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        NewParam                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -410,6 +456,7 @@ void ABuff_Lionfish_Lion_GroupCloak_C::STATIC_add_buff_to_character(class APrima
 	params.NewParam = NewParam;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -156,7 +156,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::TickFlockGroup(int Shape, float DeltaTime
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.GetFlockAvoidanceArea
-// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FAvoidanceArea>  Return                         (Parm, OutParm, ZeroConstructor)
 
@@ -179,7 +179,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::GetFlockAvoidanceArea(TArray<struct FAvoi
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.DistanceToKaiju
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -190,6 +190,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::DistanceToKaiju(float* Distance)
 	ADesertKaiju_FirstFlockChar_BP_C_DistanceToKaiju_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,7 +235,7 @@ float ADesertKaiju_FirstFlockChar_BP_C::BPAdjustDamage(float* IncomingDamage, st
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BPDinoPostBeginPlay
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Native, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ADesertKaiju_FirstFlockChar_BP_C::STATIC_BPDinoPostBeginPlay()
 {
@@ -243,6 +244,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::STATIC_BPDinoPostBeginPlay()
 	ADesertKaiju_FirstFlockChar_BP_C_BPDinoPostBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,7 +253,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::STATIC_BPDinoPostBeginPlay()
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.ReceiveTick
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -263,7 +265,6 @@ void ADesertKaiju_FirstFlockChar_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -289,7 +290,7 @@ void ADesertKaiju_FirstFlockChar_BP_C::BP_OnSetDeath()
 
 
 // Function DesertKaiju_FirstFlockChar_BP.DesertKaiju_FirstFlockChar_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)

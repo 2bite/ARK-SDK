@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_TentacleProjGoo.Buff_TentacleProjGoo_C.BPPreventTekArmorBuffs
+// ()
+// Parameters:
+// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FName> ABuff_TentacleProjGoo_C::BPPreventTekArmorBuffs()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TentacleProjGoo.Buff_TentacleProjGoo_C.BPPreventTekArmorBuffs");
+
+	ABuff_TentacleProjGoo_C_BPPreventTekArmorBuffs_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_TentacleProjGoo.Buff_TentacleProjGoo_C.BPPreventflight
 // ()

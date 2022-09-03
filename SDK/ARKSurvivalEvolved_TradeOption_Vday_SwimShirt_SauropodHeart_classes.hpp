@@ -1,0 +1,38 @@
+#pragma once
+
+// ARKSurvivalEvolved (332.8) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "ARKSurvivalEvolved_TradeOption_Vday_SwimShirt_SauropodHeart_structs.hpp"
+
+namespace sdk
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass TradeOption_Vday_SwimShirt_SauropodHeart.TradeOption_Vday_Swimshirt_SauropodHeart_C
+// 0x0000 (0x0070 - 0x0070)
+class UTradeOption_Vday_Swimshirt_SauropodHeart_C : public UHexagonTradableOption
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass TradeOption_Vday_SwimShirt_SauropodHeart.TradeOption_Vday_Swimshirt_SauropodHeart_C");
+		return ptr;
+	}
+
+
+	void ExecuteUbergraph_TradeOption_Vday_Swimshirt_SauropodHeart(int EntryPoint);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ bool ABeeHive_PlayerOwned_C::BPTryMultiUse(class APlayerController** ForPC, int*
 
 
 // Function BeeHive_PlayerOwned.BeeHive_PlayerOwned_C.BPGetInfoFromConsumedItemForPlacedStructure
-// (NetReliable, NetRequest, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, Exec, Event, NetResponse, Public, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimalItem**            ItemToConsumed                 (Parm, ZeroConstructor, IsPlainOldData)
 

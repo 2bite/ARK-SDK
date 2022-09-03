@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,8 +44,8 @@ public:
 	float                                              K2Node_Event_InDeltaTime;                                 // 0x05F8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x4];                                       // 0x05FC(0x0004) MISSED OFFSET
 	class AShooterPlayerController*                    CallFunc_GetPC_ReturnValue;                               // 0x0600(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsHudVisible_ReturnValue;                        // 0x0608(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x0609(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue2;                            // 0x0608(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsHudVisible_ReturnValue;                        // 0x0609(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -54,18 +54,19 @@ public:
 	}
 
 
-	struct FEventReply STATIC_OnControllerButtonPressed(struct FGeometry* MyGeometry, struct FControllerEvent* ControllerEvent);
+	struct FEventReply OnControllerButtonPressed(struct FGeometry* MyGeometry, struct FControllerEvent* ControllerEvent);
 	void SetInputControlsRichText(bool IsCameraListShowing);
 	void SelectItemAtIndex(int index);
 	void Update_Camera_HUD_Info();
 	void SwitchToCameraAtIndex(int index);
 	void HideListPanel();
-	struct FEventReply OnKeyUp(struct FGeometry* MyGeometry, struct FKeyboardEvent* InKeyboardEvent);
+	struct FEventReply STATIC_OnKeyUp(struct FGeometry* MyGeometry, struct FKeyboardEvent* InKeyboardEvent);
 	void ShowListPanel();
 	void STATIC_InitFromCamera(class ARemoteCamera_Character_BP_C* FromCamera, const class FString& CameraName, const struct FVector& CameraLocation, int Camera_Index);
 	void DestroyCameraHUDWidget();
 	void ResetCameraHUDWidget();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
+	void ResetHUDWidgetAlreadyInViewport();
 	void ExecuteUbergraph_SecurityCameraHUD(int EntryPoint);
 };
 

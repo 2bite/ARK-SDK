@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ReelingGame.ReelingGame_C.HandleKeyPress
-// (NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, Static, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FKey                    Key                            (Parm)
 // bool                           retReply                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UReelingGame_C::HandleKeyPress(const struct FKey& Key, bool* retReply)
+void UReelingGame_C::STATIC_HandleKeyPress(const struct FKey& Key, bool* retReply)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ReelingGame.ReelingGame_C.HandleKeyPress");
 
@@ -37,7 +37,7 @@ void UReelingGame_C::HandleKeyPress(const struct FKey& Key, bool* retReply)
 
 
 // Function ReelingGame.ReelingGame_C.OnControllerButtonReleased
-// (NetReliable, Event, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetMulticast, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (Parm, IsPlainOldData)
 // struct FControllerEvent*       ControllerEvent                (Parm)
@@ -62,7 +62,7 @@ struct FEventReply UReelingGame_C::OnControllerButtonReleased(struct FGeometry* 
 
 
 // Function ReelingGame.ReelingGame_C.OnMouseButtonDown
-// (NetRequest, Exec, Event, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetMulticast, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (Parm, IsPlainOldData)
 // struct FPointerEvent           MouseEvent                     (Parm, OutParm, ReferenceParm)
@@ -106,7 +106,7 @@ void UReelingGame_C::CycleToNextKey()
 
 
 // Function ReelingGame.ReelingGame_C.UpdateRemainingTime
-// (Exec, Native, Event, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetMulticast, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void UReelingGame_C::UpdateRemainingTime()
 {
@@ -124,7 +124,7 @@ void UReelingGame_C::UpdateRemainingTime()
 
 
 // Function ReelingGame.ReelingGame_C.OnKeyUp
-// (NetReliable, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, NetMulticast, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (Parm, IsPlainOldData)
 // struct FKeyboardEvent*         InKeyboardEvent                (Parm)
@@ -149,7 +149,7 @@ struct FEventReply UReelingGame_C::OnKeyUp(struct FGeometry* MyGeometry, struct 
 
 
 // Function ReelingGame.ReelingGame_C.CycleKeys
-// (NetReliable, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetMulticast, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           FinishedGame                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -218,7 +218,7 @@ void UReelingGame_C::Init(float KeyDisplayDuration, class AWeapFishingRod_C* rod
 
 
 // Function ReelingGame.ReelingGame_C.Tick
-// (NetReliable, Native, Event, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FGeometry*              MyGeometry                     (Parm, IsPlainOldData)
 // float*                         InDeltaTime                    (Parm, ZeroConstructor, IsPlainOldData)

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItem_ChibiDino_RandomCraftable.PrimalItem_ChibiDino_RandomCraftable_C
-// 0x0010 (0x0AF0 - 0x0AE0)
+// 0x0010 (0x0AF8 - 0x0AE8)
 class UPrimalItem_ChibiDino_RandomCraftable_C : public UPrimalItemResourceGeneric_C
 {
 public:
-	TArray<struct FSupplyCrateItemSet>                 ChibiTable;                                               // 0x0AE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FSupplyCrateItemSet>                 ChibiTable;                                               // 0x0AE8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

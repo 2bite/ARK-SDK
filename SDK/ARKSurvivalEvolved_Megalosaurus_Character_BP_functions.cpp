@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,15 +38,15 @@ struct FName AMegalosaurus_Character_BP_C::GetSocketForMeleeTraceForHitBlockers(
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits
 // ()
 // Parameters:
-// float                          newMin                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          newMIN                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          newMax                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMegalosaurus_Character_BP_C::UpdateSeverTimerLimits(float newMin, float newMax)
+void AMegalosaurus_Character_BP_C::UpdateSeverTimerLimits(float newMIN, float newMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits");
 
 	AMegalosaurus_Character_BP_C_UpdateSeverTimerLimits_Params params;
-	params.newMin = newMin;
+	params.newMIN = newMIN;
 	params.newMax = newMax;
 
 	auto flags = fn->FunctionFlags;
@@ -146,13 +146,13 @@ void AMegalosaurus_Character_BP_C::BPTimerServer()
 
 
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AMegalosaurus_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AMegalosaurus_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.BPGetMultiUseEntries");
 

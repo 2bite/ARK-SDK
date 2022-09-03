@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -108,20 +108,19 @@ void ABuff_TekStrider_OnesidedShield_C::Restrict_Doubletap_Activate()
 }
 
 
-// Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.toggle active on ai
-// (NetReliable, NetRequest, Native, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.Toggle Active On Ai
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           Active                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_OnesidedShield_C::toggle_active_on_ai(bool Active)
+void ABuff_TekStrider_OnesidedShield_C::STATIC_Toggle_Active_On_Ai(bool Active)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.toggle active on ai");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.Toggle Active On Ai");
 
-	ABuff_TekStrider_OnesidedShield_C_toggle_active_on_ai_Params params;
+	ABuff_TekStrider_OnesidedShield_C_Toggle_Active_On_Ai_Params params;
 	params.Active = Active;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,15 +319,16 @@ void ABuff_TekStrider_OnesidedShield_C::Get_Dynamic_Material(class UMaterialInst
 
 
 // Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.TriggerReleased
-// (NetReliable, Event, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
-void ABuff_TekStrider_OnesidedShield_C::STATIC_TriggerReleased()
+void ABuff_TekStrider_OnesidedShield_C::TriggerReleased()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.TriggerReleased");
 
 	ABuff_TekStrider_OnesidedShield_C_TriggerReleased_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -386,7 +386,7 @@ void ABuff_TekStrider_OnesidedShield_C::adjust_shield_location(class APlayerCont
 
 
 // Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.BPGetHUDElements
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, NetValidate)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -399,6 +399,7 @@ void ABuff_TekStrider_OnesidedShield_C::STATIC_BPGetHUDElements(class APlayerCon
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -478,14 +479,14 @@ bool ABuff_TekStrider_OnesidedShield_C::BPServerHandleNetExecCommand(class APlay
 
 
 // Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.BPClientHandleNetExecCommand
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_TekStrider_OnesidedShield_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+bool ABuff_TekStrider_OnesidedShield_C::STATIC_BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.BPClientHandleNetExecCommand");
 
@@ -541,7 +542,7 @@ void ABuff_TekStrider_OnesidedShield_C::Trigger()
 
 
 // Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.ReceiveAnyDamage
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         Damage                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UDamageType**            DamageType                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -559,6 +560,7 @@ void ABuff_TekStrider_OnesidedShield_C::STATIC_ReceiveAnyDamage(float* Damage, c
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -587,11 +589,11 @@ void ABuff_TekStrider_OnesidedShield_C::BPDeactivated(class AActor** ForInstigat
 
 
 // Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.BPSetupForInstigator
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_OnesidedShield_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_TekStrider_OnesidedShield_C::BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_OnesidedShield.Buff_TekStrider_OnesidedShield_C.BPSetupForInstigator");
 

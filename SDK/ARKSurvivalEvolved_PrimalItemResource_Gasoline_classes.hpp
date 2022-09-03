@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C
-// 0x0000 (0x0AE0 - 0x0AE0)
+// 0x0000 (0x0AE8 - 0x0AE8)
 class UPrimalItemResource_Gasoline_C : public UPrimalItemResource_Craftable_C
 {
 public:
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void STATIC_CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn);
+	void CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn);
 	void RefillGasoline(class UPrimalItem* DestinationItem);
 	void BPUsedOntoItem(class UPrimalItem** DestinationItem, int* AdditionalData);
 	bool BPSupportUseOntoItem(class UPrimalItem** DestinationItem);

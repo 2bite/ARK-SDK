@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -244,11 +244,11 @@ struct FName AStego_Character_BP_C::BPGetDragSocketDinoName(class APrimalDinoCha
 
 
 // Function Stego_Character_BP.Stego_Character_BP_C.ReceiveTick
-// (Native, NetResponse, Static, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStego_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void AStego_Character_BP_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Stego_Character_BP.Stego_Character_BP_C.ReceiveTick");
 
@@ -265,13 +265,13 @@ void AStego_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 
 
 // Function Stego_Character_BP.Stego_Character_BP_C.BPOverrideGetAttackAnimationIndex
-// (NetReliable, NetRequest, Event, NetMulticast, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, NetResponse, Static, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UAnimMontage*>    AnimationArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int AStego_Character_BP_C::BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray)
+int AStego_Character_BP_C::STATIC_BPOverrideGetAttackAnimationIndex(int* AttackIndex, TArray<class UAnimMontage*>* AnimationArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Stego_Character_BP.Stego_Character_BP_C.BPOverrideGetAttackAnimationIndex");
 
@@ -409,7 +409,7 @@ void AStego_Character_BP_C::BPModifyHarvestingWeightsArray(TArray<float>* resour
 
 
 // Function Stego_Character_BP.Stego_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -418,7 +418,7 @@ void AStego_Character_BP_C::BPModifyHarvestingWeightsArray(TArray<float>* resour
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AStego_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float AStego_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Stego_Character_BP.Stego_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -428,6 +428,7 @@ float AStego_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -517,7 +518,7 @@ void AStego_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TA
 
 
 // Function Stego_Character_BP.Stego_Character_BP_C.SetBackplateMode
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Native, Static, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<E_StegoBackplateMode> BackplateMode                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -529,6 +530,7 @@ void AStego_Character_BP_C::STATIC_SetBackplateMode(TEnumAsByte<E_StegoBackplate
 	params.BackplateMode = BackplateMode;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

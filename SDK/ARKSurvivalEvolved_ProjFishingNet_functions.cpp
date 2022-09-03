@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjFishingNet.ProjFishingNet_C.Trace For Fish and Add Them
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Private, NetClient, DLLImport, BlueprintCallable, Const)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void AProjFishingNet_C::STATIC_Trace_For_Fish_and_Add_Them()
 {
@@ -93,9 +93,9 @@ void AProjFishingNet_C::ReceiveActorEndOverlap(class AActor** OtherActor)
 
 
 // Function ProjFishingNet.ProjFishingNet_C.ReceiveBeginPlay
-// (Exec, Native, Event, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void AProjFishingNet_C::ReceiveBeginPlay()
+void AProjFishingNet_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjFishingNet.ProjFishingNet_C.ReceiveBeginPlay");
 
@@ -147,11 +147,11 @@ void AProjFishingNet_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AAc
 
 
 // Function ProjFishingNet.ProjFishingNet_C.ReceiveTick
-// (Exec, Native, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AProjFishingNet_C::STATIC_ReceiveTick(float* DeltaSeconds)
+void AProjFishingNet_C::ReceiveTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjFishingNet.ProjFishingNet_C.ReceiveTick");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,8 +37,8 @@ public:
 
 
 	void GetScout(class AScout_Character_BP_C** Result);
-	void STATIC_OnTickEvent(float* DeltaSeconds);
-	void STATIC_OnEndEvent();
+	void OnTickEvent(float* DeltaSeconds);
+	void OnEndEvent();
 	void BPRangedAttackOnBegin(struct FVector* TargetLocation, struct FVector* TargetVelocity);
 	void Tracker_Impact_Pawn_or_Terrain(class AActor* Target, const struct FVector& ImpactLocation, bool* IsValidTarget);
 	void STATIC_CalculateProjectileImpacts(const struct FVector& Origin, const struct FVector& Direction);

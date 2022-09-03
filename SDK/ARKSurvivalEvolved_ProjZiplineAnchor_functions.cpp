@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall
-// (NetReliable, Native, Event, Static, Public, Protected, NetServer, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AProjZiplineAnchor_C::STATIC_CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return)
+void AProjZiplineAnchor_C::CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ProjZiplineAnchor.ProjZiplineAnchor_C.CheckForInvisibleWall");
 
@@ -65,7 +65,7 @@ void AProjZiplineAnchor_C::HitValidForAttachment(struct FHitResult* Hit, bool* V
 
 
 // Function ProjZiplineAnchor.ProjZiplineAnchor_C.SpawnBreakEmitter
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, NetServer, BlueprintCallable)
+// (NetReliable, Exec, Native, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void AProjZiplineAnchor_C::SpawnBreakEmitter()
 {
@@ -74,6 +74,7 @@ void AProjZiplineAnchor_C::SpawnBreakEmitter()
 	AProjZiplineAnchor_C_SpawnBreakEmitter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

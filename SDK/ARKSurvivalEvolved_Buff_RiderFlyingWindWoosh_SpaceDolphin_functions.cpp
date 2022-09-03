@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,7 +82,7 @@ bool ABuff_RiderFlyingWindWoosh_SpaceDolphin_C::StartedBraking(class ASpaceDolph
 
 
 // Function Buff_RiderFlyingWindWoosh_SpaceDolphin.Buff_RiderFlyingWindWoosh_SpaceDolphin_C.BPGetHUDElements
-// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Static, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -95,7 +95,6 @@ void ABuff_RiderFlyingWindWoosh_SpaceDolphin_C::STATIC_BPGetHUDElements(class AP
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,18 +123,17 @@ void ABuff_RiderFlyingWindWoosh_SpaceDolphin_C::UpdateSFX()
 
 
 // Function Buff_RiderFlyingWindWoosh_SpaceDolphin.Buff_RiderFlyingWindWoosh_SpaceDolphin_C.GetBuffDescription
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Exec, Event, NetResponse, Public, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_RiderFlyingWindWoosh_SpaceDolphin_C::STATIC_GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_RiderFlyingWindWoosh_SpaceDolphin_C::GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_RiderFlyingWindWoosh_SpaceDolphin.Buff_RiderFlyingWindWoosh_SpaceDolphin_C.GetBuffDescription");
 
 	ABuff_RiderFlyingWindWoosh_SpaceDolphin_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

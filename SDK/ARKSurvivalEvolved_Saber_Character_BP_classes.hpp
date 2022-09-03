@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Saber_Character_BP.Saber_Character_BP_C
-// 0x0028 (0x2290 - 0x2268)
+// 0x0028 (0x22B0 - 0x2288)
 class ASaber_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Saber_C*    DinoCharacterStatus_BP_Saber_C1;                          // 0x2268(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              ResourceTypesToScale;                                     // 0x2270(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<float>                                      ResourceTypeScales;                                       // 0x2280(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UDinoCharacterStatusComponent_BP_Saber_C*    DinoCharacterStatus_BP_Saber_C1;                          // 0x2288(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              ResourceTypesToScale;                                     // 0x2290(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<float>                                      ResourceTypeScales;                                       // 0x22A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

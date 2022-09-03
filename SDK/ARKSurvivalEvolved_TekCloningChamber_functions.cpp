@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -122,13 +122,13 @@ bool ATekCloningChamber_C::BPOverrideAllowStructureAccess(class AShooterPlayerCo
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BlueprintDrawHUD
-// (Net, NetReliable, Exec, NetResponse, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCloningChamber_C::BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
+void ATekCloningChamber_C::STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.BlueprintDrawHUD");
 
@@ -201,7 +201,7 @@ bool ATekCloningChamber_C::BPPreventStasis()
 
 
 // Function TekCloningChamber.TekCloningChamber_C.StartCloneDino
-// (NetReliable, Native, Event, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    DinoToClone                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -213,7 +213,6 @@ void ATekCloningChamber_C::StartCloneDino(class APrimalDinoCharacter* DinoToClon
 	params.DinoToClone = DinoToClone;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,12 +250,12 @@ bool ATekCloningChamber_C::BPServerHandleNetExecCommand(class APlayerController*
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BPClientDoMultiUse
-// (NetRequest, Exec, Native, Event, NetResponse, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekCloningChamber_C::BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
+void ATekCloningChamber_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekCloningChamber.TekCloningChamber_C.BPClientDoMultiUse");
 
@@ -274,7 +273,7 @@ void ATekCloningChamber_C::BPClientDoMultiUse(class APlayerController** ForPC, i
 
 
 // Function TekCloningChamber.TekCloningChamber_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, Static, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -288,6 +287,7 @@ TArray<struct FMultiUseEntry> ATekCloningChamber_C::STATIC_BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

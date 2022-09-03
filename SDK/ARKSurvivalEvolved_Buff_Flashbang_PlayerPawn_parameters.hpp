@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ struct ABuff_Flashbang_PlayerPawn_C_Get_Normalized_Distance_Params
 {
 	class AActor*                                      Actor1;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor2;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Flashbang_PlayerPawn.Buff_Flashbang_PlayerPawn_C.Get NormalizedViewing Angle

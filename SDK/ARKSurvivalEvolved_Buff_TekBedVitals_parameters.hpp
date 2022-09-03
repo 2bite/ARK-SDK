@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_TekBedVitals.Buff_TekBedVitals_C.BPPreventAddingOtherBuff
+struct ABuff_TekBedVitals_C_BPPreventAddingOtherBuff_Params
+{
+	class UClass**                                     anotherBuffClass;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Buff_TekBedVitals.Buff_TekBedVitals_C.PreventActorTargeting
 struct ABuff_TekBedVitals_C_PreventActorTargeting_Params

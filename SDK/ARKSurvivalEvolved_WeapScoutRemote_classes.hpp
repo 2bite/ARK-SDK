@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,7 +83,7 @@ public:
 	bool                                               K2Node_DynamicCast5_CastSuccess;                          // 0x0FB8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData09[0x3];                                       // 0x0FB9(0x0003) MISSED OFFSET
 	float                                              CallFunc_PlayAnimEx_ReturnValue4;                         // 0x0FBC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterCharacter*                           K2Node_CustomEvent_Target;                                // 0x0FC0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterCharacter*                           K2Node_CustomEvent_target;                                // 0x0FC0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	float                                              CallFunc_PlayWeaponAnimationEx_ReturnValue;               // 0x0FC8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData10[0x4];                                       // 0x0FCC(0x0004) MISSED OFFSET
 	class AShooterPlayerState*                         K2Node_DynamicCast_AsShooterPlayerState;                  // 0x0FD0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -114,9 +114,9 @@ public:
 	}
 
 
-	class FString STATIC_BPGetDebugInfoString();
+	class FString BPGetDebugInfoString();
 	bool AllowTargeting();
-	struct FText STATIC_BPGetTargetingTooltipInfoLabel();
+	struct FText BPGetTargetingTooltipInfoLabel();
 	float BPGetProjectileSpeed();
 	void OnRep_GogglesMode();
 	void OnRep_FiredScout();
@@ -141,7 +141,7 @@ public:
 	void BPStartEquippedNotify();
 	void ReceiveBeginPlay();
 	void Scout_Launched(class AScout_Character_BP_C* Scout);
-	class AActor* BPGetActorForTargetingTooltip();
+	class AActor* STATIC_BPGetActorForTargetingTooltip();
 	bool STATIC_BPWeaponCanFire();
 	void UserConstructionScript();
 	void MULTI_ScoutLaunched();

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,7 +133,7 @@ struct ABuff_Zipline_Base_C_SetZiplineControlRotation_Params
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.PlayTurnAnimation
 struct ABuff_Zipline_Base_C_PlayTurnAnimation_Params
 {
-	class UAnimMontage*                                override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                Override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -156,7 +156,7 @@ struct ABuff_Zipline_Base_C_UpdateFPVCameraAndMeshPosition_Params
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.GetFPVViewLocation
 struct ABuff_Zipline_Base_C_GetFPVViewLocation_Params
 {
-	struct FVector                                     ViewLoc;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     viewLoc;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.UpdateHandleMeshLocationAndRotation
@@ -368,23 +368,23 @@ struct ABuff_Zipline_Base_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_103
-struct ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_103_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_108
+struct ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_108_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_102
-struct ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_102_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_107
+struct ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_107_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_101
-struct ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_101_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_106
+struct ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_106_Params
 {
 };
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_100
-struct ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_100_Params
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_105
+struct ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_105_Params
 {
 };
 

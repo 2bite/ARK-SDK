@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,6 +73,7 @@ public:
 	}
 
 
+	void UpdateDinoMatOverrides();
 	void OnContainerRenamed();
 	void Construct_Name_Renderer_Component();
 	void RemoveHairMeshes();
@@ -84,10 +85,10 @@ public:
 	void BPPlacedStructure(class APlayerController** ForPC);
 	void ApplyEquippedSnapshot();
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void RemoveSnapshot();
-	void STATIC_ApplySnapshot(class UPrimalItem* Snapshot);
-	void STATIC_BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem);
+	void ApplySnapshot(class UPrimalItem* Snapshot);
+	void BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void SetRendererText();

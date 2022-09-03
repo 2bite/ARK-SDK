@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -94,7 +94,7 @@ public:
 	}
 
 
-	int BPGetExtraSpecialBlueprintInt();
+	int BPGetExtraSpecialBlueprintInt(int* toCheck);
 	void DrawBasicFloatingHUD(class AHUD** ForHUD);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason);
 	void ReceiveBeginPlay();

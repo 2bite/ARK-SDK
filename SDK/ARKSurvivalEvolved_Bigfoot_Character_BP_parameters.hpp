@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -124,10 +124,10 @@ struct ABigfoot_Character_BP_C_GetStartThrowAnim_Params
 	class UAnimMontage*                                startThrowAnim;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.isGrabbing
-struct ABigfoot_Character_BP_C_isGrabbing_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.IsGrabbing
+struct ABigfoot_Character_BP_C_IsGrabbing_Params
 {
-	bool                                               isGrabbing;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsGrabbing;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.On Throw Released
@@ -278,28 +278,28 @@ struct ABigfoot_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_372
-struct ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_372_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_266
+struct ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_266_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_371
-struct ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_371_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_265
+struct ABigfoot_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_265_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_370
-struct ABigfoot_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_370_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_264
+struct ABigfoot_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_264_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_369
-struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_369_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_263
+struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_263_Params
 {
 };
 
-// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_368
-struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_368_Params
+// Function Bigfoot_Character_BP.Bigfoot_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_262
+struct ABigfoot_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_262_Params
 {
 };
 

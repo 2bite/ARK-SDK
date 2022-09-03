@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -87,12 +87,12 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2012();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2011();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2010();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2009();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_2008();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_502();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1872();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1871();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1870();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1869();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1868();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint_AnimGraphNode_ModifyBone_514();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_plantY_Tentacle_RIG_AnimBlueprint(int EntryPoint);
 };

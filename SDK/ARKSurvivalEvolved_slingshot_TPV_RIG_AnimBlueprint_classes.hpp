@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,10 +59,10 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1928();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1927();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1926();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1925();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1788();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1787();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1786();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint_AnimGraphNode_TransitionResult_1785();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_slingshot_TPV_RIG_AnimBlueprint(int EntryPoint);
 };

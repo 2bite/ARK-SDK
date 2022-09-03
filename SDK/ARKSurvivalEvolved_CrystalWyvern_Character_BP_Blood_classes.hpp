@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CrystalWyvern_Character_BP_Blood.CrystalWyvern_Character_BP_Blood_C
-// 0x0000 (0x2550 - 0x2550)
+// 0x0000 (0x25D0 - 0x25D0)
 class ACrystalWyvern_Character_BP_Blood_C : public ACrystalWyvern_Character_BP_Base_C
 {
 public:

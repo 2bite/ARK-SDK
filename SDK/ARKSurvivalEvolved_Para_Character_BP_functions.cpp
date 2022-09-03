@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,11 +77,11 @@ void APara_Character_BP_C::GetNearbyEnemies(TArray<struct FVector>* Locations)
 
 
 // Function Para_Character_BP.Para_Character_BP_C.NotifyPlayerAboutAlert
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetClient, BlueprintCallable, Const)
+// (Static, NetMulticast, Protected, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void APara_Character_BP_C::NotifyPlayerAboutAlert(class AShooterCharacter* Character)
+void APara_Character_BP_C::STATIC_NotifyPlayerAboutAlert(class AShooterCharacter* Character)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Para_Character_BP.Para_Character_BP_C.NotifyPlayerAboutAlert");
 
@@ -470,13 +470,13 @@ bool APara_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* U
 
 
 // Function Para_Character_BP.Para_Character_BP_C.BPGetMultiUseEntries
-// (Native, Event, NetResponse, Static, Private, Protected, NetClient, BlueprintCallable, Const)
+// (NetReliable, NetResponse, MulticastDelegate, Public, Private, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> APara_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> APara_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Para_Character_BP.Para_Character_BP_C.BPGetMultiUseEntries");
 
@@ -484,7 +484,6 @@ TArray<struct FMultiUseEntry> APara_Character_BP_C::STATIC_BPGetMultiUseEntries(
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

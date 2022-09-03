@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C
-// 0x0019 (0x0AF9 - 0x0AE0)
+// 0x0019 (0x0B01 - 0x0AE8)
 class UPrimalItemSkin_ChibiDino_Base_C : public UPrimalItem_Base_C
 {
 public:
-	int                                                ChibiLevel;                                               // 0x0AE0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	float                                              ChibiXP;                                                  // 0x0AE4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	TArray<float>                                      LevelExperienceRequirements;                              // 0x0AE8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               bHasLoadedNetItemInfo;                                    // 0x0AF8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
+	int                                                ChibiLevel;                                               // 0x0AE8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	float                                              ChibiXP;                                                  // 0x0AEC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	TArray<float>                                      LevelExperienceRequirements;                              // 0x0AF0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               bHasLoadedNetItemInfo;                                    // 0x0B00(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -39,7 +39,7 @@ public:
 	void GetXPRequiredForNextLevel(float* XPOut);
 	float BPGetItemDurabilityPercentage();
 	void BPClientHandleItemNetExecCommand(struct FName* CommandName, class AShooterPlayerController** ForPC, struct FBPNetExecParams* ExecParams);
-	void STATIC_RefreshLevelData(class APrimalCharacter* forChar);
+	void RefreshLevelData(class APrimalCharacter* forChar);
 	void STATIC_AddXP(float XPAmount, class APrimalCharacter* forChar);
 	void BPEquippedItemOnXPEarning(class APrimalCharacter** forChar, float* howMuchXP, TEnumAsByte<EXPType>* TheXPType);
 	void STATIC_BPInitFromItemNetInfo();

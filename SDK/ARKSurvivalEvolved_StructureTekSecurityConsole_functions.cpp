@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -135,7 +135,7 @@ void AStructureTekSecurityConsole_C::GetCameraLocation(struct FVector* CameraVie
 
 
 // Function StructureTekSecurityConsole.StructureTekSecurityConsole_C.GetCameraName
-// (Net, Exec, Event, Static, NetMulticast, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FRemoteCameraData       RemoteCameraData               (Parm, OutParm, ReferenceParm)
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -149,6 +149,7 @@ class FString AStructureTekSecurityConsole_C::STATIC_GetCameraName(int index, st
 	params.index = index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -359,7 +360,7 @@ void AStructureTekSecurityConsole_C::ReceiveBeginPlay()
 
 
 // Function StructureTekSecurityConsole.StructureTekSecurityConsole_C.AddCamera
-// (NetReliable, NetRequest, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalStructure*        NewCamera                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -371,6 +372,7 @@ void AStructureTekSecurityConsole_C::STATIC_AddCamera(class APrimalStructure* Ne
 	params.NewCamera = NewCamera;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -439,13 +441,13 @@ void AStructureTekSecurityConsole_C::BPClientDoMultiUse(class APlayerController*
 
 
 // Function StructureTekSecurityConsole.StructureTekSecurityConsole_C.BPGetMultiUseEntries
-// (Exec, Native, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AStructureTekSecurityConsole_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AStructureTekSecurityConsole_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function StructureTekSecurityConsole.StructureTekSecurityConsole_C.BPGetMultiUseEntries");
 
@@ -453,7 +455,6 @@ TArray<struct FMultiUseEntry> AStructureTekSecurityConsole_C::STATIC_BPGetMultiU
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitter_Lamprey.Buff_ChargeEmitter_Lamprey_C
-// 0x0000 (0x0B78 - 0x0B78)
+// 0x0000 (0x0B90 - 0x0B90)
 class ABuff_ChargeEmitter_Lamprey_C : public ABuff_ChargeEmitter_C
 {
 public:

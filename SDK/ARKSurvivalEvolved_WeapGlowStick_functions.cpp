@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,14 +30,14 @@ void AWeapGlowStick_C::BPHandleMeleeAttack()
 
 
 // Function WeapGlowStick.WeapGlowStick_C.BPAnimNotifyCustomEvent
-// (NetRequest, Native, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWeapGlowStick_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void AWeapGlowStick_C::STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapGlowStick.WeapGlowStick_C.BPAnimNotifyCustomEvent");
 
@@ -48,7 +48,6 @@ void AWeapGlowStick_C::BPAnimNotifyCustomEvent(struct FName* CustomEventName, cl
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

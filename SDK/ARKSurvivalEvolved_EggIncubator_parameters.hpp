@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 // Function EggIncubator.EggIncubator_C.IsEggItemAllowed
 struct AEggIncubator_C_IsEggItemAllowed_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsAllowed;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -27,6 +27,12 @@ struct AEggIncubator_C_GetItemDisplaySlot_Params
 	class UPrimalItem*                                 ForItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                InSlot;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               SlotFound;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function EggIncubator.EggIncubator_C.ClientDisplayGestationMonitorEffectAdded
+struct AEggIncubator_C_ClientDisplayGestationMonitorEffectAdded_Params
+{
+	struct UObject_FTransform                          AtLocation;                                               // (Parm, IsPlainOldData)
 };
 
 // Function EggIncubator.EggIncubator_C.BPNotifyPowerChanged
@@ -61,7 +67,7 @@ struct AEggIncubator_C_DestroyEggDisplay_Params
 // Function EggIncubator.EggIncubator_C.CanEggIncubateInTemp
 struct AEggIncubator_C_CanEggIncubateInTemp_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bCanIncubate;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -78,14 +84,14 @@ struct AEggIncubator_C_CalculateIncubationInsulation_Params
 // Function EggIncubator.EggIncubator_C.CanEggBeHatched
 struct AEggIncubator_C_CanEggBeHatched_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsHatchable;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function EggIncubator.EggIncubator_C.TrySpawnEggToWorld
 struct AEggIncubator_C_TrySpawnEggToWorld_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               EggWasSpawned;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -110,7 +116,7 @@ struct AEggIncubator_C_GetTempBonusRawPercent_Params
 // Function EggIncubator.EggIncubator_C.SetIncubatorCustomDatasForEgg
 struct AEggIncubator_C_SetIncubatorCustomDatasForEgg_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function EggIncubator.EggIncubator_C.BPServerHandleNetExecCommand
@@ -149,14 +155,14 @@ struct AEggIncubator_C_RefreshEggDisplays_Params
 // Function EggIncubator.EggIncubator_C.CheckIsFertilizedEgg
 struct AEggIncubator_C_CheckIsFertilizedEgg_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsFertilized;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function EggIncubator.EggIncubator_C.GetSlotIndexForEggItem
 struct AEggIncubator_C_GetSlotIndexForEggItem_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                SlotIndex;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -174,13 +180,13 @@ struct AEggIncubator_C_BPPostInitializeComponents_Params
 // Function EggIncubator.EggIncubator_C.ServerRemoveFertilizedEgg
 struct AEggIncubator_C_ServerRemoveFertilizedEgg_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function EggIncubator.EggIncubator_C.ServerAddFertilizedEgg
 struct AEggIncubator_C_ServerAddFertilizedEgg_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function EggIncubator.EggIncubator_C.BPTryMultiUse

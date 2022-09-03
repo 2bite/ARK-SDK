@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,12 +56,12 @@ bool APointOfInterestBP_MissionStart_C::CanBeViewed(class AActor** ByActor)
 
 
 // Function PointOfInterestBP_MissionStart.PointOfInterestBP_MissionStart_C.CanPlayerStartMyMission
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APointOfInterestBP_MissionStart_C::STATIC_CanPlayerStartMyMission(class APlayerController* PC, bool* Result)
+void APointOfInterestBP_MissionStart_C::CanPlayerStartMyMission(class APlayerController* PC, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PointOfInterestBP_MissionStart.PointOfInterestBP_MissionStart_C.CanPlayerStartMyMission");
 
@@ -69,7 +69,6 @@ void APointOfInterestBP_MissionStart_C::STATIC_CanPlayerStartMyMission(class APl
 	params.PC = PC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,7 +80,7 @@ void APointOfInterestBP_MissionStart_C::STATIC_CanPlayerStartMyMission(class APl
 
 
 // Function PointOfInterestBP_MissionStart.PointOfInterestBP_MissionStart_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -95,6 +94,7 @@ TArray<struct FMultiUseEntry> APointOfInterestBP_MissionStart_C::BPGetMultiUseEn
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

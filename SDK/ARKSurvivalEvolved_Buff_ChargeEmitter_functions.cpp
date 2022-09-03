@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -111,9 +111,9 @@ void ABuff_ChargeEmitter_C::TakeChargeConsumedByReceivers(float chargeToTake)
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_C::GetChargeVariableExternalEmitter(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue)
+void ABuff_ChargeEmitter_C::GetChargeVariableExternalEmitter(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.GetChargeVariableExternalEmitter");
 
@@ -132,8 +132,8 @@ void ABuff_ChargeEmitter_C::GetChargeVariableExternalEmitter(TEnumAsByte<E_Charg
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (ivalue != nullptr)
-		*ivalue = params.ivalue;
+	if (iValue != nullptr)
+		*iValue = params.iValue;
 }
 
 
@@ -399,7 +399,7 @@ void ABuff_ChargeEmitter_C::GetEmitterActor(class AActor** emitterActor)
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is Point Affected By Emitter
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 affectedPoint                  (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  requestingActor                (Parm, ZeroConstructor, IsPlainOldData)
@@ -512,9 +512,9 @@ void ABuff_ChargeEmitter_C::OnEmitterIsActiveChanged()
 // bool*                          bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double*                        dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int*                           ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int*                           iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_ChargeEmitter_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue)
+void ABuff_ChargeEmitter_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.ChargeVariableEvent");
 
@@ -523,7 +523,7 @@ void ABuff_ChargeEmitter_C::ChargeVariableEvent(TEnumAsByte<E_ChargeVariableName
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -643,7 +643,7 @@ void ABuff_ChargeEmitter_C::HarvestCharge(bool MountedDino, class APlayerControl
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (Native, Event, NetResponse, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -845,7 +845,7 @@ void ABuff_ChargeEmitter_C::CanEmitCharge(bool* canEmit)
 
 
 // Function Buff_ChargeEmitter.Buff_ChargeEmitter_C.Is ActorAffected by Emitter
-// (Native, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  affectedActor                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           skipLineTrace                  (Parm, ZeroConstructor, IsPlainOldData)
@@ -860,7 +860,6 @@ void ABuff_ChargeEmitter_C::STATIC_Is_ActorAffected_by_Emitter(class AActor* aff
 	params.skipLineTrace = skipLineTrace;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

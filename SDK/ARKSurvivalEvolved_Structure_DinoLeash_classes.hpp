@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -92,7 +92,7 @@ public:
 	void TetherDinosInRadius();
 	void SetEffectRadius(float EffectRadius, bool forceSet);
 	void OnRep_EffectRadius();
-	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void BPPlacedStructure(class APlayerController** ForPC);
 	void Activate(bool Activated);

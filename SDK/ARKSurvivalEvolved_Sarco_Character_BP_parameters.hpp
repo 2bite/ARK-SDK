@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -101,13 +101,13 @@ struct ASarco_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_72
-struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_72_Params
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_77
+struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_77_Params
 {
 };
 
-// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_71
-struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_71_Params
+// Function Sarco_Character_BP.Sarco_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_76
+struct ASarco_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_76_Params
 {
 };
 

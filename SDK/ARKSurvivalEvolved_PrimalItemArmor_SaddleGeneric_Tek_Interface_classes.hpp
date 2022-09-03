@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void IGet_Max_Ammo(int* Retval);
+	void IGet_Max_Ammo(int* retVal);
 	void ISetElementToMax();
 };
 

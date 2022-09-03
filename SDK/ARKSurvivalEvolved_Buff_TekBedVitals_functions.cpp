@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,29 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_TekBedVitals.Buff_TekBedVitals_C.BPPreventAddingOtherBuff
+// ()
+// Parameters:
+// class UClass**                 anotherBuffClass               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABuff_TekBedVitals_C::BPPreventAddingOtherBuff(class UClass** anotherBuffClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekBedVitals.Buff_TekBedVitals_C.BPPreventAddingOtherBuff");
+
+	ABuff_TekBedVitals_C_BPPreventAddingOtherBuff_Params params;
+	params.anotherBuffClass = anotherBuffClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Buff_TekBedVitals.Buff_TekBedVitals_C.PreventActorTargeting
 // ()

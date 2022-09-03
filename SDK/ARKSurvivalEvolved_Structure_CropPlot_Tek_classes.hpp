@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ public:
 
 	void ResetRefreshInterval();
 	void BPInventoryItemUsed(class UObject** InventoryItemObject);
-	void CheckInstantGrow();
+	void STATIC_CheckInstantGrow();
 	void BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrimalItem** theItem, bool* bEquipItem);
 	float BPGetAdditionalGrowthMultiplier();
 	void UserConstructionScript();

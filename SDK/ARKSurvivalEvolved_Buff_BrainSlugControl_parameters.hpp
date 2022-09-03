@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,19 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.BPPreventRidingInstigator
+struct ABuff_BrainSlugControl_C_BPPreventRidingInstigator_Params
+{
+	class APrimalCharacter**                           ForPawn;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.DinoInstigatorReceivedRider
+struct ABuff_BrainSlugControl_C_DinoInstigatorReceivedRider_Params
+{
+	class AShooterCharacter**                          Rider;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_BrainSlugControl.Buff_BrainSlugControl_C.BPInstigatorDied
 struct ABuff_BrainSlugControl_C_BPInstigatorDied_Params

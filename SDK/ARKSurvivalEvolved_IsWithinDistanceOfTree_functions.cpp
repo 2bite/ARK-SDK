@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function IsWithinDistanceOfTree.IsWithinDistanceOfTree_C.ReceiveTick
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)

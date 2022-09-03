@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -209,7 +209,7 @@ struct ABuff_Zipline_CaveWolf_C_BPCheckPreventInput_Params
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.PlayTurnAnimation
 struct ABuff_Zipline_CaveWolf_C_PlayTurnAnimation_Params
 {
-	class UAnimMontage**                               override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage**                               Override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -221,7 +221,7 @@ struct ABuff_Zipline_CaveWolf_C_SetZiplineControlRotation_Params
 // Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.RotationNearlyEqual
 struct ABuff_Zipline_CaveWolf_C_RotationNearlyEqual_Params
 {
-	struct FRotator                                    RotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    RotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ErrorTolerance;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -255,53 +255,53 @@ struct ABuff_Zipline_CaveWolf_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_110
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_Run_K2Node_InputActionEvent_110_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_121
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_Run_K2Node_InputActionEvent_121_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_109
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_Run_K2Node_InputActionEvent_109_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Run_K2Node_InputActionEvent_120
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_Run_K2Node_InputActionEvent_120_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Jump_K2Node_InputActionEvent_108
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_Jump_K2Node_InputActionEvent_108_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Jump_K2Node_InputActionEvent_119
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_Jump_K2Node_InputActionEvent_119_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Use_K2Node_InputActionEvent_107
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_Use_K2Node_InputActionEvent_107_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Use_K2Node_InputActionEvent_118
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_Use_K2Node_InputActionEvent_118_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Crouch_K2Node_InputActionEvent_106
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_Crouch_K2Node_InputActionEvent_106_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Crouch_K2Node_InputActionEvent_117
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_Crouch_K2Node_InputActionEvent_117_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_105_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_116
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_116_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_51_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_53
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_53_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_52
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_52_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_104_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_115
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_115_Params
 {
 };
 
-// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_49
-struct ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_49_Params
+// Function Buff_Zipline_CaveWolf.Buff_Zipline_CaveWolf_C.InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_51
+struct ABuff_Zipline_CaveWolf_C_InpActEvt_Gamepad_FaceButton_Top_K2Node_InputKeyEvent_51_Params
 {
 };
 

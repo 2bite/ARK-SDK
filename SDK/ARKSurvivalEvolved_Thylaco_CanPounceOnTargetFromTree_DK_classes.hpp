@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void STATIC_ReceiveConditionCheck(class AActor** OwnerActor);
+	void ReceiveConditionCheck(class AActor** OwnerActor);
 	void ExecuteUbergraph_Thylaco_CanPounceOnTargetFromTree_DK(int EntryPoint);
 };
 

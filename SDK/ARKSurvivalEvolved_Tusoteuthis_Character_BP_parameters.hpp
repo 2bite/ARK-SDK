@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -93,7 +93,7 @@ struct ATusoteuthis_Character_BP_C_BPFedWakingTameEvent_Params
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.GetDefaultDino
 struct ATusoteuthis_Character_BP_C_GetDefaultDino_Params
 {
-	class ATusoteuthis_Character_BP_C*                 ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ATusoteuthis_Character_BP_C*                 Ref;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.OnRep_UTurnTargetRot
@@ -255,8 +255,8 @@ struct ATusoteuthis_Character_BP_C_TurnActorAround__UpdateFunc_Params
 {
 };
 
-// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_374
-struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_374_Params
+// Function Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_268
+struct ATusoteuthis_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_268_Params
 {
 };
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -251,7 +251,7 @@ void ABuff_SpaceWhale_Passenger_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, 
 
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.IsAllowedToFire
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           bAllowed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -294,18 +294,17 @@ void ABuff_SpaceWhale_Passenger_C::SetTargeting(bool bTargetingEnabled)
 
 
 // Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.LocalDoAttack
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Exec, Event, Static, MulticastDelegate, Public, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           bDidFire                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_SpaceWhale_Passenger_C::LocalDoAttack(bool* bDidFire)
+void ABuff_SpaceWhale_Passenger_C::STATIC_LocalDoAttack(bool* bDidFire)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpaceWhale_Passenger.Buff_SpaceWhale_Passenger_C.LocalDoAttack");
 
 	ABuff_SpaceWhale_Passenger_C_LocalDoAttack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

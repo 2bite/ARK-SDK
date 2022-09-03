@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,8 +58,8 @@ struct ABuff_StriderVision_C_Setup_HUDWidget_Params
 	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Buff_StriderVision.Buff_StriderVision_C.DestroyHUDWidget
-struct ABuff_StriderVision_C_DestroyHUDWidget_Params
+// Function Buff_StriderVision.Buff_StriderVision_C.DestroyHudWidget
+struct ABuff_StriderVision_C_DestroyHudWidget_Params
 {
 	bool                                               Bypass;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -69,8 +69,8 @@ struct ABuff_StriderVision_C_Flash_Target_Params
 {
 };
 
-// Function Buff_StriderVision.Buff_StriderVision_C.Highlight latest shared target
-struct ABuff_StriderVision_C_Highlight_latest_shared_target_Params
+// Function Buff_StriderVision.Buff_StriderVision_C.Highlight Latest Shared Target
+struct ABuff_StriderVision_C_Highlight_Latest_Shared_Target_Params
 {
 };
 
@@ -95,7 +95,7 @@ struct ABuff_StriderVision_C_Set_All_Components_Render_Custom_Depth_Params
 // Function Buff_StriderVision.Buff_StriderVision_C.Set All Components Custom Depth Stencil Value
 struct ABuff_StriderVision_C_Set_All_Components_Custom_Depth_Stencil_Value_Params
 {
-	int                                                stencil_Value;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Stencil_Value;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

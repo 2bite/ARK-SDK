@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_604
+// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_622
 // ()
 
-void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_604()
+void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_622()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_604");
+	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_622");
 
-	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_604_Params params;
+	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_ModifyBone_622_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Tenta
 }
 
 
-// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3968
+// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4040
 // ()
 
-void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3968()
+void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4040()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3968");
+	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4040");
 
-	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3968_Params params;
+	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4040_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -46,14 +46,14 @@ void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Tenta
 }
 
 
-// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2666
+// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2918
 // ()
 
-void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2666()
+void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2918()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2666");
+	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2918");
 
-	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2666_Params params;
+	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2918_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -63,14 +63,14 @@ void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Tenta
 }
 
 
-// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2665
+// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2917
 // ()
 
-void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2665()
+void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2917()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2665");
+	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2917");
 
-	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2665_Params params;
+	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_BlendListByBool_2917_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -80,14 +80,14 @@ void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Tenta
 }
 
 
-// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3966
+// Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4038
 // ()
 
-void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3966()
+void UTentacleHazard_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4038()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3966");
+	static auto fn = UObject::FindObject<UFunction>("Function TentacleHazard_AnimBP.TentacleHazard_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4038");
 
-	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_3966_Params params;
+	UTentacleHazard_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TentacleHazard_AnimBP_AnimGraphNode_SequencePlayer_4038_Params params;
 
 	auto flags = fn->FunctionFlags;
 

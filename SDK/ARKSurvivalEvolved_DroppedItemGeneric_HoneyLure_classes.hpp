@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C
-// 0x012D (0x0835 - 0x0708)
+// 0x013D (0x0845 - 0x0708)
 class ADroppedItemGeneric_HoneyLure_C : public ADroppedItemGeneric_C
 {
 public:
@@ -71,32 +71,38 @@ public:
 	class APrimalDinoCharacter*                        K2Node_DynamicCast_AsPrimalDinoCharacter;                 // 0x07E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x07E8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_BooleanAND_ReturnValue;                          // 0x07E9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_DoAttack_ReturnValue;                            // 0x07EA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_DoAttack_ReturnValue2;                           // 0x07EB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Can_Dino_Consume_Bait_OutputPin;                 // 0x07EC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x3];                                       // 0x07ED(0x0003) MISSED OFFSET
+	bool                                               CallFunc_OverrideDinoDoAttackOnConsume_Override;          // 0x07EA(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_DoAttack_ReturnValue;                            // 0x07EB(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_DoAttack_ReturnValue2;                           // 0x07EC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Can_Dino_Consume_Bait_OutputPin;                 // 0x07ED(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x2];                                       // 0x07EE(0x0002) MISSED OFFSET
 	class APrimalBuff*                                 CallFunc_StaticAddBuff_ReturnValue;                       // 0x07F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x07F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class ADino_AIController_BP_C*                     K2Node_DynamicCast_AsDino_AIController_BP_C;              // 0x0800(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast3_CastSuccess;                          // 0x0808(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue2;                         // 0x0809(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsDinoInConsumeRange_ReturnValue;                // 0x080A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_HasBuff_ReturnValue;                             // 0x080B(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BPIsTamed_ReturnValue;                           // 0x080C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue2;                        // 0x080D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue3;                        // 0x080E(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_BooleanAND_ReturnValue3;                         // 0x080F(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x0810(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0814(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue4;                        // 0x0815(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x2];                                       // 0x0816(0x0002) MISSED OFFSET
-	class UMaterialInterface*                          CallFunc_Array_Get_Item2;                                 // 0x0818(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    K2Node_DynamicCast_AsMaterialInstanceDynamic;             // 0x0820(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast4_CastSuccess;                          // 0x0828(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x3];                                       // 0x0829(0x0003) MISSED OFFSET
-	float                                              CallFunc_GetLifeSpan_ReturnValue;                         // 0x082C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              CallFunc_Add_FloatFloat_ReturnValue;                      // 0x0830(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue;                // 0x0834(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_OverrideDinoPreventAttract_Prevent;              // 0x07F8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x7];                                       // 0x07F9(0x0007) MISSED OFFSET
+	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x0800(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class ADino_AIController_BP_C*                     K2Node_DynamicCast_AsDino_AIController_BP_C;              // 0x0808(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast3_CastSuccess;                          // 0x0810(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue2;                        // 0x0811(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue2;                         // 0x0812(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsDinoInConsumeRange_ReturnValue;                // 0x0813(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanOR_ReturnValue;                           // 0x0814(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_HasBuff_ReturnValue;                             // 0x0815(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue3;                        // 0x0816(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BPIsTamed_ReturnValue;                           // 0x0817(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue4;                        // 0x0818(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_BooleanAND_ReturnValue3;                         // 0x0819(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x2];                                       // 0x081A(0x0002) MISSED OFFSET
+	float                                              CallFunc_RandomFloatInRange_ReturnValue;                  // 0x081C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x0820(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue5;                        // 0x0821(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x6];                                       // 0x0822(0x0006) MISSED OFFSET
+	class UMaterialInterface*                          CallFunc_Array_Get_Item2;                                 // 0x0828(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    K2Node_DynamicCast_AsMaterialInstanceDynamic;             // 0x0830(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast4_CastSuccess;                          // 0x0838(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x3];                                       // 0x0839(0x0003) MISSED OFFSET
+	float                                              CallFunc_GetLifeSpan_ReturnValue;                         // 0x083C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              CallFunc_Add_FloatFloat_ReturnValue;                      // 0x0840(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_LessEqual_FloatFloat_ReturnValue;                // 0x0844(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -105,6 +111,8 @@ public:
 	}
 
 
+	void STATIC_OverrideDinoPreventAttract(class APrimalDinoCharacter* Dino, bool* Prevent);
+	void STATIC_OverrideDinoDoAttackOnConsume(class APrimalDinoCharacter* Dino, bool* Override);
 	bool IsDinoInConsumeRange(class AActor* Dino, class APrimalDinoAIController* DinoAI);
 	void SetMovePointNearLure(class APrimalDinoCharacter* DinoToMove, class APrimalDinoAIController* DinoAI);
 	void Can_Dino_Consume_Bait(class APrimalDinoCharacter* InputPin, bool* OutputPin);

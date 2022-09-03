@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalGlobalsBlueprint.PrimalGlobalsBlueprint_C
-// 0x0000 (0x0198 - 0x0198)
+// 0x0000 (0x01B8 - 0x01B8)
 class UPrimalGlobalsBlueprint_C : public UPrimalGlobals
 {
 public:

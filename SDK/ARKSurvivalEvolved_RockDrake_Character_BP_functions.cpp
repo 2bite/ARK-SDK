@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -148,7 +148,7 @@ void ARockDrake_Character_BP_C::OnJumped()
 
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.Climber_AI_ClimbingCanAttack
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -161,7 +161,6 @@ void ARockDrake_Character_BP_C::Climber_AI_ClimbingCanAttack(int* AttackIndex, b
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -411,7 +410,7 @@ void ARockDrake_Character_BP_C::ClimberTick_Server()
 
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.RockDrakeTick_Gliding_BraceForImpact
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Native, Static, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ARockDrake_Character_BP_C::STATIC_RockDrakeTick_Gliding_BraceForImpact()
 {
@@ -420,6 +419,7 @@ void ARockDrake_Character_BP_C::STATIC_RockDrakeTick_Gliding_BraceForImpact()
 	ARockDrake_Character_BP_C_RockDrakeTick_Gliding_BraceForImpact_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -523,12 +523,12 @@ void ARockDrake_Character_BP_C::ClimberTick_NonDedi()
 
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.RockDrake_AI_CheckForPounce
-// (NetRequest, Native, Event, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 pounceDir                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARockDrake_Character_BP_C::RockDrake_AI_CheckForPounce(bool* Success, struct FVector* pounceDir)
+void ARockDrake_Character_BP_C::STATIC_RockDrake_AI_CheckForPounce(bool* Success, struct FVector* pounceDir)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.RockDrake_AI_CheckForPounce");
 
@@ -622,12 +622,12 @@ void ARockDrake_Character_BP_C::BP_OnSetDeath()
 
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.TraceForPounce
-// (Exec, Static, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           foundValidLocation             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 validLocation                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARockDrake_Character_BP_C::STATIC_TraceForPounce(bool* foundValidLocation, struct FVector* validLocation)
+void ARockDrake_Character_BP_C::TraceForPounce(bool* foundValidLocation, struct FVector* validLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.TraceForPounce");
 
@@ -737,9 +737,9 @@ void ARockDrake_Character_BP_C::CanClimberStopNonDediTick_NonControlled(bool* Re
 
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.SpawnNestEgg
-// (NetRequest, Native, NetMulticast, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ARockDrake_Character_BP_C::SpawnNestEgg()
+void ARockDrake_Character_BP_C::STATIC_SpawnNestEgg()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.SpawnNestEgg");
 
@@ -940,7 +940,7 @@ void ARockDrake_Character_BP_C::OnStartSeeking()
 
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.ReceiveHit
-// (NetReliable, NetRequest, NetResponse, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimitiveComponent**    MyComp                         (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 Other                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -1024,9 +1024,9 @@ void ARockDrake_Character_BP_C::Get_Rock_Drake_Anim_BP(class URockDrake_AnimBlue
 
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.SpawnGlideImpactVFX
-// (NetReliable, Event, Static, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ARockDrake_Character_BP_C::STATIC_SpawnGlideImpactVFX()
+void ARockDrake_Character_BP_C::SpawnGlideImpactVFX()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.SpawnGlideImpactVFX");
 
@@ -1043,9 +1043,9 @@ void ARockDrake_Character_BP_C::STATIC_SpawnGlideImpactVFX()
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.GetCurrentGlidingRotationRateMult
 // ()
 // Parameters:
-// float                          Mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARockDrake_Character_BP_C::GetCurrentGlidingRotationRateMult(float* Mult)
+void ARockDrake_Character_BP_C::GetCurrentGlidingRotationRateMult(float* mult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.GetCurrentGlidingRotationRateMult");
 
@@ -1057,13 +1057,13 @@ void ARockDrake_Character_BP_C::GetCurrentGlidingRotationRateMult(float* Mult)
 
 	fn->FunctionFlags = flags;
 
-	if (Mult != nullptr)
-		*Mult = params.Mult;
+	if (mult != nullptr)
+		*mult = params.mult;
 }
 
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Native, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -1417,16 +1417,16 @@ void ARockDrake_Character_BP_C::Replicate_Index_Update_Target_TPV_Camera_Offset(
 // ()
 // Parameters:
 // class AShooterCharacter*       Rider                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           enterCamo                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           EnterCamo                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bInstant                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARockDrake_Character_BP_C::AddRiderToCamoFadeQueue(class AShooterCharacter* Rider, bool enterCamo, bool bInstant)
+void ARockDrake_Character_BP_C::AddRiderToCamoFadeQueue(class AShooterCharacter* Rider, bool EnterCamo, bool bInstant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.AddRiderToCamoFadeQueue");
 
 	ARockDrake_Character_BP_C_AddRiderToCamoFadeQueue_Params params;
 	params.Rider = Rider;
-	params.enterCamo = enterCamo;
+	params.EnterCamo = EnterCamo;
 	params.bInstant = bInstant;
 
 	auto flags = fn->FunctionFlags;
@@ -1440,15 +1440,15 @@ void ARockDrake_Character_BP_C::AddRiderToCamoFadeQueue(class AShooterCharacter*
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.ActivateRiderCamoParticles
 // ()
 // Parameters:
-// bool                           enterCamo                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           EnterCamo                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter*       specificRider                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARockDrake_Character_BP_C::ActivateRiderCamoParticles(bool enterCamo, class AShooterCharacter* specificRider)
+void ARockDrake_Character_BP_C::ActivateRiderCamoParticles(bool EnterCamo, class AShooterCharacter* specificRider)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.ActivateRiderCamoParticles");
 
 	ARockDrake_Character_BP_C_ActivateRiderCamoParticles_Params params;
-	params.enterCamo = enterCamo;
+	params.EnterCamo = EnterCamo;
 	params.specificRider = specificRider;
 
 	auto flags = fn->FunctionFlags;
@@ -1725,9 +1725,9 @@ void ARockDrake_Character_BP_C::GetRockDrakeStateOverrideIndex(TEnumAsByte<E_Din
 // ()
 // Parameters:
 // bool*                          isForRetry                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          traceDist                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          TraceDist                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARockDrake_Character_BP_C::GetCorrectSurfaceTraceDistance(bool* isForRetry, float* traceDist)
+void ARockDrake_Character_BP_C::GetCorrectSurfaceTraceDistance(bool* isForRetry, float* TraceDist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.GetCorrectSurfaceTraceDistance");
 
@@ -1740,8 +1740,8 @@ void ARockDrake_Character_BP_C::GetCorrectSurfaceTraceDistance(bool* isForRetry,
 
 	fn->FunctionFlags = flags;
 
-	if (traceDist != nullptr)
-		*traceDist = params.traceDist;
+	if (TraceDist != nullptr)
+		*TraceDist = params.TraceDist;
 }
 
 
@@ -2107,9 +2107,9 @@ void ARockDrake_Character_BP_C::Get_Correct_Surface_Trace_OffsetTransforms(bool*
 // TArray<bool>                   traceHitsArray                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int*                           numValidHits                   (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           numTraces                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           AllowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           allowClimbing                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARockDrake_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* AllowClimbing)
+void ARockDrake_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHits, int* numTraces, TArray<bool>* traceHitsArray, bool* allowClimbing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.Check For Prevent Stop Climbing");
 
@@ -2125,8 +2125,8 @@ void ARockDrake_Character_BP_C::Check_For_Prevent_Stop_Climbing(int* numValidHit
 
 	if (traceHitsArray != nullptr)
 		*traceHitsArray = params.traceHitsArray;
-	if (AllowClimbing != nullptr)
-		*AllowClimbing = params.AllowClimbing;
+	if (allowClimbing != nullptr)
+		*allowClimbing = params.allowClimbing;
 }
 
 
@@ -2267,14 +2267,14 @@ void ARockDrake_Character_BP_C::FadeToInvisible_Rider__UpdateFunc()
 }
 
 
-// Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_121
+// Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_126
 // ()
 
-void ARockDrake_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_121()
+void ARockDrake_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_126()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_121");
+	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_126");
 
-	ARockDrake_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_121_Params params;
+	ARockDrake_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_126_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2713,15 +2713,15 @@ void ARockDrake_Character_BP_C::OwningClient_SyncAllowPouncing(bool Newval)
 // ()
 // Parameters:
 // bool                           Newval                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 newTargetLocation              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 NewTargetLocation              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARockDrake_Character_BP_C::Server_SyncHasValidPounceTarget(bool Newval, const struct FVector& newTargetLocation)
+void ARockDrake_Character_BP_C::Server_SyncHasValidPounceTarget(bool Newval, const struct FVector& NewTargetLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RockDrake_Character_BP.RockDrake_Character_BP_C.Server_SyncHasValidPounceTarget");
 
 	ARockDrake_Character_BP_C_Server_SyncHasValidPounceTarget_Params params;
 	params.Newval = Newval;
-	params.newTargetLocation = newTargetLocation;
+	params.NewTargetLocation = NewTargetLocation;
 
 	auto flags = fn->FunctionFlags;
 

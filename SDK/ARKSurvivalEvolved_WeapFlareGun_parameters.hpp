@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function WeapFlareGun.WeapFlareGun_C.BPWeaponCanFire
+struct AWeapFlareGun_C_BPWeaponCanFire_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function WeapFlareGun.WeapFlareGun_C.UserConstructionScript
 struct AWeapFlareGun_C_UserConstructionScript_Params

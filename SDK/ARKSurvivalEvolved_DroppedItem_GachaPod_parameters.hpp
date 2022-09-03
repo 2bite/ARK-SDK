@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,8 +57,8 @@ struct ADroppedItem_GachaPod_C_UserConstructionScript_Params
 {
 };
 
-// Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.Colorshift
-struct ADroppedItem_GachaPod_C_Colorshift_Params
+// Function DroppedItem_GachaPod.DroppedItem_GachaPod_C.ColorShift
+struct ADroppedItem_GachaPod_C_ColorShift_Params
 {
 };
 

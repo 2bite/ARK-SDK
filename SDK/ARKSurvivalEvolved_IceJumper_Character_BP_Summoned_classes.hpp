@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass IceJumper_Character_BP_Summoned.IceJumper_Character_BP_Summoned_C
-// 0x0000 (0x3700 - 0x3700)
+// 0x0000 (0x3720 - 0x3720)
 class AIceJumper_Character_BP_Summoned_C : public AIceJumper_Character_BP_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ struct UPrimalItemConsumable_Mutagel_C_BPServerHandleItemNetExecCommand_Params
 // Function PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C.find strider
 struct UPrimalItemConsumable_Mutagel_C_find_strider_Params
 {
-	bool                                               backup;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Backup;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	class APrimalDinoCharacter*                        strider;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

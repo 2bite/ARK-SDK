@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -249,7 +249,7 @@ bool ATrike_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Trike_Character_BP.Trike_Character_BP_C.BPHandleControllerInitiatedAttack
-// (NetResponse, Static, NetMulticast, Private, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetReliable, Native, Event, Static, NetMulticast, Protected, DLLImport, BlueprintEvent)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -262,6 +262,7 @@ bool ATrike_Character_BP_C::STATIC_BPHandleControllerInitiatedAttack(int* Attack
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -367,7 +368,7 @@ void ATrike_Character_BP_C::GetPawnRootComponent(class AActor* Target, class UPr
 
 
 // Function Trike_Character_BP.Trike_Character_BP_C.BPAdjustDamage
-// (NetRequest, Event, Private, Delegate, NetServer, NetClient, BlueprintCallable, Const)
+// (NetRequest, Native, Protected, DLLImport, BlueprintEvent)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -390,6 +391,7 @@ float ATrike_Character_BP_C::BPAdjustDamage(float* IncomingDamage, struct FDamag
 	params.PointHitInfo = PointHitInfo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

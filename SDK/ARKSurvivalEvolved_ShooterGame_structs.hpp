@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1670,14 +1670,14 @@ struct FInvalidReferenceRedirector
 };
 
 // ScriptStruct ShooterGame.PrimalGameData.ExtraEggItem
-// 0x0020
+// 0x0028
 struct FExtraEggItem
 {
-	class UClass*                                      DropItem;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       ActiveEventFilter;                                        // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      ForDinoCharacter;                                         // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DropChance;                                               // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	class FString                                      DropItem;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       ActiveEventFilter;                                        // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ForDinoCharacter;                                         // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DropChance;                                               // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ShooterGame.PrimalGameData.WorldDefaultItemSet
@@ -1692,6 +1692,15 @@ struct FWorldDefaultItemSet
 	unsigned char                                      UnknownData00[0x1];                                       // 0x001B(0x0001) MISSED OFFSET
 	int                                                ForceEquipIfAppID;                                        // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<class UClass*>                              ItemsToGive;                                              // 0x0020(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct ShooterGame.PrimalGameData.CryopodPersistantBuffs
+// 0x0018
+struct FCryopodPersistantBuffs
+{
+	class FString                                      BuffClassString;                                          // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	int                                                IDBitMask;                                                // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct ShooterGame.PrimalGameData.ExtraItemAttachmentInfo
@@ -1724,6 +1733,7 @@ struct FItemAttachmentInfo
 	unsigned char                                      bAttachToFirstPersonCamera : 1;                           // 0x0021(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bAttachToFirstPersonCameraCapsule : 1;                    // 0x0021(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      bPersistShieldRefreshOnWeaponEquip : 1;                   // 0x0021(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bDisableForTaxidermy : 1;                                 // 0x0021(0x0001) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0022(0x0006) MISSED OFFSET
 	class UClass*                                      OnlyUseAttachmentForActorClass;                           // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<EPrimalEquipmentType>                  IgnoreAttachmentWhenEquipmentOfType;                      // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -2433,13 +2443,13 @@ struct FItemMultiplier
 };
 
 // ScriptStruct ShooterGame.PrimalInventoryComponent.EventItem
-// 0x0018
+// 0x0020
 struct FEventItem
 {
 	struct FName                                       EventName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      Item;                                                     // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsEngram;                                                // 0x0010(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
+	class FString                                      Item;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	bool                                               bIsEngram;                                                // 0x0018(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct ShooterGame.PrimalInventoryComponent.ItemSpawnActorClassOverride
@@ -2745,7 +2755,7 @@ struct FTribeRankGroup
 };
 
 // ScriptStruct ShooterGame.PrimalGameData.TribeData
-// 0x0138
+// 0x0140
 struct FTribeData
 {
 	class FString                                      TribeName;                                                // 0x0000(0x0010) (ZeroConstructor)
@@ -2768,7 +2778,9 @@ struct FTribeData
 	unsigned char                                      UnknownData01[0x4];                                       // 0x00CC(0x0004) MISSED OFFSET
 	TArray<struct FTribeRankGroup>                     TribeRankGroups;                                          // 0x00D0(0x0010) (ZeroConstructor)
 	int                                                NumTribeDinos;                                            // 0x00E0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x54];                                      // 0x00E4(0x0054) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
+	double                                             LastMergedTime;                                           // 0x00E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x50];                                      // 0x00F0(0x0050) MISSED OFFSET
 };
 
 // ScriptStruct ShooterGame.PrimalPlayerData.PrimalPlayerCharacterConfigStructReplicated
@@ -2976,6 +2988,14 @@ struct FTamingWaypointInfo
 	float                                              ProgressBarPercent;                                       // 0x0088(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	bool                                               bIsTamed;                                                 // 0x008C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x008D(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct ShooterGame.ShooterPlayerController.StructHighlightInfo
+// 0x0018
+struct FStructHighlightInfo
+{
+	TWeakObjectPtr<class APrimalStructure>             Structure;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                HighlightColor;                                           // 0x0008(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
 };
 
 // ScriptStruct ShooterGame.PaintItem
@@ -5502,6 +5522,40 @@ struct FUI_MainMenuLink
 {
 	class FString                                      MapName;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
 	class UClass*                                      Class;                                                    // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct ShooterGame.ShooterCheatManager.DinoClassCountStruct
+// 0x0010
+struct FDinoClassCountStruct
+{
+	class UClass*                                      DinoClass;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                NumberofTamedClass;                                       // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                NumberofWildClass;                                        // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ShooterGame.ShooterGameMode.DynamicUndermeshVolumes_Data
+// 0x0010
+struct FDynamicUndermeshVolumes_Data
+{
+	int                                                X;                                                        // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Y;                                                        // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Z;                                                        // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                R;                                                        // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ShooterGame.ShooterGameMode.DynamicUndermeshVolumes_MapSet
+// 0x0020
+struct FDynamicUndermeshVolumes_MapSet
+{
+	class FString                                      Map;                                                      // 0x0000(0x0010) (ZeroConstructor)
+	TArray<struct FDynamicUndermeshVolumes_Data>       volumes;                                                  // 0x0010(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct ShooterGame.ShooterGameMode.DynamicUndermeshVolumes_Root
+// 0x0010
+struct FDynamicUndermeshVolumes_Root
+{
+	TArray<struct FDynamicUndermeshVolumes_MapSet>     Root;                                                     // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct ShooterGame.ShooterGameMode.AtlasAdminCommandTrackingEntry

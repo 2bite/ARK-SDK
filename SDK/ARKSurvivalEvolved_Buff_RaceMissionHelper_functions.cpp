@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.BPInstigatorSleeped
+// ()
+// Parameters:
+// bool*                          bIsSleeped                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_RaceMissionHelper_C::BPInstigatorSleeped(bool* bIsSleeped)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.BPInstigatorSleeped");
+
+	ABuff_RaceMissionHelper_C_BPInstigatorSleeped_Params params;
+	params.bIsSleeped = bIsSleeped;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.SetSpline
 // ()
@@ -54,7 +74,7 @@ void ABuff_RaceMissionHelper_C::Tick_UpdatePowerUps()
 
 
 // Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.ListenServerUpdateCheckpoints
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Event, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // TArray<struct FMissionWorldIndicator> MissionDataBuff                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AShooterCharacter*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
@@ -525,6 +545,23 @@ void ABuff_RaceMissionHelper_C::TeleportBackToStart()
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.TeleportBackToStart");
 
 	ABuff_RaceMissionHelper_C_TeleportBackToStart_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.ServerClaimConsolePlayer
+// ()
+
+void ABuff_RaceMissionHelper_C::ServerClaimConsolePlayer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_RaceMissionHelper.Buff_RaceMissionHelper_C.ServerClaimConsolePlayer");
+
+	ABuff_RaceMissionHelper_C_ServerClaimConsolePlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
 

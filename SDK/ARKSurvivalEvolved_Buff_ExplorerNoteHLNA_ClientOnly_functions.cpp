@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ExplorerNoteHLNA_ClientOnly.Buff_ExplorerNoteHLNA_ClientOnly_C.DrawBuffFloatingHUD
-// (Net, NetRequest, Exec, Native, NetMulticast, Private, Protected, HasDefaults, NetClient, NetValidate)
+// (Net, Exec, Event, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // int*                           BuffIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -33,7 +33,6 @@ void ABuff_ExplorerNoteHLNA_ClientOnly_C::DrawBuffFloatingHUD(int* BuffIndex, cl
 	params.DrawScale = DrawScale;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

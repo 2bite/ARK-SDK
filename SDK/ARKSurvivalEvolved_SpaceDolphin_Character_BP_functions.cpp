@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,7 +16,7 @@ namespace sdk
 // ()
 // Parameters:
 // bool                           HasSaddle                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           IsFPV                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           isFPV                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           HideHUDinFPV                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            LaserLevel                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            MaxLaserLevel                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -34,7 +34,7 @@ namespace sdk
 // float                          EchoOrChaffCooldownPercent     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSubmerged                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::GetHudData(bool* HasSaddle, bool* IsFPV, bool* HideHUDinFPV, int* LaserLevel, int* MaxLaserLevel, float* LaserDowngradeTime, float* LaserDowngradeTimerRemaining, bool* IsLaserDowngradeTimerActive, double* LastLaserLevelChangedTime, class UPrimalInventoryComponent** InventoryComponent, class UClass** SaddleFuelItem, class UClass** FlakCannonAmmoItem, bool* IsUsingSuperFlight, bool* IsUsingSuperFlightBoost, float* FuelPercent, float* CannonCooldownPercent, float* EchoOrChaffCooldownPercent, bool* IsSubmerged)
+void ASpaceDolphin_Character_BP_C::GetHudData(bool* HasSaddle, bool* isFPV, bool* HideHUDinFPV, int* LaserLevel, int* MaxLaserLevel, float* LaserDowngradeTime, float* LaserDowngradeTimerRemaining, bool* IsLaserDowngradeTimerActive, double* LastLaserLevelChangedTime, class UPrimalInventoryComponent** InventoryComponent, class UClass** SaddleFuelItem, class UClass** FlakCannonAmmoItem, bool* IsUsingSuperFlight, bool* IsUsingSuperFlightBoost, float* FuelPercent, float* CannonCooldownPercent, float* EchoOrChaffCooldownPercent, bool* IsSubmerged)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetHudData");
 
@@ -48,8 +48,8 @@ void ASpaceDolphin_Character_BP_C::GetHudData(bool* HasSaddle, bool* IsFPV, bool
 
 	if (HasSaddle != nullptr)
 		*HasSaddle = params.HasSaddle;
-	if (IsFPV != nullptr)
-		*IsFPV = params.IsFPV;
+	if (isFPV != nullptr)
+		*isFPV = params.isFPV;
 	if (HideHUDinFPV != nullptr)
 		*HideHUDinFPV = params.HideHUDinFPV;
 	if (LaserLevel != nullptr)
@@ -82,6 +82,55 @@ void ASpaceDolphin_Character_BP_C::GetHudData(bool* HasSaddle, bool* IsFPV, bool
 		*EchoOrChaffCooldownPercent = params.EchoOrChaffCooldownPercent;
 	if (IsSubmerged != nullptr)
 		*IsSubmerged = params.IsSubmerged;
+}
+
+
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPClientHandleNetExecCommand
+// ()
+// Parameters:
+// struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
+// class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ASpaceDolphin_Character_BP_C::BPClientHandleNetExecCommand(struct FName* CommandName, class APlayerController** ForPC, struct FBPNetExecParams* ExecParams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPClientHandleNetExecCommand");
+
+	ASpaceDolphin_Character_BP_C_BPClientHandleNetExecCommand_Params params;
+	params.CommandName = CommandName;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ExecParams != nullptr)
+		*ExecParams = params.ExecParams;
+
+	return params.ReturnValue;
+}
+
+
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.CheckVelocityError
+// ()
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ASpaceDolphin_Character_BP_C::CheckVelocityError(float DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.CheckVelocityError");
+
+	ASpaceDolphin_Character_BP_C_CheckVelocityError_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -429,11 +478,11 @@ struct FRotator ASpaceDolphin_Character_BP_C::Get_Desired_Rotation()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetCameraHitLocationForProjectiles
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ASpaceDolphin_Character_BP_C::STATIC_GetCameraHitLocationForProjectiles()
+struct FVector ASpaceDolphin_Character_BP_C::GetCameraHitLocationForProjectiles()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetCameraHitLocationForProjectiles");
 
@@ -506,19 +555,18 @@ void ASpaceDolphin_Character_BP_C::Update_Saddle_Shield_Material()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetPercentTamed
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          Percemt                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          RequiredAmount                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::STATIC_GetPercentTamed(float* Percemt, float* RequiredAmount)
+void ASpaceDolphin_Character_BP_C::GetPercentTamed(float* Percemt, float* RequiredAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetPercentTamed");
 
 	ASpaceDolphin_Character_BP_C_GetPercentTamed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -532,14 +580,14 @@ void ASpaceDolphin_Character_BP_C::STATIC_GetPercentTamed(float* Percemt, float*
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPDinoTooltipCustomTamingProgressBar
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           overrideTamingProgressBarIfActive (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          progressPercent                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class FString                  Label                          (Parm, OutParm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ASpaceDolphin_Character_BP_C::STATIC_BPDinoTooltipCustomTamingProgressBar(bool* overrideTamingProgressBarIfActive, float* progressPercent, class FString* Label)
+bool ASpaceDolphin_Character_BP_C::BPDinoTooltipCustomTamingProgressBar(bool* overrideTamingProgressBarIfActive, float* progressPercent, class FString* Label)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPDinoTooltipCustomTamingProgressBar");
 
@@ -587,7 +635,7 @@ void ASpaceDolphin_Character_BP_C::BPNotifyInventoryItemChange(bool* bIsItemAdd,
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.AddSaddleActivationText
-// (NetReliable, NetRequest, Exec, NetResponse, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
 void ASpaceDolphin_Character_BP_C::AddSaddleActivationText()
 {
@@ -800,11 +848,11 @@ void ASpaceDolphin_Character_BP_C::SetLastTimeChargedLaserHit(double val)
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Update Materials
-// (Net, NetRequest, Event, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UMaterialInterface*      Material                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::Update_Materials(class UMaterialInterface* Material)
+void ASpaceDolphin_Character_BP_C::STATIC_Update_Materials(class UMaterialInterface* Material)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Update Materials");
 
@@ -822,9 +870,9 @@ void ASpaceDolphin_Character_BP_C::Update_Materials(class UMaterialInterface* Ma
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Is FPV Public
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::Is_FPV_Public(bool* Retval)
+void ASpaceDolphin_Character_BP_C::Is_FPV_Public(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Is FPV Public");
 
@@ -836,22 +884,22 @@ void ASpaceDolphin_Character_BP_C::Is_FPV_Public(bool* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.IsFPV
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.isFPV
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 CameraLoc                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::IsFPV(bool* Retval, struct FVector* CameraLoc)
+void ASpaceDolphin_Character_BP_C::isFPV(bool* retVal, struct FVector* CameraLoc)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.IsFPV");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.isFPV");
 
-	ASpaceDolphin_Character_BP_C_IsFPV_Params params;
+	ASpaceDolphin_Character_BP_C_isFPV_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -859,8 +907,8 @@ void ASpaceDolphin_Character_BP_C::IsFPV(bool* Retval, struct FVector* CameraLoc
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 	if (CameraLoc != nullptr)
 		*CameraLoc = params.CameraLoc;
 }
@@ -951,13 +999,15 @@ void ASpaceDolphin_Character_BP_C::UpdateBarrelRoll()
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetLaserDamage
 // ()
 // Parameters:
+// class AActor*                  HitActor                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ASpaceDolphin_Character_BP_C::GetLaserDamage()
+float ASpaceDolphin_Character_BP_C::GetLaserDamage(class AActor* HitActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.GetLaserDamage");
 
 	ASpaceDolphin_Character_BP_C_GetLaserDamage_Params params;
+	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1336,13 +1386,13 @@ bool ASpaceDolphin_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPGetMultiUseEntries
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Net, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ASpaceDolphin_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ASpaceDolphin_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPGetMultiUseEntries");
 
@@ -1432,7 +1482,7 @@ void ASpaceDolphin_Character_BP_C::EchoLocation()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.UpdateGroundFX
-// (Exec, Native, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Native, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
 void ASpaceDolphin_Character_BP_C::STATIC_UpdateGroundFX()
 {
@@ -1450,7 +1500,7 @@ void ASpaceDolphin_Character_BP_C::STATIC_UpdateGroundFX()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.DoLaserTraceAndDamage
-// (Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Exec, Event, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -1459,7 +1509,7 @@ void ASpaceDolphin_Character_BP_C::STATIC_UpdateGroundFX()
 // bool                           Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ImpactCharacterOrStructure     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::STATIC_DoLaserTraceAndDamage(const struct FVector& Start, const struct FVector& End, struct FVector* RetStart, struct FVector* RetEnd, bool* Ret, bool* ImpactCharacterOrStructure)
+void ASpaceDolphin_Character_BP_C::DoLaserTraceAndDamage(const struct FVector& Start, const struct FVector& End, struct FVector* RetStart, struct FVector* RetEnd, bool* Ret, bool* ImpactCharacterOrStructure)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.DoLaserTraceAndDamage");
 
@@ -1519,16 +1569,15 @@ void ASpaceDolphin_Character_BP_C::UpateBarrelRollFX()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.UpdateRotatingComponent
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ASpaceDolphin_Character_BP_C::UpdateRotatingComponent()
+void ASpaceDolphin_Character_BP_C::STATIC_UpdateRotatingComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.UpdateRotatingComponent");
 
 	ASpaceDolphin_Character_BP_C_UpdateRotatingComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1769,7 +1818,7 @@ void ASpaceDolphin_Character_BP_C::ReceiveActorEndOverlap(class AActor** OtherAc
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Get Camera YScalar
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Exec, Event, NetResponse, Static, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          StarFoxModeCameraXOffsetScalar (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1835,9 +1884,9 @@ bool ASpaceDolphin_Character_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementM
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.CanBarrelRoll
 // ()
 // Parameters:
-// bool                           res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Res                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::CanBarrelRoll(bool* res)
+void ASpaceDolphin_Character_BP_C::CanBarrelRoll(bool* Res)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.CanBarrelRoll");
 
@@ -1849,8 +1898,8 @@ void ASpaceDolphin_Character_BP_C::CanBarrelRoll(bool* res)
 
 	fn->FunctionFlags = flags;
 
-	if (res != nullptr)
-		*res = params.res;
+	if (Res != nullptr)
+		*Res = params.Res;
 }
 
 
@@ -2276,16 +2325,15 @@ float ASpaceDolphin_Character_BP_C::BPGetCrosshairSpread()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.UpdateLoop
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ASpaceDolphin_Character_BP_C::UpdateLoop()
+void ASpaceDolphin_Character_BP_C::STATIC_UpdateLoop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.UpdateLoop");
 
 	ASpaceDolphin_Character_BP_C_UpdateLoop_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2389,18 +2437,17 @@ struct FLinearColor ASpaceDolphin_Character_BP_C::BPGetCrosshairColor()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Try Get ChargedLaserTarget
-// (NetReliable, Exec, Native, Event, NetResponse, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AActor*                  Ret                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::Try_Get_ChargedLaserTarget(class AActor** Ret)
+void ASpaceDolphin_Character_BP_C::STATIC_Try_Get_ChargedLaserTarget(class AActor** Ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Try Get ChargedLaserTarget");
 
 	ASpaceDolphin_Character_BP_C_Try_Get_ChargedLaserTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2456,14 +2503,14 @@ void ASpaceDolphin_Character_BP_C::GetChargedLaserParameters(class AShooterProje
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.FireChargedLaser
-// (NetRequest, Exec, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Exec, Native, Event, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Dir                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ChargeTime                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::STATIC_FireChargedLaser(const struct FVector& Dir, const struct FVector& Loc, class AActor* Target, float ChargeTime)
+void ASpaceDolphin_Character_BP_C::FireChargedLaser(const struct FVector& Dir, const struct FVector& Loc, class AActor* Target, float ChargeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.FireChargedLaser");
 
@@ -2474,6 +2521,7 @@ void ASpaceDolphin_Character_BP_C::STATIC_FireChargedLaser(const struct FVector&
 	params.ChargeTime = ChargeTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2482,15 +2530,16 @@ void ASpaceDolphin_Character_BP_C::STATIC_FireChargedLaser(const struct FVector&
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Owning Client Try FireLasers
-// (NetReliable, Exec, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Native, NetResponse, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ASpaceDolphin_Character_BP_C::STATIC_Owning_Client_Try_FireLasers()
+void ASpaceDolphin_Character_BP_C::Owning_Client_Try_FireLasers()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Owning Client Try FireLasers");
 
 	ASpaceDolphin_Character_BP_C_Owning_Client_Try_FireLasers_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2504,8 +2553,9 @@ void ASpaceDolphin_Character_BP_C::STATIC_Owning_Client_Try_FireLasers()
 // struct FVector                 Dir                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Socket                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::FireLasers(const struct FVector& Dir, const struct FVector& Loc, const struct FName& Socket)
+void ASpaceDolphin_Character_BP_C::FireLasers(const struct FVector& Dir, const struct FVector& Loc, const struct FName& Socket, const struct FVector& Start)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.FireLasers");
 
@@ -2513,6 +2563,7 @@ void ASpaceDolphin_Character_BP_C::FireLasers(const struct FVector& Dir, const s
 	params.Dir = Dir;
 	params.Loc = Loc;
 	params.Socket = Socket;
+	params.Start = Start;
 
 	auto flags = fn->FunctionFlags;
 
@@ -3013,17 +3064,18 @@ struct FName ASpaceDolphin_Character_BP_C::BPGetRiderSocket()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.IsJumpHeld
-// (Net, NetReliable, NetRequest, Event, NetMulticast, Public, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ASpaceDolphin_Character_BP_C::IsJumpHeld()
+bool ASpaceDolphin_Character_BP_C::STATIC_IsJumpHeld()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.IsJumpHeld");
 
 	ASpaceDolphin_Character_BP_C_IsJumpHeld_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3034,13 +3086,13 @@ bool ASpaceDolphin_Character_BP_C::IsJumpHeld()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPOnDinoCheat
-// (Net, NetRequest, Native, Event, NetMulticast, Public, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FName*                  CheatName                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bSetValue                      (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value)
+void ASpaceDolphin_Character_BP_C::STATIC_BPOnDinoCheat(struct FName* CheatName, bool* bSetValue, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPOnDinoCheat");
 
@@ -3050,7 +3102,6 @@ void ASpaceDolphin_Character_BP_C::BPOnDinoCheat(struct FName* CheatName, bool* 
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3162,7 +3213,7 @@ bool ASpaceDolphin_Character_BP_C::IsFlakCannonOnCooldown()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPGetCrosshairLocation
-// (NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, MulticastDelegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         CanvasClipX                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CanvasClipY                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -3178,7 +3229,6 @@ void ASpaceDolphin_Character_BP_C::BPGetCrosshairLocation(float* CanvasClipX, fl
 	params.CanvasClipY = CanvasClipY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3258,7 +3308,7 @@ bool ASpaceDolphin_Character_BP_C::BPOnStopJump()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.Fire Flak Cannon
-// (NetReliable, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, Event, NetResponse, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Dir                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -3272,6 +3322,7 @@ void ASpaceDolphin_Character_BP_C::Fire_Flak_Cannon(const struct FVector& Dir, c
 	params.Loc = Loc;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3853,9 +3904,9 @@ struct FVector ASpaceDolphin_Character_BP_C::GetWindGustEpicenter()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.DoWing GustAOE
-// (NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ASpaceDolphin_Character_BP_C::STATIC_DoWing_GustAOE()
+void ASpaceDolphin_Character_BP_C::DoWing_GustAOE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.DoWing GustAOE");
 
@@ -4355,12 +4406,12 @@ bool ASpaceDolphin_Character_BP_C::BP_InterceptMoveForward(float* AxisValue)
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPGetHUDElements
-// (NetReliable, Static, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ASpaceDolphin_Character_BP_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ASpaceDolphin_Character_BP_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPGetHUDElements");
 
@@ -4379,7 +4430,7 @@ void ASpaceDolphin_Character_BP_C::STATIC_BPGetHUDElements(class APlayerControll
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.BPOverrideCameraViewTarget
-// (Net, NetReliable, Exec, Event, NetResponse, Static, Public, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FName*                  CurrentCameraMode              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector*                DesiredCameraLocation          (Parm, ZeroConstructor, IsPlainOldData)
@@ -4673,15 +4724,16 @@ void ASpaceDolphin_Character_BP_C::Controller_Follow_ActorRotation(float DeltaSe
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.ReferenceLatchingObjects
-// (NetReliable, NetRequest, Exec, Static, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ASpaceDolphin_Character_BP_C::STATIC_ReferenceLatchingObjects()
+void ASpaceDolphin_Character_BP_C::ReferenceLatchingObjects()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.ReferenceLatchingObjects");
 
 	ASpaceDolphin_Character_BP_C_ReferenceLatchingObjects_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4690,7 +4742,7 @@ void ASpaceDolphin_Character_BP_C::STATIC_ReferenceLatchingObjects()
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.LineTrace
-// (NetReliable, Event, NetMulticast, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, Static, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UMeshComponent*          Mesh                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -4702,7 +4754,7 @@ void ASpaceDolphin_Character_BP_C::STATIC_ReferenceLatchingObjects()
 // struct FVector                 Normal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Hit_Actor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::LineTrace(class UMeshComponent* Mesh, const struct FName& SocketName, class AActor* Actor, const struct FVector& Offset, bool BackwardLatching, bool* Hit_Somthing, struct FVector* Location, struct FVector* Normal, class AActor** Hit_Actor)
+void ASpaceDolphin_Character_BP_C::STATIC_LineTrace(class UMeshComponent* Mesh, const struct FName& SocketName, class AActor* Actor, const struct FVector& Offset, bool BackwardLatching, bool* Hit_Somthing, struct FVector* Location, struct FVector* Normal, class AActor** Hit_Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.LineTrace");
 
@@ -4768,12 +4820,12 @@ void ASpaceDolphin_Character_BP_C::ProcessLatching(float DeltaSeconds)
 
 
 // Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.TryLatch
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Offset                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           backwardsLatching              (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::TryLatch(const struct FVector& Offset, bool backwardsLatching)
+void ASpaceDolphin_Character_BP_C::STATIC_TryLatch(const struct FVector& Offset, bool backwardsLatching)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.TryLatch");
 
@@ -4782,6 +4834,7 @@ void ASpaceDolphin_Character_BP_C::TryLatch(const struct FVector& Offset, bool b
 	params.backwardsLatching = backwardsLatching;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4806,14 +4859,14 @@ void ASpaceDolphin_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_348
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_232
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_348()
+void ASpaceDolphin_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_232()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_348");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_232");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_348_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_232_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4823,14 +4876,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_348
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_347
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_231
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_347()
+void ASpaceDolphin_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_231()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_347");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_231");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_347_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_231_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4840,14 +4893,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_3
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_346
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_230
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_346()
+void ASpaceDolphin_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_230()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_346");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_BrakeDino_K2Node_InputActionEvent_230");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_346_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_BrakeDino_K2Node_InputActionEvent_230_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4857,14 +4910,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_BrakeDino_K2Node_InputActionEvent_3
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_345
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_229
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_345()
+void ASpaceDolphin_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_229()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_345");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_229");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_345_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_229_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4874,14 +4927,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_345(
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_344
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_228
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_344()
+void ASpaceDolphin_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_228()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_344");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_228");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_344_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_228_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4891,14 +4944,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_344()
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_343
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_227
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_343()
+void ASpaceDolphin_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_227()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_343");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_227");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_343_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_227_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4908,14 +4961,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_Input
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_342
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_226
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_342()
+void ASpaceDolphin_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_226()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_342");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_226");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_342_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_226_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4925,14 +4978,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_Input
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_74
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_66
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_74()
+void ASpaceDolphin_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_66()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_74");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_66");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_74_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_66_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4942,14 +4995,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKey
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_73
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_65
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_73()
+void ASpaceDolphin_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_65()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_73");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_65");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_73_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_65_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4959,14 +5012,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_Gamepad_LeftTrigger_K2Node_InputKey
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCam_K2Node_InputActionEvent_341
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCam_K2Node_InputActionEvent_225
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_OrbitCam_K2Node_InputActionEvent_341()
+void ASpaceDolphin_Character_BP_C::InpActEvt_OrbitCam_K2Node_InputActionEvent_225()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCam_K2Node_InputActionEvent_341");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCam_K2Node_InputActionEvent_225");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_OrbitCam_K2Node_InputActionEvent_341_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_OrbitCam_K2Node_InputActionEvent_225_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -4976,14 +5029,14 @@ void ASpaceDolphin_Character_BP_C::InpActEvt_OrbitCam_K2Node_InputActionEvent_34
 }
 
 
-// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_340
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_224
 // ()
 
-void ASpaceDolphin_Character_BP_C::InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_340()
+void ASpaceDolphin_Character_BP_C::InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_224()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_340");
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_224");
 
-	ASpaceDolphin_Character_BP_C_InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_340_Params params;
+	ASpaceDolphin_Character_BP_C_InpActEvt_OrbitCamToggle_K2Node_InputActionEvent_224_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5827,13 +5880,15 @@ void ASpaceDolphin_Character_BP_C::MultiThrusterVFXBoost()
 // ()
 // Parameters:
 // struct FVector                 CameraHitLoc                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CustomTimeDilation             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::ServerRequestFireLasers(const struct FVector& CameraHitLoc)
+void ASpaceDolphin_Character_BP_C::ServerRequestFireLasers(const struct FVector& CameraHitLoc, float CustomTimeDilation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.ServerRequestFireLasers");
 
 	ASpaceDolphin_Character_BP_C_ServerRequestFireLasers_Params params;
 	params.CameraHitLoc = CameraHitLoc;
+	params.CustomTimeDilation = CustomTimeDilation;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5894,8 +5949,9 @@ void ASpaceDolphin_Character_BP_C::ServerPressedFire()
 // struct FVector                 Dir                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// float                          CustomTimeDilation             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ASpaceDolphin_Character_BP_C::ServerFireChargedLaser(const struct FVector& Dir, const struct FVector& Loc, class AActor* Target)
+void ASpaceDolphin_Character_BP_C::ServerFireChargedLaser(const struct FVector& Dir, const struct FVector& Loc, class AActor* Target, float CustomTimeDilation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.ServerFireChargedLaser");
 
@@ -5903,6 +5959,7 @@ void ASpaceDolphin_Character_BP_C::ServerFireChargedLaser(const struct FVector& 
 	params.Dir = Dir;
 	params.Loc = Loc;
 	params.Target = Target;
+	params.CustomTimeDilation = CustomTimeDilation;
 
 	auto flags = fn->FunctionFlags;
 
@@ -6630,6 +6687,23 @@ void ASpaceDolphin_Character_BP_C::UpdateLoopingEvent()
 	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.UpdateLoopingEvent");
 
 	ASpaceDolphin_Character_BP_C_UpdateLoopingEvent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.StopMovementImmediately
+// ()
+
+void ASpaceDolphin_Character_BP_C::StopMovementImmediately()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SpaceDolphin_Character_BP.SpaceDolphin_Character_BP_C.StopMovementImmediately");
+
+	ASpaceDolphin_Character_BP_C_StopMovementImmediately_Params params;
 
 	auto flags = fn->FunctionFlags;
 

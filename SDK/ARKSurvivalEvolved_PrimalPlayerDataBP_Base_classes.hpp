@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C
-// 0x0038 (0x0540 - 0x0508)
+// 0x0048 (0x0550 - 0x0508)
 class UPrimalPlayerDataBP_Base_C : public UPrimalPlayerData
 {
 public:
@@ -27,6 +27,7 @@ public:
 	int                                                CurrentPlayerDataVersion;                                 // 0x0534(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                HexagonCount;                                             // 0x0538(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	int                                                NumChibiLevelUpsData;                                     // 0x053C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	TArray<struct FName>                               GeneralizedUnlockedAchievementTags;                       // 0x0540(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +36,10 @@ public:
 	}
 
 
-	void BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController);
+	void SetChibiLevels(int* newLevels, class AShooterPlayerController** ForPC);
+	bool HasGeneralizedAchievementTag(struct FName* Tag);
+	void GrantGeneralizedAchievementTag(struct FName* ObtainedAchievementTag, class AShooterPlayerController** ForPC);
+	void STATIC_BPForceDefeatedBoss(int* DifficultyIndex, struct FName* BossName, class AShooterPlayerController** PlayerController);
 	bool SetPlayerHexagonCount(int* NewHexagonCount);
 	int GetPlayerHexagonCount();
 	void BPCreatedNewPlayerData();

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,7 +76,7 @@ bool AJugbug_Character_BaseBP_C::BlueprintCanAttack(int* AttackIndex, float* Dis
 
 
 // Function Jugbug_Character_BaseBP.Jugbug_Character_BaseBP_C.BPGetMultiUseEntries
-// (NetReliable, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, NetValidate)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)

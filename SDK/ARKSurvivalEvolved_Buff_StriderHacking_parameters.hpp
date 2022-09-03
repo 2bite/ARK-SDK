@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_StriderHacking.Buff_StriderHacking_C.Update Buff Timer server logic
+struct ABuff_StriderHacking_C_Update_Buff_Timer_server_logic_Params
+{
+	bool*                                              Success;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              from_player_trigger;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_StriderHacking.Buff_StriderHacking_C.UpdateBuffTimer
 struct ABuff_StriderHacking_C_UpdateBuffTimer_Params

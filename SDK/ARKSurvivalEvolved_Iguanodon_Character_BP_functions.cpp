@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -318,13 +318,13 @@ bool AIguanodon_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, i
 
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPGetMultiUseEntries
-// (Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AIguanodon_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AIguanodon_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPGetMultiUseEntries");
 
@@ -332,6 +332,7 @@ TArray<struct FMultiUseEntry> AIguanodon_Character_BP_C::BPGetMultiUseEntries(cl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -402,7 +403,7 @@ void AIguanodon_Character_BP_C::Net_SetCurrentStance(bool isBiped)
 
 
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.BPDoAttack
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Exec, Event, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -414,7 +415,6 @@ void AIguanodon_Character_BP_C::BPDoAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -514,9 +514,9 @@ void AIguanodon_Character_BP_C::ClientSetBipedState(bool isBiped)
 // Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.GetDefaultDino
 // ()
 // Parameters:
-// class AIguanodon_Character_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class AIguanodon_Character_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C** ref)
+void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Iguanodon_Character_BP.Iguanodon_Character_BP_C.GetDefaultDino");
 
@@ -528,8 +528,8 @@ void AIguanodon_Character_BP_C::GetDefaultDino(class AIguanodon_Character_BP_C**
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 

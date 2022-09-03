@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,9 +37,9 @@ void ABogSpider_WebAnchorPoint_C::IsAnchorVisible(bool* bResult)
 // Function BogSpider_WebAnchorPoint.BogSpider_WebAnchorPoint_C.GetAnchorRadiusMult
 // ()
 // Parameters:
-// float                          Mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float                          mult                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABogSpider_WebAnchorPoint_C::GetAnchorRadiusMult(float* Mult)
+void ABogSpider_WebAnchorPoint_C::GetAnchorRadiusMult(float* mult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BogSpider_WebAnchorPoint.BogSpider_WebAnchorPoint_C.GetAnchorRadiusMult");
 
@@ -51,8 +51,8 @@ void ABogSpider_WebAnchorPoint_C::GetAnchorRadiusMult(float* Mult)
 
 	fn->FunctionFlags = flags;
 
-	if (Mult != nullptr)
-		*Mult = params.Mult;
+	if (mult != nullptr)
+		*mult = params.mult;
 }
 
 

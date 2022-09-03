@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ struct ABuff_FearCourage_C_Process_Courage_Value_Params
 {
 	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class APrimalCharacter*                            forCharacter;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               canSwitch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               CanSwitch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               useClientIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              finalValue;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -35,7 +35,7 @@ struct ABuff_FearCourage_C_ProcessFearValue_Params
 {
 	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class APrimalCharacter*                            forCharacter;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               canSwitch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               CanSwitch;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               useClientIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              finalValue;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -76,7 +76,7 @@ struct ABuff_FearCourage_C_IsAtMax_f_Params
 	class APrimalCharacter*                            Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               useClientIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Courage;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               fear;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Fear;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_FearCourage.Buff_FearCourage_C.GetTeamColorForParticles
@@ -321,23 +321,23 @@ struct ABuff_FearCourage_C_DecelerationTimeline__UpdateFunc_Params
 {
 };
 
-// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Fire_K2Node_InputActionEvent_148
-struct ABuff_FearCourage_C_InpActEvt_Fire_K2Node_InputActionEvent_148_Params
+// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Fire_K2Node_InputActionEvent_158
+struct ABuff_FearCourage_C_InpActEvt_Fire_K2Node_InputActionEvent_158_Params
 {
 };
 
-// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Targeting_K2Node_InputActionEvent_147
-struct ABuff_FearCourage_C_InpActEvt_Targeting_K2Node_InputActionEvent_147_Params
+// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Targeting_K2Node_InputActionEvent_157
+struct ABuff_FearCourage_C_InpActEvt_Targeting_K2Node_InputActionEvent_157_Params
 {
 };
 
-// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Crouch_K2Node_InputActionEvent_146
-struct ABuff_FearCourage_C_InpActEvt_Crouch_K2Node_InputActionEvent_146_Params
+// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Crouch_K2Node_InputActionEvent_156
+struct ABuff_FearCourage_C_InpActEvt_Crouch_K2Node_InputActionEvent_156_Params
 {
 };
 
-// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Jump_K2Node_InputActionEvent_145
-struct ABuff_FearCourage_C_InpActEvt_Jump_K2Node_InputActionEvent_145_Params
+// Function Buff_FearCourage.Buff_FearCourage_C.InpActEvt_Jump_K2Node_InputActionEvent_155
+struct ABuff_FearCourage_C_InpActEvt_Jump_K2Node_InputActionEvent_155_Params
 {
 };
 

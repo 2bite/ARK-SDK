@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,14 +44,14 @@ void ABuff_TekStrider_Attachment_Base_C::get_socket_loc(const struct FVector& fa
 
 
 // Function Buff_TekStrider_Attachment_Base.Buff_TekStrider_Attachment_Base_C.is head clear
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, NetClient, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FName                   extra_socket                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           from_animbp                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           head_is_clear                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           could_find_socket              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Attachment_Base_C::is_head_clear(const struct FName& extra_socket, bool from_animbp, bool* head_is_clear, bool* could_find_socket)
+void ABuff_TekStrider_Attachment_Base_C::STATIC_is_head_clear(const struct FName& extra_socket, bool from_animbp, bool* head_is_clear, bool* could_find_socket)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Attachment_Base.Buff_TekStrider_Attachment_Base_C.is head clear");
 
@@ -60,6 +60,7 @@ void ABuff_TekStrider_Attachment_Base_C::is_head_clear(const struct FName& extra
 	params.from_animbp = from_animbp;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +74,7 @@ void ABuff_TekStrider_Attachment_Base_C::is_head_clear(const struct FName& extra
 
 
 // Function Buff_TekStrider_Attachment_Base.Buff_TekStrider_Attachment_Base_C.trace check for blockers between locations
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, NetServer, NetClient, NetValidate)
+// (Native, Event, NetMulticast, MulticastDelegate, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -81,7 +82,7 @@ void ABuff_TekStrider_Attachment_Base_C::is_head_clear(const struct FName& extra
 // struct FHitResult              OutHit                         (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_TekStrider_Attachment_Base_C::STATIC_trace_check_for_blockers_between_locations(const struct FVector& Start, const struct FVector& End, bool ignore_foliage, struct FHitResult* OutHit)
+bool ABuff_TekStrider_Attachment_Base_C::trace_check_for_blockers_between_locations(const struct FVector& Start, const struct FVector& End, bool ignore_foliage, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Attachment_Base.Buff_TekStrider_Attachment_Base_C.trace check for blockers between locations");
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,7 +70,7 @@ void ABuff_SpaceWhaleTeleport_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -82,6 +82,7 @@ void ABuff_SpaceWhaleTeleport_C::BPSetupForInstigator(class AActor** ForInstigat
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +116,7 @@ bool ABuff_SpaceWhaleTeleport_C::BPCustomAllowAddBuff(class APrimalCharacter** f
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPPreventInstigatorMovementMode
-// (NetRequest, Exec, Native, Event, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EMovementMode>*    NewMovementMode                (Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char*                 NewCustomMode                  (Parm, ZeroConstructor, IsPlainOldData)
@@ -130,7 +131,6 @@ bool ABuff_SpaceWhaleTeleport_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMo
 	params.NewCustomMode = NewCustomMode;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,7 +141,7 @@ bool ABuff_SpaceWhaleTeleport_C::BPPreventInstigatorMovementMode(TEnumAsByte<EMo
 
 
 // Function Buff_SpaceWhaleTeleport.Buff_SpaceWhaleTeleport_C.BPOnOwnerMassTeleportEvent
-// (Net, Exec, NetResponse, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EMassTeleportState>* EventState                     (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter**       TeleportInitiatedByChar        (Parm, ZeroConstructor, IsPlainOldData)
@@ -155,6 +155,7 @@ void ABuff_SpaceWhaleTeleport_C::BPOnOwnerMassTeleportEvent(TEnumAsByte<EMassTel
 	params.TeleportInitiatedByChar = TeleportInitiatedByChar;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

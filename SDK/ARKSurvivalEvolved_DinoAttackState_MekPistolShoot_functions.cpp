@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function DinoAttackState_MekPistolShoot.DinoAttackState_MekPistolShoot_C.BPOnAttackTick
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -96,7 +96,7 @@ public:
 
 	void BPNotifyAmmoBoxReloadedStructure(class APrimalStructure** ReloadedStructure);
 	void OnRep_bVisualRadiusIsActive();
-	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	bool BPGetMultiUseCenterText(class APlayerController** ForPC, int* UseIndex, class FString* OutCenterText, struct FLinearColor* OutCenterTextColor);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);

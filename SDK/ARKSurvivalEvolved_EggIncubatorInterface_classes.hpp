@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void IsEggItemAllowed(class UPrimalItemConsumable_Egg_C* EggItem, bool* IsAllowed);
+	void IsEggItemAllowed(class UPrimalItemConsumable_Egg_C* eggItem, bool* IsAllowed);
 	void GetItemDisplaySlot(class UPrimalItem* ForItem, int* InSlot, bool* SlotFound);
 };
 

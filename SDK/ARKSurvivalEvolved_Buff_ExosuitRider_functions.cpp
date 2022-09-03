@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,6 +58,37 @@ void ABuff_ExosuitRider_C::GetHudData(bool* bUsesChestBeam, bool* bCanUseChestBe
 }
 
 
+// Function Buff_ExosuitRider.Buff_ExosuitRider_C.BPAdjustStatusValueModification
+// ()
+// Parameters:
+// class UPrimalCharacterStatusComponent** ForComponent                   (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EPrimalCharacterStatusValue>* ValueType                      (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         InAmount                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass**                 DamageTypeClass                (Parm, ZeroConstructor, IsPlainOldData)
+// bool*                          bManualModification            (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ABuff_ExosuitRider_C::BPAdjustStatusValueModification(class UPrimalCharacterStatusComponent** ForComponent, TEnumAsByte<EPrimalCharacterStatusValue>* ValueType, float* InAmount, class UClass** DamageTypeClass, bool* bManualModification)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_ExosuitRider.Buff_ExosuitRider_C.BPAdjustStatusValueModification");
+
+	ABuff_ExosuitRider_C_BPAdjustStatusValueModification_Params params;
+	params.ForComponent = ForComponent;
+	params.ValueType = ValueType;
+	params.InAmount = InAmount;
+	params.DamageTypeClass = DamageTypeClass;
+	params.bManualModification = bManualModification;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Buff_ExosuitRider.Buff_ExosuitRider_C.BPDeactivated
 // ()
 // Parameters:
@@ -102,12 +133,12 @@ bool ABuff_ExosuitRider_C::BPPreventAddingOtherBuff(class UClass** anotherBuffCl
 
 
 // Function Buff_ExosuitRider.Buff_ExosuitRider_C.BPGetHUDElements
-// (NetReliable, NetRequest, Native, Event, Static, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_ExosuitRider_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABuff_ExosuitRider_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ExosuitRider.Buff_ExosuitRider_C.BPGetHUDElements");
 

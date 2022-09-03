@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,8 +41,8 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_166();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_3939();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_184();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_4011();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_TPV_MinigunTurret_AnimBP(int EntryPoint);
 };

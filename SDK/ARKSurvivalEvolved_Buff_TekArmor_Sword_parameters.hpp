@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.AllowTekPunch
+struct ABuff_TekArmor_Sword_C_AllowTekPunch_Params
+{
+	bool                                               Allow;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.PreventBlockingWithShield
 struct ABuff_TekArmor_Sword_C_PreventBlockingWithShield_Params
@@ -42,7 +48,7 @@ struct ABuff_TekArmor_Sword_C_GetRelatedTekArmorRef_Params
 struct ABuff_TekArmor_Sword_C_Can_Decrease_Element_Ammo_Params
 {
 	int                                                AmountToDecrease;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               isForChargedState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsForChargedState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               CanDecrease;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -50,7 +56,7 @@ struct ABuff_TekArmor_Sword_C_Can_Decrease_Element_Ammo_Params
 struct ABuff_TekArmor_Sword_C_TryDecreaseElementAmmo_Params
 {
 	int                                                AmountToDecrease;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               isForChargedState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsForChargedState;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.BPCheckPreventInput
@@ -186,7 +192,7 @@ struct ABuff_TekArmor_Sword_C_CheckForTargetsWhileRocketPunching_Params
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Set AudioParams and Play
 struct ABuff_TekArmor_Sword_C_Set_AudioParams_and_Play_Params
 {
-	class UAudioComponent*                             audio;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	class UAudioComponent*                             Audio;                                                    // (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 	float                                              Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Pitch;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               PlaySound;                                                // (Parm, ZeroConstructor, IsPlainOldData)
@@ -279,53 +285,108 @@ struct ABuff_TekArmor_Sword_C_UserConstructionScript_Params
 {
 };
 
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_100
+struct ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_100_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_99
+struct ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_99_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_98
+struct ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_98_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_97
+struct ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_97_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_44
+struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_44_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_43
+struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_43_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_96
+struct ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_96_Params
+{
+};
+
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_95
 struct ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_95_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Targeting_K2Node_InputActionEvent_94
-struct ABuff_TekArmor_Sword_C_InpActEvt_Targeting_K2Node_InputActionEvent_94_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_42
+struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_42_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_93
-struct ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_93_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_41
+struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_41_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_AltFire_K2Node_InputActionEvent_92
-struct ABuff_TekArmor_Sword_C_InpActEvt_AltFire_K2Node_InputActionEvent_92_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_Gamepad_Left_Trigger_Hold
+struct ABuff_TekArmor_Sword_C_Proxy_Gamepad_Left_Trigger_Hold_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_InputAction_Targeting_Hold
+struct ABuff_TekArmor_Sword_C_Proxy_InputAction_Targeting_Hold_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_InputAction_Fire_Hold
+struct ABuff_TekArmor_Sword_C_Proxy_InputAction_Fire_Hold_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_Gamepad_Right_Trigger_Hold
+struct ABuff_TekArmor_Sword_C_Proxy_Gamepad_Right_Trigger_Hold_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_InputAction_AltFire_Hold
+struct ABuff_TekArmor_Sword_C_Proxy_InputAction_AltFire_Hold_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_Fire_HoldTimer
+struct ABuff_TekArmor_Sword_C_Proxy_Fire_HoldTimer_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_91
-struct ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_91_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_Targeting_HoldTimer
+struct ABuff_TekArmor_Sword_C_Proxy_Targeting_HoldTimer_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Fire_K2Node_InputActionEvent_90
-struct ABuff_TekArmor_Sword_C_InpActEvt_Fire_K2Node_InputActionEvent_90_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_AltFire_HoldTimer
+struct ABuff_TekArmor_Sword_C_Proxy_AltFire_HoldTimer_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_44
-struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_44_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_LeftTrigger_HoldTimer
+struct ABuff_TekArmor_Sword_C_Proxy_LeftTrigger_HoldTimer_Params
 {
 };
 
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_43
-struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_LeftTrigger_K2Node_InputKeyEvent_43_Params
-{
-};
-
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_42
-struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_42_Params
-{
-};
-
-// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_41
-struct ABuff_TekArmor_Sword_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputKeyEvent_41_Params
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_RightTrigger_HoldTimer
+struct ABuff_TekArmor_Sword_C_Proxy_RightTrigger_HoldTimer_Params
 {
 };
 
@@ -369,6 +430,56 @@ struct ABuff_TekArmor_Sword_C_Sword_AltFirePressed_Params
 
 // Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Sword_AltFireReleased
 struct ABuff_TekArmor_Sword_C_Sword_AltFireReleased_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_InputAction_Fire
+struct ABuff_TekArmor_Sword_C_Proxy_InputAction_Fire_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_Gamepad_Right_Trigger
+struct ABuff_TekArmor_Sword_C_Proxy_Gamepad_Right_Trigger_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_InputAction_AltFire
+struct ABuff_TekArmor_Sword_C_Proxy_InputAction_AltFire_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_InputAction_Targeting
+struct ABuff_TekArmor_Sword_C_Proxy_InputAction_Targeting_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Proxy_Gamepad_Left_Trigger
+struct ABuff_TekArmor_Sword_C_Proxy_Gamepad_Left_Trigger_Params
+{
+	bool                                               bPressed;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Skill_SuperPunch_Pressed
+struct ABuff_TekArmor_Sword_C_Skill_SuperPunch_Pressed_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Skill_SuperPunch_Released
+struct ABuff_TekArmor_Sword_C_Skill_SuperPunch_Released_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Skill_SuperPunch_Mod_Released
+struct ABuff_TekArmor_Sword_C_Skill_SuperPunch_Mod_Released_Params
+{
+};
+
+// Function Buff_TekArmor_Sword.Buff_TekArmor_Sword_C.Skill_SuperPunch_Mod_Pressed
+struct ABuff_TekArmor_Sword_C_Skill_SuperPunch_Mod_Pressed_Params
 {
 };
 

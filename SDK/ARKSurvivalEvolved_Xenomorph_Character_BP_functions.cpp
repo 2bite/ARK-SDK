@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,9 +41,9 @@ void AXenomorph_Character_BP_C::GetNumBatteries(int* numBatteries)
 // float                          fValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bBValue                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* ivalue)
+void AXenomorph_Character_BP_C::Get_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, float* fValue, double* dValue, bool* bBValue, int* iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Get Charge Variable Interface");
 
@@ -62,8 +62,8 @@ void AXenomorph_Character_BP_C::Get_Charge_Variable_Interface(TEnumAsByte<E_Char
 		*dValue = params.dValue;
 	if (bBValue != nullptr)
 		*bBValue = params.bBValue;
-	if (ivalue != nullptr)
-		*ivalue = params.ivalue;
+	if (iValue != nullptr)
+		*iValue = params.iValue;
 }
 
 
@@ -331,7 +331,7 @@ void AXenomorph_Character_BP_C::DisableEyeGlow()
 
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.UpdateBuryMound
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable)
+// (NetReliable, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ShouldShow                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -343,7 +343,6 @@ void AXenomorph_Character_BP_C::STATIC_UpdateBuryMound(bool ShouldShow)
 	params.ShouldShow = ShouldShow;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -485,7 +484,7 @@ bool AXenomorph_Character_BP_C::BPAllowCarryCharacter(class APrimalCharacter** c
 
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.TimeSinceLastAttackForIndex
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
 // Parameters:
 // int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -616,13 +615,13 @@ void AXenomorph_Character_BP_C::BPOnTamedProcessOrder(class APrimalCharacter** F
 
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AXenomorph_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AXenomorph_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.BPGetMultiUseEntries");
 
@@ -712,7 +711,7 @@ bool AXenomorph_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Can Dive
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1056,14 +1055,14 @@ void AXenomorph_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_76
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_81
 // ()
 
-void AXenomorph_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_76()
+void AXenomorph_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_81()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_76");
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_81");
 
-	AXenomorph_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_76_Params params;
+	AXenomorph_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_81_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1073,14 +1072,14 @@ void AXenomorph_Character_BP_C::InpActEvt_AltFire_K2Node_InputActionEvent_76()
 }
 
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Reload_K2Node_InputActionEvent_75
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Reload_K2Node_InputActionEvent_80
 // ()
 
-void AXenomorph_Character_BP_C::InpActEvt_Reload_K2Node_InputActionEvent_75()
+void AXenomorph_Character_BP_C::InpActEvt_Reload_K2Node_InputActionEvent_80()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Reload_K2Node_InputActionEvent_75");
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Reload_K2Node_InputActionEvent_80");
 
-	AXenomorph_Character_BP_C_InpActEvt_Reload_K2Node_InputActionEvent_75_Params params;
+	AXenomorph_Character_BP_C_InpActEvt_Reload_K2Node_InputActionEvent_80_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1090,14 +1089,14 @@ void AXenomorph_Character_BP_C::InpActEvt_Reload_K2Node_InputActionEvent_75()
 }
 
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_74
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_79
 // ()
 
-void AXenomorph_Character_BP_C::InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_74()
+void AXenomorph_Character_BP_C::InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_79()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_74");
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_79");
 
-	AXenomorph_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_74_Params params;
+	AXenomorph_Character_BP_C_InpActEvt_CrouchProneToggle_K2Node_InputActionEvent_79_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1107,14 +1106,14 @@ void AXenomorph_Character_BP_C::InpActEvt_CrouchProneToggle_K2Node_InputActionEv
 }
 
 
-// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_73
+// Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_78
 // ()
 
-void AXenomorph_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_73()
+void AXenomorph_Character_BP_C::InpActEvt_Prone_K2Node_InputActionEvent_78()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_73");
+	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.InpActEvt_Prone_K2Node_InputActionEvent_78");
 
-	AXenomorph_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_73_Params params;
+	AXenomorph_Character_BP_C_InpActEvt_Prone_K2Node_InputActionEvent_78_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1277,15 +1276,15 @@ void AXenomorph_Character_BP_C::ChargeVariableEventDoubleInterface(TEnumAsByte<E
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void AXenomorph_Character_BP_C::ChargeVariableEventIntInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.ChargeVariableEventIntInterface");
 
 	AXenomorph_Character_BP_C_ChargeVariableEventIntInterface_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1299,15 +1298,15 @@ void AXenomorph_Character_BP_C::ChargeVariableEventIntInterface(TEnumAsByte<E_Ch
 // ()
 // Parameters:
 // TEnumAsByte<E_ChargeVariableNames> variableType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int ivalue)
+void AXenomorph_Character_BP_C::ChargeVariableEventIntMulticastInterface(TEnumAsByte<E_ChargeVariableNames> variableType, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.ChargeVariableEventIntMulticastInterface");
 
 	AXenomorph_Character_BP_C_ChargeVariableEventIntMulticastInterface_Params params;
 	params.variableType = variableType;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1337,16 +1336,16 @@ void AXenomorph_Character_BP_C::ReceiveBeginPlay()
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.StartAcidSpray
 // ()
 // Parameters:
-// struct FVector                 hitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 HitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HitDir                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   HitBone                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::StartAcidSpray(const struct FVector& hitLoc, const struct FVector& HitDir, const struct FName& HitBone)
+void AXenomorph_Character_BP_C::StartAcidSpray(const struct FVector& HitLoc, const struct FVector& HitDir, const struct FName& HitBone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.StartAcidSpray");
 
 	AXenomorph_Character_BP_C_StartAcidSpray_Params params;
-	params.hitLoc = hitLoc;
+	params.HitLoc = HitLoc;
 	params.HitDir = HitDir;
 	params.HitBone = HitBone;
 
@@ -1361,16 +1360,16 @@ void AXenomorph_Character_BP_C::StartAcidSpray(const struct FVector& hitLoc, con
 // Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Server_StartAcidSpray
 // ()
 // Parameters:
-// struct FVector                 hitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 HitLoc                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HitDir                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   HitBone                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::Server_StartAcidSpray(const struct FVector& hitLoc, const struct FVector& HitDir, const struct FName& HitBone)
+void AXenomorph_Character_BP_C::Server_StartAcidSpray(const struct FVector& HitLoc, const struct FVector& HitDir, const struct FName& HitBone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Server_StartAcidSpray");
 
 	AXenomorph_Character_BP_C_Server_StartAcidSpray_Params params;
-	params.hitLoc = hitLoc;
+	params.HitLoc = HitLoc;
 	params.HitDir = HitDir;
 	params.HitBone = HitBone;
 
@@ -1952,9 +1951,9 @@ void AXenomorph_Character_BP_C::Charge_Variable_Event_Trigger_Multicast_Interfac
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // float                          fValue                         (Parm, ZeroConstructor, IsPlainOldData)
 // double                         dValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int ivalue)
+void AXenomorph_Character_BP_C::Charge_Variable_Event_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool bBValue, float fValue, double dValue, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Charge Variable Event Interface");
 
@@ -1963,7 +1962,7 @@ void AXenomorph_Character_BP_C::Charge_Variable_Event_Interface(TEnumAsByte<E_Ch
 	params.bBValue = bBValue;
 	params.fValue = fValue;
 	params.dValue = dValue;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1983,9 +1982,9 @@ void AXenomorph_Character_BP_C::Charge_Variable_Event_Interface(TEnumAsByte<E_Ch
 // bool                           bBValue                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           triggerEvent                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           multicastEvent                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ivalue                         (Parm, ZeroConstructor, IsPlainOldData)
+// int                            iValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void AXenomorph_Character_BP_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int ivalue)
+void AXenomorph_Character_BP_C::Set_Charge_Variable_Interface(TEnumAsByte<E_ChargeVariableNames> variableType, bool multicast, float fValue, double dValue, bool bBValue, bool triggerEvent, bool multicastEvent, int iValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Xenomorph_Character_BP.Xenomorph_Character_BP_C.Set Charge Variable Interface");
 
@@ -1997,7 +1996,7 @@ void AXenomorph_Character_BP_C::Set_Charge_Variable_Interface(TEnumAsByte<E_Char
 	params.bBValue = bBValue;
 	params.triggerEvent = triggerEvent;
 	params.multicastEvent = multicastEvent;
-	params.ivalue = ivalue;
+	params.iValue = iValue;
 
 	auto flags = fn->FunctionFlags;
 

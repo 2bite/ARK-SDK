@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function SK_windTurbine_AnimBlueprint.SK_windTurbine_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_632
+// Function SK_windTurbine_AnimBlueprint.SK_windTurbine_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_650
 // ()
 
-void USK_windTurbine_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_632()
+void USK_windTurbine_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_650()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SK_windTurbine_AnimBlueprint.SK_windTurbine_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_632");
+	static auto fn = UObject::FindObject<UFunction>("Function SK_windTurbine_AnimBlueprint.SK_windTurbine_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_650");
 
-	USK_windTurbine_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_632_Params params;
+	USK_windTurbine_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SK_windTurbine_AnimBlueprint_AnimGraphNode_ModifyBone_650_Params params;
 
 	auto flags = fn->FunctionFlags;
 

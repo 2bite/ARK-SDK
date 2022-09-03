@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -87,7 +87,7 @@ void AStructure_TrainingDummy_C::ApplySnapshot(class UPrimalItem** Snapshot)
 
 
 // Function Structure_TrainingDummy.Structure_TrainingDummy_C.BPGetMultiUseCenterText
-// (NetRequest, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -95,7 +95,7 @@ void AStructure_TrainingDummy_C::ApplySnapshot(class UPrimalItem** Snapshot)
 // struct FLinearColor            OutCenterTextColor             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AStructure_TrainingDummy_C::BPGetMultiUseCenterText(class APlayerController** ForPC, int* UseIndex, class FString* OutCenterText, struct FLinearColor* OutCenterTextColor)
+bool AStructure_TrainingDummy_C::STATIC_BPGetMultiUseCenterText(class APlayerController** ForPC, int* UseIndex, class FString* OutCenterText, struct FLinearColor* OutCenterTextColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TrainingDummy.Structure_TrainingDummy_C.BPGetMultiUseCenterText");
 
@@ -144,7 +144,7 @@ bool AStructure_TrainingDummy_C::BPTryMultiUse(class APlayerController** ForPC, 
 
 
 // Function Structure_TrainingDummy.Structure_TrainingDummy_C.BPGetMultiUseEntries
-// (NetReliable, Exec, Native, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -158,7 +158,6 @@ TArray<struct FMultiUseEntry> AStructure_TrainingDummy_C::BPGetMultiUseEntries(c
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -172,11 +171,11 @@ TArray<struct FMultiUseEntry> AStructure_TrainingDummy_C::BPGetMultiUseEntries(c
 
 
 // Function Structure_TrainingDummy.Structure_TrainingDummy_C.ReportDPS
-// (Net, NetReliable, Exec, Native, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          ReportTime                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_TrainingDummy_C::ReportDPS(float ReportTime)
+void AStructure_TrainingDummy_C::STATIC_ReportDPS(float ReportTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_TrainingDummy.Structure_TrainingDummy_C.ReportDPS");
 
@@ -184,7 +183,6 @@ void AStructure_TrainingDummy_C::ReportDPS(float ReportTime)
 	params.ReportTime = ReportTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

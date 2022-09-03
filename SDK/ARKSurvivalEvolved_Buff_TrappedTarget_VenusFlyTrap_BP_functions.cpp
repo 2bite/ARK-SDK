@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,16 +34,15 @@ bool ABuff_TrappedTarget_VenusFlyTrap_BP_C::BPPreventOnStartJump()
 
 
 // Function Buff_TrappedTarget_VenusFlyTrap_BP.Buff_TrappedTarget_VenusFlyTrap_BP_C.Struggle
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (Net, Exec, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_TrappedTarget_VenusFlyTrap_BP_C::STATIC_Struggle()
+void ABuff_TrappedTarget_VenusFlyTrap_BP_C::Struggle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TrappedTarget_VenusFlyTrap_BP.Buff_TrappedTarget_VenusFlyTrap_BP_C.Struggle");
 
 	ABuff_TrappedTarget_VenusFlyTrap_BP_C_Struggle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,7 +88,7 @@ void ABuff_TrappedTarget_VenusFlyTrap_BP_C::SetIsHostileBuff(bool NewSetting)
 
 
 // Function Buff_TrappedTarget_VenusFlyTrap_BP.Buff_TrappedTarget_VenusFlyTrap_BP_C.GetBuffDescription
-// (Exec, Native, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, NetValidate)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -100,7 +99,6 @@ struct FStatusValueModifierDescription ABuff_TrappedTarget_VenusFlyTrap_BP_C::ST
 	ABuff_TrappedTarget_VenusFlyTrap_BP_C_GetBuffDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +149,7 @@ void ABuff_TrappedTarget_VenusFlyTrap_BP_C::BPActivated(class AActor** ForInstig
 
 
 // Function Buff_TrappedTarget_VenusFlyTrap_BP.Buff_TrappedTarget_VenusFlyTrap_BP_C.BPGetHUDElements
-// (Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -164,7 +162,6 @@ void ABuff_TrappedTarget_VenusFlyTrap_BP_C::BPGetHUDElements(class APlayerContro
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

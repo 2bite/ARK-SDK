@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,11 +51,11 @@ int ABuff_RiderFlyingWindWoosh_Trope_C::GetBuffType()
 
 
 // Function Buff_RiderFlyingWindWoosh_Trope.Buff_RiderFlyingWindWoosh_Trope_C.GetBuffDescription
-// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, Private, HasDefaults, DLLImport, NetValidate)
+// (Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_RiderFlyingWindWoosh_Trope_C::GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_RiderFlyingWindWoosh_Trope_C::STATIC_GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_RiderFlyingWindWoosh_Trope.Buff_RiderFlyingWindWoosh_Trope_C.GetBuffDescription");
 
@@ -72,7 +72,7 @@ struct FStatusValueModifierDescription ABuff_RiderFlyingWindWoosh_Trope_C::GetBu
 
 
 // Function Buff_RiderFlyingWindWoosh_Trope.Buff_RiderFlyingWindWoosh_Trope_C.BPGetHUDElements
-// (Net, Exec, Native, Public, HasDefaults, DLLImport, NetValidate)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)

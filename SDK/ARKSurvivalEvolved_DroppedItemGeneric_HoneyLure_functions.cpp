@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,56 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C.OverrideDinoPreventAttract
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// Parameters:
+// class APrimalDinoCharacter*    Dino                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Prevent                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADroppedItemGeneric_HoneyLure_C::STATIC_OverrideDinoPreventAttract(class APrimalDinoCharacter* Dino, bool* Prevent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C.OverrideDinoPreventAttract");
+
+	ADroppedItemGeneric_HoneyLure_C_OverrideDinoPreventAttract_Params params;
+	params.Dino = Dino;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Prevent != nullptr)
+		*Prevent = params.Prevent;
+}
+
+
+// Function DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C.OverrideDinoDoAttackOnConsume
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// Parameters:
+// class APrimalDinoCharacter*    Dino                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Override                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ADroppedItemGeneric_HoneyLure_C::STATIC_OverrideDinoDoAttackOnConsume(class APrimalDinoCharacter* Dino, bool* Override)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C.OverrideDinoDoAttackOnConsume");
+
+	ADroppedItemGeneric_HoneyLure_C_OverrideDinoDoAttackOnConsume_Params params;
+	params.Dino = Dino;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Override != nullptr)
+		*Override = params.Override;
+}
+
 
 // Function DroppedItemGeneric_HoneyLure.DroppedItemGeneric_HoneyLure_C.IsDinoInConsumeRange
 // ()

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -288,11 +288,11 @@ void ATentacle_HazardBP_C::BPDied(float* KillingDamage, class AController** Kill
 
 
 // Function Tentacle_HazardBP.Tentacle_HazardBP_C.SpawnTentacleFromAttack
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Loc                            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATentacle_HazardBP_C::SpawnTentacleFromAttack(const struct FVector& Loc)
+void ATentacle_HazardBP_C::STATIC_SpawnTentacleFromAttack(const struct FVector& Loc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tentacle_HazardBP.Tentacle_HazardBP_C.SpawnTentacleFromAttack");
 
@@ -300,6 +300,7 @@ void ATentacle_HazardBP_C::SpawnTentacleFromAttack(const struct FVector& Loc)
 	params.Loc = Loc;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -553,11 +554,11 @@ void ATentacle_HazardBP_C::ResizeTentacle()
 
 
 // Function Tentacle_HazardBP.Tentacle_HazardBP_C.ManualOverlapCheck
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           FoundTarget                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATentacle_HazardBP_C::STATIC_ManualOverlapCheck(bool* FoundTarget)
+void ATentacle_HazardBP_C::ManualOverlapCheck(bool* FoundTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tentacle_HazardBP.Tentacle_HazardBP_C.ManualOverlapCheck");
 
@@ -597,12 +598,12 @@ void ATentacle_HazardBP_C::find_or_create_dynamic_materials(TArray<class UMateri
 
 
 // Function Tentacle_HazardBP.Tentacle_HazardBP_C.Find Valid Spawn Location
-// (NetRequest, Exec, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, Static, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FVector>         OutLocations                   (Parm, OutParm, ZeroConstructor)
 
-void ATentacle_HazardBP_C::Find_Valid_Spawn_Location(class AActor* Target, TArray<struct FVector>* OutLocations)
+void ATentacle_HazardBP_C::STATIC_Find_Valid_Spawn_Location(class AActor* Target, TArray<struct FVector>* OutLocations)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tentacle_HazardBP.Tentacle_HazardBP_C.Find Valid Spawn Location");
 
@@ -621,11 +622,11 @@ void ATentacle_HazardBP_C::Find_Valid_Spawn_Location(class AActor* Target, TArra
 
 
 // Function Tentacle_HazardBP.Tentacle_HazardBP_C.Ranged Attack target
-// (NetRequest, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, Static, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATentacle_HazardBP_C::Ranged_Attack_target(class APrimalCharacter* Target)
+void ATentacle_HazardBP_C::STATIC_Ranged_Attack_target(class APrimalCharacter* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tentacle_HazardBP.Tentacle_HazardBP_C.Ranged Attack target");
 
@@ -855,12 +856,12 @@ bool ATentacle_HazardBP_C::BPImpactEffect(struct FHitResult* HitRes, struct FVec
 
 
 // Function Tentacle_HazardBP.Tentacle_HazardBP_C.BPReleasedPlayer
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterCharacter**      ReleasedChar                   (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           AtSeatNumber                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATentacle_HazardBP_C::BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber)
+void ATentacle_HazardBP_C::STATIC_BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tentacle_HazardBP.Tentacle_HazardBP_C.BPReleasedPlayer");
 
@@ -944,14 +945,14 @@ void ATentacle_HazardBP_C::CanAttack(bool* bCanAttack)
 
 
 // Function Tentacle_HazardBP.Tentacle_HazardBP_C.BlueprintAnimNotifyCustomEvent
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimSequenceBase**      Animation                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify**            AnimNotifyObject               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ATentacle_HazardBP_C::STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
+void ATentacle_HazardBP_C::BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tentacle_HazardBP.Tentacle_HazardBP_C.BlueprintAnimNotifyCustomEvent");
 

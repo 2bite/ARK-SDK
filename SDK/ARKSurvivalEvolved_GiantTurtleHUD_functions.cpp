@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function GiantTurtleHUD.GiantTurtleHUD_C.Get_AbilityTextBlock_Text_1
-// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Event, NetResponse, NetMulticast, Private, NetServer, HasOutParms, NetClient, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UGiantTurtleHUD_C::STATIC_Get_AbilityTextBlock_Text_1()
+struct FText UGiantTurtleHUD_C::Get_AbilityTextBlock_Text_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtleHUD.GiantTurtleHUD_C.Get_AbilityTextBlock_Text_1");
 
@@ -94,14 +94,14 @@ void UGiantTurtleHUD_C::StartClosingWidget(float NewLifeSpan)
 }
 
 
-// Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHUDWidget
+// Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHudWidget
 // ()
 
-void UGiantTurtleHUD_C::DestroyHUDWidget()
+void UGiantTurtleHUD_C::DestroyHudWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHUDWidget");
+	static auto fn = UObject::FindObject<UFunction>("Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHudWidget");
 
-	UGiantTurtleHUD_C_DestroyHUDWidget_Params params;
+	UGiantTurtleHUD_C_DestroyHudWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
 

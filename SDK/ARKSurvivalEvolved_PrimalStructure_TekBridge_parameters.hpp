@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.Assign Platform Materials
+struct APrimalStructure_TekBridge_C_Assign_Platform_Materials_Params
+{
+};
+
+// Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.BPRefreshedStructureColors
+struct APrimalStructure_TekBridge_C_BPRefreshedStructureColors_Params
+{
+};
 
 // Function PrimalStructure_TekBridge.PrimalStructure_TekBridge_C.SetupSnaps
 struct APrimalStructure_TekBridge_C_SetupSnaps_Params

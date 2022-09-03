@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -145,7 +145,7 @@ bool AExosuit_RTS_Character_BP_C::BPHandleUseButtonPress(class AShooterPlayerCon
 
 
 // Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.ServerStartRTS
-// (Net, NetReliable, Public, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Protected, Delegate, NetClient, BlueprintEvent)
 
 void AExosuit_RTS_Character_BP_C::ServerStartRTS()
 {
@@ -154,6 +154,7 @@ void AExosuit_RTS_Character_BP_C::ServerStartRTS()
 	AExosuit_RTS_Character_BP_C_ServerStartRTS_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,14 +179,14 @@ void AExosuit_RTS_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_ToggleRtsMode_K2Node_InputActionEvent_310
+// Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_ToggleRtsMode_K2Node_InputActionEvent_406
 // ()
 
-void AExosuit_RTS_Character_BP_C::InpActEvt_ToggleRtsMode_K2Node_InputActionEvent_310()
+void AExosuit_RTS_Character_BP_C::InpActEvt_ToggleRtsMode_K2Node_InputActionEvent_406()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_ToggleRtsMode_K2Node_InputActionEvent_310");
+	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_ToggleRtsMode_K2Node_InputActionEvent_406");
 
-	AExosuit_RTS_Character_BP_C_InpActEvt_ToggleRtsMode_K2Node_InputActionEvent_310_Params params;
+	AExosuit_RTS_Character_BP_C_InpActEvt_ToggleRtsMode_K2Node_InputActionEvent_406_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -195,14 +196,14 @@ void AExosuit_RTS_Character_BP_C::InpActEvt_ToggleRtsMode_K2Node_InputActionEven
 }
 
 
-// Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_309
+// Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_405
 // ()
 
-void AExosuit_RTS_Character_BP_C::InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_309()
+void AExosuit_RTS_Character_BP_C::InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_405()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_309");
+	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_405");
 
-	AExosuit_RTS_Character_BP_C_InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_309_Params params;
+	AExosuit_RTS_Character_BP_C_InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_405_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -212,14 +213,14 @@ void AExosuit_RTS_Character_BP_C::InpActEvt_RtsGamepadLeftShoulder_K2Node_InputA
 }
 
 
-// Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_308
+// Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_404
 // ()
 
-void AExosuit_RTS_Character_BP_C::InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_308()
+void AExosuit_RTS_Character_BP_C::InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_404()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_308");
+	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_404");
 
-	AExosuit_RTS_Character_BP_C_InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_308_Params params;
+	AExosuit_RTS_Character_BP_C_InpActEvt_RtsGamepadLeftShoulder_K2Node_InputActionEvent_404_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -229,14 +230,14 @@ void AExosuit_RTS_Character_BP_C::InpActEvt_RtsGamepadLeftShoulder_K2Node_InputA
 }
 
 
-// Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadDpadUp_K2Node_InputActionEvent_307
+// Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadDpadUp_K2Node_InputActionEvent_403
 // ()
 
-void AExosuit_RTS_Character_BP_C::InpActEvt_RtsGamepadDpadUp_K2Node_InputActionEvent_307()
+void AExosuit_RTS_Character_BP_C::InpActEvt_RtsGamepadDpadUp_K2Node_InputActionEvent_403()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadDpadUp_K2Node_InputActionEvent_307");
+	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_RTS_Character_BP.Exosuit_RTS_Character_BP_C.InpActEvt_RtsGamepadDpadUp_K2Node_InputActionEvent_403");
 
-	AExosuit_RTS_Character_BP_C_InpActEvt_RtsGamepadDpadUp_K2Node_InputActionEvent_307_Params params;
+	AExosuit_RTS_Character_BP_C_InpActEvt_RtsGamepadDpadUp_K2Node_InputActionEvent_403_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,7 +82,7 @@ struct AYutyrannus_Character_BP_C_Cone_Check_Custom_Params
 	class APrimalCharacter*                            OtherCharacter;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     NewParam;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     NewParam1;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               isInCone;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInCone;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Yutyrannus_Character_BP.Yutyrannus_Character_BP_C.BlueprintCanRiderAttack
@@ -112,7 +112,7 @@ struct AYutyrannus_Character_BP_C_ConeCheck_Params
 	float                                              coneRadius;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	class APrimalCharacter*                            OtherCharacter;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               useHeadSocketForReference;                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               isInCone;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInCone;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     VectorA;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     VectorB;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

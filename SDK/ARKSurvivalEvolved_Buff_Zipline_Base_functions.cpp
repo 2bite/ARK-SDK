@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -137,7 +137,7 @@ void ABuff_Zipline_Base_C::Deactivate_Local_Client(class AActor* Pawn)
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.IsStillColliding
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 
 void ABuff_Zipline_Base_C::STATIC_IsStillColliding()
 {
@@ -146,6 +146,7 @@ void ABuff_Zipline_Base_C::STATIC_IsStillColliding()
 	ABuff_Zipline_Base_C_IsStillColliding_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -409,15 +410,15 @@ void ABuff_Zipline_Base_C::SetZiplineControlRotation()
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.PlayTurnAnimation
 // ()
 // Parameters:
-// class UAnimMontage*            override                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Override                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_Base_C::PlayTurnAnimation(class UAnimMontage* override, float* Duration)
+void ABuff_Zipline_Base_C::PlayTurnAnimation(class UAnimMontage* Override, float* Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.PlayTurnAnimation");
 
 	ABuff_Zipline_Base_C_PlayTurnAnimation_Params params;
-	params.override = override;
+	params.Override = Override;
 
 	auto flags = fn->FunctionFlags;
 
@@ -483,9 +484,9 @@ void ABuff_Zipline_Base_C::UpdateFPVCameraAndMeshPosition()
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.GetFPVViewLocation
 // ()
 // Parameters:
-// struct FVector                 ViewLoc                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 viewLoc                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_Zipline_Base_C::GetFPVViewLocation(struct FVector* ViewLoc)
+void ABuff_Zipline_Base_C::GetFPVViewLocation(struct FVector* viewLoc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.GetFPVViewLocation");
 
@@ -497,8 +498,8 @@ void ABuff_Zipline_Base_C::GetFPVViewLocation(struct FVector* ViewLoc)
 
 	fn->FunctionFlags = flags;
 
-	if (ViewLoc != nullptr)
-		*ViewLoc = params.ViewLoc;
+	if (viewLoc != nullptr)
+		*viewLoc = params.viewLoc;
 }
 
 
@@ -652,7 +653,7 @@ void ABuff_Zipline_Base_C::ResetMeshPosition()
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.JumpImpulse
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1030,7 +1031,7 @@ void ABuff_Zipline_Base_C::GetAttachOffset(struct FVector* AttachOffset)
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.BPSetupForInstigator
-// (NetResponse, Static, Private, NetServer, BlueprintCallable)
+// (NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1100,7 +1101,7 @@ struct FVector ABuff_Zipline_Base_C::BPOverrideCharacterNewFallVelocity(float* D
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.AttachToZipline
-// (NetRequest, Native, NetMulticast, Private, NetServer, BlueprintCallable)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 StartLocation                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1112,7 +1113,6 @@ void ABuff_Zipline_Base_C::AttachToZipline(const struct FVector& StartLocation)
 	params.StartLocation = StartLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1184,7 +1184,7 @@ void ABuff_Zipline_Base_C::StartMoveAlongZipline(const struct FVector& StartLoca
 
 
 // Function Buff_Zipline_Base.Buff_Zipline_Base_C.UserConstructionScript
-// (NetReliable, NetResponse, NetMulticast, Private, NetServer, BlueprintCallable)
+// (NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 
 void ABuff_Zipline_Base_C::UserConstructionScript()
 {
@@ -1193,6 +1193,7 @@ void ABuff_Zipline_Base_C::UserConstructionScript()
 	ABuff_Zipline_Base_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1200,14 +1201,14 @@ void ABuff_Zipline_Base_C::UserConstructionScript()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_103
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_108
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Use_K2Node_InputActionEvent_103()
+void ABuff_Zipline_Base_C::InpActEvt_Use_K2Node_InputActionEvent_108()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_103");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Use_K2Node_InputActionEvent_108");
 
-	ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_103_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Use_K2Node_InputActionEvent_108_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1217,14 +1218,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Use_K2Node_InputActionEvent_103()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_102
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_107
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Prone_K2Node_InputActionEvent_102()
+void ABuff_Zipline_Base_C::InpActEvt_Prone_K2Node_InputActionEvent_107()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_102");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Prone_K2Node_InputActionEvent_107");
 
-	ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_102_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Prone_K2Node_InputActionEvent_107_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1234,14 +1235,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Prone_K2Node_InputActionEvent_102()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_101
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_106
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Crouch_K2Node_InputActionEvent_101()
+void ABuff_Zipline_Base_C::InpActEvt_Crouch_K2Node_InputActionEvent_106()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_101");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Crouch_K2Node_InputActionEvent_106");
 
-	ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_101_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Crouch_K2Node_InputActionEvent_106_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1251,14 +1252,14 @@ void ABuff_Zipline_Base_C::InpActEvt_Crouch_K2Node_InputActionEvent_101()
 }
 
 
-// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_100
+// Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_105
 // ()
 
-void ABuff_Zipline_Base_C::InpActEvt_Jump_K2Node_InputActionEvent_100()
+void ABuff_Zipline_Base_C::InpActEvt_Jump_K2Node_InputActionEvent_105()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_100");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Zipline_Base.Buff_Zipline_Base_C.InpActEvt_Jump_K2Node_InputActionEvent_105");
 
-	ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_100_Params params;
+	ABuff_Zipline_Base_C_InpActEvt_Jump_K2Node_InputActionEvent_105_Params params;
 
 	auto flags = fn->FunctionFlags;
 

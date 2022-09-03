@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPGetDebugInfoString
-// (NetReliable, Exec, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, Static, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ABuff_SpindlesMinigunHit_C::BPGetDebugInfoString()
+class FString ABuff_SpindlesMinigunHit_C::STATIC_BPGetDebugInfoString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPGetDebugInfoString");
 
@@ -104,17 +104,18 @@ void ABuff_SpindlesMinigunHit_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* End
 
 
 // Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPPreventflight
-// (Event, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABuff_SpindlesMinigunHit_C::BPPreventflight()
+bool ABuff_SpindlesMinigunHit_C::STATIC_BPPreventflight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_SpindlesMinigunHit.Buff_SpindlesMinigunHit_C.BPPreventflight");
 
 	ABuff_SpindlesMinigunHit_C_BPPreventflight_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

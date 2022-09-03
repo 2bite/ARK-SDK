@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,9 +13,9 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.OnRep_JetPackVFXOffset
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_TekArmor_Shirt_Rework_C::OnRep_JetPackVFXOffset()
+void ABuff_TekArmor_Shirt_Rework_C::STATIC_OnRep_JetPackVFXOffset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.OnRep_JetPackVFXOffset");
 
@@ -532,15 +532,16 @@ void ABuff_TekArmor_Shirt_Rework_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.JetpackBoostClient
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABuff_TekArmor_Shirt_Rework_C::JetpackBoostClient()
+void ABuff_TekArmor_Shirt_Rework_C::STATIC_JetpackBoostClient()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.JetpackBoostClient");
 
 	ABuff_TekArmor_Shirt_Rework_C_JetpackBoostClient_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -639,11 +640,11 @@ void ABuff_TekArmor_Shirt_Rework_C::SetCastedArmorPieceRef()
 
 
 // Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.BuffTickClient
-// (Exec, Native, Event, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekArmor_Shirt_Rework_C::BuffTickClient(float* DeltaTime)
+void ABuff_TekArmor_Shirt_Rework_C::STATIC_BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.BuffTickClient");
 
@@ -651,7 +652,6 @@ void ABuff_TekArmor_Shirt_Rework_C::BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -713,14 +713,14 @@ void ABuff_TekArmor_Shirt_Rework_C::UserConstructionScript()
 }
 
 
-// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Jump_K2Node_InputActionEvent_89
+// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Jump_K2Node_InputActionEvent_94
 // ()
 
-void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Jump_K2Node_InputActionEvent_89()
+void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Jump_K2Node_InputActionEvent_94()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Jump_K2Node_InputActionEvent_89");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Jump_K2Node_InputActionEvent_94");
 
-	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_Jump_K2Node_InputActionEvent_89_Params params;
+	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_Jump_K2Node_InputActionEvent_94_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -730,14 +730,14 @@ void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Jump_K2Node_InputActionEvent_89()
 }
 
 
-// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Jump_K2Node_InputActionEvent_88
+// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Jump_K2Node_InputActionEvent_93
 // ()
 
-void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Jump_K2Node_InputActionEvent_88()
+void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Jump_K2Node_InputActionEvent_93()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Jump_K2Node_InputActionEvent_88");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Jump_K2Node_InputActionEvent_93");
 
-	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_Jump_K2Node_InputActionEvent_88_Params params;
+	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_Jump_K2Node_InputActionEvent_93_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -747,14 +747,14 @@ void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Jump_K2Node_InputActionEvent_88()
 }
 
 
-// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Run_K2Node_InputActionEvent_87
+// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Run_K2Node_InputActionEvent_92
 // ()
 
-void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Run_K2Node_InputActionEvent_87()
+void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Run_K2Node_InputActionEvent_92()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Run_K2Node_InputActionEvent_87");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Run_K2Node_InputActionEvent_92");
 
-	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_Run_K2Node_InputActionEvent_87_Params params;
+	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_Run_K2Node_InputActionEvent_92_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -764,14 +764,14 @@ void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Run_K2Node_InputActionEvent_87()
 }
 
 
-// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Run_K2Node_InputActionEvent_86
+// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Run_K2Node_InputActionEvent_91
 // ()
 
-void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Run_K2Node_InputActionEvent_86()
+void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Run_K2Node_InputActionEvent_91()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Run_K2Node_InputActionEvent_86");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_Run_K2Node_InputActionEvent_91");
 
-	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_Run_K2Node_InputActionEvent_86_Params params;
+	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_Run_K2Node_InputActionEvent_91_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -781,14 +781,14 @@ void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_Run_K2Node_InputActionEvent_86()
 }
 
 
-// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_RunToggle_K2Node_InputActionEvent_85
+// Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_RunToggle_K2Node_InputActionEvent_90
 // ()
 
-void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_RunToggle_K2Node_InputActionEvent_85()
+void ABuff_TekArmor_Shirt_Rework_C::InpActEvt_RunToggle_K2Node_InputActionEvent_90()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_RunToggle_K2Node_InputActionEvent_85");
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekArmor_Shirt_Rework.Buff_TekArmor_Shirt_Rework_C.InpActEvt_RunToggle_K2Node_InputActionEvent_90");
 
-	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_RunToggle_K2Node_InputActionEvent_85_Params params;
+	ABuff_TekArmor_Shirt_Rework_C_InpActEvt_RunToggle_K2Node_InputActionEvent_90_Params params;
 
 	auto flags = fn->FunctionFlags;
 

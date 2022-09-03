@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,11 +40,11 @@ TArray<struct FMultiUseEntry> APortableRope_Ladder_Preplaced_C::BPGetMultiUseEnt
 
 
 // Function PortableRope_Ladder_Preplaced.PortableRope_Ladder_Preplaced_C.BPPlacedStructure
-// (NetReliable, Exec, Static, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void APortableRope_Ladder_Preplaced_C::STATIC_BPPlacedStructure(class APlayerController** ForPC)
+void APortableRope_Ladder_Preplaced_C::BPPlacedStructure(class APlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PortableRope_Ladder_Preplaced.PortableRope_Ladder_Preplaced_C.BPPlacedStructure");
 

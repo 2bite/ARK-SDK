@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.DinoUberpounce
-// (Native, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Event, NetMulticast, Public, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -24,7 +24,6 @@ void AShapeshifter_Large_AIController_BP_C::DinoUberpounce(bool* Success)
 	AShapeshifter_Large_AIController_BP_C_DinoUberpounce_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +35,7 @@ void AShapeshifter_Large_AIController_BP_C::DinoUberpounce(bool* Success)
 
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.LocationUberpounce
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void AShapeshifter_Large_AIController_BP_C::LocationUberpounce()
 {
@@ -55,15 +54,15 @@ void AShapeshifter_Large_AIController_BP_C::LocationUberpounce()
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.AllowSurfaceNormalForUberpounce
 // ()
 // Parameters:
-// struct FVector                 surfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 SurfaceNormal                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AShapeshifter_Large_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& surfaceNormal, bool* IsValid)
+void AShapeshifter_Large_AIController_BP_C::AllowSurfaceNormalForUberpounce(const struct FVector& SurfaceNormal, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.AllowSurfaceNormalForUberpounce");
 
 	AShapeshifter_Large_AIController_BP_C_AllowSurfaceNormalForUberpounce_Params params;
-	params.surfaceNormal = surfaceNormal;
+	params.SurfaceNormal = SurfaceNormal;
 
 	auto flags = fn->FunctionFlags;
 
@@ -131,7 +130,7 @@ void AShapeshifter_Large_AIController_BP_C::Deinonychus_AttackedWhileLatched()
 
 
 // Function Shapeshifter_Large_AIController_BP.Shapeshifter_Large_AIController_BP_C.OnUberpounceStateChanged
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TEnumAsByte<EUberpounceState>  NewState                       (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EUberpounceState>  PrevState                      (Parm, ZeroConstructor, IsPlainOldData)

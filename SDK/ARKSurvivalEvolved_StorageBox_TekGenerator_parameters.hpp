@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.GetStructureChainStarts
+struct AStorageBox_TekGenerator_C_GetStructureChainStarts_Params
+{
+	TArray<class APrimalStructure*>                    AllStructures;                                            // (Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class APrimalStructure*>                    OutStartStructures;                                       // (Parm, OutParm, ZeroConstructor)
+};
 
 // Function StorageBox_TekGenerator.StorageBox_TekGenerator_C.ReceiveDestroyed
 struct AStorageBox_TekGenerator_C_ReceiveDestroyed_Params

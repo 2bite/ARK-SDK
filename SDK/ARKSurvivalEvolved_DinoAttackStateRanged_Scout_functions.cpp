@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,11 +35,11 @@ void UDinoAttackStateRanged_Scout_C::GetScout(class AScout_Character_BP_C** Resu
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnTickEvent
-// (NetReliable, Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDinoAttackStateRanged_Scout_C::STATIC_OnTickEvent(float* DeltaSeconds)
+void UDinoAttackStateRanged_Scout_C::OnTickEvent(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnTickEvent");
 
@@ -55,15 +55,16 @@ void UDinoAttackStateRanged_Scout_C::STATIC_OnTickEvent(float* DeltaSeconds)
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnEndEvent
-// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Exec, Native, Event, NetResponse, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void UDinoAttackStateRanged_Scout_C::STATIC_OnEndEvent()
+void UDinoAttackStateRanged_Scout_C::OnEndEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.OnEndEvent");
 
 	UDinoAttackStateRanged_Scout_C_OnEndEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,7 +124,7 @@ void UDinoAttackStateRanged_Scout_C::Tracker_Impact_Pawn_or_Terrain(class AActor
 
 
 // Function DinoAttackStateRanged_Scout.DinoAttackStateRanged_Scout_C.CalculateProjectileImpacts
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetResponse, Static, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Origin                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Direction                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -137,7 +138,6 @@ void UDinoAttackStateRanged_Scout_C::STATIC_CalculateProjectileImpacts(const str
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

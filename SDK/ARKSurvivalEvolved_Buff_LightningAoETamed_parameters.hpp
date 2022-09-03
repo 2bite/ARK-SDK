@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_LightningAoETamed.Buff_LightningAoETamed_C.ReceiveEndPlay
+struct ABuff_LightningAoETamed_C_ReceiveEndPlay_Params
+{
+	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Buff_LightningAoETamed.Buff_LightningAoETamed_C.MaybeRotate
 struct ABuff_LightningAoETamed_C_MaybeRotate_Params

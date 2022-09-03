@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ public:
 
 
 	struct FPointOfInterestData GetPointOfInterestData();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ExecuteUbergraph_PointOfInterest_Base_BP(int EntryPoint);
 };
 

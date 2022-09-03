@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,8 +36,8 @@ public:
 	void BPNotifyItemRemoved(class UPrimalItem** anItem);
 	void BPNotifyItemAdded(class UPrimalItem** anItem, bool* bEquipItem);
 	void ExecuteUbergraph_PrimalInventoryBP_EggIncubator(int EntryPoint);
-	void OnFertilizedEggRemoved__DelegateSignature(class UPrimalItemConsumable_Egg_C* EggItem);
-	void OnFertilizedEggAdded__DelegateSignature(class UPrimalItemConsumable_Egg_C* EggItem);
+	void OnFertilizedEggRemoved__DelegateSignature(class UPrimalItemConsumable_Egg_C* eggItem);
+	void OnFertilizedEggAdded__DelegateSignature(class UPrimalItemConsumable_Egg_C* eggItem);
 };
 
 

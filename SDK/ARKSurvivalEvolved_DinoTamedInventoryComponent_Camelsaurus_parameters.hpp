@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ struct UDinoTamedInventoryComponent_Camelsaurus_C_BPInitializeInventory_Params
 // Function DinoTamedInventoryComponent_Camelsaurus.DinoTamedInventoryComponent_Camelsaurus_C.TakeWaterFromContainers
 struct UDinoTamedInventoryComponent_Camelsaurus_C_TakeWaterFromContainers_Params
 {
-	float                                              AmountToTake;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              amountToTake;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              TakenAmount;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

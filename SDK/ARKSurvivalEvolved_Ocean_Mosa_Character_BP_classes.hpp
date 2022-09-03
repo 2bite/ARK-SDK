@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Ocean_Mosa_Character_BP.Ocean_Mosa_Character_BP_C
-// 0x0000 (0x22B9 - 0x22B9)
+// 0x0000 (0x22D9 - 0x22D9)
 class AOcean_Mosa_Character_BP_C : public AMosa_Character_BP_C
 {
 public:

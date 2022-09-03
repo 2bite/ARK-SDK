@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,7 +59,7 @@ public:
 	float                                              Net_Capture_Radius;                                       // 0x0F6C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector                                     Net_Capture_Center_Offset;                                // 0x0F70(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x4];                                       // 0x0F7C(0x0004) MISSED OFFSET
-	TArray<class AActor*>                              caught_animals;                                           // 0x0F80(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                              Caught_Animals;                                           // 0x0F80(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
 	TArray<struct FVector>                             Caught_Animals_Net_Offset;                                // 0x0F90(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UClass*>                              AllowedFishingDinos;                                      // 0x0FA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UClass*>                              BaseMeatCaughtFishLootInventoryClasses;                   // 0x0FB0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -496,9 +496,9 @@ public:
 	void Kill_all_fish_in_net();
 	void Send_Caught_Fish_Message_to_Player();
 	void Fully_Catch_Fish_In_Net();
-	void Cancel_Cast_Remove_Buff_And_Reset_Anim(bool caught_success);
+	void Cancel_Cast_Remove_Buff_And_Reset_Anim(bool Caught_Success);
 	void Cancel_Cast_Destroy_Cable_Components();
-	void STATIC_cancel_cast_destroy_net_projectile();
+	void cancel_cast_destroy_net_projectile();
 	void cancel_cast_release_fish();
 	void reset_variables_on_cancel_reel(bool successful_catch);
 	void update_cable_component_location(class UPrimalCableComponent* Cable, class USceneComponent* _1PAttachSocketStart, class USceneComponent* _1PAttachSocketEnd, class USceneComponent* _3PAttachSocketEnd, bool new_cable_component, const struct FVector& _1P_Endpoint_Override, const struct FVector& _3P_Endpoint_Override, class USceneComponent* Swapped_Hand_Component1P, const struct FName& _3PAttachSocketStartName);
@@ -506,17 +506,17 @@ public:
 	void Attach_Cable_To_Hand(bool Left, bool Interp_Cable);
 	void CreateCable(class UPrimalCableComponent* Existing_Cable_Component_To_Check, const struct FName& Name, float Cable_Length, int Cable_Segments, bool AdaptiveSegments, class USceneComponent* Attached_Component_1P, const struct FName& Attach_Socket_Name_1P, const struct FName& Attach_Socket_Name_3P, class UPrimalCableComponent** cable_component, bool* NewlyCreated);
 	void Give_Fish_Rewards();
-	void Set_Fish_Position_To_Normal_Offset(bool caught_success);
+	void Set_Fish_Position_To_Normal_Offset(bool Caught_Success);
 	void Get_Initial_Fish_Location_Offset(class AActor* fish, struct FVector* Offset);
 	bool BPRemainEquipped();
 	bool BPCanEquip(class AShooterCharacter** ByCharacter);
 	struct FVector Reel_Velocity(const struct FVector& Weapon_Location, class AProjFishingNet_C* net_projectile);
-	void BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void Give_Fish_Loot(class UClass* Class, class APrimalDinoCharacter* Outer, float Amount_Multiplier);
 	void Generate_Fish_Meat(class APrimalDinoCharacter* fish);
 	void Check_For_Fish_Collision();
 	void On_Fish_Released(class APrimalDinoCharacter* fish);
-	void STATIC_release_fish(class UObject* fish, bool pulled_completely_up);
+	void release_fish(class UObject* fish, bool pulled_completely_up);
 	void PlayFishAttackAnimation();
 	void On_Fish_Snared(class APrimalDinoCharacter* localSnaredFish);
 	void snare_fish(class APrimalDinoCharacter* snared_fish);
@@ -535,12 +535,12 @@ public:
 	void move_net_to_player_timeline__UpdateFunc();
 	void Timeline_0__FinishedFunc();
 	void Timeline_0__UpdateFunc();
-	void Cancel_Cast(bool caught_success, bool Force_Reset_Has_Caught_Any_Fish);
+	void Cancel_Cast(bool Caught_Success, bool Force_Reset_Has_Caught_Any_Fish);
 	void Reel_Net_In();
 	void server_reel();
 	void OnFishSnaredEvent(class APrimalDinoCharacter* fish);
 	void Projectile_net_collided_with_fish(class APrimalDinoCharacter* fish);
-	void Cancel_Cast_Events(bool caught_success);
+	void Cancel_Cast_Events(bool Caught_Success);
 	void fully_catch_fish();
 	void client_do_death_harvesting();
 	void play_reel_anim();
@@ -557,7 +557,7 @@ public:
 	void multicast_collided_with_water(const struct FVector& hit_water_location);
 	void multicast_set_variables_on_cast();
 	void multicast_release_fish();
-	void client_request_cancel_cast(bool caught_success, bool Reset_Has_Caught_Any_FIsh);
+	void client_request_cancel_cast(bool Caught_Success, bool Reset_Has_Caught_Any_FIsh);
 	void Rotate_projectile_away_from_player_while_reeling_Client();
 	void multicast_fish_struggle();
 	void delay_pass_allowed_fish_classes_to_fish_vision_buff();

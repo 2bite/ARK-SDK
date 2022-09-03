@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,6 +79,57 @@ void ALionfishLion_Character_BP_C::GetHudData(float* AttackComboPercent, float* 
 		*LastLeapTime = params.LastLeapTime;
 	if (LeapPercent != nullptr)
 		*LeapPercent = params.LeapPercent;
+}
+
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Keep Checking if the Fish Has Spawned
+// ()
+
+void ALionfishLion_Character_BP_C::Keep_Checking_if_the_Fish_Has_Spawned()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Keep Checking if the Fish Has Spawned");
+
+	ALionfishLion_Character_BP_C_Keep_Checking_if_the_Fish_Has_Spawned_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.try feed shadowman on delay
+// ()
+
+void ALionfishLion_Character_BP_C::try_feed_shadowman_on_delay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.try feed shadowman on delay");
+
+	ALionfishLion_Character_BP_C_try_feed_shadowman_on_delay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Shortly After Falling Asleep Prevent Affinity Reset
+// ()
+
+void ALionfishLion_Character_BP_C::Shortly_After_Falling_Asleep_Prevent_Affinity_Reset()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Shortly After Falling Asleep Prevent Affinity Reset");
+
+	ALionfishLion_Character_BP_C_Shortly_After_Falling_Asleep_Prevent_Affinity_Reset_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -1000,8 +1051,9 @@ void ALionfishLion_Character_BP_C::flee_after_feeding()
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Fish_Weight                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           cheat_debug_bypass             (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Fallback                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::feed(class APlayerController* PC, float Fish_Weight, bool cheat_debug_bypass)
+void ALionfishLion_Character_BP_C::feed(class APlayerController* PC, float Fish_Weight, bool cheat_debug_bypass, bool Fallback)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.feed");
 
@@ -1009,6 +1061,7 @@ void ALionfishLion_Character_BP_C::feed(class APlayerController* PC, float Fish_
 	params.PC = PC;
 	params.Fish_Weight = Fish_Weight;
 	params.cheat_debug_bypass = cheat_debug_bypass;
+	params.Fallback = Fallback;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1135,16 +1188,16 @@ class UAnimMontage* ALionfishLion_Character_BP_C::BPOverrideHurtAnim(float* Dama
 }
 
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Print String Manual
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.print string manual
 // ()
 // Parameters:
 // class FString                  In_String                      (Parm, ZeroConstructor)
 
-void ALionfishLion_Character_BP_C::Print_String_Manual(const class FString& In_String)
+void ALionfishLion_Character_BP_C::print_string_manual(const class FString& In_String)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Print String Manual");
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.print string manual");
 
-	ALionfishLion_Character_BP_C_Print_String_Manual_Params params;
+	ALionfishLion_Character_BP_C_print_string_manual_Params params;
 	params.In_String = In_String;
 
 	auto flags = fn->FunctionFlags;
@@ -1339,19 +1392,20 @@ void ALionfishLion_Character_BP_C::Restrict_Was_Seen_Requests()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.someone has line of sight to lion
-// (NetReliable, NetRequest, Exec, Event, Static, Private, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
-// class AShooterPlayerController* Player_Controller              (Parm, ZeroConstructor, IsPlainOldData)
+// class AShooterPlayerController* player_controller              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           NewParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::STATIC_someone_has_line_of_sight_to_lion(class AShooterPlayerController* Player_Controller, bool* NewParam)
+void ALionfishLion_Character_BP_C::STATIC_someone_has_line_of_sight_to_lion(class AShooterPlayerController* player_controller, bool* NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.someone has line of sight to lion");
 
 	ALionfishLion_Character_BP_C_someone_has_line_of_sight_to_lion_Params params;
-	params.Player_Controller = Player_Controller;
+	params.player_controller = player_controller;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1362,14 +1416,14 @@ void ALionfishLion_Character_BP_C::STATIC_someone_has_line_of_sight_to_lion(clas
 }
 
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Check if Viewed by Players
-// (NetMulticast, Private, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Check If Viewed By Players
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ALionfishLion_Character_BP_C::Check_if_Viewed_by_Players()
+void ALionfishLion_Character_BP_C::Check_If_Viewed_By_Players()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Check if Viewed by Players");
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Check If Viewed By Players");
 
-	ALionfishLion_Character_BP_C_Check_if_Viewed_by_Players_Params params;
+	ALionfishLion_Character_BP_C_Check_If_Viewed_By_Players_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1637,7 +1691,7 @@ struct FVector ALionfishLion_Character_BP_C::Get_Appropriate_Extra_Distance_to_L
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Teleport End Location Blocked
-// (NetReliable, Exec, NetResponse, NetMulticast, Private, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -1692,7 +1746,7 @@ void ALionfishLion_Character_BP_C::Get_Desired_Teleport_Final_Location_In_Front_
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Check If The LFL Can Physically Fit To The Teleport Target
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Private, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 End                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -1753,7 +1807,7 @@ void ALionfishLion_Character_BP_C::OnRep_is_sleeping_state()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.spawn cloaked footstep
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Event, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UParticleSystem*         EmitterTemplate                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -1925,7 +1979,7 @@ TArray<struct FMultiUseEntry> ALionfishLion_Character_BP_C::BPGetMultiUseEntries
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.multiuse logic
-// (NetReliable, NetRequest, NetResponse, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // TArray<struct FMultiUseEntry>  local_multiuse                 (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
@@ -2123,7 +2177,7 @@ void ALionfishLion_Character_BP_C::straight_line_teleport_charge_move_detection_
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.detect targets in a straight line over time
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
 void ALionfishLion_Character_BP_C::detect_targets_in_a_straight_line_over_time()
 {
@@ -2132,7 +2186,6 @@ void ALionfishLion_Character_BP_C::detect_targets_in_a_straight_line_over_time()
 	ALionfishLion_Character_BP_C_detect_targets_in_a_straight_line_over_time_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2141,11 +2194,11 @@ void ALionfishLion_Character_BP_C::detect_targets_in_a_straight_line_over_time()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Identify Best Aimed Target For Quickteleport - Clientside
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Character                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::STATIC_Identify_Best_Aimed_Target_For_Quickteleport___Clientside(class APrimalCharacter** Character)
+void ALionfishLion_Character_BP_C::Identify_Best_Aimed_Target_For_Quickteleport___Clientside(class APrimalCharacter** Character)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Identify Best Aimed Target For Quickteleport - Clientside");
 
@@ -2217,17 +2270,17 @@ void ALionfishLion_Character_BP_C::Is_Valid_Teleport_Target_(class APrimalCharac
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.set final location and rotation after teleport
 // ()
 // Parameters:
-// struct FVector                 start_loc                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 End_Loc                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Start_Loc                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 end_loc                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           turn_around                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::set_final_location_and_rotation_after_teleport(const struct FVector& start_loc, const struct FVector& End_Loc, bool turn_around)
+void ALionfishLion_Character_BP_C::set_final_location_and_rotation_after_teleport(const struct FVector& Start_Loc, const struct FVector& end_loc, bool turn_around)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.set final location and rotation after teleport");
 
 	ALionfishLion_Character_BP_C_set_final_location_and_rotation_after_teleport_Params params;
-	params.start_loc = start_loc;
-	params.End_Loc = End_Loc;
+	params.Start_Loc = Start_Loc;
+	params.end_loc = end_loc;
 	params.turn_around = turn_around;
 
 	auto flags = fn->FunctionFlags;
@@ -2239,9 +2292,9 @@ void ALionfishLion_Character_BP_C::set_final_location_and_rotation_after_telepor
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.damage teleport target
-// (NetReliable, Exec, Native, Event, Static, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ALionfishLion_Character_BP_C::STATIC_damage_teleport_target()
+void ALionfishLion_Character_BP_C::damage_teleport_target()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.damage teleport target");
 
@@ -2279,7 +2332,7 @@ void ALionfishLion_Character_BP_C::prepare_LFL_for_teleporting_to_target(const s
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.is line of sight to target blocked
-// (NetReliable, NetRequest, NetResponse, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Native, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Debug                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -2298,6 +2351,7 @@ void ALionfishLion_Character_BP_C::is_line_of_sight_to_target_blocked(class AAct
 	params.simple_check = simple_check;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2387,14 +2441,14 @@ struct FVector ALionfishLion_Character_BP_C::get_appropriate_extra_distance_to_l
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.request release charge teleport
 // ()
 // Parameters:
-// bool                           is_quick_tap_teleport          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Is_Quick_Tap_Teleport          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::request_release_charge_teleport(bool is_quick_tap_teleport)
+void ALionfishLion_Character_BP_C::request_release_charge_teleport(bool Is_Quick_Tap_Teleport)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.request release charge teleport");
 
 	ALionfishLion_Character_BP_C_request_release_charge_teleport_Params params;
-	params.is_quick_tap_teleport = is_quick_tap_teleport;
+	params.Is_Quick_Tap_Teleport = Is_Quick_Tap_Teleport;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2479,11 +2533,11 @@ void ALionfishLion_Character_BP_C::Is_Charging_Teleport()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Teleport Stop
-// (NetReliable, NetRequest, Exec, Native, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UObject*                 hit_target                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::Teleport_Stop(class UObject* hit_target)
+void ALionfishLion_Character_BP_C::STATIC_Teleport_Stop(class UObject* hit_target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Teleport Stop");
 
@@ -2491,7 +2545,6 @@ void ALionfishLion_Character_BP_C::Teleport_Stop(class UObject* hit_target)
 	params.hit_target = hit_target;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2503,15 +2556,15 @@ void ALionfishLion_Character_BP_C::Teleport_Stop(class UObject* hit_target)
 // ()
 // Parameters:
 // float                          Teleport_Strength_Percentage   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           is_quick_tap_teleport          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Is_Quick_Tap_Teleport          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::Start_Teleport(float Teleport_Strength_Percentage, bool is_quick_tap_teleport)
+void ALionfishLion_Character_BP_C::Start_Teleport(float Teleport_Strength_Percentage, bool Is_Quick_Tap_Teleport)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Start Teleport");
 
 	ALionfishLion_Character_BP_C_Start_Teleport_Params params;
 	params.Teleport_Strength_Percentage = Teleport_Strength_Percentage;
-	params.is_quick_tap_teleport = is_quick_tap_teleport;
+	params.Is_Quick_Tap_Teleport = Is_Quick_Tap_Teleport;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2542,16 +2595,16 @@ float ALionfishLion_Character_BP_C::Get_Teleport_Character_Octree_Overlap_Radius
 }
 
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Mid Teleport
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.is mid teleport
 // ()
 // Parameters:
-// bool                           Is_Mid_Teleport                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           is_mid_teleport                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::Is_Mid_Teleport(bool* Is_Mid_Teleport)
+void ALionfishLion_Character_BP_C::is_mid_teleport(bool* is_mid_teleport)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Mid Teleport");
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.is mid teleport");
 
-	ALionfishLion_Character_BP_C_Is_Mid_Teleport_Params params;
+	ALionfishLion_Character_BP_C_is_mid_teleport_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2559,8 +2612,8 @@ void ALionfishLion_Character_BP_C::Is_Mid_Teleport(bool* Is_Mid_Teleport)
 
 	fn->FunctionFlags = flags;
 
-	if (Is_Mid_Teleport != nullptr)
-		*Is_Mid_Teleport = params.Is_Mid_Teleport;
+	if (is_mid_teleport != nullptr)
+		*is_mid_teleport = params.is_mid_teleport;
 }
 
 
@@ -2582,13 +2635,30 @@ void ALionfishLion_Character_BP_C::Is_Teleport_Cooldown_Active()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Request Release Teleport
-// (NetReliable, NetRequest, Native, Event, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
 void ALionfishLion_Character_BP_C::Request_Release_Teleport()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Request Release Teleport");
 
 	ALionfishLion_Character_BP_C_Request_Release_Teleport_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Time Threshold For Determining Charge Teleport
+// (Exec, Native, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+
+void ALionfishLion_Character_BP_C::Time_Threshold_For_Determining_Charge_Teleport()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Time Threshold For Determining Charge Teleport");
+
+	ALionfishLion_Character_BP_C_Time_Threshold_For_Determining_Charge_Teleport_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -2599,25 +2669,8 @@ void ALionfishLion_Character_BP_C::Request_Release_Teleport()
 }
 
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Time Threshold For Determining Charge Teleport
-// (Exec, NetResponse, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
-
-void ALionfishLion_Character_BP_C::Time_Threshold_For_Determining_Charge_Teleport()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Time Threshold For Determining Charge Teleport");
-
-	ALionfishLion_Character_BP_C_Time_Threshold_For_Determining_Charge_Teleport_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Time Threshold For Determining Jump Or Big Spacebar Leap
-// (NetRequest, Exec, NetResponse, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Exec, Native, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
 void ALionfishLion_Character_BP_C::Time_Threshold_For_Determining_Jump_Or_Big_Spacebar_Leap()
 {
@@ -2626,6 +2679,7 @@ void ALionfishLion_Character_BP_C::Time_Threshold_For_Determining_Jump_Or_Big_Sp
 	ALionfishLion_Character_BP_C_Time_Threshold_For_Determining_Jump_Or_Big_Spacebar_Leap_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2634,7 +2688,7 @@ void ALionfishLion_Character_BP_C::Time_Threshold_For_Determining_Jump_Or_Big_Sp
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPOnStopJump
-// (NetReliable, NetRequest, Native, NetResponse, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Event, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2645,7 +2699,6 @@ bool ALionfishLion_Character_BP_C::BPOnStopJump()
 	ALionfishLion_Character_BP_C_BPOnStopJump_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2785,18 +2838,17 @@ void ALionfishLion_Character_BP_C::Blend_Fov_Back_To_Normal_After_Big_Spacebar_L
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Close Enough To Hit Big Spacebar Leap Target
-// (NetRequest, Native, Static, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, Event, NetResponse, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           can_hit_target                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::STATIC_Is_Close_Enough_To_Hit_Big_Spacebar_Leap_Target(bool* can_hit_target)
+void ALionfishLion_Character_BP_C::Is_Close_Enough_To_Hit_Big_Spacebar_Leap_Target(bool* can_hit_target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Close Enough To Hit Big Spacebar Leap Target");
 
 	ALionfishLion_Character_BP_C_Is_Close_Enough_To_Hit_Big_Spacebar_Leap_Target_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2921,7 +2973,7 @@ void ALionfishLion_Character_BP_C::Request_Turnaround_Stop_on_Other_Side_Of_Big_
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Check for Ground and Halt Anim
-// (NetRequest, Exec, Event, NetResponse, Static, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           retry                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -2932,6 +2984,7 @@ void ALionfishLion_Character_BP_C::STATIC_Check_for_Ground_and_Halt_Anim(bool* r
 	ALionfishLion_Character_BP_C_Check_for_Ground_and_Halt_Anim_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2999,15 +3052,16 @@ void ALionfishLion_Character_BP_C::Is_Mid_Big_Spacebar_Leap(bool* Is_Mid_Big_Spa
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.lerp time to move to other side of the target
-// (Exec, Event, NetMulticast, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, Event, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ALionfishLion_Character_BP_C::lerp_time_to_move_to_other_side_of_the_target()
+void ALionfishLion_Character_BP_C::STATIC_lerp_time_to_move_to_other_side_of_the_target()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.lerp time to move to other side of the target");
 
 	ALionfishLion_Character_BP_C_lerp_time_to_move_to_other_side_of_the_target_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3087,7 +3141,7 @@ void ALionfishLion_Character_BP_C::ReceiveTick(float* DeltaSeconds)
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.tick events
-// (NetRequest, Exec, Native, Event, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          Delta                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3208,7 +3262,7 @@ void ALionfishLion_Character_BP_C::BPOverrideCameraViewTarget(struct FName* Curr
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (Exec, Native, NetResponse, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetRequest, NetResponse, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -3226,7 +3280,6 @@ void ALionfishLion_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* 
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3256,16 +3309,36 @@ bool ALionfishLion_Character_BP_C::BPOnStartJump()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Update Right Swipe Attack Anim Priorities
-// (NetRequest, Exec, Native, NetResponse, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, NetResponse, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
-// int                            Attack_Index                   (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Attack_index                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::Update_Right_Swipe_Attack_Anim_Priorities(int Attack_Index)
+void ALionfishLion_Character_BP_C::Update_Right_Swipe_Attack_Anim_Priorities(int Attack_index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Update Right Swipe Attack Anim Priorities");
 
 	ALionfishLion_Character_BP_C_Update_Right_Swipe_Attack_Anim_Priorities_Params params;
-	params.Attack_Index = Attack_Index;
+	params.Attack_index = Attack_index;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Update Bite Attack Anim Priorities
+// (NetReliable, NetRequest, Native, NetResponse, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
+// Parameters:
+// int                            Attack_index                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALionfishLion_Character_BP_C::Update_Bite_Attack_Anim_Priorities(int Attack_index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Update Bite Attack Anim Priorities");
+
+	ALionfishLion_Character_BP_C_Update_Bite_Attack_Anim_Priorities_Params params;
+	params.Attack_index = Attack_index;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -3276,54 +3349,8 @@ void ALionfishLion_Character_BP_C::Update_Right_Swipe_Attack_Anim_Priorities(int
 }
 
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Update Bite Attack Anim Priorities
-// (NetReliable, Exec, Event, NetResponse, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
-// Parameters:
-// int                            Attack_Index                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void ALionfishLion_Character_BP_C::Update_Bite_Attack_Anim_Priorities(int Attack_Index)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Update Bite Attack Anim Priorities");
-
-	ALionfishLion_Character_BP_C_Update_Bite_Attack_Anim_Priorities_Params params;
-	params.Attack_Index = Attack_Index;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Valid Big Spacebar Leap Target
-// ()
-// Parameters:
-// class APrimalCharacter*        Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           is_hud_elem_check              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           can_target                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void ALionfishLion_Character_BP_C::Is_Valid_Big_Spacebar_Leap_Target(class APrimalCharacter* Target, bool is_hud_elem_check, bool* can_target)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Valid Big Spacebar Leap Target");
-
-	ALionfishLion_Character_BP_C_Is_Valid_Big_Spacebar_Leap_Target_Params params;
-	params.Target = Target;
-	params.is_hud_elem_check = is_hud_elem_check;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (can_target != nullptr)
-		*can_target = params.can_target;
-}
-
-
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.RidingTick
-// (NetRequest, Exec, Native, NetResponse, Static, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Event, Static, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3335,7 +3362,6 @@ void ALionfishLion_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3373,27 +3399,6 @@ bool ALionfishLion_Character_BP_C::BPModifyDesiredRotation(float* DeltaTime, str
 }
 
 
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Get Big Spacebar Leap Character Octree Overlap Radius
-// ()
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float ALionfishLion_Character_BP_C::Get_Big_Spacebar_Leap_Character_Octree_Overlap_Radius()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Get Big Spacebar Leap Character Octree Overlap Radius");
-
-	ALionfishLion_Character_BP_C_Get_Big_Spacebar_Leap_Character_Octree_Overlap_Radius_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPGetCrosshairLocation
 // ()
 // Parameters:
@@ -3424,7 +3429,7 @@ void ALionfishLion_Character_BP_C::BPGetCrosshairLocation(float* CanvasClipX, fl
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPGetCrosshairColor
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// ()
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3435,7 +3440,6 @@ struct FLinearColor ALionfishLion_Character_BP_C::BPGetCrosshairColor()
 	ALionfishLion_Character_BP_C_BPGetCrosshairColor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3681,12 +3685,12 @@ void ALionfishLion_Character_BP_C::update_anims(bool ensureAnimsPlaying)
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Close To Ground
-// (NetRequest, Event, NetResponse, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          CheckDistance                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::Is_Close_To_Ground(float CheckDistance, bool* Result)
+void ALionfishLion_Character_BP_C::STATIC_Is_Close_To_Ground(float CheckDistance, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Is Close To Ground");
 
@@ -3835,16 +3839,15 @@ void ALionfishLion_Character_BP_C::Can_Keep_Pouncing_during_Big_Spacebar_Leap(bo
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Big Spacebar Leap Tick
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetResponse, Static, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ALionfishLion_Character_BP_C::Big_Spacebar_Leap_Tick()
+void ALionfishLion_Character_BP_C::STATIC_Big_Spacebar_Leap_Tick()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Big Spacebar Leap Tick");
 
 	ALionfishLion_Character_BP_C_Big_Spacebar_Leap_Tick_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3855,9 +3858,9 @@ void ALionfishLion_Character_BP_C::Big_Spacebar_Leap_Tick()
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Get Default Dino
 // ()
 // Parameters:
-// class ALionfishLion_Character_BP_C* ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ALionfishLion_Character_BP_C* Ref                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::Get_Default_Dino(class ALionfishLion_Character_BP_C** ref)
+void ALionfishLion_Character_BP_C::Get_Default_Dino(class ALionfishLion_Character_BP_C** Ref)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Get Default Dino");
 
@@ -3869,8 +3872,8 @@ void ALionfishLion_Character_BP_C::Get_Default_Dino(class ALionfishLion_Characte
 
 	fn->FunctionFlags = flags;
 
-	if (ref != nullptr)
-		*ref = params.ref;
+	if (Ref != nullptr)
+		*Ref = params.Ref;
 }
 
 
@@ -3916,11 +3919,11 @@ void ALionfishLion_Character_BP_C::can_carry_creature(class APrimalCharacter* Ch
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Big Spacebar Leap Stop
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, NetResponse, NetMulticast, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UObject*                 hit_target                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::STATIC_Big_Spacebar_Leap_Stop(class UObject* hit_target)
+void ALionfishLion_Character_BP_C::Big_Spacebar_Leap_Stop(class UObject* hit_target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Big Spacebar Leap Stop");
 
@@ -4720,15 +4723,16 @@ void ALionfishLion_Character_BP_C::Check_for_Sleep()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPTimerServer
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, Event, NetResponse, Static, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void ALionfishLion_Character_BP_C::BPTimerServer()
+void ALionfishLion_Character_BP_C::STATIC_BPTimerServer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPTimerServer");
 
 	ALionfishLion_Character_BP_C_BPTimerServer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4845,40 +4849,6 @@ void ALionfishLion_Character_BP_C::Fall_Asleep(bool forceSuccess, bool ignoreIsP
 	params.forceSuccess = forceSuccess;
 	params.ignoreIsPossible = ignoreIsPossible;
 	params.Triggered_By_Multiuse = Triggered_By_Multiuse;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPCharacterSleeped
-// ()
-
-void ALionfishLion_Character_BP_C::BPCharacterSleeped()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPCharacterSleeped");
-
-	ALionfishLion_Character_BP_C_BPCharacterSleeped_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPCharacterUnsleeped
-// ()
-
-void ALionfishLion_Character_BP_C::BPCharacterUnsleeped()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPCharacterUnsleeped");
-
-	ALionfishLion_Character_BP_C_BPCharacterUnsleeped_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -5071,16 +5041,16 @@ void ALionfishLion_Character_BP_C::BP_OnTargetedByTamedOrder(class APrimalCharac
 // ()
 // Parameters:
 // class AShooterCharacter*       Rider                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           enterCamo                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           EnterCamo                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bInstant                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::Add_Rider_to_Camo_Fade_Queue(class AShooterCharacter* Rider, bool enterCamo, bool bInstant)
+void ALionfishLion_Character_BP_C::Add_Rider_to_Camo_Fade_Queue(class AShooterCharacter* Rider, bool EnterCamo, bool bInstant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Add Rider to Camo Fade Queue");
 
 	ALionfishLion_Character_BP_C_Add_Rider_to_Camo_Fade_Queue_Params params;
 	params.Rider = Rider;
-	params.enterCamo = enterCamo;
+	params.EnterCamo = EnterCamo;
 	params.bInstant = bInstant;
 
 	auto flags = fn->FunctionFlags;
@@ -5136,15 +5106,15 @@ void ALionfishLion_Character_BP_C::BPNotifyIfPassengerLaunchShoulderMount(class 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Activate Rider Camo Particles
 // ()
 // Parameters:
-// bool                           enterCamo                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           EnterCamo                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterCharacter*       specificRider                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::Activate_Rider_Camo_Particles(bool enterCamo, class AShooterCharacter* specificRider)
+void ALionfishLion_Character_BP_C::Activate_Rider_Camo_Particles(bool EnterCamo, class AShooterCharacter* specificRider)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Activate Rider Camo Particles");
 
 	ALionfishLion_Character_BP_C_Activate_Rider_Camo_Particles_Params params;
-	params.enterCamo = enterCamo;
+	params.EnterCamo = EnterCamo;
 	params.specificRider = specificRider;
 
 	auto flags = fn->FunctionFlags;
@@ -5213,7 +5183,7 @@ void ALionfishLion_Character_BP_C::Set_Camo_Active(bool Active)
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Request Release Big Spacebar Leap Charge
-// (NetReliable, Exec, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
 void ALionfishLion_Character_BP_C::Request_Release_Big_Spacebar_Leap_Charge()
 {
@@ -5230,7 +5200,7 @@ void ALionfishLion_Character_BP_C::Request_Release_Big_Spacebar_Leap_Charge()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPServerHandleNetExecCommand
-// (Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -5246,6 +5216,7 @@ bool ALionfishLion_Character_BP_C::STATIC_BPServerHandleNetExecCommand(class APl
 	params.CommandName = CommandName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5544,11 +5515,11 @@ bool ALionfishLion_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.InterceptInputEvent
-// (Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, Event, NetResponse, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class FString*                 InputName                      (Parm, ZeroConstructor)
 
-void ALionfishLion_Character_BP_C::STATIC_InterceptInputEvent(class FString* InputName)
+void ALionfishLion_Character_BP_C::InterceptInputEvent(class FString* InputName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.InterceptInputEvent");
 
@@ -5556,6 +5527,7 @@ void ALionfishLion_Character_BP_C::STATIC_InterceptInputEvent(class FString* Inp
 	params.InputName = InputName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5598,7 +5570,7 @@ void ALionfishLion_Character_BP_C::Reset_Combo_Count()
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -5617,7 +5589,6 @@ float ALionfishLion_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* Atta
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5656,7 +5627,7 @@ int ALionfishLion_Character_BP_C::BPAdjustAttackIndex(int* AttackIndex)
 
 
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.BPDoAttack
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -6046,6 +6017,40 @@ void ALionfishLion_Character_BP_C::Timeline_1__UpdateFunc()
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Timeline_1__UpdateFunc");
 
 	ALionfishLion_Character_BP_C_Timeline_1__UpdateFunc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Timeline_2__FinishedFunc
+// ()
+
+void ALionfishLion_Character_BP_C::Timeline_2__FinishedFunc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Timeline_2__FinishedFunc");
+
+	ALionfishLion_Character_BP_C_Timeline_2__FinishedFunc_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Timeline_2__UpdateFunc
+// ()
+
+void ALionfishLion_Character_BP_C::Timeline_2__UpdateFunc()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.Timeline_2__UpdateFunc");
+
+	ALionfishLion_Character_BP_C_Timeline_2__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -6769,14 +6774,14 @@ void ALionfishLion_Character_BP_C::multicast_on_killed_dino_with_max_combo_attac
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.ServerSyncMovementValues
 // ()
 // Parameters:
-// float                          synced_right                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Synced_Right                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::ServerSyncMovementValues(float synced_right)
+void ALionfishLion_Character_BP_C::ServerSyncMovementValues(float Synced_Right)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.ServerSyncMovementValues");
 
 	ALionfishLion_Character_BP_C_ServerSyncMovementValues_Params params;
-	params.synced_right = synced_right;
+	params.Synced_Right = Synced_Right;
 
 	auto flags = fn->FunctionFlags;
 
@@ -6807,15 +6812,15 @@ void ALionfishLion_Character_BP_C::client_start_charge_teleport()
 // ()
 // Parameters:
 // bool                           is_max_combo_Teleport          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           is_quick_tap_teleport          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Is_Quick_Tap_Teleport          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::client_end_charge_teleport(bool is_max_combo_Teleport, bool is_quick_tap_teleport)
+void ALionfishLion_Character_BP_C::client_end_charge_teleport(bool is_max_combo_Teleport, bool Is_Quick_Tap_Teleport)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.client end charge teleport");
 
 	ALionfishLion_Character_BP_C_client_end_charge_teleport_Params params;
 	params.is_max_combo_Teleport = is_max_combo_Teleport;
-	params.is_quick_tap_teleport = is_quick_tap_teleport;
+	params.Is_Quick_Tap_Teleport = Is_Quick_Tap_Teleport;
 
 	auto flags = fn->FunctionFlags;
 
@@ -6828,15 +6833,15 @@ void ALionfishLion_Character_BP_C::client_end_charge_teleport(bool is_max_combo_
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.multicast started teleport 2
 // ()
 // Parameters:
-// bool                           is_quick_tap_teleport          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Is_Quick_Tap_Teleport          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Teleport_Target_Count          (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::multicast_started_teleport_2(bool is_quick_tap_teleport, int Teleport_Target_Count)
+void ALionfishLion_Character_BP_C::multicast_started_teleport_2(bool Is_Quick_Tap_Teleport, int Teleport_Target_Count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.multicast started teleport 2");
 
 	ALionfishLion_Character_BP_C_multicast_started_teleport_2_Params params;
-	params.is_quick_tap_teleport = is_quick_tap_teleport;
+	params.Is_Quick_Tap_Teleport = Is_Quick_Tap_Teleport;
 	params.Teleport_Target_Count = Teleport_Target_Count;
 
 	auto flags = fn->FunctionFlags;
@@ -6907,18 +6912,18 @@ void ALionfishLion_Character_BP_C::soft_cancel_teleport_on_failing_to_get_target
 // Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.teleport attack to position
 // ()
 // Parameters:
-// struct FVector                 start_loc                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 End_Loc                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Start_Loc                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 end_loc                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           probably_final_teleport        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           turn_around                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALionfishLion_Character_BP_C::teleport_attack_to_position(const struct FVector& start_loc, const struct FVector& End_Loc, bool probably_final_teleport, bool turn_around)
+void ALionfishLion_Character_BP_C::teleport_attack_to_position(const struct FVector& Start_Loc, const struct FVector& end_loc, bool probably_final_teleport, bool turn_around)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.teleport attack to position");
 
 	ALionfishLion_Character_BP_C_teleport_attack_to_position_Params params;
-	params.start_loc = start_loc;
-	params.End_Loc = End_Loc;
+	params.Start_Loc = Start_Loc;
+	params.end_loc = end_loc;
 	params.probably_final_teleport = probably_final_teleport;
 	params.turn_around = turn_around;
 
@@ -7168,6 +7173,28 @@ void ALionfishLion_Character_BP_C::OnActorCustomEvent_Event(const struct FName& 
 	params.EventCustomName = EventCustomName;
 	params.EventCustomString = EventCustomString;
 	params.InstigatorActor = InstigatorActor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.lerp rot to next tele loc
+// ()
+// Parameters:
+// float                          new_yaw                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          prev_yaw                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void ALionfishLion_Character_BP_C::lerp_rot_to_next_tele_loc(float new_yaw, float prev_yaw)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LionfishLion_Character_BP.LionfishLion_Character_BP_C.lerp rot to next tele loc");
+
+	ALionfishLion_Character_BP_C_lerp_rot_to_next_tele_loc_Params params;
+	params.new_yaw = new_yaw;
+	params.prev_yaw = prev_yaw;
 
 	auto flags = fn->FunctionFlags;
 

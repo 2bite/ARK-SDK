@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -99,13 +99,13 @@ struct AWeapFists_Oar_C_UserConstructionScript_Params
 {
 };
 
-// Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_302
-struct AWeapFists_Oar_C_InpActEvt_AltFire_K2Node_InputActionEvent_302_Params
+// Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_245
+struct AWeapFists_Oar_C_InpActEvt_AltFire_K2Node_InputActionEvent_245_Params
 {
 };
 
-// Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_301
-struct AWeapFists_Oar_C_InpActEvt_AltFire_K2Node_InputActionEvent_301_Params
+// Function WeapFists_Oar.WeapFists_Oar_C.InpActEvt_AltFire_K2Node_InputActionEvent_244
+struct AWeapFists_Oar_C_InpActEvt_AltFire_K2Node_InputActionEvent_244_Params
 {
 };
 

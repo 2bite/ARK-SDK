@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapPike_Pitchfork.WeapPike_Pitchfork_C
-// 0x0000 (0x0D90 - 0x0D90)
+// 0x0000 (0x0D88 - 0x0D88)
 class AWeapPike_Pitchfork_C : public AWeapPike_C
 {
 public:

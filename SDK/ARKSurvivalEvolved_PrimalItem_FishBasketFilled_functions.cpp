@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,18 +12,39 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.Find Shadowmane
-// (NetReliable, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.try feed shadowmane
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// bool                           backup                         (Parm, ZeroConstructor, IsPlainOldData)
+// class APrimalDinoCharacter*    fish                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPrimalItem_FishBasketFilled_C::try_feed_shadowmane(class APrimalDinoCharacter* fish)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.try feed shadowmane");
+
+	UPrimalItem_FishBasketFilled_C_try_feed_shadowmane_Params params;
+	params.fish = fish;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.Find Shadowmane
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// Parameters:
+// bool                           Backup                         (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalDinoCharacter*    Shadowmane                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItem_FishBasketFilled_C::Find_Shadowmane(bool backup, class APrimalDinoCharacter** Shadowmane)
+void UPrimalItem_FishBasketFilled_C::Find_Shadowmane(bool Backup, class APrimalDinoCharacter** Shadowmane)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.Find Shadowmane");
 
 	UPrimalItem_FishBasketFilled_C_Find_Shadowmane_Params params;
-	params.backup = backup;
+	params.Backup = Backup;
 
 	auto flags = fn->FunctionFlags;
 
@@ -37,7 +58,7 @@ void UPrimalItem_FishBasketFilled_C::Find_Shadowmane(bool backup, class APrimalD
 
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPDrawItemIcon
-// (NetReliable, Exec, Native, NetResponse, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class UCanvas**                ItemCanvas                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               ItemCanvasSize                 (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -45,7 +66,7 @@ void UPrimalItem_FishBasketFilled_C::Find_Shadowmane(bool backup, class APrimalD
 // bool*                          bItemEnabled                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            TheTintColor                   (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UPrimalItem_FishBasketFilled_C::BPDrawItemIcon(class UCanvas** ItemCanvas, bool* bItemEnabled, struct FVector2D* ItemCanvasSize, struct FVector2D* ItemCanvasScale, struct FLinearColor* TheTintColor)
+void UPrimalItem_FishBasketFilled_C::STATIC_BPDrawItemIcon(class UCanvas** ItemCanvas, bool* bItemEnabled, struct FVector2D* ItemCanvasSize, struct FVector2D* ItemCanvasScale, struct FLinearColor* TheTintColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPDrawItemIcon");
 
@@ -54,7 +75,6 @@ void UPrimalItem_FishBasketFilled_C::BPDrawItemIcon(class UCanvas** ItemCanvas, 
 	params.bItemEnabled = bItemEnabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,7 +110,7 @@ void UPrimalItem_FishBasketFilled_C::SlottedTick(float* DeltaSeconds)
 
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BlueprintUsed
-// (NetReliable, Exec, Event, Static, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void UPrimalItem_FishBasketFilled_C::STATIC_BlueprintUsed()
 {
@@ -107,14 +127,14 @@ void UPrimalItem_FishBasketFilled_C::STATIC_BlueprintUsed()
 
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPGetItemDescription
-// (NetReliable, Native, Event, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString*                 InDescription                  (Parm, ZeroConstructor)
 // bool*                          bGetLongDescription            (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString UPrimalItem_FishBasketFilled_C::STATIC_BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
+class FString UPrimalItem_FishBasketFilled_C::BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPGetItemDescription");
 
@@ -135,12 +155,12 @@ class FString UPrimalItem_FishBasketFilled_C::STATIC_BPGetItemDescription(class 
 
 
 // Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPCanUse
-// (Exec, Event, NetMulticast, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool*                          bIgnoreCooldown                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPrimalItem_FishBasketFilled_C::BPCanUse(bool* bIgnoreCooldown)
+bool UPrimalItem_FishBasketFilled_C::STATIC_BPCanUse(bool* bIgnoreCooldown)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItem_FishBasketFilled.PrimalItem_FishBasketFilled_C.BPCanUse");
 
@@ -148,6 +168,7 @@ bool UPrimalItem_FishBasketFilled_C::BPCanUse(bool* bIgnoreCooldown)
 	params.bIgnoreCooldown = bIgnoreCooldown;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

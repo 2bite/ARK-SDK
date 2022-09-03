@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function SM_Mirror_BP.SM_Mirror_BP_C.CanUseRenderTarget
 // ()
 // Parameters:
-// bool                           can_use                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Can_Use                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ASM_Mirror_BP_C::CanUseRenderTarget(bool* can_use)
+void ASM_Mirror_BP_C::CanUseRenderTarget(bool* Can_Use)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SM_Mirror_BP.SM_Mirror_BP_C.CanUseRenderTarget");
 
@@ -29,8 +29,8 @@ void ASM_Mirror_BP_C::CanUseRenderTarget(bool* can_use)
 
 	fn->FunctionFlags = flags;
 
-	if (can_use != nullptr)
-		*can_use = params.can_use;
+	if (Can_Use != nullptr)
+		*Can_Use = params.Can_Use;
 }
 
 

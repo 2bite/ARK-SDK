@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ void AWeapScissors_C::ReceiveBeginPlay()
 
 
 // Function WeapScissors.WeapScissors_C.IsValidHairCutTarget
-// (Exec, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AActor*                  PotentialTarget                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bIsValid                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -94,7 +94,7 @@ void AWeapScissors_C::GiveHairLocks(int NumLocks)
 
 
 // Function WeapScissors.WeapScissors_C.BPAnimNotifyCustomEvent
-// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -112,6 +112,7 @@ void AWeapScissors_C::STATIC_BPAnimNotifyCustomEvent(struct FName* CustomEventNa
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

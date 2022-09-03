@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,7 +53,7 @@ void ADayCycleManager_Gen2_C::SetupBackdropWarpMesh()
 
 
 // Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.OnRep_WarpState
-// ()
+// (Net, NetReliable, Exec, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ADayCycleManager_Gen2_C::OnRep_WarpState()
 {
@@ -70,11 +70,11 @@ void ADayCycleManager_Gen2_C::OnRep_WarpState()
 
 
 // Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.DebugPrintWarpState
-// (Net, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (Net, NetReliable, NetRequest, Native, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class FString                  WarpState                      (Parm, ZeroConstructor)
 
-void ADayCycleManager_Gen2_C::STATIC_DebugPrintWarpState(const class FString& WarpState)
+void ADayCycleManager_Gen2_C::DebugPrintWarpState(const class FString& WarpState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.DebugPrintWarpState");
 
@@ -82,6 +82,7 @@ void ADayCycleManager_Gen2_C::STATIC_DebugPrintWarpState(const class FString& Wa
 	params.WarpState = WarpState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,9 +170,9 @@ void ADayCycleManager_Gen2_C::LoadAsteroids(int index)
 
 
 // Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.UnloadAsteroids
-// (NetReliable, NetRequest, Exec, Native, Event, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, NetResponse, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ADayCycleManager_Gen2_C::STATIC_UnloadAsteroids()
+void ADayCycleManager_Gen2_C::UnloadAsteroids()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.UnloadAsteroids");
 
@@ -282,7 +283,7 @@ void ADayCycleManager_Gen2_C::RandomizeSkybox(int* newIndex)
 
 
 // Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.SetupSkyboxTables
-// (NetReliable, NetRequest, NetResponse, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Event, NetResponse, NetMulticast, Public, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ADayCycleManager_Gen2_C::SetupSkyboxTables()
 {
@@ -338,9 +339,9 @@ void ADayCycleManager_Gen2_C::ClientInitializeHazards()
 
 
 // Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.SetupSpaceHazards
-// (Exec, Native, Event, NetResponse, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ADayCycleManager_Gen2_C::SetupSpaceHazards()
+void ADayCycleManager_Gen2_C::STATIC_SetupSpaceHazards()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.SetupSpaceHazards");
 
@@ -471,7 +472,7 @@ bool ADayCycleManager_Gen2_C::IsRainingAtLocation(struct FVector* Location)
 
 
 // Function DayCycleManager_Gen2.DayCycleManager_Gen2_C.Earth Quake Drop Item at Location
-// (NetRequest, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
+// (Event, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 AtLoc                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            BiomeArea                      (Parm, ZeroConstructor, IsPlainOldData)

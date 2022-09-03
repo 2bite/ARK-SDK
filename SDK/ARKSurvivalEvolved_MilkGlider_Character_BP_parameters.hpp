@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,16 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.CheckTeamAndToggleTroughVisibility
+struct AMilkGlider_Character_BP_C_CheckTeamAndToggleTroughVisibility_Params
+{
+};
+
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.OnRep_bNurseVisualActive
+struct AMilkGlider_Character_BP_C_OnRep_bNurseVisualActive_Params
+{
+};
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.ReceivePossessed
 struct AMilkGlider_Character_BP_C_ReceivePossessed_Params
@@ -698,18 +708,18 @@ struct AMilkGlider_Character_BP_C_UserConstructionScript_Params
 {
 };
 
-// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_RunToggle_K2Node_InputActionEvent_316
-struct AMilkGlider_Character_BP_C_InpActEvt_RunToggle_K2Node_InputActionEvent_316_Params
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_RunToggle_K2Node_InputActionEvent_200
+struct AMilkGlider_Character_BP_C_InpActEvt_RunToggle_K2Node_InputActionEvent_200_Params
 {
 };
 
-// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_315
-struct AMilkGlider_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_315_Params
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_199
+struct AMilkGlider_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_199_Params
 {
 };
 
-// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_314
-struct AMilkGlider_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_314_Params
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_198
+struct AMilkGlider_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_198_Params
 {
 };
 

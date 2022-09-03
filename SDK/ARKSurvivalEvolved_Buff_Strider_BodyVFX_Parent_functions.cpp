@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,7 +47,7 @@ void ABuff_Strider_BodyVFX_Parent_C::deactivate_cloak_mat()
 
 
 // Function Buff_Strider_BodyVFX_Parent.Buff_Strider_BodyVFX_Parent_C.activate cloak mat
-// (NetRequest, Native, Event, MulticastDelegate, Public, Private, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ABuff_Strider_BodyVFX_Parent_C::activate_cloak_mat()
 {

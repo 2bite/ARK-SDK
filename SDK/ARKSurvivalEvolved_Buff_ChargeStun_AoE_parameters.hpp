@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ struct ABuff_ChargeStun_AoE_C_Can_Stun_Character_Params
 // Function Buff_ChargeStun_AoE.Buff_ChargeStun_AoE_C.Get WeaponCharge Buff
 struct ABuff_ChargeStun_AoE_C_Get_WeaponCharge_Buff_Params
 {
-	class ABuff_ChargeEmitter_C*                       chargeBuff;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	class ABuff_ChargeEmitter_C*                       ChargeBuff;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_ChargeStun_AoE.Buff_ChargeStun_AoE_C.BPExcludeAoEActor

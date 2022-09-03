@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BionicStego_Character_BP.BionicStego_Character_BP_C
-// 0x0000 (0x26A0 - 0x26A0)
+// 0x0000 (0x26C0 - 0x26C0)
 class ABionicStego_Character_BP_C : public AStego_Character_BP_C
 {
 public:

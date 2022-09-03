@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitter_Strider.Buff_ChargeEmitter_Strider_C
-// 0x0018 (0x0B90 - 0x0B78)
+// 0x0018 (0x0BA8 - 0x0B90)
 class ABuff_ChargeEmitter_Strider_C : public ABuff_ChargeEmitter_C
 {
 public:
-	float                                              chargeLossCooldownAfterHarvesting;                        // 0x0B78(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0B7C(0x0004) MISSED OFFSET
-	TArray<class UTexture2D*>                          batteryIcons;                                             // 0x0B80(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              chargeLossCooldownAfterHarvesting;                        // 0x0B90(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0B94(0x0004) MISSED OFFSET
+	TArray<class UTexture2D*>                          batteryIcons;                                             // 0x0B98(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -33,7 +33,7 @@ public:
 	void BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void Get_Current_Charge(float* Current_Charge);
-	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* ivalue);
+	void ChargeVariableEvent(TEnumAsByte<E_ChargeVariableNames>* variableType, bool* bBValue, float* fValue, double* dValue, int* iValue);
 	void Modify_Charge(bool* SetValue, float* amount, bool* multicast, bool* triggerEvent, bool* multicastEvent, float* chargeAdded);
 	void Pre_Timer_Modify_Charge_Actions(bool* shouldSkipModify);
 	void Is_Harvest_Cooldown_Over(bool* isOver);

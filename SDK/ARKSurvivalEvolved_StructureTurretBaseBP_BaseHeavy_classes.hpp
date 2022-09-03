@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,7 +49,7 @@ public:
 	bool BPCanBeActivated();
 	void BPPostLoadedFromSaveGame();
 	void TurretCheckHardLimit();
-	void STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
+	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	int BPIsAllowedToBuild(int* CurrentAllowedReason, struct FPlacementData* OutPlacementData);
 	void UserConstructionScript();
 	void ExecuteUbergraph_StructureTurretBaseBP_BaseHeavy(int EntryPoint);

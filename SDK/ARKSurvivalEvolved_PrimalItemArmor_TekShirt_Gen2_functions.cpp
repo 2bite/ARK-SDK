@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -94,7 +94,7 @@ void UPrimalItemArmor_TekShirt_Gen2_C::BlueprintUnequipped()
 
 
 // Function PrimalItemArmor_TekShirt_Gen2.PrimalItemArmor_TekShirt_Gen2_C.TryTekSuitVFXOffset
-// (NetReliable, Event, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Event, Public, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           IsUnequip                      (Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,40 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.RepauseAnims
+// ()
+
+void ABuff_Frozen_IceKaiju_C::RepauseAnims()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.RepauseAnims");
+
+	ABuff_Frozen_IceKaiju_C_RepauseAnims_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.RefreshMeshes
+// ()
+
+void ABuff_Frozen_IceKaiju_C::RefreshMeshes()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.RefreshMeshes");
+
+	ABuff_Frozen_IceKaiju_C_RefreshMeshes_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BPCheckPreventInput
 // ()
@@ -267,7 +301,7 @@ void ABuff_Frozen_IceKaiju_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_Frozen_IceKaiju.Buff_Frozen_IceKaiju_C.BuffTickServer
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Public, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -279,6 +313,7 @@ void ABuff_Frozen_IceKaiju_C::BuffTickServer(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

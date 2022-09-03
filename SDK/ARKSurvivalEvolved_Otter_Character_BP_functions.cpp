@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ void AOtter_Character_BP_C::BPSetupTamed(bool* bWasJustTamed)
 
 
 // Function Otter_Character_BP.Otter_Character_BP_C.OnLaunched
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector*                LaunchVelocity                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool*                          bXYOverride                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -351,13 +351,13 @@ bool AOtter_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* 
 
 
 // Function Otter_Character_BP.Otter_Character_BP_C.BPGetMultiUseEntries
-// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AOtter_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AOtter_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Otter_Character_BP.Otter_Character_BP_C.BPGetMultiUseEntries");
 
@@ -365,6 +365,7 @@ TArray<struct FMultiUseEntry> AOtter_Character_BP_C::STATIC_BPGetMultiUseEntries
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,6 +46,23 @@ void AWeapMinigun_C::GetHudData(class UTexture2D** AmmoIcon, int* CurrentAmmoCou
 		*HideAmmoCountHUDElement = params.HideAmmoCountHUDElement;
 	if (AmmoItemTemplate != nullptr)
 		*AmmoItemTemplate = params.AmmoItemTemplate;
+}
+
+
+// Function WeapMinigun.WeapMinigun_C.VerifyShotTimestamp
+// ()
+
+void AWeapMinigun_C::VerifyShotTimestamp()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapMinigun.WeapMinigun_C.VerifyShotTimestamp");
+
+	AWeapMinigun_C_VerifyShotTimestamp_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -154,7 +171,7 @@ void AWeapMinigun_C::BPOnStartTargeting(bool* bFromGamepadLeft)
 
 
 // Function WeapMinigun.WeapMinigun_C.UpdateItemData
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AWeapMinigun_C::STATIC_UpdateItemData()
 {
@@ -265,9 +282,9 @@ void AWeapMinigun_C::AnimAllowsFire(bool* AllowsFire)
 
 
 // Function WeapMinigun.WeapMinigun_C.BPAppliedPrimalItemToWeapon
-// (NetReliable, NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AWeapMinigun_C::BPAppliedPrimalItemToWeapon()
+void AWeapMinigun_C::STATIC_BPAppliedPrimalItemToWeapon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapMinigun.WeapMinigun_C.BPAppliedPrimalItemToWeapon");
 
@@ -346,7 +363,7 @@ bool AWeapMinigun_C::BPWeaponCanFire()
 
 
 // Function WeapMinigun.WeapMinigun_C.BPFiredWeapon
-// (NetReliable, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AWeapMinigun_C::BPFiredWeapon()
 {

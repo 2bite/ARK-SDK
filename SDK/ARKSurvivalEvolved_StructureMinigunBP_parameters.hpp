@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,6 +21,18 @@ struct AStructureMinigunBP_C_GetHudData_Params
 	class UClass*                                      CurrentAmmoItemTemplate;                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	TArray<class UClass*>                              AmmoItemTemplates;                                        // (Parm, OutParm, ZeroConstructor)
 	int                                                LowAmmoWarningAmount;                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function StructureMinigunBP.StructureMinigunBP_C.BPGetDamageMultiplier
+struct AStructureMinigunBP_C_BPGetDamageMultiplier_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function StructureMinigunBP.StructureMinigunBP_C.UpdateItemStats
+struct AStructureMinigunBP_C_UpdateItemStats_Params
+{
+	class UPrimalItem*                                 newItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function StructureMinigunBP.StructureMinigunBP_C.BPOverrideCantBuildReasonString
@@ -58,7 +70,7 @@ struct AStructureMinigunBP_C_BPSetPlayerConstructor_Params
 // Function StructureMinigunBP.StructureMinigunBP_C.PlacementInitialization
 struct AStructureMinigunBP_C_PlacementInitialization_Params
 {
-	class AShooterWeapon*                              ConstructorWeapon;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterWeapon*                              constructorWeapon;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function StructureMinigunBP.StructureMinigunBP_C.PlacementTickActions
@@ -104,7 +116,7 @@ struct AStructureMinigunBP_C_Is_First_Person_View_Params
 // Function StructureMinigunBP.StructureMinigunBP_C.Is Client or SinglePlayer
 struct AStructureMinigunBP_C_Is_Client_or_SinglePlayer_Params
 {
-	bool                                               res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Res;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function StructureMinigunBP.StructureMinigunBP_C.BPGetInfoFromConsumedItemForPlacedStructure
@@ -162,7 +174,7 @@ struct AStructureMinigunBP_C_TickSpinSpeed_Params
 // Function StructureMinigunBP.StructureMinigunBP_C.BPApplyCustomDurabilityOnPickup
 struct AStructureMinigunBP_C_BPApplyCustomDurabilityOnPickup_Params
 {
-	class UPrimalItem**                                pickedup;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItem**                                PickedUp;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function StructureMinigunBP.StructureMinigunBP_C.TickTPV

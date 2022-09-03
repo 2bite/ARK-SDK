@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6372
+// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5770
 // ()
 
-void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6372()
+void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5770()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6372");
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5770");
 
-	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6372_Params params;
+	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5770_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -29,14 +29,14 @@ void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Brai
 }
 
 
-// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6371
+// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5769
 // ()
 
-void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6371()
+void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5769()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6371");
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5769");
 
-	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6371_Params params;
+	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5769_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -46,14 +46,14 @@ void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Brai
 }
 
 
-// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6370
+// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5768
 // ()
 
-void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6370()
+void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5768()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6370");
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5768");
 
-	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6370_Params params;
+	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5768_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -63,14 +63,14 @@ void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Brai
 }
 
 
-// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_8074
+// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_7184
 // ()
 
-void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_8074()
+void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_7184()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_8074");
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_7184");
 
-	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_8074_Params params;
+	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_7184_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -80,14 +80,14 @@ void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Brai
 }
 
 
-// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_8073
+// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_7183
 // ()
 
-void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_8073()
+void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_7183()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_8073");
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_7183");
 
-	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_8073_Params params;
+	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_SequencePlayer_7183_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -97,14 +97,14 @@ void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Brai
 }
 
 
-// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6369
+// Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5767
 // ()
 
-void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6369()
+void UBrainSlug_Chibi_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5767()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6369");
+	static auto fn = UObject::FindObject<UFunction>("Function BrainSlug_Chibi_AnimBP.BrainSlug_Chibi_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5767");
 
-	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_6369_Params params;
+	UBrainSlug_Chibi_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BrainSlug_Chibi_AnimBP_AnimGraphNode_BlendListByBool_5767_Params params;
 
 	auto flags = fn->FunctionFlags;
 

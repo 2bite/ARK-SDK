@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Canoe_BP.Canoe_BP_C.AllowGrappling
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ACanoe_BP_C::AllowGrappling()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.AllowGrappling");
+
+	ACanoe_BP_C_AllowGrappling_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function Canoe_BP.Canoe_BP_C.OnCanoeAtRestStateChanged
 // ()
@@ -202,9 +223,9 @@ void ACanoe_BP_C::IsPlayerCanoePassenger(class AShooterCharacter* CheckPlayer, b
 
 
 // Function Canoe_BP.Canoe_BP_C.UpdateCanoeHudTextOverlay
-// (Event, Static, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ACanoe_BP_C::STATIC_UpdateCanoeHudTextOverlay()
+void ACanoe_BP_C::UpdateCanoeHudTextOverlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.UpdateCanoeHudTextOverlay");
 
@@ -439,15 +460,16 @@ bool ACanoe_BP_C::BP_PreventMovementMode(TEnumAsByte<EMovementMode>* NewMovement
 
 
 // Function Canoe_BP.Canoe_BP_C.UpdatePreventCanoeFromExitingWater
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ACanoe_BP_C::STATIC_UpdatePreventCanoeFromExitingWater()
+void ACanoe_BP_C::UpdatePreventCanoeFromExitingWater()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.UpdatePreventCanoeFromExitingWater");
 
 	ACanoe_BP_C_UpdatePreventCanoeFromExitingWater_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -482,9 +504,9 @@ void ACanoe_BP_C::PackInputAxesIntoVector2D(float Forward, float Right, struct F
 
 
 // Function Canoe_BP.Canoe_BP_C.ProcessReceivedPassengerInputsQueue_Right
-// (Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
-void ACanoe_BP_C::STATIC_ProcessReceivedPassengerInputsQueue_Right()
+void ACanoe_BP_C::ProcessReceivedPassengerInputsQueue_Right()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.ProcessReceivedPassengerInputsQueue_Right");
 
@@ -499,7 +521,7 @@ void ACanoe_BP_C::STATIC_ProcessReceivedPassengerInputsQueue_Right()
 
 
 // Function Canoe_BP.Canoe_BP_C.ProcessReceivedPassengerInputsQueue_Forward
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 
 void ACanoe_BP_C::ProcessReceivedPassengerInputsQueue_Forward()
 {
@@ -508,6 +530,7 @@ void ACanoe_BP_C::ProcessReceivedPassengerInputsQueue_Forward()
 	ACanoe_BP_C_ProcessReceivedPassengerInputsQueue_Forward_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -516,18 +539,17 @@ void ACanoe_BP_C::ProcessReceivedPassengerInputsQueue_Forward()
 
 
 // Function Canoe_BP.Canoe_BP_C.ConvertServerReceivedPassengerInputsIntoVector2Ds
-// (Net, NetReliable, Native, Event, Static, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, Private, Protected, Delegate, NetServer, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FVector2D>       Inputs                         (Parm, OutParm, ZeroConstructor)
 
-void ACanoe_BP_C::STATIC_ConvertServerReceivedPassengerInputsIntoVector2Ds(TArray<struct FVector2D>* Inputs)
+void ACanoe_BP_C::ConvertServerReceivedPassengerInputsIntoVector2Ds(TArray<struct FVector2D>* Inputs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.ConvertServerReceivedPassengerInputsIntoVector2Ds");
 
 	ACanoe_BP_C_ConvertServerReceivedPassengerInputsIntoVector2Ds_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -563,12 +585,12 @@ void ACanoe_BP_C::BP_OverrideSwimmingAcceleration(float* DeltaTime, struct FVect
 
 
 // Function Canoe_BP.Canoe_BP_C.ReceivedSavedPassengerInputStruct
-// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FCanoePassengerClientInputAxes ClientSavedInputs              (Parm)
 // class AShooterCharacter*       ForPassengerPlayer             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ACanoe_BP_C::STATIC_ReceivedSavedPassengerInputStruct(const struct FCanoePassengerClientInputAxes& ClientSavedInputs, class AShooterCharacter* ForPassengerPlayer)
+void ACanoe_BP_C::ReceivedSavedPassengerInputStruct(const struct FCanoePassengerClientInputAxes& ClientSavedInputs, class AShooterCharacter* ForPassengerPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.ReceivedSavedPassengerInputStruct");
 
@@ -728,15 +750,16 @@ void ACanoe_BP_C::BPOnRefreshColorization(TArray<struct FLinearColor>* Colors)
 
 
 // Function Canoe_BP.Canoe_BP_C.DebugPrintReplicatedInputs
-// (Net, NetRequest, Exec, Event, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, Event, Static, Private, Protected, Delegate, NetServer, NetClient, BlueprintEvent, Const, NetValidate)
 
-void ACanoe_BP_C::DebugPrintReplicatedInputs()
+void ACanoe_BP_C::STATIC_DebugPrintReplicatedInputs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.DebugPrintReplicatedInputs");
 
 	ACanoe_BP_C_DebugPrintReplicatedInputs_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1024,15 +1047,16 @@ void ACanoe_BP_C::OnRep_ReplicatedPassengerInputs()
 
 
 // Function Canoe_BP.Canoe_BP_C.UnpackReplicatedPassengerInputs
-// (NetRequest, Event, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Native, Static, MulticastDelegate, HasOutParms, NetClient, BlueprintEvent, Const, NetValidate)
 
-void ACanoe_BP_C::UnpackReplicatedPassengerInputs()
+void ACanoe_BP_C::STATIC_UnpackReplicatedPassengerInputs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.UnpackReplicatedPassengerInputs");
 
 	ACanoe_BP_C_UnpackReplicatedPassengerInputs_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1041,9 +1065,9 @@ void ACanoe_BP_C::UnpackReplicatedPassengerInputs()
 
 
 // Function Canoe_BP.Canoe_BP_C.PackReplicatedPassengerInputs
-// (NetRequest, NetResponse, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, HasOutParms, NetClient, BlueprintEvent, Const, NetValidate)
 
-void ACanoe_BP_C::PackReplicatedPassengerInputs()
+void ACanoe_BP_C::STATIC_PackReplicatedPassengerInputs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.PackReplicatedPassengerInputs");
 
@@ -1078,16 +1102,15 @@ void ACanoe_BP_C::PerformSimCanoeMovement(float DeltaTime)
 
 
 // Function Canoe_BP.Canoe_BP_C.BPTimerNonDedicated
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetMulticast, MulticastDelegate, HasOutParms, NetClient, BlueprintEvent, Const, NetValidate)
 
-void ACanoe_BP_C::STATIC_BPTimerNonDedicated()
+void ACanoe_BP_C::BPTimerNonDedicated()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.BPTimerNonDedicated");
 
 	ACanoe_BP_C_BPTimerNonDedicated_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1173,7 +1196,7 @@ void ACanoe_BP_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** 
 
 
 // Function Canoe_BP.Canoe_BP_C.BPCanTakePassenger
-// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, HasOutParms, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter**       Character                      (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           PassengerSeatIndex             (Parm, ZeroConstructor, IsPlainOldData)
@@ -1181,7 +1204,7 @@ void ACanoe_BP_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** 
 // bool*                          bAllowFlyersAndWaterDinos      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ACanoe_BP_C::BPCanTakePassenger(class APrimalCharacter** Character, int* PassengerSeatIndex, bool* bForcePassenger, bool* bAllowFlyersAndWaterDinos)
+bool ACanoe_BP_C::STATIC_BPCanTakePassenger(class APrimalCharacter** Character, int* PassengerSeatIndex, bool* bForcePassenger, bool* bAllowFlyersAndWaterDinos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.BPCanTakePassenger");
 
@@ -1192,6 +1215,7 @@ bool ACanoe_BP_C::BPCanTakePassenger(class APrimalCharacter** Character, int* Pa
 	params.bAllowFlyersAndWaterDinos = bAllowFlyersAndWaterDinos;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1202,18 +1226,17 @@ bool ACanoe_BP_C::BPCanTakePassenger(class APrimalCharacter** Character, int* Pa
 
 
 // Function Canoe_BP.Canoe_BP_C.GetPlayerSpawnLocation
-// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, HasOutParms, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ACanoe_BP_C::GetPlayerSpawnLocation()
+struct FVector ACanoe_BP_C::STATIC_GetPlayerSpawnLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.GetPlayerSpawnLocation");
 
 	ACanoe_BP_C_GetPlayerSpawnLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1313,14 +1336,14 @@ void ACanoe_BP_C::HandleFX(float DeltaTime)
 
 
 // Function Canoe_BP.Canoe_BP_C.SortSeatsByDistance
-// (Event, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, MulticastDelegate, HasOutParms, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FVector                 ToLocation                     (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalCharacter*        forCharacter                   (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FSaddlePassengerSeatDefinition> SortedSeatDefinitons           (Parm, OutParm, ZeroConstructor)
 // TArray<int>                    Sortedindices                  (Parm, OutParm, ZeroConstructor)
 
-void ACanoe_BP_C::STATIC_SortSeatsByDistance(const struct FVector& ToLocation, class APrimalCharacter* forCharacter, TArray<struct FSaddlePassengerSeatDefinition>* SortedSeatDefinitons, TArray<int>* Sortedindices)
+void ACanoe_BP_C::SortSeatsByDistance(const struct FVector& ToLocation, class APrimalCharacter* forCharacter, TArray<struct FSaddlePassengerSeatDefinition>* SortedSeatDefinitons, TArray<int>* Sortedindices)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.SortSeatsByDistance");
 
@@ -1440,11 +1463,11 @@ void ACanoe_BP_C::PassengerWeaponChanged(class AShooterWeapon* newWeapon)
 
 
 // Function Canoe_BP.Canoe_BP_C.OnSpawnedForItem
-// (NetReliable, Event, NetResponse, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, HasOutParms, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class UPrimalItem**            ForItem                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ACanoe_BP_C::OnSpawnedForItem(class UPrimalItem** ForItem)
+void ACanoe_BP_C::STATIC_OnSpawnedForItem(class UPrimalItem** ForItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.OnSpawnedForItem");
 
@@ -1483,7 +1506,7 @@ bool ACanoe_BP_C::BP_ForceAllowMountedWeapon(class UClass** WeaponTemplate)
 
 
 // Function Canoe_BP.Canoe_BP_C.GetCurrentPassengerAxisInputs
-// (Net, NetReliable, Exec, Native, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, Static, Private, Protected, Delegate, NetServer, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           bDebug                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAnyActiveInputs               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1493,7 +1516,7 @@ bool ACanoe_BP_C::BP_ForceAllowMountedWeapon(class UClass** WeaponTemplate)
 // int                            NumActiveForward               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            NumActiveRight                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ACanoe_BP_C::GetCurrentPassengerAxisInputs(bool bDebug, bool* bAnyActiveInputs, TArray<struct FVector2D>* PerPassengerInputs, float* AvgForward, float* AvgRight, int* NumActiveForward, int* NumActiveRight)
+void ACanoe_BP_C::STATIC_GetCurrentPassengerAxisInputs(bool bDebug, bool* bAnyActiveInputs, TArray<struct FVector2D>* PerPassengerInputs, float* AvgForward, float* AvgRight, int* NumActiveForward, int* NumActiveRight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.GetCurrentPassengerAxisInputs");
 
@@ -1501,7 +1524,6 @@ void ACanoe_BP_C::GetCurrentPassengerAxisInputs(bool bDebug, bool* bAnyActiveInp
 	params.bDebug = bDebug;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1523,7 +1545,7 @@ void ACanoe_BP_C::GetCurrentPassengerAxisInputs(bool bDebug, bool* bAnyActiveInp
 
 
 // Function Canoe_BP.Canoe_BP_C.BPNotifyClearPassenger
-// (NetReliable, Native, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, HasOutParms, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter**       PassengerChar                  (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           SeatIndex                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -1568,11 +1590,11 @@ void ACanoe_BP_C::BPNotifyAddPassenger(class APrimalCharacter** PassengerChar, i
 
 
 // Function Canoe_BP.Canoe_BP_C.PickupCanoe
-// (Exec, Native, Static, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Protected, Delegate, NetServer, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AShooterCharacter*       forChar                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void ACanoe_BP_C::STATIC_PickupCanoe(class AShooterCharacter* forChar)
+void ACanoe_BP_C::PickupCanoe(class AShooterCharacter* forChar)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.PickupCanoe");
 
@@ -1580,7 +1602,6 @@ void ACanoe_BP_C::STATIC_PickupCanoe(class AShooterCharacter* forChar)
 	params.forChar = forChar;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1614,13 +1635,13 @@ bool ACanoe_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* UseIndex)
 
 
 // Function Canoe_BP.Canoe_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, Protected, Delegate, NetServer, NetClient, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ACanoe_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ACanoe_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Canoe_BP.Canoe_BP_C.BPGetMultiUseEntries");
 

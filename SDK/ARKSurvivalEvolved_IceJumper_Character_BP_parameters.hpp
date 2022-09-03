@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -631,7 +631,7 @@ struct AIceJumper_Character_BP_C_ClientMovementAbilityInterrupted_Params
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.ClientDamagedTarget
 struct AIceJumper_Character_BP_C_ClientDamagedTarget_Params
 {
-	struct FVector                                     hitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitLoc;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceJumper_Character_BP.IceJumper_Character_BP_C.DeactivateLeftDamageFX

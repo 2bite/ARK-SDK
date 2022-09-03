@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Thylaco_CanPounceOnTargetFromTree_DK.Thylaco_CanPounceOnTargetFromTree_DK_C.ReceiveConditionCheck
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
+// (Exec, Native, Event, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor**                 OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UThylaco_CanPounceOnTargetFromTree_DK_C::STATIC_ReceiveConditionCheck(class AActor** OwnerActor)
+void UThylaco_CanPounceOnTargetFromTree_DK_C::ReceiveConditionCheck(class AActor** OwnerActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Thylaco_CanPounceOnTargetFromTree_DK.Thylaco_CanPounceOnTargetFromTree_DK_C.ReceiveConditionCheck");
 

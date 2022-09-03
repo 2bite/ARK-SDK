@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -115,18 +115,17 @@ void UPrimalItemConsumable_TekCanteenCraftable_C::TryClearBuffs()
 
 
 // Function PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C.GetCurrentWaterMode
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName                   WaterMode                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemConsumable_TekCanteenCraftable_C::STATIC_GetCurrentWaterMode(struct FName* WaterMode)
+void UPrimalItemConsumable_TekCanteenCraftable_C::GetCurrentWaterMode(struct FName* WaterMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C.GetCurrentWaterMode");
 
 	UPrimalItemConsumable_TekCanteenCraftable_C_GetCurrentWaterMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +137,7 @@ void UPrimalItemConsumable_TekCanteenCraftable_C::STATIC_GetCurrentWaterMode(str
 
 
 // Function PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C.BPGetCustomInventoryWidgetText
-// (Exec, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -159,7 +158,7 @@ class FString UPrimalItemConsumable_TekCanteenCraftable_C::BPGetCustomInventoryW
 
 
 // Function PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C.SetWaterMode
-// (NetReliable, NetRequest, Native, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FName                   NewWaterMode                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -204,7 +203,7 @@ void UPrimalItemConsumable_TekCanteenCraftable_C::SelectedCustomContextMenuItem(
 
 
 // Function PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C.TryConsumeWithPower
-// (Exec, Native, Event, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void UPrimalItemConsumable_TekCanteenCraftable_C::TryConsumeWithPower()
 {
@@ -239,7 +238,7 @@ void UPrimalItemConsumable_TekCanteenCraftable_C::BlueprintUsed()
 
 
 // Function PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C.SetShardDescription
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
 void UPrimalItemConsumable_TekCanteenCraftable_C::STATIC_SetShardDescription()
 {
@@ -248,6 +247,7 @@ void UPrimalItemConsumable_TekCanteenCraftable_C::STATIC_SetShardDescription()
 	UPrimalItemConsumable_TekCanteenCraftable_C_SetShardDescription_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,19 +256,18 @@ void UPrimalItemConsumable_TekCanteenCraftable_C::STATIC_SetShardDescription()
 
 
 // Function PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C.GetElementShardValue
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, Static, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           HasData                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemConsumable_TekCanteenCraftable_C::GetElementShardValue(bool* HasData, float* Value)
+void UPrimalItemConsumable_TekCanteenCraftable_C::STATIC_GetElementShardValue(bool* HasData, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C.GetElementShardValue");
 
 	UPrimalItemConsumable_TekCanteenCraftable_C_GetElementShardValue_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ struct ABuff_FishingNetXrayVision_C_Set_All_Components_Render_Custom_Depth_Param
 // Function Buff_FishingNetXrayVision.Buff_FishingNetXrayVision_C.Set All Components Custom Depth Stencil Value
 struct ABuff_FishingNetXrayVision_C_Set_All_Components_Custom_Depth_Stencil_Value_Params
 {
-	int                                                stencil_Value;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Stencil_Value;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -76,12 +76,12 @@ struct ABuff_TekStrider_LargeCannon_C_Delay_Fire_Params
 struct ABuff_TekStrider_LargeCannon_C_Get_Fire_Start_And_End_Location_Params
 {
 	bool                                               use_validated_loc;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     start_loc;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     End_Loc;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Start_Loc;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     end_loc;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Buff_TekStrider_LargeCannon.Buff_TekStrider_LargeCannon_C.Can Fire
-struct ABuff_TekStrider_LargeCannon_C_Can_Fire_Params
+// Function Buff_TekStrider_LargeCannon.Buff_TekStrider_LargeCannon_C.can fire
+struct ABuff_TekStrider_LargeCannon_C_can_fire_Params
 {
 	bool                                               from_animbp;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)

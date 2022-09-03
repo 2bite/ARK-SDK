@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function WeapEmptyCryopod.WeapEmptyCryopod_C.DoFireProjectileCustom
+// ()
+// Parameters:
+// bool*                          bExplodeInHand                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void AWeapEmptyCryopod_C::DoFireProjectileCustom(bool* bExplodeInHand)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapEmptyCryopod.WeapEmptyCryopod_C.DoFireProjectileCustom");
+
+	AWeapEmptyCryopod_C_DoFireProjectileCustom_Params params;
+	params.bExplodeInHand = bExplodeInHand;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.GetContainedDinoClass
 // ()
@@ -118,7 +138,7 @@ void AWeapEmptyCryopod_C::ReceiveBeginPlay()
 
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.UpdateContainsFX
-// (NetRequest, Exec, Event, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (NetReliable, Native, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ForceOff                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -130,6 +150,7 @@ void AWeapEmptyCryopod_C::UpdateContainsFX(bool ForceOff)
 	params.ForceOff = ForceOff;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,18 +200,17 @@ void AWeapEmptyCryopod_C::CanCapture(class APrimalDinoCharacter* Dino, bool* Cap
 
 
 // Function WeapEmptyCryopod.WeapEmptyCryopod_C.BPTryFireWeapon
-// (NetRequest, Native, Event, NetResponse, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintPure)
+// (Static, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AWeapEmptyCryopod_C::BPTryFireWeapon()
+bool AWeapEmptyCryopod_C::STATIC_BPTryFireWeapon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WeapEmptyCryopod.WeapEmptyCryopod_C.BPTryFireWeapon");
 
 	AWeapEmptyCryopod_C_BPTryFireWeapon_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

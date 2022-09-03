@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,12 +70,12 @@ void ABuff_BogSpiderBioGrappled_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_BogSpiderBioGrappled.Buff_BogSpiderBioGrappled_C.BPGetHUDElements
-// (Net, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Net, Event, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
 
-void ABuff_BogSpiderBioGrappled_C::STATIC_BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
+void ABuff_BogSpiderBioGrappled_C::BPGetHUDElements(class APlayerController** ForPC, TArray<struct FHUDElement>* OutElements)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_BogSpiderBioGrappled.Buff_BogSpiderBioGrappled_C.BPGetHUDElements");
 
@@ -83,7 +83,6 @@ void ABuff_BogSpiderBioGrappled_C::STATIC_BPGetHUDElements(class APlayerControll
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +123,7 @@ bool ABuff_BogSpiderBioGrappled_C::BPServerHandleNetExecCommand(class APlayerCon
 
 
 // Function Buff_BogSpiderBioGrappled.Buff_BogSpiderBioGrappled_C.ToggleEnsnareVFX
-// (Exec, Native, Static, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, NetResponse, Static, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABuff_BogSpiderBioGrappled_C::STATIC_ToggleEnsnareVFX()
 {
@@ -133,7 +132,6 @@ void ABuff_BogSpiderBioGrappled_C::STATIC_ToggleEnsnareVFX()
 	ABuff_BogSpiderBioGrappled_C_ToggleEnsnareVFX_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

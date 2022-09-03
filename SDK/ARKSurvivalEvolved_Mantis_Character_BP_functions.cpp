@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,15 +133,16 @@ bool AMantis_Character_BP_C::BPCanNotifyTeamAggroAI(class APrimalDinoCharacter**
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.Start Leap Attack
-// (NetReliable, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
-void AMantis_Character_BP_C::Start_Leap_Attack()
+void AMantis_Character_BP_C::STATIC_Start_Leap_Attack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mantis_Character_BP.Mantis_Character_BP_C.Start Leap Attack");
 
 	AMantis_Character_BP_C_Start_Leap_Attack_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,7 +151,7 @@ void AMantis_Character_BP_C::Start_Leap_Attack()
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.CheckLeapAttackEnd
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Event, MulticastDelegate, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 
 void AMantis_Character_BP_C::CheckLeapAttackEnd()
 {
@@ -159,7 +160,6 @@ void AMantis_Character_BP_C::CheckLeapAttackEnd()
 	AMantis_Character_BP_C_CheckLeapAttackEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -326,7 +326,7 @@ void AMantis_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Custom
 
 
 // Function Mantis_Character_BP.Mantis_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -345,7 +345,6 @@ float AMantis_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackInde
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

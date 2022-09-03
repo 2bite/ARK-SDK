@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,76 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.BPServerHandleNetExecCommand
+struct AStructure_LoadoutDummy_C_BPServerHandleNetExecCommand_Params
+{
+	class APlayerController**                          FromPC;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBPNetExecParams                            ExecParams;                                               // (Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.UpdateInventorySize
+struct AStructure_LoadoutDummy_C_UpdateInventorySize_Params
+{
+};
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.GetCurrentlyUsedHotbarSlots
+struct AStructure_LoadoutDummy_C_GetCurrentlyUsedHotbarSlots_Params
+{
+	int                                                OutUsedSlots;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.OnRep_CurrentMaxInventoryItems
+struct AStructure_LoadoutDummy_C_OnRep_CurrentMaxInventoryItems_Params
+{
+};
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddItemSafe
+struct AStructure_LoadoutDummy_C_AddItemSafe_Params
+{
+	class UPrimalItem*                                 Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryComponent*                   toInventory;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryComponent*                   FromInventory;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           OwningPlayer;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bDontStack;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryComponent*                   AnotherFallbackInventory;                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItem*                                 InsertAfterItem;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItem*                                 OutItem;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               bAddedToTarget;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddAndEquipItem
+struct AStructure_LoadoutDummy_C_AddAndEquipItem_Params
+{
+	class UPrimalItem*                                 Item;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryComponent*                   toInventory;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalInventoryComponent*                   FromInventory;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	class APlayerController*                           ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.AddToOverflowDroppedInventory
+struct AStructure_LoadoutDummy_C_AddToOverflowDroppedInventory_Params
+{
+	class UPrimalItem*                                 anItem;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItem*                                 newItem;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.BPNotifyInventoryItemChange
+struct AStructure_LoadoutDummy_C_BPNotifyInventoryItemChange_Params
+{
+	bool*                                              bIsItemAdd;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItem**                                theItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bEquipItem;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.IsControllerValid
+struct AStructure_LoadoutDummy_C_IsControllerValid_Params
+{
+	class APlayerController*                           Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Ret;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.SetHotbarCurrentHealth
 struct AStructure_LoadoutDummy_C_SetHotbarCurrentHealth_Params
@@ -94,12 +164,14 @@ struct AStructure_LoadoutDummy_C_Swap_Everything_Params
 struct AStructure_LoadoutDummy_C_Swap_All_Inventory_Params
 {
 	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bIncludingHotbar;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.Swap All Hotbar
 struct AStructure_LoadoutDummy_C_Swap_All_Hotbar_Params
 {
 	class APlayerController*                           PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class UPrimalItem*>                         CachedCharacterItems;                                     // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Structure_LoadoutDummy.Structure_LoadoutDummy_C.Fill Dummy Hotbar

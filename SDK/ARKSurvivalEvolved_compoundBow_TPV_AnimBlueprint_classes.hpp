@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,10 +56,10 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_compoundBow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1990();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_compoundBow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1989();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_compoundBow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1988();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_compoundBow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1987();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_compoundBow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1850();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_compoundBow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1849();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_compoundBow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1848();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_compoundBow_TPV_AnimBlueprint_AnimGraphNode_TransitionResult_1847();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_compoundBow_TPV_AnimBlueprint(int EntryPoint);
 };

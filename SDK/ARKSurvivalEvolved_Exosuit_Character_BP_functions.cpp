@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,6 +55,47 @@ void AExosuit_Character_BP_C::GetHudData(bool* bUsesChestBeam, bool* bCanUseChes
 		*CurrentMode = params.CurrentMode;
 	if (bIsPreparingJump != nullptr)
 		*bIsPreparingJump = params.bIsPreparingJump;
+}
+
+
+// Function Exosuit_Character_BP.Exosuit_Character_BP_C.HasOfflineRider
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AExosuit_Character_BP_C::HasOfflineRider()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.HasOfflineRider");
+
+	AExosuit_Character_BP_C_HasOfflineRider_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Exosuit_Character_BP.Exosuit_Character_BP_C.BP_OnCryo
+// ()
+// Parameters:
+// class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AExosuit_Character_BP_C::BP_OnCryo(class AShooterPlayerController** ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.BP_OnCryo");
+
+	AExosuit_Character_BP_C_BP_OnCryo_Params params;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -296,9 +337,9 @@ void AExosuit_Character_BP_C::RemovedAttachedStructure()
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.SetupAttachedStructure
-// (Native, Event, NetResponse, Static, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintEvent)
 
-void AExosuit_Character_BP_C::STATIC_SetupAttachedStructure()
+void AExosuit_Character_BP_C::SetupAttachedStructure()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.SetupAttachedStructure");
 
@@ -375,14 +416,14 @@ int AExosuit_Character_BP_C::BPOverrideGetAttackAnimationIndex(int* AttackIndex,
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.BlueprintDrawFloatingHUD
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, Static, Protected, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DrawScale                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExosuit_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale)
+void AExosuit_Character_BP_C::STATIC_BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.BlueprintDrawFloatingHUD");
 
@@ -502,13 +543,13 @@ bool AExosuit_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.BPGetMultiUseEntries
-// (NetRequest, Exec, Event, Static, NetMulticast, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AExosuit_Character_BP_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AExosuit_Character_BP_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.BPGetMultiUseEntries");
 
@@ -555,7 +596,7 @@ void AExosuit_Character_BP_C::ModifyHudMultiUseLoc(class APlayerController** PC,
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.HasSavedMaterialForComponent
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // class USceneComponent*         Component                      (Parm, ZeroConstructor, IsPlainOldData)
 // class APrimalStructure*        Structure                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -570,7 +611,6 @@ void AExosuit_Character_BP_C::STATIC_HasSavedMaterialForComponent(class USceneCo
 	params.Structure = Structure;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -962,16 +1002,15 @@ void AExosuit_Character_BP_C::SetupAimedStructure(class APrimalStructure* InStru
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.AttachHandBeams
-// (NetRequest, Native, NetMulticast, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Event, Static, Public, Private, BlueprintEvent)
 
-void AExosuit_Character_BP_C::AttachHandBeams()
+void AExosuit_Character_BP_C::STATIC_AttachHandBeams()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.AttachHandBeams");
 
 	AExosuit_Character_BP_C_AttachHandBeams_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1167,16 +1206,16 @@ void AExosuit_Character_BP_C::SyncHUD()
 }
 
 
-// Function Exosuit_Character_BP.Exosuit_Character_BP_C.DestroyHUDWidget
+// Function Exosuit_Character_BP.Exosuit_Character_BP_C.DestroyHudWidget
 // ()
 // Parameters:
 // bool                           DestroyNow                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExosuit_Character_BP_C::DestroyHUDWidget(bool DestroyNow)
+void AExosuit_Character_BP_C::DestroyHudWidget(bool DestroyNow)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.DestroyHUDWidget");
+	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.DestroyHudWidget");
 
-	AExosuit_Character_BP_C_DestroyHUDWidget_Params params;
+	AExosuit_Character_BP_C_DestroyHudWidget_Params params;
 	params.DestroyNow = DestroyNow;
 
 	auto flags = fn->FunctionFlags;
@@ -1540,15 +1579,16 @@ void AExosuit_Character_BP_C::SetJumpPreviewVisibility(bool NewVisibility)
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.UpdateJumpPreview
-// (NetReliable, Event, NetMulticast, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Native, Event, Static, Public, Private, BlueprintEvent)
 
-void AExosuit_Character_BP_C::UpdateJumpPreview()
+void AExosuit_Character_BP_C::STATIC_UpdateJumpPreview()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.UpdateJumpPreview");
 
 	AExosuit_Character_BP_C_UpdateJumpPreview_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1709,15 +1749,16 @@ bool AExosuit_Character_BP_C::BPOnStartJump()
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.LocalClientUpdateChestBeamLocation
-// (Event, NetResponse, MulticastDelegate, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, BlueprintEvent)
 
-void AExosuit_Character_BP_C::LocalClientUpdateChestBeamLocation()
+void AExosuit_Character_BP_C::STATIC_LocalClientUpdateChestBeamLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.LocalClientUpdateChestBeamLocation");
 
 	AExosuit_Character_BP_C_LocalClientUpdateChestBeamLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1874,7 +1915,7 @@ void AExosuit_Character_BP_C::BPNotifySetRider(class AShooterCharacter** RiderSe
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.SetStructureHighlighted
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class APrimalStructure*        Structure                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bNewHighlighted                (Parm, ZeroConstructor, IsPlainOldData)
@@ -2077,11 +2118,11 @@ void AExosuit_Character_BP_C::SpawnPreviewStructure()
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.RidingTick
-// (NetMulticast, MulticastDelegate, Private, DLLImport, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AExosuit_Character_BP_C::RidingTick(float* DeltaSeconds)
+void AExosuit_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Exosuit_Character_BP.Exosuit_Character_BP_C.RidingTick");
 
@@ -2089,6 +2130,7 @@ void AExosuit_Character_BP_C::RidingTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2097,7 +2139,7 @@ void AExosuit_Character_BP_C::RidingTick(float* DeltaSeconds)
 
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.GetAimedStructure
-// (Event, NetResponse, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetReliable, MulticastDelegate, Protected, NetClient, BlueprintEvent)
 // Parameters:
 // class APrimalStructure*        OutStructure                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

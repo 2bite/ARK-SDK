@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ struct ABuff_Zipline_DinoBase_C_SetZiplineRunningSpeedAndAcceleration_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.RotationNearlyEqual
 struct ABuff_Zipline_DinoBase_C_RotationNearlyEqual_Params
 {
-	struct FRotator                                    RotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    rotA;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    RotB;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ErrorTolerance;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Return;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -194,7 +194,7 @@ struct ABuff_Zipline_DinoBase_C_SetZiplineControlRotation_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.PlayTurnAnimation
 struct ABuff_Zipline_DinoBase_C_PlayTurnAnimation_Params
 {
-	class UAnimMontage*                                override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                Override;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Duration;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -217,7 +217,7 @@ struct ABuff_Zipline_DinoBase_C_UpdateFPVCameraAndMeshPosition_Params
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.GetFPVViewLocation
 struct ABuff_Zipline_DinoBase_C_GetFPVViewLocation_Params
 {
-	struct FVector                                     ViewLoc;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     viewLoc;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.UpdateHandleMeshLocationAndRotation
@@ -429,43 +429,43 @@ struct ABuff_Zipline_DinoBase_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_116
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_116_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_114
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_114_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_115
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_115_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Run_K2Node_InputActionEvent_113
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Run_K2Node_InputActionEvent_113_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_114
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Jump_K2Node_InputActionEvent_114_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Jump_K2Node_InputActionEvent_112
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Jump_K2Node_InputActionEvent_112_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_113
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Crouch_K2Node_InputActionEvent_113_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Crouch_K2Node_InputActionEvent_111
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Crouch_K2Node_InputActionEvent_111_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_112
-struct ABuff_Zipline_DinoBase_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_112_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_110
+struct ABuff_Zipline_DinoBase_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_110_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_53
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_53_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_50_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_52
-struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_52_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_49
+struct ABuff_Zipline_DinoBase_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputKeyEvent_49_Params
 {
 };
 
-// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_111
-struct ABuff_Zipline_DinoBase_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_111_Params
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_109
+struct ABuff_Zipline_DinoBase_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_109_Params
 {
 };
 
@@ -531,7 +531,7 @@ struct ABuff_Zipline_DinoBase_C_SecondJumpImpulse_Params
 struct ABuff_Zipline_DinoBase_C_FlipOnZipline_Multicast_Params
 {
 	bool                                               Fast;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	class ADinoCharacter_BP_Zipline_C*                 attachedDino;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class APrimalDinoCharacter*                        attachedDino;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.FlipOnZipline_RunOnServer
@@ -579,6 +579,11 @@ struct ABuff_Zipline_DinoBase_C_SetSliding_Multicast_Params
 
 // Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.AI_SetZiplineRunning_Multicast
 struct ABuff_Zipline_DinoBase_C_AI_SetZiplineRunning_Multicast_Params
+{
+};
+
+// Function Buff_Zipline_DinoBase.Buff_Zipline_DinoBase_C.SetFinishedDetach
+struct ABuff_Zipline_DinoBase_C_SetFinishedDetach_Params
 {
 };
 

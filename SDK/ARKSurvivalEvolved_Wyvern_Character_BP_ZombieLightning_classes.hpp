@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Wyvern_Character_BP_ZombieLightning.Wyvern_Character_BP_ZombieLightning_C
-// 0x000E (0x246C - 0x245E)
+// 0x000E (0x248C - 0x247E)
 class AWyvern_Character_BP_ZombieLightning_C : public AWyvern_Character_BP_ZombieBase_C
 {
 public:
-	unsigned char                                      UnknownData00[0x2];                                       // 0x245E(0x0002) MISSED OFFSET
-	struct FVector                                     TargetAimOffset;                                          // 0x2460(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x247E(0x0002) MISSED OFFSET
+	struct FVector                                     TargetAimOffset;                                          // 0x2480(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

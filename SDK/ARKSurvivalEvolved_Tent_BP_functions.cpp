@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -197,14 +197,14 @@ void ATent_BP_C::PeriodicDamage()
 // Function Tent_BP.Tent_BP_C.BPApplyCustomDurabilityOnPickup
 // ()
 // Parameters:
-// class UPrimalItem**            pickedup                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItem**            PickedUp                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATent_BP_C::BPApplyCustomDurabilityOnPickup(class UPrimalItem** pickedup)
+void ATent_BP_C::BPApplyCustomDurabilityOnPickup(class UPrimalItem** PickedUp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Tent_BP.Tent_BP_C.BPApplyCustomDurabilityOnPickup");
 
 	ATent_BP_C_BPApplyCustomDurabilityOnPickup_Params params;
-	params.pickedup = pickedup;
+	params.PickedUp = PickedUp;
 
 	auto flags = fn->FunctionFlags;
 

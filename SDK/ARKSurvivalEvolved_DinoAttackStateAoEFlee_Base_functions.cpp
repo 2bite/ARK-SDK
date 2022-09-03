@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,7 +82,7 @@ bool UDinoAttackStateAoEFlee_Base_C::BPCanAttack(float* Distance, float* attackR
 
 
 // Function DinoAttackStateAoEFlee_Base.DinoAttackStateAoEFlee_Base_C.Get AoE Radius
-// (NetReliable, Exec, Native, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Radius                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LionfishLion_Character_BP_Female.LionfishLion_Character_BP_Female_C
-// 0x0000 (0x44F8 - 0x44F8)
+// 0x0000 (0x4638 - 0x4638)
 class ALionfishLion_Character_BP_Female_C : public ALionfishLion_Character_BP_C
 {
 public:

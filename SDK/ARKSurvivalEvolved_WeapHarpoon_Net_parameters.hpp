@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ struct AWeapHarpoon_Net_C_GetHudData_Params
 	struct FVector                                     SocketLocation;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     FireDirection;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              AimedTargetCheckRadius;                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsFPV;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isFPV;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function WeapHarpoon_Net.WeapHarpoon_Net_C.BPGetCrosshairColor

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,12 @@ void AStructure_PlantSpeciesR_C::RefreshIdleAudio()
 
 
 // Function Structure_PlantSpeciesR.Structure_PlantSpeciesR_C.BPOnDemolish
-// (NetReliable, NetRequest, Event, Static, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStructure_PlantSpeciesR_C::STATIC_BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser)
+void AStructure_PlantSpeciesR_C::BPOnDemolish(class APlayerController** ForPC, class AActor** DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_PlantSpeciesR.Structure_PlantSpeciesR_C.BPOnDemolish");
 
@@ -44,6 +44,7 @@ void AStructure_PlantSpeciesR_C::STATIC_BPOnDemolish(class APlayerController** F
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,9 +70,9 @@ void AStructure_PlantSpeciesR_C::ClearLastHitRot()
 
 
 // Function Structure_PlantSpeciesR.Structure_PlantSpeciesR_C.FillHarvestHealth
-// (NetReliable, Native, Event, Static, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AStructure_PlantSpeciesR_C::STATIC_FillHarvestHealth()
+void AStructure_PlantSpeciesR_C::FillHarvestHealth()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_PlantSpeciesR.Structure_PlantSpeciesR_C.FillHarvestHealth");
 
@@ -220,7 +221,7 @@ void AStructure_PlantSpeciesR_C::FindOrCreateDynamicMaterials(TArray<class UMate
 
 
 // Function Structure_PlantSpeciesR.Structure_PlantSpeciesR_C.BPAdjustDamage
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         IncomingDamage                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent*           TheDamageEvent                 (Parm)
@@ -230,7 +231,7 @@ void AStructure_PlantSpeciesR_C::FindOrCreateDynamicMaterials(TArray<class UMate
 // struct FHitResult*             PointHitInfo                   (Parm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float AStructure_PlantSpeciesR_C::BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
+float AStructure_PlantSpeciesR_C::STATIC_BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Structure_PlantSpeciesR.Structure_PlantSpeciesR_C.BPAdjustDamage");
 
@@ -243,7 +244,6 @@ float AStructure_PlantSpeciesR_C::BPAdjustDamage(float* IncomingDamage, struct F
 	params.PointHitInfo = PointHitInfo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

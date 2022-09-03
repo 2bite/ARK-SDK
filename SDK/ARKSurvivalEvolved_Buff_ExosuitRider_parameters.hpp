@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,6 +26,17 @@ struct ABuff_ExosuitRider_C_GetHudData_Params
 	float                                              EnergyPercent;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                CurrentMode;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bIsPreparingJump;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_ExosuitRider.Buff_ExosuitRider_C.BPAdjustStatusValueModification
+struct ABuff_ExosuitRider_C_BPAdjustStatusValueModification_Params
+{
+	class UPrimalCharacterStatusComponent**            ForComponent;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPrimalCharacterStatusValue>*          ValueType;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float*                                             InAmount;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass**                                     DamageTypeClass;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bManualModification;                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Buff_ExosuitRider.Buff_ExosuitRider_C.BPDeactivated

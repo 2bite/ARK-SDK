@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -344,12 +344,12 @@ void ARaptor_Character_BP_C::OnRep_bCanMaul()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintCanRiderAttack
-// (Exec, Static, MulticastDelegate, Public, Private, NetClient, BlueprintCallable, Const)
+// (Exec, Native, NetMulticast, Public, Delegate, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ARaptor_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackIndex)
+bool ARaptor_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.BlueprintCanRiderAttack");
 
@@ -357,6 +357,7 @@ bool ARaptor_Character_BP_C::STATIC_BlueprintCanRiderAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -384,18 +385,17 @@ void ARaptor_Character_BP_C::BPTimerServer()
 
 
 // Function Raptor_Character_BP.Raptor_Character_BP_C.CheckForPounceTarget
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, MulticastDelegate, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        RetTarget                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARaptor_Character_BP_C::STATIC_CheckForPounceTarget(class APrimalCharacter** RetTarget)
+void ARaptor_Character_BP_C::CheckForPounceTarget(class APrimalCharacter** RetTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Raptor_Character_BP.Raptor_Character_BP_C.CheckForPounceTarget");
 
 	ARaptor_Character_BP_C_CheckForPounceTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

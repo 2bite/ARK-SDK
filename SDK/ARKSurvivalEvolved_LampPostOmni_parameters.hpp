@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,15 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function LampPostOmni.LampPostOmni_C.BPServerHandleNetExecCommand
+struct ALampPostOmni_C_BPServerHandleNetExecCommand_Params
+{
+	class APlayerController**                          FromPC;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName*                                      CommandName;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBPNetExecParams                            ExecParams;                                               // (Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function LampPostOmni.LampPostOmni_C.Get Next Cycled LightIntensityLevel
 struct ALampPostOmni_C_Get_Next_Cycled_LightIntensityLevel_Params

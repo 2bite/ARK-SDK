@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_BogSpiderBioGrappleEscape.Buff_BogSpiderBioGrappleEscape_C
-// 0x03F0 (0x0D50 - 0x0960)
+// 0x03F0 (0x0D68 - 0x0978)
 class ABuff_BogSpiderBioGrappleEscape_C : public ABuff_Base_C
 {
 public:
-	struct FHUDElement                                 HudElement_StrugglePercent;                               // 0x0960(0x0150) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FHUDElement                                 HudElement_Warning;                                       // 0x0AB0(0x0150) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FHUDElement                                 HudElement_Success;                                       // 0x0C00(0x0150) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FHUDElement                                 HudElement_StrugglePercent;                               // 0x0978(0x0150) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FHUDElement                                 HudElement_Warning;                                       // 0x0AC8(0x0150) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FHUDElement                                 HudElement_Success;                                       // 0x0C18(0x0150) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

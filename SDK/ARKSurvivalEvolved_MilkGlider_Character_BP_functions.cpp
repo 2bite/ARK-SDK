@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,40 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.CheckTeamAndToggleTroughVisibility
+// ()
+
+void AMilkGlider_Character_BP_C::CheckTeamAndToggleTroughVisibility()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.CheckTeamAndToggleTroughVisibility");
+
+	AMilkGlider_Character_BP_C_CheckTeamAndToggleTroughVisibility_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.OnRep_bNurseVisualActive
+// ()
+
+void AMilkGlider_Character_BP_C::OnRep_bNurseVisualActive()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.OnRep_bNurseVisualActive");
+
+	AMilkGlider_Character_BP_C_OnRep_bNurseVisualActive_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.ReceivePossessed
 // ()
@@ -53,7 +87,7 @@ void AMilkGlider_Character_BP_C::InterceptInputEvent(class FString* InputName)
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.PickUpBabies
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
 void AMilkGlider_Character_BP_C::STATIC_PickUpBabies()
 {
@@ -62,7 +96,6 @@ void AMilkGlider_Character_BP_C::STATIC_PickUpBabies()
 	AMilkGlider_Character_BP_C_PickUpBabies_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +127,7 @@ struct FVector AMilkGlider_Character_BP_C::BPGetPassengerDinoAdditionalOffset(cl
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.BlueprintAnimNotifyCustomEvent
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetResponse, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FName*                  CustomEventName                (Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent** MeshComp                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -112,7 +145,6 @@ void AMilkGlider_Character_BP_C::BlueprintAnimNotifyCustomEvent(struct FName* Cu
 	params.AnimNotifyObject = AnimNotifyObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,7 +223,7 @@ bool AMilkGlider_Character_BP_C::CanNurseDino(class APrimalDinoCharacter** Other
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.BPApplyCharacterSnapshot
-// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Event, Static, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class UPrimalItem**            Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 To                             (Parm, ZeroConstructor, IsPlainOldData)
@@ -213,7 +245,6 @@ void AMilkGlider_Character_BP_C::STATIC_BPApplyCharacterSnapshot(class UPrimalIt
 	params.bCollisionOn = bCollisionOn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -279,11 +310,11 @@ int AMilkGlider_Character_BP_C::BPAdjustAttackIndex(int* AttackIndex)
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.GetAIGlideDirection
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 MoveDirection                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AMilkGlider_Character_BP_C::GetAIGlideDirection(struct FVector* MoveDirection)
+void AMilkGlider_Character_BP_C::STATIC_GetAIGlideDirection(struct FVector* MoveDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.GetAIGlideDirection");
 
@@ -348,12 +379,12 @@ bool AMilkGlider_Character_BP_C::OverrideFinalWanderLocation(struct FVector* out
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.NotifyTribesOfBabyStolen
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APrimalDinoCharacter*    StolenBaby                     (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterPlayerController* TheifSC                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMilkGlider_Character_BP_C::NotifyTribesOfBabyStolen(class APrimalDinoCharacter* StolenBaby, class AShooterPlayerController* TheifSC)
+void AMilkGlider_Character_BP_C::STATIC_NotifyTribesOfBabyStolen(class APrimalDinoCharacter* StolenBaby, class AShooterPlayerController* TheifSC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.NotifyTribesOfBabyStolen");
 
@@ -426,7 +457,7 @@ void AMilkGlider_Character_BP_C::UnhidePassengerSeats()
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.ServerGlideClearFoilage
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           bIgnoreGlideCheck              (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -438,6 +469,7 @@ void AMilkGlider_Character_BP_C::STATIC_ServerGlideClearFoilage(bool bIgnoreGlid
 	params.bIgnoreGlideCheck = bIgnoreGlideCheck;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -491,7 +523,7 @@ void AMilkGlider_Character_BP_C::HasGeyserBuff(bool* bHasBuff)
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.BlueprintAdjustOutputDamage
-// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, NetMulticast, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -510,6 +542,7 @@ float AMilkGlider_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, 
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -859,7 +892,7 @@ bool AMilkGlider_Character_BP_C::BPServerHandleNetExecCommand(class APlayerContr
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.BPClientDoMultiUse
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetResponse, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -873,7 +906,6 @@ void AMilkGlider_Character_BP_C::BPClientDoMultiUse(class APlayerController** Fo
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1261,7 +1293,7 @@ void AMilkGlider_Character_BP_C::EnableNursing()
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.BPGetMultiUseEntries
-// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Native, Event, NetMulticast, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1275,6 +1307,7 @@ TArray<struct FMultiUseEntry> AMilkGlider_Character_BP_C::BPGetMultiUseEntries(c
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1405,7 +1438,7 @@ bool AMilkGlider_Character_BP_C::BlueprintOverrideWantsToRun(bool* bInputWantsTo
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.BlueprintCanRiderAttack
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1418,6 +1451,7 @@ bool AMilkGlider_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1516,7 +1550,7 @@ void AMilkGlider_Character_BP_C::Is_Sliding(bool* bIsSliding)
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.GetSlideDecayMultiplierFromSlope
-// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          Multi_Ratio_Direction          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          CharSlideAngle                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1541,7 +1575,7 @@ void AMilkGlider_Character_BP_C::STATIC_GetSlideDecayMultiplierFromSlope(float* 
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.Client Tick Sliding
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float                          Delta                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1908,7 +1942,7 @@ void AMilkGlider_Character_BP_C::Tick_Force_ForwardInput()
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.CanGlide
-// (NetReliable, NetRequest, Native, Event, Static, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // bool                           ToStart                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAllowedToGlide                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2230,7 +2264,7 @@ struct FVector AMilkGlider_Character_BP_C::GetClampedLookDir(bool LimitLowerPitc
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.JumpingTrace
-// (NetReliable, Exec, Native, NetMulticast, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 
 void AMilkGlider_Character_BP_C::JumpingTrace()
 {
@@ -2239,7 +2273,6 @@ void AMilkGlider_Character_BP_C::JumpingTrace()
 	AMilkGlider_Character_BP_C_JumpingTrace_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2274,7 +2307,7 @@ void AMilkGlider_Character_BP_C::ShortestAngleDistance(float AngleCurrent, float
 
 
 // Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.Find Leap Dir
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2312,14 +2345,14 @@ void AMilkGlider_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_RunToggle_K2Node_InputActionEvent_316
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_RunToggle_K2Node_InputActionEvent_200
 // ()
 
-void AMilkGlider_Character_BP_C::InpActEvt_RunToggle_K2Node_InputActionEvent_316()
+void AMilkGlider_Character_BP_C::InpActEvt_RunToggle_K2Node_InputActionEvent_200()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_RunToggle_K2Node_InputActionEvent_316");
+	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_RunToggle_K2Node_InputActionEvent_200");
 
-	AMilkGlider_Character_BP_C_InpActEvt_RunToggle_K2Node_InputActionEvent_316_Params params;
+	AMilkGlider_Character_BP_C_InpActEvt_RunToggle_K2Node_InputActionEvent_200_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2329,14 +2362,14 @@ void AMilkGlider_Character_BP_C::InpActEvt_RunToggle_K2Node_InputActionEvent_316
 }
 
 
-// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_315
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_199
 // ()
 
-void AMilkGlider_Character_BP_C::InpActEvt_Run_K2Node_InputActionEvent_315()
+void AMilkGlider_Character_BP_C::InpActEvt_Run_K2Node_InputActionEvent_199()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_315");
+	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_199");
 
-	AMilkGlider_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_315_Params params;
+	AMilkGlider_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_199_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2346,14 +2379,14 @@ void AMilkGlider_Character_BP_C::InpActEvt_Run_K2Node_InputActionEvent_315()
 }
 
 
-// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_314
+// Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_198
 // ()
 
-void AMilkGlider_Character_BP_C::InpActEvt_Run_K2Node_InputActionEvent_314()
+void AMilkGlider_Character_BP_C::InpActEvt_Run_K2Node_InputActionEvent_198()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_314");
+	static auto fn = UObject::FindObject<UFunction>("Function MilkGlider_Character_BP.MilkGlider_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_198");
 
-	AMilkGlider_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_314_Params params;
+	AMilkGlider_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_198_Params params;
 
 	auto flags = fn->FunctionFlags;
 

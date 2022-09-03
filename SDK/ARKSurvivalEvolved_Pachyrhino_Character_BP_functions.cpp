@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.BlueprintAdjustOutputDamage
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (NetReliable, Exec, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int*                           AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         OriginalDamageAmount           (Parm, ZeroConstructor, IsPlainOldData)
@@ -22,7 +22,7 @@ namespace sdk
 // float                          OutDamageImpulse               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APachyrhino_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
+float APachyrhino_Character_BP_C::STATIC_BlueprintAdjustOutputDamage(int* AttackIndex, float* OriginalDamageAmount, class AActor** HitActor, class UClass** OutDamageType, float* OutDamageImpulse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.BlueprintAdjustOutputDamage");
 
@@ -32,7 +32,6 @@ float APachyrhino_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, 
 	params.HitActor = HitActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,9 +47,9 @@ float APachyrhino_Character_BP_C::BlueprintAdjustOutputDamage(int* AttackIndex, 
 
 
 // Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.OnDecidedToFlee
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Exec, Native, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APachyrhino_Character_BP_C::OnDecidedToFlee()
+void APachyrhino_Character_BP_C::STATIC_OnDecidedToFlee()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Pachyrhino_Character_BP.Pachyrhino_Character_BP_C.OnDecidedToFlee");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -219,12 +219,6 @@ struct AStructure_SecurityCamera_C_AddNewCamera_Params
 	class APrimalStructure*                            NewStructure;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Structure_SecurityCamera.Structure_SecurityCamera_C.RemoveCamera
-struct AStructure_SecurityCamera_C_RemoveCamera_Params
-{
-	class APrimalStructure*                            CameraToRemove;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Structure_SecurityCamera.Structure_SecurityCamera_C.SetCurrentCamera
 struct AStructure_SecurityCamera_C_SetCurrentCamera_Params
 {
@@ -266,6 +260,17 @@ struct AStructure_SecurityCamera_C_ActivateCamera_Params
 
 // Function Structure_SecurityCamera.Structure_SecurityCamera_C.ClientCameraActivated
 struct AStructure_SecurityCamera_C_ClientCameraActivated_Params
+{
+};
+
+// Function Structure_SecurityCamera.Structure_SecurityCamera_C.RemoveCamera
+struct AStructure_SecurityCamera_C_RemoveCamera_Params
+{
+	class APrimalStructure*                            CameraToRemove;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Structure_SecurityCamera.Structure_SecurityCamera_C.ClientCameraUnlinked
+struct AStructure_SecurityCamera_C_ClientCameraUnlinked_Params
 {
 };
 

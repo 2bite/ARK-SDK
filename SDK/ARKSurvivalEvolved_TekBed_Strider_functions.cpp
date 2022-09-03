@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function TekBed_Strider.TekBed_Strider_C.BPReleasedPlayer
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // class AShooterCharacter**      ReleasedChar                   (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           AtSeatNumber                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATekBed_Strider_C::STATIC_BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber)
+void ATekBed_Strider_C::BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekBed_Strider.TekBed_Strider_C.BPReleasedPlayer");
 
@@ -27,7 +27,6 @@ void ATekBed_Strider_C::STATIC_BPReleasedPlayer(class AShooterCharacter** Releas
 	params.AtSeatNumber = AtSeatNumber;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,13 +75,13 @@ bool ATekBed_Strider_C::BPAllowSeating(class AShooterPlayerController** ForPC)
 
 
 // Function TekBed_Strider.TekBed_Strider_C.BPGetMultiUseEntries
-// (NetRequest, Native, Event, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ATekBed_Strider_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ATekBed_Strider_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TekBed_Strider.TekBed_Strider_C.BPGetMultiUseEntries");
 
@@ -90,7 +89,6 @@ TArray<struct FMultiUseEntry> ATekBed_Strider_C::BPGetMultiUseEntries(class APla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

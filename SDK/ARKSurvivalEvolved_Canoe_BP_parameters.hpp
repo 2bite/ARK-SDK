@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Canoe_BP.Canoe_BP_C.AllowGrappling
+struct ACanoe_BP_C_AllowGrappling_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Canoe_BP.Canoe_BP_C.OnCanoeAtRestStateChanged
 struct ACanoe_BP_C_OnCanoeAtRestStateChanged_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,12 +15,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ProjArrow_Explosive_TekBow.ProjArrow_Explosive_TekBow_C
-// 0x0010 (0x06A8 - 0x0698)
+// 0x0017 (0x0750 - 0x0739)
 class AProjArrow_Explosive_TekBow_C : public AProjArrow_Explosive_C
 {
 public:
-	class UChildActorComponent*                        ChildActor1_1;                                            // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioComponent*                             Projectile_SFX_1;                                         // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0739(0x0007) MISSED OFFSET
+	class UChildActorComponent*                        ChildActor1_1;                                            // 0x0740(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioComponent*                             Projectile_SFX_1;                                         // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -283,13 +283,13 @@ struct ABuff_TekArmor_Pants_C_UserConstructionScript_Params
 {
 };
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_84
-struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_84_Params
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_89
+struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_89_Params
 {
 };
 
-// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_83
-struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_83_Params
+// Function Buff_TekArmor_Pants.Buff_TekArmor_Pants_C.InpActEvt_AltFire_K2Node_InputActionEvent_88
+struct ABuff_TekArmor_Pants_C_InpActEvt_AltFire_K2Node_InputActionEvent_88_Params
 {
 };
 

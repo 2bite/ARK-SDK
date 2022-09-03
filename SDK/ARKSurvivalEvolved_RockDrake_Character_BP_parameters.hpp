@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -322,7 +322,7 @@ struct ARockDrake_Character_BP_C_SpawnGlideImpactVFX_Params
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.GetCurrentGlidingRotationRateMult
 struct ARockDrake_Character_BP_C_GetCurrentGlidingRotationRateMult_Params
 {
-	float                                              Mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              mult;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.BlueprintAdjustOutputDamage
@@ -433,14 +433,14 @@ struct ARockDrake_Character_BP_C_Replicate_Index_Update_Target_TPV_Camera_Offset
 struct ARockDrake_Character_BP_C_AddRiderToCamoFadeQueue_Params
 {
 	class AShooterCharacter*                           Rider;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               enterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               EnterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bInstant;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.ActivateRiderCamoParticles
 struct ARockDrake_Character_BP_C_ActivateRiderCamoParticles_Params
 {
-	bool                                               enterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               EnterCamo;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	class AShooterCharacter*                           specificRider;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -526,7 +526,7 @@ struct ARockDrake_Character_BP_C_GetRockDrakeStateOverrideIndex_Params
 struct ARockDrake_Character_BP_C_GetCorrectSurfaceTraceDistance_Params
 {
 	bool*                                              isForRetry;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              traceDist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              TraceDist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.Tick Force Forward Input
@@ -640,7 +640,7 @@ struct ARockDrake_Character_BP_C_Check_For_Prevent_Stop_Climbing_Params
 	TArray<bool>                                       traceHitsArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int*                                               numValidHits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               numTraces;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.BlueprintCanAttack
@@ -685,8 +685,8 @@ struct ARockDrake_Character_BP_C_FadeToInvisible_Rider__UpdateFunc_Params
 {
 };
 
-// Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_121
-struct ARockDrake_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_121_Params
+// Function RockDrake_Character_BP.RockDrake_Character_BP_C.InpActEvt_AltFire_K2Node_InputActionEvent_126
+struct ARockDrake_Character_BP_C_InpActEvt_AltFire_K2Node_InputActionEvent_126_Params
 {
 };
 
@@ -821,7 +821,7 @@ struct ARockDrake_Character_BP_C_OwningClient_SyncAllowPouncing_Params
 struct ARockDrake_Character_BP_C_Server_SyncHasValidPounceTarget_Params
 {
 	bool                                               Newval;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     newTargetLocation;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     NewTargetLocation;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function RockDrake_Character_BP.RockDrake_Character_BP_C.RockDrake_AI_AnticipatePounce

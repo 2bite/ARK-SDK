@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -307,9 +307,9 @@ void AGen2_AreaBuff_Space_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Gen2_AreaBuff_Space.Gen2_AreaBuff_Space_C.CheckGround
-// (NetReliable, Event, NetResponse, Static, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 
-void AGen2_AreaBuff_Space_C::STATIC_CheckGround()
+void AGen2_AreaBuff_Space_C::CheckGround()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Gen2_AreaBuff_Space.Gen2_AreaBuff_Space_C.CheckGround");
 

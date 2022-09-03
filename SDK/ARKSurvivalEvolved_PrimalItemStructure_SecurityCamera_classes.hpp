@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C
-// 0x0008 (0x0AE8 - 0x0AE0)
+// 0x0008 (0x0AF0 - 0x0AE8)
 class UPrimalItemStructure_SecurityCamera_C : public UPrimalItemStructureGeneric_C
 {
 public:
-	struct FName                                       CustomItemDataName;                                       // 0x0AE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       CustomItemDataName;                                       // 0x0AE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,13 +28,18 @@ public:
 	}
 
 
+	void GetCameraLocation(struct FVector* CameraViewPoint, struct FRotator* CameraRotation);
+	void GetCameraData(TArray<class APrimalStructure*>* Cameras, int* index);
+	void GetConsoleID(float* ID);
+	void CanAddCamera(bool* Allowed);
+	void GetConsoleData(float* ID, class FString* Name, bool* CanAddCamera);
 	void SetConsoleDataByID(float ConsoleID);
-	void SetCameraName(const class FString& Name);
-	void RetrieveConsoleData(float* outConsoleID, struct FVector* OutLocation, bool* outAllowedToAdd, class FString* outCameraName, class FString* outConsoleName);
-	void STATIC_Set_Console_Data(class APrimalStructure* Console, bool* Changed);
+	void STATIC_SetCameraName(const class FString& Name);
+	void STATIC_RetrieveConsoleData(float* outConsoleID, struct FVector* OutLocation, bool* outAllowedToAdd, class FString* outCameraName, class FString* outConsoleName);
+	void Set_Console_Data(class APrimalStructure* Console, bool* Changed);
 	void GetConsoleFromID(float ID, class APrimalStructure** LinkedConsole);
 	void BPServerVerifyStructurePlacementData();
-	void STATIC_VerifyConsoleData();
+	void VerifyConsoleData();
 	class FString BPGetItemName(class FString* ItemNameIn, class AShooterPlayerController** ForPC);
 	class UTexture2D* BPGetItemIcon(class AShooterPlayerController** ForPC);
 	class FString BPGetItemDescription(class FString* InDescription, bool* bGetLongDescription, class AShooterPlayerController** ForPC);

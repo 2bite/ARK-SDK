@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,17 +39,17 @@ void UEnforcer_AnimBlueprint_C::IsDinoRunning(class ADino_Character_BP_Climber_C
 // Function Enforcer_AnimBlueprint.Enforcer_AnimBlueprint_C.GetStrafeBlendspacePlayRate
 // ()
 // Parameters:
-// float*                         ForwardVelocity                (Parm, ZeroConstructor, IsPlainOldData)
+// float*                         forwardVelocity                (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         RightVelocity                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D*              BlendspaceInputs               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          BlendspacePlayRate             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UEnforcer_AnimBlueprint_C::GetStrafeBlendspacePlayRate(float* ForwardVelocity, float* RightVelocity, struct FVector2D* BlendspaceInputs, float* BlendspacePlayRate)
+void UEnforcer_AnimBlueprint_C::GetStrafeBlendspacePlayRate(float* forwardVelocity, float* RightVelocity, struct FVector2D* BlendspaceInputs, float* BlendspacePlayRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Enforcer_AnimBlueprint.Enforcer_AnimBlueprint_C.GetStrafeBlendspacePlayRate");
 
 	UEnforcer_AnimBlueprint_C_GetStrafeBlendspacePlayRate_Params params;
-	params.ForwardVelocity = ForwardVelocity;
+	params.forwardVelocity = forwardVelocity;
 	params.RightVelocity = RightVelocity;
 	params.BlendspaceInputs = BlendspaceInputs;
 

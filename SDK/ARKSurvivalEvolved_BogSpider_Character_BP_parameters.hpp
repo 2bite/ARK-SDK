@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,7 +39,7 @@ struct ABogSpider_Character_BP_C_StoreClimb_Trace_Socket_Offsets_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetSpiderClimbingTraceTransform
 struct ABogSpider_Character_BP_C_GetSpiderClimbingTraceTransform_Params
 {
-	int                                                TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bWorldSpace;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          TraceTransform;                                           // (Parm, OutParm, IsPlainOldData)
 };
@@ -51,7 +51,7 @@ struct ABogSpider_Character_BP_C_IsClimbingTraceHitResultValid_Params
 	struct FHitResult                                  Hit;                                                      // (Parm, OutParm, ReferenceParm)
 	struct FVector*                                    TraceStart;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector*                                    TraceEnd;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	int*                                               TraceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int*                                               traceIndex;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               TraceRetryNum;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bResult;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -233,7 +233,7 @@ struct ABogSpider_Character_BP_C_AdjustClimbTraceTransform_Params
 {
 	struct FName*                                      WithSocketName;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	struct UObject_FTransform                          WithTraceTransform;                                       // (Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct UObject_FTransform                          ClimberTransform;                                         // (Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct UObject_FTransform                          climberTransform;                                         // (Parm, OutParm, ReferenceParm, IsPlainOldData)
 	struct UObject_FTransform                          AdjustedTransform;                                        // (Parm, OutParm, IsPlainOldData)
 };
 
@@ -479,14 +479,14 @@ struct ABogSpider_Character_BP_C_Check_For_Prevent_Stop_Climbing_Params
 	TArray<bool>                                       traceHitsArray;                                           // (Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int*                                               numValidHits;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	int*                                               numTraces;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               AllowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               allowClimbing;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetCorrectSurfaceTraceDistance
 struct ABogSpider_Character_BP_C_GetCorrectSurfaceTraceDistance_Params
 {
 	bool*                                              isForRetry;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              traceDist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              TraceDist;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.InterpolateClimberMesh
@@ -1126,7 +1126,7 @@ struct ABogSpider_Character_BP_C_IsWebSprinting_Pure_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.GetBitmaskAsString
 struct ABogSpider_Character_BP_C_GetBitmaskAsString_Params
 {
-	int                                                Bitmask;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                bitMask;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class FString                                      String;                                                   // (Parm, OutParm, ZeroConstructor)
 };
 
@@ -1528,7 +1528,7 @@ struct ABogSpider_Character_BP_C_GetClosestLocationToScreenCenter_Params
 {
 	struct FVector                                     LocationA;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     LocationB;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    WithViewRot;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    withViewRot;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               A;                                                        // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -1704,7 +1704,7 @@ struct ABogSpider_Character_BP_C_ProcessWebTraceHits_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.SearchForAllGrapplePoints
 struct ABogSpider_Character_BP_C_SearchForAllGrapplePoints_Params
 {
-	struct FRotator                                    WithViewRot;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    withViewRot;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bUseCachedAnchorHits;                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bFoundAny;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  foundHit_Center;                                          // (Parm, OutParm)
@@ -1802,7 +1802,7 @@ struct ABogSpider_Character_BP_C_CreateWebGrappleTether_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.SearchInDirForValidGrapplePoint
 struct ABogSpider_Character_BP_C_SearchInDirForValidGrapplePoint_Params
 {
-	struct FRotator                                    WithViewRot;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    withViewRot;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              traceDir;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bWantsCenter;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bFoundAny;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1812,7 +1812,7 @@ struct ABogSpider_Character_BP_C_SearchInDirForValidGrapplePoint_Params
 // Function BogSpider_Character_BP.BogSpider_Character_BP_C.TraceForWebHit
 struct ABogSpider_Character_BP_C_TraceForWebHit_Params
 {
-	struct FRotator                                    WithViewRot;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    withViewRot;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bCenterTrace;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bSuccess;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  foundHit;                                                 // (Parm, OutParm)

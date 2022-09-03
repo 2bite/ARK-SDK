@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,22 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function ProjFlare.ProjFlare_C.ReceiveBeginPlay
+struct AProjFlare_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function ProjFlare.ProjFlare_C.ReceiveEndPlay
+struct AProjFlare_C_ReceiveEndPlay_Params
+{
+	TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ProjFlare.ProjFlare_C.DestroySelf
+struct AProjFlare_C_DestroySelf_Params
+{
+};
 
 // Function ProjFlare.ProjFlare_C.UserConstructionScript
 struct AProjFlare_C_UserConstructionScript_Params

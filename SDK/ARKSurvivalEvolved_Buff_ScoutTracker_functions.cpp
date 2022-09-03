@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_ScoutTracker.Buff_ScoutTracker_C.BPGetDebugInfoString
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,6 +26,18 @@ struct AExosuit_Character_BP_C_GetHudData_Params
 	float                                              EnergyPercent;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                CurrentMode;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               bIsPreparingJump;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Exosuit_Character_BP.Exosuit_Character_BP_C.HasOfflineRider
+struct AExosuit_Character_BP_C_HasOfflineRider_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Exosuit_Character_BP.Exosuit_Character_BP_C.BP_OnCryo
+struct AExosuit_Character_BP_C_BP_OnCryo_Params
+{
+	class AShooterPlayerController**                   ForPC;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Exosuit_Character_BP.Exosuit_Character_BP_C.GetFinalBeamTarget
@@ -366,8 +378,8 @@ struct AExosuit_Character_BP_C_SyncHUD_Params
 {
 };
 
-// Function Exosuit_Character_BP.Exosuit_Character_BP_C.DestroyHUDWidget
-struct AExosuit_Character_BP_C_DestroyHUDWidget_Params
+// Function Exosuit_Character_BP.Exosuit_Character_BP_C.DestroyHudWidget
+struct AExosuit_Character_BP_C_DestroyHudWidget_Params
 {
 	bool                                               DestroyNow;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };

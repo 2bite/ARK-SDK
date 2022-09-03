@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PlayerPawnTest.PlayerPawnTest_C
-// 0x03F1 (0x20F1 - 0x1D00)
+// 0x0419 (0x2119 - 0x1D00)
 class APlayerPawnTest_C : public AShooterCharacter
 {
 public:
@@ -75,7 +75,7 @@ public:
 	float                                              MaxDistanceToRestPos;                                     // 0x1F18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              InWater;                                                  // 0x1F1C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              HairWetness;                                              // 0x1F20(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WaterLine;                                                // 0x1F24(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Waterline;                                                // 0x1F24(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bPosAsPivot;                                              // 0x1F28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bCollideWithNeck;                                         // 0x1F29(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bCollideMiddle;                                           // 0x1F2A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -102,47 +102,52 @@ public:
 	int                                                NumAscensionsGen2;                                        // 0x1FE0(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, SaveGame, IsPlainOldData)
 	bool                                               bUnlockedAllExplorerNotes;                                // 0x1FE4(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bHasSetupMeshes;                                          // 0x1FE5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x1FE6(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x1FE7(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                K2Node_CustomEvent_AscendIndex;                           // 0x1FE8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_CustomEvent_bImmediateAscend;                      // 0x1FEC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x3];                                       // 0x1FED(0x0003) MISSED OFFSET
-	struct FName                                       CallFunc_MakeLiteralName_ReturnValue;                     // 0x1FF0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class FString                                      CallFunc_Conv_NameToString_ReturnValue;                   // 0x1FF8(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x2008(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x4];                                       // 0x200C(0x0004) MISSED OFFSET
-	class FString                                      CallFunc_Conv_IntToString_ReturnValue;                    // 0x2010(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x2020(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class FString                                      CallFunc_Concat_StrStr_ReturnValue;                       // 0x2028(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x2038(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_TriggerLevelCustomEvents_ReturnValue;            // 0x2040(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x7];                                       // 0x2041(0x0007) MISSED OFFSET
-	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x2048(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x2050(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x7];                                       // 0x2051(0x0007) MISSED OFFSET
-	class UShooterGameUserSettings*                    CallFunc_GetUserSettings_ReturnValue;                     // 0x2058(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UFinalCreditsUI_C*                           CallFunc_Create_ReturnValue;                              // 0x2060(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                CallFunc_Max_ReturnValue;                                 // 0x2068(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData13[0x4];                                       // 0x206C(0x0004) MISSED OFFSET
-	class FString                                      K2Node_CustomEvent_Text;                                  // 0x2070(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FLinearColor                                K2Node_CustomEvent_Color;                                 // 0x2080(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_LifetimeSeconds;                       // 0x2090(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_DisplayScale;                          // 0x2094(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class USoundCue*                                   K2Node_CustomEvent_SoundToPlay;                           // 0x2098(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FColor                                      CallFunc_Conv_LinearColorToColor_ReturnValue;             // 0x20A0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData14[0x4];                                       // 0x20A4(0x0004) MISSED OFFSET
-	class AController*                                 CallFunc_GetController_ReturnValue2;                      // 0x20A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController2;            // 0x20B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x20B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData15[0x7];                                       // 0x20B9(0x0007) MISSED OFFSET
-	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue2;                        // 0x20C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class AShooterHUD*                                 CallFunc_GetShooterHud_ReturnValue;                       // 0x20C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_TriggerLevelCustomEvents_ReturnValue2;           // 0x20D0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsShipping_ReturnValue;                          // 0x20D1(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x6];                                       // 0x20D2(0x0006) MISSED OFFSET
-	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue3;                        // 0x20D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class FString                                      CallFunc_BPGetPrimaryMapName_ReturnValue;                 // 0x20E0(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue;                   // 0x20F0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x2];                                       // 0x1FE6(0x0002) MISSED OFFSET
+	TArray<int>                                        RestrictedLevelsBasedOnUnobtainedGeneralizedAchievementTags;// 0x1FE8(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               GeneralizedUnlockedAchievementTags;                       // 0x1FF8(0x0010) (Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, SaveGame)
+	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x2008(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsServer_ReturnValue;                            // 0x2009(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x2];                                       // 0x200A(0x0002) MISSED OFFSET
+	int                                                K2Node_CustomEvent_AscendIndex;                           // 0x200C(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_CustomEvent_bImmediateAscend;                      // 0x2010(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x3];                                       // 0x2011(0x0003) MISSED OFFSET
+	struct FName                                       CallFunc_MakeLiteralName_ReturnValue;                     // 0x2014(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x4];                                       // 0x201C(0x0004) MISSED OFFSET
+	class FString                                      CallFunc_Conv_NameToString_ReturnValue;                   // 0x2020(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x2030(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData13[0x4];                                       // 0x2034(0x0004) MISSED OFFSET
+	class FString                                      CallFunc_Conv_IntToString_ReturnValue;                    // 0x2038(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue;                         // 0x2048(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class FString                                      CallFunc_Concat_StrStr_ReturnValue;                       // 0x2050(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	class AController*                                 CallFunc_GetController_ReturnValue;                       // 0x2060(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_TriggerLevelCustomEvents_ReturnValue;            // 0x2068(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData14[0x7];                                       // 0x2069(0x0007) MISSED OFFSET
+	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x2070(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x2078(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData15[0x7];                                       // 0x2079(0x0007) MISSED OFFSET
+	class UShooterGameUserSettings*                    CallFunc_GetUserSettings_ReturnValue;                     // 0x2080(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UFinalCreditsUI_C*                           CallFunc_Create_ReturnValue;                              // 0x2088(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                CallFunc_Max_ReturnValue;                                 // 0x2090(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData16[0x4];                                       // 0x2094(0x0004) MISSED OFFSET
+	class FString                                      K2Node_CustomEvent_Text;                                  // 0x2098(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FLinearColor                                K2Node_CustomEvent_color;                                 // 0x20A8(0x0010) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_LifetimeSeconds;                       // 0x20B8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_DisplayScale;                          // 0x20BC(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class USoundCue*                                   K2Node_CustomEvent_SoundToPlay;                           // 0x20C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FColor                                      CallFunc_Conv_LinearColorToColor_ReturnValue;             // 0x20C8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData17[0x4];                                       // 0x20CC(0x0004) MISSED OFFSET
+	class AController*                                 CallFunc_GetController_ReturnValue2;                      // 0x20D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController2;            // 0x20D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast2_CastSuccess;                          // 0x20E0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData18[0x7];                                       // 0x20E1(0x0007) MISSED OFFSET
+	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue2;                        // 0x20E8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterHUD*                                 CallFunc_GetShooterHUD_ReturnValue;                       // 0x20F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_TriggerLevelCustomEvents_ReturnValue2;           // 0x20F8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsShipping_ReturnValue;                          // 0x20F9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData19[0x6];                                       // 0x20FA(0x0006) MISSED OFFSET
+	class UWorld*                                      CallFunc_K2_GetWorld_ReturnValue3;                        // 0x2100(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class FString                                      CallFunc_BPGetPrimaryMapName_ReturnValue;                 // 0x2108(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	bool                                               CallFunc_EqualEqual_StrStr_ReturnValue;                   // 0x2118(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -151,8 +156,10 @@ public:
 	}
 
 
+	void SetGeneralized_Unlocked_Achievement_Tags(TArray<struct FName>* GeneralizedUnlockedAchievementTags);
+	void HasEquipToHideImplant(bool* ShouldHideImplant);
 	void BPSetupFirstPersonHandsMesh();
-	void SetupMeshes();
+	void SetupMeshes(bool bForce);
 	void BPUnlockedAllExplorerNotes();
 	void GetTheNumChibiLevelUps(int* OutVal);
 	void SetNumChibiLevelUps(int NewNum);
@@ -168,11 +175,11 @@ public:
 	void ServerAscend(int DifficultyIndex, bool bImmediateAscend, bool bSuppressAchievements);
 	class FString PlayerCommand(class FString* TheCommand);
 	void InitHairRestDistance();
-	void STATIC_SetLastTransforms();
+	void SetLastTransforms();
 	void BPNonDedicatedPostAnimUpdate();
 	void Setup_Collision_Volumes();
-	void STATIC_SetupNewHairstyle();
-	void STATIC_UpdateHair();
+	void SetupNewHairstyle();
+	void UpdateHair();
 	void SetHairParams(struct FVector* HairSocketLoc, struct FRotator* HairSocketRot, struct FVector* NeckSocketLoc, struct FRotator* NeckSocketrot);
 	void SimulateHair(float DeltaTime, struct FVector* HairSocketLoc, struct FRotator* HairSocketRot, struct FVector* ChestSocketLoc, struct FRotator* ChestSocketRot);
 	void UserConstructionScript();

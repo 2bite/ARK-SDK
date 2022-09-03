@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,33 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.Try To Add  Resource from first trace
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
+// Parameters:
+// class UPrimitiveComponent*     hit_component                  (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FOverlappedFoliageElement> Resources                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector                 impact_point                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuff_TekStrider_Harvester_C::STATIC_Try_To_Add__Resource_from_first_trace(class UPrimitiveComponent* hit_component, const struct FVector& impact_point, TArray<struct FOverlappedFoliageElement>* Resources)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.Try To Add  Resource from first trace");
+
+	ABuff_TekStrider_Harvester_C_Try_To_Add__Resource_from_first_trace_Params params;
+	params.hit_component = hit_component;
+	params.impact_point = impact_point;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Resources != nullptr)
+		*Resources = params.Resources;
+}
+
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.clamp angle
 // ()
@@ -75,7 +102,7 @@ void ABuff_TekStrider_Harvester_C::BuffTickServer(float* DeltaTime)
 
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.BPGetHUDElements
-// (Net, NetRequest, Exec, Native, MulticastDelegate, Private, NetServer, NetClient, NetValidate)
+// (Exec, Native, MulticastDelegate, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -149,19 +176,22 @@ void ABuff_TekStrider_Harvester_C::GetOwnerStriderLinkedDediStorageSelectedItemC
 
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.ShouldHarvestFoliage
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // struct FOverlappedFoliageElement CheckFoliage                   (Parm)
+// struct FVector                 override_harvest_loc           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bResult                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Harvester_C::STATIC_ShouldHarvestFoliage(const struct FOverlappedFoliageElement& CheckFoliage, bool* bResult)
+void ABuff_TekStrider_Harvester_C::STATIC_ShouldHarvestFoliage(const struct FOverlappedFoliageElement& CheckFoliage, const struct FVector& override_harvest_loc, bool* bResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.ShouldHarvestFoliage");
 
 	ABuff_TekStrider_Harvester_C_ShouldHarvestFoliage_Params params;
 	params.CheckFoliage = CheckFoliage;
+	params.override_harvest_loc = override_harvest_loc;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -239,11 +269,11 @@ TArray<struct FMultiUseEntry> ABuff_TekStrider_Harvester_C::BPGetMultiUseEntries
 
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.add found foliage
-// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, Native, NetResponse, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // TArray<struct FOverlappedFoliageElement> Array                          (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABuff_TekStrider_Harvester_C::STATIC_add_found_foliage(TArray<struct FOverlappedFoliageElement>* Array)
+void ABuff_TekStrider_Harvester_C::add_found_foliage(TArray<struct FOverlappedFoliageElement>* Array)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.add found foliage");
 
@@ -409,7 +439,7 @@ void ABuff_TekStrider_Harvester_C::Restrict_Too_Frequent_Calls_to_Show_Gather_Vf
 
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.Is Firing
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 
 void ABuff_TekStrider_Harvester_C::STATIC_Is_Firing()
 {
@@ -418,6 +448,7 @@ void ABuff_TekStrider_Harvester_C::STATIC_Is_Firing()
 	ABuff_TekStrider_Harvester_C_Is_Firing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -502,14 +533,14 @@ void ABuff_TekStrider_Harvester_C::Get_Beam_Origin_and_End(struct FVector* Origi
 
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.GetBeamImpact
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // struct FVector                 BeamStart                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 BeamEnd                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 BeamImpact                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           HitSomething_                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Harvester_C::STATIC_GetBeamImpact(const struct FVector& BeamStart, const struct FVector& BeamEnd, struct FVector* BeamImpact, bool* HitSomething_)
+void ABuff_TekStrider_Harvester_C::GetBeamImpact(const struct FVector& BeamStart, const struct FVector& BeamEnd, struct FVector* BeamImpact, bool* HitSomething_)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.GetBeamImpact");
 
@@ -554,7 +585,7 @@ void ABuff_TekStrider_Harvester_C::IsAIControlled_(bool* IsAI_)
 
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.Update Beam Impact Location
-// (Native, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 
 void ABuff_TekStrider_Harvester_C::Update_Beam_Impact_Location()
 {
@@ -572,7 +603,7 @@ void ABuff_TekStrider_Harvester_C::Update_Beam_Impact_Location()
 
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.BPSetupForInstigator
-// (NetRequest, Event, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -584,6 +615,7 @@ void ABuff_TekStrider_Harvester_C::STATIC_BPSetupForInstigator(class AActor** Fo
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -592,11 +624,11 @@ void ABuff_TekStrider_Harvester_C::STATIC_BPSetupForInstigator(class AActor** Fo
 
 
 // Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.BuffTickClient
-// (NetReliable, Exec, Event, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintPure, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_Harvester_C::STATIC_BuffTickClient(float* DeltaTime)
+void ABuff_TekStrider_Harvester_C::BuffTickClient(float* DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_Harvester.Buff_TekStrider_Harvester_C.BuffTickClient");
 
@@ -604,6 +636,7 @@ void ABuff_TekStrider_Harvester_C::STATIC_BuffTickClient(float* DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

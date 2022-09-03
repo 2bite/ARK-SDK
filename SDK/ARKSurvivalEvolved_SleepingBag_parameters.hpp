@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,17 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function SleepingBag.SleepingBag_C.BPIsAllowedToBuildEx
+struct ASleepingBag_C_BPIsAllowedToBuildEx_Params
+{
+	struct FPlacementData                              OutPlacementData;                                         // (Parm, OutParm, ReferenceParm)
+	int*                                               CurrentAllowedReason;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class APlayerController**                          PC;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bFinalPlacement;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	bool*                                              bChoosingRotation;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function SleepingBag.SleepingBag_C.UserConstructionScript
 struct ASleepingBag_C_UserConstructionScript_Params

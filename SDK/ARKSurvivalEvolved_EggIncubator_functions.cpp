@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,15 +15,15 @@ namespace sdk
 // Function EggIncubator.EggIncubator_C.IsEggItemAllowed
 // ()
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsAllowed                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::IsEggItemAllowed(class UPrimalItemConsumable_Egg_C* EggItem, bool* IsAllowed)
+void AEggIncubator_C::IsEggItemAllowed(class UPrimalItemConsumable_Egg_C* eggItem, bool* IsAllowed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.IsEggItemAllowed");
 
 	AEggIncubator_C_IsEggItemAllowed_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -60,6 +60,26 @@ void AEggIncubator_C::GetItemDisplaySlot(class UPrimalItem* ForItem, int* InSlot
 		*InSlot = params.InSlot;
 	if (SlotFound != nullptr)
 		*SlotFound = params.SlotFound;
+}
+
+
+// Function EggIncubator.EggIncubator_C.ClientDisplayGestationMonitorEffectAdded
+// ()
+// Parameters:
+// struct UObject_FTransform      AtLocation                     (Parm, IsPlainOldData)
+
+void AEggIncubator_C::ClientDisplayGestationMonitorEffectAdded(const struct UObject_FTransform& AtLocation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.ClientDisplayGestationMonitorEffectAdded");
+
+	AEggIncubator_C_ClientDisplayGestationMonitorEffectAdded_Params params;
+	params.AtLocation = AtLocation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -139,12 +159,12 @@ void AEggIncubator_C::GetWarmingLightForSlot(int ForSlotIndex, class UParticleSy
 
 
 // Function EggIncubator.EggIncubator_C.DestroyEggDisplay
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            ItemID1                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemID2                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::STATIC_DestroyEggDisplay(int ItemID1, int ItemID2)
+void AEggIncubator_C::DestroyEggDisplay(int ItemID1, int ItemID2)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.DestroyEggDisplay");
 
@@ -164,15 +184,15 @@ void AEggIncubator_C::STATIC_DestroyEggDisplay(int ItemID1, int ItemID2)
 // Function EggIncubator.EggIncubator_C.CanEggIncubateInTemp
 // ()
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bCanIncubate                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::CanEggIncubateInTemp(class UPrimalItemConsumable_Egg_C* EggItem, bool* bCanIncubate)
+void AEggIncubator_C::CanEggIncubateInTemp(class UPrimalItemConsumable_Egg_C* eggItem, bool* bCanIncubate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.CanEggIncubateInTemp");
 
 	AEggIncubator_C_CanEggIncubateInTemp_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -222,15 +242,15 @@ void AEggIncubator_C::CalculateIncubationInsulation()
 // Function EggIncubator.EggIncubator_C.CanEggBeHatched
 // ()
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsHatchable                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::CanEggBeHatched(class UPrimalItemConsumable_Egg_C* EggItem, bool* IsHatchable)
+void AEggIncubator_C::CanEggBeHatched(class UPrimalItemConsumable_Egg_C* eggItem, bool* IsHatchable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.CanEggBeHatched");
 
 	AEggIncubator_C_CanEggBeHatched_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -244,20 +264,19 @@ void AEggIncubator_C::CanEggBeHatched(class UPrimalItemConsumable_Egg_C* EggItem
 
 
 // Function EggIncubator.EggIncubator_C.TrySpawnEggToWorld
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           EggWasSpawned                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::TrySpawnEggToWorld(class UPrimalItemConsumable_Egg_C* EggItem, bool* EggWasSpawned)
+void AEggIncubator_C::TrySpawnEggToWorld(class UPrimalItemConsumable_Egg_C* eggItem, bool* EggWasSpawned)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.TrySpawnEggToWorld");
 
 	AEggIncubator_C_TrySpawnEggToWorld_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -286,9 +305,9 @@ void AEggIncubator_C::ThrottledTick()
 
 
 // Function EggIncubator.EggIncubator_C.ServerSyncEggDisplay
-// (Exec, NetResponse, Static, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AEggIncubator_C::STATIC_ServerSyncEggDisplay()
+void AEggIncubator_C::ServerSyncEggDisplay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.ServerSyncEggDisplay");
 
@@ -329,16 +348,16 @@ void AEggIncubator_C::GetTempBonusRawPercent(float EggTempLowerBound, float EggT
 
 
 // Function EggIncubator.EggIncubator_C.SetIncubatorCustomDatasForEgg
-// (NetReliable, Exec, Native, NetResponse, Static, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::STATIC_SetIncubatorCustomDatasForEgg(class UPrimalItemConsumable_Egg_C* EggItem)
+void AEggIncubator_C::SetIncubatorCustomDatasForEgg(class UPrimalItemConsumable_Egg_C* eggItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.SetIncubatorCustomDatasForEgg");
 
 	AEggIncubator_C_SetIncubatorCustomDatasForEgg_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -443,16 +462,15 @@ void AEggIncubator_C::SetupEggSlots()
 
 
 // Function EggIncubator.EggIncubator_C.RefreshEggDisplays
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void AEggIncubator_C::RefreshEggDisplays()
+void AEggIncubator_C::STATIC_RefreshEggDisplays()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.RefreshEggDisplays");
 
 	AEggIncubator_C_RefreshEggDisplays_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -463,15 +481,15 @@ void AEggIncubator_C::RefreshEggDisplays()
 // Function EggIncubator.EggIncubator_C.CheckIsFertilizedEgg
 // ()
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsFertilized                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::CheckIsFertilizedEgg(class UPrimalItemConsumable_Egg_C* EggItem, bool* IsFertilized)
+void AEggIncubator_C::CheckIsFertilizedEgg(class UPrimalItemConsumable_Egg_C* eggItem, bool* IsFertilized)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.CheckIsFertilizedEgg");
 
 	AEggIncubator_C_CheckIsFertilizedEgg_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -487,15 +505,15 @@ void AEggIncubator_C::CheckIsFertilizedEgg(class UPrimalItemConsumable_Egg_C* Eg
 // Function EggIncubator.EggIncubator_C.GetSlotIndexForEggItem
 // ()
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            SlotIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::GetSlotIndexForEggItem(class UPrimalItemConsumable_Egg_C* EggItem, int* SlotIndex)
+void AEggIncubator_C::GetSlotIndexForEggItem(class UPrimalItemConsumable_Egg_C* eggItem, int* SlotIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.GetSlotIndexForEggItem");
 
 	AEggIncubator_C_GetSlotIndexForEggItem_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -550,14 +568,14 @@ void AEggIncubator_C::BPPostInitializeComponents()
 // Function EggIncubator.EggIncubator_C.ServerRemoveFertilizedEgg
 // ()
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::ServerRemoveFertilizedEgg(class UPrimalItemConsumable_Egg_C* EggItem)
+void AEggIncubator_C::ServerRemoveFertilizedEgg(class UPrimalItemConsumable_Egg_C* eggItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.ServerRemoveFertilizedEgg");
 
 	AEggIncubator_C_ServerRemoveFertilizedEgg_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -568,16 +586,16 @@ void AEggIncubator_C::ServerRemoveFertilizedEgg(class UPrimalItemConsumable_Egg_
 
 
 // Function EggIncubator.EggIncubator_C.ServerAddFertilizedEgg
-// (NetReliable, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
-// class UPrimalItemConsumable_Egg_C* EggItem                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimalItemConsumable_Egg_C* eggItem                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void AEggIncubator_C::STATIC_ServerAddFertilizedEgg(class UPrimalItemConsumable_Egg_C* EggItem)
+void AEggIncubator_C::ServerAddFertilizedEgg(class UPrimalItemConsumable_Egg_C* eggItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.ServerAddFertilizedEgg");
 
 	AEggIncubator_C_ServerAddFertilizedEgg_Params params;
-	params.EggItem = EggItem;
+	params.eggItem = eggItem;
 
 	auto flags = fn->FunctionFlags;
 
@@ -588,7 +606,7 @@ void AEggIncubator_C::STATIC_ServerAddFertilizedEgg(class UPrimalItemConsumable_
 
 
 // Function EggIncubator.EggIncubator_C.BPTryMultiUse
-// ()
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           UseIndex                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -613,7 +631,7 @@ bool AEggIncubator_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function EggIncubator.EggIncubator_C.BPClientDoMultiUse
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -627,7 +645,6 @@ void AEggIncubator_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC,
 	params.ClientUseIndex = ClientUseIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -636,11 +653,11 @@ void AEggIncubator_C::STATIC_BPClientDoMultiUse(class APlayerController** ForPC,
 
 
 // Function EggIncubator.EggIncubator_C.AddTempControlEntries
-// (NetRequest, Exec, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Static, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void AEggIncubator_C::AddTempControlEntries(TArray<struct FMultiUseEntry>* MultiUseEntries)
+void AEggIncubator_C::STATIC_AddTempControlEntries(TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.AddTempControlEntries");
 
@@ -658,13 +675,13 @@ void AEggIncubator_C::AddTempControlEntries(TArray<struct FMultiUseEntry>* Multi
 
 
 // Function EggIncubator.EggIncubator_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Event, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AEggIncubator_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AEggIncubator_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EggIncubator.EggIncubator_C.BPGetMultiUseEntries");
 
@@ -672,6 +689,7 @@ TArray<struct FMultiUseEntry> AEggIncubator_C::BPGetMultiUseEntries(class APlaye
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

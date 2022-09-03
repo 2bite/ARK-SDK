@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_166
-struct UTPV_MinigunTurret_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_166_Params
+// Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_184
+struct UTPV_MinigunTurret_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_RotationOffsetBlendSpace_184_Params
 {
 };
 
-// Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_3939
-struct UTPV_MinigunTurret_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_3939_Params
+// Function TPV_MinigunTurret_AnimBP.TPV_MinigunTurret_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_4011
+struct UTPV_MinigunTurret_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_TPV_MinigunTurret_AnimBP_AnimGraphNode_SequencePlayer_4011_Params
 {
 };
 

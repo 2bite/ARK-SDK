@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -87,6 +87,11 @@ struct USecurityCameraHUD_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (Parm, IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function SecurityCameraHUD.SecurityCameraHUD_C.ResetHUDWidgetAlreadyInViewport
+struct USecurityCameraHUD_C_ResetHUDWidgetAlreadyInViewport_Params
+{
 };
 
 // Function SecurityCameraHUD.SecurityCameraHUD_C.ExecuteUbergraph_SecurityCameraHUD

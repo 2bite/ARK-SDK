@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,6 +23,11 @@ struct AWeapMinigun_C_GetHudData_Params
 	bool                                               IsInTurretMode;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               HideAmmoCountHUDElement;                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      AmmoItemTemplate;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function WeapMinigun.WeapMinigun_C.VerifyShotTimestamp
+struct AWeapMinigun_C_VerifyShotTimestamp_Params
+{
 };
 
 // Function WeapMinigun.WeapMinigun_C.BPSpawnImpactEffects

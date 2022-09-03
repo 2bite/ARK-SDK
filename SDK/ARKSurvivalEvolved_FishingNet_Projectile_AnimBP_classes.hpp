@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -88,12 +88,12 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3155();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3154();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3153();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3152();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3151();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3150();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3039();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3038();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3037();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3036();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3035();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_FishingNet_Projectile_AnimBP_AnimGraphNode_TransitionResult_3034();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_FishingNet_Projectile_AnimBP(int EntryPoint);
 };

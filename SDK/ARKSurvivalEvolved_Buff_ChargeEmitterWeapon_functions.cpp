@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,9 +35,9 @@ void ABuff_ChargeEmitterWeapon_C::IsWeaponFiring(bool* IsFiring)
 
 
 // Function Buff_ChargeEmitterWeapon.Buff_ChargeEmitterWeapon_C.InitializeEmitter
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, BlueprintCallable)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 
-void ABuff_ChargeEmitterWeapon_C::InitializeEmitter()
+void ABuff_ChargeEmitterWeapon_C::STATIC_InitializeEmitter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_ChargeEmitterWeapon.Buff_ChargeEmitterWeapon_C.InitializeEmitter");
 

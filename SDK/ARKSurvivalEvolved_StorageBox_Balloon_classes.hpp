@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -453,18 +453,18 @@ public:
 	void BPPostInitializeComponents();
 	void BPPostLoadedFromSaveGame();
 	void GetBasedWeight(float* Weight);
-	void HasClearance(bool* Clearance);
+	void STATIC_HasClearance(bool* Clearance);
 	void STATIC_Set_Optimal_Cruising_Altitude();
 	void ChangeBalloonSize(float Delta);
 	class FString BPOverrideCantBuildReasonString(int* CantBuildReason);
 	int BPIsAllowedToBuildEx(int* CurrentAllowedReason, class APlayerController** PC, bool* bFinalPlacement, bool* bChoosingRotation, struct FPlacementData* OutPlacementData);
 	bool BPPreventPlacingOnFloorStructure(class APrimalStructure** FloorStructure, struct FPlacementData* theOutPlacementData);
-	void STATIC_CheckOptimalZDistance();
+	void CheckOptimalZDistance();
 	void GetInventoryWeight(float* InvWeight);
 	void SetBalloonSpeed();
 	void CalcLandingVector(int coord1, int coord2);
 	void OnRep_LocationString();
-	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	void ReceivePointDamage(float* Damage, class UDamageType** DamageType, struct FVector* HitLocation, struct FVector* HitNormal, class UPrimitiveComponent** HitComponent, struct FName* BoneName, struct FVector* ShotFromDirection, class AController** InstigatedBy, class AActor** DamageCauser);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);

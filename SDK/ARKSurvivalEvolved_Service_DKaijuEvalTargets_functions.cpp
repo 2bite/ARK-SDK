@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -103,7 +103,7 @@ void UService_DKaijuEvalTargets_C::SetFlockTargets()
 
 
 // Function Service_DKaijuEvalTargets.Service_DKaijuEvalTargets_C.SummonLightningGroundTargets
-// (Native, NetResponse, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure)
+// (NetRequest, Native, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void UService_DKaijuEvalTargets_C::SummonLightningGroundTargets()
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_ChargeEmitterStructure_PlantSpeciesZ_PlayerGrownNew.Buff_ChargeEmitterStructure_PlantSpeciesZ_PlayerGrownNew_C
-// 0x0000 (0x0BE0 - 0x0BE0)
+// 0x0000 (0x0BF8 - 0x0BF8)
 class ABuff_ChargeEmitterStructure_PlantSpeciesZ_PlayerGrownNew_C : public ABuff_ChargeEmitterStructure_PlantSpeciesZ_Base_C
 {
 public:

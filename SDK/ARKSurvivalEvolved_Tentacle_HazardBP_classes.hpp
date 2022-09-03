@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -151,7 +151,8 @@ public:
 	unsigned char                                      UnknownData24[0x4];                                       // 0x121C(0x0004) MISSED OFFSET
 	class UAnimMontage*                                RetractedDeathMontage;                                    // 0x1220(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bCheckOverlapAndEnableTimers;                             // 0x1228(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData25[0x3];                                       // 0x1229(0x0003) MISSED OFFSET
+	bool                                               bLeadRangedAttack;                                        // 0x1229(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData25[0x2];                                       // 0x122A(0x0002) MISSED OFFSET
 	struct FVector                                     CallFunc_K2_GetActorLocation_ReturnValue;                 // 0x122C(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_BoolBool_ReturnValue;                 // 0x1238(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_BoolBool_ReturnValue2;                // 0x1239(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -218,7 +219,7 @@ public:
 	int                                                K2Node_ComponentBoundEvent_OtherBodyIndex;                // 0x13A0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData35[0x4];                                       // 0x13A4(0x0004) MISSED OFFSET
 	class APrimalCharacter*                            K2Node_CustomEvent_Target2;                               // 0x13A8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class APrimalCharacter*                            K2Node_CustomEvent_Target;                                // 0x13B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class APrimalCharacter*                            K2Node_CustomEvent_target;                                // 0x13B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue5;                           // 0x13B8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsServer_ReturnValue6;                           // 0x13B9(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData36[0x2];                                       // 0x13BA(0x0002) MISSED OFFSET
@@ -291,7 +292,7 @@ public:
 	bool                                               CallFunc_Montage_IsActive_ReturnValue;                    // 0x1518(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData50[0x7];                                       // 0x1519(0x0007) MISSED OFFSET
 	class APrimalCharacter*                            K2Node_CustomEvent_Char;                                  // 0x1520(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	float                                              K2Node_CustomEvent_Delay2;                                // 0x1528(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	float                                              K2Node_CustomEvent_delay2;                                // 0x1528(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_EqualEqual_FloatFloat_ReturnValue;               // 0x152C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_Greater_FloatFloat_ReturnValue3;                 // 0x152D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData51[0x2];                                       // 0x152E(0x0002) MISSED OFFSET
@@ -355,7 +356,7 @@ public:
 	void ReleaseGrabbedChar();
 	void CanTargetValidActor(class APrimalCharacter* Target, bool* bIsValid);
 	void BPDied(float* KillingDamage, class AController** Killer, class AActor** DamageCauser, struct FDamageEvent* DamageEvent);
-	void SpawnTentacleFromAttack(const struct FVector& Loc);
+	void STATIC_SpawnTentacleFromAttack(const struct FVector& Loc);
 	void SpawnedTentacleTimedDeath();
 	void GetIsInOutAnimPlaying(bool* AnimIsPlaying);
 	void OnRep_bIsUnderground();
@@ -369,10 +370,10 @@ public:
 	void RandomizeTentacleScale();
 	void OnRep_AdjustedServerScale();
 	void ResizeTentacle();
-	void STATIC_ManualOverlapCheck(bool* FoundTarget);
+	void ManualOverlapCheck(bool* FoundTarget);
 	void find_or_create_dynamic_materials(TArray<class UMaterialInstanceDynamic*>* dynamic_materials);
-	void Find_Valid_Spawn_Location(class AActor* Target, TArray<struct FVector>* OutLocations);
-	void Ranged_Attack_target(class APrimalCharacter* Target);
+	void STATIC_Find_Valid_Spawn_Location(class AActor* Target, TArray<struct FVector>* OutLocations);
+	void STATIC_Ranged_Attack_target(class APrimalCharacter* Target);
 	void BPGetAggroDinoOnDamageSettings(TArray<struct FName>* AggroDinoClassesCustomTags, float* AggroDinoClassesRange);
 	void attackTarget(class APrimalCharacter* attackTarget);
 	void EffectiveRotation(struct FRotator* ActualRotation);
@@ -382,11 +383,11 @@ public:
 	void BPUpdatedHealth(bool* bDoReplication);
 	float BPAdjustDamage(float* IncomingDamage, struct FDamageEvent* TheDamageEvent, class AController** EventInstigator, class AActor** DamageCauser, bool* bIsPointDamage, struct FHitResult* PointHitInfo);
 	bool BPImpactEffect(struct FHitResult* HitRes, struct FVector* ShootDirection);
-	void BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber);
+	void STATIC_BPReleasedPlayer(class AShooterCharacter** ReleasedChar, int* AtSeatNumber);
 	bool BPPreventReleaseSeatingStructure(class AShooterCharacter** ForSitter);
 	void BPSeatedPlayer(class AShooterCharacter** SeatedChar, int* AtSeatNumber);
 	void CanAttack(bool* bCanAttack);
-	void STATIC_BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
+	void BlueprintAnimNotifyCustomEvent(struct FName* CustomEventName, class USkeletalMeshComponent** MeshComp, class UAnimSequenceBase** Animation, class UAnimNotify** AnimNotifyObject);
 	void IsActorValidTarget(class APrimalCharacter* Target, bool* bCanTarget);
 	void FindBestTarget(class APrimalCharacter** Target);
 	void BPTriggerStasisEvent();

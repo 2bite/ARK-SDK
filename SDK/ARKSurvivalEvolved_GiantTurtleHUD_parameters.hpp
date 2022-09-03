@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,8 +38,8 @@ struct UGiantTurtleHUD_C_StartClosingWidget_Params
 	float                                              NewLifeSpan;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHUDWidget
-struct UGiantTurtleHUD_C_DestroyHUDWidget_Params
+// Function GiantTurtleHUD.GiantTurtleHUD_C.DestroyHudWidget
+struct UGiantTurtleHUD_C_DestroyHudWidget_Params
 {
 };
 

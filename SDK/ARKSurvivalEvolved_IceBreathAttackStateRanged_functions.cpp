@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,7 +78,7 @@ bool UIceBreathAttackStateRanged_C::BPCanAttack(float* Distance, float* attackRa
 
 
 // Function IceBreathAttackStateRanged.IceBreathAttackStateRanged_C.OnTickEvent
-// (Exec, Event, NetResponse, Static, NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Native, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -90,6 +90,7 @@ void UIceBreathAttackStateRanged_C::STATIC_OnTickEvent(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

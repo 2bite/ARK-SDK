@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Lystro_Character_BP_Aberrant.Lystro_Character_BP_Aberrant_C
-// 0x0000 (0x2280 - 0x2280)
+// 0x0000 (0x22A0 - 0x22A0)
 class ALystro_Character_BP_Aberrant_C : public ALystro_Character_BP_C
 {
 public:

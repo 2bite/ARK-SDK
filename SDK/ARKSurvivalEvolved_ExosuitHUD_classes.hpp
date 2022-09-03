@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,7 +57,7 @@ public:
 
 
 	void SetupDynamicMaterial();
-	void SyncHUDWidget(const class FString& ModeString, const class FString& RepairRequirementsString, float BeamAvailabilityPercent, float BeamPressAndHoldPercent, bool bUsesChestBeam, bool bCanUseChestBeam, int ChestBeamState, class APrimalStructure* LastAimedStructure, int CurrentMode, float HUDModeTextFadeOutTimeMultiplier);
+	void STATIC_SyncHUDWidget(const class FString& ModeString, const class FString& RepairRequirementsString, float BeamAvailabilityPercent, float BeamPressAndHoldPercent, bool bUsesChestBeam, bool bCanUseChestBeam, int ChestBeamState, class APrimalStructure* LastAimedStructure, int CurrentMode, float HUDModeTextFadeOutTimeMultiplier);
 	void Initialize_HUD_Widget();
 	void Reset_HUD_Widget();
 	void DestroyWidget();

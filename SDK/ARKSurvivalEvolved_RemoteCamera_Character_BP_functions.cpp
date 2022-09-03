@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -131,6 +131,26 @@ void ARemoteCamera_Character_BP_C::GetCameraLocation(struct FVector* CameraViewP
 		*CameraViewPoint = params.CameraViewPoint;
 	if (CameraRotation != nullptr)
 		*CameraRotation = params.CameraRotation;
+}
+
+
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ServerUnlinkCamera
+// ()
+// Parameters:
+// int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ARemoteCamera_Character_BP_C::ServerUnlinkCamera(int index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ServerUnlinkCamera");
+
+	ARemoteCamera_Character_BP_C_ServerUnlinkCamera_Params params;
+	params.index = index;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -368,11 +388,11 @@ void ARemoteCamera_Character_BP_C::RemoveCameraData(class APrimalStructure* CamT
 
 
 // Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.AddCamera
-// (Net, NetReliable, NetMulticast, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalStructure*        NewCam                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ARemoteCamera_Character_BP_C::AddCamera(class APrimalStructure* NewCam)
+void ARemoteCamera_Character_BP_C::STATIC_AddCamera(class APrimalStructure* NewCam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.AddCamera");
 
@@ -477,7 +497,7 @@ void ARemoteCamera_Character_BP_C::BPUnstasis()
 
 
 // Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.SetCameraData
-// (NetReliable, Exec, Event, NetMulticast, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            CurrentIndex                   (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class APrimalStructure*> LinkedCameras_Server           (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -490,6 +510,7 @@ void ARemoteCamera_Character_BP_C::SetCameraData(int CurrentIndex, TArray<class 
 	params.CurrentIndex = CurrentIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -799,9 +820,9 @@ void ARemoteCamera_Character_BP_C::ReceiveTick(float* DeltaSeconds)
 // Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ScoutIsFirstPerson
 // ()
 // Parameters:
-// bool                           Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ARemoteCamera_Character_BP_C::ScoutIsFirstPerson(bool* Retval)
+void ARemoteCamera_Character_BP_C::ScoutIsFirstPerson(bool* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ScoutIsFirstPerson");
 
@@ -813,8 +834,8 @@ void ARemoteCamera_Character_BP_C::ScoutIsFirstPerson(bool* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 
@@ -1206,14 +1227,14 @@ void ARemoteCamera_Character_BP_C::UserConstructionScript()
 }
 
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_136
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_146
 // ()
 
-void ARemoteCamera_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_136()
+void ARemoteCamera_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_146()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_136");
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Crouch_K2Node_InputActionEvent_146");
 
-	ARemoteCamera_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_136_Params params;
+	ARemoteCamera_Character_BP_C_InpActEvt_Crouch_K2Node_InputActionEvent_146_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1223,14 +1244,14 @@ void ARemoteCamera_Character_BP_C::InpActEvt_Crouch_K2Node_InputActionEvent_136(
 }
 
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_135
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_145
 // ()
 
-void ARemoteCamera_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_135()
+void ARemoteCamera_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_145()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_135");
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_145");
 
-	ARemoteCamera_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_135_Params params;
+	ARemoteCamera_Character_BP_C_InpActEvt_GamepadRightThumbstick_K2Node_InputActionEvent_145_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1240,14 +1261,14 @@ void ARemoteCamera_Character_BP_C::InpActEvt_GamepadRightThumbstick_K2Node_Input
 }
 
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_134
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_144
 // ()
 
-void ARemoteCamera_Character_BP_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_134()
+void ARemoteCamera_Character_BP_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_144()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_134");
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_144");
 
-	ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_134_Params params;
+	ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadLeftShoulder_K2Node_InputActionEvent_144_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1257,14 +1278,14 @@ void ARemoteCamera_Character_BP_C::InpActEvt_ArkGamepadLeftShoulder_K2Node_Input
 }
 
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_133
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_143
 // ()
 
-void ARemoteCamera_Character_BP_C::InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_133()
+void ARemoteCamera_Character_BP_C::InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_143()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_133");
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_143");
 
-	ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_133_Params params;
+	ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadRightShoulder_K2Node_InputActionEvent_143_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1274,14 +1295,14 @@ void ARemoteCamera_Character_BP_C::InpActEvt_ArkGamepadRightShoulder_K2Node_Inpu
 }
 
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_132
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_142
 // ()
 
-void ARemoteCamera_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_132()
+void ARemoteCamera_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_142()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_132");
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Jump_K2Node_InputActionEvent_142");
 
-	ARemoteCamera_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_132_Params params;
+	ARemoteCamera_Character_BP_C_InpActEvt_Jump_K2Node_InputActionEvent_142_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1291,14 +1312,14 @@ void ARemoteCamera_Character_BP_C::InpActEvt_Jump_K2Node_InputActionEvent_132()
 }
 
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_131
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_141
 // ()
 
-void ARemoteCamera_Character_BP_C::InpActEvt_Run_K2Node_InputActionEvent_131()
+void ARemoteCamera_Character_BP_C::InpActEvt_Run_K2Node_InputActionEvent_141()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_131");
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_Run_K2Node_InputActionEvent_141");
 
-	ARemoteCamera_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_131_Params params;
+	ARemoteCamera_Character_BP_C_InpActEvt_Run_K2Node_InputActionEvent_141_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1308,14 +1329,14 @@ void ARemoteCamera_Character_BP_C::InpActEvt_Run_K2Node_InputActionEvent_131()
 }
 
 
-// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_130
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_140
 // ()
 
-void ARemoteCamera_Character_BP_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_130()
+void ARemoteCamera_Character_BP_C::InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_140()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_130");
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_140");
 
-	ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_130_Params params;
+	ARemoteCamera_Character_BP_C_InpActEvt_ArkGamepadFaceButtonBottom_K2Node_InputActionEvent_140_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2131,6 +2152,26 @@ void ARemoteCamera_Character_BP_C::ServerConfirmActivation()
 	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.ServerConfirmActivation");
 
 	ARemoteCamera_Character_BP_C_ServerConfirmActivation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.UnlinkCamera
+// ()
+// Parameters:
+// int                            index                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void ARemoteCamera_Character_BP_C::UnlinkCamera(int index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function RemoteCamera_Character_BP.RemoteCamera_Character_BP_C.UnlinkCamera");
+
+	ARemoteCamera_Character_BP_C_UnlinkCamera_Params params;
+	params.index = index;
 
 	auto flags = fn->FunctionFlags;
 

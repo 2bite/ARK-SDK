@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,35 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function LampPostOmni.LampPostOmni_C.BPServerHandleNetExecCommand
+// ()
+// Parameters:
+// class APlayerController**      FromPC                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName*                  CommandName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBPNetExecParams        ExecParams                     (Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ALampPostOmni_C::BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LampPostOmni.LampPostOmni_C.BPServerHandleNetExecCommand");
+
+	ALampPostOmni_C_BPServerHandleNetExecCommand_Params params;
+	params.FromPC = FromPC;
+	params.CommandName = CommandName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ExecParams != nullptr)
+		*ExecParams = params.ExecParams;
+
+	return params.ReturnValue;
+}
+
 
 // Function LampPostOmni.LampPostOmni_C.Get Next Cycled LightIntensityLevel
 // ()
@@ -77,7 +106,7 @@ void ALampPostOmni_C::SetLampLightIntensity(int intensityLevel)
 
 
 // Function LampPostOmni.LampPostOmni_C.BPClientDoMultiUse
-// ()
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // int*                           ClientUseIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -99,13 +128,13 @@ void ALampPostOmni_C::BPClientDoMultiUse(class APlayerController** ForPC, int* C
 
 
 // Function LampPostOmni.LampPostOmni_C.BPGetMultiUseEntries
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> ALampPostOmni_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> ALampPostOmni_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LampPostOmni.LampPostOmni_C.BPGetMultiUseEntries");
 
@@ -113,7 +142,6 @@ TArray<struct FMultiUseEntry> ALampPostOmni_C::STATIC_BPGetMultiUseEntries(class
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

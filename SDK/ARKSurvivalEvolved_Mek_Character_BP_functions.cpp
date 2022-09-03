@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -117,6 +117,26 @@ void AMek_Character_BP_C::GetMekHeat(float* CurrentHeat, float* MaxHeat)
 }
 
 
+// Function Mek_Character_BP.Mek_Character_BP_C.BP_OnCryo
+// ()
+// Parameters:
+// class AShooterPlayerController** ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMek_Character_BP_C::BP_OnCryo(class AShooterPlayerController** ForPC)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.BP_OnCryo");
+
+	AMek_Character_BP_C_BP_OnCryo_Params params;
+	params.ForPC = ForPC;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mek_Character_BP.Mek_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
 // ()
 // Parameters:
@@ -226,18 +246,17 @@ bool AMek_Character_BP_C::BPOverrideMoveToOrder(struct FVector* MoveToLocation, 
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.Get Transform Key Name
-// (Net, Native, Static, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FText                   KeyName                        (Parm, OutParm)
 
-void AMek_Character_BP_C::STATIC_Get_Transform_Key_Name(struct FText* KeyName)
+void AMek_Character_BP_C::Get_Transform_Key_Name(struct FText* KeyName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.Get Transform Key Name");
 
 	AMek_Character_BP_C_Get_Transform_Key_Name_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,7 +285,7 @@ void AMek_Character_BP_C::BPPostLoadedFromSaveGame()
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BPPreSerializeSaveGame
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Exec, Native, Event, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AMek_Character_BP_C::BPPreSerializeSaveGame()
 {
@@ -275,6 +294,7 @@ void AMek_Character_BP_C::BPPreSerializeSaveGame()
 	AMek_Character_BP_C_BPPreSerializeSaveGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -624,14 +644,14 @@ void AMek_Character_BP_C::AllowedToAutoRepair(bool* Allowed, float* CooldownTime
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BlueprintDrawFloatingHUD
-// (Event, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DrawScale                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMek_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale)
+void AMek_Character_BP_C::STATIC_BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mek_Character_BP.Mek_Character_BP_C.BlueprintDrawFloatingHUD");
 
@@ -642,6 +662,7 @@ void AMek_Character_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, floa
 	params.DrawScale = DrawScale;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -675,7 +696,7 @@ bool AMek_Character_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* Us
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BPGetMultiUseEntries
-// (Exec, Native, Event, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Native, Event, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -781,7 +802,7 @@ bool AMek_Character_BP_C::BPHandleOnStopFire()
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.HoverTrace
-// (NetRequest, Exec, Native, Static, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Native, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          TraceDistance                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DebugDraw                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -819,7 +840,7 @@ void AMek_Character_BP_C::STATIC_HoverTrace(float TraceDistance, bool DebugDraw,
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.IsPlayingAttackAnim
-// (NetRequest, Event, Static, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            AttackIndex                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Playing                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -832,6 +853,7 @@ void AMek_Character_BP_C::STATIC_IsPlayingAttackAnim(int AttackIndex, bool* Play
 	params.AttackIndex = AttackIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -911,7 +933,7 @@ class UAnimMontage* AMek_Character_BP_C::BPOverrideHurtAnim(float* DamageTaken, 
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.GetCurrentSwordStatus
-// (NetRequest, Exec, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetRequest, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           IsSwingingSword                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            CurrentMontage                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1183,7 +1205,7 @@ void AMek_Character_BP_C::ModifyHeatLevel(float Delta, bool Subtract, float* New
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.GetPistolMuzzleInfo
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 MuzzleLocation                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 MuzzleDirection                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1229,7 +1251,7 @@ void AMek_Character_BP_C::UpdateTargetingMode(bool NewTargetingState)
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.ReceiveTick
-// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1241,6 +1263,7 @@ void AMek_Character_BP_C::STATIC_ReceiveTick(float* DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1630,7 +1653,7 @@ bool AMek_Character_BP_C::BPPreventFallDamage(float* FallDamageAmount, struct FH
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.RidingTick
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Net, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1651,7 +1674,7 @@ void AMek_Character_BP_C::STATIC_RidingTick(float* DeltaSeconds)
 
 
 // Function Mek_Character_BP.Mek_Character_BP_C.BPGetRiderUnboardLocation
-// (NetReliable, NetRequest, Exec, Event, Static, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter**       RidingCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

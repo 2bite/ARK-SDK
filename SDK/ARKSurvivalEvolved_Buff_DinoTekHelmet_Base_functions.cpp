@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -103,7 +103,7 @@ void ABuff_DinoTekHelmet_Base_C::BPDrawBuffStatusHUD(class AShooterHUD** HUD, fl
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.IsAllowedToFire
-// (NetReliable, NetRequest, Exec, Native, Event, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, Private, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 AimAtLoc                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ServerSpawnAtLoc               (Parm, ZeroConstructor, IsPlainOldData)
@@ -191,7 +191,7 @@ void ABuff_DinoTekHelmet_Base_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_DinoTekHelmet_Base.Buff_DinoTekHelmet_Base_C.LocalDoAttack
-// (Exec, Event, Static, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, Static, Private, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           bDidAttack                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 

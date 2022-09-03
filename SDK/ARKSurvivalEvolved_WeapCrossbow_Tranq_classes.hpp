@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapCrossbow_Tranq.WeapCrossbow_Tranq_C
-// 0x0000 (0x0E58 - 0x0E58)
+// 0x0000 (0x0E50 - 0x0E50)
 class AWeapCrossbow_Tranq_C : public AWeapCrossbow_C
 {
 public:

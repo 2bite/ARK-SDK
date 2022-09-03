@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace sdk
 // Function PrimalItemArmor_SaddleGeneric_Tek_Interface.PrimalItemArmor_SaddleGeneric_Tek_Interface_C.IGet Max Ammo
 // ()
 // Parameters:
-// int                            Retval                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int                            retVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int* Retval)
+void UPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int* retVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PrimalItemArmor_SaddleGeneric_Tek_Interface.PrimalItemArmor_SaddleGeneric_Tek_Interface_C.IGet Max Ammo");
 
@@ -29,8 +29,8 @@ void UPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int* Retval)
 
 	fn->FunctionFlags = flags;
 
-	if (Retval != nullptr)
-		*Retval = params.Retval;
+	if (retVal != nullptr)
+		*retVal = params.retVal;
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ struct AMegalosaurus_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
 // Function Megalosaurus_Character_BP.Megalosaurus_Character_BP_C.UpdateSeverTimerLimits
 struct AMegalosaurus_Character_BP_C_UpdateSeverTimerLimits_Params
 {
-	float                                              newMin;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              newMIN;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              newMax;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 

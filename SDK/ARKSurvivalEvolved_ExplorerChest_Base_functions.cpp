@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,15 @@ namespace sdk
 // Function ExplorerChest_Base.ExplorerChest_Base_C.BPGetExtraSpecialBlueprintInt
 // ()
 // Parameters:
+// int*                           toCheck                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int AExplorerChest_Base_C::BPGetExtraSpecialBlueprintInt()
+int AExplorerChest_Base_C::BPGetExtraSpecialBlueprintInt(int* toCheck)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ExplorerChest_Base.ExplorerChest_Base_C.BPGetExtraSpecialBlueprintInt");
 
 	AExplorerChest_Base_C_BPGetExtraSpecialBlueprintInt_Params params;
+	params.toCheck = toCheck;
 
 	auto flags = fn->FunctionFlags;
 
@@ -34,7 +36,7 @@ int AExplorerChest_Base_C::BPGetExtraSpecialBlueprintInt()
 
 
 // Function ExplorerChest_Base.ExplorerChest_Base_C.DrawBasicFloatingHUD
-// (Native, NetResponse, NetMulticast, Private, Protected, HasDefaults, NetClient, NetValidate)
+// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // class AHUD**                   ForHUD                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,7 +48,6 @@ void AExplorerChest_Base_C::DrawBasicFloatingHUD(class AHUD** ForHUD)
 	params.ForHUD = ForHUD;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

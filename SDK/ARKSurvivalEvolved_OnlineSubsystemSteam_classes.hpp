@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,13 +30,13 @@ public:
 
 
 // Class OnlineSubsystemSteam.SteamNetConnection
-// 0x0008 (0x34340 - 0x34338)
+// 0x0008 (0x34360 - 0x34358)
 class USteamNetConnection : public UIpConnection
 {
 public:
-	bool                                               bIsPassthrough;                                           // 0x34338(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bForceSteamSockets;                                       // 0x34339(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x3433A(0x0006) MISSED OFFSET
+	bool                                               bIsPassthrough;                                           // 0x34358(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bForceSteamSockets;                                       // 0x34359(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x3435A(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

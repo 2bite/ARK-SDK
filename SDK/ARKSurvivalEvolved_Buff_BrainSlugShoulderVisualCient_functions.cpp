@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_BrainSlugShoulderVisualCient.Buff_BrainSlugShoulderVisualCient_C.BPGetHUDElements
-// (NetReliable, Event, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, NetClient, BlueprintEvent)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -26,6 +26,7 @@ void ABuff_BrainSlugShoulderVisualCient_C::BPGetHUDElements(class APlayerControl
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +38,7 @@ void ABuff_BrainSlugShoulderVisualCient_C::BPGetHUDElements(class APlayerControl
 
 
 // Function Buff_BrainSlugShoulderVisualCient.Buff_BrainSlugShoulderVisualCient_C.DrawBuffFloatingHUD
-// (Native, Event, Static, NetMulticast, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, Static, MulticastDelegate, NetClient, BlueprintEvent)
 // Parameters:
 // int*                           BuffIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
@@ -57,7 +58,6 @@ void ABuff_BrainSlugShoulderVisualCient_C::STATIC_DrawBuffFloatingHUD(int* BuffI
 	params.DrawScale = DrawScale;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

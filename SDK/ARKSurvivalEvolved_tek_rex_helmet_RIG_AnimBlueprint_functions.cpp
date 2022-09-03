@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,14 +12,14 @@ namespace sdk
 //Functions
 //---------------------------------------------------------------------------
 
-// Function tek_rex_helmet_RIG_AnimBlueprint.tek_rex_helmet_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_rex_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2672
+// Function tek_rex_helmet_RIG_AnimBlueprint.tek_rex_helmet_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_rex_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2924
 // ()
 
-void Utek_rex_helmet_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_tek_rex_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2672()
+void Utek_rex_helmet_RIG_AnimBlueprint_C::EvaluateGraphExposedInputs_ExecuteUbergraph_tek_rex_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2924()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function tek_rex_helmet_RIG_AnimBlueprint.tek_rex_helmet_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_rex_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2672");
+	static auto fn = UObject::FindObject<UFunction>("Function tek_rex_helmet_RIG_AnimBlueprint.tek_rex_helmet_RIG_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_tek_rex_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2924");
 
-	Utek_rex_helmet_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_rex_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2672_Params params;
+	Utek_rex_helmet_RIG_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_tek_rex_helmet_RIG_AnimBlueprint_AnimGraphNode_BlendListByBool_2924_Params params;
 
 	auto flags = fn->FunctionFlags;
 

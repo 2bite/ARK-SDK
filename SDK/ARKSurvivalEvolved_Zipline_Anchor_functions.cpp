@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -183,7 +183,7 @@ void AZipline_Anchor_C::CreateCable()
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.AllowManualMultiUseActivation
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -196,6 +196,7 @@ bool AZipline_Anchor_C::AllowManualMultiUseActivation(class APlayerController** 
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,7 +228,7 @@ bool AZipline_Anchor_C::IsUpperAnchorPoint()
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.HasLineOfSight
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        PrimalCharacter                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StartPoint                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -277,7 +278,7 @@ void AZipline_Anchor_C::CheckForHarness(class APlayerController* Controller, boo
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.SpawnBreakEmitter
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void AZipline_Anchor_C::STATIC_SpawnBreakEmitter()
 {
@@ -371,20 +372,20 @@ void AZipline_Anchor_C::Get_Zipline_Info(struct FVector* DownDirection, class AZ
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.IsZiplineBlocked
-// (Native, Event, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APrimalCharacter*        primalChar                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartEndOffset                 (Parm, ZeroConstructor, IsPlainOldData)
 // float                          AttachOffset                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 overrideStartLocation          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          overrideFindLocationDistance   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OverrideFindLocationDirection  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 OverrideStartLocation          (Parm, ZeroConstructor, IsPlainOldData)
+// float                          OverrideFindLocationDistance   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 overrideFindLocationDirection  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DontUseLineOfSightCheck        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              HitResult                      (Parm, OutParm)
 // bool                           HitReturn                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StartLocation                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AZipline_Anchor_C::IsZiplineBlocked(class APrimalCharacter* primalChar, float StartEndOffset, float AttachOffset, const struct FVector& overrideStartLocation, float overrideFindLocationDistance, const struct FVector& OverrideFindLocationDirection, bool DontUseLineOfSightCheck, struct FHitResult* HitResult, bool* HitReturn, struct FVector* StartLocation)
+void AZipline_Anchor_C::STATIC_IsZiplineBlocked(class APrimalCharacter* primalChar, float StartEndOffset, float AttachOffset, const struct FVector& OverrideStartLocation, float OverrideFindLocationDistance, const struct FVector& overrideFindLocationDirection, bool DontUseLineOfSightCheck, struct FHitResult* HitResult, bool* HitReturn, struct FVector* StartLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Zipline_Anchor.Zipline_Anchor_C.IsZiplineBlocked");
 
@@ -392,9 +393,9 @@ void AZipline_Anchor_C::IsZiplineBlocked(class APrimalCharacter* primalChar, flo
 	params.primalChar = primalChar;
 	params.StartEndOffset = StartEndOffset;
 	params.AttachOffset = AttachOffset;
-	params.overrideStartLocation = overrideStartLocation;
-	params.overrideFindLocationDistance = overrideFindLocationDistance;
-	params.OverrideFindLocationDirection = OverrideFindLocationDirection;
+	params.OverrideStartLocation = OverrideStartLocation;
+	params.OverrideFindLocationDistance = OverrideFindLocationDistance;
+	params.overrideFindLocationDirection = overrideFindLocationDirection;
 	params.DontUseLineOfSightCheck = DontUseLineOfSightCheck;
 
 	auto flags = fn->FunctionFlags;
@@ -459,7 +460,7 @@ void AZipline_Anchor_C::GetClosestPointOnLine(const struct FVector& LineStart, c
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.RideZipline
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  ZiplineBuff                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -507,13 +508,13 @@ bool AZipline_Anchor_C::BPTryMultiUse(class APlayerController** ForPC, int* UseI
 
 
 // Function Zipline_Anchor.Zipline_Anchor_C.BPGetMultiUseEntries
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintPure)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FMultiUseEntry>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FMultiUseEntry> AZipline_Anchor_C::BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
+TArray<struct FMultiUseEntry> AZipline_Anchor_C::STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Zipline_Anchor.Zipline_Anchor_C.BPGetMultiUseEntries");
 
@@ -521,6 +522,7 @@ TArray<struct FMultiUseEntry> AZipline_Anchor_C::BPGetMultiUseEntries(class APla
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // Function Buff_TekStrider_SilenceCannon.Buff_TekStrider_SilenceCannon_C.BPGetHUDElements
-// (NetReliable, Exec, Native, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetMulticast, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -26,7 +26,6 @@ void ABuff_TekStrider_SilenceCannon_C::BPGetHUDElements(class APlayerController*
 	params.ForPC = ForPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,7 +83,7 @@ void ABuff_TekStrider_SilenceCannon_C::is_target_within_angle(class APrimalDinoC
 
 
 // Function Buff_TekStrider_SilenceCannon.Buff_TekStrider_SilenceCannon_C.CanFire
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, NetValidate)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // bool                           from_animbp                    (Parm, ZeroConstructor, IsPlainOldData)
 // class ABuff_ChargeEmitter_Strider_C* AsBuff_ChargeEmitter_Strider_C (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -98,6 +97,7 @@ bool ABuff_TekStrider_SilenceCannon_C::STATIC_CanFire(bool from_animbp, class AB
 	params.from_animbp = from_animbp;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -148,11 +148,11 @@ void ABuff_TekStrider_SilenceCannon_C::Trigger()
 
 
 // Function Buff_TekStrider_SilenceCannon.Buff_TekStrider_SilenceCannon_C.BPSetupForInstigator
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, NetValidate)
+// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class AActor**                 ForInstigator                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_SilenceCannon_C::STATIC_BPSetupForInstigator(class AActor** ForInstigator)
+void ABuff_TekStrider_SilenceCannon_C::BPSetupForInstigator(class AActor** ForInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_SilenceCannon.Buff_TekStrider_SilenceCannon_C.BPSetupForInstigator");
 
@@ -160,7 +160,6 @@ void ABuff_TekStrider_SilenceCannon_C::STATIC_BPSetupForInstigator(class AActor*
 	params.ForInstigator = ForInstigator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,13 +168,13 @@ void ABuff_TekStrider_SilenceCannon_C::STATIC_BPSetupForInstigator(class AActor*
 
 
 // Function Buff_TekStrider_SilenceCannon.Buff_TekStrider_SilenceCannon_C.IsDinoInCone?
-// (NetRequest, Native, MulticastDelegate, Public, Private, HasOutParms, NetClient, NetValidate)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APrimalCharacter*        Dino                           (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHitResult>      hit_result                     (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           isInCone                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsInCone                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_TekStrider_SilenceCannon_C::IsDinoInCone_(class APrimalCharacter* Dino, TArray<struct FHitResult>* hit_result, bool* isInCone)
+void ABuff_TekStrider_SilenceCannon_C::IsDinoInCone_(class APrimalCharacter* Dino, TArray<struct FHitResult>* hit_result, bool* IsInCone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_TekStrider_SilenceCannon.Buff_TekStrider_SilenceCannon_C.IsDinoInCone?");
 
@@ -191,8 +190,8 @@ void ABuff_TekStrider_SilenceCannon_C::IsDinoInCone_(class APrimalCharacter* Din
 
 	if (hit_result != nullptr)
 		*hit_result = params.hit_result;
-	if (isInCone != nullptr)
-		*isInCone = params.isInCone;
+	if (IsInCone != nullptr)
+		*IsInCone = params.IsInCone;
 }
 
 

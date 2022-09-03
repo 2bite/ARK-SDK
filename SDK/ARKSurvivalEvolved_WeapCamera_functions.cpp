@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function WeapCamera.WeapCamera_C.BP_OnReloadNotify
+// ()
+
+void AWeapCamera_C::BP_OnReloadNotify()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeapCamera.WeapCamera_C.BP_OnReloadNotify");
+
+	AWeapCamera_C_BP_OnReloadNotify_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function WeapCamera.WeapCamera_C.BPWeaponZoom
 // ()

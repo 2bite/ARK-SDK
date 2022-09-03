@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,7 +79,7 @@ void ABuff_BiglyPostProccess_C::Is_Valid_PounceTarget(class APrimalCharacter* Ta
 
 
 // Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.BPGetHUDElements
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Native, Event, Static, Public, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHUDElement>     OutElements                    (Parm, OutParm, ZeroConstructor)
@@ -152,7 +152,7 @@ void ABuff_BiglyPostProccess_C::Can_Ignore_Traced_Actor(class AActor* Actor, boo
 
 
 // Function Buff_BiglyPostProccess.Buff_BiglyPostProccess_C.BuffTickClient
-// (NetReliable, Exec, Native, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, Const)
+// (Native, Event, NetMulticast, Public, NetClient, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
 

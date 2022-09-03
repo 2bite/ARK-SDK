@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1240,6 +1240,7 @@ struct AActor_BPGetMultiUseCenterText_Params
 // Function Engine.Actor.BPGetExtraSpecialBlueprintInt
 struct AActor_BPGetExtraSpecialBlueprintInt_Params
 {
+	int                                                toCheck;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -4838,6 +4839,14 @@ struct ACharacter_CanJump_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.Character.BPValidateStoredClientRotationInput
+struct ACharacter_BPValidateStoredClientRotationInput_Params
+{
+	float                                              TimeSinceLastMove;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    ClientRotation;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.Character.BPOverrideCharacterSound
 struct ACharacter_BPOverrideCharacterSound_Params
 {
@@ -5622,6 +5631,7 @@ struct UCheatManager_DestroyPawns_Params
 struct UCheatManager_DestroyAll_Params
 {
 	class UClass*                                      aClass;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bExactMatch;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Engine.CheatManager.DebugCapsuleSweepSize
@@ -8220,6 +8230,13 @@ struct UInstancedStaticMeshComponent_RemoveInstance_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.InstancedStaticMeshComponent.MulticastShowInstances
+struct UInstancedStaticMeshComponent_MulticastShowInstances_Params
+{
+	TArray<int>                                        Indices;                                                  // (ConstParm, Parm, ZeroConstructor)
+	bool                                               bMarkRenderStateDirty;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Engine.InstancedStaticMeshComponent.MulticastShowInstance
 struct UInstancedStaticMeshComponent_MulticastShowInstance_Params
 {
@@ -8475,7 +8492,7 @@ struct UCapsuleComponent_SetCapsuleHalfHeight_Params
 // Function Engine.CapsuleComponent.GetUnscaledCapsuleSize
 struct UCapsuleComponent_GetUnscaledCapsuleSize_Params
 {
-	float                                              OutRadius;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              outRadius;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              OutHalfHeight;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -8500,7 +8517,7 @@ struct UCapsuleComponent_GetShapeScale_Params
 // Function Engine.CapsuleComponent.GetScaledCapsuleSize
 struct UCapsuleComponent_GetScaledCapsuleSize_Params
 {
-	float                                              OutRadius;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	float                                              outRadius;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              OutHalfHeight;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -10946,6 +10963,14 @@ struct UKismetMathLibrary_Percent_FloatFloat_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.KismetMathLibrary.Percent_DoubleDouble
+struct UKismetMathLibrary_Percent_DoubleDouble_Params
+{
+	double                                             A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	double                                             B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	double                                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.KismetMathLibrary.Percent_ByteByte
 struct UKismetMathLibrary_Percent_ByteByte_Params
 {
@@ -11251,6 +11276,22 @@ struct UKismetMathLibrary_Multiply_FloatFloat_Params
 	float                                              A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMathLibrary.Multiply_DoubleFloat
+struct UKismetMathLibrary_Multiply_DoubleFloat_Params
+{
+	double                                             A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	double                                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMathLibrary.Multiply_DoubleDouble
+struct UKismetMathLibrary_Multiply_DoubleDouble_Params
+{
+	double                                             A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	double                                             B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	double                                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.KismetMathLibrary.Multiply_ByteByte
@@ -12409,6 +12450,22 @@ struct UKismetMathLibrary_Divide_FloatFloat_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Engine.KismetMathLibrary.Divide_DoubleFloat
+struct UKismetMathLibrary_Divide_DoubleFloat_Params
+{
+	double                                             A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	double                                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetMathLibrary.Divide_DoubleDouble
+struct UKismetMathLibrary_Divide_DoubleDouble_Params
+{
+	double                                             A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	double                                             B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	double                                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Engine.KismetMathLibrary.Divide_ByteByte
 struct UKismetMathLibrary_Divide_ByteByte_Params
 {
@@ -13100,7 +13157,7 @@ struct UKismetRenderingLibrary_ReadRenderTargetPixel_Params
 struct UKismetRenderingLibrary_ImportFileAsTexture2D_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class FString                                      FileName;                                                 // (Parm, ZeroConstructor)
+	class FString                                      filename;                                                 // (Parm, ZeroConstructor)
 	class UTexture2D*                                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -13110,7 +13167,7 @@ struct UKismetRenderingLibrary_ExportTexture2D_Params
 	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	class UTexture2D*                                  Texture;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	class FString                                      FilePath;                                                 // (Parm, ZeroConstructor)
-	class FString                                      FileName;                                                 // (Parm, ZeroConstructor)
+	class FString                                      filename;                                                 // (Parm, ZeroConstructor)
 };
 
 // Function Engine.KismetRenderingLibrary.ExportRenderTarget
@@ -13119,7 +13176,7 @@ struct UKismetRenderingLibrary_ExportRenderTarget_Params
 	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 	class UTextureRenderTarget2D*                      TextureRenderTarget;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	class FString                                      FilePath;                                                 // (Parm, ZeroConstructor)
-	class FString                                      FileName;                                                 // (Parm, ZeroConstructor)
+	class FString                                      filename;                                                 // (Parm, ZeroConstructor)
 };
 
 // Function Engine.KismetRenderingLibrary.EndDrawCanvasToRenderTarget
@@ -13470,6 +13527,13 @@ struct UKismetStringLibrary_Conv_StringToFloat_Params
 {
 	class FString                                      InString;                                                 // (Parm, ZeroConstructor)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Engine.KismetStringLibrary.Conv_StringToDouble
+struct UKismetStringLibrary_Conv_StringToDouble_Params
+{
+	class FString                                      InString;                                                 // (Parm, ZeroConstructor)
+	double                                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Engine.KismetStringLibrary.Conv_RotatorToString

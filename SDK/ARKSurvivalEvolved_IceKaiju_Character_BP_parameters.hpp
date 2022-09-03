@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.GetSocketForMeleeTraceForHitBlockers
+struct AIceKaiju_Character_BP_C_GetSocketForMeleeTraceForHitBlockers_Params
+{
+	int*                                               AttackIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.BPOverrideHealthBarOffset
 struct AIceKaiju_Character_BP_C_BPOverrideHealthBarOffset_Params
@@ -393,7 +400,7 @@ struct AIceKaiju_Character_BP_C_UpdateLeapTargetVFXLocation_Params
 	struct FVector                                     WorldLoc;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FRotator                                    WorldRot;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  HitResult;                                                // (Parm)
-	struct FVector                                     surfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SurfaceNormal;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Calc Leap TargetTamed
@@ -874,8 +881,8 @@ struct AIceKaiju_Character_BP_C_IsDoneAttacking_Params
 {
 };
 
-// Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.MULTI_SetNodeColor
-struct AIceKaiju_Character_BP_C_MULTI_SetNodeColor_Params
+// Function IceKaiju_Character_BP.IceKaiju_Character_BP_C.Multi_SetNodeColor
+struct AIceKaiju_Character_BP_C_Multi_SetNodeColor_Params
 {
 	int                                                Node;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Alpha;                                                    // (Parm, ZeroConstructor, IsPlainOldData)

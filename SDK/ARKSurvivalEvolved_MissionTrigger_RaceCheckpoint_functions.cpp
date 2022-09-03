@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -184,7 +184,7 @@ void AMissionTrigger_RaceCheckpoint_C::SetCheckpointFX_Active(bool newActive, bo
 
 
 // Function MissionTrigger_RaceCheckpoint.MissionTrigger_RaceCheckpoint_C.BP_OverrideTargetingLocation
-// (NetReliable, Event, Static, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
+// (Static, Public, Private, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class AActor**                 Attacker                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_CryoCooldown.Buff_CryoCooldown_C
-// 0x0004 (0x0964 - 0x0960)
+// 0x0004 (0x097C - 0x0978)
 class ABuff_CryoCooldown_C : public ABuff_Base_C
 {
 public:
-	float                                              TimeLeft;                                                 // 0x0960(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TimeLeft;                                                 // 0x0978(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,7 +31,7 @@ public:
 	void BPActivated(class AActor** ForInstigator);
 	void UpdateBuffPersistentData();
 	void ReceiveBeginPlay();
-	void STATIC_BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
+	void BPDrawBuffStatusHUD(class AShooterHUD** HUD, float* XPos, float* YPos, float* ScaleMult);
 	void BuffTickServer(float* DeltaTime);
 	void BuffTickClient(float* DeltaTime);
 	void UserConstructionScript();

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dilo_Character_BP_Rockwell_Summoned.Dilo_Character_BP_Rockwell_Summoned_C
-// 0x0000 (0x2270 - 0x2270)
+// 0x0000 (0x2290 - 0x2290)
 class ADilo_Character_BP_Rockwell_Summoned_C : public ADilo_Character_BP_Rockwell_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,20 +15,20 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Basilosaurus_Character_BP.Basilosaurus_Character_BP_C
-// 0x003C (0x22A4 - 0x2268)
+// 0x003C (0x22C4 - 0x2288)
 class ABasilosaurus_Character_BP_C : public ADino_Character_BP_C
 {
 public:
-	class UDinoCharacterStatusComponent_BP_Basil_C*    DinoCharacterStatus_BP_Basil_C1;                          // 0x2268(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FollowMeRadius;                                           // 0x2270(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x2274(0x0004) MISSED OFFSET
-	double                                             LastTimeShotByPlayer;                                     // 0x2278(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              TimeBeingHitAllowsAggroTowardsPlayers;                    // 0x2280(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxWeightToBeAbleToFollow;                                // 0x2284(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxNumberOfFollowTargets;                                 // 0x2288(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x228C(0x0004) MISSED OFFSET
-	TArray<class UClass*>                              ValidFollowClasses;                                       // 0x2290(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                              DinoAddedDepthBeforeHealthLoss;                           // 0x22A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UDinoCharacterStatusComponent_BP_Basil_C*    DinoCharacterStatus_BP_Basil_C1;                          // 0x2288(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FollowMeRadius;                                           // 0x2290(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x2294(0x0004) MISSED OFFSET
+	double                                             LastTimeShotByPlayer;                                     // 0x2298(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TimeBeingHitAllowsAggroTowardsPlayers;                    // 0x22A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxWeightToBeAbleToFollow;                                // 0x22A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MaxNumberOfFollowTargets;                                 // 0x22A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x22AC(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              ValidFollowClasses;                                       // 0x22B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              DinoAddedDepthBeforeHealthLoss;                           // 0x22C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

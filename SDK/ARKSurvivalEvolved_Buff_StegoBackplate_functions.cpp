@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,11 +44,11 @@ float ABuff_StegoBackplate_C::BPAdjustStatusValueModification(class UPrimalChara
 
 
 // Function Buff_StegoBackplate.Buff_StegoBackplate_C.GetBuffDescription
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, Native, Static, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FStatusValueModifierDescription ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FStatusValueModifierDescription ABuff_StegoBackplate_C::GetBuffDescription()
+struct FStatusValueModifierDescription ABuff_StegoBackplate_C::STATIC_GetBuffDescription()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_StegoBackplate.Buff_StegoBackplate_C.GetBuffDescription");
 
@@ -66,11 +66,11 @@ struct FStatusValueModifierDescription ABuff_StegoBackplate_C::GetBuffDescriptio
 
 
 // Function Buff_StegoBackplate.Buff_StegoBackplate_C.Set Backplate Mode
-// (Native, NetResponse, NetMulticast, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Event, Static, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode             (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABuff_StegoBackplate_C::Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode)
+void ABuff_StegoBackplate_C::STATIC_Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode> StegoBackplateMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Buff_StegoBackplate.Buff_StegoBackplate_C.Set Backplate Mode");
 
@@ -78,7 +78,6 @@ void ABuff_StegoBackplate_C::Set_Backplate_Mode(TEnumAsByte<E_StegoBackplateMode
 	params.StegoBackplateMode = StegoBackplateMode;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

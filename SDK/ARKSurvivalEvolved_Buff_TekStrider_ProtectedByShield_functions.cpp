@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ void ABuff_TekStrider_ProtectedByShield_C::BuffTickClient(float* DeltaTime)
 
 
 // Function Buff_TekStrider_ProtectedByShield.Buff_TekStrider_ProtectedByShield_C.BPAdjustRadialDamage
-// (NetReliable, Native, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, Const)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintEvent, Const, NetValidate)
 // Parameters:
 // float*                         currentDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Origin                         (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)

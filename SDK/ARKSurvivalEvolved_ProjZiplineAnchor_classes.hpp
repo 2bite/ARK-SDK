@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -130,7 +130,7 @@ public:
 	}
 
 
-	void STATIC_CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return);
+	void CheckForInvisibleWall(const struct FVector& Start, const struct FVector& End, bool* Return);
 	void HitValidForAttachment(struct FHitResult* Hit, bool* Valid);
 	void SpawnBreakEmitter();
 	void UserConstructionScript();

@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.GetIngoreActorsForExplosion
+struct ATekCruiseMissile_Character_BP_C_GetIngoreActorsForExplosion_Params
+{
+	struct FVector                                     Oirgin;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Radius;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class AActor*>                              Array;                                                    // (Parm, OutParm, ZeroConstructor)
+};
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.validate proper impact location
 struct ATekCruiseMissile_Character_BP_C_validate_proper_impact_location_Params
@@ -172,7 +180,7 @@ struct ATekCruiseMissile_Character_BP_C_BP_PreventMovementMode_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ServerIsFiringItemInInventory
 struct ATekCruiseMissile_Character_BP_C_ServerIsFiringItemInInventory_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.BP_InterceptTurnInput
@@ -249,7 +257,7 @@ struct ATekCruiseMissile_Character_BP_C_ReceiveTick_Params
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.ScoutIsFirstPerson
 struct ATekCruiseMissile_Character_BP_C_ScoutIsFirstPerson_Params
 {
-	bool                                               Retval;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               retVal;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function TekCruiseMissile_Character_BP.TekCruiseMissile_Character_BP_C.SetTargetImpactMaterial

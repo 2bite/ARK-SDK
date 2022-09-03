@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,10 +90,10 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendSpacePlayer_290();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_TwoWayBlend_54();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendSpacePlayer_289();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendListByBool_4354();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendSpacePlayer_446();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_TwoWayBlend_110();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendSpacePlayer_445();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_CosmeticHLNA_AnimationBP_AnimGraphNode_BlendListByBool_5772();
 	void BlueprintUpdateAnimation(float* DeltaTimeX);
 	void ExecuteUbergraph_CosmeticHLNA_AnimationBP(int EntryPoint);
 };

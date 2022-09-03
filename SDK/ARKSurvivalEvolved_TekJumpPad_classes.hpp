@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -151,7 +151,7 @@ public:
 	class AShooterPlayerController*                    K2Node_DynamicCast_AsShooterPlayerController;             // 0x1120(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_DynamicCast4_CastSuccess;                          // 0x1128(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	unsigned char                                      UnknownData19[0x7];                                       // 0x1129(0x0007) MISSED OFFSET
-	class AShooterHUD*                                 CallFunc_GetShooterHud_ReturnValue;                       // 0x1130(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class AShooterHUD*                                 CallFunc_GetShooterHUD_ReturnValue;                       // 0x1130(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	TEnumAsByte<ENetworkModeResult>                    CallFunc_IsRunningOnServer_OutNetworkMode7;               // 0x1138(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               K2Node_SwitchEnum7_CmpSuccess;                            // 0x1139(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	bool                                               CallFunc_IsDedicatedServer_ReturnValue;                   // 0x113A(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -262,7 +262,7 @@ public:
 	void BPContainerDeactivated();
 	void BPContainerActivated();
 	void BPRefreshedStructureColors();
-	void STATIC_BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
+	void BlueprintDrawHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY);
 	void RandomSetRotation();
 	void OnRep_LaunchBounceTriggerSwitchBool();
 	void BPPlacedStructure(class APlayerController** ForPC);
@@ -274,10 +274,10 @@ public:
 	void LaunchForceToAlpha(float LaunchForce, float* Alpha);
 	void OnRep_CurrentLaunchForce();
 	void OnRep_LaunchAreaCapsuleHalfHeight();
-	void STATIC_UpdateLaunchTriggerTransform(const struct FRotator& NewRotation, float NewCapsuleHalfHeight, float NewLaunchForce);
+	void UpdateLaunchTriggerTransform(const struct FRotator& NewRotation, float NewCapsuleHalfHeight, float NewLaunchForce);
 	void OnRep_LaunchRotation();
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
-	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
+	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void LaunchCharacter(class APrimalCharacter* Character, float VelocityMultiplier);
 	void GetVelocityMultiplierForCharacter(class APrimalCharacter* Char, bool* AllowedToLaunch, float* VelocityMultiplier);

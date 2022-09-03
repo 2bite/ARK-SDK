@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace sdk
 // Function EggIncubatorInterface.EggIncubatorInterface_C.IsEggItemAllowed
 struct UEggIncubatorInterface_C_IsEggItemAllowed_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsAllowed;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

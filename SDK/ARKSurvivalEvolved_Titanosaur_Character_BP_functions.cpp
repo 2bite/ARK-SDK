@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -88,11 +88,11 @@ bool ATitanosaur_Character_BP_C::BlueprintCanRiderAttack(int* AttackIndex)
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.BPSetupTamed
-// (NetReliable, Exec, NetResponse, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetReliable, NetRequest, Exec, Native, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool*                          bWasJustTamed                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATitanosaur_Character_BP_C::BPSetupTamed(bool* bWasJustTamed)
+void ATitanosaur_Character_BP_C::STATIC_BPSetupTamed(bool* bWasJustTamed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.BPSetupTamed");
 
@@ -100,6 +100,7 @@ void ATitanosaur_Character_BP_C::BPSetupTamed(bool* bWasJustTamed)
 	params.bWasJustTamed = bWasJustTamed;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,17 +133,18 @@ void ATitanosaur_Character_BP_C::CheckTorporDistanceTravel(float torporIn, bool*
 
 
 // Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.IsHeadObstructed
-// (Event, NetResponse, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Native, Event, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           OutVal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ATitanosaur_Character_BP_C::IsHeadObstructed(bool* OutVal)
+void ATitanosaur_Character_BP_C::STATIC_IsHeadObstructed(bool* OutVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Titanosaur_Character_BP.Titanosaur_Character_BP_C.IsHeadObstructed");
 
 	ATitanosaur_Character_BP_C_IsHeadObstructed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

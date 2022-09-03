@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,22 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_Encapsulated.Buff_Encapsulated_C.RepauseAnims
+struct ABuff_Encapsulated_C_RepauseAnims_Params
+{
+};
+
+// Function Buff_Encapsulated.Buff_Encapsulated_C.BuffTickClient
+struct ABuff_Encapsulated_C_BuffTickClient_Params
+{
+	float*                                             DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_Encapsulated.Buff_Encapsulated_C.RefreshMeshes
+struct ABuff_Encapsulated_C_RefreshMeshes_Params
+{
+};
 
 // Function Buff_Encapsulated.Buff_Encapsulated_C.BPOverrideBuffToGiveOnDeactivation
 struct ABuff_Encapsulated_C_BPOverrideBuffToGiveOnDeactivation_Params

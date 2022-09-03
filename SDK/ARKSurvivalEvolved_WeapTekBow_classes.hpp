@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,82 +15,85 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapTekBow.WeapTekBow_C
-// 0x058D (0x1445 - 0x0EB8)
+// 0x0595 (0x1445 - 0x0EB0)
 class AWeapTekBow_C : public APrimalWeaponBow
 {
 public:
-	class UAudioComponent*                             Audio1;                                                   // 0x0EB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    MaxPowerParticleCompTPV;                                  // 0x0EC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    MaxPowerParticleCompFPV;                                  // 0x0EC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                CurrentAmmoTypeIndex;                                     // 0x0ED0(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
-	struct FVector                                     HitLocation;                                              // 0x0ED4(0x000C) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AShooterProjectile*                          Projectile;                                               // 0x0EE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     LocalClientHitLocation;                                   // 0x0EE8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0EF4(0x0004) MISSED OFFSET
-	double                                             PressedReloadButtonTime;                                  // 0x0EF8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              HoldForAmmoWheelDuration;                                 // 0x0F00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bShowAmmoWheel;                                           // 0x0F04(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsAmmoWheelOpened;                                       // 0x0F05(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x0F06(0x0002) MISSED OFFSET
-	struct FVector2D                                   AmmoHUDIconLocation;                                      // 0x0F08(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector2D                                   AmmoHUDTextLocation;                                      // 0x0F10(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ArrowDissolvePercent;                                     // 0x0F18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ArrowDissolveInterpSpeed;                                 // 0x0F1C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector2D                                   AmmoHUDIconSize;                                          // 0x0F20(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector2D                                   AmmoHUDTextScale;                                         // 0x0F28(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       TrailFXTargetParameter;                                   // 0x0F30(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              InstantHitTraceDistance;                                  // 0x0F38(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                LastSetArrowMeshIndex;                                    // 0x0F3C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       TekBowMuzzleFXSocket;                                     // 0x0F40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             ArrowMaterializeFX;                                       // 0x0F48(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bDidActivateMaterializeFX;                                // 0x0F50(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0F51(0x0007) MISSED OFFSET
-	class UParticleSystemComponent*                    MaterializePSCFPV;                                        // 0x0F58(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystemComponent*                    MaterializePSCTPV;                                        // 0x0F60(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             UnequipFX;                                                // 0x0F68(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UParticleSystem*                             EquipFX;                                                  // 0x0F70(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               PlayUnequipFX;                                            // 0x0F78(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bInitializedArrowOwningClient;                            // 0x0F79(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x6];                                       // 0x0F7A(0x0006) MISSED OFFSET
-	class UClass*                                      HelperBuff;                                               // 0x0F80(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class APrimalBuff*                                 HelperBuffRef;                                            // 0x0F88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FTekBowArrowSetup_Struct>            AmmoConfig;                                               // 0x0F90(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>            Arrow1PMID;                                               // 0x0FA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>            Arrow3PMID;                                               // 0x0FB0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>            _3PMID;                                                   // 0x0FC0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>            _1PMID;                                                   // 0x0FD0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FLinearColor                                AmmoTypeColor_1;                                          // 0x0FE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                AmmoTypeColor_2;                                          // 0x0FF0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                AmmoTypeColor_3;                                          // 0x1000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                AmmoTypeColor_4;                                          // 0x1010(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                CurrentAmmoTypeColor;                                     // 0x1020(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bOpenedWheelWithGamepad;                                  // 0x1030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x1031(0x0007) MISSED OFFSET
-	class USoundBase*                                  CycleAmmoSound;                                           // 0x1038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class FString                                      InstantHitEnabledString;                                  // 0x1040(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      InstantHitDisabledString;                                 // 0x1050(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FLinearColor                                InstantHitNotiColor;                                      // 0x1060(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              GamepadToggleAccessoryTimeframe;                          // 0x1070(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x1074(0x0004) MISSED OFFSET
-	double                                             LastReleasedReloadButtonTime;                             // 0x1078(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bToggledAccessory;                                        // 0x1080(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x7];                                       // 0x1081(0x0007) MISSED OFFSET
-	class FString                                      DisableInstantHitModeText;                                // 0x1088(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class FString                                      EnableInstantHitModeText;                                 // 0x1098(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class USoundBase*                                  DrawnLoopSound;                                           // 0x10A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bLastAccessoryActivated;                                  // 0x10B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x10B1(0x0003) MISSED OFFSET
-	float                                              AimDownSightParamPercent;                                 // 0x10B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              AimDownSightParamInterpSpeed;                             // 0x10B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              InstantHitParamPercent;                                   // 0x10BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              InstantHitParamInterpSpeed;                               // 0x10C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BlendOnParamPercent;                                      // 0x10C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BlendOnParamInterpSpeed;                                  // 0x10C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bFullyBlendedIdle;                                        // 0x10CC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x10CD(0x0003) MISSED OFFSET
-	class UAnimMontage*                                LastPlayedMontage;                                        // 0x10D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x10D8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x7];                                       // 0x10D9(0x0007) MISSED OFFSET
+	class UAudioComponent*                             Audio1;                                                   // 0x0EB0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    MaxPowerParticleCompTPV;                                  // 0x0EB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    MaxPowerParticleCompFPV;                                  // 0x0EC0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                CurrentAmmoTypeIndex;                                     // 0x0EC8(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData)
+	struct FVector                                     HitLocation;                                              // 0x0ECC(0x000C) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class AShooterProjectile*                          Projectile;                                               // 0x0ED8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     LocalClientHitLocation;                                   // 0x0EE0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0EEC(0x0004) MISSED OFFSET
+	double                                             PressedReloadButtonTime;                                  // 0x0EF0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HoldForAmmoWheelDuration;                                 // 0x0EF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bShowAmmoWheel;                                           // 0x0EFC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bIsAmmoWheelOpened;                                       // 0x0EFD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0EFE(0x0002) MISSED OFFSET
+	struct FVector2D                                   AmmoHUDIconLocation;                                      // 0x0F00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector2D                                   AmmoHUDTextLocation;                                      // 0x0F08(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ArrowDissolvePercent;                                     // 0x0F10(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ArrowDissolveInterpSpeed;                                 // 0x0F14(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector2D                                   AmmoHUDIconSize;                                          // 0x0F18(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector2D                                   AmmoHUDTextScale;                                         // 0x0F20(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       TrailFXTargetParameter;                                   // 0x0F28(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              InstantHitTraceDistance;                                  // 0x0F30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                LastSetArrowMeshIndex;                                    // 0x0F34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       TekBowMuzzleFXSocket;                                     // 0x0F38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             ArrowMaterializeFX;                                       // 0x0F40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bDidActivateMaterializeFX;                                // 0x0F48(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0F49(0x0007) MISSED OFFSET
+	class UParticleSystemComponent*                    MaterializePSCFPV;                                        // 0x0F50(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystemComponent*                    MaterializePSCTPV;                                        // 0x0F58(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             UnequipFX;                                                // 0x0F60(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UParticleSystem*                             EquipFX;                                                  // 0x0F68(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               PlayUnequipFX;                                            // 0x0F70(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bInitializedArrowOwningClient;                            // 0x0F71(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x6];                                       // 0x0F72(0x0006) MISSED OFFSET
+	class UClass*                                      HelperBuff;                                               // 0x0F78(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class APrimalBuff*                                 HelperBuffRef;                                            // 0x0F80(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FTekBowArrowSetup_Struct>            AmmoConfig;                                               // 0x0F88(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UMaterialInstanceDynamic*>            Arrow1PMID;                                               // 0x0F98(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UMaterialInstanceDynamic*>            Arrow3PMID;                                               // 0x0FA8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UMaterialInstanceDynamic*>            _3PMID;                                                   // 0x0FB8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UMaterialInstanceDynamic*>            _1PMID;                                                   // 0x0FC8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FLinearColor                                AmmoTypeColor_1;                                          // 0x0FD8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                AmmoTypeColor_2;                                          // 0x0FE8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                AmmoTypeColor_3;                                          // 0x0FF8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                AmmoTypeColor_4;                                          // 0x1008(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FLinearColor                                CurrentAmmoTypeColor;                                     // 0x1018(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bOpenedWheelWithGamepad;                                  // 0x1028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x1029(0x0007) MISSED OFFSET
+	class USoundBase*                                  CycleAmmoSound;                                           // 0x1030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class FString                                      InstantHitEnabledString;                                  // 0x1038(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      InstantHitDisabledString;                                 // 0x1048(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FLinearColor                                InstantHitNotiColor;                                      // 0x1058(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              GamepadToggleAccessoryTimeframe;                          // 0x1068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x106C(0x0004) MISSED OFFSET
+	double                                             LastReleasedReloadButtonTime;                             // 0x1070(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bToggledAccessory;                                        // 0x1078(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x7];                                       // 0x1079(0x0007) MISSED OFFSET
+	class FString                                      DisableInstantHitModeText;                                // 0x1080(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class FString                                      EnableInstantHitModeText;                                 // 0x1090(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class USoundBase*                                  DrawnLoopSound;                                           // 0x10A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bLastAccessoryActivated;                                  // 0x10A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x10A9(0x0003) MISSED OFFSET
+	float                                              AimDownSightParamPercent;                                 // 0x10AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              AimDownSightParamInterpSpeed;                             // 0x10B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              InstantHitParamPercent;                                   // 0x10B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              InstantHitParamInterpSpeed;                               // 0x10B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BlendOnParamPercent;                                      // 0x10BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BlendOnParamInterpSpeed;                                  // 0x10C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bFullyBlendedIdle;                                        // 0x10C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x10C5(0x0003) MISSED OFFSET
+	class UAnimMontage*                                LastPlayedMontage;                                        // 0x10C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LastSimulatedPullingTime;                                 // 0x10D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinSpeedExplosiveArrow;                                   // 0x10D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaxSpeedExplosiveArrow;                                   // 0x10D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               CallFunc_Not_PreBool_ReturnValue;                         // 0x10DC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x3];                                       // 0x10DD(0x0003) MISSED OFFSET
 	struct FHitResult                                  K2Node_CustomEvent_Hit;                                   // 0x10E0(0x0088) (Transient, DuplicateTransient)
 	struct FVector                                     K2Node_CustomEvent_StartLocation;                         // 0x1168(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
 	struct FVector                                     K2Node_CustomEvent_Direction;                             // 0x1174(0x000C) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
@@ -190,8 +193,8 @@ public:
 	}
 
 
-	void GetAmmoMultiuseEntries(TArray<struct FMultiUseEntry>* AmmoWheelEntries);
-	void GetHudData(class FString* AmmoName, class UTexture2D** AmmoIcon, int* CurrentAmmoCount, int* CurrentAmmoCost, int* AmmoPerClip, int* AmmoTypeIndex, struct FLinearColor* CurrentAmmoTypeColor, bool* IsAccessoryActive);
+	void STATIC_GetAmmoMultiuseEntries(TArray<struct FMultiUseEntry>* AmmoWheelEntries);
+	void STATIC_GetHudData(class FString* AmmoName, class UTexture2D** AmmoIcon, int* CurrentAmmoCount, int* CurrentAmmoCost, int* AmmoPerClip, int* AmmoTypeIndex, struct FLinearColor* CurrentAmmoTypeColor, bool* IsAccessoryActive);
 	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	void BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
 	void CycleAmmoTimer();
@@ -200,20 +203,20 @@ public:
 	void StartUnequipEvent();
 	void STATIC_ReceiveDestroyed();
 	void OnHideProjectile();
-	void STATIC_SpawnFiredFX(const struct FVector& EndLocation, bool bWasInstantHit);
-	int STATIC_GetAmmoCountForAmmoType(int index);
+	void SpawnFiredFX(const struct FVector& EndLocation, bool bWasInstantHit);
+	int GetAmmoCountForAmmoType(int index);
 	bool BPCanStartFire();
 	bool BPWeaponCanFire();
-	int STATIC_BPAdjustAmmoPerShot();
+	int BPAdjustAmmoPerShot();
 	void UpdateMaxPowerFX();
-	void UpdateArrowVisibility(float DeltaTime);
-	void UpdateArrowMesh();
+	void STATIC_UpdateArrowVisibility(float DeltaTime);
+	void STATIC_UpdateArrowMesh();
 	void STATIC_Show_Ammo_Wheel();
-	void STATIC_SetupProjectileInstantHit(class AShooterProjectile* Projectile, const struct FVector& HitLocation);
+	void SetupProjectileInstantHit(class AShooterProjectile* Projectile, const struct FVector& HitLocation);
 	void AmmoSelected(int AmmoTypeIndex);
-	void STATIC_GetAmmoWheelEntries(TArray<struct FCustomWheelEntry>* Entries);
+	void GetAmmoWheelEntries(TArray<struct FCustomWheelEntry>* Entries);
 	void ReceiveTick(float* DeltaSeconds);
-	void STATIC_BPOnSpawnedProjectile(class AShooterProjectile** Projectile);
+	void BPOnSpawnedProjectile(class AShooterProjectile** Projectile);
 	void BPFiredWeapon();
 	void BPSelectProjectileToFire(class UClass** ProjectileClassOverride, class USoundCue** FireSoundOverride, bool* bSpawnOnClient, float* OverrideMaxSpeed);
 	void CycleAmmoType(bool bBackwards);

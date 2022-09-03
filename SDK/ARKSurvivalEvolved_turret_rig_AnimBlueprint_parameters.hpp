@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace sdk
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_618
-struct Uturret_rig_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_618_Params
+// Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_636
+struct Uturret_rig_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_636_Params
 {
 };
 
-// Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_617
-struct Uturret_rig_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_617_Params
+// Function turret_rig_AnimBlueprint.turret_rig_AnimBlueprint_C.EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_635
+struct Uturret_rig_AnimBlueprint_C_EvaluateGraphExposedInputs_ExecuteUbergraph_turret_rig_AnimBlueprint_AnimGraphNode_ModifyBone_635_Params
 {
 };
 

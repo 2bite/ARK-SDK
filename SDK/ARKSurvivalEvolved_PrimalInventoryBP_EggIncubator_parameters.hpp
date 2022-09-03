@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,13 +73,13 @@ struct UPrimalInventoryBP_EggIncubator_C_ExecuteUbergraph_PrimalInventoryBP_EggI
 // Function PrimalInventoryBP_EggIncubator.PrimalInventoryBP_EggIncubator_C.OnFertilizedEggRemoved__DelegateSignature
 struct UPrimalInventoryBP_EggIncubator_C_OnFertilizedEggRemoved__DelegateSignature_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function PrimalInventoryBP_EggIncubator.PrimalInventoryBP_EggIncubator_C.OnFertilizedEggAdded__DelegateSignature
 struct UPrimalInventoryBP_EggIncubator_C_OnFertilizedEggAdded__DelegateSignature_Params
 {
-	class UPrimalItemConsumable_Egg_C*                 EggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 eggItem;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

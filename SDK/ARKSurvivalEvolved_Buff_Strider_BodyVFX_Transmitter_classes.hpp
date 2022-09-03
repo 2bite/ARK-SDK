@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buff_Strider_BodyVFX_Transmitter.Buff_Strider_BodyVFX_Transmitter_C
-// 0x0000 (0x09F5 - 0x09F5)
+// 0x0000 (0x0A0D - 0x0A0D)
 class ABuff_Strider_BodyVFX_Transmitter_C : public ABuff_Strider_BodyVFX_Parent_C
 {
 public:

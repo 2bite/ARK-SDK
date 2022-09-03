@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -66,7 +66,7 @@ void AProjectile_SummonerTumor_C::ReceivePointDamage(float* Damage, class UDamag
 
 
 // Function Projectile_SummonerTumor.Projectile_SummonerTumor_C.OnExplode
-// (NetReliable, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, Const)
+// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, Const, NetValidate)
 // Parameters:
 // struct FHitResult              Result                         (Parm, OutParm, ReferenceParm)
 

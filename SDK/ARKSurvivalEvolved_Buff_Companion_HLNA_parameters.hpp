@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,37 @@ namespace sdk
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.hard fix missing gen1 explorer notes
+struct ABuff_Companion_HLNA_C_hard_fix_missing_gen1_explorer_notes_Params
+{
+};
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Get total Glitch Mission Complete Count
+struct ABuff_Companion_HLNA_C_Get_total_Glitch_Mission_Complete_Count_Params
+{
+	class AShooterCharacter*                           Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Count;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Get Glitch Mission Complete Count
+struct ABuff_Companion_HLNA_C_Get_Glitch_Mission_Complete_Count_Params
+{
+	struct FName                                       MissionTag;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class AShooterCharacter*                           Player;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Count;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Randomly Pick Orbit Location Timer
+struct ABuff_Companion_HLNA_C_Randomly_Pick_Orbit_Location_Timer_Params
+{
+};
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Should Force Play Post Intro Reactions
+struct ABuff_Companion_HLNA_C_Should_Force_Play_Post_Intro_Reactions_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.IsPlayerControllingValidPrimalChar
 struct ABuff_Companion_HLNA_C_IsPlayerControllingValidPrimalChar_Params
@@ -385,8 +416,8 @@ struct ABuff_Companion_HLNA_C_HLNa_Mass_Teleport_Trigger_To_VR_Boss_Battle_Easy_
 {
 };
 
-// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.sync mission complete status
-struct ABuff_Companion_HLNA_C_sync_mission_complete_status_Params
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Sync Mission Complete Status
+struct ABuff_Companion_HLNA_C_Sync_Mission_Complete_Status_Params
 {
 };
 
@@ -467,7 +498,7 @@ struct ABuff_Companion_HLNA_C_BPAnimNotifyCustomEvent_Params
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Set All Components Custom Depth Stencil Value
 struct ABuff_Companion_HLNA_C_Set_All_Components_Custom_Depth_Stencil_Value_Params
 {
-	int                                                stencil_Value;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Stencil_Value;                                            // (Parm, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -649,7 +680,7 @@ struct ABuff_Companion_HLNA_C_Find_Best_Teleport_Location_Params
 {
 	int                                                selected_coordinate_direction_index;                      // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                region_index;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	class APlayerController*                           Player_Controller;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	class APlayerController*                           player_controller;                                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               only_test_if_theres_any_available;                        // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Has_Found_Spot;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -1183,8 +1214,8 @@ struct ABuff_Companion_HLNA_C_Multi_OnMassTeleportEvent_Params
 	TEnumAsByte<EMassTeleportState>                    EventState;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.Fresnel Flash
-struct ABuff_Companion_HLNA_C_Fresnel_Flash_Params
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.fresnel flash
+struct ABuff_Companion_HLNA_C_fresnel_flash_Params
 {
 	struct FLinearColor                                Color;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -1468,6 +1499,14 @@ struct ABuff_Companion_HLNA_C_NotifyServerCheatSetGen2IntroPlaying_Params
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.delay play death line
 struct ABuff_Companion_HLNA_C_delay_play_death_line_Params
 {
+};
+
+// Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.OnActorCustomEvent_Event
+struct ABuff_Companion_HLNA_C_OnActorCustomEvent_Event_Params
+{
+	struct FName                                       EventCustomName;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	class FString                                      EventCustomString;                                        // (Parm, ZeroConstructor)
+	class AActor*                                      InstigatorActor;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Buff_Companion_HLNA.Buff_Companion_HLNA_C.ExecuteUbergraph_Buff_Companion_HLNA

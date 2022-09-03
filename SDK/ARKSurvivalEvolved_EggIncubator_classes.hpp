@@ -1,6 +1,6 @@
 #pragma once
 
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace sdk
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass EggIncubator.EggIncubator_C
-// 0x0548 (0x1358 - 0x0E10)
+// 0x0568 (0x1378 - 0x0E10)
 class AEggIncubator_C : public AStructureItemContainerBaseBP_C
 {
 public:
@@ -99,39 +99,42 @@ public:
 	int                                                ScreenMaterialIndex;                                      // 0x1060(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x4];                                       // 0x1064(0x0004) MISSED OFFSET
 	class UPrimalEggToolTipWidget*                     FoundToolTipCDO;                                          // 0x1068(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                Temp_int_Loop_Counter_Variable;                           // 0x1070(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x1074(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x1075(0x0003) MISSED OFFSET
-	class UParticleSystemComponent*                    CallFunc_GetWarmingLightForSlot_WarmingLightComponent;    // 0x1078(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x1080(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x1081(0x0003) MISSED OFFSET
-	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x1084(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                K2Node_CustomEvent_SlotIndex2;                            // 0x1088(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x4];                                       // 0x108C(0x0004) MISSED OFFSET
-	struct FUnreplicatedEggData                        K2Node_CustomEvent_ManuallyReplicatedEggData;             // 0x1090(0x0058) (Transient, DuplicateTransient)
-	struct FItemNetInfo                                K2Node_CustomEvent_ItemNetInfo;                           // 0x10E8(0x01B0) (Transient, DuplicateTransient)
-	int                                                K2Node_CustomEvent_SlotIndex;                             // 0x1298(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x4];                                       // 0x129C(0x0004) MISSED OFFSET
-	TArray<class AShooterPlayerController*>            CallFunc_GetAllLocalPlayerControllers_ReturnValue;        // 0x12A0(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
-	class AShooterPlayerController*                    CallFunc_Array_Get_Item;                                  // 0x12B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x12B8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	class UPrimalInventoryBP_EggIncubator_C*           K2Node_DynamicCast_AsPrimalInventoryBP_EggIncubator_C;    // 0x12C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x12C8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x3];                                       // 0x12C9(0x0003) MISSED OFFSET
-	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x12CC(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate2;                    // 0x12DC(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
-	bool                                               CallFunc_HasAuthority_ReturnValue2;                       // 0x12EC(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x3];                                       // 0x12ED(0x0003) MISSED OFFSET
-	int                                                K2Node_CustomEvent_ItemID1;                               // 0x12F0(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	int                                                K2Node_CustomEvent_ItemID2;                               // 0x12F4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FBPNetExecParams                            K2Node_MakeStruct_BPNetExecParams;                        // 0x12F8(0x0040) (Transient, DuplicateTransient)
-	int                                                CallFunc_Array_Length_ReturnValue;                        // 0x1338(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Less_IntInt_ReturnValue;                         // 0x133C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	bool                                               CallFunc_Array_Get_Item2;                                 // 0x133D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x2];                                       // 0x133E(0x0002) MISSED OFFSET
-	class UPrimalItemConsumable_Egg_C*                 CallFunc_Array_Set_Item_RefProperty;                      // 0x1340(0x0008) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
-	class UPrimalItemConsumable_Egg_C*                 CallFunc_Array_Set_Item2_RefProperty;                     // 0x1348(0x0008) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
-	class UPrimalItemConsumable_Egg_C*                 CallFunc_Array_Set_Item3_RefProperty;                     // 0x1350(0x0008) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
+	class UClass*                                      IncubatorGestationBuff;                                   // 0x1070(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class FString                                      GestationMonitoringString;                                // 0x1078(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      GestationMonitorAddEffect;                                // 0x1088(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                Temp_int_Loop_Counter_Variable;                           // 0x1090(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_HasAuthority_ReturnValue;                        // 0x1094(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x1095(0x0003) MISSED OFFSET
+	class UParticleSystemComponent*                    CallFunc_GetWarmingLightForSlot_WarmingLightComponent;    // 0x1098(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_IsValid_ReturnValue;                             // 0x10A0(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x10A1(0x0003) MISSED OFFSET
+	int                                                CallFunc_Add_IntInt_ReturnValue;                          // 0x10A4(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                K2Node_CustomEvent_SlotIndex2;                            // 0x10A8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x4];                                       // 0x10AC(0x0004) MISSED OFFSET
+	struct FUnreplicatedEggData                        K2Node_CustomEvent_ManuallyReplicatedEggData;             // 0x10B0(0x0058) (Transient, DuplicateTransient)
+	struct FItemNetInfo                                K2Node_CustomEvent_ItemNetInfo;                           // 0x1108(0x01B0) (Transient, DuplicateTransient)
+	int                                                K2Node_CustomEvent_SlotIndex;                             // 0x12B8(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x4];                                       // 0x12BC(0x0004) MISSED OFFSET
+	TArray<class AShooterPlayerController*>            CallFunc_GetAllLocalPlayerControllers_ReturnValue;        // 0x12C0(0x0010) (ZeroConstructor, Transient, DuplicateTransient)
+	class AShooterPlayerController*                    CallFunc_Array_Get_Item;                                  // 0x12D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	double                                             CallFunc_GetGameTimeInSeconds_ReturnValue;                // 0x12D8(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	class UPrimalInventoryBP_EggIncubator_C*           K2Node_DynamicCast_AsPrimalInventoryBP_EggIncubator_C;    // 0x12E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               K2Node_DynamicCast_CastSuccess;                           // 0x12E8(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData10[0x3];                                       // 0x12E9(0x0003) MISSED OFFSET
+	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate;                     // 0x12EC(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FScriptDelegate                             K2Node_CreateDelegate_OutputDelegate2;                    // 0x12FC(0x0014) (ZeroConstructor, Transient, DuplicateTransient)
+	bool                                               CallFunc_HasAuthority_ReturnValue2;                       // 0x130C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData11[0x3];                                       // 0x130D(0x0003) MISSED OFFSET
+	int                                                K2Node_CustomEvent_ItemID1;                               // 0x1310(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	int                                                K2Node_CustomEvent_ItemID2;                               // 0x1314(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FBPNetExecParams                            K2Node_MakeStruct_BPNetExecParams;                        // 0x1318(0x0040) (Transient, DuplicateTransient)
+	int                                                CallFunc_Array_Length_ReturnValue;                        // 0x1358(0x0004) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Less_IntInt_ReturnValue;                         // 0x135C(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	bool                                               CallFunc_Array_Get_Item2;                                 // 0x135D(0x0001) (ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	unsigned char                                      UnknownData12[0x2];                                       // 0x135E(0x0002) MISSED OFFSET
+	class UPrimalItemConsumable_Egg_C*                 CallFunc_Array_Set_Item_RefProperty;                      // 0x1360(0x0008) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 CallFunc_Array_Set_Item2_RefProperty;                     // 0x1368(0x0008) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
+	class UPrimalItemConsumable_Egg_C*                 CallFunc_Array_Set_Item3_RefProperty;                     // 0x1370(0x0008) (OutParm, ZeroConstructor, Transient, DuplicateTransient, ReferenceParm, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -140,37 +143,38 @@ public:
 	}
 
 
-	void IsEggItemAllowed(class UPrimalItemConsumable_Egg_C* EggItem, bool* IsAllowed);
+	void IsEggItemAllowed(class UPrimalItemConsumable_Egg_C* eggItem, bool* IsAllowed);
 	void GetItemDisplaySlot(class UPrimalItem* ForItem, int* InSlot, bool* SlotFound);
+	void ClientDisplayGestationMonitorEffectAdded(const struct UObject_FTransform& AtLocation);
 	void BPNotifyPowerChanged();
 	void SetIncubatorMaterialValues();
 	void UpdateWarmingLights();
 	void GetWarmingLightForSlot(int ForSlotIndex, class UParticleSystemComponent** WarmingLightComponent);
-	void STATIC_DestroyEggDisplay(int ItemID1, int ItemID2);
-	void CanEggIncubateInTemp(class UPrimalItemConsumable_Egg_C* EggItem, bool* bCanIncubate);
+	void DestroyEggDisplay(int ItemID1, int ItemID2);
+	void CanEggIncubateInTemp(class UPrimalItemConsumable_Egg_C* eggItem, bool* bCanIncubate);
 	void UpdateIndoorsStatus();
 	void CalculateIncubationInsulation();
-	void CanEggBeHatched(class UPrimalItemConsumable_Egg_C* EggItem, bool* IsHatchable);
-	void TrySpawnEggToWorld(class UPrimalItemConsumable_Egg_C* EggItem, bool* EggWasSpawned);
+	void CanEggBeHatched(class UPrimalItemConsumable_Egg_C* eggItem, bool* IsHatchable);
+	void TrySpawnEggToWorld(class UPrimalItemConsumable_Egg_C* eggItem, bool* EggWasSpawned);
 	void ThrottledTick();
-	void STATIC_ServerSyncEggDisplay();
+	void ServerSyncEggDisplay();
 	void GetTempBonusRawPercent(float EggTempLowerBound, float EggTempUpperBound, float* BoostPercent);
-	void STATIC_SetIncubatorCustomDatasForEgg(class UPrimalItemConsumable_Egg_C* EggItem);
+	void SetIncubatorCustomDatasForEgg(class UPrimalItemConsumable_Egg_C* eggItem);
 	bool BPServerHandleNetExecCommand(class APlayerController** FromPC, struct FName* CommandName, struct FBPNetExecParams* ExecParams);
 	void ClientRemoveFertilizedEgg(int SlotIndex);
 	void ClientAddFertilizedEgg(int SlotIndex, struct FUnreplicatedEggData* ManuallyReplicatedEggData, struct FItemNetInfo* ItemNetInfo);
 	void SetupEggSlots();
-	void RefreshEggDisplays();
-	void CheckIsFertilizedEgg(class UPrimalItemConsumable_Egg_C* EggItem, bool* IsFertilized);
-	void GetSlotIndexForEggItem(class UPrimalItemConsumable_Egg_C* EggItem, int* SlotIndex);
+	void STATIC_RefreshEggDisplays();
+	void CheckIsFertilizedEgg(class UPrimalItemConsumable_Egg_C* eggItem, bool* IsFertilized);
+	void GetSlotIndexForEggItem(class UPrimalItemConsumable_Egg_C* eggItem, int* SlotIndex);
 	void GetFirstAvailableEggSlotIndex(int* EggSlotIndex);
 	void BPPostInitializeComponents();
-	void ServerRemoveFertilizedEgg(class UPrimalItemConsumable_Egg_C* EggItem);
-	void STATIC_ServerAddFertilizedEgg(class UPrimalItemConsumable_Egg_C* EggItem);
+	void ServerRemoveFertilizedEgg(class UPrimalItemConsumable_Egg_C* eggItem);
+	void ServerAddFertilizedEgg(class UPrimalItemConsumable_Egg_C* eggItem);
 	bool BPTryMultiUse(class APlayerController** ForPC, int* UseIndex);
 	void STATIC_BPClientDoMultiUse(class APlayerController** ForPC, int* ClientUseIndex);
-	void AddTempControlEntries(TArray<struct FMultiUseEntry>* MultiUseEntries);
-	TArray<struct FMultiUseEntry> BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
+	void STATIC_AddTempControlEntries(TArray<struct FMultiUseEntry>* MultiUseEntries);
+	TArray<struct FMultiUseEntry> STATIC_BPGetMultiUseEntries(class APlayerController** ForPC, TArray<struct FMultiUseEntry>* MultiUseEntries);
 	bool BPGetMultiUseCenterText(class APlayerController** ForPC, int* UseIndex, class FString* OutCenterText, struct FLinearColor* OutCenterTextColor);
 	void GetTempControlBonus(float EggTempLowerBound, float EggTempUpperBound, float* TempControlBonusMultiplier);
 	void UpdateIncubation();

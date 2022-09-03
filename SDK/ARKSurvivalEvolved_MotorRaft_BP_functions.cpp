@@ -1,4 +1,4 @@
-// ARKSurvivalEvolved (329.9) SDK
+// ARKSurvivalEvolved (332.8) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,14 +36,14 @@ bool AMotorRaft_BP_C::BPCanCryo(class AShooterPlayerController** ForPC)
 
 
 // Function MotorRaft_BP.MotorRaft_BP_C.BPPlayDying
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float*                         KillingDamage                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FDamageEvent            DamageEvent                    (Parm, OutParm, ReferenceParm)
 // class APawn**                  InstigatingPawn                (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor**                 DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMotorRaft_BP_C::STATIC_BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
+void AMotorRaft_BP_C::BPPlayDying(float* KillingDamage, class APawn** InstigatingPawn, class AActor** DamageCauser, struct FDamageEvent* DamageEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MotorRaft_BP.MotorRaft_BP_C.BPPlayDying");
 
@@ -53,6 +53,7 @@ void AMotorRaft_BP_C::STATIC_BPPlayDying(float* KillingDamage, class APawn** Ins
 	params.DamageCauser = DamageCauser;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,7 +128,7 @@ bool AMotorRaft_BP_C::BPTryMultiUse(class APlayerController** ForPC, int* UseInd
 
 
 // Function MotorRaft_BP.MotorRaft_BP_C.BPGetMultiUseEntries
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class APlayerController**      ForPC                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FMultiUseEntry>  MultiUseEntries                (Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -318,14 +319,14 @@ void AMotorRaft_BP_C::BPNotifyInventoryItemChange(bool* bIsItemAdd, class UPrima
 
 
 // Function MotorRaft_BP.MotorRaft_BP_C.BlueprintDrawFloatingHUD
-// (Exec, Native, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // class AShooterHUD**            HUD                            (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterX                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         CenterY                        (Parm, ZeroConstructor, IsPlainOldData)
 // float*                         DrawScale                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMotorRaft_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale)
+void AMotorRaft_BP_C::STATIC_BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* CenterX, float* CenterY, float* DrawScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MotorRaft_BP.MotorRaft_BP_C.BlueprintDrawFloatingHUD");
 
@@ -336,7 +337,6 @@ void AMotorRaft_BP_C::BlueprintDrawFloatingHUD(class AShooterHUD** HUD, float* C
 	params.DrawScale = DrawScale;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
